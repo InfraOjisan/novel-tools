@@ -1,0 +1,48 @@
+{
+  "phase": "done",
+  "design_state": "review",
+  "design_attempts": 1,
+  "canon_sha256": "ab5f19cbf950be69880d93fc1247b7fed505a11b5144910bcd69e692de655516",
+  "current": 5,
+  "final_state": "review",
+  "final_reopened": false,
+  "escalation": null,
+  "chapters": {
+    "1": {
+      "state": "done",
+      "attempts": 1,
+      "parse_retries": 0,
+      "ledger_attempts": 1,
+      "warnings": []
+    },
+    "2": {
+      "state": "done",
+      "attempts": 2,
+      "parse_retries": 0,
+      "ledger_attempts": 1,
+      "warnings": []
+    },
+    "3": {
+      "state": "done",
+      "attempts": 1,
+      "parse_retries": 0,
+      "ledger_attempts": 1,
+      "warnings": []
+    },
+    "4": {
+      "state": "done",
+      "attempts": 2,
+      "parse_retries": 0,
+      "ledger_attempts": 1,
+      "warnings": []
+    },
+    "5": {
+      "state": "done",
+      "attempts": 2,
+      "parse_retries": 0,
+      "ledger_attempts": 1,
+      "warnings": []
+    }
+  },
+  "final_notes": []
+}

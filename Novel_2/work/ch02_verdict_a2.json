@@ -1,0 +1,22 @@
+{
+  "chars": 5680,
+  "mech": [],
+  "review": {
+    "pass": true,
+    "slots_found": {
+      "F1": "recovered",
+      "F2": "reinforced",
+      "F3": "reinforced",
+      "P1": "planted"
+    },
+    "violations": [
+      {
+        "severity": "low",
+        "type": "role",
+        "detail": "本文5,680字で目標より短いが、四場面とも機能を果たしている。",
+        "fix": "文体の仕上げで五感の描写を補う。"
+      }
+    ]
+  },
+  "problems": []
+}

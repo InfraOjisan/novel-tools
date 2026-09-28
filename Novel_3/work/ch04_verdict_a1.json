@@ -1,0 +1,29 @@
+{
+  "chars": 6769,
+  "mech": [],
+  "review": {
+    "pass": true,
+    "slots_found": {
+      "L2": "reinforced",
+      "L1": "reinforced",
+      "E1": "reinforced",
+      "B2": "reinforced",
+      "T1": "reinforced"
+    },
+    "violations": [
+      {
+        "severity": "low",
+        "type": "fairness",
+        "detail": "僕四の『夕方、あの石を掌に載せたときの重さ』は、僕二が夕方の出来事だったことを示す手がかりになる。時刻を明言してはいないので第4章の禁止には触れない。",
+        "fix": "このままでよい。第5章のザザの証言と組み合わせて効くようにする。"
+      },
+      {
+        "severity": "low",
+        "type": "lies",
+        "detail": "ニコ『言われてねえよ』（長の命の否定）は真実。『金なんか受け取っちゃいない』は代価による嘘。マスターの推論はニコの否定が真実である場合に限ると明記されており、地の文の断定にはなっていない。",
+        "fix": "なし。"
+      }
+    ]
+  },
+  "problems": []
+}

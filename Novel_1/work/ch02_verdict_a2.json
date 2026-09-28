@@ -1,0 +1,22 @@
+{
+  "chars": 2264,
+  "mech": [
+    [
+      "short",
+      "本文が2264字で短い（2300〜2900字）。場面の描写を厚くして2500字前後にする。"
+    ]
+  ],
+  "review": {
+    "pass": true,
+    "slots_found": {
+      "F2": "planted",
+      "F5": "planted",
+      "R1": "planted",
+      "C1": "planted"
+    },
+    "violations": []
+  },
+  "problems": [
+    "[short] 本文が2264字で短い（2300〜2900字）。場面の描写を厚くして2500字前後にする。"
+  ]
+}

@@ -1,0 +1,12 @@
+# macOS
+.DS_Store
+
+# 秘密情報
+.env
+*.key
+*_rsa
+
+# python
+__pycache__/
+*.pyc
+.venv/

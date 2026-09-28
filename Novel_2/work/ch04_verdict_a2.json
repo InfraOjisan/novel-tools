@@ -1,0 +1,21 @@
+{
+  "chars": 5706,
+  "mech": [],
+  "review": {
+    "pass": true,
+    "slots_found": {
+      "F4": "reinforced",
+      "M2": "reinforced",
+      "C1": "reinforced"
+    },
+    "violations": [
+      {
+        "severity": "low",
+        "type": "continuity",
+        "detail": "「五十二段の、三階から一階まで」は五十二段全部を降りたように読める。",
+        "fix": "校正で「五十二段のうち、三階から一階まで」とする。"
+      }
+    ]
+  },
+  "problems": []
+}

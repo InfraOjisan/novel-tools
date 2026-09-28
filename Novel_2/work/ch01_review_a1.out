@@ -1,0 +1,6 @@
+{"pass": true, "slots_found": {"F1": "planted", "F2": "planted", "F3": "planted", "C1": "planted", "M1": "planted", "M2": "planted"},
+"violations": [
+{"severity": "low", "type": "continuity", "detail": "「団地の階段は五十二段ある。七号棟の三階までなら、その半分ちょっとだ」は何階までで五十二段なのかが曖昧。", "fix": "校正時に「一階から五階まで五十二段」と明示する。"},
+{"severity": "low", "type": "role", "detail": "本文5,791字で目標7,000字より短い。場面③のゲームコーナーの喧騒や、場面①の朝の支度に余白がある。", "fix": "文体の仕上げ工程で五感の描写を足す余地として残す（筋は足さない）。"},
+{"severity": "low", "type": "meta", "detail": "店の札『NEW ARRIVAL』『SALE』は英字。店名ではないので規則違反ではないが、縦書きでは横倒しになる。", "fix": "校正時に残すか片仮名にするかを判断する。"}
+]}

@@ -1,0 +1,14 @@
+{
+  "chars": 2552,
+  "mech": [],
+  "review": {
+    "pass": true,
+    "slots_found": {
+      "F1": "planted",
+      "F3": "planted",
+      "M1": "planted"
+    },
+    "violations": []
+  },
+  "problems": []
+}

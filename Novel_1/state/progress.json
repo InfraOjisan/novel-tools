@@ -1,0 +1,72 @@
+{
+  "phase": "done",
+  "design_state": "review",
+  "design_attempts": 2,
+  "canon_sha256": "032107242dc304e1ab6b3430bd6b2dd86537a885a269868a71a5caebfb4801b4",
+  "current": 8,
+  "final_state": "review",
+  "final_reopened": false,
+  "escalation": null,
+  "chapters": {
+    "1": {
+      "state": "done",
+      "attempts": 2,
+      "parse_retries": 0,
+      "ledger_attempts": 1,
+      "warnings": []
+    },
+    "2": {
+      "state": "done",
+      "attempts": 3,
+      "parse_retries": 0,
+      "ledger_attempts": 2,
+      "warnings": [
+        "LEDGERが早すぎる回収を報告: PREMATURE: R1 が第2章で回収扱い（予定は第5章）",
+        "LEDGERが早すぎる回収を報告: PREMATURE: R1 が第2章で回収扱い（予定は第5章）"
+      ]
+    },
+    "3": {
+      "state": "done",
+      "attempts": 3,
+      "parse_retries": 0,
+      "ledger_attempts": 1,
+      "warnings": []
+    },
+    "4": {
+      "state": "done",
+      "attempts": 1,
+      "parse_retries": 0,
+      "ledger_attempts": 1,
+      "warnings": []
+    },
+    "5": {
+      "state": "done",
+      "attempts": 2,
+      "parse_retries": 0,
+      "ledger_attempts": 1,
+      "warnings": []
+    },
+    "6": {
+      "state": "done",
+      "attempts": 3,
+      "parse_retries": 0,
+      "ledger_attempts": 1,
+      "warnings": []
+    },
+    "7": {
+      "state": "done",
+      "attempts": 2,
+      "parse_retries": 0,
+      "ledger_attempts": 1,
+      "warnings": []
+    },
+    "8": {
+      "state": "done",
+      "attempts": 3,
+      "parse_retries": 0,
+      "ledger_attempts": 1,
+      "warnings": []
+    }
+  },
+  "final_notes": []
+}

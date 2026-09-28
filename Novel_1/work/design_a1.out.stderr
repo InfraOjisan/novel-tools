@@ -1,0 +1,4 @@
+attempt 1: 空の応答（finish_reason=length）
+attempt 2: ApiError: ストリーム中にプロバイダ側でエラー（finish_reason=error）
+WARN: max_tokens に達して出力が途中で切れた可能性があります
+usage: in=6780 out=24000 reasoning_chars=49357 content_chars=10272 cost=0.03708136 sec=394 model=aion-labs/aion-3.5-mini

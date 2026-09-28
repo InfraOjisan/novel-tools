@@ -1,0 +1,1 @@
+{"pass": false, "slots_found": {"F2": "planted", "F5": "planted", "R1": "planted", "C1": "planted"}, "violations": [{"severity": "high", "type": "canon", "detail": "「そうだ。到達まで190日。」とあるが、章カードの指定は「章末時点の数値：到達まで188日」。前章の夜から翌朝を描いているため、日数が経過しておらず矛盾する。", "fix": "「到達まで190日」を「到達まで188日」に修正する。"}]}

@@ -1,0 +1,31 @@
+{
+  "chars": 5683,
+  "mech": [],
+  "review": {
+    "pass": false,
+    "slots_found": {
+      "F4": "recovered",
+      "C1": "recovered",
+      "M1": "recovered",
+      "M2": "recovered",
+      "P1": "recovered"
+    },
+    "violations": [
+      {
+        "severity": "high",
+        "type": "canon",
+        "detail": "「わたしが一月の誕生日にもらったものの片割れ」：パールのヘアクリップは第一章で佐伯さんが四月にくれたもの（LEDGER CH01 FACT）。誕生日の贈り物ではない。",
+        "fix": "「四月に佐伯さんがわたしにくれたパールのほうを」に直す。"
+      },
+      {
+        "severity": "low",
+        "type": "ending",
+        "detail": "「他人は遊びに行くだけ」は再会の可能性を含むが、同居・家族の再結合ではないので禁止事項には当たらない。",
+        "fix": "なし。"
+      }
+    ]
+  },
+  "problems": [
+    "[canon] 「わたしが一月の誕生日にもらったものの片割れ」：パールのヘアクリップは第一章で佐伯さんが四月にくれたもの（LEDGER CH01 FACT）。誕生日の贈り物ではない。 → 「四月に佐伯さんがわたしにくれたパールのほうを」に直す。"
+  ]
+}
