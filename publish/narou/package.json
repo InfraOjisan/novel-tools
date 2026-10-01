@@ -1,0 +1,7 @@
+{
+  "name": "narou-publisher",
+  "private": true,
+  "type": "module",
+  "description": "mdから生成した章テキストを小説家になろうの下書き保存→公開まで進めるスクリプト",
+  "dependencies": { "playwright-core": "^1.49.0" }
+}

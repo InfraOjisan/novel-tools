@@ -1,0 +1,120 @@
+{
+  "work": "Novel_3",
+  "title": "夜啼きの涙",
+  "source": "../../Novel_3/output/final.md",
+  "limit_chars": 5000,
+  "episodes": [
+    {
+      "seq": 1,
+      "file": "001.txt",
+      "subtitle": "第1章　突き出せ（前編）",
+      "chars": 4361,
+      "chars_no_newline": 4215,
+      "sha1": "581ed3758da956e075f9755547703cea8e11366b"
+    },
+    {
+      "seq": 2,
+      "file": "002.txt",
+      "subtitle": "第1章　突き出せ（後編）",
+      "chars": 3304,
+      "chars_no_newline": 3164,
+      "sha1": "5f802a6c610ef9b4abc192f3c8f9fc82a456e07f"
+    },
+    {
+      "seq": 3,
+      "file": "003.txt",
+      "subtitle": "第2章　嘘の作法（前編）",
+      "chars": 3223,
+      "chars_no_newline": 3067,
+      "sha1": "1f3c344068b9dcf073ae5d48e039dedb471e28cc"
+    },
+    {
+      "seq": 4,
+      "file": "004.txt",
+      "subtitle": "第2章　嘘の作法（後編）",
+      "chars": 3591,
+      "chars_no_newline": 3443,
+      "sha1": "ce2c892f12710987b82fe4e80a9b3220b040ee82"
+    },
+    {
+      "seq": 5,
+      "file": "005.txt",
+      "subtitle": "第3章　白い法衣（前編）",
+      "chars": 3319,
+      "chars_no_newline": 3201,
+      "sha1": "43a89db1c0c8914c155838fd0e93a53d0a51d93a"
+    },
+    {
+      "seq": 6,
+      "file": "006.txt",
+      "subtitle": "第3章　白い法衣（後編）",
+      "chars": 3028,
+      "chars_no_newline": 2926,
+      "sha1": "b07bbeabb28474fc40aed44de3d56f79bbf93c1f"
+    },
+    {
+      "seq": 7,
+      "file": "007.txt",
+      "subtitle": "第4章　登録簿（前編）",
+      "chars": 3188,
+      "chars_no_newline": 3044,
+      "sha1": "ccd03c9a1193ce79cc3aab0ac1f5029193d787b2"
+    },
+    {
+      "seq": 8,
+      "file": "008.txt",
+      "subtitle": "第4章　登録簿（後編）",
+      "chars": 4157,
+      "chars_no_newline": 3947,
+      "sha1": "77f149a8548b87cd88ead3a7eb83af27496ef8e7"
+    },
+    {
+      "seq": 9,
+      "file": "009.txt",
+      "subtitle": "第5章　石はどこだ（前編）",
+      "chars": 3776,
+      "chars_no_newline": 3582,
+      "sha1": "2631c9ff735372a71d41543c5a09597bb654ff7b"
+    },
+    {
+      "seq": 10,
+      "file": "010.txt",
+      "subtitle": "第5章　石はどこだ（後編）",
+      "chars": 2832,
+      "chars_no_newline": 2705,
+      "sha1": "fcee31dbe015a86801e4b137d441334fb6b2a5dc"
+    },
+    {
+      "seq": 11,
+      "file": "011.txt",
+      "subtitle": "第6章　石取りの盤（前編）",
+      "chars": 3434,
+      "chars_no_newline": 3328,
+      "sha1": "1ece190e2a9ae97ab963cc7140d8156cf140a093"
+    },
+    {
+      "seq": 12,
+      "file": "012.txt",
+      "subtitle": "第6章　石取りの盤（後編）",
+      "chars": 3446,
+      "chars_no_newline": 3290,
+      "sha1": "dc10306819d1fa6c4137d22b353826cca3ccf79b"
+    },
+    {
+      "seq": 13,
+      "file": "013.txt",
+      "subtitle": "第7章　夜明けの門（前編）",
+      "chars": 3297,
+      "chars_no_newline": 3165,
+      "sha1": "14fa8d104e6a75db7ad13c949a76546f20716d9a"
+    },
+    {
+      "seq": 14,
+      "file": "014.txt",
+      "subtitle": "第7章　夜明けの門（後編）",
+      "chars": 3052,
+      "chars_no_newline": 2888,
+      "sha1": "2b2696d06f718550296661ac9d1dfd16e0a4a140"
+    }
+  ]
+}

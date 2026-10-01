@@ -10,3 +10,7 @@
 __pycache__/
 *.pyc
 .venv/
+
+# なろう投稿スクリプト(ログインCookieを含むのでコミットしない)
+publish/narou/.chrome-profile/
+publish/narou/node_modules/

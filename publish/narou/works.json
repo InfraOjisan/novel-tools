@@ -1,0 +1,21 @@
+{
+  "limit_chars": 5000,
+  "works": {
+    "Novel_1": {
+      "title": "銀の川をのぼる",
+      "source": "../../Novel_1/output/final_proofread.md",
+      "note": "校正済み版(final_proofread.md)を投稿対象にする。narou_ncodeは作品作成後にN〇〇〇〇〇〇形式で記入",
+      "narou_novel_id": 3332261
+    },
+    "Novel_3": {
+      "title": "夜啼きの涙",
+      "source": "../../Novel_3/output/final.md",
+      "note": "1章が5000字超のため、場面区切り(＊)で前編/後編に分割する",
+      "narou_novel_id": 3332262
+    }
+  },
+  "notes": {
+    "id_meaning": "narou_novel_idはユーザページ(usernovelmanage)のURLに出る作品ID(数字)。Nコードではない",
+    "stray_empty_draft": "3331427 は空の下書き「銀の川をのぼる」(今回は使用しない。不要なら人間が削除)"
+  }
+}

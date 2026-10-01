@@ -1,0 +1,72 @@
+{
+  "work": "Novel_1",
+  "title": "銀の川をのぼる",
+  "source": "../../Novel_1/output/final_proofread.md",
+  "limit_chars": 5000,
+  "episodes": [
+    {
+      "seq": 1,
+      "file": "001.txt",
+      "subtitle": "第1章　ほたる",
+      "chars": 2694,
+      "chars_no_newline": 2563,
+      "sha1": "e69f606f20a2df298d862df54ffdf411a86a5630"
+    },
+    {
+      "seq": 2,
+      "file": "002.txt",
+      "subtitle": "第2章　閉ざされた幹",
+      "chars": 2547,
+      "chars_no_newline": 2445,
+      "sha1": "5c86daaa5d6203feb11b0c12f0b0dfef1a94bbbb"
+    },
+    {
+      "seq": 3,
+      "file": "003.txt",
+      "subtitle": "第3章　枯れ枝",
+      "chars": 2541,
+      "chars_no_newline": 2461,
+      "sha1": "1a5c8484f656b7be3e2f2372ed670a0f5b22a364"
+    },
+    {
+      "seq": 4,
+      "file": "004.txt",
+      "subtitle": "第4章　葉の塩",
+      "chars": 2527,
+      "chars_no_newline": 2409,
+      "sha1": "c5b8f6144a243f74bb099b7aafe42dab465e21c5"
+    },
+    {
+      "seq": 5,
+      "file": "005.txt",
+      "subtitle": "第5章　こだま",
+      "chars": 2502,
+      "chars_no_newline": 2427,
+      "sha1": "7a4e17d9a69b55efca8fe11eb48cd5fd64435ce4"
+    },
+    {
+      "seq": 6,
+      "file": "006.txt",
+      "subtitle": "第6章　第七号",
+      "chars": 2501,
+      "chars_no_newline": 2357,
+      "sha1": "37cb35b7cb836f8d505c4304aa922ab773f19068"
+    },
+    {
+      "seq": 7,
+      "file": "007.txt",
+      "subtitle": "第7章　二つの鍵",
+      "chars": 2834,
+      "chars_no_newline": 2663,
+      "sha1": "a099e071f99507c682dbccd3bc7c40547e0a24e6"
+    },
+    {
+      "seq": 8,
+      "file": "008.txt",
+      "subtitle": "第8章　銀の川",
+      "chars": 2911,
+      "chars_no_newline": 2737,
+      "sha1": "5d3d269387a1210de35b27029475b3294e3518f4"
+    }
+  ]
+}
