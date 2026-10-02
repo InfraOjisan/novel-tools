@@ -1,0 +1,104 @@
+{
+  "work": "Grauwall_02",
+  "title": "新しい組合長",
+  "source": "../../Series_Grauwall/Grauwall_02/output/final_proofread.md",
+  "limit_chars": 5000,
+  "episodes": [
+    {
+      "seq": 1,
+      "file": "001.txt",
+      "subtitle": "第1章　天井の足音",
+      "chars": 3073,
+      "chars_no_newline": 2943,
+      "sha1": "415f5a5820be21544c20ded924c1170104c6198c"
+    },
+    {
+      "seq": 2,
+      "file": "002.txt",
+      "subtitle": "第2章　登録簿",
+      "chars": 2874,
+      "chars_no_newline": 2736,
+      "sha1": "e6c4dfbda825811e9f5e51f0ce167f84131baf00"
+    },
+    {
+      "seq": 3,
+      "file": "003.txt",
+      "subtitle": "第3章　内示",
+      "chars": 2731,
+      "chars_no_newline": 2610,
+      "sha1": "7655c9d4c3a27e8af463ec6b67becefda9772bfb"
+    },
+    {
+      "seq": 4,
+      "file": "004.txt",
+      "subtitle": "第4章　二人の女",
+      "chars": 2768,
+      "chars_no_newline": 2634,
+      "sha1": "7188f320cc34ff6247c88a4f7fd1e7efec74050e"
+    },
+    {
+      "seq": 5,
+      "file": "005.txt",
+      "subtitle": "第5章　夫人の手紙",
+      "chars": 2709,
+      "chars_no_newline": 2583,
+      "sha1": "0959937efd46719e4becb816820242749ecf7cfa"
+    },
+    {
+      "seq": 6,
+      "file": "006.txt",
+      "subtitle": "第6章　裏口のスープ",
+      "chars": 2704,
+      "chars_no_newline": 2568,
+      "sha1": "28ead670d97f852320c530a64a709f820f5ebabc"
+    },
+    {
+      "seq": 7,
+      "file": "007.txt",
+      "subtitle": "第7章　卵を一つ",
+      "chars": 2659,
+      "chars_no_newline": 2517,
+      "sha1": "bf94a12c7db71c4faffe4fee20f25018d79c32d4"
+    },
+    {
+      "seq": 8,
+      "file": "008.txt",
+      "subtitle": "第8章　厩の二階",
+      "chars": 2689,
+      "chars_no_newline": 2557,
+      "sha1": "d6a907408dbc867df0a60e8821e790dfb32287e3"
+    },
+    {
+      "seq": 9,
+      "file": "009.txt",
+      "subtitle": "第9章　帳簿箱",
+      "chars": 2697,
+      "chars_no_newline": 2553,
+      "sha1": "cc9a66d1f40b45944638474b708bd71deb8ebefe"
+    },
+    {
+      "seq": 10,
+      "file": "010.txt",
+      "subtitle": "第10章　誓わない者",
+      "chars": 2765,
+      "chars_no_newline": 2593,
+      "sha1": "7caf849e5a9e7a5334ae7271e8220ee4f065b18d"
+    },
+    {
+      "seq": 11,
+      "file": "011.txt",
+      "subtitle": "第11章　紙の上",
+      "chars": 2669,
+      "chars_no_newline": 2533,
+      "sha1": "2c8651d9d3b8a169215a0118c166c1d13474408e"
+    },
+    {
+      "seq": 12,
+      "file": "012.txt",
+      "subtitle": "第12章　祝いの樽",
+      "chars": 2674,
+      "chars_no_newline": 2532,
+      "sha1": "12513ad057a7dac8a1d8f6f410a10ccbe1223020"
+    }
+  ]
+}
