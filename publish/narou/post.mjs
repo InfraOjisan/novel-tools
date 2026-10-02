@@ -178,14 +178,11 @@ async function publishOne(page, draftId, subtitle) {
   await page.locator('#reserve-off').waitFor({ state: 'visible' });
   await page.locator('#reserve-off').check();               // 予約掲載は使わない(即時公開)
   await page.getByRole('button', { name: /投稿\[確認\]/ }).click();
-  // 確認画面などが続く場合に備え、最大3回「投稿[...]」系の確定ボタンを探して押す
-  for (let i = 0; i < 3; i++) {
-    await page.waitForLoadState('domcontentloaded');
-    await sleep(1200);
-    const btn = page.locator('input[type=submit],button[type=submit]').filter({ hasText: /投稿\[(実行|確定)\]/ }).or(page.locator('input[type=submit][value*="投稿["]'));
-    if (!(await btn.count())) break;
-    await btn.first().click();
-  }
+  // 同じモーダル内で「投稿[実行]」に切り替わる(画面遷移なし)。押すと「投稿が完了しました」が出る
+  const exec = page.getByRole('button', { name: /投稿\[実行\]/ });
+  await exec.waitFor({ state: 'visible', timeout: 20000 });
+  await exec.click();
+  await page.getByText('投稿が完了しました').waitFor({ state: 'visible', timeout: 30000 });
 }
 
 async function cmdPublish(w, page) {
@@ -209,23 +206,35 @@ async function cmdPublish(w, page) {
   }
 }
 
+// 管理画面の作品ページから、読者向けのNコードを取得する
+async function getNcode(page, id) {
+  await page.goto(`${BASE}/usernovelmanage/top/ncode/${id}/`, { waitUntil: 'domcontentloaded' });
+  const href = await page.$$eval('a', (as) => (as.map((a) => a.href).find((h) => /ncode\.syosetu\.com\/n\w+\/?$/.test(h)) || ''));
+  const m = href.match(/ncode\.syosetu\.com\/(n\w+)/);
+  return m ? m[1] : null;
+}
+
+// 公開後の照合: 読者向けページ(https://ncode.syosetu.com/<Nコード>/<話数>/)の本文をローカルと比較
 async function cmdCheck(w, page) {
+  const ncode = await getNcode(page, w.id);
+  if (!ncode) { console.log('Nコードを取得できません(まだ1話も公開されていない可能性)'); process.exit(1); }
+  console.log(`== ${w.name} ${ncode}  https://ncode.syosetu.com/${ncode}/`);
   const remote = (await listEpisodes(page, w.id)).filter((r) => r.kind === 'posted');
-  if (!remote.length) { console.log('投稿済みの話がありません'); return; }
   let bad = 0;
   for (const ep of w.episodes) {
-    const r = remote.find((x) => x.subtitle === ep.subtitle);
-    if (!r) { console.log(`  ${ep.seq} ${ep.subtitle}: 未公開`); continue; }
+    if (!remote.some((x) => x.subtitle === ep.subtitle)) { console.log(`  ${ep.seq} ${ep.subtitle}: 未公開`); bad++; continue; }
+    const url = `https://ncode.syosetu.com/${ncode}/${ep.seq}/`;
     const p = await page.context().newPage();
-    await p.goto(r.href, { waitUntil: 'domcontentloaded' });
-    const text = await p.evaluate(() => {
-      const el = document.querySelector('.js-novel-text:not(.p-novel__text--preface):not(.p-novel__text--afterword)') || document.querySelector('#novel_honbun, .p-novel__body');
-      return el ? el.innerText : '';
+    await p.goto(url, { waitUntil: 'domcontentloaded' });
+    const got = await p.evaluate(() => {
+      const el = document.querySelector('.js-novel-text.p-novel__text:not(.p-novel__text--preface):not(.p-novel__text--afterword)');
+      return { body: el ? el.innerText : '', title: document.querySelector('.p-novel__title')?.innerText || '' };
     });
     const norm = (s) => s.replace(/\s+/g, '');
-    const ok = text && norm(text) === norm(ep.body);
-    if (!ok) bad++;
-    console.log(`  ${ep.seq} ${ep.subtitle}: ${ok ? '一致' : '不一致/取得失敗!'} url=${p.url()}`);
+    const okBody = got.body && norm(got.body) === norm(ep.body);
+    const okTitle = norm(got.title) === norm(ep.subtitle);
+    if (!okBody || !okTitle) bad++;
+    console.log(`  ${ep.seq} ${ep.subtitle}: ${okBody && okTitle ? '一致' : '不一致!'} ${url}`);
     await p.close();
     await sleep(800);
   }

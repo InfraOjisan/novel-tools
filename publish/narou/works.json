@@ -5,13 +5,23 @@
       "title": "銀の川をのぼる",
       "source": "../../Novel_1/output/final_proofread.md",
       "note": "校正済み版(final_proofread.md)を投稿対象にする。narou_ncodeは作品作成後にN〇〇〇〇〇〇形式で記入",
-      "narou_novel_id": 3332261
+      "narou_novel_id": 3332261,
+      "ncode": "n2594mv"
     },
     "Novel_3": {
       "title": "夜啼きの涙",
-      "source": "../../Novel_3/output/final.md",
+      "source": "../../Series_Grauwall/Grauwall_01/output/final.md",
       "note": "1章が5000字超のため、場面区切り(＊)で前編/後編に分割する",
-      "narou_novel_id": 3332262
+      "narou_novel_id": 3332262,
+      "ncode": "n2595mv"
+    },
+    "Grauwall_02": {
+      "title": "新しい組合長",
+      "source": "../../Series_Grauwall/Grauwall_02/output/final_proofread.md",
+      "note": "グラウヴァル第二話。校正済み版を投稿対象にする。1章＝1話（各章5000字以内のため分割なし）。narou_novel_id は作品作成後に記入",
+      "narou_novel_id": null,
+      "ncode": null,
+      "romancer_url": null
     }
   },
   "notes": {

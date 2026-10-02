@@ -25,8 +25,12 @@ Aion 3.5 Mini（OpenRouter 経由）を使って短編小説を自動生成・�
 ├── blog/           ← 【生成物】ブログ用の派生物
 └── logs/           ← 全ステップの記録
 
- Novel_1/ Novel_2/ Novel_3/ Series_Grauwall/
-                    ← 実作品（作品ごとのパラメータ直しは config.json と BRIEF.md）
+ Novel_1/ Novel_2/  ← 単発の実作品（作品ごとのパラメータ直しは config.json と BRIEF.md）
+
+ Series_Grauwall/   ← グラウヴァル・シリーズ（設定資料・台帳・企画表は直下）
+├── Grauwall_01/    ← 第1回『夜啼きの涙』（旧 Novel_3）
+├── Grauwall_02/    ← 第2回『新しい組合長』（準備中）
+└── Grauwall_NN/    ← 以後の回。Novel_base（足りない工程は直前の回）から複製
 
  Claude outputs/    ← チャット UI とのやりとりで作った中間物・画像など
 ```
