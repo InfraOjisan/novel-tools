@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>グラウヴァル</title>
+<meta name="description" content="城塞都市グラウヴァルの酒場「錆び釘亭」を舞台にした連作ファンタジー。全話の目次と、縦書き版（Romancer）・横書き版（小説家になろう）への入口。">
+<meta property="og:title" content="グラウヴァル">
+<meta property="og:description" content="城塞都市グラウヴァルの酒場「錆び釘亭」を舞台にした連作ファンタジー。どの話からでも読めます。">
+<meta property="og:image" content="cover_02.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+/* Layout: 一列の本棚。表紙を左、話の札を右に置いた行を、刊行順に上から並べる。最後の行は次の話の空き棚。 */
+:root {
+  --bg: #e5e7e8;        /* 城壁の石 */
+  --shelf: #f2f3f3;     /* 棚板 */
+  --ink: #1d2226;
+  --muted: #5a6168;
+  --rule: #c6cbcf;
+  --lamp: #8b5a12;      /* 酒場のランプ（真鍮） */
+  --lamp-ink: #fffaf0;
+  --display: "Shippori Mincho B1", "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif;
+  --body: "Shippori Mincho B1", "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif;
+  --ui: "Zen Kaku Gothic New", "Hiragino Sans", "Yu Gothic", "Noto Sans JP", sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #14171a; --shelf: #1c2024; --ink: #e3e1db; --muted: #9ba2a8; --rule: #2d3339;
+    --lamp: #dba54b; --lamp-ink: #1a1408; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #14171a; --shelf: #1c2024; --ink: #e3e1db; --muted: #9ba2a8; --rule: #2d3339;
+  --lamp: #dba54b; --lamp-ink: #1a1408; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font-family: var(--body); font-size: 16px; line-height: 1.9;
+  padding-inline: 16px; padding-block: 0 48px;
+}
+.wrap { max-width: 860px; margin: 0 auto; }
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+a:focus-visible { outline: 2px solid var(--lamp); outline-offset: 3px; border-radius: 2px; }
+
+/* 見出し */
+header.mast {
+  display: grid; grid-template-columns: auto 1fr; gap: 28px; align-items: end;
+  padding-block: 56px 36px; border-bottom: 1px solid var(--rule);
+}
+.mast h1 {
+  margin: 0; font-family: var(--display); font-weight: 800;
+  writing-mode: vertical-rl; font-size: clamp(44px, 9vw, 72px); line-height: 1.05;
+  letter-spacing: 0.14em;
+}
+.mast .lead { min-width: 0; }
+.eyebrow {
+  font-family: var(--ui); font-size: 12px; letter-spacing: 0.18em; color: var(--muted); margin: 0 0 10px;
+}
+.mast p.tag { margin: 0; font-size: 17px; max-width: 34em; text-wrap: pretty; }
+.mast p.note { margin: 14px 0 0; font-family: var(--ui); font-size: 13px; color: var(--muted); line-height: 1.7; }
+
+/* 本棚 */
+ol.shelf { list-style: none; margin: 0; padding: 0; }
+.book {
+  display: grid; grid-template-columns: minmax(120px, 200px) 1fr; gap: 28px;
+  padding-block: 36px; border-bottom: 1px solid var(--rule);
+}
+.cover {
+  aspect-ratio: 5 / 8; max-width: 100%; background: var(--shelf);
+  box-shadow: 0 1px 0 var(--rule), 0 10px 24px -14px rgba(0,0,0,.45);
+}
+.cover img { width: 100%; height: 100%; object-fit: cover; }
+.card { min-width: 0; }
+.no { font-family: var(--ui); font-size: 13px; letter-spacing: 0.2em; color: var(--lamp); margin: 0; font-weight: 700; }
+.book h2 {
+  margin: 4px 0 6px; font-family: var(--display); font-weight: 700;
+  font-size: clamp(26px, 4.4vw, 34px); line-height: 1.3; text-wrap: balance;
+}
+.meta { margin: 0 0 14px; font-family: var(--ui); font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.synopsis { margin: 0 0 20px; max-width: 32em; text-wrap: pretty; }
+.reads { display: flex; flex-wrap: wrap; gap: 10px; }
+.read {
+  display: inline-flex; flex-direction: column; gap: 0; text-decoration: none;
+  padding: 9px 16px 8px; border: 1px solid var(--lamp); border-radius: 3px;
+  font-family: var(--ui); line-height: 1.35; min-width: 0;
+}
+.read b { font-size: 15px; font-weight: 700; }
+.read small { font-size: 11.5px; color: var(--muted); letter-spacing: 0.04em; }
+.read.primary { background: var(--lamp); color: var(--lamp-ink); }
+.read.primary small { color: inherit; opacity: .8; }
+.read:hover { filter: brightness(1.06); }
+.read.pending { border-style: dashed; border-color: var(--rule); color: var(--muted); }
+
+/* 次の話の空き棚 */
+.book.next .cover {
+  background: transparent; box-shadow: none; border: 1px dashed var(--rule);
+  display: grid; place-items: center;
+}
+.book.next .cover span {
+  writing-mode: vertical-rl; font-family: var(--display); font-size: 20px; color: var(--muted); letter-spacing: .3em;
+}
+
+footer { padding-block: 32px 0; font-family: var(--ui); font-size: 12.5px; color: var(--muted); line-height: 1.8; }
+footer p { margin: 0 0 6px; }
+
+@media (max-width: 560px) {
+  header.mast { gap: 18px; padding-block: 40px 28px; }
+  .book { grid-template-columns: 104px 1fr; gap: 18px; padding-block: 28px; }
+  .synopsis { font-size: 15px; }
+}
+@media (max-width: 400px) {
+  .book { grid-template-columns: 1fr; }
+  .book .cover { width: 150px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .read { transition: filter .15s ease; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="mast">
+  <h1>グラウヴァル</h1>
+  <div class="lead">
+    <p class="eyebrow">連作ファンタジー　毎月一話</p>
+    <p class="tag">城塞都市グラウヴァル。冒険者組合の一階にある酒場「錆び釘亭」を舞台に、組合と街の人びとに起きたことを、一話ずつ描いていく連作です。</p>
+    <p class="note">どの話からでも読めます。縦書きの電子書籍版（Romancer）と、横書きの連載版（小説家になろう）があります。中身は同じです。</p>
+  </div>
+</header>
+
+<ol class="shelf">
+
+  <li class="book" id="ep1">
+    <div class="cover"><img src="cover_01.jpg" alt="『夜啼きの涙』表紙。暗い卓の上に置かれた赤い宝石" width="640" height="1024" loading="lazy"></div>
+    <div class="card">
+      <p class="no">第一話</p>
+      <h2>夜啼きの涙</h2>
+      <p class="meta">全7章・約5万字・完結　／　叙述ミステリ</p>
+      <p class="synopsis">ロズモンド夫人の宝石が盗まれた。犯人は冒険者ギルドの中にいるらしい。夜、城塞都市の門は閉ざされ、朝まで誰も出入りできない。嘘の作法が決まったこの世界で、一夜のうちに盤面は何度もひっくり返る。</p>
+      <div class="reads">
+        <a class="read primary" href="https://r.voyager.co.jp/epm/e1_700087_30092026220855" target="_blank" rel="noopener"><b>縦書きで読む</b><small>Romancer</small></a>
+        <a class="read" href="https://ncode.syosetu.com/n2595mv/" target="_blank" rel="noopener"><b>横書きで読む</b><small>小説家になろう・全14話</small></a>
+      </div>
+    </div>
+  </li>
+
+  <li class="book" id="ep2">
+    <div class="cover"><img src="cover_02.jpg" alt="『新しい組合長』表紙。霜の降りた石畳に続く足跡" width="640" height="1024" loading="lazy"></div>
+    <div class="card">
+      <p class="no">第二話</p>
+      <h2>新しい組合長</h2>
+      <p class="meta">全12章・約3万字・完結</p>
+      <p class="synopsis">冒険者組合に、新しい組合長がやってきた。元弓使いで、参事会の書記だったエーリカ・ランゲ。着任早々に届いたのは「亜人の組合員を登録簿から外せ」という内示だった。誰も嘘をつかずに、内示は退けられる。代わりに、紙の上に一つ、寒い言葉が残る。</p>
+      <div class="reads">
+        <a class="read primary" href="https://r.voyager.co.jp/epm/e1_701010_03102026015640" target="_blank" rel="noopener"><b>縦書きで読む</b><small>Romancer</small></a>
+        <span class="read pending"><b>横書きで読む</b><small>小説家になろう・近日公開</small></span>
+      </div>
+    </div>
+  </li>
+
+  <li class="book next" id="ep3">
+    <div class="cover" aria-hidden="true"><span>第三話</span></div>
+    <div class="card">
+      <p class="no">第三話</p>
+      <h2>準備中</h2>
+      <p class="synopsis">錆び釘亭の天井は、まだ鳴らないままです。次の話は来月ここに並びます。</p>
+    </div>
+  </li>
+
+</ol>
+
+<footer>
+  <p>制作　チームジョバンニ／AI小説制作スタジオ</p>
+  <p>本文は生成AIが執筆し、人間が企画・監修しています。</p>
+</footer>
+
+</div>
+</body>
+</html>

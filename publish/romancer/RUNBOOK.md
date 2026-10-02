@@ -48,7 +48,8 @@
    - 目次に第一章〜最終章と奥付が並ぶ
    - 第一章の冒頭の一文と、最終章の最後の一文が出る
 10. **記録**：`publish/narou/works.json` の `romancer_url` に書く。
-11. **前の話との相互リンク**（任意・人間の了解を取ってから）：前の話の作品紹介に次の話の題名と URL を足す。編集で URL が変わらないかを確かめる。
+11. **シリーズ目次ページを更新**：`docs/grauwall/index.html` に新しい話の行を足す（表紙は幅640に縮めて `docs/grauwall/cover_NN.jpg`、縦書き=Romancer と横書き=なろうのURL、あらすじ）。「第N+1話 準備中」の行を一つ先へ送る。公開先は GitHub Pages（`https://infraojisan.github.io/novel-tools/grauwall/`）。
+    - 各話の作品紹介文の末尾には、前後の話の個別URLではなく、この目次ページのURLを一行だけ入れる（話が増えても各話を直さずに済む）。
 12. **なろうへの併載追記**：`publish/narou/RUNBOOK.md` の「あらすじへの併載追記(Romancer)」を、記録した URL で行う。
 
 ## 終了条件（報告に含めること）
