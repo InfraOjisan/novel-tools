@@ -1,0 +1,176 @@
+2026-10-02T07:29:42 INIT
+2026-10-02T07:35:45 CALL writer design.packet.md -> design_a1.out
+2026-10-02T07:36:28 CALL writer design.packet.md -> design_a1.out
+2026-10-02T07:36:28   inbox: design (20574 chars) author=writer
+2026-10-02T07:36:28 STEP CANON下書きを canon/CANON.md に保存 → 次は審査
+2026-10-02T07:36:59 CALL reviewer canon-review.packet.md -> canon_review_a1.out
+2026-10-02T07:37:00   inbox: canon-review (530 chars) author=reviewer
+2026-10-02T07:37:00 CANON review fail: 1 high
+2026-10-02T07:37:00 STEP CANON審査不合格（high 1件）→ 修正設計
+2026-10-02T07:37:16 CALL writer design.packet.md -> design_a2.out
+2026-10-02T07:37:16   inbox: design (20574 chars) author=writer
+2026-10-02T07:37:16 STEP CANON下書きを canon/CANON.md に保存 → 次は審査
+2026-10-02T07:37:57 CALL reviewer canon-review.packet.md -> canon_review_a2.out
+2026-10-02T07:37:57   inbox: canon-review (275 chars) author=reviewer
+2026-10-02T07:37:57 CANON review fail: 1 high
+2026-10-02T07:37:57 STEP CANON審査不合格（high 1件）→ 修正設計
+2026-10-02T07:37:57 CALL writer design.packet.md -> design_a3.out
+2026-10-02T07:37:57   inbox: design (20721 chars) author=writer
+2026-10-02T07:37:57 STEP CANON下書きを canon/CANON.md に保存 → 次は審査
+2026-10-02T07:38:03 CALL reviewer canon-review.packet.md -> canon_review_a3.out
+2026-10-02T07:38:03   inbox: canon-review (159 chars) author=reviewer
+2026-10-02T07:38:03 CANON locked
+2026-10-02T07:38:03 STEP CANONが審査を通過し、ロックしました（人の確認待ち：`approve-canon`）
+2026-10-02T11:13:44 CALL writer write_ch01.packet.md -> ch01_write_a1.out
+2026-10-02T11:14:02 CALL writer write_ch01.packet.md -> ch01_write_a1.out
+2026-10-02T11:14:02   inbox: write_ch01 (2947 chars) author=writer
+2026-10-02T11:14:02 STEP 第1章 下書き1稿を作成（2808字）→ 次は審査
+2026-10-02T11:14:15 CALL reviewer review_ch01.packet.md -> ch01_review_a1.out
+2026-10-02T11:14:15   inbox: review_ch01 (344 chars) author=reviewer
+2026-10-02T11:14:15 CH01 accepted
+2026-10-02T11:14:15 STEP 第1章 合格（2808字）／軽微な指摘2件は記録のみ → chapters/ch01.md に確定 → 次はLEDGER記録
+2026-10-02T11:14:28 CALL reviewer ledger_ch01.packet.md -> ch01_ledger_a1.out
+2026-10-02T11:14:28   inbox: ledger_ch01 (1178 chars) author=reviewer
+2026-10-02T11:14:28 CH01 done
+2026-10-02T11:14:28 STEP 第1章 LEDGER記録完了 → 第2章へ
+2026-10-02T11:34:08 RESOLVE None ['--relock']
+2026-10-02T11:34:08 RESET from CH01
+2026-10-02T11:34:27 CALL writer write_ch01.packet.md -> ch01_write_a1.out
+2026-10-02T11:34:27   inbox: write_ch01 (3086 chars) author=writer
+2026-10-02T11:34:27 STEP 第1章 下書き1稿を作成（2943字）→ 次は審査
+2026-10-02T11:34:42 CALL reviewer review_ch01.packet.md -> ch01_review_a1.out
+2026-10-02T11:34:42   inbox: review_ch01 (352 chars) author=reviewer
+2026-10-02T11:34:42 CH01 accepted
+2026-10-02T11:34:42 STEP 第1章 合格（2943字）／軽微な指摘2件は記録のみ → chapters/ch01.md に確定 → 次はLEDGER記録
+2026-10-02T11:34:42 CALL reviewer ledger_ch01.packet.md -> ch01_ledger_a1.out
+2026-10-02T11:34:42   inbox: ledger_ch01 (1331 chars) author=reviewer
+2026-10-02T11:34:42 CH01 done
+2026-10-02T11:34:42 STEP 第1章 LEDGER記録完了 → 第2章へ
+2026-10-02T11:46:50 RESOLVE None ['--relock']
+2026-10-02T11:48:39 CALL writer write_ch02.packet.md -> ch02_write_a1.out
+2026-10-02T11:48:39   inbox: write_ch02 (2885 chars) author=writer
+2026-10-02T11:48:39 STEP 第2章 下書き1稿を作成（2735字）→ 次は審査
+2026-10-02T11:48:39 CALL reviewer review_ch02.packet.md -> ch02_review_a1.out
+2026-10-02T11:48:39   inbox: review_ch02 (231 chars) author=reviewer
+2026-10-02T11:48:39 CH02 accepted
+2026-10-02T11:48:39 STEP 第2章 合格（2735字）／軽微な指摘1件は記録のみ → chapters/ch02.md に確定 → 次はLEDGER記録
+2026-10-02T11:48:39 CALL reviewer ledger_ch02.packet.md -> ch02_ledger_a1.out
+2026-10-02T11:48:39   inbox: ledger_ch02 (1196 chars) author=reviewer
+2026-10-02T11:48:39 CH02 done
+2026-10-02T11:48:39 STEP 第2章 LEDGER記録完了 → 第3章へ
+2026-10-02T11:50:01 CALL writer write_ch03.packet.md -> ch03_write_a1.out
+2026-10-02T11:50:01   inbox: write_ch03 (2735 chars) author=writer
+2026-10-02T11:50:01 STEP 第3章 下書き1稿を作成（2599字）→ 次は審査
+2026-10-02T11:50:01 CALL reviewer review_ch03.packet.md -> ch03_review_a1.out
+2026-10-02T11:50:01   inbox: review_ch03 (330 chars) author=reviewer
+2026-10-02T11:50:01 CH03 accepted
+2026-10-02T11:50:01 STEP 第3章 合格（2599字）／軽微な指摘2件は記録のみ → chapters/ch03.md に確定 → 次はLEDGER記録
+2026-10-02T11:50:01 CALL reviewer ledger_ch03.packet.md -> ch03_ledger_a1.out
+2026-10-02T11:50:02   inbox: ledger_ch03 (1192 chars) author=reviewer
+2026-10-02T11:50:02 CH03 done
+2026-10-02T11:50:02 STEP 第3章 LEDGER記録完了 → 第4章へ
+2026-10-02T11:51:22 CALL writer write_ch04.packet.md -> ch04_write_a1.out
+2026-10-02T11:51:22   inbox: write_ch04 (2780 chars) author=writer
+2026-10-02T11:51:22 STEP 第4章 下書き1稿を作成（2634字）→ 次は審査
+2026-10-02T11:51:22 CALL reviewer review_ch04.packet.md -> ch04_review_a1.out
+2026-10-02T11:51:22   inbox: review_ch04 (244 chars) author=reviewer
+2026-10-02T11:51:22 CH04 accepted
+2026-10-02T11:51:22 STEP 第4章 合格（2634字）／軽微な指摘1件は記録のみ → chapters/ch04.md に確定 → 次はLEDGER記録
+2026-10-02T11:51:23 CALL reviewer ledger_ch04.packet.md -> ch04_ledger_a1.out
+2026-10-02T11:51:23   inbox: ledger_ch04 (1278 chars) author=reviewer
+2026-10-02T11:51:23 CH04 done
+2026-10-02T11:51:23 STEP 第4章 LEDGER記録完了 → 第5章へ
+2026-10-02T11:53:01 CALL writer write_ch05.packet.md -> ch05_write_a1.out
+2026-10-02T11:53:01   inbox: write_ch05 (2722 chars) author=writer
+2026-10-02T11:53:01 STEP 第5章 下書き1稿を作成（2582字）→ 次は審査
+2026-10-02T11:53:01 CALL reviewer review_ch05.packet.md -> ch05_review_a1.out
+2026-10-02T11:53:01   inbox: review_ch05 (392 chars) author=reviewer
+2026-10-02T11:53:01 CH05 accepted
+2026-10-02T11:53:01 STEP 第5章 合格（2582字）／軽微な指摘2件は記録のみ → chapters/ch05.md に確定 → 次はLEDGER記録
+2026-10-02T11:53:01 CALL reviewer ledger_ch05.packet.md -> ch05_ledger_a1.out
+2026-10-02T11:53:01   inbox: ledger_ch05 (1277 chars) author=reviewer
+2026-10-02T11:53:01 CH05 done
+2026-10-02T11:53:01 STEP 第5章 LEDGER記録完了 → 第6章へ
+2026-10-02T11:53:18 RESOLVE None ['--relock']
+2026-10-02T11:54:39 CALL writer write_ch06.packet.md -> ch06_write_a1.out
+2026-10-02T11:54:39   inbox: write_ch06 (2718 chars) author=writer
+2026-10-02T11:54:39 STEP 第6章 下書き1稿を作成（2568字）→ 次は審査
+2026-10-02T11:54:39 CALL reviewer review_ch06.packet.md -> ch06_review_a1.out
+2026-10-02T11:54:39   inbox: review_ch06 (374 chars) author=reviewer
+2026-10-02T11:54:39 CH06 accepted
+2026-10-02T11:54:39 STEP 第6章 合格（2568字）／軽微な指摘2件は記録のみ → chapters/ch06.md に確定 → 次はLEDGER記録
+2026-10-02T11:54:39 CALL reviewer ledger_ch06.packet.md -> ch06_ledger_a1.out
+2026-10-02T11:54:39   inbox: ledger_ch06 (1207 chars) author=reviewer
+2026-10-02T11:54:39 CH06 done
+2026-10-02T11:54:39 STEP 第6章 LEDGER記録完了 → 第7章へ
+2026-10-02T11:56:14 CALL writer write_ch07.packet.md -> ch07_write_a1.out
+2026-10-02T11:56:14   inbox: write_ch07 (2693 chars) author=writer
+2026-10-02T11:56:14 STEP 第7章 下書き1稿を作成（2537字）→ 次は審査
+2026-10-02T11:56:15 CALL reviewer review_ch07.packet.md -> ch07_review_a1.out
+2026-10-02T11:56:15   inbox: review_ch07 (320 chars) author=reviewer
+2026-10-02T11:56:15 CH07 accepted
+2026-10-02T11:56:15 STEP 第7章 合格（2537字）／軽微な指摘2件は記録のみ → chapters/ch07.md に確定 → 次はLEDGER記録
+2026-10-02T11:56:15 CALL reviewer ledger_ch07.packet.md -> ch07_ledger_a1.out
+2026-10-02T11:56:15   inbox: ledger_ch07 (1161 chars) author=reviewer
+2026-10-02T11:56:15 CH07 done
+2026-10-02T11:56:15 STEP 第7章 LEDGER記録完了 → 第8章へ
+2026-10-02T11:57:52 CALL writer write_ch08.packet.md -> ch08_write_a1.out
+2026-10-02T11:57:52   inbox: write_ch08 (2701 chars) author=writer
+2026-10-02T11:57:52 STEP 第8章 下書き1稿を作成（2557字）→ 次は審査
+2026-10-02T11:57:52 CALL reviewer review_ch08.packet.md -> ch08_review_a1.out
+2026-10-02T11:57:52   inbox: review_ch08 (395 chars) author=reviewer
+2026-10-02T11:57:52 CH08 accepted
+2026-10-02T11:57:52 STEP 第8章 合格（2557字）／軽微な指摘2件は記録のみ → chapters/ch08.md に確定 → 次はLEDGER記録
+2026-10-02T11:57:52 CALL reviewer ledger_ch08.packet.md -> ch08_ledger_a1.out
+2026-10-02T11:57:52   inbox: ledger_ch08 (1270 chars) author=reviewer
+2026-10-02T11:57:52 CH08 done
+2026-10-02T11:57:52 STEP 第8章 LEDGER記録完了 → 第9章へ
+2026-10-02T11:59:30 CALL writer write_ch09.packet.md -> ch09_write_a1.out
+2026-10-02T11:59:30   inbox: write_ch09 (2701 chars) author=writer
+2026-10-02T11:59:30 STEP 第9章 下書き1稿を作成（2546字）→ 次は審査
+2026-10-02T11:59:30 CALL reviewer review_ch09.packet.md -> ch09_review_a1.out
+2026-10-02T11:59:30   inbox: review_ch09 (477 chars) author=reviewer
+2026-10-02T11:59:30 CH09 accepted
+2026-10-02T11:59:30 STEP 第9章 合格（2546字）／軽微な指摘3件は記録のみ → chapters/ch09.md に確定 → 次はLEDGER記録
+2026-10-02T11:59:30 CALL reviewer ledger_ch09.packet.md -> ch09_ledger_a1.out
+2026-10-02T11:59:30   inbox: ledger_ch09 (1216 chars) author=reviewer
+2026-10-02T11:59:30 CH09 done
+2026-10-02T11:59:30 STEP 第9章 LEDGER記録完了 → 第10章へ
+2026-10-02T12:00:45 CALL writer write_ch10.packet.md -> ch10_write_a1.out
+2026-10-02T12:00:45   inbox: write_ch10 (2779 chars) author=writer
+2026-10-02T12:00:45 STEP 第10章 下書き1稿を作成（2590字）→ 次は審査
+2026-10-02T12:00:45 CALL reviewer review_ch10.packet.md -> ch10_review_a1.out
+2026-10-02T12:00:45   inbox: review_ch10 (483 chars) author=reviewer
+2026-10-02T12:00:45 CH10 accepted
+2026-10-02T12:00:45 STEP 第10章 合格（2590字）／軽微な指摘3件は記録のみ → chapters/ch10.md に確定 → 次はLEDGER記録
+2026-10-02T12:00:45 CALL reviewer ledger_ch10.packet.md -> ch10_ledger_a1.out
+2026-10-02T12:00:45   inbox: ledger_ch10 (1556 chars) author=reviewer
+2026-10-02T12:00:45 CH10 done
+2026-10-02T12:00:45 STEP 第10章 LEDGER記録完了 → 第11章へ
+2026-10-02T12:02:15 CALL writer write_ch11.packet.md -> ch11_write_a1.out
+2026-10-02T12:02:15   inbox: write_ch11 (2682 chars) author=writer
+2026-10-02T12:02:15 STEP 第11章 下書き1稿を作成（2534字）→ 次は審査
+2026-10-02T12:02:16 CALL reviewer review_ch11.packet.md -> ch11_review_a1.out
+2026-10-02T12:02:16   inbox: review_ch11 (472 chars) author=reviewer
+2026-10-02T12:02:16 CH11 accepted
+2026-10-02T12:02:16 STEP 第11章 合格（2534字）／軽微な指摘3件は記録のみ → chapters/ch11.md に確定 → 次はLEDGER記録
+2026-10-02T12:02:16 CALL reviewer ledger_ch11.packet.md -> ch11_ledger_a1.out
+2026-10-02T12:02:16   inbox: ledger_ch11 (1399 chars) author=reviewer
+2026-10-02T12:02:16 CH11 done
+2026-10-02T12:02:16 STEP 第11章 LEDGER記録完了 → 第12章へ
+2026-10-02T12:04:08 CALL writer write_ch12.packet.md -> ch12_write_a1.out
+2026-10-02T12:04:08   inbox: write_ch12 (2686 chars) author=writer
+2026-10-02T12:04:08 STEP 第12章 下書き1稿を作成（2530字）→ 次は審査
+2026-10-02T12:04:08 CALL reviewer review_ch12.packet.md -> ch12_review_a1.out
+2026-10-02T12:04:08   inbox: review_ch12 (531 chars) author=reviewer
+2026-10-02T12:04:08 CH12 accepted
+2026-10-02T12:04:08 STEP 第12章 合格（2530字）／軽微な指摘3件は記録のみ → chapters/ch12.md に確定 → 次はLEDGER記録
+2026-10-02T12:04:08 CALL reviewer ledger_ch12.packet.md -> ch12_ledger_a1.out
+2026-10-02T12:04:08   inbox: ledger_ch12 (1352 chars) author=reviewer
+2026-10-02T12:04:08 CH12 done
+2026-10-02T12:04:08 STEP 第12章 LEDGER記録完了 → 全章そろった。最終工程へ
+2026-10-02T12:04:33 STEP output/final.md を結合（31355字） → 最終審査へ
+2026-10-02T12:04:51 CALL reviewer final.packet.md -> final_review.out
+2026-10-02T12:04:51   inbox: final (693 chars) author=reviewer
+2026-10-02T12:04:51 STEP 最終審査合格。output/final.md と output/final_report.md が完成品です
+2026-10-02T12:06:17 RESOLVE None ['--relock']

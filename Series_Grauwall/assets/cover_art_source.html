@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8">
+<style>
+  html,body{margin:0;background:#000}
+  #stage{position:relative;width:1600px;height:2560px;overflow:hidden}
+  canvas{position:absolute;inset:0}
+  .title{position:absolute;right:230px;top:280px;writing-mode:vertical-rl;
+    font-family:"Noto Serif CJK JP",serif;font-weight:600;font-size:156px;letter-spacing:.18em;
+    color:#F2EBDD;text-shadow:0 0 22px rgba(255,214,160,.28),0 0 2px rgba(255,255,255,.55)}
+  .team{position:absolute;left:120px;bottom:150px;
+    font-family:"Noto Serif CJK JP",serif;font-weight:600;font-size:42px;letter-spacing:.08em;color:rgba(232,220,196,.88)}
+  .series{position:absolute;right:120px;top:300px;writing-mode:vertical-rl;
+    font-family:"Noto Serif CJK JP",serif;font-weight:500;font-size:34px;letter-spacing:.5em;color:rgba(232,220,196,.62)}
+</style></head>
+<body>
+<div id="stage"><canvas id="c" width="1600" height="2560"></canvas>
+  <div class="title">新しい組合長</div>
+  <div class="series">グラウヴァル　二</div>
+  <div class="team">チームジョバンニ</div>
+</div>
+<script>
+const MODE = location.hash.slice(1) || "a";
+const W = 1600, H = 2560;
+const g = document.getElementById("c").getContext("2d");
+let seed = {a: 3120201, b: 3121127, c: 3121202}[MODE] || 1;
+const rnd = () => ((seed = (seed * 1664525 + 1013904223) >>> 0) / 4294967296);
+const gauss = () => { let u = 0, v = 0; while (!u) u = rnd(); while (!v) v = rnd(); return Math.sqrt(-2 * Math.log(u)) * Math.cos(2 * Math.PI * v); };
+
+// ---------- 共通：夜の背景と、灯と雪のぼけ
+function background(top, mid, bottom, glowX, glowY, glowCol, glowR){
+  const lg = g.createLinearGradient(0, 0, 0, H);
+  lg.addColorStop(0, top); lg.addColorStop(.55, mid); lg.addColorStop(1, bottom);
+  g.fillStyle = lg; g.fillRect(0, 0, W, H);
+  const rg = g.createRadialGradient(glowX, glowY, 20, glowX, glowY, glowR);
+  rg.addColorStop(0, glowCol); rg.addColorStop(1, "rgba(0,0,0,0)");
+  g.fillStyle = rg; g.fillRect(0, 0, W, H);
+}
+function bokeh(n, yMax, cols, rMin, rMax){
+  g.save(); g.globalCompositeOperation = "lighter";
+  for (let i = 0; i < n; i++){
+    const x = rnd() * W, y = rnd() * yMax, r = rMin + rnd() * (rMax - rMin);
+    const c = cols[Math.floor(rnd() * cols.length)];
+    const rg = g.createRadialGradient(x, y, r * .2, x, y, r);
+    rg.addColorStop(0, `rgba(${c},.22)`); rg.addColorStop(.7, `rgba(${c},.12)`); rg.addColorStop(1, `rgba(${c},0)`);
+    g.fillStyle = rg; g.beginPath(); g.arc(x, y, r, 0, 7); g.fill();
+  }
+  g.restore();
+}
+function snow(n, yMax){
+  for (let i = 0; i < n; i++){
+    const x = rnd() * W, y = rnd() * yMax, r = Math.pow(rnd(), 2) * 5 + 1.2, a = .25 + rnd() * .55;
+    const rg = g.createRadialGradient(x, y, 0, x, y, r * 2.2);
+    rg.addColorStop(0, `rgba(250,250,255,${a})`); rg.addColorStop(1, "rgba(250,250,255,0)");
+    g.fillStyle = rg; g.beginPath(); g.arc(x, y, r * 2.2, 0, 7); g.fill();
+  }
+}
+function vignette(){
+  const rg = g.createRadialGradient(W/2, H*.55, H*.25, W/2, H*.55, H*.8);
+  rg.addColorStop(0, "rgba(0,0,0,0)"); rg.addColorStop(1, "rgba(0,0,0,.6)");
+  g.fillStyle = rg; g.fillRect(0, 0, W, H);
+}
+function noise(x0, y0, w, h, n, col, aMax){
+  for (let i = 0; i < n; i++){
+    g.fillStyle = `rgba(${col},${rnd()*aMax})`;
+    g.fillRect(x0 + rnd()*w, y0 + rnd()*h, 1 + rnd()*2, 1 + rnd()*2);
+  }
+}
+
+// ---------- A：三本の釘の吊り看板（組合の紋）
+function reliefNail(cx, cy, len, ang, w){
+  g.save(); g.translate(cx, cy); g.rotate(ang);
+  const half = len/2;
+  // 影（浮き彫り）
+  g.fillStyle = "rgba(0,0,0,.6)"; g.save(); g.translate(5, 7); g.filter = "blur(5px)";
+  g.beginPath(); g.moveTo(-half + 10, -w/2); g.lineTo(half - w*2.5, -w/2.6); g.lineTo(half, 0); g.lineTo(half - w*2.5, w/2.6); g.lineTo(-half + 10, w/2); g.closePath(); g.fill();
+  g.beginPath(); g.ellipse(-half + 8, 0, w*.55, w*1.35, 0, 0, 7); g.fill(); g.restore();
+  const lg = g.createLinearGradient(0, -w/2, 0, w/2);
+  lg.addColorStop(0, "#c49a6c"); lg.addColorStop(.3, "#8a5a36"); lg.addColorStop(.7, "#4d2f1c"); lg.addColorStop(1, "#24150c");
+  g.fillStyle = lg;
+  g.beginPath(); g.moveTo(-half + 10, -w/2); g.lineTo(half - w*2.5, -w/2.6); g.lineTo(half, 0); g.lineTo(half - w*2.5, w/2.6); g.lineTo(-half + 10, w/2); g.closePath(); g.fill();
+  g.save(); g.clip();
+  for (let i = 0; i < 160; i++){ const x = -half + rnd()*len, y = (rnd()-.5)*w, r = 1.5 + rnd()*6;
+    const c = rnd() < .5 ? "178,84,36" : "70,38,20"; g.fillStyle = `rgba(${c},${.2+rnd()*.35})`; g.beginPath(); g.arc(x, y, r, 0, 7); g.fill(); }
+  g.restore();
+  const hg = g.createLinearGradient(0, -w*1.35, 0, w*1.35);
+  hg.addColorStop(0, "#c8a07a"); hg.addColorStop(.5, "#6a4329"); hg.addColorStop(1, "#1f120a");
+  g.fillStyle = hg; g.beginPath(); g.ellipse(-half + 8, 0, w*.55, w*1.35, 0, 0, 7); g.fill();
+  g.restore();
+}
+function chain(x0, y0, x1, y1){
+  const n = Math.round(Math.hypot(x1-x0, y1-y0) / 30), ang = Math.atan2(y1-y0, x1-x0);
+  for (let i = 0; i < n; i++){ const t = (i + .5)/n, x = x0 + (x1-x0)*t, y = y0 + (y1-y0)*t;
+    g.save(); g.translate(x, y); g.rotate(ang);
+    g.strokeStyle = i % 2 ? "#6c6058" : "#3e3631"; g.lineWidth = 7;
+    g.beginPath(); g.ellipse(0, 0, 19, i % 2 ? 4 : 10, 0, 0, 7); g.stroke(); g.restore(); }
+}
+function snowCap(x0, y0, x1, y1, th){
+  g.save(); g.fillStyle = "rgba(240,244,252,.92)"; g.filter = "blur(1.5px)";
+  g.beginPath(); g.moveTo(x0, y0);
+  for (let x = x0; x <= x1; x += 18) g.lineTo(x, y0 + (y1-y0)*(x-x0)/(x1-x0) - th*(.6 + .4*Math.sin(x/37) + rnd()*.3));
+  g.lineTo(x1, y1); g.closePath(); g.fill(); g.restore();
+}
+function drawA(){
+  background("#08090e", "#15110f", "#090708", W*.32, H*.66, "rgba(226,140,64,.5)", H*.42);
+  bokeh(50, H, ["255,190,120","255,165,95","205,215,255"], 40, 130);
+  // 腕木（左の壁から）
+  const ay = 470, ax1 = W*.66;
+  const bg = g.createLinearGradient(0, ay - 22, 0, ay + 22); bg.addColorStop(0, "#5a5049"); bg.addColorStop(1, "#16120f");
+  g.fillStyle = bg; g.fillRect(-10, ay - 20, ax1 + 10, 40);
+  g.strokeStyle = "#2a2420"; g.lineWidth = 16; g.beginPath(); g.moveTo(0, ay + 240); g.quadraticCurveTo(ax1*.3, ay + 40, ax1*.7, ay + 8); g.stroke();
+  g.fillStyle = "#3a332e"; g.beginPath(); g.arc(ax1, ay, 26, 0, 7); g.fill();
+  snowCap(0, ay - 20, ax1, ay - 20, 22);
+  // 看板（鉄の円盤）
+  const cx = W*.4, cy = H*.43, R = 360;
+  chain(cx - 190, ay + 18, cx - 190, cy - Math.sqrt(R*R - 190*190) + 6);
+  chain(cx + 190, ay + 18, cx + 190, cy - Math.sqrt(R*R - 190*190) + 6);
+  g.save(); g.filter = "blur(30px)"; g.fillStyle = "rgba(0,0,0,.6)"; g.beginPath(); g.arc(cx + 30, cy + 40, R, 0, 7); g.fill(); g.restore();
+  const dg = g.createRadialGradient(cx - R*.35, cy - R*.4, R*.1, cx, cy, R);
+  dg.addColorStop(0, "#4a3d35"); dg.addColorStop(.6, "#26201c"); dg.addColorStop(1, "#120e0c");
+  g.fillStyle = dg; g.beginPath(); g.arc(cx, cy, R, 0, 7); g.fill();
+  g.save(); g.beginPath(); g.arc(cx, cy, R, 0, 7); g.clip();
+  for (let i = 0; i < 1600; i++){ const a = rnd()*7, r = Math.sqrt(rnd())*R, x = cx + Math.cos(a)*r, y = cy + Math.sin(a)*r;
+    g.fillStyle = `rgba(${rnd()<.6?"140,66,30":"80,54,40"},${rnd()*.22})`; g.beginPath(); g.arc(x, y, 1 + rnd()*5, 0, 7); g.fill(); }
+  // 灯の照り返し（左下から）
+  const rg = g.createRadialGradient(cx - R*.6, cy + R*.7, 10, cx - R*.6, cy + R*.7, R*1.3);
+  rg.addColorStop(0, "rgba(255,170,90,.35)"); rg.addColorStop(1, "rgba(255,170,90,0)"); g.fillStyle = rg; g.fillRect(cx - R, cy - R, 2*R, 2*R);
+  g.restore();
+  // 縁
+  g.strokeStyle = "#6e5f55"; g.lineWidth = 16; g.beginPath(); g.arc(cx, cy, R - 8, 0, 7); g.stroke();
+  g.strokeStyle = "rgba(255,200,150,.25)"; g.lineWidth = 3; g.beginPath(); g.arc(cx, cy, R - 15, Math.PI*.6, Math.PI*1.1); g.stroke();
+  // 紋：三本の釘
+  for (const a of [Math.PI/2 + .02, Math.PI/2 + Math.PI/3, Math.PI/2 - Math.PI/3]) reliefNail(cx, cy, 520, a, 34);
+  snowCap(cx - R*.82, cy - R*.57, cx + R*.82, cy - R*.57, 0);
+  g.save(); g.fillStyle = "rgba(240,244,252,.9)"; g.filter = "blur(2px)";
+  g.beginPath(); g.arc(cx, cy, R - 2, Math.PI*1.18, Math.PI*1.82); g.arc(cx, cy + 14, R - 12, Math.PI*1.82, Math.PI*1.18, true); g.fill(); g.restore();
+  snow(320, H);
+  // 足元の通り
+  const gy = H*.80; const sg = g.createLinearGradient(0, gy, 0, H); sg.addColorStop(0, "rgba(230,236,248,0)"); sg.addColorStop(.35, "rgba(230,236,248,.10)"); sg.addColorStop(1, "rgba(230,236,248,.05)");
+  g.fillStyle = sg; g.fillRect(0, gy, W, H - gy);
+  vignette();
+}
+
+// ---------- B：霜の足跡（三つの足跡が、裏口の灯へ）
+function sole(s){ // 靴底の輪郭（上がつま先）
+  g.beginPath();
+  g.moveTo(0, -60*s);
+  g.bezierCurveTo(22*s, -60*s, 28*s, -30*s, 24*s, -8*s);
+  g.bezierCurveTo(20*s, 10*s, 14*s, 18*s, 15*s, 34*s);
+  g.bezierCurveTo(16*s, 54*s, 8*s, 62*s, 0, 62*s);
+  g.bezierCurveTo(-8*s, 62*s, -16*s, 54*s, -15*s, 34*s);
+  g.bezierCurveTo(-14*s, 18*s, -20*s, 10*s, -24*s, -8*s);
+  g.bezierCurveTo(-28*s, -30*s, -22*s, -60*s, 0, -60*s);
+  g.closePath();
+}
+function print(x, y, ang, s, a){
+  g.save(); g.translate(x, y); g.rotate(ang);
+  g.filter = "blur(1.2px)";
+  g.fillStyle = `rgba(12,16,26,${a})`; sole(s); g.fill();
+  g.strokeStyle = `rgba(230,238,255,${a*.6})`; g.lineWidth = 2; sole(s*1.04); g.stroke();
+  g.restore();
+}
+function lizard(x, y, ang, a){
+  g.save(); g.translate(x, y); g.rotate(ang); g.filter = "blur(.8px)";
+  g.fillStyle = `rgba(12,16,26,${a})`;
+  g.beginPath(); g.ellipse(0, 0, 13, 15, 0, 0, 7); g.fill();
+  g.strokeStyle = `rgba(12,16,26,${a})`; g.lineCap = "round"; g.lineWidth = 6;
+  for (const t of [-1.1, -.55, 0, .55, 1.1]){ g.beginPath(); g.moveTo(Math.sin(t)*10, -Math.cos(t)*10); g.lineTo(Math.sin(t)*38, -Math.cos(t)*38); g.stroke();
+    g.beginPath(); g.arc(Math.sin(t)*40, -Math.cos(t)*40, 4, 0, 7); g.fill(); }
+  g.restore();
+}
+function drawB(){
+  background("#0b1018", "#141c28", "#090c12", W*.5, 0, "rgba(255,180,100,.55)", H*.55);
+  // 石畳（暗い）
+  for (let row = 0; row < 26; row++){
+    const y = row*104 - 30, off = (row % 2)*90;
+    for (let x = -off; x < W + 200; x += 180){
+      const w = 160 + rnd()*30, h = 92 + rnd()*12, v = 26 + rnd()*14;
+      g.fillStyle = `rgba(${v},${v+6},${v+16},.85)`; g.beginPath(); g.roundRect(x + 7, y + 7, w, h, 20); g.fill();
+    }
+  }
+  // 霜：細かな白と、きらめき
+  noise(0, 0, W, H, 230000, "226,236,255", .5);
+  g.save(); g.globalAlpha = .12; g.fillStyle = "#dfe8fb"; g.fillRect(0, 0, W, H); g.restore();
+  g.save(); g.globalCompositeOperation = "lighter";
+  for (let i = 0; i < 900; i++){ const x = rnd()*W, y = rnd()*H, r = .6 + rnd()*1.6; g.fillStyle = `rgba(255,255,255,${.3 + rnd()*.6})`; g.beginPath(); g.arc(x, y, r, 0, 7); g.fill(); }
+  g.restore();
+  // 裏口の灯（上）
+  const lg = g.createRadialGradient(W*.5, -40, 20, W*.5, -40, 1100);
+  lg.addColorStop(0, "rgba(255,190,110,.6)"); lg.addColorStop(.5, "rgba(255,170,90,.18)"); lg.addColorStop(1, "rgba(255,170,90,0)");
+  g.fillStyle = lg; g.fillRect(0, 0, W, H);
+  // 大人：右の足が浅い（膝をかばう）
+  for (let i = 0; i < 10; i++){
+    const t = i/9, x = W*.46 + Math.sin(t*2)*40 + (i % 2 ? 44 : -44), y = H*1.0 - t*H*.86;
+    const right = i % 2 === 1;
+    print(x, y, (right ? .10 : -.04), 1.15 - t*.25, right ? .38 : .78);
+  }
+  // 子ども：右のつま先が外を向く
+  for (let i = 0; i < 14; i++){
+    const t = i/13, x = W*.8 - t*W*.26 + (i % 2 ? 22 : -22), y = H*.98 - t*H*.8;
+    print(x, y, -.32 + (i % 2 ? .42 : 0), .5 - t*.12, .62);
+  }
+  // 蜥蜴：五本の指と、尾を引いた跡
+  g.save(); g.strokeStyle = "rgba(12,16,26,.38)"; g.lineWidth = 9; g.filter = "blur(2.5px)"; g.lineCap = "round";
+  g.beginPath(); g.moveTo(W*.16, H*1.02);
+  g.bezierCurveTo(W*.24, H*.82, W*.14, H*.62, W*.3, H*.42); g.bezierCurveTo(W*.38, H*.3, W*.4, H*.22, W*.44, H*.13); g.stroke(); g.restore();
+  for (let i = 0; i < 16; i++){
+    const t = i/15, bx = t < .6 ? W*.16 + t/.6*W*.13 : W*.29 + (t-.6)/.4*W*.15, by = H*1.0 - t*H*.88;
+    lizard(bx + (i % 2 ? 46 : -46), by, (i % 2 ? .35 : -.35) - .25*t, .55 - t*.15);
+  }
+  snow(180, H);
+  vignette();
+}
+
+// ---------- C：弦を外した長弓
+function drawC(){
+  background("#0d0b0a", "#1d140d", "#090706", W*.42, H*.42, "rgba(220,140,70,.45)", H*.45);
+  bokeh(40, H*.7, ["255,190,120","255,160,90","200,215,255"], 40, 120);
+  // 樫の扉（新しい木）
+  const dx = W*.14, dw = W*.62, dy = H*.08, dh = H*.86;
+  const dg = g.createLinearGradient(dx, 0, dx + dw, 0);
+  dg.addColorStop(0, "#5a3a24"); dg.addColorStop(.4, "#4a2f1c"); dg.addColorStop(1, "#1e130b");
+  g.fillStyle = dg; g.fillRect(dx, dy, dw, dh);
+  g.save(); g.globalAlpha = .22;
+  for (let i = 0; i < 90; i++){ g.strokeStyle = rnd() < .5 ? "#8a5e3c" : "#20140b"; g.lineWidth = 1 + rnd()*2.5;
+    const x = dx + rnd()*dw; g.beginPath(); g.moveTo(x, dy); for (let y = dy; y <= dy+dh; y += 90) g.lineTo(x + Math.sin(y/260 + i)*5, y); g.stroke(); }
+  g.restore();
+  // 板の継ぎ目と鉄の蝶番
+  g.fillStyle = "rgba(10,6,3,.6)"; for (const k of [1,2,3]) g.fillRect(dx + dw*k/4 - 2, dy, 4, dh);
+  for (const hy of [dy + dh*.18, dy + dh*.72]){
+    const hg = g.createLinearGradient(0, hy - 18, 0, hy + 18); hg.addColorStop(0, "#5b5550"); hg.addColorStop(1, "#1c1916");
+    g.fillStyle = hg; g.fillRect(dx - 20, hy - 18, dw*.55, 36);
+    g.fillStyle = "#2a2622"; for (let k = 0; k < 4; k++){ g.beginPath(); g.arc(dx + 30 + k*120, hy, 8, 0, 7); g.fill(); }
+  }
+  // 箍の擦り傷
+  g.strokeStyle = "rgba(230,190,140,.45)"; g.lineWidth = 3; g.beginPath(); g.moveTo(dx + dw*.08, dy + dh*.58); g.lineTo(dx + dw*.3, dy + dh*.6); g.stroke();
+  // 床
+  const fy = dy + dh; g.fillStyle = "#0c0806"; g.fillRect(0, fy, W, H - fy);
+  // 長弓（扉に立てかける。弦は外してある）
+  const bx0 = W*.62, by0 = fy - 6, bx1 = W*.44, by1 = H*.1;
+  g.save();
+  g.filter = "blur(16px)"; g.strokeStyle = "rgba(0,0,0,.55)"; g.lineWidth = 34; g.lineCap = "round";
+  g.beginPath(); g.moveTo(bx0 + 30, by0); g.quadraticCurveTo(W*.58 + 30, H*.5, bx1 + 30, by1); g.stroke();
+  g.filter = "none";
+  const N = 120, pts = [];
+  for (let i = 0; i <= N; i++){ const t = i/N, a = (1-t)*(1-t), b = 2*(1-t)*t, c = t*t;
+    pts.push([a*bx0 + b*W*.58 + c*bx1, a*by0 + b*H*.5 + c*by1]); }
+  for (let i = 0; i < N; i++){
+    const t = i / N, wid = 16 + 26 * Math.sin(Math.PI * t);
+    const wg = g.createLinearGradient(pts[i][0] - wid, 0, pts[i][0] + wid, 0);
+    wg.addColorStop(0, "#3c2412"); wg.addColorStop(.45, "#a2703e"); wg.addColorStop(.6, "#c48d52"); wg.addColorStop(1, "#4a2c15");
+    g.strokeStyle = wg; g.lineWidth = wid; g.lineCap = "round";
+    g.beginPath(); g.moveTo(pts[i][0], pts[i][1]); g.lineTo(pts[i+1][0], pts[i+1][1]); g.stroke();
+  }
+  // 握りの革
+  for (let i = 56; i < 66; i++){ g.strokeStyle = i % 2 ? "#2a1a10" : "#3d2717"; g.lineWidth = 50;
+    g.beginPath(); g.moveTo(pts[i][0], pts[i][1]); g.lineTo(pts[i+1][0], pts[i+1][1]); g.stroke(); }
+  // 外した弦（下の弭から垂れて、床に輪を作る）
+  g.strokeStyle = "rgba(240,230,206,.85)"; g.lineWidth = 4;
+  g.beginPath(); g.moveTo(pts[3][0], pts[3][1]); g.bezierCurveTo(W*.72, fy - 120, W*.78, fy - 10, W*.7, fy - 4);
+  g.bezierCurveTo(W*.64, fy + 4, W*.66, fy - 30, W*.74, fy - 20); g.stroke();
+  g.restore();
+  snow(120, H*.5);
+  vignette();
+}
+
+({a: drawA, b: drawB, c: drawC}[MODE] || drawA)();
+document.title = "done";
+</script>
+</body></html>

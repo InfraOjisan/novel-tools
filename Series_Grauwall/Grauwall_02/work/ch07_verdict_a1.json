@@ -1,0 +1,23 @@
+{
+  "chars": 2537,
+  "mech": [],
+  "review": {
+    "pass": true,
+    "slots_found": {},
+    "violations": [
+      {
+        "severity": "low",
+        "type": "series",
+        "detail": "赤い卵の瓶は「底のほうの一つはよけた」の一文だけで、意味づけしていない。CANON第6節S1の指定どおり。",
+        "fix": "このままでよい。以後の章で瓶を描かない。"
+      },
+      {
+        "severity": "low",
+        "type": "canon",
+        "detail": "ヨーナスの名と「袖口のインク」を第10章より前に出した。CANON第4節の人物像と一致し、第10章の登場を準備している。",
+        "fix": "このままでよい。"
+      }
+    ]
+  },
+  "problems": []
+}

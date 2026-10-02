@@ -1,0 +1,3 @@
+{"pass": true, "slots_found": {"Z1": "planted", "H1": "reinforced"}, "violations": [
+{"severity": "low", "type": "canon", "detail": "ドゥンの「新しい人の足は、左が重い」はCANONにない描写だが、右膝をかばう歩き方（CANON第4節）と矛盾しない。", "fix": "このままでよい。以後もエーリカは右足をかばう。"}
+]}
