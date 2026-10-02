@@ -13,7 +13,7 @@
 ## 前提
 - Mac: Node 22以上、Google Chrome、`cd publish/narou && npm install`(playwright-coreのみ。ブラウザのダウンロードは不要)
 - `works.json` に作品ごとの `source`(投稿対象のmd)と `narou_novel_id`(管理画面URL `usernovelmanage/top/ncode/<ID>/` の数字)がある
-- 現在の登録(2026-10-01 全話公開済み): Novel_1=管理ID 3332261 / Nコード n2594mv(銀の川をのぼる、校正済み版・全8話)、Novel_3=管理ID 3332262 / Nコード n2595mv(夜啼きの涙・全14話)
+- 現在の登録(全話公開済み): Novel_1=管理ID 3332261 / Nコード n2594mv(銀の川をのぼる、校正済み版・全8話)、Novel_3=管理ID 3332262 / Nコード n2595mv(夜啼きの涙・全14話)、Grauwall_02=管理ID 3333578 / Nコード n3911mv(新しい組合長・全12話、2026-10-03)
 - 読者向けURL: https://ncode.syosetu.com/<Nコード>/<話数>/
 
 ## 通常フロー(作品ごと)
@@ -36,7 +36,7 @@ node post.mjs check  Novel_3          # 公開後、読者向けページの本�
 - 結果は `state/<作品>.json` に記録される(draftId・状態)。
 
 ## あらすじへの併載追記(Romancer)
-Romancer 側の公開（docx 原稿のアップロード〜公開URLの記録）は `publish/romancer/RUNBOOK.md` を参照。公開URLは `works.json` の `romancer_url` に記録してから、ここを行う。
+Romancer 側の公開（EPUB のアップロード〜公開URLの記録）は `publish/romancer/RUNBOOK.md` を参照。公開URLは `works.json` の `romancer_url` に記録してから、ここを行う。
 
 他サイトと重複掲載する場合、なろうの公式ヘルプ(外部サイトとの同時掲載について)により、**あらすじに重複投稿である旨を書く**必要がある。Romancerと併載する作品では、公開後に次の手順で追記する。
 
@@ -92,3 +92,10 @@ Romancer 側の公開（docx 原稿のアップロード〜公開URLの記録）
 
 ## ブラウザ操作型エージェント(スクリプトが使えない場合の手動手順)
 上の「画面メモ」のURLを順に開き、`out/<作品>/NNN.txt` の内容をサブタイトル(`manifest.json`)とともに貼り付けて「下書き保存」。保存後、編集画面で本文の文字数が一致することを確認する。公開は人間のOK後に「投稿」→「投稿[確認]」。
+
+### Claude in Chrome で行う場合(Grauwall_02 で実施した手順。post.mjs が使えないマシン向け)
+- 本文は**打ち直さない**。`prepare.py` で作った `out/<作品>/` をコミット・push し、なろうの画面から GitHub の raw(`https://raw.githubusercontent.com/InfraOjisan/novel-tools/<コミットSHA>/publish/narou/out/<作品>/NNN.txt`)を `fetch` して欄に入れる。ブランチ名ではなくコミットSHAで読む(キャッシュ対策)。
+- 入れる前に本文の SHA-1 を `crypto.subtle` で計算し、`manifest.json` の `sha1` と一致しなければ止める。
+- 保存後、下書き一覧の各話を `/draftepisode/updateinput/draftepisodeid/<ID>/` から読み戻して原稿と比較(前後の空白は無視)。公開後は `ncode.syosetu.com/<Nコード>/<話数>/` の本文を空白を除いて比較。
+- 下書き作品の「作品設定」には確認画面がなく、「編集[実行]」で直接保存される。保存後は作品詳細に移る。移らなければ保存されていないので、開き直して値を確かめる。
+- 結果は `state/<作品>.json` に記録する(draftId と状態)。

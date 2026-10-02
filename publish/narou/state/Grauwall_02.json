@@ -1,0 +1,67 @@
+{
+  "work": "Grauwall_02",
+  "episodes": {
+    "1": {
+      "subtitle": "第1章　天井の足音",
+      "draftId": "9110551",
+      "status": "published"
+    },
+    "2": {
+      "subtitle": "第2章　登録簿",
+      "draftId": "9110553",
+      "status": "published"
+    },
+    "3": {
+      "subtitle": "第3章　内示",
+      "draftId": "9110554",
+      "status": "published"
+    },
+    "4": {
+      "subtitle": "第4章　二人の女",
+      "draftId": "9110555",
+      "status": "published"
+    },
+    "5": {
+      "subtitle": "第5章　夫人の手紙",
+      "draftId": "9110557",
+      "status": "published"
+    },
+    "6": {
+      "subtitle": "第6章　裏口のスープ",
+      "draftId": "9110558",
+      "status": "published"
+    },
+    "7": {
+      "subtitle": "第7章　卵を一つ",
+      "draftId": "9110559",
+      "status": "published"
+    },
+    "8": {
+      "subtitle": "第8章　厩の二階",
+      "draftId": "9110560",
+      "status": "published"
+    },
+    "9": {
+      "subtitle": "第9章　帳簿箱",
+      "draftId": "9110562",
+      "status": "published"
+    },
+    "10": {
+      "subtitle": "第10章　誓わない者",
+      "draftId": "9110563",
+      "status": "published"
+    },
+    "11": {
+      "subtitle": "第11章　紙の上",
+      "draftId": "9110565",
+      "status": "published"
+    },
+    "12": {
+      "subtitle": "第12章　祝いの樽",
+      "draftId": "9110566",
+      "status": "published"
+    }
+  },
+  "updated": "2026-10-02T17:34:43.958798Z",
+  "note": "Claude in Chrome で下書き保存（本文はGitHub raw 2b68b2b から読み込み、sha1照合）。読み戻しで12話とも一致。2026-10-03 全12話公開、読者向けページ本文12話一致(n3911mv)"
+}
