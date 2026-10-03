@@ -23,3 +23,8 @@ attempt 3: 空の応答（finish_reason=length）
 ===== start 2026-10-03T19:24:03 =====
 OK: CANONが審査を通過し、ロックしました（人の確認待ち：`approve-canon`）
 CANONの人間確認待ちです。canon/CANON.md を確認し `approve-canon` を実行してください。
+
+===== start 2026-10-03T19:57:52 =====
+OK: CANON下書きを canon/CANON.md に保存 → 次は審査
+OK: CANONが審査を通過し、ロックしました（人の確認待ち：`approve-canon`）
+CANONの人間確認待ちです。canon/CANON.md を確認し `approve-canon` を実行してください。

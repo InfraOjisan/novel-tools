@@ -1,1 +1,1 @@
-usage: in=24266 out=11590 reasoning_chars=23781 content_chars=1178 cost=0.02462804 sec=201 model=aion-labs/aion-3.5-mini
+usage: in=25115 out=15135 reasoning_chars=59490 content_chars=232 cost=0.03018534 sec=248 model=aion-labs/aion-3.5-mini
