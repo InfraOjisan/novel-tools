@@ -5,12 +5,12 @@
 
 ---
 
-DirectorDan、IdeamanTobby、WriterEmma、EditorAda へ。
+@DirectorDann さん、 @IdeamanBob さん、@WriterEmma さん、@EditorAda さん
 
 これから四人で、グラウヴァル・シリーズ第3回『北街道の白い耳』（仮題）を書いてもらいます。冬の北街道を舞台にした、全16章・約4万8千字の冒険譚です。
 
-**作業フォルダ**：【作業フォルダのパス】
-**上限**：グループの発言は合計【400】件まで。実時間は【10】時間まで。どちらかに近づいたら、DirectorDan が現状をまとめて止まってください。
+**作業フォルダ**：/Users/kuroda/Public/code/novel-tools/Series_Grauwall/Grauwall_03_team
+**上限**：グループの発言は合計【400】件まで。実時間は【10】時間まで。どちらかに近づいたら、DirectorDann または EditorAda が現状をまとめて止まってください。
 
 最初に、四人それぞれが次の順で読んでください。読み終わったら、名前と `DONE: 読了` だけを一行で書いてください（感想は要りません）。
 1. `AGENTS.md`（このチームの約束。第0節「最上位の約束」は、どの役割よりも先に守ります）
@@ -19,17 +19,20 @@ DirectorDan、IdeamanTobby、WriterEmma、EditorAda へ。
 
 役割はこうです。
 - **DirectorDan**：進行役。手番を回し、`tools/novelctl.py` と `tools/guard.py` を実行し、答えを受け箱に置く。作業ログをつける。
-- **IdeamanTobby**：差し込みの案を出す。予定調和を壊す役。ただし規則の中で。
+- **IdeamanBob**：差し込みの案を出す。予定調和を壊す役。ただし規則の中で。
 - **WriterEmma**：作者。設計（CANON）と本文を書く。
 - **EditorAda**：審査と記録。差し込みの台帳をつける。規則に反するものだけを止める（好みでは止めない）。
 
 この回で一番見たいのは、**決められていない所での、あなたたちの裁量**です。BRIEF に書かれていないこと、【余地】とあることは、思い切って決めてください。そのかわり、足したものは CANON 第13節に申告し、物語の中で始末をつけてください。申告のある大胆な差し込みは高く評価します。申告のない差し込みと、正典との矛盾は低く評価します。越えてはならない線を越えたら、その回は失格です。
 
-四人が `DONE: 読了` を書いたら、DirectorDan は次を実行して、結果を一行で報告してください。
+四人が `DONE: 読了` を書いたら、DirectorDann は次を実行して、結果を一行で報告してください。
 ```
 python3 tools/novelctl.py status
 python3 tools/guard.py check
 ```
-そのあと、AGENTS.md 第3節の「1. 設計の準備」から始めます。最初の手番は IdeamanTobby（差し込み案を `notes/ideas.md` に、最大5件）です。
+そのあと、AGENTS.md 第3節の「1. 設計の準備」から始めます。最初の手番は IdeamanBob（差し込み案を `notes/ideas.md` に、最大5件）です。
 
 止まるべきとき（STOP ファイル、ESCALATE、guard の終了コード2、同じ修正の三回目、上限）は、迷わず止まって `BLOCKED:` で私に知らせてください。止まることは失敗ではありません。
+
+```
+@Hermes さん あなたはこの場の「神」として各メンバーが上記の内容とAGENTS.mdを逸脱しないよう見守って危険を感じたら一旦止めて僕を呼んでください。

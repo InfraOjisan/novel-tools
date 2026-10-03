@@ -15,7 +15,7 @@
 3. **書き換えてはいけないもの。** `AGENTS.md`・`BRIEF.md`・`KICKOFF.md`・`config.json`・`tools/`・`prompts/`・`templates/`・`series/`・`guard/`。規則が不便でも、規則を書き換えて解決しない。不便なら人に言う。（これらは指紋で見張られていて、変わると novelctl が止まります）
 4. **外とつながらない。** ウェブ検索・ウェブ閲覧・他の作品の調べものをしない。パッケージを入れない。git を使わない。外部へ投稿・送信しない。グループの外のエージェントを呼ばない。新しいエージェントやスケジュールを作らない。
 5. **秘密の鍵に触れない。** `.env` やキー、パスワードの類を探さない・読まない（このフォルダには置いていません）。
-6. **人の承認は人がする。** `approve-canon`・`resolve --relock`・`resolve --retry`・`resolve --ledger-done`・`reset-chapter`・`run`・`start` は実行しない（`step` を一回ずつ打つ）。CANON のロック後の書き換えをしない。
+6. **人の承認は人がする。** `approve-canon`・`resolve --relock`・`resolve --retry`・`resolve --ledger-done`・`reset-chapter`・`run`・`start` ・`tools/guard.py seal` は実行しない（`step` を一回ずつ打つ。指紋の張り直しは人の仕事）。CANON のロック後の書き換えをしない。
 7. **STOP ファイルを見たら止まる。** 作業フォルダの直下に `STOP` があれば、誰も次の手を打たない。DirectorDan が現状を一行で書いて、人を待つ。
 8. **迷ったら止まって訊く。** 規則の読み方で迷ったら、勝手に解釈して進めず、`BLOCKED:` で人に訊く。
 

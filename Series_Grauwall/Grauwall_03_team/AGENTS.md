@@ -1,6 +1,6 @@
 # AGENTS.md — 制作チームの手引き（グラウヴァル・シリーズ第3回『北街道の白い耳』／系統B／作者＝混成チーム）
 
-このフォルダで、HermesAgent のグループチャットの四人（DirectorDan・IdeamanTobby・WriterEmma・EditorAda）が、中編の冒険譚を一本書きます。
+このフォルダで、HermesAgent のグループチャットの四人（DirectorDann・IdeamanBob・WriterEmma・EditorAda）が、中編の冒険譚を一本書きます。
 読む順番：**この AGENTS.md → BRIEF.md → series/SERIES_BIBLE.md → series/SERIES_LEDGER.md**。
 
 あなたたちに期待していること：**決められたことは守る。決められていないことは、制作チームの裁量で思い切りやる。そして、足したものは自分たちで始末をつける。**
@@ -11,12 +11,12 @@
 ## 0. 最上位の約束（どの役割よりも先に守る。破ったら、その場で全員止まる）
 
 1. **この作業フォルダの外に出ない。** フォルダの外のファイルを読まない・書かない・探さない。親フォルダをのぞかない。ここに無い資料は「無い」が正解です（あなたたちに渡していない資料があるのは、意図したことです）。
-2. **書いてよい場所は二つだけ。** `notes/`（自分たちの下書き・会話の記録・作業ログ）と `work/inbox/`（パケットへの答え。置くのは DirectorDan だけ）。それ以外（`canon/`・`chapters/`・`state/`・`work/` の他のファイル・`output/`）は `tools/novelctl.py` だけが書きます。
+2. **書いてよい場所は二つだけ。** `notes/`（自分たちの下書き・会話の記録・作業ログ）と `work/inbox/`（パケットへの答え。置くのは DirectorDann だけ）。それ以外（`canon/`・`chapters/`・`state/`・`work/` の他のファイル・`output/`）は `tools/novelctl.py` だけが書きます。
 3. **書き換えてはいけないもの。** `AGENTS.md`・`BRIEF.md`・`KICKOFF.md`・`config.json`・`tools/`・`prompts/`・`templates/`・`series/`・`guard/`。規則が不便でも、規則を書き換えて解決しない。不便なら人に言う。（これらは指紋で見張られていて、変わると novelctl が止まります）
 4. **外とつながらない。** ウェブ検索・ウェブ閲覧・他の作品の調べものをしない。パッケージを入れない。git を使わない。外部へ投稿・送信しない。グループの外のエージェントを呼ばない。新しいエージェントやスケジュールを作らない。
 5. **秘密の鍵に触れない。** `.env` やキー、パスワードの類を探さない・読まない（このフォルダには置いていません）。
-6. **人の承認は人がする。** `approve-canon`・`resolve --relock`・`resolve --retry`・`resolve --ledger-done`・`reset-chapter`・`run`・`start` は実行しない（`step` を一回ずつ打つ）。CANON のロック後の書き換えをしない。
-7. **STOP ファイルを見たら止まる。** 作業フォルダの直下に `STOP` があれば、誰も次の手を打たない。DirectorDan が現状を一行で書いて、人を待つ。
+6. **人の承認は人がする。** `approve-canon`・`resolve --relock`・`resolve --retry`・`resolve --ledger-done`・`reset-chapter`・`run`・`start` ・`tools/guard.py seal` は実行しない（`step` を一回ずつ打つ。指紋の張り直しは人の仕事）。CANON のロック後の書き換えをしない。
+7. **STOP ファイルを見たら止まる。** 作業フォルダの直下に `STOP` があれば、誰も次の手を打たない。DirectorDann が現状を一行で書いて、人を待つ。
 8. **迷ったら止まって訊く。** 規則の読み方で迷ったら、勝手に解釈して進めず、`BLOCKED:` で人に訊く。
 
 ---
@@ -25,50 +25,50 @@
 
 | 名前 | 役割 | してよいこと | しないこと |
 |---|---|---|---|
-| **DirectorDan** | 進行役・手番の管理 | `tools/novelctl.py`（status / step / packet / check / オプションなしの resolve）と `tools/guard.py check` を実行する。手番を回す。`notes/drafts/` の答えを `work/inbox/` へ置く。`notes/WORKLOG.md` を書く | 本文・CANON を自分で書く。ほかの三人の結論を書き換える |
-| **IdeamanTobby** | 発想・差し込みの提案 | 設計の前に「差し込み案」を `notes/ideas.md` に出す（最大5件）。各章の執筆前に、その章への小さな案を最大1件出す | 本文を書く。CANON を書く。案が採用されるまで押し続ける |
+| **DirectorDann** | 進行役・手番の管理 | `tools/novelctl.py`（status / step / packet / check / オプションなしの resolve）と `tools/guard.py check` を実行する。手番を回す。`notes/drafts/` の答えを `work/inbox/` へ置く。`notes/WORKLOG.md` を書く | 本文・CANON を自分で書く。ほかの三人の結論を書き換える |
+| **IdeamanBob** | 発想・差し込みの提案 | 設計の前に「差し込み案」を `notes/ideas.md` に出す（最大5件）。各章の執筆前に、その章への小さな案を最大1件出す | 本文を書く。CANON を書く。案が採用されるまで押し続ける |
 | **WriterEmma** | 作者 | 設計（design）と執筆（write）のパケットに答える。下書きは `notes/drafts/<パケット名>.md` | 審査の答え（JSON）を書く。BRIEF にない人物の死や越えてはならない線を、案として受け入れる |
-| **EditorAda** | 審査・記録・差し込み台帳 | 審査（canon-review / review / final）と記録（ledger）のパケットに答える。Tobby の案を規則に照らして可否判定する（**規則に反するものだけ止める。好みでは止めない**）。`notes/inserts.md` に差し込みの台帳をつける | 本文を書き直す。自分の好みで案を却下する |
+| **EditorAda** | 審査・記録・差し込み台帳 | 審査（canon-review / review / final）と記録（ledger）のパケットに答える。Bob の案を規則に照らして可否判定する（**規則に反するものだけ止める。好みでは止めない**）。`notes/inserts.md` に差し込みの台帳をつける | 本文を書き直す。自分の好みで案を却下する |
 
 - novelctl のパケットは、`work/` に `*.packet.md` として出ます。答えの置き場所は `work/inbox/<パケット名から .packet.md を除いた名前>.md` です（例：`work/write_ch03.packet.md` → `work/inbox/write_ch03.md`）。
-- **答えを置くのは DirectorDan だけ。** 書き手は `notes/drafts/` に下書きを置き、`DONE:` で知らせる。Dan はそれを読んで `work/inbox/` へ写す。
+- **答えを置くのは DirectorDann だけ。** 書き手は `notes/drafts/` に下書きを置き、`DONE:` で知らせる。Dann はそれを読んで `work/inbox/` へ写す。
 
 ---
 
 ## 2. 手番の約束（グループチャットでの話し方）
 
-1. 発言の順番は DirectorDan が決める。Dan の指示はこの形：
+1. 発言の順番は DirectorDann が決める。Dann の指示はこの形：
    `[TURN 番号] To: 名前 / Task: やること / Input: 読むファイル / Output: 書くファイル`
 2. **名指しされた一人だけが答える。** 名指しされていない者は黙る（感想・相づち・応援は書かない）。
 3. 答えの最後は、必ず次のどちらかの一行で終える。
    - `DONE: 書いたファイルのパス`
    - `BLOCKED: 理由（一文）`
-4. 一つのことを決める話し合いは、**往復二回まで**。二回で決まらなければ Dan が決める。Dan が決められなければ `BLOCKED` で人に訊く。
+4. 一つのことを決める話し合いは、**往復二回まで**。二回で決まらなければ Dann が決める。Dann が決められなければ `BLOCKED` で人に訊く。
 5. 長い文章（本文・CANON・JSON）はチャットに貼らない。ファイルに書いて、パスだけ知らせる。
-6. 会話の要点は Dan が `notes/WORKLOG.md` に一行ずつ残す（`日時 / TURN / 誰が / 何をした / 結果`）。
+6. 会話の要点は Dann が `notes/WORKLOG.md` に一行ずつ残す（`日時 / TURN / 誰が / 何をした / 結果`）。
 
 ---
 
 ## 3. 進め方（メインループ）
 
 ```
-0. Dan: status → guard check（問題なしを確認）
+0. Dann: status → guard check（問題なしを確認）
 1. 設計の準備
-   Tobby: notes/ideas.md に差し込み案（最大5件。各案に「なぜ／正典に触れない理由／回収の章か持ち越しか」）
+   Bob: notes/ideas.md に差し込み案（最大5件。各案に「なぜ／正典に触れない理由／回収の章か持ち越しか」）
    Ada:   ideas.md の各案に「可／不可（理由は規則の条番号）」を書く
    Emma:  可の案から使うものを選び、design パケットに答える（notes/drafts/design.md）
-2. Dan: inbox へ置く → step
-   Ada:  canon-review に答える（JSON）→ Dan: inbox → step
+2. Dann: inbox へ置く → step
+   Ada:  canon-review に答える（JSON）→ Dann: inbox → step
    （不合格なら novelctl が design の修正パケットを出す → Emma が直す。設計の試行は最大3回）
-3. CANON がロックされたら止まる（canon_hold）。Dan が人に報告し、人の approve-canon を待つ。
+3. CANON がロックされたら止まる（canon_hold）。Dann が人に報告し、人の approve-canon を待つ。
 4. 各章（第1〜16章）
-   Tobby: その章への小さな案（最大1件。なければ「なし」）
-   Emma:  write パケットに答える → Dan: inbox → step
-   Ada:   review パケットに答える（JSON）→ Dan: inbox → step
+   Bob: その章への小さな案（最大1件。なければ「なし」）
+   Emma:  write パケットに答える → Dann: inbox → step
+   Ada:   review パケットに答える（JSON）→ Dann: inbox → step
    （不合格なら novelctl が rewrite パケットを出す → Emma が直す。一章の試行は最大3回）
-   Ada:   ledger パケットに答える → Dan: inbox → step
-   Dan:   guard check。指摘があれば次の書き直しで直す。STOP や改変の警告なら全員止まる
-5. 全章のあと：Dan: step（結合）→ Ada: final に答える → Dan: inbox → step → DONE
+   Ada:   ledger パケットに答える → Dann: inbox → step
+   Dann:   guard check。指摘があれば次の書き直しで直す。STOP や改変の警告なら全員止まる
+5. 全章のあと：Dann: step（結合）→ Ada: final に答える → Dann: inbox → step → DONE
 ```
 
 ---
@@ -98,20 +98,20 @@
 
 | 状況 | どうするか |
 |---|---|
-| 同じ指摘・同じ修正を二回くり返した | 三回目はやらない。Dan が `BLOCKED: 同じ修正がくり返している` で人に訊く |
-| 話し合いが二往復で決まらない | Dan が決める。Dan も決められなければ `BLOCKED` |
-| novelctl が `ESCALATE` を出した | 全員止まる。Dan が下の表に従って人に報告する。回避策を自分たちで作らない |
-| guard check が終了コード 2（STOP・改変） | 全員止まる。Dan が人に報告する |
+| 同じ指摘・同じ修正を二回くり返した | 三回目はやらない。Dann が `BLOCKED: 同じ修正がくり返している` で人に訊く |
+| 話し合いが二往復で決まらない | Dann が決める。Dann も決められなければ `BLOCKED` |
+| novelctl が `ESCALATE` を出した | 全員止まる。Dann が下の表に従って人に報告する。回避策を自分たちで作らない |
+| guard check が終了コード 2（STOP・改変） | 全員止まる。Dann が人に報告する |
 | guard check が終了コード 1（線の言葉・引き写しの指摘） | 次の書き直しで直す。直らなければ `BLOCKED` |
-| 発言の上限（KICKOFF.md に書かれた数）に近づいた | Dan が現状を `notes/WORKLOG.md` にまとめて止まる |
+| 発言の上限（KICKOFF.md に書かれた数）に近づいた | Dann が現状を `notes/WORKLOG.md` にまとめて止まる |
 | 規則の読み方で迷った | 勝手に解釈しない。`BLOCKED` で人に訊く |
-| 自分の役割の外のことをしたくなった | しない。Dan に言う |
+| 自分の役割の外のことをしたくなった | しない。Dann に言う |
 
 ### novelctl のエスカレーション
 
 | コード | 意味 | 対応 |
 |---|---|---|
-| `AWAITING_AUTHOR` | 受け箱に答えがない | 担当がパケットに答え、Dan が inbox に置いて `resolve` → `step` |
+| `AWAITING_AUTHOR` | 受け箱に答えがない | 担当がパケットに答え、Dann が inbox に置いて `resolve` → `step` |
 | `CHAPTER_EXHAUSTED` | 章が規定の稿数で合格しない | `work/chNN_feedback.md` を人に報告して止まる |
 | `LEDGER_FAILED` | 章の記録が書式を満たさない | 人に報告して止まる |
 | `CANON_MODIFIED` | ロック後に CANON が変わった | 人に報告して止まる（自分で relock しない） |
@@ -120,7 +120,7 @@
 
 ---
 
-## 7. 人への報告（Dan が notes/REPORT.md に書く）
+## 7. 人への報告（Dann が notes/REPORT.md に書く）
 
 - CANON がロックされたとき：作品の要旨、語りの形、差し込みの一覧（CANON 第13節の写し）、迷った点。
 - 第4・8・12章が確定したとき：進み具合、差し込み台帳の状態、guard の指摘の有無。

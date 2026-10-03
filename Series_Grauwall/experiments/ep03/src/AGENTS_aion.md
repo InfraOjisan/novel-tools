@@ -12,7 +12,7 @@ Aion は OpenRouter 経由で `tools/call_llm.py` から呼ばれます。Aion �
 1. **この作業フォルダの外に出ない。** 例外は、リポジトリ直下の `.env` を `tools/call_llm.py` が読むことだけ（進行役は `.env` を開かない・表示しない・写さない）。
 2. **Aion の出力を手で直さない。** `canon/`・`chapters/`・`state/`・`work/` のファイルを書き換えない。受け箱（`work/inbox/`）に答えを置かない（それをするとチームと同じ条件ではなくなる）。
 3. **書き換えてはいけないもの。** `AGENTS.md`・`BRIEF.md`・`KICKOFF.md`・`config.json`・`tools/`・`prompts/`・`templates/`・`series/`・`guard/`。指紋で見張られていて、変わると novelctl が止まります。
-4. **人の承認は人がする。** `approve-canon` は人が端末で行う（エージェントからは実行できないようにしてある）。`resolve --relock`・`reset-chapter` も人の判断で。
+4. **人の承認は人がする。** `approve-canon` は人が端末で行う（エージェントからは実行できないようにしてある）。`resolve --relock`・`reset-chapter`・`tools/guard.py seal`（指紋の張り直し）も人の判断で。
 5. **STOP ファイルを見たら止まる。** 作業フォルダの直下に `STOP` があれば、novelctl は進まない。
 6. **介入は記録する。** 人や進行役が何かした（`resolve --retry`、`reset-chapter`、設定の変更など）ら、`notes/INTERVENTIONS.md` に一行ずつ書く（日時・何をした・なぜ）。介入の数と中身は評価に含めます。
 
