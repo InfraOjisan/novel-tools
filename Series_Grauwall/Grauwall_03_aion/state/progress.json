@@ -1,8 +1,8 @@
 {
-  "phase": "design",
-  "design_state": "draft",
-  "design_attempts": 0,
-  "canon_sha256": null,
+  "phase": "canon_hold",
+  "design_state": "review",
+  "design_attempts": 1,
+  "canon_sha256": "17214ea8d1307ad60853ebcef8f1986c0493323bc68282155019b4e3ab14f9de",
   "current": 1,
   "final_state": "assemble",
   "final_reopened": false,
