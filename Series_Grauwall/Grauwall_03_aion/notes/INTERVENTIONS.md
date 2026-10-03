@@ -7,3 +7,4 @@
 - 2026-10-03 18:50 / プロデューサー / CANON v1 を差し戻し（work/canon_feedback.md）。依頼の筋（冬に隊商が出る理由）と、数字・単位・亜人の職・年代・細部の修正。phase を design / draft に戻した（設計の試行は1回消費済み）。Claude が操作 ［種類:妥当］［扱い:受容（審査を Aion に委任していたが拾えず、人が引き取った）］
 - 2026-10-03 19:24 / プロデューサー / 審査役の max_tokens を 16000→32000 に変更（CALL_FAILED×3）。guard seal、resolve。Claude が操作 ［種類:環境（＋seal は責任）］［扱い:委任（判断は人、操作は Claude）］
 - 2026-10-03 19:45 / プロデューサー / CANON v2 を二度目の差し戻し（work/canon_feedback.md）。王都→市参事会の使い、伝令を最初の隊商の帰り道に、依頼主、荷の残り。phase を design/draft、design_attempts を 1 に戻した（残り2回）。Claude が操作 ［種類:妥当］［扱い:受容］
+- 2026-10-03 21:35 / プロデューサー / 第2章二稿目の審査が3回とも失敗（推論が上限を使い切る×2、上流の無通信504×1。CALL_FAILED）。prompts/review.md に「審査の進め方」3行（各項目は一度ずつ・迷ったら low で判断保留・嘘の判定は話し手の種別と場所だけで）を追加。guard seal、resolve（--retry なし：二稿目をそのまま審査し直す）。Claude が操作 ［種類:環境（＋seal は責任）］［扱い:委任（判断は人、操作は Claude）］
