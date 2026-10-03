@@ -84,3 +84,8 @@ AGENTS.md は、エージェントが**読んで、守ろうとする**規則で
 - [ ] `STOP` で止まることを、空の状態で一度試したか（`touch STOP && python3 tools/novelctl.py step` → `GUARD_STOP`、確かめたら `rm STOP`）
 - [ ] `python3 tools/guard.py check` が「問題なし」か
 - [ ] Aion 側：`python3 tools/call_llm.py --ping writer` が通るか。キーに上限額を付けたか
+
+---
+
+## 層の外側：責任の分解
+三層は「どう守るか」。その手前に「誰が何を持つか」がある。責任とリスクを回避・委任・移転・転嫁・受容に分解し、グレーゾーンを残さない。AI には委任しかできないので、AI に渡した仕事の責任は委任元（プロデューサー）に残る。→ `../PRINCIPLES.md`
