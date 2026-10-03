@@ -216,7 +216,7 @@
       "reviewer": {
         "model": "aion-labs/aion-3.5-mini",
         "temperature": 0.2,
-        "max_tokens": 16000,
+        "max_tokens": 32000,
         "reasoning_effort": "low",
         "system": "あなたは厳格な小説編集者であり記録係です。依頼文の出力形式に厳密に従い、指定された成果物だけを返します。"
       },
@@ -289,5 +289,6 @@
     "{packet}",
     "reviewer"
   ],
-  "_comment_writer": "Aion（OpenRouter）を call_llm.py で直接呼ぶ。キーとモデル名はリポジトリ直下の .env（NOVEL_PROVIDER_APIKEY / NOVEL_MODEL）から読む。"
+  "_comment_writer": "Aion（OpenRouter）を call_llm.py で直接呼ぶ。キーとモデル名はリポジトリ直下の .env（NOVEL_PROVIDER_APIKEY / NOVEL_MODEL）から読む。",
+  "_comment_reviewer": "2026-10-03: 審査役の max_tokens を 16000→32000（推論で使い切り CALL_FAILED が3回続いたため。プロデューサー承認）"
 }

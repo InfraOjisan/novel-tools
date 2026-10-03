@@ -1,8 +1,8 @@
 {
   "phase": "canon_hold",
   "design_state": "review",
-  "design_attempts": 1,
-  "canon_sha256": "17214ea8d1307ad60853ebcef8f1986c0493323bc68282155019b4e3ab14f9de",
+  "design_attempts": 3,
+  "canon_sha256": "64ad0e471940cd66d902cdd254fbba2bdd8df7f6a29dc9005f5287e15958b568",
   "current": 1,
   "final_state": "assemble",
   "final_reopened": false,

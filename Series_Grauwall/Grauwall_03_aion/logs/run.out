@@ -8,3 +8,18 @@ CANONの人間確認待ちです。canon/CANON.md を確認し `approve-canon` �
 
 ===== start 2026-10-03T18:19:30 =====
 CANONの人間確認待ちです。canon/CANON.md を確認し `approve-canon` を実行してください。
+
+===== start 2026-10-03T18:46:40 =====
+OK: CANON下書きを canon/CANON.md に保存 → 次は審査
+OK: CANON審査不合格（high 3件）→ 修正設計
+OK: CANON下書きを canon/CANON.md に保存 → 次は審査
+ESCALATE [CALL_FAILED] モデル呼び出し失敗 (rc=1)。stderr: attempt 1: 空の応答（finish_reason=length）
+attempt 2: 空の応答（finish_reason=length）
+attempt 3: 空の応答（finish_reason=length）
+再試行しても失敗しました。最後のエラー: 空の応答（finish_reason=length）
+
+対応: OPENROUTER_API_KEY・config.json の llm.profiles のモデル名・ネットワークを確認し `resolve` 後に再実行
+
+===== start 2026-10-03T19:24:03 =====
+OK: CANONが審査を通過し、ロックしました（人の確認待ち：`approve-canon`）
+CANONの人間確認待ちです。canon/CANON.md を確認し `approve-canon` を実行してください。

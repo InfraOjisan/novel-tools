@@ -1,0 +1,3 @@
+attempt 1: 空の応答（finish_reason=length）
+推論が max_tokens を使い切ったため、reasoning effort を low に下げて再試行します
+usage: in=23959 out=9519 reasoning_chars=9999 content_chars=8101 cost=0.02170666 sec=138 model=aion-labs/aion-3.5-mini
