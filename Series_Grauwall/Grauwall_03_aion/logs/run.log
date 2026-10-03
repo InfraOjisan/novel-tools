@@ -51,3 +51,37 @@ attempt 3: 空の応答（finish_reason=length）
 2026-10-03T20:08:46   usage: in=25115 out=15135 reasoning_chars=59490 content_chars=232 cost=0.03018534 sec=248 model=aion-labs/aion-3.5-mini
 2026-10-03T20:08:46 CANON locked
 2026-10-03T20:08:46 STEP CANONが審査を通過し、ロックしました（人の確認待ち：`approve-canon`）
+2026-10-03T20:25:41 START detached pid=9183
+2026-10-03T20:25:41 CALL writer write_ch01.packet.md -> ch01_write_a1.out
+2026-10-03T20:36:58   attempt 1: 空の応答（finish_reason=length）
+2026-10-03T20:36:58   推論が max_tokens を使い切ったため、reasoning effort を low に下げて再試行します
+2026-10-03T20:36:58   usage: in=8709 out=14576 reasoning_chars=29050 content_chars=2127 cost=0.0265027 sec=221 model=aion-labs/aion-3.5-mini
+2026-10-03T20:36:58 STEP 第1章 下書き1稿を作成（2010字）→ 次は審査
+2026-10-03T20:36:58 CALL reviewer review_ch01.packet.md -> ch01_review_a1.out
+2026-10-03T20:38:24   usage: in=10600 out=4886 reasoning_chars=16694 content_chars=267 cost=0.0142604 sec=86 model=aion-labs/aion-3.5-mini
+2026-10-03T20:38:24 CH01 fail a1: 1 problems
+2026-10-03T20:38:24 STEP 第1章 不合格（1件）→ 書き直し（2稿目）
+2026-10-03T20:38:24 CALL writer write_ch01.packet.md -> ch01_write_a2.out
+2026-10-03T20:41:22   usage: in=10111 out=10693 reasoning_chars=34765 content_chars=2720 cost=0.01808862 sec=178 model=aion-labs/aion-3.5-mini
+2026-10-03T20:41:22 STEP 第1章 下書き2稿を作成（2596字）→ 次は審査
+2026-10-03T20:41:22 CALL reviewer review_ch01.packet.md -> ch01_review_a2.out
+2026-10-03T20:42:40   usage: in=11106 out=5368 reasoning_chars=14038 content_chars=329 cost=0.01161248 sec=78 model=aion-labs/aion-3.5-mini
+2026-10-03T20:42:40 CH01 accepted
+2026-10-03T20:42:40 STEP 第1章 合格（2596字）／軽微な指摘1件は記録のみ → chapters/ch01.md に確定 → 次はLEDGER記録
+2026-10-03T20:42:40 CALL reviewer ledger_ch01.packet.md -> ch01_ledger_a1.out
+2026-10-03T20:43:45   usage: in=3226 out=4553 reasoning_chars=8017 content_chars=1067 cost=0.0086324 sec=65 model=aion-labs/aion-3.5-mini
+2026-10-03T20:43:45 CH01 done
+2026-10-03T20:43:45 STEP 第1章 LEDGER記録完了 → 第2章へ
+2026-10-03T20:43:45 CALL writer write_ch02.packet.md -> ch02_write_a1.out
+2026-10-03T20:54:14   attempt 1: 空の応答（finish_reason=length）
+2026-10-03T20:54:14   推論が max_tokens を使い切ったため、reasoning effort を low に下げて再試行します
+2026-10-03T20:54:14   usage: in=10310 out=6442 reasoning_chars=11208 content_chars=1638 cost=0.0162358 sec=118 model=aion-labs/aion-3.5-mini
+2026-10-03T20:54:14 STEP 第2章 下書き1稿を作成（1534字）→ 次は審査
+2026-10-03T20:54:14 CALL reviewer review_ch02.packet.md -> ch02_review_a1.out
+2026-10-03T20:55:38   usage: in=11874 out=4661 reasoning_chars=13082 content_chars=82 cost=0.0148372 sec=83 model=aion-labs/aion-3.5-mini
+2026-10-03T20:55:38 CH02 fail a1: 1 problems
+2026-10-03T20:55:38 STEP 第2章 不合格（1件）→ 書き直し（2稿目）
+2026-10-03T20:55:38 CALL writer write_ch02.packet.md -> ch02_write_a2.out
+2026-10-03T20:57:12   usage: in=11321 out=6308 reasoning_chars=15705 content_chars=2917 cost=0.0119537 sec=95 model=aion-labs/aion-3.5-mini
+2026-10-03T20:57:12 STEP 第2章 下書き2稿を作成（2776字）→ 次は審査
+2026-10-03T20:57:12 CALL reviewer review_ch02.packet.md -> ch02_review_a2.out
