@@ -3,7 +3,7 @@
   "design_state": "review",
   "design_attempts": 2,
   "canon_sha256": "e5975ebcde33d1fe1ded043a0c380aa81dfb2c51eca71feebf64a2ae1fd4d443",
-  "current": 10,
+  "current": 11,
   "final_state": "assemble",
   "final_reopened": false,
   "escalation": null,
@@ -72,17 +72,17 @@
       "warnings": []
     },
     "10": {
-      "state": "accepted",
+      "state": "done",
       "attempts": 3,
       "parse_retries": 0,
-      "ledger_attempts": 0,
+      "ledger_attempts": 1,
       "warnings": [
         "a1: 見出しが見つからず補完"
       ]
     },
     "11": {
-      "state": "pending",
-      "attempts": 0,
+      "state": "drafted",
+      "attempts": 2,
       "parse_retries": 0,
       "ledger_attempts": 0,
       "warnings": []

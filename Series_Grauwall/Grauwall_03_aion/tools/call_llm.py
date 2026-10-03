@@ -48,6 +48,10 @@ class ApiError(Exception):
     pass
 
 
+class Deadline(Exception):
+    """1回の呼び出しが壁時計の締め切り（profiles.*.deadline_sec）を過ぎた。推論の暴走を打ち切って投げ直すため。"""
+
+
 class Degenerate(Exception):
     pass
 
@@ -98,13 +102,19 @@ def request(url, key, body, idle_timeout):
     return urllib.request.urlopen(req, timeout=idle_timeout)
 
 
-def stream_once(url, key, body, prog, idle_timeout):
+def stream_once(url, key, body, prog, idle_timeout, deadline=None):
     parts, finish, usage, model = [], None, None, None
+    t_start = time.time()
     with request(url, key, body, idle_timeout) as r:
         for raw in r:
             line = raw.decode("utf-8", "replace").strip()
             if not line:
                 continue
+            if deadline:
+                el = time.time() - t_start
+                # 本文がまだ出ていなければ締め切りで、出始めていても1.5倍で打ち切る（書き終わる直前の本文は捨てない）
+                if (prog.content == 0 and el > deadline) or el > deadline * 1.5:
+                    raise Deadline(f"{el:.0f}秒たっても終わらない（締め切り {deadline}秒・推論{prog.reasoning}字・本文{prog.content}字）")
             if line.startswith(":"):  # OpenRouter のキープアライブ（処理中）
                 prog.tick()
                 continue
@@ -205,6 +215,7 @@ def run(role, task, text, progress_path=None):
     url = f"{base}/chat/completions"
     body = build_body(role, task, text)
     idle = LLM.get("idle_timeout_sec", 180)
+    deadline = (LLM.get("profiles", {}).get(role) or {}).get("deadline_sec")
     prog = Progress(progress_path, task)
     prog.tick(force=True)
     last = None
@@ -212,7 +223,7 @@ def run(role, task, text, progress_path=None):
         prog.attempt, prog.reasoning, prog.content = attempt, 0, 0
         t0 = time.time()
         try:
-            content, finish, usage, model = stream_once(url, key, body, prog, idle)
+            content, finish, usage, model = stream_once(url, key, body, prog, idle, deadline)
         except urllib.error.HTTPError as e:
             detail = e.read().decode("utf-8", "replace")[:800]
             last = f"HTTP {e.code}: {detail}"
@@ -227,6 +238,10 @@ def run(role, task, text, progress_path=None):
         except (socket.timeout, TimeoutError) as e:
             last = f"{idle}秒間なにも受信しなかった（無通信タイムアウト）: {e}"
             err(f"attempt {attempt}: {last}")
+            continue
+        except Deadline as e:
+            last = str(e)
+            err(f"attempt {attempt}: {last} → 打ち切って投げ直します")
             continue
         except Degenerate as e:
             last = str(e)

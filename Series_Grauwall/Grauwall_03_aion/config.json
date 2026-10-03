@@ -211,7 +211,8 @@
         "top_p": 0.95,
         "max_tokens": 32000,
         "reasoning_effort": "high",
-        "system": "あなたは日本語で書く小説家です。依頼文の指示と出力形式に厳密に従い、指定された成果物だけを返します。"
+        "system": "あなたは日本語で書く小説家です。依頼文の指示と出力形式に厳密に従い、指定された成果物だけを返します。",
+        "deadline_sec": 420
       },
       "reviewer": {
         "model": "aion-labs/aion-3.5-mini",
@@ -219,7 +220,8 @@
         "max_tokens": 32000,
         "reasoning_effort": "low",
         "system": "あなたは厳格な小説編集者であり記録係です。依頼文の出力形式に厳密に従い、指定された成果物だけを返します。",
-        "reasoning_max_tokens": 12000
+        "reasoning_max_tokens": 12000,
+        "deadline_sec": 240
       },
       "polisher": {
         "model": "aion-labs/aion-3.5-mini",
@@ -227,7 +229,8 @@
         "top_p": 0.95,
         "max_tokens": 32000,
         "reasoning_effort": "medium",
-        "system": "あなたは日本語の小説の文体を磨く名手です。筋・事実・台詞の中身は一切変えず、文章の色・リズム・五感の描写だけを豊かにします。指定された成果物だけを返します。"
+        "system": "あなたは日本語の小説の文体を磨く名手です。筋・事実・台詞の中身は一切変えず、文章の色・リズム・五感の描写だけを豊かにします。指定された成果物だけを返します。",
+        "deadline_sec": 420
       }
     },
     "task_overrides": {
@@ -236,7 +239,8 @@
       }
     },
     "idle_timeout_sec": 180,
-    "_comment_reviewer_reasoning": "reviewer の reasoning_max_tokens=12000：推論の暴走（第2章・第10章で上限を使い切り本文0字）対策。指定すると reasoning_effort より優先。2026-10-04"
+    "_comment_reviewer_reasoning": "reviewer の reasoning_max_tokens=12000：推論の暴走（第2章・第10章で上限を使い切り本文0字）対策。指定すると reasoning_effort より優先。2026-10-04",
+    "_comment_deadline": "deadline_sec：1回の呼び出しの壁時計の締め切り（本文が出始めていれば1.5倍まで待つ）。Aion は推論の量の指定に従わず、回ごとに93〜283秒・ときに20分以上暴走するため、待つより打ち切って投げ直す。ab_reasoning/RESULTS.md 参照。2026-10-04"
   },
   "polisher_cmd": [
     "python3",

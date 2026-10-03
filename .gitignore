@@ -17,3 +17,4 @@ publish/narou/node_modules/
 
 # 第3回の実験：setup_ep03.py --pack の生成物
 Series_Grauwall/experiments/ep03/dist/
+Series_Grauwall/experiments/ep03/ab_reasoning/out/
