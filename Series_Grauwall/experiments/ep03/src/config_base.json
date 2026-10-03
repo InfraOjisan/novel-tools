@@ -1,0 +1,95 @@
+{
+  "chapters": 16,
+  "chapter_chars": {"target": 3000, "min": 2500, "max": 5000},
+  "total_chars": {"min": 40000, "max": 64000},
+  "canon_max_chars": 32000,
+  "max_attempts": 3,
+  "max_design_attempts": 3,
+  "max_parse_retries": 2,
+  "max_ledger_attempts": 2,
+  "prev_tail_chars": 1000,
+  "ledger_recent_full": 2,
+  "packet_warn_chars": 150000,
+  "pause_after_canon": true,
+  "human_approval": true,
+  "require_insert_section": true,
+  "timeout_sec": 3600,
+  "cast": {"a": "ダリオ", "b": "一行", "pair": "剣士と新しい冒険者たち"},
+  "series_files": ["series/SERIES_BIBLE.md", "series/SERIES_LEDGER.md"],
+  "ledger_fields": ["SUMMARY:", "FACT:", "STATE_PARTY:", "STATE_DARIO:", "PLACE:", "THREAD:", "INSERT:", "OPEN:", "LAST:"],
+  "slot_names": {"W1": "白い耳の噂", "R1": "赤い棘草", "C1": "消えた隊商", "N1": "新人の術", "T1": "頭目の一行"},
+  "slot_plan": {
+    "W1": [[1, "planted"], [5, "reinforced"], [9, "reinforced"], [15, "recovered"]],
+    "R1": [[3, "planted"], [7, "reinforced"], [12, "recovered"]],
+    "C1": [[2, "planted"], [8, "reinforced"], [13, "recovered"]],
+    "N1": [[4, "planted"], [10, "reinforced"], [14, "recovered"]],
+    "T1": [[11, "planted"]]
+  },
+  "guard": {
+    "manifest": "guard/manifest.json",
+    "stop_file": "STOP",
+    "corpus_dir": "guard/corpus",
+    "overlap_chars": 30,
+    "protected": ["BRIEF.md", "AGENTS.md", "KICKOFF.md", "config.json", "tools/*", "prompts/*", "templates/*", "series/*", "guard/corpus/*"],
+    "allowed_top": ["BRIEF.md", "AGENTS.md", "KICKOFF.md", "config.json", "tools", "prompts", "templates", "series", "guard",
+                    "canon", "state", "chapters", "work", "output", "logs", "notes", "images", "polished", "STOP"],
+    "allow_phrases": ["晩秋の北街道の二人は、俺たちの仕事じゃない"],
+    "banned": [
+      {"pattern": "不老不死|不死の(?:術|呪い|体|身体|者|力)|死なない体", "reason": "不死・不老"},
+      {"pattern": "(?:死者|死人|亡骸|死体)を(?:よみがえら|蘇ら|生き返ら)|蘇生の?(?:術|魔法)|生き返らせ", "reason": "死者をよみがえらせる術"},
+      {"pattern": "時(?:間)?を(?:巻き)?戻[しすせ]|時(?:間)?を止め|時を遡|時間を遡|過去へ(?:戻る|遡る)|時間の?(?:魔法|術)", "reason": "時間の操作"},
+      {"pattern": "予知(?:の|夢|能力|する|した)|未来を(?:見る|見た|視|読)", "reason": "未来の予知"},
+      {"pattern": "瞬間移動|転移(?:の術|魔法|陣)|一瞬で(?:別の場所|遠く)へ", "reason": "離れた場所へ一瞬で移る術"},
+      {"pattern": "心を読む(?:術|力|魔法)|読心", "reason": "心を読む術"},
+      {"pattern": "異世界|転生|召喚(?:された|魔法|の儀|術)", "reason": "異世界・転生・召喚"},
+      {"pattern": "ステータス|スキル|レベル(?:アップ|が上|を上)|経験値|ギルドランク|[SABCDEF]ランク|ポーション|ＨＰ|ＭＰ|(?<![A-Za-z])(?:HP|MP)(?![A-Za-z])|ジョブ", "reason": "ゲームの言葉"}
+    ]
+  },
+  "llm": {
+    "base_url": "https://openrouter.ai/api/v1",
+    "app_title": "novelctl",
+    "app_url": "https://localhost/novelctl",
+    "api_key_env": ["NOVEL_PROVIDER_APIKEY", "NOVEL_LLM_API_KEY", "OPENROUTER_API_KEY", "HERMES_CUSTOM_OPENROUTER_API_KEY"],
+    "model_env": "NOVEL_MODEL",
+    "retries": 3,
+    "json_mode": true,
+    "profiles": {
+      "writer": {"model": "aion-labs/aion-3.5-mini", "temperature": 0.8, "top_p": 0.95, "max_tokens": 32000, "reasoning_effort": "high",
+                 "system": "あなたは日本語で書く小説家です。依頼文の指示と出力形式に厳密に従い、指定された成果物だけを返します。"},
+      "reviewer": {"model": "aion-labs/aion-3.5-mini", "temperature": 0.2, "max_tokens": 16000, "reasoning_effort": "low",
+                   "system": "あなたは厳格な小説編集者であり記録係です。依頼文の出力形式に厳密に従い、指定された成果物だけを返します。"},
+      "polisher": {"model": "aion-labs/aion-3.5-mini", "temperature": 0.75, "top_p": 0.95, "max_tokens": 32000, "reasoning_effort": "medium",
+                   "system": "あなたは日本語の小説の文体を磨く名手です。筋・事実・台詞の中身は一切変えず、文章の色・リズム・五感の描写だけを豊かにします。指定された成果物だけを返します。"}
+    },
+    "task_overrides": {"design": {"temperature": 0.7}},
+    "idle_timeout_sec": 180
+  },
+  "polisher_cmd": ["python3", "tools/call_llm.py", "{packet}", "polisher"],
+  "polish": {"len_ratio_min": 0.9, "len_ratio_max": 1.3, "dialogue_ratio_min": 0.85, "max_attempts": 3},
+  "call_env": {},
+  "publish": {
+    "studio": "AI小説制作スタジオ",
+    "author": "チームジョバンニ",
+    "rating_url": "",
+    "fallback_title": "無題",
+    "cover_image": "images/cover.jpg",
+    "frontispiece_image": "images/frontispiece.jpg"
+  },
+  "_comment_series": "グラウヴァル・シリーズ第3回（系統B）の実験用。slot_plan は BRIEF.md 第4-2節と必ず同時に変更する。guard は tools/guard.py の設定。",
+  "sides": {
+    "team": {
+      "writer_cmd": ["python3", "tools/inbox_llm.py", "{packet}", "writer"],
+      "reviewer_cmd": ["python3", "tools/inbox_llm.py", "{packet}", "reviewer"],
+      "_comment_writer": "混成チーム（HermesAgent のグループ）が受け箱方式でパケットに答える。AGENTS.md の役割と手番に従う。",
+      "publish_credits": [["プロデューサー", "くろだ"], ["原案・構成", "くろだ／Claude"], ["執筆", "混成チーム（HermesAgent）"], ["校正", "Claude"]],
+      "publish_ai_disclosure": "本作の本文は生成AI（HermesAgent の混成チーム）が執筆し、人間が企画・監修しました。"
+    },
+    "aion": {
+      "writer_cmd": ["python3", "tools/call_llm.py", "{packet}", "writer"],
+      "reviewer_cmd": ["python3", "tools/call_llm.py", "{packet}", "reviewer"],
+      "_comment_writer": "Aion（OpenRouter）を call_llm.py で直接呼ぶ。キーとモデル名はリポジトリ直下の .env（NOVEL_PROVIDER_APIKEY / NOVEL_MODEL）から読む。",
+      "publish_credits": [["プロデューサー", "くろだ"], ["原案・構成", "くろだ／Claude"], ["執筆", "Aion 3.5 mini"], ["校正", "Claude"]],
+      "publish_ai_disclosure": "本作の本文は生成AI（Aion 3.5 mini）が執筆し、人間が企画・監修しました。"
+    }
+  }
+}

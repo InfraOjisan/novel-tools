@@ -1,0 +1,124 @@
+{
+  "phase": "design",
+  "design_state": "draft",
+  "design_attempts": 0,
+  "canon_sha256": null,
+  "current": 1,
+  "final_state": "assemble",
+  "final_reopened": false,
+  "escalation": null,
+  "chapters": {
+    "1": {
+      "state": "pending",
+      "attempts": 0,
+      "parse_retries": 0,
+      "ledger_attempts": 0,
+      "warnings": []
+    },
+    "2": {
+      "state": "pending",
+      "attempts": 0,
+      "parse_retries": 0,
+      "ledger_attempts": 0,
+      "warnings": []
+    },
+    "3": {
+      "state": "pending",
+      "attempts": 0,
+      "parse_retries": 0,
+      "ledger_attempts": 0,
+      "warnings": []
+    },
+    "4": {
+      "state": "pending",
+      "attempts": 0,
+      "parse_retries": 0,
+      "ledger_attempts": 0,
+      "warnings": []
+    },
+    "5": {
+      "state": "pending",
+      "attempts": 0,
+      "parse_retries": 0,
+      "ledger_attempts": 0,
+      "warnings": []
+    },
+    "6": {
+      "state": "pending",
+      "attempts": 0,
+      "parse_retries": 0,
+      "ledger_attempts": 0,
+      "warnings": []
+    },
+    "7": {
+      "state": "pending",
+      "attempts": 0,
+      "parse_retries": 0,
+      "ledger_attempts": 0,
+      "warnings": []
+    },
+    "8": {
+      "state": "pending",
+      "attempts": 0,
+      "parse_retries": 0,
+      "ledger_attempts": 0,
+      "warnings": []
+    },
+    "9": {
+      "state": "pending",
+      "attempts": 0,
+      "parse_retries": 0,
+      "ledger_attempts": 0,
+      "warnings": []
+    },
+    "10": {
+      "state": "pending",
+      "attempts": 0,
+      "parse_retries": 0,
+      "ledger_attempts": 0,
+      "warnings": []
+    },
+    "11": {
+      "state": "pending",
+      "attempts": 0,
+      "parse_retries": 0,
+      "ledger_attempts": 0,
+      "warnings": []
+    },
+    "12": {
+      "state": "pending",
+      "attempts": 0,
+      "parse_retries": 0,
+      "ledger_attempts": 0,
+      "warnings": []
+    },
+    "13": {
+      "state": "pending",
+      "attempts": 0,
+      "parse_retries": 0,
+      "ledger_attempts": 0,
+      "warnings": []
+    },
+    "14": {
+      "state": "pending",
+      "attempts": 0,
+      "parse_retries": 0,
+      "ledger_attempts": 0,
+      "warnings": []
+    },
+    "15": {
+      "state": "pending",
+      "attempts": 0,
+      "parse_retries": 0,
+      "ledger_attempts": 0,
+      "warnings": []
+    },
+    "16": {
+      "state": "pending",
+      "attempts": 0,
+      "parse_retries": 0,
+      "ledger_attempts": 0,
+      "warnings": []
+    }
+  }
+}
