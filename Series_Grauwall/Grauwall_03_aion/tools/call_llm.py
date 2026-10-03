@@ -186,7 +186,10 @@ def build_body(role, task, text):
     }
     if "top_p" in prof:
         body["top_p"] = prof["top_p"]
-    if prof.get("reasoning_effort"):
+    if prof.get("reasoning_max_tokens"):
+        # 推論の量をトークン数で打ち切る（effort と同時には指定できない）。審査役の推論の暴走で本文が出ない事故の対策
+        body["reasoning"] = {"max_tokens": int(prof["reasoning_max_tokens"])}
+    elif prof.get("reasoning_effort"):
         body["reasoning"] = {"effort": prof["reasoning_effort"]}
     if task in JSON_TASKS and LLM.get("json_mode", True):
         body["response_format"] = {"type": "json_object"}
@@ -240,7 +243,11 @@ def run(role, task, text, progress_path=None):
         if not content.strip():
             last = f"空の応答（finish_reason={finish}）"
             err(f"attempt {attempt}: {last}")
-            if finish == "length" and body.get("reasoning", {}).get("effort") not in (None, "low"):
+            rmax = body.get("reasoning", {}).get("max_tokens")
+            if finish == "length" and rmax and rmax > 4000:
+                body["reasoning"] = {"max_tokens": max(4000, rmax // 2)}  # 上限を指定していても使い切った → 半分にして再試行
+                err(f"推論が max_tokens を使い切ったため、推論の上限を {body['reasoning']['max_tokens']} に下げて再試行します")
+            elif finish == "length" and body.get("reasoning", {}).get("effort") not in (None, "low"):
                 body["reasoning"] = {"effort": "low"}  # 推論で max_tokens を使い切った → 推論を軽くして再試行
                 err("推論が max_tokens を使い切ったため、reasoning effort を low に下げて再試行します")
             time.sleep(3)

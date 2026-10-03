@@ -3,7 +3,7 @@
   "design_state": "review",
   "design_attempts": 2,
   "canon_sha256": "e5975ebcde33d1fe1ded043a0c380aa81dfb2c51eca71feebf64a2ae1fd4d443",
-  "current": 6,
+  "current": 10,
   "final_state": "assemble",
   "final_reopened": false,
   "escalation": null,
@@ -44,39 +44,41 @@
       "warnings": []
     },
     "6": {
+      "state": "done",
+      "attempts": 3,
+      "parse_retries": 0,
+      "ledger_attempts": 1,
+      "warnings": []
+    },
+    "7": {
+      "state": "done",
+      "attempts": 2,
+      "parse_retries": 0,
+      "ledger_attempts": 1,
+      "warnings": []
+    },
+    "8": {
+      "state": "done",
+      "attempts": 3,
+      "parse_retries": 0,
+      "ledger_attempts": 1,
+      "warnings": []
+    },
+    "9": {
+      "state": "done",
+      "attempts": 2,
+      "parse_retries": 0,
+      "ledger_attempts": 1,
+      "warnings": []
+    },
+    "10": {
       "state": "accepted",
       "attempts": 3,
       "parse_retries": 0,
       "ledger_attempts": 0,
-      "warnings": []
-    },
-    "7": {
-      "state": "pending",
-      "attempts": 0,
-      "parse_retries": 0,
-      "ledger_attempts": 0,
-      "warnings": []
-    },
-    "8": {
-      "state": "pending",
-      "attempts": 0,
-      "parse_retries": 0,
-      "ledger_attempts": 0,
-      "warnings": []
-    },
-    "9": {
-      "state": "pending",
-      "attempts": 0,
-      "parse_retries": 0,
-      "ledger_attempts": 0,
-      "warnings": []
-    },
-    "10": {
-      "state": "pending",
-      "attempts": 0,
-      "parse_retries": 0,
-      "ledger_attempts": 0,
-      "warnings": []
+      "warnings": [
+        "a1: 見出しが見つからず補完"
+      ]
     },
     "11": {
       "state": "pending",

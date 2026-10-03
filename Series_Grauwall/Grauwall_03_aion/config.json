@@ -218,7 +218,8 @@
         "temperature": 0.2,
         "max_tokens": 32000,
         "reasoning_effort": "low",
-        "system": "あなたは厳格な小説編集者であり記録係です。依頼文の出力形式に厳密に従い、指定された成果物だけを返します。"
+        "system": "あなたは厳格な小説編集者であり記録係です。依頼文の出力形式に厳密に従い、指定された成果物だけを返します。",
+        "reasoning_max_tokens": 12000
       },
       "polisher": {
         "model": "aion-labs/aion-3.5-mini",
@@ -234,7 +235,8 @@
         "temperature": 0.7
       }
     },
-    "idle_timeout_sec": 180
+    "idle_timeout_sec": 180,
+    "_comment_reviewer_reasoning": "reviewer の reasoning_max_tokens=12000：推論の暴走（第2章・第10章で上限を使い切り本文0字）対策。指定すると reasoning_effort より優先。2026-10-04"
   },
   "polisher_cmd": [
     "python3",
