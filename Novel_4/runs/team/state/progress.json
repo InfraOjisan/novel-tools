@@ -1,0 +1,12 @@
+{
+ "chapters": {
+  "1": {
+   "status": "accepted",
+   "attempts": 2,
+   "writer": "w1",
+   "chars": 2842,
+   "low_issues": 0
+  }
+ },
+ "escalated": null
+}

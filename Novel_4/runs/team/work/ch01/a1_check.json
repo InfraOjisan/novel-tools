@@ -1,0 +1,38 @@
+{
+ "verified": [
+  {
+   "severity": "high",
+   "kind": "canon",
+   "quote_draft": "「今日はパン一斤が三ソルドだってよ」",
+   "source": "CANON",
+   "quote_source": "パン一斤が三ソルド",
+   "explain": "数値自体は一致しているため、この引用単体では不一致にならず。検査不能。"
+  },
+  {
+   "severity": "low",
+   "kind": "canon",
+   "quote_draft": "「届くまでが仕事だよ。届いたかどうかは、あんたが決める」",
+   "source": "CANON",
+   "quote_source": "「届くまでが仕事だよ。届いたかどうかは、あんたが決める」",
+   "explain": "本来トマのセリフでないはずの台詞が、この章ではトマの口から出ている。CANONではネリの口調として定義。"
+  },
+  {
+   "severity": "low",
+   "kind": "validity",
+   "quote_draft": "大運河には、十七の橋がかかる",
+   "source": "CANON",
+   "quote_source": "橋は十七、跳ね橋は三つ",
+   "explain": "十七橋が大運河だけに架かるという読み方ができるが、CANONは街全体で十七橋と読める。記述の限定が曖昧。"
+  }
+ ],
+ "unverified": [
+  {
+   "severity": "high",
+   "kind": "canon",
+   "quote_draft": "コンパネイレ・ヴェッキの真下、大運河北岸の荷揚げ場",
+   "source": "CANON",
+   "quote_source": "カンパニーレ・ヴェッキが03:30、04:30、05:30、06:00",
+   "explain": "鐘楼の名は「カンパニーレ・ヴェッキ」だが、原稿では「コンパネイレ・ヴェッキ」と綴られている。固有名詞の不一致。"
+  }
+ ]
+}

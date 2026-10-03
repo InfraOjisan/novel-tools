@@ -1,0 +1,205 @@
+{
+  "title_working": "夜明け前の運河便",
+  "chapters": 4,
+  "chars": {
+    "target": 3000,
+    "min": 2600,
+    "max": 3600
+  },
+  "max_attempts": 3,
+  "prev_tail_chars": 600,
+  "overlap_chars": 30,
+  "timeout_sec": 140,
+  "retries": 2,
+  "writer_system": "あなたは日本語で書く小説家です。依頼文の指示と出力形式に厳密に従い、指定された成果物だけを返します。",
+  "workers": {
+    "designer": {
+      "provider": "go",
+      "api": "chat",
+      "model": "deepseek-v4.1-flash",
+      "temperature": 0.7,
+      "max_tokens": 7000,
+      "extra": {
+        "thinking": {
+          "type": "disabled"
+        }
+      }
+    },
+    "editor": {
+      "provider": "go",
+      "api": "chat",
+      "model": "kimi-k3",
+      "temperature": 0.2,
+      "max_tokens": 4000,
+      "extra": {
+        "thinking": {
+          "type": "disabled"
+        }
+      }
+    },
+    "checker": {
+      "provider": "go",
+      "api": "chat",
+      "model": "mimo-v2.6-pro",
+      "temperature": 0.2,
+      "max_tokens": 12000,
+      "extra": {
+        "reasoning_effort": "none"
+      }
+    },
+    "ledger": {
+      "provider": "go",
+      "api": "chat",
+      "model": "deepseek-v4-pro",
+      "temperature": 0.2,
+      "max_tokens": 6000,
+      "extra": {
+        "thinking": {
+          "type": "disabled"
+        }
+      }
+    },
+    "judge": {
+      "provider": "go",
+      "api": "chat",
+      "model": "mimo-v2.6-pro",
+      "temperature": 0.2,
+      "max_tokens": 12000,
+      "extra": {
+        "reasoning_effort": "none"
+      }
+    }
+  },
+  "writers": [
+    {
+      "name": "w1",
+      "provider": "go",
+      "api": "chat",
+      "model_env": "OPENCODE_GO_MODEL_1",
+      "temperature": 0.85,
+      "max_tokens": 9000,
+      "extra": {
+        "thinking": {
+          "type": "disabled"
+        }
+      }
+    },
+    {
+      "name": "w2",
+      "provider": "go",
+      "api": "messages",
+      "model": "minimax-m3",
+      "temperature": 0.85,
+      "max_tokens": 9000
+    },
+    {
+      "name": "w3",
+      "provider": "go",
+      "api": "messages",
+      "model_env": "OPENCODE_GO_MODEL_3",
+      "temperature": 0.9,
+      "max_tokens": 9000,
+      "extra": {
+        "thinking": {
+          "type": "disabled"
+        }
+      }
+    }
+  ],
+  "aion": {
+    "name": "aion",
+    "model": "aion-labs/aion-3.5-mini",
+    "temperature": 0.8,
+    "top_p": 0.95,
+    "max_tokens": 32000,
+    "reasoning": {
+      "effort": "high"
+    },
+    "provider": "openrouter",
+    "api": "chat",
+    "timeout_sec": 1500
+  },
+  "canon_headings": [
+    "1. 舞台",
+    "2. 人物",
+    "3. 語り",
+    "4. 不変条件",
+    "5. 糸の中身",
+    "6. 章カード",
+    "7. 固有名詞と数値",
+    "8. 差し込み申告"
+  ],
+  "banned": [
+    [
+      "不老不死|不死の(?:術|呪い|体|身体|者|力)|死なない体",
+      "不死・不老"
+    ],
+    [
+      "(?:死者|死人|亡骸|死体)を(?:よみがえら|蘇ら|生き返ら)|蘇生の?(?:術|魔法)|生き返らせ",
+      "死者の蘇生"
+    ],
+    [
+      "時(?:間)?を(?:巻き)?戻[しすせ]|時(?:間)?を止め|時を遡|時間を遡|時間の?(?:魔法|術)",
+      "時間の操作"
+    ],
+    [
+      "予知(?:の|夢|能力|する|した)|未来を(?:見る|見た|視|読)",
+      "予知"
+    ],
+    [
+      "瞬間移動|転移(?:の術|魔法|陣)",
+      "瞬間移動"
+    ],
+    [
+      "心を読む(?:術|力|魔法)|読心",
+      "読心"
+    ],
+    [
+      "異世界|転生|召喚(?:された|魔法|の儀|術)",
+      "異世界・転生・召喚"
+    ],
+    [
+      "ステータス|スキル|レベル(?:アップ|が上|を上)|経験値|ポーション|(?<![A-Za-z])(?:HP|MP)(?![A-Za-z])",
+      "ゲームの言葉"
+    ]
+  ],
+  "mgmt_words": [
+    "伏線",
+    "スロット",
+    "CANON",
+    "LEDGER",
+    "章カード",
+    "P1",
+    "B1",
+    "P2"
+  ],
+  "corpus_dirs": [
+    "../Novel_1/chapters",
+    "../Novel_2/chapters",
+    "../Series_Grauwall/Grauwall_01",
+    "../Series_Grauwall/Grauwall_02",
+    "../Series_Grauwall/Grauwall_03_aion/chapters",
+    "../Series_Grauwall/Grauwall_03_team/chapters"
+  ],
+  "providers": {
+    "go": {
+      "url_env": "OPENCODE_GO_API_URL",
+      "key_env": [
+        "OPENCODE_GO_API_KEY"
+      ],
+      "strip_prefix": "opencode-go",
+      "user_agent": "my-coding-agent/1.0",
+      "session_header": "x-opencode-session"
+    },
+    "openrouter": {
+      "url": "https://openrouter.ai/api/v1",
+      "key_env": [
+        "NOVEL_PROVIDER_APIKEY",
+        "NOVEL_LLM_API_KEY",
+        "OPENROUTER_API_KEY"
+      ],
+      "usage_include": true
+    }
+  },
+  "time_budget_sec": 100
+}

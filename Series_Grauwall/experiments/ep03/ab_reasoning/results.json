@@ -1,0 +1,123 @@
+[
+  {
+    "cond": "high",
+    "k": 1,
+    "ok": true,
+    "sec": 164,
+    "reasoning_chars": 20440,
+    "content_chars": 2184,
+    "usage": "usage: in=15084 out=9312 reasoning_chars=20440 content_chars=2184 cost=0.01580704 sec=164 model=aion-labs/aion-3.5-mini",
+    "stderr_tail": [
+      "usage: in=15084 out=9312 reasoning_chars=20440 content_chars=2184 cost=0.01580704 sec=164 model=aion-labs/aion-3.5-mini"
+    ]
+  },
+  {
+    "cond": "high",
+    "k": 2,
+    "ok": true,
+    "sec": 179,
+    "reasoning_chars": 31979,
+    "content_chars": 2265,
+    "usage": "usage: in=15084 out=9767 reasoning_chars=31979 content_chars=2265 cost=0.0242326 sec=179 model=aion-labs/aion-3.5-mini",
+    "stderr_tail": [
+      "usage: in=15084 out=9767 reasoning_chars=31979 content_chars=2265 cost=0.0242326 sec=179 model=aion-labs/aion-3.5-mini"
+    ]
+  },
+  {
+    "cond": "low",
+    "k": 1,
+    "ok": true,
+    "sec": 93,
+    "reasoning_chars": 12916,
+    "content_chars": 1342,
+    "usage": "usage: in=15084 out=5288 reasoning_chars=12916 content_chars=1342 cost=0.01017292 sec=93 model=aion-labs/aion-3.5-mini",
+    "stderr_tail": [
+      "usage: in=15084 out=5288 reasoning_chars=12916 content_chars=1342 cost=0.01017292 sec=93 model=aion-labs/aion-3.5-mini"
+    ]
+  },
+  {
+    "cond": "low",
+    "k": 2,
+    "ok": true,
+    "sec": 272,
+    "reasoning_chars": 30039,
+    "content_chars": 1850,
+    "usage": "usage: in=15084 out=15066 reasoning_chars=30039 content_chars=1850 cost=0.02386212 sec=272 model=aion-labs/aion-3.5-mini",
+    "stderr_tail": [
+      "usage: in=15084 out=15066 reasoning_chars=30039 content_chars=1850 cost=0.02386212 sec=272 model=aion-labs/aion-3.5-mini"
+    ]
+  },
+  {
+    "cond": "cap4k",
+    "k": 1,
+    "ok": true,
+    "sec": 283,
+    "reasoning_chars": 33844,
+    "content_chars": 1701,
+    "usage": "usage: in=15084 out=19635 reasoning_chars=33844 content_chars=1701 cost=0.0380478 sec=283 model=aion-labs/aion-3.5-mini",
+    "stderr_tail": [
+      "usage: in=15084 out=19635 reasoning_chars=33844 content_chars=1701 cost=0.0380478 sec=283 model=aion-labs/aion-3.5-mini"
+    ]
+  },
+  {
+    "cond": "cap4k",
+    "k": 2,
+    "ok": true,
+    "sec": 239,
+    "reasoning_chars": 27047,
+    "content_chars": 1626,
+    "usage": "usage: in=15084 out=13862 reasoning_chars=27047 content_chars=1626 cost=0.02217652 sec=239 model=aion-labs/aion-3.5-mini",
+    "stderr_tail": [
+      "usage: in=15084 out=13862 reasoning_chars=27047 content_chars=1626 cost=0.02217652 sec=239 model=aion-labs/aion-3.5-mini"
+    ]
+  },
+  {
+    "cond": "off",
+    "k": 1,
+    "ok": false,
+    "sec": 0,
+    "reasoning_chars": 0,
+    "content_chars": 0,
+    "stderr_tail": [
+      "attempt 1: HTTP 400: {\"error\":{\"message\":\"Reasoning is mandatory for this endpoint and cannot be disabled.\",\"code\":400,\"metadata\":{\"provider_name\":null}}}",
+      "HTTP 400: {\"error\":{\"message\":\"Reasoning is mandatory for this endpoint and cannot be disabled.\",\"code\":400,\"metadata\":{\"provider_name\":null}}}"
+    ]
+  },
+  {
+    "cond": "off",
+    "k": 2,
+    "ok": false,
+    "sec": 0,
+    "reasoning_chars": 0,
+    "content_chars": 0,
+    "stderr_tail": [
+      "attempt 1: HTTP 400: {\"error\":{\"message\":\"Reasoning is mandatory for this endpoint and cannot be disabled.\",\"code\":400,\"metadata\":{\"provider_name\":null}}}",
+      "HTTP 400: {\"error\":{\"message\":\"Reasoning is mandatory for this endpoint and cannot be disabled.\",\"code\":400,\"metadata\":{\"provider_name\":null}}}"
+    ]
+  },
+  {
+    "cond": "default",
+    "k": 1,
+    "ok": true,
+    "sec": 706,
+    "reasoning_chars": 43877,
+    "content_chars": 2080,
+    "usage": "usage: in=15084 out=17876 reasoning_chars=43877 content_chars=2080 cost=0.02779664 sec=252 model=aion-labs/aion-3.5-mini",
+    "stderr_tail": [
+      "attempt 1: 空の応答（finish_reason=length）",
+      "usage: in=15084 out=17876 reasoning_chars=43877 content_chars=2080 cost=0.02779664 sec=252 model=aion-labs/aion-3.5-mini"
+    ]
+  },
+  {
+    "cond": "default",
+    "k": 2,
+    "ok": true,
+    "sec": 109,
+    "reasoning_chars": 13411,
+    "content_chars": 1500,
+    "usage": "usage: in=15084 out=6029 reasoning_chars=13411 content_chars=1500 cost=0.0189994 sec=109 model=aion-labs/aion-3.5-mini",
+    "stderr_tail": [
+      "usage: in=15084 out=6029 reasoning_chars=13411 content_chars=1500 cost=0.0189994 sec=109 model=aion-labs/aion-3.5-mini"
+    ]
+  }
+]

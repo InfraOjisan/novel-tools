@@ -1,0 +1,81 @@
+{"ev": "call", "task": "ping", "model": "anthropic/claude-sonnet-5.5", "sec": 1.9, "attempt": 1, "tok_in": 29, "tok_out": 4, "cost": 9.8e-05, "chars": 2, "t": "2026-10-03T16:37:40"}
+{"ev": "call", "task": "ping", "model": "openai/gpt-5.6-sol", "sec": 1.1, "attempt": 1, "tok_in": 23, "tok_out": 5, "cost": 9.6e-05, "chars": 2, "t": "2026-10-03T16:37:41"}
+{"ev": "call", "task": "ping", "model": "deepseek/deepseek-v4-pro", "sec": 1.5, "attempt": 1, "tok_in": 18, "tok_out": 34, "cost": 9.55494e-05, "chars": 2, "t": "2026-10-03T16:37:43"}
+{"ev": "call", "task": "ping", "model": "moonshotai/kimi-k2.6", "sec": 2.9, "attempt": 1, "tok_in": 27, "tok_out": 77, "cost": 0.00023295, "chars": 2, "t": "2026-10-03T16:37:46"}
+{"ev": "call", "task": "ping", "model": "google/gemini-3.8-flash", "sec": 1.9, "attempt": 1, "tok_in": 14, "tok_out": 28, "cost": 0.0001155, "chars": 2, "t": "2026-10-03T16:37:48"}
+{"ev": "call", "task": "ping", "model": "aion-labs/aion-3.5-mini", "sec": 1.5, "attempt": 1, "tok_in": 19, "tok_out": 47, "cost": 7.91e-05, "chars": 2, "t": "2026-10-03T16:37:49"}
+{"ev": "call", "task": "ping", "provider": "go", "model": "glm-5.3", "sec": 3.6, "attempt": 1, "tok_in": 27, "tok_out": 152, "cost": null, "chars": 2, "t": "2026-10-03T16:57:45"}
+{"ev": "call", "task": "ping", "provider": "go", "model": "kimi-k3", "sec": 1.2, "attempt": 1, "tok_in": 111, "tok_out": 55, "cost": null, "chars": 2, "t": "2026-10-03T16:57:46"}
+{"ev": "call", "task": "ping", "provider": "go", "model": "mimo-v2.6-pro", "sec": 3.3, "attempt": 1, "tok_in": 24, "tok_out": 16, "cost": null, "chars": 2, "t": "2026-10-03T16:57:49"}
+{"ev": "call", "task": "ping", "provider": "go", "model": "deepseek-v4-pro", "sec": 2.1, "attempt": 1, "tok_in": 97, "tok_out": 34, "cost": null, "chars": 2, "t": "2026-10-03T16:57:51"}
+{"ev": "call", "task": "ping", "provider": "go", "model": "deepseek-v4.1-flash", "sec": 1.7, "attempt": 1, "tok_in": 44, "tok_out": 40, "cost": null, "chars": 2, "t": "2026-10-03T16:57:53"}
+{"ev": "call", "task": "ping", "provider": "go", "model": "glm-5.3-flash", "sec": 3.3, "attempt": 1, "tok_in": 27, "tok_out": 87, "cost": null, "chars": 2, "t": "2026-10-03T16:57:56"}
+{"ev": "call", "task": "ping", "provider": "go", "model": "qwen3.8-flash", "sec": 4.1, "attempt": 1, "tok_in": 66, "tok_out": 173, "cost": null, "chars": 2, "t": "2026-10-03T16:58:01"}
+{"ev": "call", "task": "ping", "provider": "openrouter", "model": "aion-labs/aion-3.5-mini", "sec": 1.6, "attempt": 1, "tok_in": 19, "tok_out": 36, "cost": 6.37e-05, "chars": 2, "t": "2026-10-03T16:58:02"}
+{"ev": "net_error", "task": "design", "model": "kimi-k3", "err": "The read operation timed out", "t": "2026-10-03T17:09:02"}
+{"ev": "call", "task": "bench", "provider": "go", "model": "deepseek-v4.1-flash", "sec": 14.6, "attempt": 1, "tok_in": 60, "tok_out": 1500, "cost": null, "chars": 0, "t": "2026-10-03T17:10:01"}
+{"ev": "net_error", "task": "bench", "model": "deepseek-v4.1-flash", "err": "空の応答（推論で使い切った可能性）", "t": "2026-10-03T17:10:01"}
+{"ev": "call", "task": "bench", "provider": "go", "model": "deepseek-v4-pro", "sec": 17.0, "attempt": 1, "tok_in": 113, "tok_out": 962, "cost": null, "chars": 765, "t": "2026-10-03T17:10:03"}
+{"ev": "call", "task": "bench", "provider": "go", "model": "kimi-k3", "sec": 29.7, "attempt": 1, "tok_in": 129, "tok_out": 1500, "cost": null, "chars": 0, "t": "2026-10-03T17:10:16"}
+{"ev": "net_error", "task": "bench", "model": "kimi-k3", "err": "空の応答（推論で使い切った可能性）", "t": "2026-10-03T17:10:16"}
+{"ev": "call", "task": "bench", "provider": "go", "model": "glm-5.3", "sec": 30.1, "attempt": 1, "tok_in": 45, "tok_out": 1500, "cost": null, "chars": 0, "t": "2026-10-03T17:10:16"}
+{"ev": "net_error", "task": "bench", "model": "glm-5.3", "err": "空の応答（推論で使い切った可能性）", "t": "2026-10-03T17:10:16"}
+{"ev": "call", "task": "bench", "provider": "go", "model": "mimo-v2.6-pro", "sec": 39.3, "attempt": 1, "tok_in": 44, "tok_out": 762, "cost": null, "chars": 1015, "t": "2026-10-03T17:10:25"}
+{"ev": "call", "task": "bench", "provider": "go", "model": "glm-5.3-flash", "sec": 43.9, "attempt": 1, "tok_in": 45, "tok_out": 1500, "cost": null, "chars": 0, "t": "2026-10-03T17:10:30"}
+{"ev": "net_error", "task": "bench", "model": "glm-5.3-flash", "err": "空の応答（推論で使い切った可能性）", "t": "2026-10-03T17:10:30"}
+{"ev": "http_error", "task": "bench", "model": "glm-5.3-flash", "code": 400, "detail": "{\"error\":{\"param\":\"reasoning\",\"type\":\"invalid_request_error\",\"message\":\"Upstream request failed: [unknown_parameter] invalid request body: json: unknown field \\\"reasoning\\\"\"}}", "t": "2026-10-03T17:10:47"}
+{"ev": "http_error", "task": "bench", "model": "glm-5.3-flash", "code": 400, "detail": "{\"error\":{\"param\":\"thinking\",\"type\":\"invalid_request_error\",\"message\":\"Upstream request failed: [unknown_parameter] invalid request body: json: unknown field \\\"thinking\\\"\"}}", "t": "2026-10-03T17:10:47"}
+{"ev": "call", "task": "bench", "provider": "go", "model": "deepseek-v4.1-flash", "sec": 10.4, "attempt": 1, "tok_in": 34, "tok_out": 779, "cost": null, "chars": 983, "t": "2026-10-03T17:10:57"}
+{"ev": "call", "task": "bench", "provider": "go", "model": "deepseek-v4.1-flash", "sec": 12.9, "attempt": 1, "tok_in": 59, "tok_out": 1500, "cost": null, "chars": 403, "t": "2026-10-03T17:10:59"}
+{"ev": "call", "task": "bench", "provider": "go", "model": "deepseek-v4.1-flash", "sec": 13.1, "attempt": 1, "tok_in": 59, "tok_out": 1500, "cost": null, "chars": 0, "t": "2026-10-03T17:10:59"}
+{"ev": "net_error", "task": "bench", "model": "deepseek-v4.1-flash", "err": "空の応答（推論で使い切った可能性）", "t": "2026-10-03T17:10:59"}
+{"ev": "call", "task": "bench", "provider": "go", "model": "qwen3.8-flash", "sec": 17.3, "attempt": 1, "tok_in": 44, "tok_out": 681, "cost": null, "chars": 1064, "t": "2026-10-03T17:11:04"}
+{"ev": "call", "task": "bench", "provider": "go", "model": "kimi-k3", "sec": 35.2, "attempt": 1, "tok_in": 61, "tok_out": 633, "cost": null, "chars": 733, "t": "2026-10-03T17:11:21"}
+{"ev": "call", "task": "bench", "provider": "go", "model": "kimi-k3", "sec": 55.2, "attempt": 1, "tok_in": 129, "tok_out": 771, "cost": null, "chars": 813, "t": "2026-10-03T17:11:41"}
+{"ev": "call", "task": "bench", "provider": "go", "model": "kimi-k3", "sec": 57.2, "attempt": 1, "tok_in": 61, "tok_out": 834, "cost": null, "chars": 943, "t": "2026-10-03T17:11:43"}
+{"ev": "net_error", "task": "bench", "model": "glm-5.3-flash", "err": "The read operation timed out", "t": "2026-10-03T17:12:27"}
+{"ev": "http_error", "task": "bench", "model": "glm-5.3-flash", "code": 400, "detail": "{\"error\":{\"param\":\"enable_thinking\",\"type\":\"invalid_request_error\",\"message\":\"Upstream request failed: [unknown_parameter] invalid request body: json: unknown field \\\"enable_thinking\\\"\"}}", "t": "2026-10-03T17:12:40"}
+{"ev": "http_error", "task": "bench", "model": "glm-5.3-flash", "code": 400, "detail": "{\"error\":{\"param\":\"chat_template_kwargs\",\"type\":\"invalid_request_error\",\"message\":\"Upstream request failed: [unknown_parameter] invalid request body: json: unknown field \\\"chat_template_kwargs\\\"\"}}", "t": "2026-10-03T17:12:40"}
+{"ev": "call", "task": "bench", "provider": "go", "model": "glm-5.3-flash", "sec": 44.6, "attempt": 1, "tok_in": 44, "tok_out": 787, "cost": null, "chars": 944, "t": "2026-10-03T17:13:24"}
+{"ev": "call", "task": "bench", "provider": "go", "model": "glm-5.3-flash", "sec": 45.7, "attempt": 1, "tok_in": 44, "tok_out": 741, "cost": null, "chars": 890, "t": "2026-10-03T17:13:25"}
+{"ev": "http_error", "task": "bench", "model": "glm-5.2", "code": 400, "detail": "{\"error\":{\"type\":\"invalid_request_error\",\"code\":\"invalid_request_error\",\"message\":\"Upstream request failed: [invalid_request_error] GLM-5.3 is a thinking-only model; disabling thinking (reasoning_effo", "t": "2026-10-03T17:13:36"}
+{"ev": "call", "task": "bench", "provider": "go", "model": "minimax-m3", "sec": 10.5, "attempt": 1, "tok_in": 49, "tok_out": 403, "cost": null, "chars": 635, "t": "2026-10-03T17:13:46"}
+{"ev": "call", "task": "bench", "provider": "go", "model": "hy3", "sec": 16.1, "attempt": 1, "tok_in": 42, "tok_out": 1500, "cost": null, "chars": 0, "t": "2026-10-03T17:13:51"}
+{"ev": "net_error", "task": "bench", "model": "hy3", "err": "空の応答（推論で使い切った可能性）", "t": "2026-10-03T17:13:51"}
+{"ev": "call", "task": "bench", "provider": "go", "model": "qwen3.7-plus", "sec": 19.0, "attempt": 1, "tok_in": 44, "tok_out": 687, "cost": null, "chars": 1101, "t": "2026-10-03T17:13:54"}
+{"ev": "call", "task": "bench", "provider": "go", "model": "mimo-v2.6-flash", "sec": 21.0, "attempt": 1, "tok_in": 43, "tok_out": 609, "cost": null, "chars": 735, "t": "2026-10-03T17:13:56"}
+{"ev": "call", "task": "bench", "provider": "go", "model": "longcat-2.0", "sec": 28.3, "attempt": 1, "tok_in": 36, "tok_out": 1500, "cost": null, "chars": 0, "t": "2026-10-03T17:14:03"}
+{"ev": "net_error", "task": "bench", "model": "longcat-2.0", "err": "空の応答（推論で使い切った可能性）", "t": "2026-10-03T17:14:03"}
+{"ev": "call", "task": "bench", "provider": "go", "model": "mimo-v2.6-flash", "sec": 35.1, "attempt": 1, "tok_in": 45, "tok_out": 868, "cost": null, "chars": 1081, "t": "2026-10-03T17:14:10"}
+{"ev": "call", "task": "design1", "provider": "go", "model": "deepseek-v4.1-flash", "sec": 17.7, "attempt": 1, "tok_in": 2982, "tok_out": 2189, "cost": null, "chars": 2770, "t": "2026-10-03T17:14:56"}
+{"ev": "call", "task": "design2", "provider": "go", "model": "deepseek-v4.1-flash", "sec": 27.5, "attempt": 1, "tok_in": 5195, "tok_out": 3839, "cost": null, "chars": 4763, "t": "2026-10-03T17:15:23"}
+{"ev": "call", "task": "design1", "provider": "go", "model": "deepseek-v4.1-flash", "sec": 15.1, "attempt": 1, "tok_in": 9546, "tok_out": 2400, "cost": null, "chars": 3064, "t": "2026-10-03T17:27:32"}
+{"ev": "call", "task": "design2", "provider": "go", "model": "deepseek-v4.1-flash", "sec": 25.0, "attempt": 1, "tok_in": 11971, "tok_out": 4394, "cost": null, "chars": 5434, "t": "2026-10-03T17:27:57"}
+{"ev": "call", "task": "design1", "provider": "go", "model": "deepseek-v4.1-flash", "sec": 17.6, "attempt": 1, "tok_in": 10269, "tok_out": 2798, "cost": null, "chars": 3560, "t": "2026-10-03T17:28:46"}
+{"ev": "call", "task": "design2", "provider": "go", "model": "deepseek-v4.1-flash", "sec": 24.0, "attempt": 1, "tok_in": 13092, "tok_out": 4813, "cost": null, "chars": 5937, "t": "2026-10-03T17:29:10"}
+{"ev": "call", "task": "write:w1", "provider": "go", "model": "deepseek-v4.1-flash", "sec": 15.4, "attempt": 1, "tok_in": 8873, "tok_out": 1537, "cost": null, "chars": 1888, "t": "2026-10-03T17:34:49"}
+{"ev": "call", "task": "write:w2", "provider": "go", "model": "minimax-m3", "sec": 26.5, "attempt": 1, "tok_in": 7081, "tok_out": 1187, "cost": null, "chars": 1880, "t": "2026-10-03T17:35:00"}
+{"ev": "call", "task": "write:w3", "provider": "go", "model": "qwen3.8-flash", "sec": 26.7, "attempt": 1, "tok_in": 8127, "tok_out": 1236, "cost": null, "chars": 1752, "t": "2026-10-03T17:35:00"}
+{"ev": "attempt", "n": 1, "mode": "team", "att": 1, "valid": [], "failed": 3, "t": "2026-10-03T17:35:01"}
+{"ev": "call", "task": "write:w1", "provider": "go", "model": "deepseek-v4.1-flash", "sec": 15.5, "attempt": 1, "tok_in": 8970, "tok_out": 1582, "cost": null, "chars": 1943, "t": "2026-10-03T17:35:17"}
+{"ev": "call", "task": "write:w2", "provider": "go", "model": "minimax-m3", "sec": 22.9, "attempt": 1, "tok_in": 7169, "tok_out": 1501, "cost": null, "chars": 2286, "t": "2026-10-03T17:35:24"}
+{"ev": "call", "task": "write:w3", "provider": "go", "model": "qwen3.8-flash", "sec": 29.9, "attempt": 1, "tok_in": 1066, "tok_out": 1461, "cost": null, "chars": 2111, "t": "2026-10-03T17:35:31"}
+{"ev": "attempt", "n": 1, "mode": "team", "att": 2, "valid": [], "failed": 3, "t": "2026-10-03T17:35:31"}
+{"ev": "call", "task": "write:w1", "provider": "go", "model": "deepseek-v4.1-flash", "sec": 17.5, "attempt": 1, "tok_in": 8970, "tok_out": 1771, "cost": null, "chars": 2176, "t": "2026-10-03T17:35:49"}
+{"ev": "call", "task": "write:w3", "provider": "go", "model": "qwen3.8-flash", "sec": 35.8, "attempt": 1, "tok_in": 1066, "tok_out": 1763, "cost": null, "chars": 2636, "t": "2026-10-03T17:36:07"}
+{"ev": "call", "task": "write:w2", "provider": "go", "model": "minimax-m3", "sec": 46.0, "attempt": 1, "tok_in": 107, "tok_out": 1661, "cost": null, "chars": 2585, "t": "2026-10-03T17:36:17"}
+{"ev": "attempt", "n": 1, "mode": "team", "att": 3, "valid": [], "failed": 3, "t": "2026-10-03T17:36:17"}
+{"ev": "call", "task": "write:w1", "provider": "go", "model": "deepseek-v4.1-flash", "sec": 21.8, "attempt": 1, "tok_in": 8976, "tok_out": 2141, "cost": null, "chars": 2706, "t": "2026-10-03T17:37:00"}
+{"ev": "call", "task": "write:w3", "provider": "go", "model": "qwen3.8-flash", "sec": 36.6, "attempt": 1, "tok_in": 1056, "tok_out": 1485, "cost": null, "chars": 2113, "t": "2026-10-03T17:37:15"}
+{"ev": "call", "task": "write:w2", "provider": "go", "model": "minimax-m3", "sec": 50.5, "attempt": 1, "tok_in": 197, "tok_out": 2162, "cost": null, "chars": 3258, "t": "2026-10-03T17:37:29"}
+{"ev": "attempt", "n": 1, "mode": "team", "att": 1, "valid": ["w2"], "failed": 2, "t": "2026-10-03T17:37:30"}
+{"ev": "call", "task": "check", "provider": "go", "model": "mimo-v2.6-pro", "sec": 12.5, "attempt": 1, "tok_in": 11730, "tok_out": 393, "cost": null, "chars": 775, "t": "2026-10-03T17:37:42"}
+{"ev": "call", "task": "write:w1", "provider": "go", "model": "deepseek-v4.1-flash", "sec": 25.5, "attempt": 1, "tok_in": 9064, "tok_out": 2359, "cost": null, "chars": 2976, "t": "2026-10-03T17:38:08"}
+{"ev": "call", "task": "write:w3", "provider": "go", "model": "qwen3.8-flash", "sec": 26.6, "attempt": 1, "tok_in": 112, "tok_out": 1241, "cost": null, "chars": 1772, "t": "2026-10-03T17:38:09"}
+{"ev": "call", "task": "write:w2", "provider": "go", "model": "minimax-m3", "sec": 52.9, "attempt": 1, "tok_in": 93, "tok_out": 2236, "cost": null, "chars": 3545, "t": "2026-10-03T17:38:35"}
+{"ev": "attempt", "n": 1, "mode": "team", "att": 2, "valid": ["w1", "w2"], "failed": 1, "t": "2026-10-03T17:38:35"}
+{"ev": "attempt", "n": 1, "mode": "team", "att": 2, "valid": ["w1", "w2"], "failed": 1, "t": "2026-10-03T17:38:46"}
+{"ev": "call", "task": "edit", "provider": "go", "model": "kimi-k3", "sec": 19.6, "attempt": 1, "tok_in": 15488, "tok_out": 384, "cost": null, "chars": 612, "t": "2026-10-03T17:39:05"}
+{"ev": "call", "task": "check", "provider": "go", "model": "mimo-v2.6-pro", "sec": 3.5, "attempt": 1, "tok_in": 11397, "tok_out": 5, "cost": null, "chars": 13, "t": "2026-10-03T17:39:09"}
+{"ev": "call", "task": "ledger", "provider": "go", "model": "deepseek-v4-pro", "sec": 7.3, "attempt": 1, "tok_in": 10223, "tok_out": 653, "cost": null, "chars": 800, "t": "2026-10-03T17:39:16"}
+{"ev": "accepted", "n": 1, "mode": "team", "writer": "w1", "att": 2, "t": "2026-10-03T17:39:16"}
