@@ -383,6 +383,28 @@ def extract_chapter(raw, n):
     return first + "\n" + rest.strip() + "\n"
 
 
+def dedupe_repeat(text):
+    """書き手が本文を丸ごと二度出力したとき（第3回 第6章で3稿中2稿）、後半の繰り返しを捨てる。
+    戻り値は (直した本文, 捨てた字数)。繰り返しでなければ (そのまま, 0)。"""
+    import difflib
+    first, _, body = text.partition("\n")
+    key = re.sub(r"\s+", "", body)[:40]
+    if len(key) < 20:
+        return text, 0
+    # 空白を無視して key の二度目の出現を探す（本文の位置に戻すため、空白を飛ばしながら照合する）
+    flat_idx = [i for i, c in enumerate(body) if not c.isspace()]
+    flat = "".join(body[i] for i in flat_idx)
+    j = flat.find(key, len(key))
+    if j < 0:
+        return text, 0
+    pos = flat_idx[j]
+    head, tail = body[:pos], body[pos:]
+    if difflib.SequenceMatcher(None, head[:1500], tail[:1500]).ratio() < 0.85:
+        return text, 0
+    head = re.sub(r"#\s*第\s*\S+?\s*章[^\n]*\s*$", "", head.rstrip()).rstrip()
+    return first + "\n" + head + "\n", len(tail)
+
+
 def ends_properly(body):
     return bool(re.search(r"[。」』！？!?…―）)]\s*$", body))
 
@@ -547,6 +569,11 @@ def step_chapter(p):
             more = continue_call(pk, text, P("work", f"ch{nn(n)}_write_a{k}_cont.out"))
             text = text.rstrip() + more.strip() + "\n"
             log(f"CH{nn(n)} continued after truncation")
+        if text:
+            text, cut = dedupe_repeat(text)
+            if cut:
+                ch.setdefault("warnings", []).append(f"a{k}: 本文の繰り返し{cut}字を削除")
+                log(f"CH{nn(n)} a{k}: 本文の繰り返しを削除（{cut}字）")
         if not text:
             text = f"# 第{n}章\n" + raw.strip() + "\n"
             ch.setdefault("warnings", []).append(f"a{k}: 見出しが見つからず補完")

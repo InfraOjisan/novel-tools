@@ -2,8 +2,8 @@
   "phase": "chapters",
   "design_state": "review",
   "design_attempts": 2,
-  "canon_sha256": "0e1ab7329bcf50fc0a14b3a21a03b85aca52b12da5c307fc851d9f4fd9951938",
-  "current": 2,
+  "canon_sha256": "e5975ebcde33d1fe1ded043a0c380aa81dfb2c51eca71feebf64a2ae1fd4d443",
+  "current": 6,
   "final_state": "assemble",
   "final_reopened": false,
   "escalation": null,
@@ -16,36 +16,36 @@
       "warnings": []
     },
     "2": {
-      "state": "drafted",
+      "state": "done",
       "attempts": 2,
       "parse_retries": 0,
-      "ledger_attempts": 0,
+      "ledger_attempts": 1,
       "warnings": []
     },
     "3": {
-      "state": "pending",
-      "attempts": 0,
+      "state": "done",
+      "attempts": 2,
       "parse_retries": 0,
-      "ledger_attempts": 0,
+      "ledger_attempts": 1,
       "warnings": []
     },
     "4": {
-      "state": "pending",
-      "attempts": 0,
+      "state": "done",
+      "attempts": 1,
       "parse_retries": 0,
-      "ledger_attempts": 0,
+      "ledger_attempts": 1,
       "warnings": []
     },
     "5": {
-      "state": "pending",
-      "attempts": 0,
+      "state": "done",
+      "attempts": 2,
       "parse_retries": 0,
-      "ledger_attempts": 0,
+      "ledger_attempts": 1,
       "warnings": []
     },
     "6": {
-      "state": "pending",
-      "attempts": 0,
+      "state": "accepted",
+      "attempts": 3,
       "parse_retries": 0,
       "ledger_attempts": 0,
       "warnings": []
