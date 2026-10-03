@@ -81,11 +81,13 @@
       ]
     },
     "11": {
-      "state": "drafted",
+      "state": "accepted",
       "attempts": 2,
       "parse_retries": 0,
       "ledger_attempts": 0,
-      "warnings": []
+      "warnings": [
+        "要校正 a2: 審査役が締め切りで3回失敗、Claude が審査を代行して採用（「雪んこか」の唐突さは校正で）"
+      ]
     },
     "12": {
       "state": "pending",

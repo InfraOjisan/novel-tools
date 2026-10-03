@@ -591,8 +591,18 @@ def step_chapter(p):
         review = {"pass": True, "violations": [], "slots_found": {}}
         if not hard_mech:
             pk = build_packet("review", n)
-            raw = call(pk, P("work", f"ch{nn(n)}_review_a{ch['attempts']}.out"), "reviewer")
-            j = extract_json(raw)
+            try:
+                raw = call(pk, P("work", f"ch{nn(n)}_review_a{ch['attempts']}.out"), "reviewer")
+            except Escalate as e:
+                # 審査役（Aion）の推論の暴走で3回とも締め切り・上限に達したときは止まらない。
+                # 機械検査だけで判定し「要校正」の印を残して先へ進む（最後の Claude の校正を関門にする）。2026-10-04 のプロデューサー判断
+                runaway = ("締め切り" in e.detail or "finish_reason=length" in e.detail or "Upstream idle" in e.detail)
+                if e.code != "CALL_FAILED" or not runaway or not CFG.get("review_fallback_on_runaway", True):
+                    raise
+                raw = None
+                ch.setdefault("warnings", []).append(f"要校正 a{ch['attempts']}: 審査役が締め切りで3回失敗、機械検査のみで判定")
+                log(f"CH{nn(n)} 要校正: 審査役の呼び出しが失敗（推論の暴走）→ 機械検査のみで判定")
+            j = extract_json(raw) if raw is not None else {"pass": True, "violations": [], "slots_found": {}, "_fallback": "review_call_failed"}
             if j is None:
                 ch["parse_retries"] += 1
                 if ch["parse_retries"] <= CFG["max_parse_retries"]:
