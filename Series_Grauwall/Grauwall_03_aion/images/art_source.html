@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8">
+<style>
+  html,body{margin:0;background:#000}
+  #stage{position:relative;width:1600px;height:2560px;overflow:hidden}
+  canvas{position:absolute;inset:0}
+  .title{position:absolute;right:230px;top:280px;writing-mode:vertical-rl;
+    font-family:"Noto Serif CJK JP",serif;font-weight:600;font-size:150px;letter-spacing:.16em}
+  .team{position:absolute;left:120px;bottom:150px;
+    font-family:"Noto Serif CJK JP",serif;font-weight:600;font-size:42px;letter-spacing:.08em}
+  .series{position:absolute;right:120px;top:300px;writing-mode:vertical-rl;
+    font-family:"Noto Serif CJK JP",serif;font-weight:500;font-size:34px;letter-spacing:.5em}
+  /* 昼（白地）は墨の文字、夜・夕は生成りの文字 */
+  .day .title{color:#1f262c;text-shadow:0 0 18px rgba(255,255,255,.7)}
+  .day .team,.day .series{color:rgba(31,38,44,.72)}
+  .night .title{color:#F2EBDD;text-shadow:0 0 22px rgba(255,214,160,.28),0 0 2px rgba(255,255,255,.55)}
+  .night .team,.night .series{color:rgba(232,220,196,.8)}
+</style></head>
+<body>
+<div id="stage"><canvas id="c" width="1600" height="2560"></canvas>
+  <div class="title">北街道の白い耳</div>
+  <div class="series">グラウヴァル　三</div>
+  <div class="team">チームジョバンニ</div>
+</div>
+<script>
+// 第3回『北街道の白い耳』の表紙（仮）。#a 一里塚・昼 / #b 焚き火・夜 / #c 一里塚・夕と遠い煙
+const MODE = location.hash.slice(1) || "a";
+const W = 1600, H = 2560;
+let g = document.getElementById("c").getContext("2d");
+// ぼかしは縮小キャンバスに描いて拡大する（canvas の filter blur を何百回も使うと重い）
+function soft(fn, k = 6, blur = 5){
+  const main = g, oc = document.createElement("canvas"); oc.width = W/k; oc.height = H/k;
+  const tmp = document.createElement("canvas"); tmp.width = W/k; tmp.height = H/k;
+  g = tmp.getContext("2d"); g.scale(1/k, 1/k); fn(); g = main;
+  const oc2 = oc.getContext("2d"); oc2.filter = `blur(${blur}px)`; oc2.drawImage(tmp, 0, 0);
+  g.save(); g.imageSmoothingQuality = "high"; g.drawImage(oc, 0, 0, W, H); g.restore();
+}
+let seed = {a: 3130216, b: 3130616, c: 3130219}[MODE] || 1;
+const rnd = () => ((seed = (seed * 1664525 + 1013904223) >>> 0) / 4294967296);
+document.getElementById("stage").className = MODE === "b" || MODE === "c" ? "night" : "day";
+
+function grad(stops, y0 = 0, y1 = H){
+  const lg = g.createLinearGradient(0, y0, 0, y1);
+  stops.forEach(([t, c]) => lg.addColorStop(t, c)); return lg;
+}
+function glow(x, y, r, col, a0 = 1){
+  const rg = g.createRadialGradient(x, y, 0, x, y, r);
+  rg.addColorStop(0, col.replace("A", a0)); rg.addColorStop(1, col.replace("A", 0));
+  g.fillStyle = rg; g.fillRect(x - r, y - r, 2*r, 2*r);
+}
+function snowfall(n, col, aMax, yMax = H){
+  for (let i = 0; i < n; i++){
+    const x = rnd()*W, y = rnd()*yMax, r = Math.pow(rnd(), 2)*5 + 1, a = .15 + rnd()*aMax;
+    const rg = g.createRadialGradient(x, y, 0, x, y, r*2.2);
+    rg.addColorStop(0, `rgba(${col},${a})`); rg.addColorStop(1, `rgba(${col},0)`);
+    g.fillStyle = rg; g.beginPath(); g.arc(x, y, r*2.2, 0, 7); g.fill();
+  }
+}
+function vignette(a){
+  const rg = g.createRadialGradient(W/2, H*.5, H*.3, W/2, H*.55, H*.8);
+  rg.addColorStop(0, "rgba(0,0,0,0)"); rg.addColorStop(1, `rgba(0,0,0,${a})`);
+  g.fillStyle = rg; g.fillRect(0, 0, W, H);
+}
+// 雪面
+function drifts(hy, light, shade, n){
+  // 大きなうねり（低周波の明暗）
+  for (let i = 0; i < 26; i++){
+    const t = Math.pow(rnd(), 1.3), y = hy + 30 + t*(H - hy), w = 500 + rnd()*900, h = 40 + t*220;
+    g.fillStyle = rnd() < .5 ? `rgba(${light},${.18 + rnd()*.22})` : `rgba(${shade},${.06 + rnd()*.10})`;
+    g.beginPath(); g.ellipse(rnd()*W, y, w, h, (rnd() - .5)*.08, 0, 7); g.fill();
+  }
+  // まばらな風紋（手前ほど大きく、曲がった筋）
+  g.lineCap = "round";
+  for (let i = 0; i < n/22; i++){
+    const t = Math.pow(rnd(), .8), y = hy + 40 + t*(H - hy - 40), x = rnd()*W, L = 200 + t*700, bend = (rnd() - .5)*t*60;
+    g.strokeStyle = `rgba(${shade},${.04 + t*.06})`; g.lineWidth = 3 + t*10;
+    g.beginPath(); g.moveTo(x - L/2, y); g.quadraticCurveTo(x, y + bend, x + L/2, y + bend*.3); g.stroke();
+    g.strokeStyle = `rgba(${light},${.15 + t*.25})`; g.lineWidth = 1 + t*5;
+    g.beginPath(); g.moveTo(x - L/2, y - 3 - t*6); g.quadraticCurveTo(x, y + bend - 3 - t*6, x + L/2, y + bend*.3 - 3 - t*6); g.stroke();
+  }
+}
+function sparkle(hy, n, col){
+  for (let i = 0; i < n; i++){ const x = rnd()*W, y = hy + Math.pow(rnd(), .7)*(H - hy), r = .5 + rnd()*1.4;
+    g.fillStyle = `rgba(${col},${.25 + rnd()*.6})`; g.beginPath(); g.arc(x, y, r, 0, 7); g.fill(); }
+}
+// 埋もれかけた轍（手前から塚の脇を抜けて、地平へ）
+function ruts(hy, col, a){
+  g.save(); g.lineCap = "round";
+  const pt = (t, side) => { const y = H + 40 - t*(H + 40 - hy - 6), spread = 230*Math.pow(1 - t, 1.3) + 6;
+    return [W*.60 - Math.sin(t*2.1)*W*.10 - t*W*.06 + side*spread, y]; };
+  for (const side of [-1, 1]){
+    for (let s = 0; s < 80; s++){
+      const t0 = s/80, t1 = (s + 1)/80, [x0, y0] = pt(t0, side), [x1, y1] = pt(t1, side);
+      const fade = a*(.35 + .65*(.5 + .5*Math.sin(t0*17 + side*2)));   // 吹きだまりで薄くなる
+      g.strokeStyle = `rgba(${col},${fade})`; g.lineWidth = 3 + 20*(1 - t0);
+      g.filter = `blur(${2 + 6*(1 - t0)}px)`; g.beginPath(); g.moveTo(x0, y0); g.lineTo(x1, y1); g.stroke();
+    }
+  }
+  g.restore();
+}
+// 一里塚：雪をかぶった低い土盛りと、三本の刻みのある石の道標
+function milestone(cx, gy, s, lit, dusk, ground){
+  // 塚
+  g.save();
+  g.fillStyle = dusk ? "rgba(40,44,64,.35)" : "rgba(120,140,170,.22)"; g.filter = "blur(18px)";
+  g.beginPath(); g.ellipse(cx + 150*s, gy + 14*s, 360*s, 46*s, 0, 0, 7); g.fill(); g.restore();
+  const mg = g.createLinearGradient(cx - 300*s, 0, cx + 300*s, 0);
+  if (dusk){ mg.addColorStop(0, "#d9c4b4"); mg.addColorStop(.45, "#a99fb4"); mg.addColorStop(1, "#5c5f7c"); }
+  else { mg.addColorStop(0, "#fbfcfd"); mg.addColorStop(.5, "#e9edf2"); mg.addColorStop(1, "#b7c3d2"); }
+  g.fillStyle = mg; g.beginPath();
+  g.moveTo(cx - 470*s, gy + 6*s);
+  g.bezierCurveTo(cx - 300*s, gy - 60*s, cx - 150*s, gy - 128*s, cx - 20*s, gy - 132*s);
+  g.bezierCurveTo(cx + 90*s, gy - 136*s, cx + 200*s, gy - 96*s, cx + 300*s, gy - 52*s);
+  g.bezierCurveTo(cx + 380*s, gy - 20*s, cx + 440*s, gy - 4*s, cx + 500*s, gy + 8*s);
+  g.closePath(); g.fill();
+  g.save(); g.filter = 'blur(16px)'; g.fillStyle = ground; g.beginPath(); g.ellipse(cx + 10*s, gy + 26*s, 520*s, 40*s, 0, 0, 7); g.fill(); g.restore();
+  // 道標の影
+  g.save(); g.fillStyle = dusk ? "rgba(30,30,55,.45)" : "rgba(90,110,140,.30)"; g.filter = "blur(6px)";
+  g.beginPath(); g.moveTo(cx - 30*s, gy - 140*s); g.lineTo(cx + 40*s, gy - 146*s); g.lineTo(cx + 330*s, gy - 60*s); g.lineTo(cx + 280*s, gy - 40*s); g.closePath(); g.fill(); g.restore();
+  // 道標（少し傾いた石柱）
+  g.save(); g.translate(cx - 30*s, gy - 118*s); g.rotate(.06);
+  const pw = 118*s, ph = 300*s;
+  const sg = g.createLinearGradient(-pw/2, 0, pw/2, 0);
+  if (dusk){ sg.addColorStop(0, "#6b6470"); sg.addColorStop(.35, "#4a4655"); sg.addColorStop(1, "#24232e"); }
+  else { sg.addColorStop(0, "#8d9096"); sg.addColorStop(.4, "#6c7077"); sg.addColorStop(1, "#43474e"); }
+  g.fillStyle = sg; g.beginPath();
+  g.moveTo(-pw/2, 0); g.lineTo(-pw/2 + 4*s, -ph*.55); g.lineTo(-pw/2 + 12*s, -ph + 10*s); g.lineTo(-pw*.18, -ph - 14*s); g.lineTo(pw*.12, -ph - 6*s); g.lineTo(pw/2 - 8*s, -ph + 18*s); g.lineTo(pw/2 - 2*s, -ph*.5); g.lineTo(pw/2, 0); g.closePath(); g.fill();
+  g.save(); g.clip();
+  for (let i = 0; i < 420; i++){ const x = (rnd() - .5)*pw, y = -rnd()*ph; g.fillStyle = `rgba(${rnd() < .5 ? "30,30,36" : "190,195,205"},${rnd()*.18})`; g.beginPath(); g.arc(x, y, .8 + rnd()*3.2*s, 0, 7); g.fill(); }
+  // 地衣のしみ
+  for (let i = 0; i < 9; i++){ g.fillStyle = `rgba(${dusk ? "120,110,80" : "140,130,90"},${.12 + rnd()*.12})`; g.beginPath(); g.ellipse((rnd() - .5)*pw*.8, -ph*(.15 + rnd()*.6), 6*s + rnd()*10*s, 4*s + rnd()*6*s, rnd(), 0, 7); g.fill(); }
+  g.restore();
+  // 三本の刻み（三つ目の一里塚）
+  for (let k = 0; k < 3; k++){
+    const y = -ph*.62 + k*26*s;
+    g.strokeStyle = "rgba(15,15,20,.75)"; g.lineWidth = 7*s; g.beginPath(); g.moveTo(-pw*.30, y); g.lineTo(pw*.30, y + 2*s); g.stroke();
+    g.strokeStyle = dusk ? "rgba(230,190,160,.35)" : "rgba(235,240,248,.45)"; g.lineWidth = 2*s; g.beginPath(); g.moveTo(-pw*.30, y + 5*s); g.lineTo(pw*.30, y + 7*s); g.stroke();
+  }
+  // 雪の帽子
+  g.fillStyle = dusk ? "rgba(236,214,200,.95)" : "rgba(252,253,255,.97)"; g.filter = "blur(1.2px)";
+  g.beginPath(); g.moveTo(-pw/2 + 8*s, -ph + 12*s); g.quadraticCurveTo(-pw*.2, -ph - 40*s, pw*.15, -ph - 14*s); g.quadraticCurveTo(pw*.4, -ph + 4*s, pw/2 - 4*s, -ph + 24*s); g.quadraticCurveTo(0, -ph - 2*s, -pw/2 + 8*s, -ph + 12*s); g.fill();
+  // 根元の石（雪から少しのぞく）
+  for (let i = 0; i < 6; i++){ const x = (rnd() - .5)*pw*2.4, w = 18*s + rnd()*26*s; g.save(); g.filter = 'none'; g.fillStyle = dusk ? '#3b3a48' : '#6b7078'; g.beginPath(); g.ellipse(x, 6*s, w, w*.55, rnd()*.4, Math.PI, 0); g.fill(); g.restore(); }
+  g.fillStyle = dusk ? 'rgba(236,214,200,.95)' : 'rgba(252,253,255,.97)';
+  // 根元の吹きだまり
+  g.filter = 'blur(4px)'; g.beginPath(); g.ellipse(-6*s, 6*s, pw*.85, 22*s, 0, Math.PI, 0); g.fill();
+  g.restore();
+  // 塚の上の雪の縁取り（光）
+  if (lit){ g.save(); g.strokeStyle = lit; g.lineWidth = 5*s; g.filter = "blur(2px)";
+    g.beginPath(); g.moveTo(cx - 460*s, gy + 2*s); g.bezierCurveTo(cx - 300*s, gy - 64*s, cx - 150*s, gy - 130*s, cx - 60*s, gy - 133*s); g.stroke(); g.restore(); }
+}
+// 遠い煙：地平から細く一本、北西の風で右へ流れる
+function smoke(x, hy, col, SH = 560, SD = 260, WK = 16){
+  g.save(); g.lineCap = "round";
+  for (let k = 0; k < 3; k++){
+    g.beginPath();
+    for (let s = 0; s <= 50; s++){
+      const t = s/50, y = hy - t*SH, xx = x + Math.pow(t, 1.8)*SD + Math.sin(t*9 + k)*6*t;
+      s ? g.lineTo(xx, y) : g.moveTo(xx, y);
+    }
+    g.strokeStyle = col.replace("A", .55 - k*.15); g.lineWidth = 3 + k*WK; g.filter = `blur(${3 + k*7}px)`; g.stroke();
+  }
+  g.restore();
+}
+
+function drawA(){
+  const hy = H*.47;
+  g.fillStyle = grad([[0, "#c9cfd6"], [.35, "#dde1e6"], [.47, "#eef0f2"], [.5, "#f3f5f7"], [1, "#e4e9ef"]]); g.fillRect(0, 0, W, H);
+  glow(W*.22, H*.16, 520, "rgba(255,255,255,A)", .75);
+  glow(W*.22, H*.16, 110, "rgba(255,255,250,A)", .9);
+  // 雲の層
+  soft(() => { for (let i = 0; i < 40; i++){ g.save(); g.fillStyle = `rgba(${rnd() < .5 ? "175,182,192" : "235,238,242"},${.15 + rnd()*.2})`;
+    g.beginPath(); g.ellipse(rnd()*W, rnd()*hy*.9, 300 + rnd()*500, 30 + rnd()*60, 0, 0, 7); g.fill(); g.restore(); } }, 10);
+  // 遠い丘の線
+  g.save(); g.filter = "blur(3px)"; g.fillStyle = "rgba(150,163,180,.45)"; g.beginPath(); g.moveTo(0, hy);
+  for (let x = 0; x <= W; x += 40) g.lineTo(x, hy - 18 - Math.sin(x/230)*14 - Math.sin(x/71)*5);
+  g.lineTo(W, hy + 4); g.lineTo(0, hy + 4); g.fill(); g.restore();
+  g.fillStyle = grad([[0, "#f2f4f7"], [.5, "#e6ebf1"], [1, "#d5dde7"]], hy, H); g.fillRect(0, hy, W, H - hy);
+  soft(() => drifts(hy, "255,255,255", "120,140,170", 520), 4);
+  sparkle(hy, 900, "255,255,255");
+  ruts(hy, "140,158,184", .20);
+  milestone(W*.34, H*.70, 1.0, "rgba(255,255,255,.9)", false, "rgba(226,232,240,.95)");
+  snowfall(260, "255,255,255", .5);
+  snowfall(180, "140,150,165", .25);
+  vignette(.12);
+}
+
+function drawB(){
+  const hy = H*.50;
+  g.fillStyle = grad([[0, "#05070d"], [.45, "#0c1220"], [.52, "#141b2b"], [1, "#0b0f18"]]); g.fillRect(0, 0, W, H);
+  for (let i = 0; i < 380; i++){ const x = rnd()*W, y = rnd()*hy*.95, r = rnd()*1.8 + .3; g.fillStyle = `rgba(220,228,255,${rnd()*.7})`; g.beginPath(); g.arc(x, y, r, 0, 7); g.fill(); }
+  g.fillStyle = grad([[0, "#1a2232"], [1, "#0e131d"]], hy, H); g.fillRect(0, hy, W, H - hy);
+  soft(() => drifts(hy, "120,135,170", "0,0,0", 380), 4);
+  sparkle(hy, 500, "190,205,240");
+  const fx = W*.47, fy = H*.76;
+  // 火の照り返し
+  glow(fx, fy, 1000, "rgba(255,150,70,A)", .30);
+  glow(fx, fy, 420, "rgba(255,170,90,A)", .35);
+  // 照らされた雪の輪
+  g.save(); g.filter = "blur(26px)"; g.fillStyle = "rgba(255,196,140,.32)"; g.beginPath(); g.ellipse(fx, fy + 30, 520, 120, 0, 0, 7); g.fill(); g.restore();
+  // 薪
+  g.save();
+  for (const [a, l] of [[-.35, 260], [.32, 250], [.05, 230], [-.9, 180], [.95, 190]]){
+    g.save(); g.translate(fx, fy + 24); g.rotate(a);
+    const lg = g.createLinearGradient(0, -16, 0, 16); lg.addColorStop(0, "#6a4a32"); lg.addColorStop(1, "#1d140e");
+    g.fillStyle = lg; g.beginPath(); g.roundRect(-l/2, -15, l, 30, 14); g.fill();
+    g.fillStyle = "rgba(255,120,40,.55)"; g.beginPath(); g.ellipse(l*.15, 6, l*.18, 6, 0, 0, 7); g.fill();
+    g.restore();
+  }
+  g.restore();
+  // 炎
+  g.save(); g.globalCompositeOperation = "lighter";
+  const flame = (h, w, col, blur, dx) => { g.filter = `blur(${blur}px)`; g.fillStyle = col; g.beginPath();
+    g.moveTo(fx - w + dx, fy + 10); g.bezierCurveTo(fx - w*.9 + dx, fy - h*.45, fx - w*.2 + dx, fy - h*.7, fx + dx*.4, fy - h);
+    g.bezierCurveTo(fx + w*.35 + dx, fy - h*.6, fx + w*.95 + dx, fy - h*.4, fx + w + dx, fy + 10); g.closePath(); g.fill(); };
+  flame(380, 135, "rgba(255,90,20,.55)", 14, -8);
+  flame(290, 105, "rgba(255,150,40,.7)", 9, 10);
+  flame(170, 60, "rgba(255,215,120,.85)", 6, -4);
+  flame(90, 32, "rgba(255,250,220,.9)", 4, 2);
+  g.filter = "none";
+  for (let i = 0; i < 70; i++){ const t = rnd(), x = fx + (rnd() - .5)*160 + t*120*(rnd() - .3), y = fy - 160 - t*900, r = .8 + rnd()*2.4;
+    g.fillStyle = `rgba(255,${150 + Math.round(rnd()*80)},80,${(1 - t)*.9})`; g.beginPath(); g.arc(x, y, r, 0, 7); g.fill(); }
+  g.restore();
+  smoke(fx + 10, fy - 330, "rgba(150,140,140,A)");
+  // 火に照らされた雪片
+  for (let i = 0; i < 260; i++){ const x = rnd()*W, y = rnd()*H, d = Math.hypot(x - fx, y - fy), a = Math.max(.08, .8 - d/1200), r = Math.pow(rnd(), 2)*5 + 1;
+    const c = d < 900 ? "255,214,170" : "210,220,245";
+    const rg = g.createRadialGradient(x, y, 0, x, y, r*2.2); rg.addColorStop(0, `rgba(${c},${a*rnd()})`); rg.addColorStop(1, `rgba(${c},0)`);
+    g.fillStyle = rg; g.beginPath(); g.arc(x, y, r*2.2, 0, 7); g.fill(); }
+  vignette(.55);
+}
+
+function drawC(){
+  const hy = H*.50;
+  g.fillStyle = grad([[0, "#2b2c44"], [.25, "#4e4a66"], [.42, "#a58a8e"], [.49, "#e5b98f"], [.5, "#f0caa0"], [.52, "#9b93ad"], [1, "#3c3f5a"]]); g.fillRect(0, 0, W, H);
+  glow(W*.18, hy - 20, 700, "rgba(255,190,130,A)", .55);
+  glow(W*.18, hy - 20, 90, "rgba(255,236,200,A)", .9);
+  soft(() => { for (let i = 0; i < 30; i++){ g.save(); g.fillStyle = `rgba(${rnd() < .5 ? "70,64,92" : "200,150,140"},${.12 + rnd()*.18})`;
+    g.beginPath(); g.ellipse(rnd()*W, rnd()*hy*.85, 300 + rnd()*500, 24 + rnd()*50, 0, 0, 7); g.fill(); g.restore(); } }, 10);
+  g.save(); g.filter = "blur(3px)"; g.fillStyle = "rgba(70,70,100,.55)"; g.beginPath(); g.moveTo(0, hy);
+  for (let x = 0; x <= W; x += 40) g.lineTo(x, hy - 16 - Math.sin(x/260 + 1)*12 - Math.sin(x/63)*4);
+  g.lineTo(W, hy + 4); g.lineTo(0, hy + 4); g.fill(); g.restore();
+  smoke(W*.56, hy - 12, "rgba(80,74,98,A)", 300, 110, 7);
+  g.fillStyle = grad([[0, "#d8c3c0"], [.25, "#9a96b2"], [1, "#4a4d6c"]], hy, H); g.fillRect(0, hy, W, H - hy);
+  soft(() => drifts(hy, "245,215,200", "40,40,70", 460), 4);
+  sparkle(hy, 700, "255,230,215");
+  ruts(hy, "50,52,82", .24);
+  milestone(W*.34, H*.71, 1.0, "rgba(255,200,150,.85)", true, "rgba(140,136,166,.9)");
+  snowfall(160, "255,235,220", .4);
+  vignette(.45);
+}
+
+({a: drawA, b: drawB, c: drawC})[MODE]();
+document.title = "done";
+</script>
+</body></html>
