@@ -1,10 +1,10 @@
 {
-  "phase": "chapters",
+  "phase": "done",
   "design_state": "review",
   "design_attempts": 2,
   "canon_sha256": "e5975ebcde33d1fe1ded043a0c380aa81dfb2c51eca71feebf64a2ae1fd4d443",
-  "current": 11,
-  "final_state": "assemble",
+  "current": 16,
+  "final_state": "review",
   "final_reopened": false,
   "escalation": null,
   "chapters": {
@@ -81,48 +81,49 @@
       ]
     },
     "11": {
-      "state": "accepted",
+      "state": "done",
       "attempts": 2,
       "parse_retries": 0,
-      "ledger_attempts": 0,
+      "ledger_attempts": 1,
       "warnings": [
         "要校正 a2: 審査役が締め切りで3回失敗、Claude が審査を代行して採用（「雪んこか」の唐突さは校正で）"
       ]
     },
     "12": {
-      "state": "pending",
-      "attempts": 0,
+      "state": "done",
+      "attempts": 2,
       "parse_retries": 0,
-      "ledger_attempts": 0,
+      "ledger_attempts": 1,
       "warnings": []
     },
     "13": {
-      "state": "pending",
-      "attempts": 0,
+      "state": "done",
+      "attempts": 1,
       "parse_retries": 0,
-      "ledger_attempts": 0,
+      "ledger_attempts": 1,
       "warnings": []
     },
     "14": {
-      "state": "pending",
-      "attempts": 0,
+      "state": "done",
+      "attempts": 2,
       "parse_retries": 0,
-      "ledger_attempts": 0,
+      "ledger_attempts": 1,
       "warnings": []
     },
     "15": {
-      "state": "pending",
-      "attempts": 0,
+      "state": "done",
+      "attempts": 3,
       "parse_retries": 0,
-      "ledger_attempts": 0,
+      "ledger_attempts": 1,
       "warnings": []
     },
     "16": {
-      "state": "pending",
-      "attempts": 0,
+      "state": "done",
+      "attempts": 2,
       "parse_retries": 0,
-      "ledger_attempts": 0,
+      "ledger_attempts": 1,
       "warnings": []
     }
-  }
+  },
+  "final_notes": []
 }
