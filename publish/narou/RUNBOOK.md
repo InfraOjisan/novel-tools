@@ -13,7 +13,7 @@
 ## 前提
 - Mac: Node 22以上、Google Chrome、`cd publish/narou && npm install`(playwright-coreのみ。ブラウザのダウンロードは不要)
 - `works.json` に作品ごとの `source`(投稿対象のmd)と `narou_novel_id`(管理画面URL `usernovelmanage/top/ncode/<ID>/` の数字)がある
-- 現在の登録(全話公開済み): Novel_1=管理ID 3332261 / Nコード n2594mv(銀の川をのぼる、校正済み版・全8話)、Novel_3=管理ID 3332262 / Nコード n2595mv(夜啼きの涙・全14話)、Grauwall_02=管理ID 3333578 / Nコード n3911mv(新しい組合長・全12話、2026-10-03)
+- 現在の登録(全話公開済み): Novel_1=管理ID 3332261 / Nコード n2594mv(銀の川をのぼる、校正済み版・全8話)、Novel_3=管理ID 3332262 / Nコード n2595mv(夜啼きの涙・全14話)、Grauwall_02=管理ID 3333578 / Nコード n3911mv(新しい組合長・全12話、2026-10-03)、Grauwall_03=管理ID 3337006 / Nコード n7339mv(北街道の白い影・全16話・完結、2026-10-05)
 - 読者向けURL: https://ncode.syosetu.com/<Nコード>/<話数>/
 
 ## 通常フロー(作品ごと)
@@ -99,3 +99,4 @@ Romancer 側の公開（EPUB のアップロード〜公開URLの記録）は `p
 - 保存後、下書き一覧の各話を `/draftepisode/updateinput/draftepisodeid/<ID>/` から読み戻して原稿と比較(前後の空白は無視)。公開後は `ncode.syosetu.com/<Nコード>/<話数>/` の本文を空白を除いて比較。
 - 下書き作品の「作品設定」には確認画面がなく、「編集[実行]」で直接保存される。保存後は作品詳細に移る。移らなければ保存されていないので、開き直して値を確かめる。
 - 結果は `state/<作品>.json` に記録する(draftId と状態)。
+- 第3話(2026-10-05)で使った速い方法：下書きは `/draftepisode/input/ncode/<ID>/` を fetch して `csrf_onetimepass` を取り、`/draftepisode/add/ncode/<ID>/` に FormData(subtitle・novel・preface・postscript・csrf_onetimepass)を POST する。公開は各下書きの詳細画面で、見えている「投稿」→「投稿[確認]」→「投稿[実行]」を文字で探して押し、「投稿が完了しました」を確かめる(第2話以降はモーダルに割り込み投稿・完結設定の欄が増え、ボタンの位置がずれるので座標では押さない)。最終話は「このエピソードで完結」に印を付ける。
