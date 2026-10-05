@@ -1,0 +1,87 @@
+{
+  "work": "Grauwall_03",
+  "episodes": {
+    "1": {
+      "subtitle": "第1章　噂",
+      "draftId": "9153914",
+      "status": "draft_verified"
+    },
+    "2": {
+      "subtitle": "第2章　依頼",
+      "draftId": "9153918",
+      "status": "draft_verified"
+    },
+    "3": {
+      "subtitle": "第3章　北門",
+      "draftId": "9153919",
+      "status": "draft_verified"
+    },
+    "4": {
+      "subtitle": "第4章　焚き火",
+      "draftId": "9153921",
+      "status": "draft_verified"
+    },
+    "5": {
+      "subtitle": "第5章　三つ目の一里塚",
+      "draftId": "9153922",
+      "status": "draft_verified"
+    },
+    "6": {
+      "subtitle": "第6章　枯れ木の下",
+      "draftId": "9153923",
+      "status": "draft_verified"
+    },
+    "7": {
+      "subtitle": "第7章　棘の跡",
+      "draftId": "9153925",
+      "status": "draft_verified"
+    },
+    "8": {
+      "subtitle": "第8章　轍",
+      "draftId": "9153927",
+      "status": "draft_verified"
+    },
+    "9": {
+      "subtitle": "第9章　雪の夜",
+      "draftId": "9153928",
+      "status": "draft_verified"
+    },
+    "10": {
+      "subtitle": "第10章　野盗",
+      "draftId": "9153930",
+      "status": "draft_verified"
+    },
+    "11": {
+      "subtitle": "第11章　頭目",
+      "draftId": "9153931",
+      "status": "draft_verified"
+    },
+    "12": {
+      "subtitle": "第12章　一里塚の下",
+      "draftId": "9153932",
+      "status": "draft_verified"
+    },
+    "13": {
+      "subtitle": "第13章　地下道の奥",
+      "draftId": "9153933",
+      "status": "draft_verified"
+    },
+    "14": {
+      "subtitle": "第14章　荒れ野の魔物",
+      "draftId": "9153934",
+      "status": "draft_verified"
+    },
+    "15": {
+      "subtitle": "第15章　白い耳",
+      "draftId": "9153935",
+      "status": "draft_verified"
+    },
+    "16": {
+      "subtitle": "第16章　帰り着く場所",
+      "draftId": "9153936",
+      "status": "draft_verified"
+    }
+  },
+  "source_commit": "737c97e6f519d4c8720ac56c1ba2e60c191984fe",
+  "status": "drafts_verified"
+}
