@@ -1,0 +1,136 @@
+{
+  "work": "Grauwall_03",
+  "title": "北街道の白い影",
+  "source": "../../Series_Grauwall/Grauwall_03_aion/output/final_proofread.md",
+  "limit_chars": 5000,
+  "episodes": [
+    {
+      "seq": 1,
+      "file": "001.txt",
+      "subtitle": "第1章　噂",
+      "chars": 2707,
+      "chars_no_newline": 2595,
+      "sha1": "ac6320923bfc84ee803d49a35b485e3348cabbe7"
+    },
+    {
+      "seq": 2,
+      "file": "002.txt",
+      "subtitle": "第2章　依頼",
+      "chars": 2925,
+      "chars_no_newline": 2795,
+      "sha1": "7d4d0e77879cb36ce61ab2063c6701f0f56daad5"
+    },
+    {
+      "seq": 3,
+      "file": "003.txt",
+      "subtitle": "第3章　北門",
+      "chars": 3048,
+      "chars_no_newline": 2836,
+      "sha1": "76a8d5a3620d44cd2699b5aa0ee212707ceaa93c"
+    },
+    {
+      "seq": 4,
+      "file": "004.txt",
+      "subtitle": "第4章　焚き火",
+      "chars": 3435,
+      "chars_no_newline": 3189,
+      "sha1": "c29b9ad4c8b6d52b466abbec07fca23ce2e17a3b"
+    },
+    {
+      "seq": 5,
+      "file": "005.txt",
+      "subtitle": "第5章　三つ目の一里塚",
+      "chars": 2993,
+      "chars_no_newline": 2839,
+      "sha1": "06ccb9ab616b24f2892080f3d0601cee8e837c15"
+    },
+    {
+      "seq": 6,
+      "file": "006.txt",
+      "subtitle": "第6章　枯れ木の下",
+      "chars": 2784,
+      "chars_no_newline": 2604,
+      "sha1": "fb444c1567da89653b03fe8a8de78275d0619eb4"
+    },
+    {
+      "seq": 7,
+      "file": "007.txt",
+      "subtitle": "第7章　棘の跡",
+      "chars": 3086,
+      "chars_no_newline": 2896,
+      "sha1": "bea48704ae8cb1220dd45324ddeeb8408b766629"
+    },
+    {
+      "seq": 8,
+      "file": "008.txt",
+      "subtitle": "第8章　轍",
+      "chars": 3083,
+      "chars_no_newline": 2935,
+      "sha1": "6c9df5d13ed4f6f9efbf7df5f298a582afa8ceea"
+    },
+    {
+      "seq": 9,
+      "file": "009.txt",
+      "subtitle": "第9章　雪の夜",
+      "chars": 2656,
+      "chars_no_newline": 2538,
+      "sha1": "4485103245663ef7b68182f07ec4a5b83609d11c"
+    },
+    {
+      "seq": 10,
+      "file": "010.txt",
+      "subtitle": "第10章　野盗",
+      "chars": 2093,
+      "chars_no_newline": 1971,
+      "sha1": "0ca65a9bb80435c84929c7d2e0b797abc9b7393e"
+    },
+    {
+      "seq": 11,
+      "file": "011.txt",
+      "subtitle": "第11章　頭目",
+      "chars": 3058,
+      "chars_no_newline": 2918,
+      "sha1": "e638add4a996e950912058525799fda9afcab194"
+    },
+    {
+      "seq": 12,
+      "file": "012.txt",
+      "subtitle": "第12章　一里塚の下",
+      "chars": 3400,
+      "chars_no_newline": 3232,
+      "sha1": "58ec26289f9b33fa973def561827d7fabc83ce12"
+    },
+    {
+      "seq": 13,
+      "file": "013.txt",
+      "subtitle": "第13章　地下道の奥",
+      "chars": 2914,
+      "chars_no_newline": 2754,
+      "sha1": "73627178055978bd63fb34aac38430337a8d2b82"
+    },
+    {
+      "seq": 14,
+      "file": "014.txt",
+      "subtitle": "第14章　荒れ野の魔物",
+      "chars": 3055,
+      "chars_no_newline": 2857,
+      "sha1": "e98f2c2d717b4c70e62b4a52bb2dd3f93c922b47"
+    },
+    {
+      "seq": 15,
+      "file": "015.txt",
+      "subtitle": "第15章　白い耳",
+      "chars": 3133,
+      "chars_no_newline": 2957,
+      "sha1": "35aae1518ab8bab775bee378257babb15382a807"
+    },
+    {
+      "seq": 16,
+      "file": "016.txt",
+      "subtitle": "第16章　帰り着く場所",
+      "chars": 2800,
+      "chars_no_newline": 2692,
+      "sha1": "db1dde844d079dac10eb7c97fe06956781037383"
+    }
+  ]
+}
