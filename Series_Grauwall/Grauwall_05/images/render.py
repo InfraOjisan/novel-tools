@@ -1,10 +1,10 @@
 import os, sys
 from playwright.sync_api import sync_playwright
 from PIL import Image
-# 第5回『隊長の非番』表紙候補。art_source.html を #a/#b/#c で描き分けて 1600x2560 で撮影する
+# 第5回『隊長の非番』表紙候補。art_source.html を #a/#b/#c/#d で描き分けて 1600x2560 で撮影する
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
-modes = sys.argv[1:] or ["a","b","c"]
-names={"a":"cover_A_tai_no_mon","b":"cover_B_tomegane","c":"cover_C_ushirosugata"}
+modes = sys.argv[1:] or ["a","b","c","d"]
+names={"a":"cover_A_tai_no_mon","b":"cover_B_tomegane","c":"cover_C_ushirosugata","d":"cover_D_tamago"}
 with sync_playwright() as p:
     b = p.chromium.launch()
     for m in modes:
@@ -16,7 +16,7 @@ with sync_playwright() as p:
         Image.open(f"{names[m]}.png").convert("RGB").save(f"{names[m]}.jpg", quality=90)
         os.remove(f"{names[m]}.png")
     b.close()
-ims=[Image.open(f"{names[m]}.jpg").resize((400,640)) for m in ["a","b","c"] if os.path.exists(f"{names[m]}.jpg")]
+ims=[Image.open(f"{names[m]}.jpg").resize((400,640)) for m in ["a","b","c","d"] if os.path.exists(f"{names[m]}.jpg")]
 sheet=Image.new("RGB",(400*len(ims)+40*(len(ims)+1),720),(240,240,240))
 for i,im in enumerate(ims): sheet.paste(im,(40+i*440,40))
 sheet.save("表紙候補_比較.jpg",quality=88)
