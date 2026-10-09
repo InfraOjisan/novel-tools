@@ -30,6 +30,21 @@
       "narou_novel_id": 3337006,
       "romancer_url": "https://r.voyager.co.jp/epm/e1_701855_05102026223739",
       "ncode": "n7339mv"
+    },
+    "Grauwall_04": {
+      "title": "豆のスープ",
+      "source": "../../Series_Grauwall/Grauwall_04/output/final.md",
+      "note": "グラウヴァル第四話（Claude執筆）。1章＝1話。予約掲載 2026-10-10 07:00 から6時間おき（第9話で完結）",
+      "narou_novel_id": 3341586,
+      "ncode": "n1920mw",
+      "romancer_url": "https://r.voyager.co.jp/epm/e1_703455_10102026033027"
+    },
+    "Grauwall_05": {
+      "title": "隊長の非番",
+      "source": "../../Series_Grauwall/Grauwall_05/output/final.md",
+      "note": "グラウヴァル第五話（Claude執筆）。1章＝1話。予約掲載 2026-10-11 10:00 から6時間おき（第12話で完結）。Romancer は 10/11 公開予定",
+      "narou_novel_id": 3341587,
+      "ncode": "n1921mw"
     }
   },
   "notes": {
