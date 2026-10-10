@@ -1,0 +1,1 @@
+{"ev": "call", "task": "compe:redo:A2", "provider": "openrouter", "model": "openai/gpt-6-luna-pro", "sec": 90.4, "attempt": 1, "tok_in": 23066, "tok_out": 11090, "cost": 0.00748881, "chars": 2085, "t": "2026-10-09T10:42:55"}

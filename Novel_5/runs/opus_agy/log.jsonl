@@ -1,0 +1,15 @@
+{"ch": 1, "try": 1, "err": "agy の出力が空: error: invalid model selection (--model \"Claude Opus 5.5\" --effort \"\"): model Claude Opus 5.5 is not recognized as a known model or custom model in settings\nAvailable models:\n  Gemini 3.8 Flash (High)\n  Gemini 3.8 Flash (Medium)\n  Gemini 3.8 Flash (Low)\n  Gemini 3.7 Flash (High)\n  Gemini 3.7 Flash (Medium)\n  Gemini 3.7 Flash (Low)\n  Gemini 3.6 Flash (High)\n  Gemini 3.6 Flash (Medium)\n  Gemini 3.6 Flash (Low)\n  Gemini 3.1 Pro (High)\n  Gemini 3.1 Pro (Low)\n  Claude Opus 5.5 (Low)\n  Claude Opus 5.5 (Medium)\n  Claude Opus 5.5 (High)\n  Claude Sonnet 5.5 (Low)\n  Claude Sonnet 5.5 (Medium)\n  Claude Sonnet 5.5 (High)\n  GPT-OSS 120B (Medium)\n"}
+{"ch": 1, "try": 1, "chars": 2562, "issues": ["本文が2562字（目標3000字の±10%）"], "sec": 66.6, "via": "agy"}
+{"ch": 1, "try": 2, "chars": 2959, "issues": [], "sec": 125.7, "via": "agy"}
+{"ch": 2, "try": 1, "chars": 2995, "issues": ["本文が2995字（目標3500字の±10%）"], "sec": 90.2, "via": "agy"}
+{"ch": 2, "try": 2, "chars": 3825, "issues": [], "sec": 130.9, "via": "agy"}
+{"ch": 3, "try": 1, "chars": 3537, "issues": [], "sec": 151.6, "via": "agy"}
+{"ch": 4, "try": 1, "chars": 3392, "issues": ["本文が3392字（目標4000字の±10%）"], "sec": 168.7, "via": "agy"}
+{"ch": 4, "try": 2, "chars": 3219, "issues": ["本文が3219字（目標4000字の±10%）"], "sec": 152.9, "via": "agy"}
+{"ch": 5, "try": 1, "err": "agy の出力が空: error: Individual quota reached. Please upgrade your subscription to increase your limits. Resets in 4h45m13s.\nAGY_ERROR: {\"short_error\":\"RESOURCE_EXHAUSTED (code 429): Individual quota reached. Please upgrade your subscription to increase your limits. Resets in 4h45m13s.\",\"status\":\"RESOURCE_EXHAUSTED\",\"error_code\":429,\"code_kind\":\"http\",\"retryable\":true,\"error_id\":\"aeb9cf70-28ea-4ba2-a5b5-442c36285733-1\"}\n"}
+{"ch": 5, "try": 2, "err": "agy の出力が空: error: Individual quota reached. Please upgrade your subscription to increase your limits. Resets in 4h45m5s.\nAGY_ERROR: {\"short_error\":\"RESOURCE_EXHAUSTED (code 429): Individual quota reached. Please upgrade your subscription to increase your limits. Resets in 4h45m5s.\",\"status\":\"RESOURCE_EXHAUSTED\",\"error_code\":429,\"code_kind\":\"http\",\"retryable\":true,\"error_id\":\"c4b3c7bd-21ae-4a4e-b417-db1d12037634-1\"}\n"}
+{"ch": 5, "try": 1, "chars": 2690, "issues": ["本文が2690字（目標3500字の±10%）"], "sec": 65.6, "via": "agy"}
+{"ch": 5, "try": 2, "chars": 2921, "issues": ["本文が2921字（目標3500字の±10%）"], "sec": 79.0, "via": "agy"}
+{"round": 1, "ch": 1, "try": 1, "chars": 3124, "issues": [], "sec": 55.0, "via": "agy"}
+{"round": 1, "ch": 4, "try": 1, "chars": 3707, "issues": [], "sec": 58.9, "via": "agy"}
+{"round": 1, "ch": 5, "try": 1, "chars": 3299, "issues": [], "sec": 66.8, "via": "agy"}

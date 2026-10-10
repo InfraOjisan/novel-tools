@@ -1,0 +1,2 @@
+{"ch": 1, "try": 1, "err": "agy の出力が空: error: invalid model selection (--model \"Claude Opus 5.5\" --effort \"\"): model Claude Opus 5.5 is not recognized as a known model or custom model in settings\nAvailable models:\n  Gemini 3.8 F"}
+{"ch": 1, "try": 2, "err": "agy の出力が空: error: invalid model selection (--model \"Claude Opus 5.5\" --effort \"\"): model Claude Opus 5.5 is not recognized as a known model or custom model in settings\nAvailable models:\n  Gemini 3.8 F"}

@@ -1,0 +1,53 @@
+{
+ "scores": {
+  "A": {
+   "rule": 3,
+   "yohaku": 3,
+   "atofuki": 2,
+   "chara": 3,
+   "bun": 3,
+   "pace": 3
+  },
+  "B": {
+   "rule": 4,
+   "yohaku": 4,
+   "atofuki": 4,
+   "chara": 4,
+   "bun": 4,
+   "pace": 3
+  }
+ },
+ "pick": "B",
+ "reason": "Bは朱字の設置（青鉢の欠け・紙包み・朱の設置）が正確で、トマの怒りと納得の描写など指示外の味が生きる。Aは青鉢を荷揚げ場に置くなど整合が甘く、差し込みの記録も薄い。Bの文体に説明過多があるが、情報の配置と人物の息づかいはBが上。",
+ "evidence": [
+  {
+   "draft": "B",
+   "quote": "四つ目の鉢は、縁が欠けていた",
+   "why": "Bの青鉢の欠け描写（設定と合致）",
+   "verified": true
+  },
+  {
+   "draft": "B",
+   "quote": "怒るときも黙るが、納得したときも黙る",
+   "why": "Bの人物描写（指示外の味）",
+   "verified": true
+  },
+  {
+   "draft": "A",
+   "quote": "桟橋のたもとに青い陶の鉢が置いてある",
+   "why": "Aの設定逸脱（橋ではない場所に青鉢）",
+   "verified": true
+  },
+  {
+   "draft": "B",
+   "quote": "紙包みは最後に受け取り、前掛けの内袋に",
+   "why": "Bの朱の設置（紙包みの扱い）",
+   "verified": true
+  }
+ ],
+ "labels": {
+  "A": "team",
+  "B": "aion"
+ },
+ "evidence_verified": 4
+}

@@ -1,0 +1,11 @@
+{"ch": 1, "try": 1, "chars": 2613, "issues": ["本文が2613字（目標3000字の±10%）"], "sec": 70.8, "via": "openai/gpt-6-luna-pro"}
+{"ch": 1, "try": 2, "chars": 2989, "issues": [], "sec": 63.3, "via": "openai/gpt-6-luna-pro"}
+{"ch": 2, "try": 1, "chars": 3314, "issues": [], "sec": 58.7, "via": "openai/gpt-6-luna-pro"}
+{"ch": 3, "try": 1, "chars": 3189, "issues": [], "sec": 70.8, "via": "openai/gpt-6-luna-pro"}
+{"ch": 4, "try": 1, "chars": 3685, "issues": [], "sec": 97.6, "via": "openai/gpt-6-luna-pro"}
+{"ch": 5, "try": 1, "chars": 3766, "issues": [], "sec": 65.9, "via": "openai/gpt-6-luna-pro"}
+{"round": 1, "ch": 1, "try": 1, "chars": 2989, "issues": [], "sec": 23.0, "via": "openai/gpt-6-luna-pro"}
+{"round": 1, "ch": 3, "try": 1, "chars": 3388, "issues": [], "sec": 33.8, "via": "openai/gpt-6-luna-pro"}
+{"round": 1, "ch": 4, "try": 1, "chars": 3906, "issues": [], "sec": 48.2, "via": "openai/gpt-6-luna-pro"}
+{"round": 1, "ch": 5, "try": 1, "chars": 3935, "issues": ["本文が3935字（目標3500字の±10%）"], "sec": 39.2, "via": "openai/gpt-6-luna-pro"}
+{"round": 1, "ch": 5, "try": 2, "chars": 3441, "issues": [], "sec": 37.0, "via": "openai/gpt-6-luna-pro"}

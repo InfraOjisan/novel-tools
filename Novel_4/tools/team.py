@@ -126,6 +126,11 @@ def chat(prof, system, user, task, json_mode=False):
         endpoint = "/messages"
         body = {"model": model, "max_tokens": prof.get("max_tokens", 16000), "temperature": prof.get("temperature", 0.7),
                 "system": system, "messages": [{"role": "user", "content": user}]}
+    elif api == "responses":
+        endpoint = "/responses"
+        body = {"model": model, "instructions": system, "input": user, "max_output_tokens": prof.get("max_tokens", 16000)}
+        if prof.get("reasoning"):
+            body["reasoning"] = prof["reasoning"]
     else:
         endpoint = "/chat/completions"
         body = {"model": model, "max_tokens": prof.get("max_tokens", 16000), "temperature": prof.get("temperature", 0.7),
@@ -149,6 +154,11 @@ def chat(prof, system, user, task, json_mode=False):
                 data = json.loads(r.read())
             if api == "messages":
                 text = "".join(b.get("text", "") for b in data.get("content", []) if b.get("type") == "text").strip()
+                u = data.get("usage", {}) or {}
+                tin, tout = u.get("input_tokens"), u.get("output_tokens")
+            elif api == "responses":
+                text = "".join(c.get("text", "") for it in data.get("output", []) if it.get("type") == "message"
+                               for c in it.get("content", []) if c.get("type") == "output_text").strip()
                 u = data.get("usage", {}) or {}
                 tin, tout = u.get("input_tokens"), u.get("output_tokens")
             else:
@@ -223,6 +233,21 @@ def _cp932(ch):
         return False
 
 
+def repeated(text, prior="", n=20):
+    """同じ20字が離れた位置に2回出る（場面や台詞の繰り返し）を探す。prior があればその中にも探す。"""
+    t = re.sub(r"\s|＊", "", text)
+    p = re.sub(r"\s|＊", "", prior)
+    seen = {}
+    for i in range(len(t) - n + 1):
+        g = t[i:i + n]
+        if g in p:
+            return g
+        if g in seen and i - seen[g] >= n:
+            return g
+        seen.setdefault(g, i)
+    return None
+
+
 def mech(text, n):
     iss = []
     first = text.strip().split("\n", 1)[0]
@@ -245,6 +270,9 @@ def mech(text, n):
     odd = sorted({ch for ch in text if "\u4e00" <= ch <= "\u9fff" and not _cp932(ch)})
     if odd:
         iss.append("字体疑い（簡体字・繁体字の混入の疑い）: " + "".join(odd[:20]))
+    rp = repeated(text)
+    if rp:
+        iss.append(f"同じ文が繰り返されている（場面や台詞の重複。各場面は一度だけ書く）: 「{rp}」")
     ov = overlap(text)
     if ov:
         iss.append(f"既存の文章と{CFG['overlap_chars']}字以上一致: 「{ov}」")
@@ -336,7 +364,11 @@ def canon_text():
     if hashlib.sha256(c.read_bytes()).hexdigest() != rd(ROOT / "canon" / "CANON.sha256").strip():
         print("ESCALATE CANON_MODIFIED", file=sys.stderr)
         sys.exit(3)
-    return c.read_text(encoding="utf-8")
+    t = c.read_text(encoding="utf-8")
+    am = rd(ROOT / "canon" / "AMENDMENTS.md")
+    if am and am.strip():
+        t += "\n\n# CANON 改正（人が承認した変更。上の本文より優先する）\n" + am.strip() + "\n"
+    return t
 
 
 # ---------------------------------------------------------------- 章
@@ -358,6 +390,9 @@ def make_packet(n, canon, feedback=""):
     s += sec("LEDGER（これまでの章の記録）", rd(RUN / "state" / "LEDGER.md") or "（まだない。第1章）")
     if prev:
         s += sec("前章の結び", prev[-CFG["prev_tail_chars"]:])
+    plot = rd(RUN / "plots" / f"ch{nn(n)}" / "final.md")
+    if plot:
+        s += sec("確定プロット（必ずこれに従って肉付けする）", plot + "\n\n【扱い】場面の順序・行為の連鎖・台詞の種・予想を外す一手・置く細部は変えない。足してよいのは、会話の肉付けと、音・におい・手触り・温度の描写だけ。細部の意味を地の文で説明しない。各場面は約" + str(CH["target"] // 3) + "字の厚みで書く。")
     w = rd(ROOT / "prompts" / "write.md")
     for k, v in {"{{N}}": str(n), "{{TARGET}}": str(CH["target"]), "{{MINC}}": str(CH["min"]), "{{MAXC}}": str(CH["max"])}.items():
         w = w.replace(k, v)
@@ -373,13 +408,79 @@ def fan_out(writers, packet, n, wdir, a):
         if f.exists():
             return w["name"], rd(f), None
         try:
-            t = clean_draft(chat(w, CFG["writer_system"], packet, f"write:{w['name']}"), n)
+            t = clean_draft(chat(w, CFG["writer_system"], packet + ("\n\n" + w["angle"] if w.get("angle") else ""), f"write:{w['name']}"), n)
             wr(f, t)
             return w["name"], t, None
         except Exception as e:  # 1人の失敗は全体の失敗ではない
             return w["name"], None, str(e)
     with cf.ThreadPoolExecutor(max_workers=len(writers)) as ex:
         return list(ex.map(one, writers))
+
+
+def scenes_of(plot):
+    body = plot.split("# 照合表")[0]
+    sc = re.split(r"^## 場面\d+[：:].*$", body, flags=re.M)
+    heads = re.findall(r"^## 場面\d+[：:].*$", body, flags=re.M)
+    out = []
+    for h, b in zip(heads, sc[1:]):
+        out.append((h, b.split("\n## 結び")[0].strip()))
+    return out
+
+
+def plot_write(n, canon, wdir, a, fb):
+    """場面ごとに書かせて連結する。短く縮む書き手の分量を、場面単位で制御する。"""
+    plot = rd(RUN / "plots" / f"ch{nn(n)}" / "final.md")
+    sc = scenes_of(plot)
+    if not sc:
+        return [("qw", None, "プロットから場面が取れない")]
+    ctx = plot_context(n, canon)
+    m3 = re.search(r"^## 語りの手触り.*?(?=^# 照合表|\Z)", plot, flags=re.M | re.S)
+    m4 = re.search(r"^# 照合表.*", plot, flags=re.M | re.S)
+    ctx += sec("語りの手触り（全場面共通）", m3.group(0).strip() if m3 else "") + sec("照合表（守る値）", m4.group(0).strip() if m4 else "")
+    per = CH["target"] // len(sc)
+    smin, smax = int(per * 0.9), int(per * 1.4)
+    brief = rd(ROOT / "BRIEF.md")
+    m = re.search(rf"\*\*第{n}章[　 ](.+?)\*\*", brief)
+    title = m.group(1).strip() if m else "（題）"
+    parts = []
+    for k, (h, b) in enumerate(sc, 1):
+        f = wdir / f"a{a}_scene{k}.md"
+        if not f.exists():
+            budget(f"場面{k}", CFG["plot"].get("time_budget_sec", 55))
+            prompt = ctx
+            prompt += sec("直前の本文の末尾（ここから続く。繰り返さない）", parts[-1][-700:]) if parts else ""
+            prompt += sec(f"いま書く場面：{h.lstrip('# ').strip()}（これだけを書く。前の場面は書かない）", b)
+            last = ""
+            if k == len(sc):
+                m2 = re.search(r"^## 結び.*?(?=^## 語りの手触り|\Z)", plot.split("# 照合表")[0], flags=re.M | re.S)
+                last = "\n最後の場面なので、次の「結び」の気配で終える（説明で締めない）：\n" + (m2.group(0).strip() if m2 else "") + "\n"
+            p = (rd(ROOT / "prompts" / "write_scene.md").replace("{{N}}", str(n)).replace("{{K}}", str(k)).replace("{{KK}}", str(len(sc)))
+                 .replace("{{SC}}", str(per)).replace("{{SMIN}}", str(smin)).replace("{{SMAX}}", str(smax)).replace("{{LASTNOTE}}", last))
+            if fb and a > 1:
+                p += "\n# 前の稿への指摘（直す）\n" + fb
+            best, txt = None, ""
+            for tr in range(3):
+                try:
+                    txt = chat(CFG["plot_writer"], CFG["writer_system"], prompt + (f"\n\n（前回は{body_chars(txt)}字{'で短すぎ' if body_chars(txt) < smin else ''}{'で、繰り返しがありました' if repeated(txt, ''.join(parts)) else ''}。{smin}〜{smax}字に収める。{'手順・会話・感覚を足す' if body_chars(txt) < smin else 'この場面より先の出来事・前の場面や自分の文の繰り返しは書かない'}）" if tr and txt else ""), f"scene:{k}")
+                except Exception as e:
+                    if best is None:
+                        return [("qw", None, str(e)[:120])]
+                    break
+                txt = re.sub(r"^```[a-z]*\n|\n```\s*$", "", txt.strip())
+                txt = re.sub(r"^#+ .*\n", "", txt).strip()
+                c = body_chars(txt)
+                rep = repeated(txt, "".join(parts))
+                bad = (1 if rep else 0, 0 if smin <= c <= int(smax * 1.15) else 1, abs(c - per))
+                if best is None or bad < best[0]:
+                    best = (bad, txt)
+                if bad[0] == 0 and bad[1] == 0:
+                    break
+            txt = best[1]
+            wr(f, txt)
+        parts.append(rd(f).strip())
+    text = f"# 第{n}章　{title}\n\n" + "\n\n＊\n\n".join(parts) + "\n"
+    wr(wdir / f"a{a}_qw.md", text)
+    return [("qw", text, None)]
 
 
 def edit(n, valid, rules, role, canon, wdir, a):
@@ -466,9 +567,9 @@ def ledger_section(n, text, canon):
     return None
 
 
-def budget(label):
+def budget(label, limit=None):
     """この呼び出しの時間の予算を超えそうなら、ここまでの結果を残して止まる（同じコマンドを再度打てば続きから）。"""
-    if not os.environ.get("TEAM_NO_BUDGET") and time.time() - T0 > CFG.get("time_budget_sec", 100):
+    if not os.environ.get("TEAM_NO_BUDGET") and time.time() - T0 > (limit or CFG.get("time_budget_sec", 100)):
         print(f"CONTINUE（{label}の前で一旦停止。同じコマンドをもう一度実行する）")
         sys.exit(0)
 
@@ -485,7 +586,7 @@ def cmd_write(a):
         return
     if n > 1 and pg["chapters"].get(str(n - 1), {}).get("status") != "accepted":
         sys.exit(f"第{n - 1}章が未確定")
-    writers = [CFG["aion"]] if mode == "aion" else CFG["writers"]
+    writers = [CFG["aion"]] if mode == "aion" else [CFG["plot_writer"]] if mode == "plot" else CFG["writers"]
     wdir = RUN / "work" / f"ch{nn(n)}"
     sf = wdir / "state.json"
     st = json.loads(rd(sf)) if sf.exists() else {"att": 1, "fb": ""}
@@ -494,9 +595,12 @@ def cmd_write(a):
         fb = st["fb"]
         packet, rules, role = make_packet(n, canon, fb)
         wr(wdir / f"a{att}_packet.md", packet)
-        if not all((wdir / f"a{att}_{w['name']}.md").exists() for w in writers):
-            budget("執筆")
-        res = fan_out(writers, packet, n, wdir, att)
+        if mode == "plot":
+            res = plot_write(n, canon, wdir, att, fb)
+        else:
+            if not all((wdir / f"a{att}_{w['name']}.md").exists() for w in writers):
+                budget("執筆")
+            res = fan_out(writers, packet, n, wdir, att)
         valid, mech_fb = [], []
         for name, t, err in res:
             if err:
@@ -571,6 +675,97 @@ def cmd_write(a):
     print(f"第{n}章 確定（{mode}）: 採用={who}, 字数={body_chars(text)}, 稿={att}, 低重大度の指摘={len(issues)}")
 
 
+# ---------------------------------------------------------------- プロットの反復（グループ1）
+def plot_context(n, canon):
+    brief = rd(ROOT / "BRIEF.md")
+    rules = between(brief, "<!-- RULES:BEGIN -->", "<!-- RULES:END -->")
+    role = between(brief, f"<!-- ROLE:{nn(n)} -->", f"<!-- /ROLE:{nn(n)} -->")
+    prev = rd(RUN / "chapters" / f"ch{nn(n - 1)}.md") if n > 1 else ""
+    s = sec("共通執筆ルール（BRIEF）", rules) + sec("CANON", canon) + sec(f"この章の機能（BRIEF 第{n}章）", role)
+    s += sec("LEDGER（これまでの章の記録）", rd(RUN / "state" / "LEDGER.md") or "（まだない。第1章）")
+    if prev:
+        s += sec("前章の結び", prev[-CFG["prev_tail_chars"]:])
+    return s
+
+
+def plot_stage(jobs, label):
+    """jobs: [(path, profile, system, prompt)]。既にあるファイルは再利用。足りないぶんだけ並列に呼ぶ。"""
+    todo = [j for j in jobs if not j[0].exists()]
+    if todo:
+        budget(label, CFG["plot"].get("time_budget_sec", 55))
+
+        def one(j):
+            f, prof, system, prompt = j
+            try:
+                wr(f, chat(prof, system, prompt, f"plot:{label}:{prof['name']}"))
+                return None
+            except Exception as e:
+                return f"{prof['name']}: {str(e)[:120]}"
+        with cf.ThreadPoolExecutor(max_workers=len(todo)) as ex:
+            errs = [e for e in ex.map(one, todo) if e]
+        if errs:
+            log(ev="plot_stage_errors", label=label, errs=errs)
+    return [j[0] for j in jobs if j[0].exists()]
+
+
+def plan_of(raw):
+    m = re.search(r"^#\s*統合案\s*$(.*)", raw, flags=re.M | re.S)
+    return (m.group(1) if m else raw).strip()
+
+
+def cmd_plot(a):
+    global RUN
+    n, RUN = int(a.n), ROOT / "runs" / "plot"
+    guard_stop()
+    canon = canon_text()
+    P = CFG["plot"]
+    pd = RUN / "plots" / f"ch{nn(n)}"
+    if (pd / "final.md").exists():
+        print(f"第{n}章のプロットは確定済み: {pd / 'final.md'}")
+        return
+    ctx = plot_context(n, canon)
+    sub = lambda t: t.replace("{{N}}", str(n))
+    SYS = "あなたは経験豊かな小説の構成作家です。"
+    models = P["models"]
+    seed_p = sub(rd(ROOT / "prompts" / "plot_seed.md"))
+    files = plot_stage([(pd / f"seed_{m['name']}.md", dict(m, temperature=1.0), SYS, ctx + "\n" + seed_p) for m in models], "シード")
+    if len(files) < 2:
+        sys.exit("シード案が2つ以上できなかった（logs を確認）")
+    plans = {f.stem.split("_", 1)[1]: rd(f) for f in files}
+    for r in range(1, P["rounds"] + 1):
+        ref_p = sub(rd(ROOT / "prompts" / "plot_refine.md"))
+        jobs = []
+        for m in models:
+            names = list(plans)
+            random.Random(f"{n}-{r}-{m['name']}").shuffle(names)
+            body = "".join(sec(f"案 P{i + 1}", plans[nm]) for i, nm in enumerate(names))
+            jobs.append((pd / f"r{r}_{m['name']}.md", dict(m, temperature=0.9), SYS, ctx + "\n" + body + "\n" + ref_p))
+        fs = plot_stage(jobs, f"統合{r}")
+        if not fs:
+            sys.exit(f"統合{r}回目が全員失敗（logs を確認）")
+        plans = {f.stem.split("_", 1)[1]: plan_of(rd(f)) for f in fs}
+    body = "".join(sec(f"案 P{i + 1}", t) for i, (_, t) in enumerate(sorted(plans.items())))
+    fin_p = sub(rd(ROOT / "prompts" / "plot_final.md"))
+    for k in range(2):
+        out = pd / f"final_try{k + 1}.md"
+        got = plot_stage([(out, P["synth"], "あなたは作品の主筆です。", ctx + "\n" + body + "\n" + fin_p)], "最終")
+        t = rd(out) if got else ""
+        main_part = t.split("# 照合表")[0]
+        bad = [w for w in CFG["mgmt_words"] if w in main_part]
+        if t and "# 最終プロット" in t and 1200 <= len(t) <= 6000 and not bad:
+            wr(pd / "final.md", t.strip() + "\n")
+            log(ev="plot_done", n=n, chars=len(t))
+            print(f"第{n}章のプロット確定（{len(models)}モデル × シード+{P['rounds']}周 → 主筆の統合）: {pd / 'final.md'}")
+            return
+        if t:
+            log(ev="plot_final_bad", n=n, bad=bad, chars=len(t))
+            try:
+                out.rename(pd / f"final_bad{k + 1}.md")
+            except OSError:
+                pass
+    sys.exit("最終プロットが基準（見出し・字数・管理用語なし）を満たさない: logs と plots/ を確認")
+
+
 # ---------------------------------------------------------------- 比べる
 def inserts_of(mode, n):
     t = rd(ROOT / "runs" / mode / "state" / "LEDGER.md")
@@ -580,15 +775,16 @@ def inserts_of(mode, n):
 
 def cmd_judge(a):
     n = int(a.n)
-    texts = {m: rd(ROOT / "runs" / m / "chapters" / f"ch{nn(n)}.md") for m in ("team", "aion")}
+    ma = a.a
+    texts = {m: final_text(m, n, a.raw) for m in (ma, "aion")}
     if not all(texts.values()):
-        sys.exit("team と aion の両方で第N章が確定している必要がある")
+        sys.exit(f"{ma} と aion の両方で第N章が確定している必要がある")
     canon = canon_text()
     brief = rd(ROOT / "BRIEF.md")
     rules = between(brief, "<!-- RULES:BEGIN -->", "<!-- RULES:END -->")
     role = between(brief, f"<!-- ROLE:{nn(n)} -->", f"<!-- /ROLE:{nn(n)} -->")
-    order = ["team", "aion"]
-    random.Random(f"judge-{n}").shuffle(order)
+    order = [ma, "aion"]
+    random.Random(f"judge-{n}-{ma}").shuffle(order)
     lab = {"A": order[0], "B": order[1]}
     body = sec("BRIEF 共通ルール", rules) + sec("CANON", canon) + sec(f"この章の機能（第{n}章）", role)
     for lb, m in lab.items():
@@ -600,17 +796,27 @@ def cmd_judge(a):
 - bun：文章（説明過多でなく、余白と緩急があるか）　- pace：章の密度配分が機能どおりか
 出力はJSONのみ：{"scores":{"A":{"rule":0,"yohaku":0,"atofuki":0,"chara":0,"bun":0,"pace":0},"B":{...}},"pick":"A|B","reason":"150字以内","evidence":[{"draft":"A|B","quote":"その稿からそのまま写した30字以内","why":"何の根拠か"}, ...4件以上]}
 引用は一字一句そのまま。照合に通らない引用は捨てられる。"""
-    out = chat(CFG["workers"]["judge"], "あなたは公平な審査員です。JSONだけを返します。", body, "judge", json_mode=True)
-    j = parse_json(out)
+    j, note = None, ""
+    for k in range(3):
+        out = chat(CFG["workers"]["judge"], "あなたは公平な審査員です。JSONだけを返します。", body + note, "judge", json_mode=True)
+        try:
+            j = parse_json(out)
+            assert j.get("pick") in lab and isinstance(j.get("scores"), dict) and all(x in j["scores"] for x in lab)
+            break
+        except Exception as e:
+            wr(ROOT / "notes" / f"judge_bad_{k}.txt", out)
+            j, note = None, f"\n\n（前回の出力は形式不正でした。pick は \"A\" か \"B\" のどちらか一方、scores は A と B の両方を含めて、JSONだけを返す）"
+    if j is None:
+        sys.exit("審査役が正しい形式で返さなかった（notes/judge_bad_*.txt を確認）")
     ev = j.get("evidence", [])
     for x in ev:
         x["verified"] = verified(x.get("quote"), texts[lab[x.get("draft", "A")]]) if x.get("draft") in lab else False
     j["labels"] = lab
     j["evidence_verified"] = sum(1 for x in ev if x["verified"])
-    wr(ROOT / "notes" / f"EVAL_ch{nn(n)}.json", json.dumps(j, ensure_ascii=False, indent=1))
+    wr(ROOT / "notes" / f"EVAL_ch{nn(n)}_{ma}.json", json.dumps(j, ensure_ascii=False, indent=1))
     winner = lab.get(j.get("pick"))
     with open(ROOT / "notes" / "EVAL.md", "a", encoding="utf-8") as f:
-        f.write(f"\n## 第{n}章 {time.strftime('%Y-%m-%d %H:%M')}\n- 勝ち: **{winner}**（A={lab['A']}, B={lab['B']}）／引用の照合 {j['evidence_verified']}/{len(ev)}\n"
+        f.write(f"\n## 第{n}章 {time.strftime('%Y-%m-%d %H:%M')}（{ma} vs aion、{'raw' if a.raw else '校正後があれば校正後'}）\n- 勝ち: **{winner}**（A={lab['A']}, B={lab['B']}）／引用の照合 {j['evidence_verified']}/{len(ev)}\n"
                 f"- スコア: {json.dumps({lab[k]: v for k, v in j.get('scores', {}).items()}, ensure_ascii=False)}\n- 理由: {j.get('reason')}\n")
     print(f"第{n}章 審査: 勝ち={winner} 引用照合={j['evidence_verified']}/{len(ev)} scores={ {lab[k]: v for k, v in j.get('scores', {}).items()} }")
 
@@ -622,6 +828,10 @@ PROOF_PROMPT = """あなたは日本語の校正者です。下の「原稿」�
 - 簡体字・繁体字・日本で使わない字形の混入（例：这、個の旧字体ではなく中国語の字形、說/説の混在など）。日本の常用漢字・人名用漢字に直す。
 - 誤字脱字、送りがな、表記ゆれ（同じ語の漢字/かな混在、数字の書き方）、助詞の誤り、主語・人称・呼び名の揺れ、読点・括弧の不整合、中国語的な言い回し。
 - 内容・文体・語り・固有名詞・数値は変えない。意味が変わる直しは出さない。
+- 舟の語（艫・舳先・舫い・櫓・櫂）や「三度半」は固有の表現で、誤りではない。直さない。「字体」とは、簡体字・繁体字など日本で使わない字形が実際に原稿にある場合だけ。\n- **確信のない直しは出さない。** 正しい語（例：舫い綱、櫓、艫など舟の語）を誤字と決めつけて別の語に変えない。迷ったら出さない。
+
+# 厳守
+- ファイルの読み書き・コマンド実行・ツール使用は一切しない。答えは標準出力にJSONだけを返す。前置き・説明・表・コードフェンスは付けない。
 
 # 出力（JSONのみ）
 {"corrections":[{"quote":"原稿からそのまま写した、原稿中に1か所だけ現れる20〜60字","replace":"直した後の同じ範囲","kind":"字体|誤字|表記|助詞|人称|文法|その他","reason":"30字以内"}]}
@@ -629,35 +839,92 @@ PROOF_PROMPT = """あなたは日本語の校正者です。下の「原稿」�
 - 直す所がなければ {"corrections":[]}。"""
 
 
-def cmd_proofread(a):
+def src_text(n):
+    """校正の入力：Opus の直しを適用した稿（polished1）があればそれ、なければ確定稿。"""
+    return rd(RUN / "polished1" / f"ch{nn(n)}.md") or rd(RUN / "chapters" / f"ch{nn(n)}.md")
+
+
+def final_text(mode, n, raw=False):
+    r = ROOT / "runs" / mode
+    return (None if raw else rd(r / "polished" / f"ch{nn(n)}.md")) or rd(r / "chapters" / f"ch{nn(n)}.md")
+
+
+def apply_corrections(text, cs, lo, hi, minq, guard=False):
+    out, ok, bad = text, [], []
+    for c in cs:
+        q, r = c.get("quote", ""), c.get("replace", "")
+        if guard:
+            odd = [ch for ch in q if "\u4e00" <= ch <= "\u9fff" and not _cp932(ch)]
+            lost = [w for w in CFG.get("protected_terms", []) if w in q and w not in r]
+            if c.get("kind") == "字体" and not odd:
+                bad.append({**c, "why": "字体の直しだが、quoteに字体疑いの字がない（機械が却下）"})
+                continue
+            if lost:
+                bad.append({**c, "why": f"保護語を消す直し: {lost}"})
+                continue
+        if len(q) < minq or text.count(q) != 1 or not (lo <= len(r) / max(1, len(q)) <= hi) or r == q:
+            bad.append({**c, "why": "quoteが原稿に一意でない／変更が大きすぎ小さすぎ／変更なし"})
+            continue
+        out = out.replace(q, r)
+        ok.append(c)
+    return out, ok, bad
+
+
+def odd_report(text):
+    odd = [(ch, text.index(ch)) for ch in sorted({c for c in text if "\u4e00" <= c <= "\u9fff" and not _cp932(c)})]
+    return "\n".join(f"- 「{c}」 付近: {text[max(0, i - 10):i + 10]!r}" for c, i in odd) or "（機械検査では見つからず）"
+
+
+def cmd_polish(a):
     global RUN
     n, RUN = int(a.n), ROOT / "runs" / a.mode
     text = rd(RUN / "chapters" / f"ch{nn(n)}.md")
     if not text:
         sys.exit("確定した章がない")
-    odd = [(ch, text.index(ch)) for ch in sorted({c for c in text if "\u4e00" <= c <= "\u9fff" and not _cp932(c)})]
-    rep = "\n".join(f"- 「{c}」 付近: {text[max(0, i - 10):i + 10]!r}" for c, i in odd) or "（機械検査では見つからず）"
+    pk = RUN / "proof" / f"ch{nn(n)}.polish.packet.md"
+    wr(pk, rd(ROOT / "prompts" / "polish.md") + "\n\n# 原稿\n\n" + text)
+    print(f"日本語直し・文学化のパケット: {pk}\nMac で agy（Opus）に渡し、返ったJSONだけを {RUN / 'proof' / f'ch{nn(n)}.polish.json'} に置き、polish-apply {n} --mode {a.mode} を実行する")
+
+
+def cmd_polish_apply(a):
+    global RUN
+    n, RUN = int(a.n), ROOT / "runs" / a.mode
+    text = rd(RUN / "chapters" / f"ch{nn(n)}.md")
+    raw = rd(RUN / "proof" / f"ch{nn(n)}.polish.json")
+    if not text or not raw:
+        sys.exit("章または polish.json がない")
+    cs = parse_json(raw).get("corrections", [])
+    out, ok, bad = apply_corrections(text, cs, 0.5, 2.0, 10)
+    wr(RUN / "polished1" / f"ch{nn(n)}.md", out)
+    wr(RUN / "proof" / f"ch{nn(n)}.polish.applied.json", json.dumps({"applied": ok, "rejected": bad}, ensure_ascii=False, indent=1))
+    print(f"第{n}章 日本語直し: 適用{len(ok)}件 / 却下{len(bad)}件 → {RUN / 'polished1' / f'ch{nn(n)}.md'}")
+
+
+def cmd_proofread(a):
+    global RUN
+    n, RUN = int(a.n), ROOT / "runs" / a.mode
+    text = src_text(n)
+    if not text:
+        sys.exit("確定した章がない")
     pk = RUN / "proof" / f"ch{nn(n)}.packet.md"
-    wr(pk, PROOF_PROMPT + "\n\n# 機械検査の参考（字体疑い）\n" + rep + "\n\n# 原稿\n\n" + text)
+    wr(pk, PROOF_PROMPT + "\n\n# 機械検査の参考（字体疑い）\n" + odd_report(text) + "\n\n# 原稿\n\n" + text)
+    if getattr(a, "auto", False):
+        out = chat(CFG["proof_worker"], "あなたは日本語の校正者です。JSONだけを返します。", rd(pk), "proof")
+        wr(RUN / "proof" / f"ch{nn(n)}.corrections.json", out)
+        cmd_proofread_apply(a)
+        return
     print(f"校正パケット: {pk}\n返ってきたJSONを {RUN / 'proof' / f'ch{nn(n)}.corrections.json'} に置き、proofread-apply {n} --mode {a.mode} を実行する")
 
 
 def cmd_proofread_apply(a):
     global RUN
     n, RUN = int(a.n), ROOT / "runs" / a.mode
-    text = rd(RUN / "chapters" / f"ch{nn(n)}.md")
+    text = src_text(n)
     raw = rd(RUN / "proof" / f"ch{nn(n)}.corrections.json")
     if not text or not raw:
         sys.exit("章または corrections.json がない")
     cs = parse_json(raw).get("corrections", [])
-    out, ok, bad = text, [], []
-    for c in cs:
-        q, r = c.get("quote", ""), c.get("replace", "")
-        if len(q) < 6 or text.count(q) != 1 or not (0.5 <= len(r) / max(1, len(q)) <= 2.0) or r == q:
-            bad.append({**c, "why": "quoteが原稿に一意でない／変更が大きい／変更なし"})
-            continue
-        out = out.replace(q, r)
-        ok.append(c)
+    out, ok, bad = apply_corrections(text, cs, 0.5, 2.0, 6, guard=True)
     odd = sorted({ch for ch in out if "\u4e00" <= ch <= "\u9fff" and not _cp932(ch)})
     wr(RUN / "polished" / f"ch{nn(n)}.md", out)
     wr(RUN / "proof" / f"ch{nn(n)}.applied.json", json.dumps({"applied": ok, "rejected": bad, "odd_left": odd}, ensure_ascii=False, indent=1))
@@ -680,14 +947,14 @@ def cmd_ping(a):
 
 
 def cmd_status(a):
-    for mode in ("team", "aion"):
+    for mode in ("team", "aion", "plot"):
         p = ROOT / "runs" / mode / "state" / "progress.json"
         if not p.exists():
             print(f"[{mode}] 未着手")
             continue
         pg = json.loads(rd(p))
         cost = 0.0
-        for l in rd(ROOT / "runs" / mode / "logs" / "run.jsonl").splitlines():
+        for l in (rd(ROOT / "runs" / mode / "logs" / "run.jsonl") or "").splitlines():
             try:
                 cost += float(json.loads(l).get("cost") or 0)
             except Exception:
@@ -704,18 +971,25 @@ def main():
     s.add_argument("--sha", required=True)
     s = sp.add_parser("write")
     s.add_argument("n")
-    s.add_argument("--mode", choices=["team", "aion"], default="team")
+    s.add_argument("--mode", choices=["team", "aion", "plot"], default="team")
+    s = sp.add_parser("plot")
+    s.add_argument("n")
     s = sp.add_parser("judge")
     s.add_argument("n")
-    for c in ("proofread", "proofread-apply"):
+    s.add_argument("--a", choices=["team", "plot"], default="team")
+    s.add_argument("--raw", action="store_true")
+    for c in ("proofread", "proofread-apply", "polish", "polish-apply"):
         s = sp.add_parser(c)
         s.add_argument("n")
-        s.add_argument("--mode", choices=["team", "aion"], default="team")
+        s.add_argument("--mode", choices=["team", "aion", "plot"], default="team")
+        if c == "proofread":
+            s.add_argument("--auto", action="store_true")
     a = ap.parse_args()
     guard_stop()
     {"ping": cmd_ping, "canon": cmd_canon, "approve-canon": cmd_approve, "write": cmd_write,
      "judge": cmd_judge, "status": cmd_status,
-     "proofread": cmd_proofread, "proofread-apply": cmd_proofread_apply}[a.cmd](a)
+     "proofread": cmd_proofread, "proofread-apply": cmd_proofread_apply,
+     "plot": cmd_plot, "polish": cmd_polish, "polish-apply": cmd_polish_apply}[a.cmd](a)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,79 @@
+{
+ "haiku": {
+  "propose": {
+   "st": "ok",
+   "errors": []
+  },
+  "score": {
+   "st": "ok",
+   "errors": []
+  }
+ },
+ "lunapro": {
+  "propose": {
+   "st": "ok",
+   "errors": []
+  },
+  "score": {
+   "st": "ok",
+   "errors": []
+  }
+ },
+ "muse": {
+  "propose": {
+   "st": "ok",
+   "errors": []
+  },
+  "score": {
+   "st": "ok",
+   "errors": []
+  }
+ },
+ "dsf": {
+  "propose": {
+   "st": "ok",
+   "errors": []
+  },
+  "score": {
+   "st": "ok",
+   "errors": []
+  }
+ },
+ "aion": {
+  "propose": {
+   "st": "ok",
+   "errors": []
+  },
+  "score": {
+   "st": "ok",
+   "errors": []
+  }
+ },
+ "judge": {
+  "blind2": {
+   "st": "ok",
+   "errors": []
+  },
+  "blind1": {
+   "st": "exit",
+   "errors": [
+    "Extra data: line 5 column 4 (char 61)",
+    "Extra data: line 1 column 41 (char 40)"
+   ]
+  }
+ },
+ "kimik3": {
+  "verify": {
+   "st": "ok",
+   "errors": []
+  }
+ },
+ "glm53": {
+  "verify": {
+   "st": "ok_after_retry",
+   "errors": [
+    "1回目：推論で出力枠32000トークンを使い切り本文が空（424秒・$0.136）、続けて同じく空（382秒・$0.142）。やり直しの指示の後、2回目は26秒で書式どおりに回答（$0.034）"
+   ]
+  }
+ }
+}

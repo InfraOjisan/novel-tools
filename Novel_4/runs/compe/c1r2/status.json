@@ -1,0 +1,66 @@
+{
+ "haiku": {
+  "propose": {
+   "st": "ok",
+   "errors": []
+  },
+  "score": {
+   "st": "ok",
+   "errors": []
+  }
+ },
+ "lunapro": {
+  "propose": {
+   "st": "ok",
+   "errors": []
+  },
+  "score": {
+   "st": "ok",
+   "errors": []
+  }
+ },
+ "aion": {
+  "propose": {
+   "st": "ok",
+   "errors": []
+  },
+  "score": {
+   "st": "ok",
+   "errors": []
+  }
+ },
+ "muse": {
+  "propose": {
+   "st": "ok",
+   "errors": []
+  },
+  "score": {
+   "st": "ok",
+   "errors": []
+  }
+ },
+ "dsf": {
+  "propose": {
+   "st": "ok",
+   "errors": []
+  },
+  "score": {
+   "st": "ok",
+   "errors": []
+  }
+ },
+ "judge": {
+  "blind2": {
+   "st": "ok",
+   "errors": []
+  },
+  "blind1": {
+   "st": "ok",
+   "errors": []
+  },
+  "final": {
+   "st": "ok",
+   "errors": []
+  }
+ }
+}

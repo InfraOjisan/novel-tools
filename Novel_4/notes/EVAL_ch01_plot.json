@@ -1,0 +1,53 @@
+{
+ "scores": {
+  "A": {
+   "rule": 3,
+   "yohaku": 3,
+   "atofuki": 2,
+   "chara": 2,
+   "bun": 3,
+   "pace": 3
+  },
+  "B": {
+   "rule": 3,
+   "yohaku": 4,
+   "atofuki": 4,
+   "chara": 4,
+   "bun": 4,
+   "pace": 4
+  }
+ },
+ "pick": "B",
+ "reason": "Bは差し込みを記録し本文で回収。配達票の折り数え、第四橋の欠け鉢、トマの二つの黙りが自然に埋め込まれる。Aは壺を二度積み込む矛盾があり、文も重複が目立つ。",
+ "evidence": [
+  {
+   "draft": "B",
+   "quote": "紙包みは最後に受け取り、前掛けの内袋に押し込んだ",
+   "why": "P2設置の記録どおり、内袋の紙包み→壺の順が本文で整合",
+   "verified": true
+  },
+  {
+   "draft": "B",
+   "quote": "四つ目の鉢は、縁が欠けていた",
+   "why": "青鉢欠損の伏線を第四橋に結び、第4章回収への布石",
+   "verified": true
+  },
+  {
+   "draft": "B",
+   "quote": "怒るときも黙るが、納得したときも黙る",
+   "why": "トマの癖と無口を観察で描写し人物を生きさせる",
+   "verified": true
+  },
+  {
+   "draft": "B",
+   "quote": "壺は壺の言う通りに歩くさ",
+   "why": "トマの口調に沿い、説明を台詞に分散",
+   "verified": true
+  }
+ ],
+ "labels": {
+  "A": "plot",
+  "B": "aion"
+ },
+ "evidence_verified": 4
+}

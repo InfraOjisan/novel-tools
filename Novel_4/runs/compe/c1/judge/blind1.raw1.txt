@@ -1,0 +1,64 @@
+[
+  {
+    "id": "B1",
+    "violations": [],
+    "surprise": 7
+  },
+  {
+    "id": "B2",
+    "violations": [
+      "S3"
+    ],
+    "surprise": 8
+  },
+  {
+    "id": "B3",
+    "violations": [],
+    "surprise": 8
+  },
+  {
+    "id": "E1",
+    "violations": [],
+    "surprise": 7
+  },
+  {
+    "id": "E2",
+    "violations": [],
+    "surprise": 8
+  },
+  {
+    "id": "C1",
+    "violations": [],
+    "surprise": 7
+  },
+  {
+    "id": "C2",
+    "violations": [],
+    "surprise": 7
+  },
+  {
+    "id": "A1",
+    "violations": [],
+    "surprise": 6
+  },
+  {
+    "id": "A2",
+    "violations": [],
+    "surprise": 7
+  },
+  {
+    "id": "D1",
+    "violations": [],
+    "surprise": 8
+  },
+  {
+    "id": "D2",
+    "violations": [],
+    "surprise": 7
+  },
+  {
+    "id": "D3",
+    "violations": [],
+    "surprise": 8
+  }
+]

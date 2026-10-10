@@ -1,0 +1,71 @@
+{
+ "scores": [
+  {
+   "id": "A1",
+   "violations": [],
+   "surprise": 14,
+   "ent": 14,
+   "comment": "予約投稿の時系列誤認と語り手の責任反転が秀逸で現代的。"
+  },
+  {
+   "id": "A2",
+   "violations": [],
+   "surprise": 12,
+   "ent": 14,
+   "comment": "汚染者が自分達という反転が苦く説得力あるビターエンド。"
+  },
+  {
+   "id": "E1",
+   "violations": [],
+   "surprise": 11,
+   "ent": 13,
+   "comment": "語り手犯人と密室の組合せは定番だがまとまりは良い。"
+  },
+  {
+   "id": "E2",
+   "violations": [],
+   "surprise": 10,
+   "ent": 13,
+   "comment": "複製体と反復の恐怖は定番で驚きはやや弱い。"
+  },
+  {
+   "id": "B1",
+   "violations": [
+    "R3"
+   ],
+   "surprise": 15,
+   "ent": 14,
+   "comment": "加害被害逆転は強烈だが譲れない点に理由が乏しい。"
+  },
+  {
+   "id": "B2",
+   "violations": [],
+   "surprise": 9,
+   "ent": 11,
+   "comment": "実験動物の反転は読める展開で新味に欠ける。"
+  },
+  {
+   "id": "B3",
+   "violations": [],
+   "surprise": 16,
+   "ent": 15,
+   "comment": "二重の神の搾取構造が野心的で世界設定も充実。"
+  },
+  {
+   "id": "C1",
+   "violations": [],
+   "surprise": 13,
+   "ent": 14,
+   "comment": "既読表示を使った叙述反転が身近で再読性高い。"
+  },
+  {
+   "id": "C2",
+   "violations": [
+    "S3"
+   ],
+   "surprise": 9,
+   "ent": 11,
+   "comment": "記憶書換えは類型的で人数も5人を超過している。"
+  }
+ ]
+}

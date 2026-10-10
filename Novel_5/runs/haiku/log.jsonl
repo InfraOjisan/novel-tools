@@ -1,0 +1,21 @@
+{"ch": 1, "try": 1, "chars": 2110, "issues": ["本文が2110字（目標3000字の±10%）"], "sec": 26.7, "via": "anthropic/claude-haiku-5.5"}
+{"ch": 1, "try": 2, "chars": 2001, "issues": ["本文が2001字（目標3000字の±10%）"], "sec": 38.2, "via": "anthropic/claude-haiku-5.5"}
+{"ch": 2, "try": 1, "chars": 2461, "issues": ["本文が2461字（目標3500字の±10%）"], "sec": 36.7, "via": "anthropic/claude-haiku-5.5"}
+{"ch": 2, "try": 2, "chars": 2446, "issues": ["本文が2446字（目標3500字の±10%）"], "sec": 32.7, "via": "anthropic/claude-haiku-5.5"}
+{"ch": 3, "try": 1, "chars": 3179, "issues": [], "sec": 35.6, "via": "anthropic/claude-haiku-5.5"}
+{"ch": 4, "try": 1, "chars": 4179, "issues": [], "sec": 87.0, "via": "anthropic/claude-haiku-5.5"}
+{"ch": 5, "try": 1, "chars": 3320, "issues": [], "sec": 34.7, "via": "anthropic/claude-haiku-5.5"}
+{"round": 1, "ch": 1, "try": 1, "chars": 2710, "issues": [], "sec": 35.0, "via": "anthropic/claude-haiku-5.5"}
+{"round": 1, "ch": 2, "try": 1, "chars": 2669, "issues": ["本文が2669字（目標3500字の±10%）"], "sec": 31.4, "via": "anthropic/claude-haiku-5.5"}
+{"round": 1, "ch": 2, "try": 2, "chars": 2564, "issues": ["本文が2564字（目標3500字の±10%）"], "sec": 18.9, "via": "anthropic/claude-haiku-5.5"}
+{"round": 1, "ch": 3, "try": 1, "chars": 3049, "issues": ["本文が3049字（目標3500字の±10%）"], "sec": 26.7, "via": "anthropic/claude-haiku-5.5"}
+{"round": 1, "ch": 3, "try": 2, "chars": 3204, "issues": [], "sec": 27.1, "via": "anthropic/claude-haiku-5.5"}
+{"round": 1, "ch": 4, "try": 1, "chars": 3078, "issues": ["本文が3078字（目標4000字の±10%）"], "sec": 69.7, "via": "anthropic/claude-haiku-5.5"}
+{"round": 1, "ch": 4, "try": 2, "chars": 3279, "issues": ["本文が3279字（目標4000字の±10%）"], "sec": 72.5, "via": "anthropic/claude-haiku-5.5"}
+{"round": 1, "ch": 5, "try": 1, "chars": 3006, "issues": ["本文が3006字（目標3500字の±10%）"], "sec": 37.8, "via": "anthropic/claude-haiku-5.5"}
+{"round": 1, "ch": 5, "try": 2, "chars": 3097, "issues": ["本文が3097字（目標3500字の±10%）"], "sec": 26.4, "via": "anthropic/claude-haiku-5.5"}
+{"round": 2, "ch": 2, "try": 1, "chars": 2897, "issues": ["本文が2897字（目標3500字の±10%）"], "sec": 34.3, "via": "anthropic/claude-haiku-5.5"}
+{"round": 2, "ch": 2, "try": 2, "chars": 3257, "issues": [], "sec": 35.0, "via": "anthropic/claude-haiku-5.5"}
+{"round": 2, "ch": 4, "try": 1, "chars": 3496, "issues": ["本文が3496字（目標4000字の±10%）"], "sec": 28.5, "via": "anthropic/claude-haiku-5.5"}
+{"round": 2, "ch": 4, "try": 2, "chars": 3692, "issues": [], "sec": 40.1, "via": "anthropic/claude-haiku-5.5"}
+{"round": 2, "ch": 5, "try": 1, "chars": 3278, "issues": [], "sec": 26.6, "via": "anthropic/claude-haiku-5.5"}

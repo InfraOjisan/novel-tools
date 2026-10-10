@@ -28,7 +28,7 @@
     "editor": {
       "provider": "go",
       "api": "chat",
-      "model": "kimi-k3",
+      "model": "deepseek-v4-pro",
       "temperature": 0.2,
       "max_tokens": 4000,
       "extra": {
@@ -82,7 +82,8 @@
         "thinking": {
           "type": "disabled"
         }
-      }
+      },
+      "angle": "【あなたの重点】人物の癖・沈黙・言いかけてやめる所作に余白を作る。台詞は短く、言わないことで人物を立てる。"
     },
     {
       "name": "w2",
@@ -90,7 +91,8 @@
       "api": "messages",
       "model": "minimax-m3",
       "temperature": 0.85,
-      "max_tokens": 9000
+      "max_tokens": 9000,
+      "angle": "【あなたの重点】物の細部（傷・におい・重さ・音）と、数や手順のわずかな食い違いで「後を引く綻び」を作る。解釈は書かない。"
     },
     {
       "name": "w3",
@@ -103,7 +105,8 @@
         "thinking": {
           "type": "disabled"
         }
-      }
+      },
+      "angle": "【あなたの重点】可笑しさと、予想を外す小さな一手（意外な返し・脱線・奇妙な数え方）。真面目な場面にも一滴の可笑しみを。"
     }
   ],
   "aion": {
@@ -201,5 +204,325 @@
       "usage_include": true
     }
   },
-  "time_budget_sec": 100
+  "time_budget_sec": 100,
+  "plot": {
+    "rounds": 2,
+    "time_budget_sec": 55,
+    "models": [
+      {
+        "name": "luna",
+        "provider": "go",
+        "api": "responses",
+        "model": "gpt-6-luna",
+        "reasoning": {
+          "effort": "low"
+        },
+        "max_tokens": 9000,
+        "timeout_sec": 120
+      },
+      {
+        "name": "muse",
+        "provider": "go",
+        "api": "responses",
+        "model": "muse-spark-1.3-contributor",
+        "reasoning": {
+          "effort": "low"
+        },
+        "max_tokens": 9000,
+        "timeout_sec": 120
+      },
+      {
+        "name": "mm3",
+        "provider": "go",
+        "api": "messages",
+        "model": "minimax-m3",
+        "temperature": 1.0,
+        "max_tokens": 8000,
+        "timeout_sec": 120
+      }
+    ],
+    "synth": {
+      "name": "synth",
+      "provider": "go",
+      "api": "chat",
+      "model": "deepseek-v4-pro",
+      "temperature": 0.4,
+      "max_tokens": 7000,
+      "timeout_sec": 120,
+      "extra": {
+        "thinking": {
+          "type": "disabled"
+        }
+      }
+    }
+  },
+  "plot_writer": {
+    "name": "qw",
+    "provider": "go",
+    "api": "messages",
+    "model_env": "OPENCODE_GO_MODEL_3",
+    "temperature": 0.6,
+    "max_tokens": 9000,
+    "extra": {
+      "thinking": {
+        "type": "disabled"
+      }
+    }
+  },
+  "proof_worker": {
+    "name": "oss",
+    "provider": "openrouter",
+    "api": "chat",
+    "model": "openai/gpt-oss-120b",
+    "temperature": 0.2,
+    "max_tokens": 8000,
+    "timeout_sec": 150,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "protected_terms": [
+    "三度半",
+    "艫",
+    "舳先",
+    "舫い",
+    "櫓",
+    "櫂",
+    "バルカ",
+    "半つ",
+    "三つ"
+  ],
+  "evolve": {
+    "time_budget_sec": 60,
+    "max_adopt": 7,
+    "rounds": 3,
+    "players": [
+      {
+        "name": "muse",
+        "provider": "go",
+        "api": "responses",
+        "model": "muse-spark-1.3-contributor",
+        "reasoning": {
+          "effort": "low"
+        },
+        "max_tokens": 8000,
+        "timeout_sec": 140
+      },
+      {
+        "name": "dsf",
+        "provider": "go",
+        "api": "chat",
+        "model": "deepseek-v4.1-flash",
+        "temperature": 1.0,
+        "max_tokens": 6000,
+        "timeout_sec": 140,
+        "extra": {
+          "thinking": {
+            "type": "disabled"
+          }
+        }
+      },
+      {
+        "name": "lc",
+        "provider": "go",
+        "api": "chat",
+        "model": "longcat-2.0",
+        "temperature": 1.0,
+        "max_tokens": 6000,
+        "timeout_sec": 140,
+        "extra": {
+          "thinking": {
+            "type": "disabled"
+          }
+        }
+      },
+      {
+        "name": "dsp",
+        "provider": "go",
+        "api": "chat",
+        "model": "deepseek-v4-pro",
+        "temperature": 0.9,
+        "max_tokens": 6000,
+        "timeout_sec": 140,
+        "extra": {
+          "thinking": {
+            "type": "disabled"
+          }
+        }
+      },
+      {
+        "name": "mimof",
+        "provider": "go",
+        "api": "chat",
+        "model": "mimo-v2.6-flash",
+        "temperature": 1.0,
+        "max_tokens": 6000,
+        "timeout_sec": 140,
+        "extra": {
+          "reasoning_effort": "none"
+        }
+      }
+    ],
+    "judge": {
+      "name": "judge",
+      "provider": "go",
+      "api": "responses",
+      "model": "gpt-6-luna",
+      "reasoning": {
+        "effort": "low"
+      },
+      "max_tokens": 8000,
+      "timeout_sec": 140
+    },
+    "editor": {
+      "name": "editor",
+      "provider": "go",
+      "api": "chat",
+      "model": "deepseek-v4-pro",
+      "temperature": 0.3,
+      "max_tokens": 7000,
+      "timeout_sec": 140,
+      "extra": {
+        "thinking": {
+          "type": "disabled"
+        }
+      }
+    },
+    "long": {
+      "timeout_sec": 1200,
+      "reasoning": {
+        "effort": "high"
+      },
+      "max_tokens": 20000
+    },
+    "max_struct": 2,
+    "struct_min_novelty": 2,
+    "judge_alt": {
+      "name": "judge",
+      "provider": "go",
+      "api": "chat",
+      "model": "mimo-v2.6-pro",
+      "temperature": 0.2,
+      "max_tokens": 6000,
+      "timeout_sec": 140,
+      "extra": {
+        "reasoning_effort": "none"
+      }
+    },
+    "judge_lc": {
+      "name": "judge",
+      "provider": "go",
+      "api": "chat",
+      "model": "longcat-2.0",
+      "temperature": 0.2,
+      "max_tokens": 6000,
+      "timeout_sec": 140,
+      "extra": {
+        "thinking": {
+          "type": "disabled"
+        }
+      }
+    },
+    "weights": {
+      "what": 1.0,
+      "where": 1.0,
+      "why": 3.0,
+      "effect_start": 4.0,
+      "effect_end": 2.0
+    },
+    "dup_min_sum": 6
+  },
+  "compe": {
+    "_note": "依頼書 compe/REQUEST.md のモデル。推論の深さは各モデルの既定値（揃えるため指定しない）。temperature は全員 0.7",
+    "authors": [
+      {
+        "name": "haiku",
+        "provider": "openrouter",
+        "api": "chat",
+        "model": "anthropic/claude-haiku-5.5",
+        "temperature": 0.7,
+        "max_tokens": 32000
+      },
+      {
+        "name": "aion",
+        "provider": "openrouter",
+        "api": "chat",
+        "model": "aion-labs/aion-3.5-mini",
+        "temperature": 0.7,
+        "max_tokens": 32000
+      },
+      {
+        "name": "lunapro",
+        "provider": "openrouter",
+        "api": "chat",
+        "model": "openai/gpt-6-luna-pro",
+        "temperature": 0.7,
+        "max_tokens": 32000
+      },
+      {
+        "name": "dsf",
+        "provider": "openrouter",
+        "api": "chat",
+        "model": "deepseek/deepseek-v4.1-flash",
+        "temperature": 0.7,
+        "max_tokens": 32000
+      },
+      {
+        "name": "muse",
+        "provider": "openrouter",
+        "api": "chat",
+        "model": "meta/muse-spark-1.3-contributor",
+        "temperature": 0.7,
+        "max_tokens": 32000
+      }
+    ],
+    "judge": {
+      "name": "qwen",
+      "provider": "openrouter",
+      "api": "chat",
+      "model": "qwen/qwen3.8-flash",
+      "temperature": 0.7,
+      "max_tokens": 32000
+    },
+    "verifiers": [
+      {
+        "name": "glm53",
+        "provider": "openrouter",
+        "api": "chat",
+        "model": "z-ai/glm-5.3",
+        "temperature": 0.7,
+        "max_tokens": 32000
+      },
+      {
+        "name": "kimik3",
+        "provider": "openrouter",
+        "api": "chat",
+        "model": "moonshotai/kimi-k3",
+        "temperature": 0.7,
+        "max_tokens": 32000
+      }
+    ],
+    "verify_themes": [
+      "現代ミステリ",
+      "SF"
+    ],
+    "judges": {
+      "qwen": {
+        "name": "qwen",
+        "provider": "openrouter",
+        "api": "chat",
+        "model": "qwen/qwen3.8-flash",
+        "temperature": 0.7,
+        "max_tokens": 32000
+      },
+      "mimop": {
+        "name": "mimop",
+        "provider": "openrouter",
+        "api": "chat",
+        "model": "xiaomi/mimo-v2.6-pro",
+        "temperature": 0.7,
+        "max_tokens": 32000
+      }
+    }
+  }
 }

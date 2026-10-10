@@ -1,0 +1,199 @@
+#!/usr/bin/env python3
+"""canon_mask.py — CANON の一部を隠して渡したとき、プロットの収束がどこで乱れるかを測る。
+
+  python3 tools/canon_mask.py run N [--levels 0,25,50,75,100] [--samples 4] [--models dsf,mimof,...]   # 生成（再実行で続きから）
+  python3 tools/canon_mask.py judge N        # 完全な CANON に照らして違反を数える（主審判 luna）
+  python3 tools/canon_mask.py report N       # 収束・違反の表 → notes/CANON_MASK_chNN.md
+マスクは CANON の箇条書き行を、行ごとの固定乱数で取り除く（高い率のマスクは低い率のマスクを含む）。モデルにはマスクしたことを伝えない。
+"""
+import argparse
+import concurrent.futures as cf
+import itertools
+import json
+import random
+import re
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import team  # noqa: E402
+from team import CFG, ROOT, rd, wr, sec, nn, chat, parse_json, verified, log, budget, canon_text, plot_context, norm  # noqa: E402
+
+E = CFG["evolve"]
+OUT = ROOT / "runs" / "canonmask"
+team.RUN = ROOT / "runs" / "plot"
+
+TASK = """# 依頼
+第{N}章のプロット（場面の骨組み）を**1案**作ってください。本文は書きません。
+- 場面は2〜4つ。各場面は「場面名／場所と時刻／行為の連鎖（箇条書き4〜8行）」。
+- 最後に「結び」を1〜2行。
+- 全体で1,400字以内。管理用語（糸・スロット・CANON・LEDGER など）は書かない。
+出力はプロット本文のみ。"""
+
+MODELS = {p["name"]: p for p in E["players"]}
+MODELS["kimi"] = {"name": "kimi", "provider": "go", "api": "chat", "model": "kimi-k3", "temperature": 1.0, "max_tokens": 6000, "timeout_sec": 140, "extra": {"thinking": {"type": "disabled"}}}
+
+JUDGE_PROMPT = """あなたは公平な審判です。下の「プロット」が、下の CANON（不変条件・数値・時刻・固有名詞・人物・語り・禁止線）に**違反している箇所**を挙げてください。
+- 違反＝CANON が定めた事実と食い違う（時刻・数・名前・場所・人物の特徴・世界の法則）、CANON が禁じた事を行う、CANON が許す人数を超えて名前のある人物を出す、など。
+- CANON に書かれていない細部を足すだけでは違反ではない。
+- 引用は一字一句そのまま写す（照合に通らない指摘は捨てられる）。
+出力はJSONのみ：{"violations":[{"canon_quote":"CANON から写した30字以内","plot_quote":"プロットから写した30字以内","why":"40字以内"}]}。なければ {"violations":[]}。"""
+
+
+MODELS["glm52"] = {"name": "glm52", "provider": "openrouter", "api": "chat", "model": "z-ai/glm-5.2", "temperature": 1.0, "max_tokens": 6000, "timeout_sec": 140, "reasoning": {"enabled": False}}
+MODELS["aion"] = dict(CFG["aion"], name="aion", reasoning={"effort": "low"}, max_tokens=12000, timeout_sec=170, temperature=0.8)
+
+
+def bullets(canon):
+    return [i for i, l in enumerate(canon.splitlines()) if re.match(r"^\s*-\s", l)]
+
+
+def keys(canon):
+    r = random.Random("canon-mask-v1")
+    return {i: r.random() for i in bullets(canon)}
+
+
+def masked_canon(canon, pct):
+    ks = keys(canon)
+    ls = canon.splitlines()
+    gone = {i for i, k in ks.items() if k < pct / 100}
+    return "\n".join(l for i, l in enumerate(ls) if i not in gone), gone
+
+
+def gen(a):
+    n = int(a.n)
+    team.guard_stop()
+    canon = canon_text()
+    levels = [int(x) for x in a.levels.split(",")]
+    names = a.models.split(",")
+    jobs = []
+    for pct in levels:
+        mc, _ = masked_canon(canon, pct)
+        ctx = plot_context(n, mc)
+        for nm in names:
+            for k in range(a.samples):
+                jobs.append((OUT / f"ch{nn(n)}" / "gen" / f"{nm}__L{pct}__{k}.md", MODELS[nm], "あなたは小説の構成作家です。", ctx + "\n" + TASK.replace("{N}", str(n))))
+    todo = [j for j in jobs if not j[0].exists()]
+    for i in range(0, len(todo), 12):
+        batch = todo[i:i + 12]
+        budget(f"生成{i // 12}", a.limit)
+
+        def one(j):
+            f, prof, sy, pr = j
+            for _ in range(2):
+                try:
+                    o = chat(prof, sy, pr, f"canonmask:{prof['name']}")
+                    if len(o.strip()) >= 300:
+                        wr(f, o.strip() + "\n")
+                        return None
+                except Exception as e:
+                    last = str(e)[:100]
+            return f"{prof['name']}: {last if 'last' in dir() else '短すぎ'}"
+        with cf.ThreadPoolExecutor(max_workers=12) as ex:
+            errs = [e for e in ex.map(one, batch) if e]
+        if errs:
+            log(ev="canonmask_gen_err", errs=errs)
+    print(f"生成 {sum(1 for j in jobs if j[0].exists())}/{len(jobs)}")
+
+
+def judge(a):
+    n = int(a.n)
+    canon = canon_text()
+    gd = OUT / f"ch{nn(n)}" / "gen"
+    jd = OUT / f"ch{nn(n)}" / "judge"
+    jp = dict(E["judge"], timeout_sec=120)
+    todo = [f for f in sorted(gd.glob("*.md")) if not (jd / (f.stem + ".json")).exists()]
+    for i in range(0, len(todo), 12):
+        batch = todo[i:i + 12]
+        budget(f"審判{i // 12}", a.limit)
+
+        def one(f):
+            for _ in range(2):
+                try:
+                    o = parse_json(chat(jp, "あなたは公平な審判です。JSONだけを返します。", sec("CANON", canon) + sec("プロット", rd(f)) + "\n" + JUDGE_PROMPT, "canonmask:judge"))
+                    assert isinstance(o.get("violations"), list)
+                    wr(jd / (f.stem + ".json"), json.dumps(o, ensure_ascii=False, indent=1))
+                    return
+                except Exception:
+                    pass
+        with cf.ThreadPoolExecutor(max_workers=12) as ex:
+            list(ex.map(one, batch))
+    print(f"審判 {len(list(jd.glob('*.json')))}/{len(list(gd.glob('*.md')))}")
+
+
+def bg(t):
+    t = re.sub(r"\s+", "", t)
+    return {t[i:i + 2] for i in range(len(t) - 1)}
+
+
+def jac(x, y):
+    return len(x & y) / max(1, len(x | y))
+
+
+def report(a):
+    n = int(a.n)
+    canon = canon_text()
+    cl = canon.splitlines()
+    ks = keys(canon)
+    gd = OUT / f"ch{nn(n)}" / "gen"
+    jd = OUT / f"ch{nn(n)}" / "judge"
+    recs = []
+    for f in sorted(gd.glob("*.md")):
+        nm, lv, k = f.stem.split("__")
+        pct = int(lv[1:])
+        txt = rd(f)
+        vs = []
+        jf = jd / (f.stem + ".json")
+        if jf.exists():
+            for v in json.loads(rd(jf))["violations"]:
+                if verified(v.get("canon_quote"), canon) and verified(v.get("plot_quote"), txt):
+                    q = norm(v["canon_quote"])
+                    hit = [i for i in ks if q in norm(cl[i])]
+                    masked = bool(hit) and ks[hit[0]] < pct / 100
+                    vs.append({"masked": masked, "inbullet": bool(hit)})
+        recs.append({"nm": nm, "pct": pct, "k": int(k), "bg": bg(txt), "len": len(txt), "judged": jf.exists(), "v": vs})
+    levels = sorted({r["pct"] for r in recs})
+    models = sorted({r["nm"] for r in recs})
+    mean = lambda v: round(sum(v) / len(v), 3) if v else None
+    L = [f"# CANON マスク実験（第{n}章／生成 {len(recs)} 本／レベル {levels}%／モデル {models}）\n",
+         "CANON の箇条書きを指定の割合だけ取り除いて渡し、同じ依頼でプロットを複数回作らせた。マスクしたことはモデルに伝えていない。類似度は文字2-gram の Jaccard（高い＝収束）。違反は完全な CANON に照らして luna が数えた（引用の照合に通ったものだけ）。\n"]
+    L.append("## レベル別\n| マスク率 | 本数 | 同モデル内の類似度 | 別モデル間の類似度 | L0（完全CANON）の案との類似度 | 違反/本 | うち隠した行への違反/本 | うち隠していない行への違反/本 | 平均字数 |\n|---|---|---|---|---|---|---|---|---|")
+    l0 = [r for r in recs if r["pct"] == 0]
+    for pct in levels:
+        rs = [r for r in recs if r["pct"] == pct]
+        within = [jac(x["bg"], y["bg"]) for x, y in itertools.combinations(rs, 2) if x["nm"] == y["nm"]]
+        cross = [jac(x["bg"], y["bg"]) for x, y in itertools.combinations(rs, 2) if x["nm"] != y["nm"]]
+        to0 = [jac(x["bg"], y["bg"]) for x in rs for y in l0 if x is not y]
+        jr = [r for r in rs if r["judged"]]
+        vm = [sum(1 for v in r["v"] if v["masked"]) for r in jr]
+        vu = [sum(1 for v in r["v"] if not v["masked"]) for r in jr]
+        L.append(f"| {pct}% | {len(rs)} | {mean(within)} | {mean(cross)} | {mean(to0)} | {mean([a + b for a, b in zip(vm, vu)])} | {mean(vm)} | {mean(vu)} | {int(mean([r['len'] for r in rs]))} |")
+    L.append("\n## モデル別（同モデル内の類似度／違反/本）\n| モデル | " + " | ".join(f"{p}%" for p in levels) + " |\n|---|" + "---|" * len(levels))
+    for nm in models:
+        cells = []
+        for pct in levels:
+            rs = [r for r in recs if r["nm"] == nm and r["pct"] == pct]
+            within = [jac(x["bg"], y["bg"]) for x, y in itertools.combinations(rs, 2)]
+            jr = [r for r in rs if r["judged"]]
+            cells.append(f"{mean(within)}／{mean([len(r['v']) for r in jr])}")
+        L.append(f"| {nm} | " + " | ".join(cells) + " |")
+    wr(ROOT / "notes" / f"CANON_MASK_ch{nn(n)}.md", "\n".join(L) + "\n")
+    print("\n".join(L))
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    sp = ap.add_subparsers(dest="cmd", required=True)
+    for c in ("run", "judge", "report"):
+        s = sp.add_parser(c)
+        s.add_argument("n")
+        s.add_argument("--levels", default="0,25,50,75,100")
+        s.add_argument("--samples", type=int, default=4)
+        s.add_argument("--models", default="dsf,mimof,lc,dsp,muse,kimi")
+        s.add_argument("--limit", type=int, default=140)
+    a = ap.parse_args()
+    {"run": gen, "judge": judge, "report": report}[a.cmd](a)
+
+
+if __name__ == "__main__":
+    main()

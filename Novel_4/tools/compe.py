@@ -1,0 +1,703 @@
+#!/usr/bin/env python3
+"""compe.py — CANON 前の企画コンペ（compe/REQUEST.md の依頼書どおり）。
+
+  python3 tools/compe.py run [--tag c1] [--timeout 165]   # 提案→採点→審判→監査を、未了の段から続ける（何度でも再実行可）
+  python3 tools/compe.py report [--tag c1]                # 監査レポートと人間向け一覧を作り直す
+手元の Mac で時間制限なしに回すとき：  TEAM_NO_BUDGET=1 python3 tools/compe.py run --timeout 1500
+段：
+  1. 提案　…作者5モデルが依頼書（＋確定事項）に沿って 2〜4 案。字数・書式・繰り返しを機械検査、1回だけやり直し、直らなければ退場
+  2. 採点　…作者を伏せ、作者ごとの束の並びを採点者ごとに入れ替え、自分の案を除く全案を採点（要件は減点、意外性・エンタメ性は加点）
+  3. 審判　…他者の点を見ずに2回採点 → 他者の点を見て最終判定（上位3作品・全案の改善提案）
+  4. 監査　…退場・やり直しの記録、審判の一貫性と他者の点への寄り、戦略（テーマ・案数・字数）、時間と費用
+"""
+import argparse
+import concurrent.futures as cf
+import json
+import random
+import re
+import socket
+import sys
+import time
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import team  # noqa: E402
+from team import CFG, ROOT, rd, wr, sec, chat, parse_json, budget, repeated  # noqa: E402
+
+CC = CFG["compe"]
+CDIR = ROOT / "compe"
+
+SUPPLEMENT = """
+# 採点の補足（確定事項。上の依頼書に加えて適用する）
+- 要件充足は減点方式：{base}点から、満たしていない要件1項目ごとに{pen}点を引く（下限なし）。減点の対象となる要件の項目は下の一覧のとおり。
+- 意外性（設定の特殊性）は{smax}点満点、エンタメ性（話の起伏）は{emax}点満点の加点。
+- 採点は作者を伏せ、作者ごとの束の並びを採点者ごとに入れ替えて行う。自分の案は採点しない。
+- 審判は、他者の採点を見る前に自分で2回採点し、その後で他者の採点を見て上位3作品を選ぶ。
+- 書式違反・字数超過・同じ文の繰り返しは、1回だけやり直しを求める。直らなければ退場。字数は空白・改行を除いた文字数で数える。
+
+# 要件の項目（減点の対象）
+{items}"""
+
+FORMAT = """
+# 出力の形式
+JSONのみを返す（前置き・解説・コードブロックなし）。
+{"proposals":[{"kind":"本線 または 別観点","theme":"現代ミステリ または SF または 骨太なファンタジー","title":"仮タイトル","setting":"舞台設定","synopsis":"あらすじ","highlight":"見せ場の概要","appeal":"なにが面白いのか・読者を引きつけるのか","must_keep":"CANON作成時に譲れないポイントと理由","genre_reason":"なぜこの物語はこのジャンルでなければ成立しないのか（400字以内）"}]}
+- proposals は2〜4件。本線を1件以上、別観点を1件以上含める。"""
+
+SCORE = """# あなたの役目：採点
+下の企画案（作者は伏せてある。あなた自身の案は含まれていない）を、すべて採点してください。
+- violations：その案が満たしていない要件の項目番号（上の一覧から。共通の項目と、その案のテーマの項目だけ。R4 は別観点の案だけ）。満たしていれば空の配列。
+- surprise：意外性（設定の特殊性）0〜{smax}点。ent：エンタメ性（話の起伏）0〜{emax}点。
+- comment：その案への講評（80字以内）。
+出力はJSONのみ：{"scores":[{"id":"A1","violations":["R1"],"surprise":12,"ent":15,"comment":""}]}
+全ての案に答えること。"""
+
+FINAL = """# あなたの役目：最終判定（審判）
+あなたは既に、他者の採点を見ずに2回採点しました（下の「あなたの採点」）。いま初めて、作者モデルたちの採点（採点者は伏せてある）を見せます。
+他者の採点を重視しつつ、あなた自身の採点も踏まえて、総合的に判定してください。
+- final：全ての案について、最終点（要件{base}点からの減点＋意外性＋エンタメ性の合計で表す）と、改善提案（120字以内）。
+- top3：上位3作品の id を順位順に。
+- reason：上位3作品を選んだ理由（300字以内）。他者の採点と自分の採点が食い違った案は、どう扱ったかを書く。
+出力はJSONのみ：{"final":[{"id":"A1","total":75,"improve":""}],"top3":["A1","B2","C1"],"reason":""}"""
+
+
+def base_dir(a):
+    return ROOT / "runs" / "compe" / a.tag
+
+
+RUBRIC = "rubric.json"
+
+
+def rubric():
+    return json.loads(rd(CDIR / RUBRIC))
+
+
+def items_text(rb):
+    return "\n".join(f"## {grp}\n" + "\n".join(f"- {k}：{v}" for k, v in its.items()) for grp, its in rb["items"].items())
+
+
+def valid_items(rb, theme, kind):
+    ok = set(rb["items"]["共通"]) | set(rb["items"].get(theme, {}))
+    if kind != "別観点":
+        ok.discard("R4")
+    return ok
+
+
+def nchar(s):
+    return len(re.sub(r"\s", "", s or ""))
+
+
+def prof(p, a):
+    d = dict(p, timeout_sec=a.timeout)
+    d.setdefault("provider", "openrouter")
+    d.setdefault("api", "chat")
+    return d
+
+
+def status(b):
+    return json.loads(rd(b / "status.json") or "{}")
+
+
+def set_status(b, who, stage, st, **kw):
+    s = status(b)
+    s.setdefault(who, {})[stage] = {"st": st, **kw}
+    wr(b / "status.json", json.dumps(s, ensure_ascii=False, indent=1))
+
+
+def call_with_check(f, p, system, prompt, check, task, a, b, who, stage):
+    """1回だけやり直す。直らなければ退場。環境の時間制限で切れたものは保留（手元で回す）。"""
+    note, errs = "", []
+    k = 0
+    waits = [30, 60, 120, 240]   # 429・5xx（混雑・上流の障害）はモデルの破綻ではない。待ってやり直し、やり直し回数には数えない
+    while k < 2:
+        try:
+            out = chat(p, system, prompt + note, task)
+            wr(f.with_suffix(f".raw{k + 1}.txt"), out)
+            obj = parse_json(out)
+            check(obj)
+            wr(f, json.dumps(obj, ensure_ascii=False, indent=1))
+            set_status(b, who, stage, "ok" if k == 0 else "ok_after_retry", errors=errs)
+            return
+        except (socket.timeout, TimeoutError) as e:
+            if a.timeout < 300:
+                set_status(b, who, stage, "pending_env", errors=errs + [f"時間切れ（この環境の上限 {a.timeout}秒）: {str(e)[:80]}"])
+                return
+            errs.append(f"時間切れ: {str(e)[:100]}")
+            k += 1
+        except Exception as e:
+            msg = str(e)[:160]
+            if "timed out" in msg and a.timeout < 300:
+                set_status(b, who, stage, "pending_env", errors=errs + [f"時間切れ（この環境の上限 {a.timeout}秒）"])
+                return
+            if re.search(r"HTTP (Error )?(429|5\d\d)", msg):
+                if waits:
+                    time.sleep(waits.pop(0))
+                    continue
+                set_status(b, who, stage, "blocked", errors=errs + [f"混雑・上流障害が続いた: {msg[:100]}"])
+                return
+            if re.search(r"HTTP (Error )?(401|402|403)", msg):   # アカウント側の設定・残高の問題はモデルの破綻ではない。退場にせず止める
+                set_status(b, who, stage, "blocked", errors=errs + [msg])
+                return
+            errs.append(msg)
+            note = f"\n\n（前回の出力は条件を満たしませんでした：{msg[:120]}。条件を守って、JSONだけを返してください）"
+            k += 1
+    set_status(b, who, stage, "exit", errors=errs)
+
+
+def run_jobs(jobs, label, a):
+    """jobs: 引数タプルの列。最大3並列。1バッチごとに時間の予算を確かめる（超えたら CONTINUE で止まる）。"""
+    for i in range(0, len(jobs), 3):
+        budget(f"{label}{i // 3}", a.limit)
+        with cf.ThreadPoolExecutor(max_workers=3) as ex:
+            list(ex.map(lambda j: call_with_check(*j), jobs[i:i + 3]))
+
+
+# ---------------------------------------------------------------- 1. 提案
+def check_props(rb):
+    def v(o):
+        ps = o.get("proposals")
+        assert isinstance(ps, list) and 2 <= len(ps) <= 4, f"proposals は2〜4件（{len(ps) if isinstance(ps, list) else 'なし'}）"
+        kinds = [p.get("kind") for p in ps]
+        assert all(k in ("本線", "別観点") for k in kinds), "kind は「本線」か「別観点」"
+        assert "本線" in kinds and "別観点" in kinds, "本線と別観点を1件以上ずつ"
+        for i, p in enumerate(ps, 1):
+            assert p.get("theme") in rb["themes"], f"案{i}の theme は {rb['themes']} のどれか"
+            for k, lim in rb["limits"].items():
+                assert isinstance(p.get(k), str) and p[k].strip(), f"案{i}の {k} がない"
+                assert nchar(p[k]) <= lim, f"案{i}の {k} が{nchar(p[k])}字（上限{lim}字）"
+                if nchar(p[k]) >= 60:
+                    r = repeated(p[k])
+                    assert not r, f"案{i}の {k} に同じ文の繰り返し（{r}）"
+    return v
+
+
+def stage_propose(a, b):
+    rb = rubric()
+    req = rd(CDIR / "REQUEST.md")
+    gp = CDIR / "GENRE_PHILOSOPHY.md"
+    req = req + ("\n\n" + rd(gp) if gp.exists() else "")
+    prompt = req + SUPPLEMENT.format(base=rb["req_base"], pen=rb["req_penalty"], smax=rb["surprise_max"], emax=rb["ent_max"], items=items_text(rb)) + "\n" + FORMAT
+    st = status(b)
+    jobs = []
+    for p in CC["authors"]:
+        f = b / "proposals" / f"{p['name']}.json"
+        if f.exists() or st.get(p["name"], {}).get("propose", {}).get("st") == "exit":
+            continue
+        jobs.append((f, prof(p, a), "あなたは小説の企画を立てる作家です。依頼書に沿って企画案を出します。", prompt, check_props(rb), f"compe:propose:{p['name']}", a, b, p["name"], "propose"))
+    run_jobs(jobs, "提案", a)
+
+
+def anonymize(a, b):
+    m = b / "map.json"
+    if m.exists():
+        return json.loads(rd(m))
+    ok = [p["name"] for p in CC["authors"] if (b / "proposals" / f"{p['name']}.json").exists()]
+    r = random.Random(f"compe-{a.tag}")
+    r.shuffle(ok)
+    mp = {"author_of_letter": {chr(65 + i): nm for i, nm in enumerate(ok)}}
+    props = {}
+    for L, nm in mp["author_of_letter"].items():
+        for i, p in enumerate(json.loads(rd(b / "proposals" / f"{nm}.json"))["proposals"], 1):
+            props[f"{L}{i}"] = {**p, "id": f"{L}{i}", "letter": L, "author": nm}
+    mp["props"] = props
+    wr(m, json.dumps(mp, ensure_ascii=False, indent=1))
+    return mp
+
+
+def render(props, letters):
+    out = []
+    for L in letters:
+        for pid, p in props.items():
+            if p["letter"] == L:
+                out.append(f"## {pid}（作者{L}／{p['kind']}／{p['theme']}）\n- 仮タイトル：{p['title']}\n- 舞台設定：{p['setting']}\n- あらすじ：{p['synopsis']}\n"
+                           f"- 見せ場：{p['highlight']}\n- 面白さ・引きつける点：{p['appeal']}\n- 譲れないポイント：{p['must_keep']}\n"
+                           + (f"- ジャンルを選んだ理由：{p['genre_reason']}\n" if p.get("genre_reason") else ""))
+    return "\n".join(out)
+
+
+def check_scores(rb, props, ids):
+    def v(o):
+        sc = o.get("scores")
+        assert isinstance(sc, list), "scores がない"
+        got = [s.get("id") for s in sc]
+        miss = sorted(set(ids) - set(got))
+        extra = sorted(set(got) - set(ids))
+        assert not miss and not extra, f"案の過不足（不足 {miss}、余分 {extra}）"
+        for s in sc:
+            p = props[s["id"]]
+            bad = [x for x in s.get("violations", []) if x not in valid_items(rb, p["theme"], p["kind"])]
+            assert not bad, f"{s['id']} に対象外の項目 {bad}"
+            assert 0 <= float(s["surprise"]) <= rb["surprise_max"] and 0 <= float(s["ent"]) <= rb["ent_max"], f"{s['id']} の点が範囲外"
+    return v
+
+
+def score_prompt(rb, req_part, props, letters):
+    return (sec("依頼書（作者たちへの依頼内容）", req_part) + sec("要件の項目（減点の対象）", items_text(rb))
+            + sec("企画案", render(props, letters)) + "\n" + SCORE.replace("{smax}", str(rb["surprise_max"])).replace("{emax}", str(rb["ent_max"])))
+
+
+def req_part():
+    t = rd(CDIR / "REQUEST.md").split("## 使用プロバイダーとモデル")[0]
+    gp = CDIR / "GENRE_PHILOSOPHY.md"
+    return t + ("\n\n" + rd(gp) if gp.exists() else "")
+
+
+# ---------------------------------------------------------------- 2. 採点（作者どうし）
+def stage_score(a, b, mp):
+    rb = rubric()
+    props = mp["props"]
+    letter_of = {nm: L for L, nm in mp["author_of_letter"].items()}
+    st = status(b)
+    jobs = []
+    for p in CC["authors"]:
+        nm = p["name"]
+        if nm not in letter_of or (b / "scores" / f"{nm}.json").exists() or st.get(nm, {}).get("score", {}).get("st") == "exit":
+            continue
+        letters = [L for L in mp["author_of_letter"] if L != letter_of[nm]]
+        random.Random(f"{a.tag}-score-{nm}").shuffle(letters)
+        sub = {k: v for k, v in props.items() if v["letter"] in letters}
+        wr(b / "scores" / f"{nm}.order.json", json.dumps(letters))
+        jobs.append((b / "scores" / f"{nm}.json", prof(p, a), "あなたは小説コンペの採点者です。公平に採点し、JSONだけを返します。",
+                     score_prompt(rb, req_part(), sub, letters), check_scores(rb, props, list(sub)), f"compe:score:{nm}", a, b, nm, "score"))
+    run_jobs(jobs, "採点", a)
+
+
+# ---------------------------------------------------------------- 3. 審判
+def total(rb, p, s):
+    vs = [x for x in s.get("violations", []) if x in valid_items(rb, p["theme"], p["kind"])]
+    return rb["req_base"] - rb["req_penalty"] * len(set(vs)) + float(s["surprise"]) + float(s["ent"])
+
+
+def author_scores(rb, b, mp):
+    """{pid: [(採点者の伏せ名, 合計, 減点数)]}"""
+    out = {pid: [] for pid in mp["props"]}
+    names = [p["name"] for p in CC["authors"] if (b / "scores" / f"{p['name']}.json").exists()]
+    alias = {nm: f"S{i + 1}" for i, nm in enumerate(sorted(names, key=lambda x: random.Random(f"alias-{x}").random()))}
+    for nm in names:
+        for s in json.loads(rd(b / "scores" / f"{nm}.json"))["scores"]:
+            p = mp["props"][s["id"]]
+            out[s["id"]].append((alias[nm], total(rb, p, s), len(set(s.get("violations", []))), nm))
+    return out, alias
+
+
+def stage_judge(a, b, mp):
+    rb = rubric()
+    props = mp["props"]
+    jp = prof(CC["judges"][a.judge] if getattr(a, "judge", None) else CC["judge"], a)
+    letters_all = list(mp["author_of_letter"])
+    jobs = []
+    for k in (1, 2):
+        f = b / "judge" / f"blind{k}.json"
+        if f.exists() or status(b).get("judge", {}).get(f"blind{k}", {}).get("st") == "exit":
+            continue
+        letters = letters_all[:]
+        random.Random(f"{a.tag}-judge-{k}").shuffle(letters)
+        jobs.append((f, jp, "あなたは小説コンペの審判です。公平に採点し、JSONだけを返します。",
+                     score_prompt(rb, req_part(), props, letters), check_scores(rb, props, list(props)), f"compe:judge:blind{k}", a, b, "judge", f"blind{k}"))
+    run_jobs(jobs, "審判の採点", a)
+    if not all((b / "judge" / f"blind{k}.json").exists() for k in (1, 2)):
+        return
+    f = b / "judge" / "final.json"
+    if f.exists() or status(b).get("judge", {}).get("final", {}).get("st") == "exit":
+        return
+    asc, _ = author_scores(rb, b, mp)
+    mine = []
+    for k in (1, 2):
+        for s in json.loads(rd(b / "judge" / f"blind{k}.json"))["scores"]:
+            mine.append(f"- {s['id']}（{k}回目）：合計 {total(rb, props[s['id']], s):.0f}（減点項目 {','.join(s.get('violations', [])) or 'なし'}／意外性 {s['surprise']}／エンタメ性 {s['ent']}）")
+    others = "\n".join(f"- {pid}：" + "、".join(f"{al}={t:.0f}（減点{nv}）" for al, t, nv, _ in sorted(v)) + (f" ／平均 {sum(t for _, t, _, _ in v) / len(v):.1f}" if v else "（採点なし）") for pid, v in asc.items())
+    ids = list(props)
+
+    def check_final(o):
+        fin = o.get("final")
+        assert isinstance(fin, list) and sorted(x.get("id") for x in fin) == sorted(ids), "final に全案がない"
+        t3 = o.get("top3")
+        assert isinstance(t3, list) and len(t3) == 3 and len(set(t3)) == 3 and all(x in ids for x in t3), "top3 は異なる3案の id"
+        for x in fin:
+            float(x["total"])
+            assert isinstance(x.get("improve"), str) and x["improve"].strip(), f"{x['id']} の改善提案がない"
+    prompt = (sec("依頼書（作者たちへの依頼内容）", req_part()) + sec("要件の項目（減点の対象）", items_text(rb)) + sec("企画案", render(props, letters_all))
+              + sec("あなたの採点（他者の採点を見る前の2回）", "\n".join(mine)) + sec("作者モデルたちの採点（採点者は伏せてある。各自、自分の案は採点していない）", others)
+              + "\n" + FINAL.replace("{base}", str(rb["req_base"])))
+    run_jobs([(f, jp, "あなたは小説コンペの審判です。公平に判定し、JSONだけを返します。", prompt, check_final, "compe:judge:final", a, b, "judge", "final")], "審判の最終判定", a)
+
+
+# ---------------------------------------------------------------- 4. 監査
+def _corr(x, y):
+    n = len(x)
+    if n < 3:
+        return None
+    mx, my = sum(x) / n, sum(y) / n
+    sx = sum((i - mx) ** 2 for i in x) ** 0.5
+    sy = sum((i - my) ** 2 for i in y) ** 0.5
+    return round(sum((i - mx) * (j - my) for i, j in zip(x, y)) / (sx * sy), 2) if sx and sy else None
+
+
+def report(a):
+    b = base_dir(a)
+    rb = rubric()
+    mp = json.loads(rd(b / "map.json") or "{}")
+    st = status(b)
+    props = mp.get("props", {})
+    L = [f"# 企画コンペ 監査レポート（{a.tag}）\n", "監査役：Claude Opus 5.5（集計は機械。判断の根拠はすべてこのファイルと runs/compe/ に残す）\n"]
+    # 進行と退場
+    L.append("## 1. 進行・やり直し・退場\n| モデル | 提案 | 採点 | 記録 |\n|---|---|---|---|")
+    jg = CC["judges"][a.judge] if getattr(a, "judge", None) else CC["judge"]
+    for p in CC["authors"] + [jg]:
+        nm = "judge" if p is jg else p["name"]
+        s = st.get(nm, {})
+        cells = [s.get("propose", {}).get("st", "-"), s.get("score", {}).get("st", "-")] if nm != "judge" else \
+            ["-", "／".join(f"{k}:{s.get(k, {}).get('st', '-')}" for k in ("blind1", "blind2", "final"))]
+        errs = sum((v.get("errors", []) for v in s.values()), [])
+        L.append(f"| {p['model']} | {cells[0]} | {cells[1]} | {'；'.join(e[:70] for e in errs) or ''} |")
+    # 時間と費用
+    logs = [json.loads(l) for l in (rd(team.RUN / "logs" / "run.jsonl") or "").splitlines() if '"compe:' in l]
+    L.append("\n## 2. 時間・トークン・費用（OpenRouter の報告値）\n| モデル | 呼び出し | 秒 | 入力tok | 出力tok | 費用$ |\n|---|---|---|---|---|---|")
+    agg = {}
+    for x in logs:
+        if x.get("ev") != "call":
+            continue
+        d = agg.setdefault(x["model"], [0, 0, 0, 0, 0.0])
+        d[0] += 1
+        d[1] += x.get("sec") or 0
+        d[2] += x.get("tok_in") or 0
+        d[3] += x.get("tok_out") or 0
+        d[4] += float(x.get("cost") or 0)
+    for m, d in agg.items():
+        L.append(f"| {m} | {d[0]} | {d[1]:.0f} | {d[2]} | {d[3]} | {d[4]:.4f} |")
+    L.append(f"| 合計 | {sum(d[0] for d in agg.values())} | {sum(d[1] for d in agg.values()):.0f} | | | {sum(d[4] for d in agg.values()):.4f} |")
+    if not props:
+        wr(ROOT / "notes" / f"COMPE_{a.tag}.md", "\n".join(L) + "\n")
+        print("\n".join(L))
+        return
+    # 戦略
+    L.append("\n## 3. 作者の戦略（テーマ・案数・字数の使い方）\n| 作者 | 伏せ名 | 案数 | 本線のテーマ | 別観点のテーマ | 字数の充足率（上限に対する平均） |\n|---|---|---|---|---|---|")
+    for Lt, nm in mp["author_of_letter"].items():
+        ps = [p for p in props.values() if p["letter"] == Lt]
+        fill = sum(nchar(p[k]) / lim for p in ps for k, lim in rb["limits"].items()) / (len(ps) * len(rb["limits"]))
+        L.append(f"| {nm} | {Lt} | {len(ps)} | {'、'.join(p['theme'] for p in ps if p['kind'] == '本線')} | {'、'.join(p['theme'] for p in ps if p['kind'] == '別観点')} | {fill:.0%} |")
+    # 採点
+    asc, alias = author_scores(rb, b, mp)
+    jb = {k: {s["id"]: s for s in json.loads(rd(b / "judge" / f"blind{k}.json"))["scores"]} for k in (1, 2) if (b / "judge" / f"blind{k}.json").exists()}
+    fin = json.loads(rd(b / "judge" / "final.json") or "{}")
+    ff = {x["id"]: x for x in fin.get("final", [])}
+    # 採点者の甘さ・辛さの補正：各採点者の平均を全体平均にそろえてから平均する（自分の案を採点できないため、甘い採点者の案は相対的に低く出る）
+    by = {}
+    for lst in asc.values():
+        for _, t, _, who in lst:
+            by.setdefault(who, []).append(t)
+    mu = {w: sum(v) / len(v) for w, v in by.items()}
+    gm = sum(sum(v) for v in by.values()) / max(1, sum(len(v) for v in by.values()))
+    adj = {pid: (sum(t - mu[who] + gm for _, t, _, who in lst) / len(lst) if lst else None) for pid, lst in asc.items()}
+    rows = []
+    for pid, p in props.items():
+        am = sum(t for _, t, _, _ in asc[pid]) / len(asc[pid]) if asc[pid] else None
+        b1 = total(rb, p, jb[1][pid]) if 1 in jb else None
+        b2 = total(rb, p, jb[2][pid]) if 2 in jb else None
+        fz = float(ff[pid]["total"]) if pid in ff else None
+        rows.append((pid, p, am, b1, b2, fz))
+    rows.sort(key=lambda r: -(r[5] if r[5] is not None else (r[2] or 0)))
+    L.append("\n## 4. 採点の一覧（最終点の順）\n| id | 作者 | 種別 | テーマ | 仮タイトル | 作者たちの平均 | 甘辛補正後 | 審判1回目 | 審判2回目 | 審判の最終 |\n|---|---|---|---|---|---|---|---|---|---|")
+    f1 = lambda v: f"{v:.1f}" if v is not None else "-"
+    for pid, p, am, b1, b2, fz in rows:
+        L.append(f"| {pid} | {p['author']} | {p['kind']} | {p['theme']} | {p['title']} | {f1(am)} | {f1(adj.get(pid))} | {f1(b1)} | {f1(b2)} | {f1(fz)} |")
+    if fin:
+        L.append(f"\n- 審判の上位3作品：**{' → '.join(fin['top3'])}**")
+        L.append(f"- 審判の理由：{fin.get('reason', '')}")
+    # 審判の妥当性
+    L.append("\n## 5. 審判の妥当性")
+    ok = [r for r in rows if None not in (r[2], r[3], r[4], r[5])]
+    if ok:
+        am, b1, b2, fz = ([r[i] for r in ok] for i in (2, 3, 4, 5))
+        bm = [(x + y) / 2 for x, y in zip(b1, b2)]
+        L.append(f"- 一貫性（他者の点を見る前の2回の相関）：{_corr(b1, b2)}　平均の差 {sum(abs(x - y) for x, y in zip(b1, b2)) / len(b1):.1f}点")
+        L.append(f"- 作者たちの平均との相関：自分の採点（2回の平均） {_corr(bm, am)} → 最終 {_corr(fz, am)}")
+        d0 = sum(abs(x - y) for x, y in zip(bm, am)) / len(am)
+        d1 = sum(abs(x - y) for x, y in zip(fz, am)) / len(am)
+        L.append(f"- 他者の点への寄り：作者たちの平均との差が {d0:.1f}点 → {d1:.1f}点（{'寄った' if d1 < d0 else '寄っていない'}）")
+        top_by = lambda vals: [r[0] for r in sorted(zip([r[0] for r in ok], vals), key=lambda z: -z[1])[:3]]
+        L.append(f"- 上位3の比較：作者たちの平均 {top_by(am)}／審判の自己採点 {top_by(bm)}／審判の最終点 {top_by(fz)}／審判が選んだ上位3 {fin.get('top3')}")
+        if fin and top_by(fz) != fin.get("top3"):
+            L.append("  - ⚠ 審判の選んだ上位3が、審判自身の最終点の上位3と一致しない（理由の記述を確認）")
+        heavy = [pid for pid in fin.get("top3", []) if asc.get(pid) and sum(nv for _, _, nv, _ in asc[pid]) / len(asc[pid]) >= 3]
+        if heavy:
+            L.append(f"  - ⚠ 上位3に、作者たちの平均で減点3項目以上の案がある：{heavy}")
+    # テーマ別
+    L.append("\n## 6. テーマ別の平均（作者たちの平均点）")
+    for th in rb["themes"]:
+        v = [r[2] for r in rows if r[1]["theme"] == th and r[2] is not None]
+        if v:
+            L.append(f"- {th}：{len(v)}案　平均 {sum(v) / len(v):.1f}")
+    # 採点者の傾向
+    L.append("\n## 7. 採点者の傾向\n| 採点者 | 伏せ名 | 付けた点の平均 | 幅（最大−最小） | 減点項目の平均 |\n|---|---|---|---|---|")
+    for nm, al in alias.items():
+        v = [(t, nv) for lst in asc.values() for a_, t, nv, who in lst if who == nm]
+        if v:
+            L.append(f"| {nm} | {al} | {sum(t for t, _ in v) / len(v):.1f} | {max(t for t, _ in v) - min(t for t, _ in v):.0f} | {sum(nv for _, nv in v) / len(v):.1f} |")
+    wr(ROOT / "notes" / f"COMPE_{a.tag}.md", "\n".join(L) + "\n")
+    # 人間向けの一覧
+    H = [f"# 企画案の一覧（{a.tag}）\n", "審判の最終点の順。各案に、作者たちの講評・審判の改善提案を付けた。作者は末尾で明かす。\n"]
+    com = {}
+    for p in CC["authors"]:
+        f = b / "scores" / f"{p['name']}.json"
+        if f.exists():
+            for s in json.loads(rd(f))["scores"]:
+                com.setdefault(s["id"], []).append(f"{alias.get(p['name'], '?')}：{s.get('comment', '')}（減点 {','.join(s.get('violations', [])) or 'なし'}）")
+    for pid, p, am, b1, b2, fz in rows:
+        H.append(render({pid: p}, [p["letter"]]))
+        H.append(f"- 点：作者たちの平均 {f1(am)}／審判 {f1(b1)}・{f1(b2)} → 最終 {f1(fz)}")
+        if pid in ff:
+            H.append(f"- 審判の改善提案：{ff[pid]['improve']}")
+        H.append("- 作者たちの講評：\n" + "\n".join(f"  - {c}" for c in com.get(pid, [])) + "\n")
+    H.append("## 作者の対応表\n" + "\n".join(f"- 作者{Lt}＝{nm}" for Lt, nm in mp["author_of_letter"].items()))
+    wr(b / "ALL_PROPOSALS.md", "\n".join(H) + "\n")
+    print("\n".join(L))
+
+
+# ---------------------------------------------------------------- 第2ラウンド：破綻の検証 → リライト → 再審査
+VERIFY = """# あなたの役目：設定の破綻の検証
+下の企画案（作者は伏せてある）それぞれについて、**設定・トリック・結末に破綻がないか**を検証してください。
+見る点：
+- 人物の動機と行動の合理性（なぜその人物がそうするのか。自分の罪をわざわざ残す、などの不自然さ）
+- 因果と物理・科学の筋（その結末で本当に目的が達成されるか。SF の仕掛けは説明として成り立つか）
+- ミステリのフェアプレイ（読者に手がかりが示されるか。叙述トリックが嘘の記述に頼っていないか。トリックが本当に「叙述」または「密室」と言えるか）
+- 依頼の要件との食い違い
+褒め言葉は不要。破綻がなければ breaks は空でよい。
+- breaks：破綻点。quote は企画案の本文から一字一句そのまま写す（30字以内。照合に通らない指摘は捨てられる）。severity は「致命」「重大」「軽微」。
+- fixes：修正推奨（具体的に。各80字以内、最大4つ）。
+出力はJSONのみ：{"checks":[{"id":"A1","breaks":[{"quote":"","why":"80字以内","severity":"重大"}],"fixes":[""]}]}
+全ての案に答えること。"""
+
+REWRITE = """# あなたの役目：自分の企画案のリライト
+あなたが出した企画案に対して、別のモデル2つ（V1・V2）が設定の破綻を検証しました。指摘を読み、**同じ案を、同じ id・種別・テーマのまま書き直して**ください。
+- 「致命」「重大」の指摘には対処する。対処しない場合は、その理由を changes に書く（指摘が誤りだと考える場合など）。
+- 案の数は変えない。各項目の字数上限は前回と同じ。面白さの核は保ちつつ、破綻をなくす。
+出力はJSONのみ：{"proposals":[{"id":"A1","kind":"","theme":"","title":"","setting":"","synopsis":"","highlight":"","appeal":"","must_keep":"","changes":"何をなぜ直したか（300字以内）"}]}"""
+
+
+def verify_targets(mp, rb):
+    th = CC.get("verify_themes", ["現代ミステリ", "SF"])
+    return {k: v for k, v in mp["props"].items() if v["theme"] in th}
+
+
+def check_verify(ids):
+    def v(o):
+        ck = o.get("checks")
+        assert isinstance(ck, list), "checks がない"
+        got = [c.get("id") for c in ck]
+        assert sorted(got) == sorted(ids), f"案の過不足（不足 {sorted(set(ids) - set(got))}）"
+        for c in ck:
+            assert isinstance(c.get("breaks"), list) and isinstance(c.get("fixes"), list), f"{c.get('id')} の breaks/fixes"
+            for x in c["breaks"]:
+                assert x.get("severity") in ("致命", "重大", "軽微"), f"{c['id']} の severity"
+    return v
+
+
+def stage_verify(a, b, mp):
+    rb = rubric()
+    tg = verify_targets(mp, rb)
+    letters = sorted({v["letter"] for v in tg.values()})
+    txt = render(tg, letters)
+    jobs = []
+    for p in CC["verifiers"]:
+        f = b / "verify" / f"{p['name']}.json"
+        if f.exists() or status(b).get(p["name"], {}).get("verify", {}).get("st") == "exit":
+            continue
+        jobs.append((f, prof(p, a), "あなたは小説の企画の破綻を検証する編集者です。JSONだけを返します。",
+                     sec("依頼書（作者たちへの依頼内容）", req_part()) + sec("企画案", txt) + "\n" + VERIFY, check_verify(list(tg)), f"compe:verify:{p['name']}", a, b, p["name"], "verify"))
+    run_jobs(jobs, "検証", a)
+
+
+def findings(b, mp):
+    """{pid: [(V1/V2, sev, quote, why, verified)], fixes}"""
+    out = {}
+    for i, p in enumerate(CC["verifiers"], 1):
+        f = b / "verify" / f"{p['name']}.json"
+        if not f.exists():
+            continue
+        for c in json.loads(rd(f))["checks"]:
+            pr = mp["props"].get(c["id"])
+            if not pr:
+                continue
+            body = " ".join(pr[k] for k in ("title", "setting", "synopsis", "highlight", "appeal", "must_keep"))
+            d = out.setdefault(c["id"], {"breaks": [], "fixes": []})
+            for x in c["breaks"]:
+                d["breaks"].append({"by": f"V{i}", "verifier": p["name"], "sev": x["severity"], "quote": x.get("quote", ""), "why": x.get("why", ""),
+                                    "ok": team.verified(x.get("quote"), body)})
+            d["fixes"] += [f"V{i}：{t}" for t in c["fixes"]]
+    return out
+
+
+def stage_rewrite(a, b, b2, mp):
+    rb = rubric()
+    fd = findings(b, mp)
+    st = status(b2)
+    jobs = []
+    for p in CC["authors"]:
+        nm = p["name"]
+        mine = {k: v for k, v in mp["props"].items() if v["author"] == nm}
+        if not mine:
+            continue
+        f = b2 / "proposals" / f"{nm}.json"
+        if f.exists() or st.get(nm, {}).get("propose", {}).get("st") == "exit":
+            continue
+        if not any(k in fd for k in mine):          # 検証の対象外（ファンタジーだけ等）は、そのまま持ち越す
+            wr(f, json.dumps({"proposals": [{k2: v[k2] for k2 in ("kind", "theme", "title", "setting", "synopsis", "highlight", "appeal", "must_keep")} | {"id": k, "changes": "（検証の対象外のため変更なし）"} for k, v in mine.items()]}, ensure_ascii=False, indent=1))
+            set_status(b2, nm, "propose", "carried")
+            continue
+        fb = []
+        for k, v in mine.items():
+            d = fd.get(k)
+            if not d:
+                fb.append(f"## {k}：検証の対象外（変更しなくてよい）")
+                continue
+            fb.append(f"## {k}（{v['theme']}／{v['kind']}）\n" + "\n".join(f"- {x['by']}［{x['sev']}］「{x['quote']}」：{x['why']}" for x in d["breaks"] if x["ok"]) +
+                      "\n- 修正推奨：\n" + "\n".join(f"  - {t}" for t in d["fixes"]))
+        own = "\n".join(f"## {k}\n" + json.dumps({k2: v[k2] for k2 in ("kind", "theme", "title", "setting", "synopsis", "highlight", "appeal", "must_keep")}, ensure_ascii=False, indent=1) for k, v in mine.items())
+        ids = list(mine)
+
+        def chk(o, ids=ids, mine=mine):
+            ps = o.get("proposals")
+            assert isinstance(ps, list) and sorted(x.get("id") for x in ps) == sorted(ids), f"id は {ids} のまま"
+            for x in ps:
+                assert x.get("kind") == mine[x["id"]]["kind"] and x.get("theme") == mine[x["id"]]["theme"], f"{x['id']} の種別・テーマを変えない"
+                for k, lim in rb["limits"].items():
+                    assert isinstance(x.get(k), str) and x[k].strip(), f"{x['id']} の {k} がない"
+                    assert nchar(x[k]) <= lim, f"{x['id']} の {k} が{nchar(x[k])}字（上限{lim}字）"
+                    if nchar(x[k]) >= 60:
+                        r = repeated(x[k])
+                        assert not r, f"{x['id']} の {k} に同じ文の繰り返し（{r}）"
+                assert isinstance(x.get("changes"), str), f"{x['id']} の changes がない"
+        jobs.append((f, prof(p, a), "あなたは小説の企画を立てる作家です。指摘を受けて自分の企画案を書き直します。",
+                     sec("依頼書", req_part()) + sec("あなたの企画案（前回）", own) + sec("検証の指摘", "\n\n".join(fb)) + "\n" + REWRITE, chk, f"compe:rewrite:{nm}", a, b2, nm, "propose"))
+    run_jobs(jobs, "リライト", a)
+
+
+def build_map2(b, b2, mp):
+    m2 = b2 / "map.json"
+    if m2.exists():
+        return json.loads(rd(m2))
+    props = {}
+    for L, nm in mp["author_of_letter"].items():
+        f = b2 / "proposals" / f"{nm}.json"
+        if not f.exists():
+            for k, v in mp["props"].items():   # リライトで退場した作者は、前回の案のまま（印を付ける）
+                if v["author"] == nm:
+                    props[k] = {**v, "changes": "（リライトで退場。前回の案のまま）"}
+            continue
+        for x in json.loads(rd(f))["proposals"]:
+            props[x["id"]] = {**x, "letter": L, "author": nm}
+    out = {"author_of_letter": mp["author_of_letter"], "props": props}
+    wr(m2, json.dumps(out, ensure_ascii=False, indent=1))
+    return out
+
+
+def round2(a):
+    team.guard_stop()
+    b = base_dir(a)
+    b2 = ROOT / "runs" / "compe" / a.to
+    mp = json.loads(rd(b / "map.json"))
+    stage_verify(a, b, mp)
+    if not all((b / "verify" / f"{p['name']}.json").exists() or status(b).get(p["name"], {}).get("verify", {}).get("st") == "exit" for p in CC["verifiers"]):
+        if any(status(b).get(p["name"], {}).get("verify", {}).get("st") in ("pending_env", "blocked") for p in CC["verifiers"]):
+            sys.exit("検証が保留（環境の時間制限かアカウント側）。手元で --timeout 1500 で再実行")
+        return
+    stage_rewrite(a, b, b2, mp)
+    st2 = status(b2)
+    if not all((b2 / "proposals" / f"{p['name']}.json").exists() or st2.get(p["name"], {}).get("propose", {}).get("st") == "exit" for p in CC["authors"]):
+        if any(st2.get(p["name"], {}).get("propose", {}).get("st") in ("pending_env", "blocked") for p in CC["authors"]):
+            sys.exit("リライトが保留（環境の時間制限かアカウント側）。手元で --timeout 1500 で再実行")
+        return
+    mp2 = build_map2(b, b2, mp)
+    a2 = argparse.Namespace(**{**vars(a), "tag": a.to})
+    stage_score(a2, b2, mp2)
+    if not all((b2 / "scores" / f"{p['name']}.json").exists() or status(b2).get(p["name"], {}).get("score", {}).get("st") == "exit" for p in CC["authors"]):
+        return
+    stage_judge(a2, b2, mp2)
+    if (b2 / "judge" / "final.json").exists() or status(b2).get("judge", {}).get("final", {}).get("st") == "exit":
+        report(a2)
+        compare(a)
+        print("完了")
+
+
+def compare(a):
+    """第1ラウンドと第2ラウンドの比較、検証の指摘の一覧。"""
+    b, b2 = base_dir(a), ROOT / "runs" / "compe" / a.to
+    rb = rubric()
+    mp, mp2 = json.loads(rd(b / "map.json")), json.loads(rd(b2 / "map.json"))
+    a1, _ = author_scores(rb, b, mp)
+    a2s, _ = author_scores(rb, b2, mp2)
+    fin2 = json.loads(rd(b2 / "judge" / "final.json") or "{}")
+    ff2 = {x["id"]: x for x in fin2.get("final", [])}
+    fd = findings(b, mp)
+    m = lambda l: sum(t for _, t, _, _ in l) / len(l) if l else None
+    f1 = lambda v: f"{v:.1f}" if v is not None else "-"
+    L = [f"# 第1ラウンド→第2ラウンドの比較（{a.tag} → {a.to}）\n", f"検証：{', '.join(p['model'] for p in CC['verifiers'])}（対象テーマ：{', '.join(CC.get('verify_themes', []))}）／第2ラウンドの審判：{CC['judges'][a.judge]['model']}\n",
+         "| id | 作者 | テーマ | 仮タイトル（第2） | 指摘 致命/重大/軽微（照合OK） | 作者平均 第1→第2 | 審判の最終（第2） |\n|---|---|---|---|---|---|---|"]
+    for pid, p in mp2["props"].items():
+        d = fd.get(pid, {"breaks": []})
+        ok = [x for x in d["breaks"] if x["ok"]]
+        cnt = "／".join(str(sum(1 for x in ok if x["sev"] == s)) for s in ("致命", "重大", "軽微")) if pid in fd else "対象外"
+        L.append(f"| {pid} | {p['author']} | {p['theme']} | {p['title']} | {cnt}（全{len(d['breaks'])}件中 照合OK {len(ok)}） | {f1(m(a1.get(pid, [])))} → {f1(m(a2s.get(pid, [])))} | {f1(float(ff2[pid]['total'])) if pid in ff2 else '-'} |")
+    if fin2:
+        L.append(f"\n- 第2ラウンド 審判の上位3：**{' → '.join(fin2['top3'])}**\n- 理由：{fin2.get('reason', '')}")
+    L.append("\n## 検証の指摘とリライトの対応")
+    for pid, d in fd.items():
+        p2 = mp2["props"].get(pid, {})
+        L.append(f"\n### {pid}（{mp['props'][pid]['author']}）{mp['props'][pid]['title']} → {p2.get('title', '')}")
+        for x in d["breaks"]:
+            L.append(f"- {x['by']}（{x['verifier']}）［{x['sev']}］{'' if x['ok'] else '（引用が照合に通らず）'}「{x['quote']}」：{x['why']}")
+        L.append(f"- 作者の対応：{p2.get('changes', '')}")
+    wr(ROOT / "notes" / f"COMPE_{a.tag}_vs_{a.to}.md", "\n".join(L) + "\n")
+    print("\n".join(L[:20]))
+
+
+def run(a):
+    team.guard_stop()
+    b = base_dir(a)
+    stage_propose(a, b)
+    st = status(b)
+    blk = [p["name"] for p in CC["authors"] if st.get(p["name"], {}).get("propose", {}).get("st") == "blocked"]
+    if blk:
+        sys.exit(f"提案がアカウント側の理由で止まっています：{blk}（status.json の errors を確認。解消したら同じコマンドで再実行）")
+    pend = [p["name"] for p in CC["authors"] if st.get(p["name"], {}).get("propose", {}).get("st") == "pending_env"]
+    if pend:
+        sys.exit(f"提案が環境の時間制限で保留：{pend}。手元で  TEAM_NO_BUDGET=1 python3 tools/compe.py run --tag {a.tag} --timeout 1500  を実行してください")
+    if not all((b / "proposals" / f"{p['name']}.json").exists() or st.get(p["name"], {}).get("propose", {}).get("st") == "exit" for p in CC["authors"]):
+        return
+    mp = anonymize(a, b)
+    stage_score(a, b, mp)
+    st = status(b)
+    pend = [p["name"] for p in CC["authors"] if st.get(p["name"], {}).get("score", {}).get("st") == "pending_env"]
+    if pend:
+        sys.exit(f"採点が環境の時間制限で保留：{pend}（手元で --timeout 1500 で再実行）")
+    stage_judge(a, b, mp)
+    if (b / "judge" / "final.json").exists() or status(b).get("judge", {}).get("final", {}).get("st") == "exit":
+        report(a)
+        print("完了")
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    sp = ap.add_subparsers(dest="cmd", required=True)
+    for c in ("run", "report", "round2", "compare"):
+        s = sp.add_parser(c)
+        s.add_argument("--tag", default="c1")
+        s.add_argument("--to", default="c1r2")
+        s.add_argument("--judge", default=None)
+        s.add_argument("--timeout", type=int, default=165)
+        s.add_argument("--limit", type=int, default=8)
+    a = ap.parse_args()
+    global RUBRIC
+    team.RUN = ROOT / "runs" / "compe" / a.tag
+    if a.cmd in ("round2", "compare"):
+        a.judge = a.judge or "mimop"
+        RUBRIC = "rubric_r2.json" if (CDIR / "rubric_r2.json").exists() else "rubric.json"
+        team.RUN = ROOT / "runs" / "compe" / a.to
+    if a.timeout < 300:
+        CFG["retries"] = 1
+    {"run": run, "report": report, "round2": round2, "compare": compare}[a.cmd](a)
+
+
+if __name__ == "__main__":
+    main()
