@@ -42,9 +42,10 @@
     "Grauwall_05": {
       "title": "隊長の非番",
       "source": "../../Series_Grauwall/Grauwall_05/output/final.md",
-      "note": "グラウヴァル第五話（Claude執筆）。1章＝1話。予約掲載 2026-10-11 10:00 から6時間おき（第12話で完結）。Romancer は 10/11 公開予定",
+      "note": "グラウヴァル第五話（Claude執筆）。1章＝1話。予約掲載 2026-10-11 10:00 から6時間おき（第12話で完結）",
       "narou_novel_id": 3341587,
-      "ncode": "n1921mw"
+      "ncode": "n1921mw",
+      "romancer_url": "https://r.voyager.co.jp/epm/e1_703757_11102026174624"
     }
   },
   "notes": {
