@@ -29,5 +29,5 @@
  "tools/inbox_llm.py": "2deccb8353d2d0f34554242e7d9736b1504d5c4d78ba831dbfec29cece9ea16c",
  "tools/make_epub.py": "0fa31d2320d5f559d7e33f04a124a29522afa89510a87d3f8885a13668022724",
  "tools/novelctl.py": "44aff6777e123359e49823ca3047bdcda20c929f271cd9c5251c1902064d7adb",
- "tools/proofread_apply.py": "f55aade4715f640dca6f392672da846aa1abbe44d5513303fc6a2512680b76d9"
+ "tools/proofread_apply.py": "143bd9911d9b0399956762bc8c5f1db4c356c2aaf74b5dd5804f3ad277130cea"
 }
