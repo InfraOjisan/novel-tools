@@ -11,7 +11,7 @@
   },
   "canon_max_chars": 36000,
   "max_attempts": 3,
-  "max_design_attempts": 3,
+  "max_design_attempts": 5,
   "max_parse_retries": 2,
   "max_ledger_attempts": 2,
   "prev_tail_chars": 1000,
@@ -312,7 +312,8 @@
       "design": {
         "temperature": 0.7,
         "reasoning_effort": "medium",
-        "deadline_sec": 900
+        "deadline_sec": 900,
+        "max_tokens": 64000
       }
     },
     "idle_timeout_sec": 180,
