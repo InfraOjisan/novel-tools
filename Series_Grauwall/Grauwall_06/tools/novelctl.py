@@ -151,7 +151,12 @@ def hide_text(n):
     items = [(sid, recover_ch(sid)) for sid in CFG["slot_plan"] if recover_ch(sid) and recover_ch(sid) > n]
     if not items:
         return "（なし：すべて回収済み、または本章で回収）"
-    return "\n".join(f"- {sid}（{CFG['slot_names'][sid]}）の中身：第{c}章まで明かさない" for sid, c in items)
+    # この章で補強する糸は、章カードに書かれた範囲だけは出してよい（2026-10-11：第14章で在りかを語る指定と食い違った）
+    def line(sid, c):
+        if any(ch == n and ev == "reinforced" for ch, ev in CFG["slot_plan"][sid]):
+            return f"- {sid}（{CFG['slot_names'][sid]}）：この章では章カードに書かれた範囲だけ出してよい。回収（第{c}章）の場面は書かない"
+        return f"- {sid}（{CFG['slot_names'][sid]}）の中身：第{c}章まで明かさない"
+    return "\n".join(line(sid, c) for sid, c in items)
 
 
 def ledger_sections(text):
