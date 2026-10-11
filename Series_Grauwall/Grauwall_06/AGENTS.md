@@ -1,9 +1,11 @@
 # AGENTS.md — 進行役の手引き（グラウヴァル・シリーズ第6回『白塔の使者』／系統B）
 
-このフォルダでは、**第1〜3章は Claude が書いた本文（`chapters/ch01〜03.md`）を渡し、第4〜20章を Aion 3.5 mini が書きます。**
+> 2026-10-11 変更（プロデューサー決定）：書き手と磨きを Aion から Claude Haiku 5.5 に、審査（チェッカー）を GPT-6 Luna Pro に替えた。BRIEF に「Aion」とあるのは「作者（書き手）」と読み替える。
+
+このフォルダでは、**第1〜3章は Claude が書いた本文（`chapters/ch01〜03.md`）を渡し、第4〜20章を Claude Haiku 5.5 が書きます。**
 役割は二つに分かれています（`config.json` の `llm.profiles`）。
-- **書き手（writer）**：Aion 3.5 mini。設計（CANON）と各章の本文。磨き（polisher）も Aion。
-- **審査役（reviewer）**：Claude Haiku 5.5（OpenRouter `anthropic/claude-haiku-5.5`）。つながらないときは GPT-6 Luna Pro（`openai/gpt-6-luna-pro`）に自動で切り替わる。CANON の審査、各章の審査（CANONとの整合・矛盾・誤字）、章の記録（LEDGER）、最終審査を受け持つ。
+- **書き手（writer）**：Claude Haiku 5.5。設計（CANON）と各章の本文。磨き（polisher）も Haiku。
+- **審査役（reviewer）**：GPT-6 Luna Pro（OpenRouter `openai/gpt-6-luna-pro`）。つながらないときは Claude Haiku 5.5 に自動で切り替わる。CANON の審査、各章の審査（CANONとの整合・矛盾・誤字）、章の記録（LEDGER）、最終審査を受け持つ。
 
 進行役（人、または omp / agy / HermesAgent の一体）は、`tools/novelctl.py` を動かして、止まったら人に知らせるだけです。モデルが読むのはパケットだけで、この AGENTS.md はモデルには渡りません。
 
@@ -23,14 +25,14 @@
 ## 1. 動かし方
 
 ```
-python3 tools/call_llm.py --ping writer      # Aion の疎通
-python3 tools/call_llm.py --ping reviewer    # 審査役（Haiku 5.5、だめなら GPT-6 Luna Pro）の疎通
+python3 tools/call_llm.py --ping writer      # 書き手（Haiku）の疎通
+python3 tools/call_llm.py --ping reviewer    # 審査役（GPT-6 Luna Pro、だめなら Haiku 5.5）の疎通
 python3 tools/novelctl.py init               # 初回だけ
 python3 tools/novelctl.py status
 python3 tools/novelctl.py start              # 設計 → CANON審査 → CANONロックで止まる
 #   canon/CANON.md を人が読む（第4節の行動原理、第13節の差し込み申告も）
 python3 tools/novelctl.py approve-canon      # 人が端末で
-python3 tools/novelctl.py start              # 第1〜3章は記録だけ取って通過し、第4章から Aion が書く
+python3 tools/novelctl.py start              # 第1〜3章は記録だけ取って通過し、第4章から Haiku が書く
 python3 tools/guard.py check
 ```
 

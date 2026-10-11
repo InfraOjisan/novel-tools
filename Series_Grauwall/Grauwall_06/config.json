@@ -275,18 +275,20 @@
     "json_mode": true,
     "profiles": {
       "writer": {
-        "model": "aion-labs/aion-3.5-mini",
+        "model": "anthropic/claude-haiku-5.5",
         "temperature": 0.8,
-        "top_p": 0.95,
         "max_tokens": 32000,
         "reasoning_effort": "high",
         "system": "あなたは日本語で書く小説家です。依頼文の指示と出力形式に厳密に従い、指定された成果物だけを返します。",
-        "deadline_sec": 420
-      },
-      "reviewer": {
-        "model": "anthropic/claude-haiku-5.5",
+        "deadline_sec": 420,
         "fallback_models": [
           "openai/gpt-6-luna-pro"
+        ]
+      },
+      "reviewer": {
+        "model": "openai/gpt-6-luna-pro",
+        "fallback_models": [
+          "anthropic/claude-haiku-5.5"
         ],
         "temperature": 0.2,
         "max_tokens": 16000,
@@ -295,13 +297,15 @@
         "deadline_sec": 240
       },
       "polisher": {
-        "model": "aion-labs/aion-3.5-mini",
+        "model": "anthropic/claude-haiku-5.5",
         "temperature": 0.75,
-        "top_p": 0.95,
         "max_tokens": 32000,
         "reasoning_effort": "medium",
         "system": "あなたは日本語の小説の文体を磨く名手です。筋・事実・台詞の中身は一切変えず、文章の色・リズム・五感の描写だけを豊かにします。指定された成果物だけを返します。",
-        "deadline_sec": 420
+        "deadline_sec": 420,
+        "fallback_models": [
+          "openai/gpt-6-luna-pro"
+        ]
       }
     },
     "task_overrides": {
@@ -313,10 +317,7 @@
     },
     "idle_timeout_sec": 180,
     "_comment_deadline": "deadline_sec：1回の呼び出しの壁時計の締め切り（本文が出始めていれば1.5倍まで待つ）。Aion は推論の量の指定に従わず、回ごとに93〜283秒・ときに20分以上暴走するため、待つより打ち切って投げ直す。ab_reasoning/RESULTS.md 参照。2026-10-04",
-    "model_env_roles": [
-      "writer",
-      "polisher"
-    ],
+    "model_env_roles": [],
     "_comment_reviewer": "2026-10-11（プロデューサー決定）：審査役（CANON審査・章の審査＝CANONとの整合・矛盾・誤字・記録・最終審査）を Aion から Claude Haiku 5.5 に替えた。OpenRouter の models 配列で GPT-6 Luna Pro に自動で切り替わる。どちらも入力100万トークンあたり0.1ドル・出力0.5ドル（Aion は0.7／1.4）。.env の NOVEL_MODEL は model_env_roles（書き手と磨き）にだけ効く。"
   },
   "polisher_cmd": [
@@ -349,18 +350,18 @@
       ],
       [
         "執筆",
-        "Claude（第1〜3章）／Aion 3.5 mini（第4〜20章）"
+        "Claude（第1〜3章）／Claude Haiku 5.5（第4〜20章）"
       ],
       [
         "審査",
-        "Claude Haiku 5.5"
+        "GPT-6 Luna Pro"
       ],
       [
         "校正",
         "Claude"
       ]
     ],
-    "ai_disclosure": "本作の本文は生成AI（Claude、Aion 3.5 mini）が執筆し、人間が企画・監修しました。"
+    "ai_disclosure": "本作の本文は生成AI（Claude Opus 5.5、Claude Haiku 5.5）が執筆し、GPT-6 Luna Pro が審査し、人間が企画・監修しました。"
   },
   "_comment_series": "グラウヴァル・シリーズ第6回（系統B）。slot_plan は BRIEF.md 第4-2節と必ず同時に変更する。",
   "writer_cmd": [
@@ -375,7 +376,7 @@
     "{packet}",
     "reviewer"
   ],
-  "_comment_writer": "書き手は Aion（OpenRouter）を call_llm.py で直接呼ぶ。キーとモデル名はリポジトリ直下の .env（NOVEL_PROVIDER_APIKEY / NOVEL_MODEL）から読む。",
+  "_comment_writer": "2026-10-11（プロデューサー決定）：書き手を Aion から anthropic/claude-haiku-5.5 に変更（予備 openai/gpt-6-luna-pro）。審査は openai/gpt-6-luna-pro（予備 haiku-5.5）。.env の NOVEL_MODEL は使わない（model_env_roles=[]）。キーはリポジトリ直下の .env。",
   "given_chapters": [
     1,
     2,

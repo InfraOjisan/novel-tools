@@ -8,7 +8,7 @@
 ```
 NOVEL_PROVIDER=openrouter
 NOVEL_PROVIDER_APIKEY=...
-NOVEL_MODEL=aion-labs/aion-3.5-mini
+# NOVEL_MODEL は第6回では使わない（書き手は config.json で haiku-5.5 に固定）
 ```
 - `NOVEL_MODEL` は**書き手と磨きにだけ**効きます（`config.json` の `llm.model_env_roles`）。審査役のモデルは `config.json` の `llm.profiles.reviewer.model`（Claude Haiku 5.5）と `fallback_models`（GPT-6 Luna Pro）で決まり、`.env` では変わりません。
 
@@ -22,7 +22,7 @@ python3 tools/novelctl.py init
 python3 tools/novelctl.py start              # 設計 → CANON審査 → CANONロックまで進んで止まる
 #   canon/CANON.md を読む（第4節＝人物の行動原理、第13節＝差し込み申告）
 python3 tools/novelctl.py approve-canon      # 人が端末で
-python3 tools/novelctl.py start              # 第1〜3章は記録だけ、第4〜20章を Aion が書く。結合、最終審査まで
+python3 tools/novelctl.py start              # 第1〜3章は記録だけ、第4〜20章を Haiku が書く。結合、最終審査まで
 python3 tools/guard.py check
 ```
 
@@ -33,7 +33,7 @@ python3 tools/guard.py check
 
 ---
 
-あなたは、このフォルダ（Grauwall_06）の進行役です。まず `AGENTS.md` を最後まで読んでください。作者は Aion、審査役は Claude Haiku 5.5 で、あなたはどちらでもありません。
+あなたは、このフォルダ（Grauwall_06）の進行役です。まず `AGENTS.md` を最後まで読んでください。作者は Haiku、審査役は Claude Haiku 5.5 で、あなたはどちらでもありません。
 
 やることは次の三つだけです。
 1. `python3 tools/novelctl.py start` で進め、`python3 tools/novelctl.py status` で様子を見る。章が四つ増えるごとに `python3 tools/guard.py check` を実行する。
