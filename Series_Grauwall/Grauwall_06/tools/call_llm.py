@@ -220,7 +220,8 @@ def run(role, task, text, progress_path=None):
     url = f"{base}/chat/completions"
     body = build_body(role, task, text)
     idle = LLM.get("idle_timeout_sec", 180)
-    deadline = (LLM.get("profiles", {}).get(role) or {}).get("deadline_sec")
+    # 締め切りも task_overrides で上書きできる（第6回：設計は束が大きく推論が長い。2026-10-11）
+    deadline = {**(LLM.get("profiles", {}).get(role) or {}), **LLM.get("task_overrides", {}).get(task, {})}.get("deadline_sec")
     prog = Progress(progress_path, task)
     prog.tick(force=True)
     last = None
@@ -247,6 +248,10 @@ def run(role, task, text, progress_path=None):
         except Deadline as e:
             last = str(e)
             err(f"attempt {attempt}: {last} → 打ち切って投げ直します")
+            eff = body.get("reasoning", {}).get("effort")
+            if eff in ("high", "medium"):  # 推論が締め切りまで終わらない → 一段軽くして投げ直す（2026-10-11）
+                body["reasoning"] = {"effort": {"high": "medium", "medium": "low"}[eff]}
+                err(f"reasoning effort を {body['reasoning']['effort']} に下げて再試行します")
             continue
         except Degenerate as e:
             last = str(e)

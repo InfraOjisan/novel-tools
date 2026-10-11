@@ -306,7 +306,9 @@
     },
     "task_overrides": {
       "design": {
-        "temperature": 0.7
+        "temperature": 0.7,
+        "reasoning_effort": "medium",
+        "deadline_sec": 900
       }
     },
     "idle_timeout_sec": 180,
