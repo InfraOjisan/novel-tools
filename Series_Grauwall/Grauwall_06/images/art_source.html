@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8">
+<style>
+  html,body{margin:0;background:#000}
+  #stage{position:relative;width:1600px;height:2560px;overflow:hidden}
+  canvas{position:absolute;inset:0}
+  .title{position:absolute;right:230px;top:280px;writing-mode:vertical-rl;
+    font-family:"Noto Serif CJK JP",serif;font-weight:600;font-size:150px;letter-spacing:.16em}
+  .team{position:absolute;left:120px;bottom:150px;
+    font-family:"Noto Serif CJK JP",serif;font-weight:600;font-size:42px;letter-spacing:.08em}
+  .series{position:absolute;right:120px;top:300px;writing-mode:vertical-rl;
+    font-family:"Noto Serif CJK JP",serif;font-weight:500;font-size:34px;letter-spacing:.5em}
+  /* 昼（白地）は墨の文字、夜・夕は生成りの文字 */
+  .day .title{color:#1f262c;text-shadow:0 0 18px rgba(255,255,255,.7)}
+  .day .team,.day .series{color:rgba(31,38,44,.72)}
+  .night .title{color:#F2EBDD;text-shadow:0 0 22px rgba(255,214,160,.28),0 0 2px rgba(255,255,255,.55)}
+  .night .team,.night .series{color:rgba(232,220,196,.8)}
+</style></head>
+<body>
+<div id="stage"><canvas id="c" width="1600" height="2560"></canvas>
+  <div class="title">白塔の使者</div>
+  <div class="series">グラウヴァル　六</div>
+  <div class="team">チームジョバンニ</div>
+</div>
+<script>
+const MODE = location.hash.slice(1) || "a";
+const W = 1600, H = 2560;
+let g = document.getElementById("c").getContext("2d");
+// ぼかしは縮小キャンバスに描いて拡大する（canvas の filter blur を何百回も使うと重い）
+function soft(fn, k = 6, blur = 5){
+  const main = g, oc = document.createElement("canvas"); oc.width = W/k; oc.height = H/k;
+  const tmp = document.createElement("canvas"); tmp.width = W/k; tmp.height = H/k;
+  g = tmp.getContext("2d"); g.scale(1/k, 1/k); fn(); g = main;
+  const oc2 = oc.getContext("2d"); oc2.filter = `blur(${blur}px)`; oc2.drawImage(tmp, 0, 0);
+  g.save(); g.imageSmoothingQuality = "high"; g.drawImage(oc, 0, 0, W, H); g.restore();
+}
+let seed = {a: 3130612, b: 3130618, c: 3130624, d: 3130631}[MODE] || 1;
+const rnd = () => ((seed = (seed * 1664525 + 1013904223) >>> 0) / 4294967296);
+document.getElementById("stage").className = {a: "night", b: "day", c: "day", d: "night"}[MODE];
+
+function grad(stops, y0 = 0, y1 = H, x0 = 0, x1 = 0){
+  const lg = g.createLinearGradient(x0, y0, x1, y1);
+  stops.forEach(([t, c]) => lg.addColorStop(t, c)); return lg;
+}
+function glow(x, y, r, col, a0 = 1){
+  const rg = g.createRadialGradient(x, y, 0, x, y, r);
+  rg.addColorStop(0, col.replace("A", a0)); rg.addColorStop(1, col.replace("A", 0));
+  g.fillStyle = rg; g.fillRect(x - r, y - r, 2*r, 2*r);
+}
+function snowfall(n, col, aMax, x0 = 0, y0 = 0, w = W, h = H, rMax = 5){
+  for (let i = 0; i < n; i++){
+    const x = x0 + rnd()*w, y = y0 + rnd()*h, r = Math.pow(rnd(), 2)*rMax + 1, a = .15 + rnd()*aMax;
+    const rg = g.createRadialGradient(x, y, 0, x, y, r*2.2);
+    rg.addColorStop(0, `rgba(${col},${a})`); rg.addColorStop(1, `rgba(${col},0)`);
+    g.fillStyle = rg; g.beginPath(); g.arc(x, y, r*2.2, 0, 7); g.fill();
+  }
+}
+function vignette(a, cx = W/2, cy = H*.5){
+  const rg = g.createRadialGradient(cx, cy, H*.25, cx, cy + H*.05, H*.8);
+  rg.addColorStop(0, "rgba(0,0,0,0)"); rg.addColorStop(1, `rgba(0,0,0,${a})`);
+  g.fillStyle = rg; g.fillRect(0, 0, W, H);
+}
+// 画面全体にうすい粒子（絵の具の目）
+function filmGrain(n, a){
+  for (let i = 0; i < n; i++){ g.fillStyle = `rgba(${rnd() < .5 ? "0,0,0" : "255,240,220"},${rnd()*a})`; g.fillRect(rnd()*W, rnd()*H, 1 + rnd()*2, 1 + rnd()*2); }
+}
+// 三次ベジェ
+function bez(P, t){ const u = 1 - t; return [0, 1].map(k => u*u*u*P[0][k] + 3*u*u*t*P[1][k] + 3*u*t*t*P[2][k] + t*t*t*P[3][k]); }
+function bezD(P, t){ const u = 1 - t; return [0, 1].map(k => 3*u*u*(P[1][k] - P[0][k]) + 6*u*t*(P[2][k] - P[1][k]) + 3*t*t*(P[3][k] - P[2][k])); }
+// 中心線 P に沿った帯（耳の形など）
+function ribbon(P, wfn, n = 70){
+  const L = [], R = [];
+  for (let i = 0; i <= n; i++){
+    const t = i/n, [x, y] = bez(P, t), [dx, dy] = bezD(P, t), l = Math.hypot(dx, dy) || 1, nx = -dy/l, ny = dx/l, w = wfn(t);
+    L.push([x + nx*w, y + ny*w]); R.push([x - nx*w, y - ny*w]);
+  }
+  g.beginPath(); L.forEach((p, i) => i ? g.lineTo(...p) : g.moveTo(...p)); R.reverse().forEach(p => g.lineTo(...p)); g.closePath();
+}
+const earW = (wm, b = .5) => t => wm*(b + (1 - b)*Math.sin(Math.PI/2*Math.min(t/.45, 1)))*(t > .62 ? Math.sqrt(Math.max(0, 1 - Math.pow((t - .62)/.38, 2))) : 1);
+// 木目の板（横方向の板、奥 y0 から手前 y1 へ遠近）
+function planks(y0, y1, x0, x1, base, dark, light, nSeam, nGrain){
+  g.fillStyle = base; g.fillRect(x0, y0, x1 - x0, y1 - y0);
+  for (let k = 1; k < nSeam; k++){
+    const y = y0 + (y1 - y0)*Math.pow(k/nSeam, 1.5), p = (y - y0)/(y1 - y0);
+    g.fillStyle = `rgba(${dark},.55)`; g.fillRect(x0, y - 1 - p*2, x1 - x0, 2 + p*4);
+    g.fillStyle = `rgba(${light},.10)`; g.fillRect(x0, y + 2 + p*3, x1 - x0, 1 + p*2);
+  }
+  g.lineCap = "round";
+  for (let i = 0; i < nGrain; i++){
+    const y = y0 + (y1 - y0)*Math.pow(rnd(), 1.3), p = (y - y0)/(y1 - y0), xs = x0 + rnd()*(x1 - x0), L = 200 + rnd()*900;
+    g.strokeStyle = `rgba(${rnd() < .6 ? dark : light},${.04 + rnd()*.10})`; g.lineWidth = .6 + p*3*rnd();
+    g.beginPath(); const ph = rnd()*7, amp = (1 + p*4)*rnd();
+    for (let s = 0; s <= 20; s++){ const x = xs - L/2 + L*s/20, yy = y + Math.sin(s*.7 + ph)*amp; s ? g.lineTo(x, yy) : g.moveTo(x, yy); }
+    g.stroke();
+  }
+}
+// 湯気
+function steam(x0, y0, h, col, n = 6, spread = 60){
+  g.save(); g.lineCap = "round";
+  for (let k = 0; k < n; k++){
+    const sg = g.createLinearGradient(0, y0, 0, y0 - h);
+    sg.addColorStop(0, `rgba(${col},0)`); sg.addColorStop(.12, `rgba(${col},${.20 - k*.015})`); sg.addColorStop(1, `rgba(${col},0)`);
+    g.strokeStyle = sg; g.lineWidth = 10 + k*9; g.filter = `blur(${6 + k*4}px)`;
+    const ph = rnd()*7, dx = (k - n/2)*spread/n, drift = (rnd() - .3)*120, hh = h*(.6 + rnd()*.4);
+    g.beginPath();
+    for (let s = 0; s <= 40; s++){ const t = s/40, y = y0 - t*hh, x = x0 + dx*(1 - t*.4) + Math.sin(t*7 + ph)*50*t + drift*t*t; s ? g.lineTo(x, y) : g.moveTo(x, y); }
+    g.stroke();
+  }
+  g.restore();
+}
+// ════════════════════════════════════════════════════════════
+// 第6回『白塔の使者』の表紙（仮）。#a 灯台 / #b 刺繍 / #c 祈りの形 / #d 法衣と灯
+// 描くもの：白塔の法衣、白塔の灯の刺繍（教会の灯火とわずかに違う：炎の芯が細い塔、上に小さな環、皿の下に段）、油壺つきの灯台
+// 描かないもの：顔、命令書（油壺の中身）、赤い石、娘
+// ════════════════════════════════════════════════════════════
+
+// ── 旋盤で挽いたような金物（輪切りの楕円を下から積む）
+function metalH(cx, r, warm = 1){
+  const lg = g.createLinearGradient(cx - r, 0, cx + r, 0);
+  [[0, "#0d0804"], [.16, "#3b2712"], [.34, "#94683a"], [.44, warm ? "#e8c286" : "#c9b08a"], [.54, "#a0743e"], [.74, "#3a2511"], [1, "#080502"]].forEach(([t, c]) => lg.addColorStop(t, c));
+  return lg;
+}
+function lathe(cx, yb, pts, k = .25, warm = 1){
+  // pts: [[上への高さ, 半径, 記号]]（下から順に）。記号 L は上面が明るい段
+  const ys = [];
+  for (let i = 0; i < pts.length - 1; i++){
+    const [h0, r0] = pts[i], [h1, r1] = pts[i + 1];
+    for (let h = h0; h < h1; h += 1.5){ const t = (h - h0)/((h1 - h0) || 1), s = t*t*(3 - 2*t); ys.push([h, r0 + (r1 - r0)*s]); }
+  }
+  ys.push([pts[pts.length - 1][0], pts[pts.length - 1][1]]);
+  // 地に落ちる影
+  g.save(); g.filter = "blur(14px)"; g.fillStyle = "rgba(0,0,0,.65)"; g.beginPath(); g.ellipse(cx + 26, yb + 8, pts[0][1]*1.15, pts[0][1]*k*1.3, 0, 0, 7); g.fill(); g.restore();
+  for (const [h, r] of ys){ if (r < .5) continue; g.fillStyle = metalH(cx, r, warm); g.beginPath(); g.ellipse(cx, yb - h, r, Math.max(1, r*k), 0, 0, 7); g.fill(); }
+  // 段の上面
+  for (const p of pts) if (p[2] === "L"){
+    const [h, r] = p, rg = g.createRadialGradient(cx - r*.2, yb - h - r*k*.3, 1, cx, yb - h, r);
+    rg.addColorStop(0, "rgba(255,214,150,.55)"); rg.addColorStop(.7, "rgba(160,110,60,.35)"); rg.addColorStop(1, "rgba(40,25,10,.4)");
+    g.fillStyle = rg; g.beginPath(); g.ellipse(cx, yb - h, r, r*k, 0, 0, 7); g.fill();
+  }
+}
+function flame(fx, fy, sc = 1, glowA = 1){
+  g.save(); g.globalCompositeOperation = "screen";
+  glow(fx, fy - 40*sc, 1300*sc, "rgba(255,150,60,A)", .22*glowA);
+  glow(fx, fy - 40*sc, 520*sc, "rgba(255,180,90,A)", .35*glowA);
+  glow(fx, fy - 40*sc, 160*sc, "rgba(255,220,150,A)", .55*glowA);
+  g.restore();
+  const tear = (h, w, dy = 0) => { g.beginPath(); g.moveTo(fx, fy - h + dy); g.bezierCurveTo(fx + w*.9, fy - h*.55 + dy, fx + w, fy - w*.2 + dy, fx, fy + dy); g.bezierCurveTo(fx - w, fy - w*.2 + dy, fx - w*.9, fy - h*.55 + dy, fx, fy - h + dy); };
+  g.save(); g.filter = `blur(${5*sc}px)`; g.fillStyle = "rgba(255,120,40,.75)"; tear(150*sc, 40*sc); g.fill();
+  g.filter = `blur(${3*sc}px)`; g.fillStyle = "rgba(255,196,100,.95)"; tear(120*sc, 30*sc, -4*sc); g.fill();
+  g.filter = `blur(${2*sc}px)`; g.fillStyle = "rgba(255,248,226,1)"; tear(78*sc, 17*sc, -10*sc); g.fill();
+  g.filter = `blur(${3*sc}px)`; g.fillStyle = "rgba(90,130,255,.45)"; g.beginPath(); g.ellipse(fx, fy - 8*sc, 14*sc, 9*sc, 0, 0, 7); g.fill();
+  g.restore();
+}
+// 油壺つきの灯台。dir=灯口の向き（+1 右 / -1 左）
+function lampStand(x, yb, h, o = {}){
+  const k = o.k || .25, dir = o.dir || 1;
+  lathe(x, yb, [[0, 172], [8, 178], [34, 174], [40, 150, "L"], [56, 138], [84, 96], [94, 82, "L"], [108, 58], [124, 38], [138, 26],
+    [160, 21], [h*.27, 19], [h*.27 + 16, 34], [h*.27 + 30, 36], [h*.27 + 46, 20], [h*.55, 17], [h*.55 + 18, 36], [h*.55 + 42, 38], [h*.55 + 64, 18],
+    [h - 150, 15], [h - 124, 28], [h - 108, 28], [h - 96, 15], [h - 70, 13], [h - 56, 42], [h - 36, 112], [h - 12, 136], [h, 140]], k);
+  const yt = yb - h;
+  // 皿の中（油）
+  g.save(); g.beginPath(); g.ellipse(x, yt, 128, 128*k, 0, 0, 7); g.clip();
+  g.fillStyle = "#120a04"; g.fillRect(x - 140, yt - 40, 280, 80);
+  const og = g.createLinearGradient(x - 120, yt - 20, x + 120, yt + 20); og.addColorStop(0, "rgba(120,80,30,.0)"); og.addColorStop(.6, "rgba(200,150,70,.35)"); og.addColorStop(1, "rgba(80,50,20,.0)");
+  g.fillStyle = og; g.beginPath(); g.ellipse(x + dir*20, yt + 6, 100, 18, 0, 0, 7); g.fill(); g.restore();
+  // 縁の照り
+  g.strokeStyle = "rgba(255,210,140,.75)"; g.lineWidth = 3; g.beginPath(); g.ellipse(x, yt, 136, 136*k, 0, Math.PI*1.05, Math.PI*1.95); g.stroke();
+  g.strokeStyle = "rgba(30,18,6,.9)"; g.lineWidth = 4; g.beginPath(); g.ellipse(x, yt, 138, 138*k, 0, Math.PI*.05, Math.PI*.95); g.stroke();
+  // 灯口（皿の縁をつまんだ口）と灯心
+  const sx = x + dir*134, sy = yt;
+  g.fillStyle = metalH(sx, 40); g.beginPath(); g.moveTo(sx - dir*20, sy - 20); g.quadraticCurveTo(sx + dir*30, sy - 16, sx + dir*58, sy - 6); g.quadraticCurveTo(sx + dir*30, sy + 18, sx - dir*20, sy + 22); g.closePath(); g.fill();
+  g.fillStyle = "#0c0703"; g.beginPath(); g.ellipse(sx + dir*22, sy - 4, 20, 7, 0, 0, 7); g.fill();
+  g.strokeStyle = "#2a1a0e"; g.lineWidth = 7; g.lineCap = "round"; g.beginPath(); g.moveTo(sx + dir*8, sy - 2); g.quadraticCurveTo(sx + dir*36, sy - 4, sx + dir*48, sy - 16); g.stroke();
+  if (o.lit !== false) flame(sx + dir*50, sy - 18, o.flameSc || 1, o.glowA ?? 1);
+  return {yt, fx: sx + dir*50, fy: sy - 18};
+}
+function oilPot(x, yb, s = 1, k = .26){
+  lathe(x, yb, [[0, 44*s], [8*s, 56*s], [30*s, 70*s], [62*s, 74*s], [92*s, 64*s], [112*s, 44*s], [120*s, 34*s, "L"], [128*s, 36*s], [136*s, 34*s, "L"],
+    [142*s, 26*s], [152*s, 12*s], [160*s, 14*s], [168*s, 4*s]], k);
+  return [x, yb - 168*s];
+}
+function chain(p0, p1, sag = 80, n = 18){
+  g.save(); g.lineWidth = 5;
+  for (let i = 0; i < n; i++){ const t = (i + .5)/n, x = p0[0] + (p1[0] - p0[0])*t, y = p0[1] + (p1[1] - p0[1])*t + Math.sin(Math.PI*t)*sag;
+    const ang = Math.atan2(p1[1] - p0[1] + Math.cos(Math.PI*t)*sag*Math.PI/n, p1[0] - p0[0]);
+    g.strokeStyle = "rgba(0,0,0,.6)"; g.beginPath(); g.ellipse(x + 3, y + 4, 11, i % 2 ? 3 : 6, ang, 0, 7); g.stroke();
+    g.strokeStyle = i % 2 ? "#6b4a26" : "#b88a50"; g.beginPath(); g.ellipse(x, y, 11, i % 2 ? 3 : 6, ang, 0, 7); g.stroke(); }
+  g.restore();
+}
+
+// ── 白塔の灯の刺繍（単位座標：炎の先 y=-1.25、皿 y≈.65、段 y≈1.25）
+const EMB = {
+  outer(){ g.beginPath(); g.moveTo(0, -1.25); g.bezierCurveTo(.25, -.85, .62, -.45, .55, 0); g.bezierCurveTo(.5, .32, .25, .5, 0, .5); g.bezierCurveTo(-.25, .5, -.5, .32, -.55, 0); g.bezierCurveTo(-.62, -.45, -.25, -.85, 0, -1.25); g.closePath(); },
+  tongues(){ g.beginPath(); g.moveTo(-.7, -.06); g.quadraticCurveTo(-.92, -.42, -.78, -.8); g.moveTo(.7, -.06); g.quadraticCurveTo(.92, -.42, .78, -.8); },
+  // 教会の灯火なら、ここは丸い芯の炎。白塔は細い塔
+  tower(){ g.beginPath(); g.moveTo(-.1, .36); g.lineTo(-.1, -.2); g.lineTo(0, -.4); g.lineTo(.1, -.2); g.lineTo(.1, .36); },
+  ring(){ g.beginPath(); g.arc(0, -.66, .08, 0, 7); },
+  // 灯火教会の灯火（比較用）：芯は丸い炎、環はなく、皿の下は短い脚一本
+  core(){ g.beginPath(); g.moveTo(0, -.5); g.bezierCurveTo(.12, -.28, .24, -.04, .19, .16); g.bezierCurveTo(.14, .32, -.14, .32, -.19, .16); g.bezierCurveTo(-.24, -.04, -.12, -.28, 0, -.5); g.closePath(); },
+  foot(){ g.beginPath(); g.moveTo(-.22, 1.02); g.lineTo(.22, 1.02); },
+  bowl(){ g.beginPath(); g.moveTo(-.84, .64); g.lineTo(.84, .64); g.moveTo(-.74, .68); g.quadraticCurveTo(0, 1.1, .74, .68); },
+  steps(){ g.beginPath(); g.moveTo(-.14, 1.0); g.lineTo(.14, 1.0); g.moveTo(-.3, 1.12); g.lineTo(.3, 1.12); g.moveTo(-.48, 1.24); g.lineTo(.48, 1.24); },
+};
+function thread(path, w, s, col){
+  // 影 → 糸 → 繻子の目 → 照り
+  g.save(); g.translate(1.5/s, 3.5/s); g.filter = "blur(2.5px)"; g.strokeStyle = col.sh; g.lineWidth = (w + 3)/s; path(); g.stroke(); g.restore();
+  g.strokeStyle = col.base; g.lineWidth = w/s; path(); g.stroke();
+  g.setLineDash([1.4/s, 3.6/s]); g.strokeStyle = col.stitch; g.lineWidth = w/s; path(); g.stroke(); g.setLineDash([]);
+  g.save(); g.translate(-w*.16/s, -w*.2/s); g.strokeStyle = col.hi; g.lineWidth = w*.32/s; path(); g.stroke(); g.restore();
+}
+function emblem(cx, cy, s, o = {}){
+  const col = Object.assign({base: "#c4a15e", hi: "rgba(255,240,200,.75)", stitch: "rgba(80,56,18,.42)", sh: "rgba(70,58,40,.45)", fill: "rgba(205,170,100,.20)"}, o.col || {});
+  const w = o.w || s*.07;
+  g.save(); g.translate(cx, cy); if (o.rot) g.rotate(o.rot); g.scale(s, s*(o.sy || 1));
+  g.lineCap = "round"; g.lineJoin = "round";
+  // 炎の中の刺し埋め（長短の縦刺し）
+  g.save(); EMB.outer(); g.clip(); g.fillStyle = col.fill; g.fillRect(-1, -1.4, 2, 2);
+  for (let x = -.6; x < .6; x += .022){ const y0 = -1.3 + rnd()*.15, y1 = .55 - rnd()*.1; g.strokeStyle = rnd() < .5 ? "rgba(255,236,190,.16)" : "rgba(120,90,40,.12)"; g.lineWidth = 1.6/s; g.beginPath(); g.moveTo(x, y0); g.lineTo(x + .01, y1); g.stroke(); }
+  g.restore();
+  if (o.church){ for (const p of [EMB.outer, EMB.tongues, EMB.bowl, EMB.foot]) thread(p, w, s, col); thread(EMB.core, w*.8, s, col); }
+  else { for (const p of [EMB.outer, EMB.tongues, EMB.bowl, EMB.steps]) thread(p, w, s, col); thread(EMB.tower, w*.8, s, col); thread(EMB.ring, w*.6, s, col); }
+  g.restore();
+}
+
+// ── 白い布（法衣）
+function fabric(path, o){
+  g.save(); path(); g.clip();
+  g.fillStyle = o.base; g.fillRect(0, 0, W, H);
+  if (o.shade) o.shade();
+  soft(() => { g.lineCap = "round";
+    for (const f of o.folds){ const P = f.P;
+      g.strokeStyle = `rgba(${o.dark},${f.a})`; g.lineWidth = f.w; g.beginPath(); g.moveTo(...P[0]); g.bezierCurveTo(...P[1], ...P[2], ...P[3]); g.stroke();
+      g.save(); g.translate(f.w*.8*(f.side || 1), 0); g.strokeStyle = `rgba(${o.light},${f.a*.85})`; g.lineWidth = f.w*.6; g.beginPath(); g.moveTo(...P[0]); g.bezierCurveTo(...P[1], ...P[2], ...P[3]); g.stroke(); g.restore(); }
+  }, 5, o.blur || 6);
+  // 織り目
+  g.lineWidth = 1.2;
+  for (let y = 0; y < H; y += 4.5){ g.strokeStyle = `rgba(${o.dark},.05)`; g.beginPath(); g.moveTo(0, y); g.lineTo(W, y); g.stroke(); }
+  for (let x = 0; x < W; x += 4.5){ g.strokeStyle = `rgba(${o.light},.05)`; g.beginPath(); g.moveTo(x, 0); g.lineTo(x, H); g.stroke(); }
+  soft(() => { for (let i = 0; i < 6000; i++){ g.fillStyle = `rgba(${rnd() < .5 ? o.dark : o.light},${.05 + rnd()*.07})`; g.fillRect(rnd()*W, rnd()*H, 3 + rnd()*18, 1.5 + rnd()*2.5); } }, 2, .7);
+  for (let i = 0; i < 14000; i++){ const x = rnd()*W, y = rnd()*H, a = rnd()*7, l = 3 + rnd()*7;
+    g.strokeStyle = rnd() < .5 ? `rgba(255,253,246,${rnd()*.14})` : `rgba(${o.dark},${rnd()*.10})`; g.lineWidth = .6 + rnd()*.6;
+    g.beginPath(); g.moveTo(x, y); g.lineTo(x + Math.cos(a)*l, y + Math.sin(a)*l); g.stroke(); }
+  if (o.after) o.after();
+  g.restore();
+}
+function randFolds(n, x0, x1, y0, y1, wMin, wMax, aMax, lean = 0){
+  const F = [];
+  for (let i = 0; i < n; i++){ const x = x0 + rnd()*(x1 - x0), ya = y0 - 100, yb = y1 + 100, sw = (rnd() - .5)*160;
+    F.push({P: [[x, ya], [x + sw + lean*.3, ya + (yb - ya)*.33], [x - sw + lean*.7, ya + (yb - ya)*.66], [x + lean, yb]], w: wMin + rnd()*(wMax - wMin), a: .08 + rnd()*aMax, side: rnd() < .5 ? 1 : -1}); }
+  return F;
+}
+// 金糸の縁取り（法衣の前の合わせ）
+function trim(P, w){
+  g.save(); g.lineCap = "round";
+  const path = () => { g.beginPath(); g.moveTo(...P[0]); g.bezierCurveTo(...P[1], ...P[2], ...P[3]); };
+  g.filter = "blur(10px)"; g.strokeStyle = "rgba(60,52,40,.35)"; g.lineWidth = w + 26; g.translate(14, 6); path(); g.stroke(); g.translate(-14, -6); g.filter = "none";
+  for (const [off, lw] of [[-w*.42, 5], [w*.42, 5]]){ g.save(); g.translate(off, 0); thread(path, lw, 1, {base: "#c4a15e", hi: "rgba(255,240,200,.7)", stitch: "rgba(80,56,18,.4)", sh: "rgba(70,58,40,.4)"}); g.restore(); }
+  // 小さな灯の連なり
+  for (let i = 0; i <= 30; i++){ const t = i/30, [x, y] = bez(P, t); if (y < -40 || y > H + 40) continue;
+    g.save(); g.translate(x, y); g.scale(1, 1); thread(() => { g.beginPath(); g.moveTo(0, -16); g.quadraticCurveTo(9, -2, 0, 9); g.quadraticCurveTo(-9, -2, 0, -16); }, 3, 1, {base: "#c4a15e", hi: "rgba(255,240,200,.6)", stitch: "rgba(80,56,18,.3)", sh: "rgba(70,58,40,.35)"}); g.restore(); }
+  g.restore();
+}
+
+// ── 石の壁と棚（詰所の証の棚）
+function stoneWall(y1, base = [34, 29, 25]){
+  g.fillStyle = `rgb(${base})`; g.fillRect(0, 0, W, y1);
+  for (let y = -40, r = 0; y < y1; y += 150, r++){
+    for (let x = -(r % 2)*160 - rnd()*60; x < W; ){ const w = 230 + rnd()*170, t = rnd()*14 - 7;
+      g.fillStyle = `rgb(${base[0] + t + 6},${base[1] + t + 5},${base[2] + t + 4})`; g.fillRect(x + 7, y + 7, w - 14, 136);
+      soft(() => { for (let i = 0; i < 10; i++){ g.fillStyle = `rgba(${rnd() < .5 ? "0,0,0" : "120,110,95"},${.10 + rnd()*.12})`; g.beginPath(); g.ellipse(x + rnd()*w, y + rnd()*150, 20 + rnd()*60, 10 + rnd()*30, rnd()*3, 0, 7); g.fill(); } }, 6, 3);
+      x += w; }
+    g.fillStyle = "rgba(0,0,0,.55)"; g.fillRect(0, y + 143, W, 7);
+  }
+  for (let i = 0; i < 7000; i++){ g.fillStyle = `rgba(${rnd() < .6 ? "0,0,0" : "150,140,120"},${rnd()*.12})`; g.fillRect(rnd()*W, rnd()*y1, 1 + rnd()*3, 1 + rnd()*3); }
+}
+// 証の札
+function tag(x, y, rot, tx = "証"){
+  g.save(); g.translate(x, y); g.rotate(rot);
+  g.save(); g.filter = "blur(8px)"; g.fillStyle = "rgba(0,0,0,.55)"; g.fillRect(-46, 10, 112, 196); g.restore();
+  const pg = g.createLinearGradient(-55, 0, 55, 0); pg.addColorStop(0, "#9c8a68"); pg.addColorStop(.4, "#d6c7a4"); pg.addColorStop(1, "#8a7858");
+  g.fillStyle = pg; g.beginPath(); g.moveTo(-50, 0); g.lineTo(50, 0); g.lineTo(52, 190); g.lineTo(-48, 194); g.closePath(); g.fill();
+  g.fillStyle = "#1a120a"; g.beginPath(); g.arc(0, 22, 7, 0, 7); g.fill();
+  g.fillStyle = "rgba(38,24,14,.82)"; g.font = '600 64px "Noto Serif CJK JP", serif'; g.textAlign = "center"; g.fillText(tx, 0, 108);
+  g.strokeStyle = "rgba(38,24,14,.55)"; g.lineWidth = 3; g.beginPath(); g.moveTo(-26, 140); g.lineTo(22, 138); g.moveTo(-20, 160); g.lineTo(12, 162); g.stroke();
+  g.restore();
+}
+
+// ── 案A 灯台 ─────────────────────
+function drawA(){
+  stoneWall(1800);
+  // 棚の上面と前縁
+  planks(1760, 1905, 0, W, "#3b2a1b", "14,8,4", "190,150,100", 3, 160);
+  const fe = g.createLinearGradient(0, 1905, 0, 1990); fe.addColorStop(0, "#5a4028"); fe.addColorStop(.15, "#2d1e12"); fe.addColorStop(1, "#140c06");
+  g.fillStyle = fe; g.fillRect(0, 1905, W, 85);
+  g.fillStyle = grad([[0, "#0b0705"], [1, "#030202"]], 1990, H); g.fillRect(0, 1990, W, H - 1990);
+  g.fillStyle = "rgba(255,200,140,.22)"; g.fillRect(0, 1905, W, 3);
+  // 棚の奥の暗がり
+  g.fillStyle = grad([[0, "rgba(0,0,0,.5)"], [1, "rgba(0,0,0,0)"]], 1760, 1800); g.fillRect(0, 1760, W, 40);
+  // 隣に置かれた白い法衣の替え（ぼかす）
+  soft(() => { g.fillStyle = "#8d8576"; g.beginPath(); g.moveTo(1060, 1880); g.bezierCurveTo(1080, 1790, 1180, 1740, 1300, 1745); g.lineTo(1650, 1740); g.lineTo(1650, 1890); g.closePath(); g.fill();
+    g.fillStyle = "rgba(230,222,205,.5)"; g.beginPath(); g.ellipse(1300, 1770, 220, 22, -.05, 0, 7); g.fill();
+    g.fillStyle = "rgba(0,0,0,.35)"; g.fillRect(1060, 1850, 600, 40); }, 4, 3);
+  // 灯台と油壺
+  const L = lampStand(620, 1868, 1100, {dir: 1});
+  const knob = oilPot(890, 1896, 1.3);
+  chain([knob[0], knob[1] + 4], [620 + 30, 1868 - (1100*.27 + 30)], 60, 16);
+  // 札
+  g.save(); g.strokeStyle = "#5a4630"; g.lineWidth = 3; g.beginPath(); g.moveTo(602, 1868 - 1100*.55 - 30); g.quadraticCurveTo(560, 1868 - 1100*.55 + 10, 520, 1868 - 1100*.55 + 40); g.stroke(); g.restore();
+  tag(500, 1868 - 1100*.55 + 30, .14);
+  // 灯の照り（壁と棚）
+  g.save(); g.globalCompositeOperation = "soft-light"; glow(L.fx, L.fy, 1500, "rgba(255,170,90,A)", .55); g.restore();
+  filmGrain(10000, .06);
+  vignette(.62, L.fx - 100, H*.5);
+}
+
+// ── 案B 刺繍 ─────────────────────
+function drawB(){
+  const hem = [[1130, -60], [1100, 700], [1160, 1700], [1110, 2620]];
+  // 右の身頃（下）
+  const right = () => { g.beginPath(); g.moveTo(1000, -60); g.lineTo(W + 20, -60); g.lineTo(W + 20, H + 60); g.lineTo(1000, H + 60); g.closePath(); };
+  fabric(right, {base: "#cbc4b6", light: "250,247,238", dark: "92,86,76", folds: randFolds(8, 1100, 1650, 0, H, 50, 140, .22, -40),
+    shade: () => { g.fillStyle = grad([[0, "rgba(0,0,0,.05)"], [1, "rgba(0,0,0,.25)"]], 0, H); g.fillRect(0, 0, W, H); }});
+  // 左の身頃（上に重なる、刺繍のある側）
+  const left = () => { g.beginPath(); g.moveTo(-20, -60); g.lineTo(hem[0][0], hem[0][1]); g.bezierCurveTo(...hem[1], ...hem[2], ...hem[3]); g.lineTo(-20, H + 60); g.closePath(); };
+  g.save(); g.filter = "blur(26px)"; g.fillStyle = "rgba(40,36,30,.55)"; g.translate(28, 10); left(); g.fill(); g.restore();
+  const folds = randFolds(6, 0, 300, 0, H, 60, 160, .2, 30).concat(randFolds(4, 300, 1050, 1750, H, 70, 170, .2, -60)).concat(randFolds(3, 950, 1100, 0, H, 50, 110, .18, 0));
+  fabric(left, {base: "#e7e2d6", light: "255,253,246", dark: "112,104,92", folds,
+    shade: () => { const rg = g.createRadialGradient(W*.75, H*.05, 100, W*.6, H*.3, H*.95); rg.addColorStop(0, "rgba(255,252,240,.35)"); rg.addColorStop(1, "rgba(80,74,64,.35)"); g.fillStyle = rg; g.fillRect(0, 0, W, H); },
+    after: () => {
+      emblem(650, 1240, 300, {rot: -.03});
+    }});
+  trim(hem, 46);
+  filmGrain(9000, .05);
+  vignette(.38, 700, H*.5);
+}
+
+// ── 案C 二つの灯 ─────────────────────
+// 灯火教会の法衣（左）と白塔の法衣（右）。胸の灯の刺繍が少しだけ違う（町の者には見分けられない）
+function drawC(){
+  g.fillStyle = "#14110e"; g.fillRect(0, 0, W, H);
+  const gap = 790;
+  // 左：教会の法衣（少し手前、暖かい）
+  const left = () => { g.beginPath(); g.moveTo(-20, -40); g.lineTo(gap - 30, -40); g.bezierCurveTo(gap - 10, 700, gap - 60, 1500, gap - 20, H + 40); g.lineTo(-20, H + 40); g.closePath(); };
+  const right = () => { g.beginPath(); g.moveTo(gap + 50, -40); g.lineTo(W + 20, -40); g.lineTo(W + 20, H + 40); g.lineTo(gap + 70, H + 40); g.bezierCurveTo(gap + 20, 1700, gap + 70, 900, gap + 50, -40); g.closePath(); };
+  fabric(right, {base: "#d9d6cf", light: "252,252,248", dark: "84,88,94", folds: randFolds(7, gap + 120, W, 0, H, 60, 150, .2, 20),
+    shade: () => { const lg = g.createLinearGradient(gap, 0, W, 0); lg.addColorStop(0, "rgba(30,34,40,.5)"); lg.addColorStop(.5, "rgba(255,255,255,.06)"); lg.addColorStop(1, "rgba(30,34,40,.25)"); g.fillStyle = lg; g.fillRect(0, 0, W, H); },
+    after: () => { emblem(1190, 1600, 190, {rot: .02}); }});
+  g.save(); g.filter = "blur(30px)"; g.fillStyle = "rgba(0,0,0,.75)"; g.translate(40, 0); left(); g.fill(); g.restore();
+  fabric(left, {base: "#e6e0d3", light: "255,252,242", dark: "110,100,86", folds: randFolds(7, 0, gap - 100, 0, H, 60, 150, .2, -20),
+    shade: () => { const lg = g.createLinearGradient(0, 0, gap, 0); lg.addColorStop(0, "rgba(40,32,24,.3)"); lg.addColorStop(.45, "rgba(255,246,228,.12)"); lg.addColorStop(1, "rgba(40,32,24,.45)"); g.fillStyle = lg; g.fillRect(0, 0, W, H); },
+    after: () => { emblem(400, 1450, 190, {rot: -.02, church: true}); }});
+  filmGrain(9000, .05);
+  vignette(.45, W/2, H*.55);
+}
+
+// ── 案D 法衣と灯 ─────────────────────
+function drawD(){
+  g.fillStyle = grad([[0, "#120d09"], [1, "#1c140e"]], 0, 1700); g.fillRect(0, 0, W, 1700);
+  soft(() => { for (let i = 0; i < 30; i++){ g.fillStyle = `rgba(${rnd() < .5 ? "0,0,0" : "70,52,36"},${.2 + rnd()*.2})`; g.beginPath(); g.ellipse(rnd()*W, rnd()*1700, 80 + rnd()*200, 60 + rnd()*200, rnd()*3, 0, 7); g.fill(); } }, 8, 6);
+  planks(1640, H, 0, W, "#3a2618", "14,8,4", "200,150,100", 6, 420);
+  g.fillStyle = grad([[0, "rgba(0,0,0,.6)"], [1, "rgba(0,0,0,0)"]], 1640, 1720); g.fillRect(0, 1640, W, 80);
+  // 灯台（奥）と油壺
+  const L = lampStand(1000, 1770, 940, {dir: -1, k: .3});
+  const knob = oilPot(1190, 1800, .9, .3);
+  chain([knob[0], knob[1] + 4], [1000 + 30, 1770 - (940*.27 + 30)], 50, 14);
+  // たたんだ法衣（手前）：折り重ねた層を下から積む
+  const x0 = 170, x1 = 950, yb = 2230, th = 40, nL = 4, yTop = yb - nL*th;
+  g.save(); g.filter = "blur(30px)"; g.fillStyle = "rgba(0,0,0,.8)"; g.beginPath(); g.ellipse((x0 + x1)/2 - 60, yb - 20, 520, 90, 0, 0, 7); g.fill(); g.restore();
+  const topS = () => { g.beginPath(); g.moveTo(x0 + 22, yTop + 6); g.quadraticCurveTo(x0 + 20, yTop - 40, x0 + 92, yTop - 150); g.lineTo(x1 - 80, yTop - 156); g.quadraticCurveTo(x1 - 14, yTop - 40, x1 - 18, yTop + 4); g.closePath(); };
+  fabric(topS, {base: "#d8d0c0", light: "255,244,222", dark: "60,52,42", folds: randFolds(4, x0 + 100, x1 - 100, yTop - 260, yTop + 60, 30, 70, .12, 0),
+    shade: () => { const rg = g.createRadialGradient(L.fx, L.fy, 200, L.fx, L.fy, 1500); rg.addColorStop(0, "rgba(255,200,130,.25)"); rg.addColorStop(1, "rgba(20,14,8,.5)"); g.fillStyle = rg; g.fillRect(0, 0, W, H); },
+    after: () => { emblem((x0 + x1)/2, yTop - 70, 100, {sy: .5, w: 8, col: {sh: "rgba(30,22,12,.5)"}}); }});
+  for (let i = nL - 1; i >= 0; i--){ const y1 = yb - i*th, y0 = y1 - th, d = (i % 2 ? 1 : -1)*(4 + rnd()*8), l = x0 + d + (i === nL - 1 ? 30 : 10), r = x1 + d - (i === nL - 1 ? 24 : 6);
+    const band = () => { g.beginPath(); g.moveTo(l + 14, y0); g.lineTo(r - 14, y0); g.quadraticCurveTo(r + 8, y0 + th*.5, r - 10, y1); g.lineTo(l + 10, y1); g.quadraticCurveTo(l - 8, y0 + th*.5, l + 14, y0); g.closePath(); };
+    const vg = g.createLinearGradient(0, y0, 0, y1); vg.addColorStop(0, "#efe5d0"); vg.addColorStop(.3, "#d2c8b4"); vg.addColorStop(.8, "#8c8273"); vg.addColorStop(1, "#423b31");
+    g.fillStyle = vg; band(); g.fill();
+    const hg = g.createLinearGradient(x0, 0, x1, 0); hg.addColorStop(0, "rgba(10,8,6,.55)"); hg.addColorStop(.7, "rgba(255,210,150,.05)"); hg.addColorStop(1, "rgba(255,200,140,.18)"); g.fillStyle = hg; band(); g.fill();
+    g.save(); band(); g.clip(); for (let k = 0; k < 900; k++){ g.fillStyle = `rgba(${rnd() < .5 ? "40,34,28" : "255,245,225"},${rnd()*.12})`; g.fillRect(l + rnd()*(r - l), y0 + rnd()*th, 2 + rnd()*10, 1 + rnd()*1.5); } g.restore(); }
+  // 卓の上の革紐（ほどけた）
+  g.save(); g.lineCap = "round"; g.lineJoin = "round";
+  const cord = () => { g.beginPath(); g.moveTo(1010, 2300); g.bezierCurveTo(1120, 2260, 1260, 2330, 1200, 2390); g.bezierCurveTo(1140, 2440, 1040, 2400, 1100, 2350); g.bezierCurveTo(1170, 2300, 1320, 2380, 1420, 2440); };
+  g.filter = "blur(6px)"; g.strokeStyle = "rgba(0,0,0,.7)"; g.lineWidth = 26; g.translate(-10, 12); cord(); g.stroke(); g.translate(10, -12);
+  g.filter = "none"; g.strokeStyle = "#4e3019"; g.lineWidth = 20; cord(); g.stroke();
+  g.strokeStyle = "rgba(255,190,120,.35)"; g.lineWidth = 4; g.translate(3, -6); cord(); g.stroke(); g.restore();
+  // 灯の照り（卓と布）
+  g.save(); g.globalCompositeOperation = "soft-light"; glow(L.fx, L.fy, 1600, "rgba(255,170,90,A)", .6); g.restore();
+  filmGrain(10000, .06);
+  vignette(.6, L.fx - 150, H*.55);
+}
+
+({a: drawA, b: drawB, c: drawC, d: drawD})[MODE]();
+document.title = "done";
+</script>
+</body></html>
