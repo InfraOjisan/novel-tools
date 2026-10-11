@@ -314,6 +314,9 @@
         "reasoning_effort": "medium",
         "deadline_sec": 900,
         "max_tokens": 64000
+      },
+      "canon-review": {
+        "reasoning_effort": "medium"
       }
     },
     "idle_timeout_sec": 180,
