@@ -1,6 +1,10 @@
 # novel-tools
 
-生成 AI に小説を書かせるための道具一式です。v1.0（2026-10-12）から、**一つのエンジン（`engine/`）と、テーマから EPUB までを通すアプリ（`studio/`）**になりました。以後の変更は GitHub の issue で管理します（`design/v1.0/ISSUES.md`、`CHANGELOG.md`）。
+生成 AI に小説を書かせるための道具一式と、それで書いたテスト小説・実験の記録です。
+
+> **道具（studio・engine・harness）は [novel_studio](https://github.com/InfraOjisan/novel_studio) に分けて公開しました（2026-10-13）。** 以後の道具の変更はそちらで行います。このリポジトリは作品と実験の記録が中心です。
+
+v1.0（2026-10-12）から、**一つのエンジン（`engine/`）と、テーマから EPUB までを通すアプリ（`studio/`）**になりました。以後の変更は GitHub の issue で管理します（`design/v1.0/ISSUES.md`、`CHANGELOG.md`）。
 
 ## v1.0 の入口
 
