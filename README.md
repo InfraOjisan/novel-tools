@@ -1,5 +1,34 @@
 # novel-tools
 
+生成 AI に小説を書かせるための道具一式です。v1.0（2026-10-12）から、**一つのエンジン（`engine/`）と、テーマから EPUB までを通すアプリ（`studio/`）**になりました。以後の変更は GitHub の issue で管理します（`design/v1.0/ISSUES.md`、`CHANGELOG.md`）。
+
+## v1.0 の入口
+
+| やりたいこと | 使うもの |
+|---|---|
+| 小説を一から書く（テーマ → 企画のコンペ → BRIEF → 執筆 → 校正 → EPUB） | `python3 studio/server.py` → http://127.0.0.1:8780（`studio/README.md`） |
+| 同じことをスクリプトやエージェントから | `python3 studio/cli.py ...`（JSON 入出力） |
+| 自分で書いた BRIEF から作品フォルダを作る | `python3 engine/tools/scaffold.py create brief.json works/<slug>` |
+| Claude Code 以外のハーネスで動かす・どこまでできるか試す | `harness/`（AGENTS.md・KICKOFF.md・試験 L1〜L4） |
+| 費用をかけずに試す | `python3 studio/devtools/mock_openrouter.py` |
+| 回帰テスト | `python3 -m unittest discover -s engine/tests` |
+| v1.0 の考え方 | `design/v1.0/ANALYSIS.md` |
+
+```
+ engine/            ← v1.0 の執筆エンジン（novelctl・scaffold・汎用のプロンプトとテンプレート・テスト）
+ studio/            ← テーマから EPUB までのアプリと CLI
+ harness/           ← 他のハーネス向けの手引きと試験
+ works/<slug>/      ← studio で作った作品（studio.json と、確定後はエンジンの作業場所）
+ design/v1.0/       ← 考察と issue の草稿
+```
+
+役ごとのモデル（既定）：書き手 Claude Haiku 5.5、審査役 GPT-6 Luna Pro、上位モデル（例外処理と校正だけ）Claude Opus 5.5。
+書く・照合するのは安いモデルで何度でも、全体の整合を直すのは上位モデルで一回だけ、止めるかどうかは人。
+
+---
+
+## v1.0 より前の構成（各作品はそれぞれの道具のまま動きます）
+
 Aion 3.5 Mini（OpenRouter 経由）を使って短編小説を自動生成・審査・出版まで進めるためのツールキットです。
 進行役エージェント（claude code / OpenCode など）が AGENTS.md を読んで `novelctl.py` を回す想定で作られています。
 
@@ -8,7 +37,7 @@ Aion 3.5 Mini（OpenRouter 経由）を使って短編小説を自動生成・�
 `Novel_N/` の実プロジェクトは基本的に `Novel_base/` のコピーです。
 
 ```
- Novel_base/        ← テンプレート・雛形（新規プロジェクトはここからコピー）
+ Novel_base/        ← 旧い雛形（v1.0 からは engine/ を使う）
 ├── AGENTS.md       ← 進行役エージェント向けマニュアル
 ├── BRIEF.md        ← 執筆指示書（章立て・伏線配置・結末の方向性）
 ├── config.json     ← 字数・試行回数・モデル設定
