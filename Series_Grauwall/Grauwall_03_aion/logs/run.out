@@ -30,3 +30,125 @@ OK: CANONが審査を通過し、ロックしました（人の確認待ち：`a
 CANONの人間確認待ちです。canon/CANON.md を確認し `approve-canon` を実行してください。
 
 ===== start 2026-10-03T20:25:41 =====
+OK: 第1章 下書き1稿を作成（2010字）→ 次は審査
+OK: 第1章 不合格（1件）→ 書き直し（2稿目）
+OK: 第1章 下書き2稿を作成（2596字）→ 次は審査
+OK: 第1章 合格（2596字）／軽微な指摘1件は記録のみ → chapters/ch01.md に確定 → 次はLEDGER記録
+OK: 第1章 LEDGER記録完了 → 第2章へ
+OK: 第2章 下書き1稿を作成（1534字）→ 次は審査
+OK: 第2章 不合格（1件）→ 書き直し（2稿目）
+OK: 第2章 下書き2稿を作成（2776字）→ 次は審査
+ESCALATE [CALL_FAILED] モデル呼び出し失敗 (rc=1)。stderr: attempt 1: 空の応答（finish_reason=length）
+attempt 2: ApiError: {"code": 504, "message": "Upstream idle timeout exceeded", "metadata": {"error_type": "timeout"}}
+attempt 3: 空の応答（finish_reason=length）
+再試行しても失敗しました。最後のエラー: 空の応答（finish_reason=length）
+
+対応: OPENROUTER_API_KEY・config.json の llm.profiles のモデル名・ネットワークを確認し `resolve` 後に再実行
+
+===== start 2026-10-03T21:32:32 =====
+OK: 第2章 合格（2776字） → chapters/ch02.md に確定 → 次はLEDGER記録
+OK: 第2章 LEDGER記録完了 → 第3章へ
+OK: 第3章 下書き1稿を作成（1785字）→ 次は審査
+OK: 第3章 不合格（1件）→ 書き直し（2稿目）
+OK: 第3章 下書き2稿を作成（2832字）→ 次は審査
+OK: 第3章 合格（2832字）／軽微な指摘1件は記録のみ → chapters/ch03.md に確定 → 次はLEDGER記録
+OK: 第3章 LEDGER記録完了 → 第4章へ
+OK: 第4章 下書き1稿を作成（3188字）→ 次は審査
+OK: 第4章 合格（3188字） → chapters/ch04.md に確定 → 次はLEDGER記録
+OK: 第4章 LEDGER記録完了 → 第5章へ
+OK: 第5章 下書き1稿を作成（2306字）→ 次は審査
+OK: 第5章 不合格（1件）→ 書き直し（2稿目）
+OK: 第5章 下書き2稿を作成（2836字）→ 次は審査
+OK: 第5章 合格（2836字） → chapters/ch05.md に確定 → 次はLEDGER記録
+OK: 第5章 LEDGER記録完了 → 第6章へ
+OK: 第6章 下書き1稿を作成（2687字）→ 次は審査
+OK: 第6章 不合格（2件）→ 書き直し（2稿目）
+OK: 第6章 下書き2稿を作成（2373字）→ 次は審査
+OK: 第6章 不合格（1件）→ 書き直し（3稿目）
+OK: 第6章 下書き3稿を作成（5205字）→ 次は審査
+ESCALATE [CHAPTER_EXHAUSTED] 第6章が3稿で合格しない: [long] 本文が5205字で長い（2500〜5000字）。説明的な部分を削って3000字前後にする。 / [lies] ガズ（蜥蜴人＝亜人）は嘘をつけないが、「……乾いているだけだ」（鱗が燻っている描写の直後）および「……温度を測っている」（尻尾が炎に入ってパチンと音を立てた直後）と、明らかに言い訳としての虚偽を口にしている。 → 亜人が嘘をつけない設定を守るため、ガズの台詞を事実の範囲に留める。例：「……気持ちいい」「問題ない」など、嘘にならない言い回しに変更する。
+対応: work/ch06_feedback.md と work/ch06_verdict_a*.json を確認。人が work/ch06_draft.md を直して `resolve --accept`、または work/ch06_feedback.md を書き換えて `resolve --retry`
+
+===== start 2026-10-04T00:26:05 =====
+OK: 第6章 LEDGER記録完了 → 第7章へ
+OK: 第7章 下書き1稿を作成（1584字）→ 次は審査
+OK: 第7章 不合格（1件）→ 書き直し（2稿目）
+OK: 第7章 下書き2稿を作成（2899字）→ 次は審査
+OK: 第7章 合格（2899字）／軽微な指摘2件は記録のみ → chapters/ch07.md に確定 → 次はLEDGER記録
+OK: 第7章 LEDGER記録完了 → 第8章へ
+OK: 第8章 下書き1稿を作成（2198字）→ 次は審査
+OK: 第8章 不合格（1件）→ 書き直し（2稿目）
+OK: 第8章 下書き2稿を作成（2406字）→ 次は審査
+OK: 第8章 不合格（1件）→ 書き直し（3稿目）
+OK: 第8章 下書き3稿を作成（2935字）→ 次は審査
+OK: 第8章 合格（2935字） → chapters/ch08.md に確定 → 次はLEDGER記録
+OK: 第8章 LEDGER記録完了 → 第9章へ
+OK: 第9章 下書き1稿を作成（2166字）→ 次は審査
+OK: 第9章 不合格（1件）→ 書き直し（2稿目）
+OK: 第9章 下書き2稿を作成（2534字）→ 次は審査
+OK: 第9章 合格（2534字）／軽微な指摘5件は記録のみ → chapters/ch09.md に確定 → 次はLEDGER記録
+OK: 第9章 LEDGER記録完了 → 第10章へ
+OK: 第10章 下書き1稿を作成（13字）→ 次は審査
+OK: 第10章 不合格（2件）→ 書き直し（2稿目）
+OK: 第10章 下書き2稿を作成（1600字）→ 次は審査
+OK: 第10章 不合格（1件）→ 書き直し（3稿目）
+OK: 第10章 下書き3稿を作成（1969字）→ 次は審査
+ESCALATE [CALL_FAILED] モデル呼び出し失敗 (rc=1)。stderr: attempt 1: 空の応答（finish_reason=length）
+attempt 2: 空の応答（finish_reason=length）
+attempt 3: 空の応答（finish_reason=length）
+再試行しても失敗しました。最後のエラー: 空の応答（finish_reason=length）
+
+対応: OPENROUTER_API_KEY・config.json の llm.profiles のモデル名・ネットワークを確認し `resolve` 後に再実行
+
+===== start 2026-10-04T02:17:17 =====
+OK: 第10章 LEDGER記録完了 → 第11章へ
+OK: 第11章 下書き1稿を作成（1334字）→ 次は審査
+OK: 第11章 不合格（2件）→ 書き直し（2稿目）
+OK: 第11章 下書き2稿を作成（2917字）→ 次は審査
+ESCALATE [CALL_FAILED] モデル呼び出し失敗 (rc=1)。stderr: attempt 1: 空の応答（finish_reason=length）
+推論が max_tokens を使い切ったため、推論の上限を 6000 に下げて再試行します
+attempt 2: 空の応答（finish_reason=length）
+推論が max_tokens を使い切ったため、推論の上限を 4000 に下げて再試行します
+attempt 3: 空の応答（finish_reason=length）
+再試行しても失敗しました。最後のエラー: 空の応答（finish_reason=length）
+
+対応: OPENROUTER_API_KEY・config.json の llm.profiles のモデル名・ネットワークを確認し `resolve` 後に再実行
+
+===== start 2026-10-04T03:07:21 =====
+ESCALATE [CALL_FAILED] モデル呼び出し失敗 (rc=1)。stderr: attempt 1: 240秒たっても終わらない（締め切り 240秒・推論38780字・本文0字） → 打ち切って投げ直します
+attempt 2: 240秒たっても終わらない（締め切り 240秒・推論40834字・本文0字） → 打ち切って投げ直します
+attempt 3: 240秒たっても終わらない（締め切り 240秒・推論48710字・本文0字） → 打ち切って投げ直します
+再試行しても失敗しました。最後のエラー: 240秒たっても終わらない（締め切り 240秒・推論48710字・本文0字）
+
+対応: OPENROUTER_API_KEY・config.json の llm.profiles のモデル名・ネットワークを確認し `resolve` 後に再実行
+
+===== start 2026-10-04T03:43:08 =====
+OK: 第11章 LEDGER記録完了 → 第12章へ
+OK: 第12章 下書き1稿を作成（2013字）→ 次は審査
+OK: 第12章 不合格（1件）→ 書き直し（2稿目）
+OK: 第12章 下書き2稿を作成（3229字）→ 次は審査
+OK: 第12章 合格（3229字）／軽微な指摘2件は記録のみ → chapters/ch12.md に確定 → 次はLEDGER記録
+OK: 第12章 LEDGER記録完了 → 第13章へ
+OK: 第13章 下書き1稿を作成（2755字）→ 次は審査
+OK: 第13章 合格（2755字）／軽微な指摘1件は記録のみ → chapters/ch13.md に確定 → 次はLEDGER記録
+OK: 第13章 LEDGER記録完了 → 第14章へ
+OK: 第14章 下書き1稿を作成（1428字）→ 次は審査
+OK: 第14章 不合格（2件）→ 書き直し（2稿目）
+OK: 第14章 下書き2稿を作成（2855字）→ 次は審査
+OK: 第14章 合格（2855字）／軽微な指摘2件は記録のみ → chapters/ch14.md に確定 → 次はLEDGER記録
+OK: 第14章 LEDGER記録完了 → 第15章へ
+OK: 第15章 下書き1稿を作成（1478字）→ 次は審査
+OK: 第15章 不合格（1件）→ 書き直し（2稿目）
+OK: 第15章 下書き2稿を作成（2951字）→ 次は審査
+OK: 第15章 不合格（1件）→ 書き直し（3稿目）
+OK: 第15章 下書き3稿を作成（2953字）→ 次は審査
+OK: 第15章 合格（2953字） → chapters/ch15.md に確定 → 次はLEDGER記録
+OK: 第15章 LEDGER記録完了 → 第16章へ
+OK: 第16章 下書き1稿を作成（1695字）→ 次は審査
+OK: 第16章 不合格（1件）→ 書き直し（2稿目）
+OK: 第16章 下書き2稿を作成（2661字）→ 次は審査
+OK: 第16章 合格（2661字）／軽微な指摘2件は記録のみ → chapters/ch16.md に確定 → 次はLEDGER記録
+OK: 第16章 LEDGER記録完了 → 全章そろった。最終工程へ
+OK: output/final.md を結合（44536字） → 最終審査へ
+ESCALATE [FINAL_REVIEW_FAILED] 最終審査で重大な指摘あり（output/final_report.md 参照）
+対応: 該当章を `reset-chapter N` で巻き戻すか、原稿のまま完成とするなら `resolve --done`
