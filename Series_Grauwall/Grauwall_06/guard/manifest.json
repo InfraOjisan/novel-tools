@@ -27,7 +27,7 @@
  "tools/call_llm.py": "4631d792add29ca96f4bafae50f36b144f4253c87eed85dc2d64baacabc1e0bf",
  "tools/guard.py": "e3a90ba957413e77814f00244996df5dd19cd4990c2e7937b2175eaca82fcf53",
  "tools/inbox_llm.py": "2deccb8353d2d0f34554242e7d9736b1504d5c4d78ba831dbfec29cece9ea16c",
- "tools/make_epub.py": "0fa31d2320d5f559d7e33f04a124a29522afa89510a87d3f8885a13668022724",
+ "tools/make_epub.py": "1c663287dfe13e2e6c9197892d53177fa2d860e07d74e2ef9a2157f43fa99b5d",
  "tools/novelctl.py": "44aff6777e123359e49823ca3047bdcda20c929f271cd9c5251c1902064d7adb",
- "tools/proofread_apply.py": "143bd9911d9b0399956762bc8c5f1db4c356c2aaf74b5dd5804f3ad277130cea"
+ "tools/proofread_apply.py": "b5f53594ea0c40e08f2145e18e23ab9f7260be4e7630c68274fdddf5a87df2b7"
 }
