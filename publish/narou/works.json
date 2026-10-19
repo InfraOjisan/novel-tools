@@ -46,6 +46,12 @@
       "narou_novel_id": 3341587,
       "ncode": "n1921mw",
       "romancer_url": "https://r.voyager.co.jp/epm/e1_703757_11102026174624"
+    },
+    "Grauwall_06": {
+      "title": "白塔の使者",
+      "source": "../../Series_Grauwall/Grauwall_06/output/final_proofread.md",
+      "note": "グラウヴァル第六話（第1〜3章 Claude、第4〜20章 Claude Haiku 5.5 執筆・GPT-6 Luna Pro 審査・Claude 校正）。校正済み版を投稿対象にする。1章＝1話。予約掲載を3回に分けて（第20話で完結）",
+      "narou_novel_id": 3352395
     }
   },
   "notes": {

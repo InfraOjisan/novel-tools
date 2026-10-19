@@ -1,0 +1,168 @@
+{
+  "work": "Grauwall_06",
+  "title": "白塔の使者",
+  "source": "../../Series_Grauwall/Grauwall_06/output/final_proofread.md",
+  "limit_chars": 5000,
+  "episodes": [
+    {
+      "seq": 1,
+      "file": "001.txt",
+      "subtitle": "第1章　裁きの日",
+      "chars": 3272,
+      "chars_no_newline": 3110,
+      "sha1": "2abe0076f11948a9ed651c0796a8afc63d0ae6d8"
+    },
+    {
+      "seq": 2,
+      "file": "002.txt",
+      "subtitle": "第2章　白い法衣",
+      "chars": 2986,
+      "chars_no_newline": 2838,
+      "sha1": "7bf88b53c930652a509688c39fa0a90c676c79d8"
+    },
+    {
+      "seq": 3,
+      "file": "003.txt",
+      "subtitle": "第3章　南門",
+      "chars": 2708,
+      "chars_no_newline": 2556,
+      "sha1": "d591d0f89e044f50333f7b1556a7c556b359c885"
+    },
+    {
+      "seq": 4,
+      "file": "004.txt",
+      "subtitle": "第4章　南街道",
+      "chars": 2817,
+      "chars_no_newline": 2678,
+      "sha1": "5f3cdbcb001de3e18079d5d1c0cdad0c479aea2c"
+    },
+    {
+      "seq": 5,
+      "file": "005.txt",
+      "subtitle": "第5章　街道の宿",
+      "chars": 2780,
+      "chars_no_newline": 2655,
+      "sha1": "aefe4b16e0a532efdc7120e669ce23ab83c701da"
+    },
+    {
+      "seq": 6,
+      "file": "006.txt",
+      "subtitle": "第6章　石橋の宿",
+      "chars": 2718,
+      "chars_no_newline": 2596,
+      "sha1": "03618faee5a2ca6567504be30284fa61c32f5103"
+    },
+    {
+      "seq": 7,
+      "file": "007.txt",
+      "subtitle": "第7章　川港",
+      "chars": 2790,
+      "chars_no_newline": 2700,
+      "sha1": "aca50f51353eb601315baa570c88398f86a2b869"
+    },
+    {
+      "seq": 8,
+      "file": "008.txt",
+      "subtitle": "第8章　川港の夜",
+      "chars": 2581,
+      "chars_no_newline": 2506,
+      "sha1": "7a0fe202b981b541c1a07862e66c6ceff6e352f4"
+    },
+    {
+      "seq": 9,
+      "file": "009.txt",
+      "subtitle": "第9章　襲撃",
+      "chars": 2775,
+      "chars_no_newline": 2669,
+      "sha1": "903a5904055a703053c8e3b4a7f5fa4528420311"
+    },
+    {
+      "seq": 10,
+      "file": "010.txt",
+      "subtitle": "第10章　舟",
+      "chars": 2919,
+      "chars_no_newline": 2826,
+      "sha1": "171f2c35f02bf12f08142399fcd0ce6bbdac5680"
+    },
+    {
+      "seq": 11,
+      "file": "011.txt",
+      "subtitle": "第11章　川をのぼる",
+      "chars": 2842,
+      "chars_no_newline": 2741,
+      "sha1": "063ad9c53d6bb1bd159113e55973258a327c75f3"
+    },
+    {
+      "seq": 12,
+      "file": "012.txt",
+      "subtitle": "第12章　柳の岸",
+      "chars": 2953,
+      "chars_no_newline": 2815,
+      "sha1": "84e9c6b54a969f35a53a37dcd3daa548a28fb916"
+    },
+    {
+      "seq": 13,
+      "file": "013.txt",
+      "subtitle": "第13章　使者の顔",
+      "chars": 3528,
+      "chars_no_newline": 3306,
+      "sha1": "9b21b67e1f6f7c47fcc23a2b073491ebc7c2e7d3"
+    },
+    {
+      "seq": 14,
+      "file": "014.txt",
+      "subtitle": "第14章　預けもの",
+      "chars": 2838,
+      "chars_no_newline": 2680,
+      "sha1": "737a269a188f5a587e15ad5d83f66e76897975b6"
+    },
+    {
+      "seq": 15,
+      "file": "015.txt",
+      "subtitle": "第15章　山道",
+      "chars": 2879,
+      "chars_no_newline": 2762,
+      "sha1": "1d4f9583b2242ebb3dddba2e6e842b81b4c428ec"
+    },
+    {
+      "seq": 16,
+      "file": "016.txt",
+      "subtitle": "第16章　選ぶ",
+      "chars": 3132,
+      "chars_no_newline": 2995,
+      "sha1": "45111d9510b0fa8e98c224be39f3840aecf9b6bf"
+    },
+    {
+      "seq": 17,
+      "file": "017.txt",
+      "subtitle": "第17章　白塔の門",
+      "chars": 2719,
+      "chars_no_newline": 2603,
+      "sha1": "f9aacdee9841d2ef2081340e28f289137c9b3351"
+    },
+    {
+      "seq": 18,
+      "file": "018.txt",
+      "subtitle": "第18章　帰り道",
+      "chars": 2928,
+      "chars_no_newline": 2831,
+      "sha1": "5835c246fde1b077140be53f392d20c9412298a8"
+    },
+    {
+      "seq": 19,
+      "file": "019.txt",
+      "subtitle": "第19章　川港ふたたび",
+      "chars": 2710,
+      "chars_no_newline": 2638,
+      "sha1": "e217f92a11d414e496f240adac479b6e75e50bc3"
+    },
+    {
+      "seq": 20,
+      "file": "020.txt",
+      "subtitle": "第20章　帰り着く場所",
+      "chars": 2785,
+      "chars_no_newline": 2680,
+      "sha1": "4ec4c1c8054474c9de3256b479833c1be9704a00"
+    }
+  ]
+}
