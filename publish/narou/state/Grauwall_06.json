@@ -1,0 +1,125 @@
+{
+  "work": "Grauwall_06",
+  "episodes": {
+    "1": {
+      "subtitle": "第1章　裁きの日",
+      "draftId": "9364386",
+      "status": "reserved",
+      "reserve_at": "2026-10-20 19:00"
+    },
+    "2": {
+      "subtitle": "第2章　白い法衣",
+      "draftId": "9364390",
+      "status": "reserved",
+      "reserve_at": "2026-10-20 19:10"
+    },
+    "3": {
+      "subtitle": "第3章　南門",
+      "draftId": "9364391",
+      "status": "reserved",
+      "reserve_at": "2026-10-20 19:20"
+    },
+    "4": {
+      "subtitle": "第4章　南街道",
+      "draftId": "9364392",
+      "status": "reserved",
+      "reserve_at": "2026-10-20 19:30"
+    },
+    "5": {
+      "subtitle": "第5章　街道の宿",
+      "draftId": "9364394",
+      "status": "reserved",
+      "reserve_at": "2026-10-20 19:40"
+    },
+    "6": {
+      "subtitle": "第6章　石橋の宿",
+      "draftId": "9364395",
+      "status": "reserved",
+      "reserve_at": "2026-10-20 19:50"
+    },
+    "7": {
+      "subtitle": "第7章　川港",
+      "draftId": "9364396",
+      "status": "reserved",
+      "reserve_at": "2026-10-20 20:00"
+    },
+    "8": {
+      "subtitle": "第8章　川港の夜",
+      "draftId": "9364397",
+      "status": "reserved",
+      "reserve_at": "2026-10-21 19:00"
+    },
+    "9": {
+      "subtitle": "第9章　襲撃",
+      "draftId": "9364399",
+      "status": "reserved",
+      "reserve_at": "2026-10-21 19:10"
+    },
+    "10": {
+      "subtitle": "第10章　舟",
+      "draftId": "9364400",
+      "status": "reserved",
+      "reserve_at": "2026-10-21 19:20"
+    },
+    "11": {
+      "subtitle": "第11章　川をのぼる",
+      "draftId": "9364401",
+      "status": "reserved",
+      "reserve_at": "2026-10-21 19:30"
+    },
+    "12": {
+      "subtitle": "第12章　柳の岸",
+      "draftId": "9364402",
+      "status": "reserved",
+      "reserve_at": "2026-10-21 19:40"
+    },
+    "13": {
+      "subtitle": "第13章　使者の顔",
+      "draftId": "9364403",
+      "status": "reserved",
+      "reserve_at": "2026-10-21 19:50"
+    },
+    "14": {
+      "subtitle": "第14章　預けもの",
+      "draftId": "9364404",
+      "status": "reserved",
+      "reserve_at": "2026-10-21 20:00"
+    },
+    "15": {
+      "subtitle": "第15章　山道",
+      "draftId": "9364405",
+      "status": "reserved",
+      "reserve_at": "2026-10-22 19:00"
+    },
+    "16": {
+      "subtitle": "第16章　選ぶ",
+      "draftId": "9364406",
+      "status": "reserved",
+      "reserve_at": "2026-10-22 19:10"
+    },
+    "17": {
+      "subtitle": "第17章　白塔の門",
+      "draftId": "9364409",
+      "status": "reserved",
+      "reserve_at": "2026-10-22 19:20"
+    },
+    "18": {
+      "subtitle": "第18章　帰り道",
+      "draftId": "9364410",
+      "status": "reserved",
+      "reserve_at": "2026-10-22 19:30"
+    },
+    "19": {
+      "subtitle": "第19章　川港ふたたび",
+      "draftId": "9364412",
+      "status": "reserved",
+      "reserve_at": "2026-10-22 19:40"
+    },
+    "20": {
+      "subtitle": "第20章　帰り着く場所",
+      "draftId": "9364413",
+      "status": "reserved",
+      "reserve_at": "2026-10-22 19:50"
+    }
+  }
+}

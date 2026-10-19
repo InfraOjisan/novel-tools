@@ -100,3 +100,10 @@ Romancer 側の公開（EPUB のアップロード〜公開URLの記録）は `p
 - 下書き作品の「作品設定」には確認画面がなく、「編集[実行]」で直接保存される。保存後は作品詳細に移る。移らなければ保存されていないので、開き直して値を確かめる。
 - 結果は `state/<作品>.json` に記録する(draftId と状態)。
 - 第3話(2026-10-05)で使った速い方法：下書きは `/draftepisode/input/ncode/<ID>/` を fetch して `csrf_onetimepass` を取り、`/draftepisode/add/ncode/<ID>/` に FormData(subtitle・novel・preface・postscript・csrf_onetimepass)を POST する。公開は各下書きの詳細画面で、見えている「投稿」→「投稿[確認]」→「投稿[実行]」を文字で探して押し、「投稿が完了しました」を確かめる(第2話以降はモーダルに割り込み投稿・完結設定の欄が増え、ボタンの位置がずれるので座標では押さない)。最終話は「このエピソードで完結」に印を付ける。
+
+### 予約掲載（第6回 2026-10-19 で実施した手順。Claude in Chrome）
+- 本文は GitHub を経由せず、なろうのページに一時的な `<input type=file>` を足して `out/<作品>/*.txt` と `manifest.json` を読み込み、SHA-1 を照合してから `/draftepisode/add/` に POST した（push できない環境向け）。
+- 予約は各下書きの詳細画面で「投稿」→ 予約掲載「する」→ 投稿日（jQuery UI の datepicker。`$(el).datepicker('setDate', new Date(...))`、書式 yy/mm/dd）・時（0〜23）・分（10分刻み）→「投稿[確認]」で確認画面の日時を文字で照合 →「投稿[実行]」→「投稿が完了しました」。最終話は確認画面の「完結設定　このエピソードで完結」を確かめてから実行。
+- 内部では `GET /draftepisode/postconfirmapi/?draftepisodeid=…&reserve=on&reserve_date=YYYY/MM/DD&reserve_hour=H&reserve_minutes=M&end=…` → `POST /draftepisode/postapi/`。
+- 作品設定の注意：「AI利用に関する備考」は記号を含むと100字より手前で弾かれる（約70字で不可、約50字で可）。自由キーワードの「AI直接使用」は自由入力では消されるが、AI利用状況「直接使用」を選ぶと自動で付く。
+- 公開前でも作品詳細ページの HTML に Nコードが出る（第6回は n2730mx）。シリーズ（S9023K）への追加は公開後でないと候補に出ない。
