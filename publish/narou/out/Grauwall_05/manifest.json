@@ -1,0 +1,104 @@
+{
+  "work": "Grauwall_05",
+  "title": "隊長の非番",
+  "source": "../../Series_Grauwall/Grauwall_05/output/final.md",
+  "limit_chars": 5000,
+  "episodes": [
+    {
+      "seq": 1,
+      "file": "001.txt",
+      "subtitle": "第1章　留め金のない外套",
+      "chars": 2649,
+      "chars_no_newline": 2511,
+      "sha1": "06f7351afcaf9b733da97f94aeddb521fa460291"
+    },
+    {
+      "seq": 2,
+      "file": "002.txt",
+      "subtitle": "第2章　帳場の小僧",
+      "chars": 2683,
+      "chars_no_newline": 2527,
+      "sha1": "512003a7b3e28c2ec92dd0807e5f4435d2bb12dd"
+    },
+    {
+      "seq": 3,
+      "file": "003.txt",
+      "subtitle": "第3章　卵一つまで",
+      "chars": 2832,
+      "chars_no_newline": 2665,
+      "sha1": "a6aac19381e62e7f329784c683084015c7b01db6"
+    },
+    {
+      "seq": 4,
+      "file": "004.txt",
+      "subtitle": "第4章　令状のない家探し",
+      "chars": 2689,
+      "chars_no_newline": 2517,
+      "sha1": "d51d1d7be3f26d08ee37aa68f61c82031716e75e"
+    },
+    {
+      "seq": 5,
+      "file": "005.txt",
+      "subtitle": "第5章　非番の女",
+      "chars": 2898,
+      "chars_no_newline": 2726,
+      "sha1": "6921d57d447588fd14c20a33fb961c8081e2d43f"
+    },
+    {
+      "seq": 6,
+      "file": "006.txt",
+      "subtitle": "第6章　前の組合長の夜",
+      "chars": 2880,
+      "chars_no_newline": 2714,
+      "sha1": "9962ca592c4d2118aa77bed62e917e2f0b23ff7e"
+    },
+    {
+      "seq": 7,
+      "file": "007.txt",
+      "subtitle": "第7章　古い帳面",
+      "chars": 2389,
+      "chars_no_newline": 2253,
+      "sha1": "a0391df67ef280b153b652276fdfc53f474fe69f"
+    },
+    {
+      "seq": 8,
+      "file": "008.txt",
+      "subtitle": "第8章　帳面は破らない",
+      "chars": 2548,
+      "chars_no_newline": 2400,
+      "sha1": "0efae421aac35e8c1f9df2679b620a3172baeb2c"
+    },
+    {
+      "seq": 9,
+      "file": "009.txt",
+      "subtitle": "第9章　藁の下",
+      "chars": 3114,
+      "chars_no_newline": 2942,
+      "sha1": "d8df939fdec19cd08ba66fb4951e49c658e4b27b"
+    },
+    {
+      "seq": 10,
+      "file": "010.txt",
+      "subtitle": "第10章　二十三年前の朝",
+      "chars": 2801,
+      "chars_no_newline": 2621,
+      "sha1": "0ce49a1c6993550aef8855c586eb5b54def9555b"
+    },
+    {
+      "seq": 11,
+      "file": "011.txt",
+      "subtitle": "第11章　一行",
+      "chars": 3321,
+      "chars_no_newline": 3095,
+      "sha1": "5b55983b36a6a8492e9ee5f9fa7b069ae8cd164e"
+    },
+    {
+      "seq": 12,
+      "file": "012.txt",
+      "subtitle": "第12章　隊長の非番",
+      "chars": 2575,
+      "chars_no_newline": 2407,
+      "sha1": "e88f4890842daa310be347055e71dcc9b8489db3"
+    }
+  ]
+}

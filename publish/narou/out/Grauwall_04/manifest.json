@@ -1,0 +1,80 @@
+{
+  "work": "Grauwall_04",
+  "title": "豆のスープ",
+  "source": "../../Series_Grauwall/Grauwall_04/output/final.md",
+  "limit_chars": 5000,
+  "episodes": [
+    {
+      "seq": 1,
+      "file": "001.txt",
+      "subtitle": "第1章　豆のスープ",
+      "chars": 2794,
+      "chars_no_newline": 2662,
+      "sha1": "3e4e22404fcafd8ad03557e3588da50510386671"
+    },
+    {
+      "seq": 2,
+      "file": "002.txt",
+      "subtitle": "第2章　触れ書き",
+      "chars": 3786,
+      "chars_no_newline": 3579,
+      "sha1": "784619ec353e6eca7cea82c4a85ec37d3dcc5908"
+    },
+    {
+      "seq": 3,
+      "file": "003.txt",
+      "subtitle": "第3章　衣装箱",
+      "chars": 3050,
+      "chars_no_newline": 2878,
+      "sha1": "7e79ef3ca4cebc2c9ccdd4e4293f03b518bcf259"
+    },
+    {
+      "seq": 4,
+      "file": "004.txt",
+      "subtitle": "第4章　看板の人形",
+      "chars": 2903,
+      "chars_no_newline": 2721,
+      "sha1": "85bd8ea3a8e9383a5f7778814bd8e7ab82ed9591"
+    },
+    {
+      "seq": 5,
+      "file": "005.txt",
+      "subtitle": "第5章　組合長の勘定",
+      "chars": 3419,
+      "chars_no_newline": 3235,
+      "sha1": "f06abff63ecef3277d36aba3d78fec3d504459ae"
+    },
+    {
+      "seq": 6,
+      "file": "006.txt",
+      "subtitle": "第6章　問いで返す",
+      "chars": 2981,
+      "chars_no_newline": 2797,
+      "sha1": "4bc3b4f823b6d34e8893dd76fb22de775069564f"
+    },
+    {
+      "seq": 7,
+      "file": "007.txt",
+      "subtitle": "第7章　稽古",
+      "chars": 2812,
+      "chars_no_newline": 2630,
+      "sha1": "2420b9a1304a15332f95329be511a81d9cb55de9"
+    },
+    {
+      "seq": 8,
+      "file": "008.txt",
+      "subtitle": "第8章　頭数改め",
+      "chars": 3302,
+      "chars_no_newline": 3108,
+      "sha1": "2ec2d861847f6d9a4f3ee9e4ee540b479ef88335"
+    },
+    {
+      "seq": 9,
+      "file": "009.txt",
+      "subtitle": "第9章　冬の終わり",
+      "chars": 2741,
+      "chars_no_newline": 2581,
+      "sha1": "05117d802881cf170246a2acd8f069ea72813189"
+    }
+  ]
+}

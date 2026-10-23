@@ -1,0 +1,92 @@
+{
+ "work": "Grauwall_07",
+ "narou_novel_id": 3357287,
+ "ncode": "n7622mx",
+ "status": "reserved",
+ "episodes": [
+  {
+   "seq": 1,
+   "draftId": 9415841,
+   "reserved_at": "2026-10-24 19:00",
+   "end": false
+  },
+  {
+   "seq": 2,
+   "draftId": 9415842,
+   "reserved_at": "2026-10-24 19:10",
+   "end": false
+  },
+  {
+   "seq": 3,
+   "draftId": 9415843,
+   "reserved_at": "2026-10-24 19:20",
+   "end": false
+  },
+  {
+   "seq": 4,
+   "draftId": 9415844,
+   "reserved_at": "2026-10-24 19:30",
+   "end": false
+  },
+  {
+   "seq": 5,
+   "draftId": 9415845,
+   "reserved_at": "2026-10-24 19:40",
+   "end": false
+  },
+  {
+   "seq": 6,
+   "draftId": 9415846,
+   "reserved_at": "2026-10-24 19:50",
+   "end": false
+  },
+  {
+   "seq": 7,
+   "draftId": 9415847,
+   "reserved_at": "2026-10-24 20:00",
+   "end": false
+  },
+  {
+   "seq": 8,
+   "draftId": 9415848,
+   "reserved_at": "2026-10-26 19:00",
+   "end": false
+  },
+  {
+   "seq": 9,
+   "draftId": 9415849,
+   "reserved_at": "2026-10-26 19:10",
+   "end": false
+  },
+  {
+   "seq": 10,
+   "draftId": 9415850,
+   "reserved_at": "2026-10-26 19:20",
+   "end": false
+  },
+  {
+   "seq": 11,
+   "draftId": 9415851,
+   "reserved_at": "2026-10-26 19:30",
+   "end": false
+  },
+  {
+   "seq": 12,
+   "draftId": 9415852,
+   "reserved_at": "2026-10-26 19:40",
+   "end": false
+  },
+  {
+   "seq": 13,
+   "draftId": 9415853,
+   "reserved_at": "2026-10-26 19:50",
+   "end": false
+  },
+  {
+   "seq": 14,
+   "draftId": 9415854,
+   "reserved_at": "2026-10-26 20:00",
+   "end": true
+  }
+ ]
+}
