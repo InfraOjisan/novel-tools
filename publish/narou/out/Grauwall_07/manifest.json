@@ -1,0 +1,120 @@
+{
+  "work": "Grauwall_07",
+  "title": "祝福の日",
+  "source": "../../Series_Grauwall/Grauwall_07/output/final_proofread.md",
+  "limit_chars": 5000,
+  "episodes": [
+    {
+      "seq": 1,
+      "file": "001.txt",
+      "subtitle": "第1章　樽の札",
+      "chars": 2801,
+      "chars_no_newline": 2679,
+      "sha1": "48b17cd906a06e82bee0f8607663937a087c69d9"
+    },
+    {
+      "seq": 2,
+      "file": "002.txt",
+      "subtitle": "第2章　木札の壺",
+      "chars": 2757,
+      "chars_no_newline": 2645,
+      "sha1": "b348b3db2b852d099670a2524ea6cce88368ab3a"
+    },
+    {
+      "seq": 3,
+      "file": "003.txt",
+      "subtitle": "第3章　行列の道",
+      "chars": 2570,
+      "chars_no_newline": 2449,
+      "sha1": "0d58d799db96b4686e7161628c3c268be619e908"
+    },
+    {
+      "seq": 4,
+      "file": "004.txt",
+      "subtitle": "第4章　上町の朝",
+      "chars": 2536,
+      "chars_no_newline": 2427,
+      "sha1": "b889193ae111ea918a39dece8a591b22cb23bb86"
+    },
+    {
+      "seq": 5,
+      "file": "005.txt",
+      "subtitle": "第5章　雨の日の登録",
+      "chars": 2801,
+      "chars_no_newline": 2674,
+      "sha1": "515c4853232825fe52322bb3859a3cade4b4a38a"
+    },
+    {
+      "seq": 6,
+      "file": "006.txt",
+      "subtitle": "第6章　割符",
+      "chars": 2514,
+      "chars_no_newline": 2383,
+      "sha1": "a7d5fb8767502ecb38bf89c943d65db39ff8fd63"
+    },
+    {
+      "seq": 7,
+      "file": "007.txt",
+      "subtitle": "第7章　倉の前",
+      "chars": 2836,
+      "chars_no_newline": 2697,
+      "sha1": "7daaaf9cf612b1a3b28daf7c88f96f213b221176"
+    },
+    {
+      "seq": 8,
+      "file": "008.txt",
+      "subtitle": "第8章　城壁の歌",
+      "chars": 2580,
+      "chars_no_newline": 2446,
+      "sha1": "3b1a93ae0584881646fbb8abf5b1acd1f3b88087"
+    },
+    {
+      "seq": 9,
+      "file": "009.txt",
+      "subtitle": "第9章　三本の釘",
+      "chars": 2648,
+      "chars_no_newline": 2511,
+      "sha1": "ecf84691858a35c375c8cb421fad5e336aa75cb8"
+    },
+    {
+      "seq": 10,
+      "file": "010.txt",
+      "subtitle": "第10章　推挙者の欄",
+      "chars": 2701,
+      "chars_no_newline": 2559,
+      "sha1": "a4b1ac5a8a174c4ac88e5e7ec5a6c1fea1455e48"
+    },
+    {
+      "seq": 11,
+      "file": "011.txt",
+      "subtitle": "第11章　祝福の日の朝",
+      "chars": 2541,
+      "chars_no_newline": 2424,
+      "sha1": "f6b16a205cea49866811803885ef9a6f0f4bb817"
+    },
+    {
+      "seq": 12,
+      "file": "012.txt",
+      "subtitle": "第12章　捧げ物",
+      "chars": 2628,
+      "chars_no_newline": 2525,
+      "sha1": "bd42a3eb8378034d6a762e97643c8d2362917183"
+    },
+    {
+      "seq": 13,
+      "file": "013.txt",
+      "subtitle": "第13章　客",
+      "chars": 2505,
+      "chars_no_newline": 2367,
+      "sha1": "fbe3b0621c2034b37bd5ccfd5b9bcece866e9653"
+    },
+    {
+      "seq": 14,
+      "file": "014.txt",
+      "subtitle": "第14章　祝福の日",
+      "chars": 2568,
+      "chars_no_newline": 2429,
+      "sha1": "2472d61449f254f2f84e7b927fd1f00e1992e629"
+    }
+  ]
+}

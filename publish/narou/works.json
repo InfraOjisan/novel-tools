@@ -1,63 +1,71 @@
 {
-  "limit_chars": 5000,
-  "works": {
-    "Novel_1": {
-      "title": "銀の川をのぼる",
-      "source": "../../Novel_1/output/final_proofread.md",
-      "note": "校正済み版(final_proofread.md)を投稿対象にする。narou_ncodeは作品作成後にN〇〇〇〇〇〇形式で記入",
-      "narou_novel_id": 3332261,
-      "ncode": "n2594mv"
-    },
-    "Novel_3": {
-      "title": "夜啼きの涙",
-      "source": "../../Series_Grauwall/Grauwall_01/output/final.md",
-      "note": "1章が5000字超のため、場面区切り(＊)で前編/後編に分割する",
-      "narou_novel_id": 3332262,
-      "ncode": "n2595mv"
-    },
-    "Grauwall_02": {
-      "title": "新しい組合長",
-      "source": "../../Series_Grauwall/Grauwall_02/output/final_proofread.md",
-      "note": "グラウヴァル第二話。校正済み版を投稿対象にする。1章＝1話（各章5000字以内のため分割なし）。narou_novel_id は作品作成後に記入",
-      "narou_novel_id": 3333578,
-      "ncode": "n3911mv",
-      "romancer_url": "https://r.voyager.co.jp/epm/e1_701010_03102026015640"
-    },
-    "Grauwall_03": {
-      "title": "北街道の白い影",
-      "source": "../../Series_Grauwall/Grauwall_03_aion/output/final_proofread.md",
-      "note": "グラウヴァル第三話（Aion 3.5 mini 執筆・Claude 校正）。校正済み版を投稿対象にする。1章＝1話（各章5000字以内のため分割なし）",
-      "narou_novel_id": 3337006,
-      "romancer_url": "https://r.voyager.co.jp/epm/e1_701855_05102026223739",
-      "ncode": "n7339mv"
-    },
-    "Grauwall_04": {
-      "title": "豆のスープ",
-      "source": "../../Series_Grauwall/Grauwall_04/output/final.md",
-      "note": "グラウヴァル第四話（Claude執筆）。1章＝1話。予約掲載 2026-10-10 07:00 から6時間おき（第9話で完結）",
-      "narou_novel_id": 3341586,
-      "ncode": "n1920mw",
-      "romancer_url": "https://r.voyager.co.jp/epm/e1_703455_10102026033027"
-    },
-    "Grauwall_05": {
-      "title": "隊長の非番",
-      "source": "../../Series_Grauwall/Grauwall_05/output/final.md",
-      "note": "グラウヴァル第五話（Claude執筆）。1章＝1話。予約掲載 2026-10-11 10:00 から6時間おき（第12話で完結）",
-      "narou_novel_id": 3341587,
-      "ncode": "n1921mw",
-      "romancer_url": "https://r.voyager.co.jp/epm/e1_703757_11102026174624"
-    },
-    "Grauwall_06": {
-      "title": "白塔の使者",
-      "source": "../../Series_Grauwall/Grauwall_06/output/final_proofread.md",
-      "note": "グラウヴァル第六話（第1〜3章 Claude、第4〜20章 Claude Haiku 5.5 執筆・GPT-6 Luna Pro 審査・Claude 校正）。校正済み版。1章＝1話。予約掲載を3回に分けて：2026-10-20／21／22 各19:00〜（10分おき、第1〜7話／第8〜14話／第15〜20話、第20話で完結）",
-      "narou_novel_id": 3352395,
-      "ncode": "n2730mx",
-      "romancer_url": "https://r.voyager.co.jp/epm/e1_706712_19102026212739"
-    }
+ "limit_chars": 5000,
+ "works": {
+  "Novel_1": {
+   "title": "銀の川をのぼる",
+   "source": "../../Novel_1/output/final_proofread.md",
+   "note": "校正済み版(final_proofread.md)を投稿対象にする。narou_ncodeは作品作成後にN〇〇〇〇〇〇形式で記入",
+   "narou_novel_id": 3332261,
+   "ncode": "n2594mv"
   },
-  "notes": {
-    "id_meaning": "narou_novel_idはユーザページ(usernovelmanage)のURLに出る作品ID(数字)。Nコードではない",
-    "stray_empty_draft": "3331427 は空の下書き「銀の川をのぼる」(今回は使用しない。不要なら人間が削除)"
+  "Novel_3": {
+   "title": "夜啼きの涙",
+   "source": "../../Series_Grauwall/Grauwall_01/output/final.md",
+   "note": "1章が5000字超のため、場面区切り(＊)で前編/後編に分割する",
+   "narou_novel_id": 3332262,
+   "ncode": "n2595mv"
+  },
+  "Grauwall_02": {
+   "title": "新しい組合長",
+   "source": "../../Series_Grauwall/Grauwall_02/output/final_proofread.md",
+   "note": "グラウヴァル第二話。校正済み版を投稿対象にする。1章＝1話（各章5000字以内のため分割なし）。narou_novel_id は作品作成後に記入",
+   "narou_novel_id": 3333578,
+   "ncode": "n3911mv",
+   "romancer_url": "https://r.voyager.co.jp/epm/e1_701010_03102026015640"
+  },
+  "Grauwall_03": {
+   "title": "北街道の白い影",
+   "source": "../../Series_Grauwall/Grauwall_03_aion/output/final_proofread.md",
+   "note": "グラウヴァル第三話（Aion 3.5 mini 執筆・Claude 校正）。校正済み版を投稿対象にする。1章＝1話（各章5000字以内のため分割なし）",
+   "narou_novel_id": 3337006,
+   "romancer_url": "https://r.voyager.co.jp/epm/e1_701855_05102026223739",
+   "ncode": "n7339mv"
+  },
+  "Grauwall_04": {
+   "title": "豆のスープ",
+   "source": "../../Series_Grauwall/Grauwall_04/output/final.md",
+   "note": "グラウヴァル第四話（Claude執筆）。1章＝1話。予約掲載 2026-10-10 07:00 から6時間おき（第9話で完結）",
+   "narou_novel_id": 3341586,
+   "ncode": "n1920mw",
+   "romancer_url": "https://r.voyager.co.jp/epm/e1_703455_10102026033027"
+  },
+  "Grauwall_05": {
+   "title": "隊長の非番",
+   "source": "../../Series_Grauwall/Grauwall_05/output/final.md",
+   "note": "グラウヴァル第五話（Claude執筆）。1章＝1話。予約掲載 2026-10-11 10:00 から6時間おき（第12話で完結）",
+   "narou_novel_id": 3341587,
+   "ncode": "n1921mw",
+   "romancer_url": "https://r.voyager.co.jp/epm/e1_703757_11102026174624"
+  },
+  "Grauwall_06": {
+   "title": "白塔の使者",
+   "source": "../../Series_Grauwall/Grauwall_06/output/final_proofread.md",
+   "note": "グラウヴァル第六話（第1〜3章 Claude、第4〜20章 Claude Haiku 5.5 執筆・GPT-6 Luna Pro 審査・Claude 校正）。校正済み版。1章＝1話。予約掲載を3回に分けて：2026-10-20／21／22 各19:00〜（10分おき、第1〜7話／第8〜14話／第15〜20話、第20話で完結）",
+   "narou_novel_id": 3352395,
+   "ncode": "n2730mx",
+   "romancer_url": "https://r.voyager.co.jp/epm/e1_706712_19102026212739"
+  },
+  "Grauwall_07": {
+   "title": "祝福の日",
+   "source": "../../Series_Grauwall/Grauwall_07/output/final_proofread.md",
+   "note": "グラウヴァル第七話（全14章 Claude 執筆・GPT-6 Luna／Gemini 3.8 Flash 監査・Claude 校正）。校正済み版。1章＝1話。",
+   "narou_novel_id": null,
+   "ncode": "",
+   "romancer_url": ""
   }
+ },
+ "notes": {
+  "id_meaning": "narou_novel_idはユーザページ(usernovelmanage)のURLに出る作品ID(数字)。Nコードではない",
+  "stray_empty_draft": "3331427 は空の下書き「銀の川をのぼる」(今回は使用しない。不要なら人間が削除)"
+ }
 }
