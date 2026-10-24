@@ -259,10 +259,7 @@
   "app_title": "novelctl",
   "app_url": "https://localhost/novelctl",
   "api_key_env": [
-   "NOVEL_PROVIDER_APIKEY",
-   "NOVEL_LLM_API_KEY",
-   "OPENROUTER_API_KEY",
-   "HERMES_CUSTOM_OPENROUTER_API_KEY"
+   "OPENROUTER_API_KEY"
   ],
   "model_env": "NOVEL_MODEL",
   "retries": 3,
@@ -316,7 +313,8 @@
   "idle_timeout_sec": 180,
   "_comment_deadline": "deadline_sec：1回の呼び出しの壁時計の締め切り（本文が出始めていれば1.5倍まで待つ）。Aion は推論の量の指定に従わず、回ごとに93〜283秒・ときに20分以上暴走するため、待つより打ち切って投げ直す。ab_reasoning/RESULTS.md 参照。2026-10-04",
   "model_env_roles": [],
-  "_comment_reviewer": "2026-10-11（プロデューサー決定）：審査役（CANON審査・章の審査＝CANONとの整合・矛盾・誤字・記録・最終審査）を Aion から Claude Haiku 5.5 に替えた。OpenRouter の models 配列で GPT-6 Luna Pro に自動で切り替わる。どちらも入力100万トークンあたり0.1ドル・出力0.5ドル（Aion は0.7／1.4）。.env の NOVEL_MODEL は model_env_roles（書き手と磨き）にだけ効く。"
+  "_comment_reviewer": "2026-10-11（プロデューサー決定）：審査役（CANON審査・章の審査＝CANONとの整合・矛盾・誤字・記録・最終審査）を Aion から Claude Haiku 5.5 に替えた。OpenRouter の models 配列で GPT-6 Luna Pro に自動で切り替わる。どちらも入力100万トークンあたり0.1ドル・出力0.5ドル（Aion は0.7／1.4）。.env の NOVEL_MODEL は model_env_roles（書き手と磨き）にだけ効く。",
+  "_comment_provider": "2026-10-24：リポジトリ直下の .env は OpenCode Go 用（NOVEL_PROVIDER_APIKEY と NOVEL_LLM_BASE_URL）。Aion Mini は OpenRouter にしかないので、第8回は OpenRouter のキーだけを使う（.env に OPENROUTER_API_KEY=sk-or-... を足す）。NOVEL_PROVIDER_APIKEY は読まない。"
  },
  "polisher_cmd": [
   "python3",
