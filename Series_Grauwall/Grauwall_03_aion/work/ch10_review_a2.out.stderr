@@ -1,0 +1,3 @@
+attempt 1: 空の応答（finish_reason=length）
+attempt 2: 空の応答（finish_reason=length）
+usage: in=16778 out=4365 reasoning_chars=13523 content_chars=69 cost=0.00918668 sec=72 model=aion-labs/aion-3.5-mini

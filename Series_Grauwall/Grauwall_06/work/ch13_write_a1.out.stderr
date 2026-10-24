@@ -1,0 +1,2 @@
+WARN: max_tokens に達して出力が途中で切れた可能性があります
+usage: in=34141 out=32000 reasoning_chars=26736 content_chars=2452 cost=0.0194141 sec=168 model=anthropic/claude-haiku-5.5

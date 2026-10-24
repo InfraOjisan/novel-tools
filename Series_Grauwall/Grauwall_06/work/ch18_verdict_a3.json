@@ -1,0 +1,17 @@
+{
+  "chars": 2830,
+  "mech": [],
+  "review": {
+    "pass": true,
+    "slots_found": {},
+    "violations": [
+      {
+        "severity": "low",
+        "type": "insert",
+        "detail": "「ヤーコプは砂洲の陰に舟を寄せた」と、CANONに明記のない舟泊の場所が加わっている。",
+        "fix": "正典上の矛盾はない小さな追加。厳密に既定の舞台に限るなら「岸の陰」などにする。"
+      }
+    ]
+  },
+  "problems": []
+}

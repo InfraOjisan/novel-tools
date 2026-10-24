@@ -1,0 +1,1 @@
+usage: in=64572 out=8312 reasoning_chars=6245 content_chars=1145 cost=0.0106132 sec=45 model=anthropic/claude-haiku-5.5

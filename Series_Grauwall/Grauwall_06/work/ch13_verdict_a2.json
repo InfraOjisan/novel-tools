@@ -1,0 +1,19 @@
+{
+  "chars": 3326,
+  "mech": [],
+  "review": {
+    "pass": true,
+    "slots_found": {
+      "M1": "reinforced"
+    },
+    "violations": [
+      {
+        "severity": "low",
+        "type": "insert",
+        "detail": "「痩せた犬」「燻製小屋」など、CANONに定めのない村の細部が追加されている。正典との矛盾はない。",
+        "fix": "現状のままでよい。追加要素を今後の伏線や設定として扱わない。"
+      }
+    ]
+  },
+  "problems": []
+}

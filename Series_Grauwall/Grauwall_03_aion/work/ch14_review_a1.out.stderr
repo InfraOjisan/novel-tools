@@ -1,0 +1,2 @@
+attempt 1: 240秒たっても終わらない（締め切り 240秒・推論67326字・本文0字） → 打ち切って投げ直します
+usage: in=18557 out=9284 reasoning_chars=21890 content_chars=985 cost=0.01647358 sec=128 model=aion-labs/aion-3.5-mini

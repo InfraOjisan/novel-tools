@@ -1,0 +1,159 @@
+{
+  "phase": "done",
+  "design_state": "review",
+  "design_attempts": 5,
+  "canon_sha256": "369b91885f01df34128f940cdb812d8096de28b4845d29f4020419e65af18b01",
+  "current": 20,
+  "final_state": "review",
+  "final_reopened": false,
+  "escalation": null,
+  "chapters": {
+    "1": {
+      "state": "done",
+      "attempts": 0,
+      "parse_retries": 0,
+      "ledger_attempts": 1,
+      "warnings": [
+        "渡された本文（Claude）"
+      ]
+    },
+    "2": {
+      "state": "done",
+      "attempts": 0,
+      "parse_retries": 0,
+      "ledger_attempts": 1,
+      "warnings": [
+        "渡された本文（Claude）"
+      ]
+    },
+    "3": {
+      "state": "done",
+      "attempts": 0,
+      "parse_retries": 0,
+      "ledger_attempts": 1,
+      "warnings": [
+        "渡された本文（Claude）"
+      ]
+    },
+    "4": {
+      "state": "done",
+      "attempts": 3,
+      "parse_retries": 0,
+      "ledger_attempts": 1,
+      "warnings": []
+    },
+    "5": {
+      "state": "done",
+      "attempts": 2,
+      "parse_retries": 0,
+      "ledger_attempts": 1,
+      "warnings": []
+    },
+    "6": {
+      "state": "done",
+      "attempts": 3,
+      "parse_retries": 0,
+      "ledger_attempts": 1,
+      "warnings": []
+    },
+    "7": {
+      "state": "done",
+      "attempts": 2,
+      "parse_retries": 0,
+      "ledger_attempts": 1,
+      "warnings": []
+    },
+    "8": {
+      "state": "done",
+      "attempts": 2,
+      "parse_retries": 0,
+      "ledger_attempts": 1,
+      "warnings": []
+    },
+    "9": {
+      "state": "done",
+      "attempts": 3,
+      "parse_retries": 0,
+      "ledger_attempts": 1,
+      "warnings": []
+    },
+    "10": {
+      "state": "done",
+      "attempts": 3,
+      "parse_retries": 0,
+      "ledger_attempts": 1,
+      "warnings": []
+    },
+    "11": {
+      "state": "done",
+      "attempts": 3,
+      "parse_retries": 0,
+      "ledger_attempts": 1,
+      "warnings": []
+    },
+    "12": {
+      "state": "done",
+      "attempts": 3,
+      "parse_retries": 0,
+      "ledger_attempts": 1,
+      "warnings": []
+    },
+    "13": {
+      "state": "done",
+      "attempts": 2,
+      "parse_retries": 0,
+      "ledger_attempts": 1,
+      "warnings": []
+    },
+    "14": {
+      "state": "done",
+      "attempts": 3,
+      "parse_retries": 0,
+      "ledger_attempts": 1,
+      "warnings": []
+    },
+    "15": {
+      "state": "done",
+      "attempts": 3,
+      "parse_retries": 0,
+      "ledger_attempts": 1,
+      "warnings": []
+    },
+    "16": {
+      "state": "done",
+      "attempts": 3,
+      "parse_retries": 0,
+      "ledger_attempts": 1,
+      "warnings": []
+    },
+    "17": {
+      "state": "done",
+      "attempts": 2,
+      "parse_retries": 0,
+      "ledger_attempts": 1,
+      "warnings": []
+    },
+    "18": {
+      "state": "done",
+      "attempts": 3,
+      "parse_retries": 0,
+      "ledger_attempts": 1,
+      "warnings": []
+    },
+    "19": {
+      "state": "done",
+      "attempts": 3,
+      "parse_retries": 0,
+      "ledger_attempts": 1,
+      "warnings": []
+    },
+    "20": {
+      "state": "done",
+      "attempts": 3,
+      "parse_retries": 0,
+      "ledger_attempts": 1,
+      "warnings": []
+    }
+  },
+  "final_notes": []
+}

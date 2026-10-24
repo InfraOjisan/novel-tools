@@ -1,0 +1,1 @@
+{"pass":true,"slots_found":{},"violations":[{"severity":"low","type":"web","detail":"冒頭で場所と朝であることは分かるが、弥生二十三日であることが示されていない。","fix":"冒頭に「弥生二十三日の朝」などと日付を加える。"},{"severity":"low","type":"insert","detail":"「白い鳥が一羽」「砂洲」「流木」など、CANONに明記されていない川辺の景物が加わっている。正典と矛盾するものではない。","fix":"修正不要。"}]}

@@ -1,0 +1,25 @@
+{
+  "chars": 2899,
+  "mech": [],
+  "review": {
+    "pass": true,
+    "slots_found": {
+      "R1": "reinforced"
+    },
+    "violations": [
+      {
+        "severity": "low",
+        "type": "insert",
+        "detail": "ベルントが消えた隊商の荷車の数を「三台」と具体的に言及した（CANONに台数の記述なし）。「荷の勘定は、ややこしくて」という言い訳と合わせて不自然ではないが、正典にない数値の追加。",
+        "fix": "CANONにない詳細を追加する場合は、台帳のINSERT行に残すか、曖昧な表現（「荷車数台」）にして矛盾のリスクを避ける。"
+      },
+      {
+        "severity": "low",
+        "type": "insert",
+        "detail": "「雪雀」という鳥の種別を指定した（CANONに鳥の種別の記述なし）。",
+        "fix": "「小鳥」など曖昧にするか、INSERT行に残す。"
+      }
+    ]
+  },
+  "problems": []
+}

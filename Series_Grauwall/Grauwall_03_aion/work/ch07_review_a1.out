@@ -1,0 +1,1 @@
+{"pass": true, "slots_found": {"R1": "reinforced"}, "violations": [{"severity": "low", "type": "insert", "detail": "「雪雀か、あるいは似たような小鳥のものだろう。」という描写において、具体的な鳥の名前「雪雀」がCANONの固有名詞リストに含まれていない。", "fix": "CANONに「雪雀」を追加するか、本文の表現を「小鳥の羽」など具体的な種名を出さない形に変更する。"}]}

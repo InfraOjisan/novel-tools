@@ -1,0 +1,12 @@
+{
+  "chars": 2935,
+  "mech": [],
+  "review": {
+    "pass": true,
+    "slots_found": {
+      "C1": "reinforced"
+    },
+    "violations": []
+  },
+  "problems": []
+}
