@@ -1,0 +1,4 @@
+
+===== start 2026-10-24T19:49:47 =====
+ESCALATE [GUARD_STOP] 保護ファイルが書き換えられています：config.json
+対応: 人が原因を確かめる。STOP を外すか、保護ファイルを元に戻してから `resolve`

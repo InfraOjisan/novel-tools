@@ -1,8 +1,8 @@
 {
-  "phase": "design",
+  "phase": "chapters",
   "design_state": "draft",
   "design_attempts": 0,
-  "canon_sha256": null,
+  "canon_sha256": "106786949f95c51f7878c5f8269471e90a7befe3a0362a7d02e78844ebbbc289",
   "current": 1,
   "final_state": "assemble",
   "final_reopened": false,
