@@ -1,0 +1,1 @@
+{"pass":true,"slots_found":{"V1":"planted","R1":"planted"},"violations":[{"severity":"low","type":"insert","detail":"「遠くで、馬のいななきが聞こえた。街の馬ではない。野の馬だ」と、CANONにない野生の馬を加えている。","fix":"野の馬の設定を足さないなら、馬のいななきの描写を削るか、聞こえた音のみにする。"},{"severity":"low","type":"typo","detail":"「壁のあちこちに、錆びた釘の迹が黒く残っている」の「迹」は表記として不適切。","fix":"「跡」に直す。"}]}

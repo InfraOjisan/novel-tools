@@ -2,32 +2,40 @@
   "phase": "chapters",
   "design_state": "draft",
   "design_attempts": 0,
-  "canon_sha256": "106786949f95c51f7878c5f8269471e90a7befe3a0362a7d02e78844ebbbc289",
-  "current": 1,
+  "canon_sha256": "5094453f0ebfd855791f999fccf2ed72e7ccb7e13c1696d03715501b9a08e792",
+  "current": 3,
   "final_state": "assemble",
   "final_reopened": false,
-  "escalation": null,
+  "escalation": {
+    "code": "CHAPTER_EXHAUSTED",
+    "detail": "第3章が3稿で合格しない: [short] 本文が1927字で短い（2500〜5000字）。場面の描写を厚くして2900字前後にする。 / [series] 祈りの「雪の下で、まだ帰れない人がいたら」は、北街道の亡骸に触れることを禁じた規律に抵触する含みがある。 → この一文を削り、亡骸や帰れない人を連想させない祈りにする。",
+    "hint": "work/ch03_feedback.md と work/ch03_verdict_a*.json を確認。人が work/ch03_draft.md を直して `resolve --accept`、または work/ch03_feedback.md を書き換えて `resolve --retry`",
+    "phase": "chapters",
+    "chapter": 3
+  },
   "chapters": {
     "1": {
-      "state": "pending",
-      "attempts": 0,
+      "state": "done",
+      "attempts": 3,
       "parse_retries": 0,
-      "ledger_attempts": 0,
+      "ledger_attempts": 1,
       "warnings": []
     },
     "2": {
-      "state": "pending",
-      "attempts": 0,
+      "state": "done",
+      "attempts": 1,
       "parse_retries": 0,
-      "ledger_attempts": 0,
+      "ledger_attempts": 1,
       "warnings": []
     },
     "3": {
-      "state": "pending",
-      "attempts": 0,
+      "state": "drafted",
+      "attempts": 3,
       "parse_retries": 0,
       "ledger_attempts": 0,
-      "warnings": []
+      "warnings": [
+        "a2: 見出しが見つからず補完"
+      ]
     },
     "4": {
       "state": "pending",

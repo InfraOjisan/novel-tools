@@ -1,0 +1,3 @@
+attempt 1: 420秒たっても終わらない（締め切り 420秒・推論57139字・本文0字） → 打ち切って投げ直します
+reasoning effort を medium に下げて再試行します
+usage: in=15079 out=6969 reasoning_chars=12131 content_chars=2308 cost=0.0203119 sec=114 model=aion-labs/aion-3.5-mini

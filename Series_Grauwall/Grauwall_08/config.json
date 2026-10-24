@@ -1,7 +1,7 @@
 {
  "chapters": 24,
  "chapter_chars": {
-  "target": 2900,
+  "target": 3400,
   "min": 2500,
   "max": 5000
  },
@@ -374,5 +374,6 @@
  ],
  "_comment_writer": "2026-10-24（プロデューサー決定）：第8回は書き手 aion-labs/aion-3.5-mini（本文専任。予備 claude-haiku-5.5）、審査 openai/gpt-6-luna-pro。CANON は Claude が書く（design 段階は使わない。approve-canon で始める）。前半で審査に詰まるなら writer.model を anthropic/claude-haiku-5.5 に替える。",
  "given_chapters": [],
- "_comment_given": "given_chapters：Claude が先に書いた章。novelctl は書かずに審査役に記録（LEDGER）だけを作らせて通過し、設計・CANON審査のパケットに『既に書かれた章』として差し込む。2026-10-11"
+ "_comment_given": "given_chapters：Claude が先に書いた章。novelctl は書かずに審査役に記録（LEDGER）だけを作らせて通過し、設計・CANON審査のパケットに『既に書かれた章』として差し込む。2026-10-11",
+ "_comment_chars": "2026-10-24 試運転（第1〜3章）：Aion Mini は目標の七〜八割（約2,000〜2,400字）で書き終える癖があり、第1章は3稿、第3章は3稿で字数不足。目標を3,400字に上げて、下限2,500字に届かせる。"
 }
