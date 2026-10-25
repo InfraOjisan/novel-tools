@@ -25,6 +25,10 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 CFG = json.loads((ROOT / "config.json").read_text(encoding="utf-8"))
 PUB = CFG.get("publish", {})
+# 第8回：config.json は guard 保護下のため、奥付のクレジットは audit/publish_override.json で上書きする
+_ov = Path(__file__).resolve().parent / "publish_override.json"
+if _ov.exists():
+    PUB = {**PUB, **json.loads(_ov.read_text(encoding="utf-8"))}
 N_CH = CFG["chapters"]
 KANJI = ["〇", "一", "二", "三", "四", "五", "六", "七", "八", "九", "十", "十一", "十二", "十三", "十四", "十五", "十六", "十七", "十八", "十九", "二十", "二十一", "二十二", "二十三", "二十四", "二十五", "二十六", "二十七", "二十八", "二十九", "三十"]
 

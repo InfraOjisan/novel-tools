@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8">
+<style>
+  html,body{margin:0;background:#000}
+  #stage{position:relative;width:1600px;height:2560px;overflow:hidden}
+  canvas{position:absolute;inset:0}
+  .title{position:absolute;right:230px;top:280px;writing-mode:vertical-rl;
+    font-family:"Noto Serif CJK JP",serif;font-weight:600;font-size:132px;letter-spacing:.12em}
+  .team{position:absolute;left:120px;bottom:150px;
+    font-family:"Noto Serif CJK JP",serif;font-weight:600;font-size:42px;letter-spacing:.08em}
+  .series{position:absolute;right:120px;top:300px;writing-mode:vertical-rl;
+    font-family:"Noto Serif CJK JP",serif;font-weight:500;font-size:34px;letter-spacing:.5em}
+  /* 昼（白地）は墨の文字、夜・夕は生成りの文字 */
+  .day .title{color:#1f262c;text-shadow:0 0 18px rgba(255,255,255,.7)}
+  .day .team,.day .series{color:rgba(31,38,44,.72)}
+  .night .title{color:#F2EBDD;text-shadow:0 0 22px rgba(255,214,160,.28),0 0 2px rgba(255,255,255,.55)}
+  .night .team,.night .series{color:rgba(232,220,196,.8)}
+</style></head>
+<body>
+<div id="stage"><canvas id="c" width="1600" height="2560"></canvas>
+  <div class="title">灰色山脈の古砦</div>
+  <div class="series">グラウヴァル　八</div>
+  <div class="team">チームジョバンニ</div>
+</div>
+<script>
+const MODE = location.hash.slice(1) || "a";
+const W = 1600, H = 2560;
+let g = document.getElementById("c").getContext("2d");
+// ぼかしは縮小キャンバスに描いて拡大する（canvas の filter blur を何百回も使うと重い）
+function soft(fn, k = 6, blur = 5){
+  const main = g, oc = document.createElement("canvas"); oc.width = W/k; oc.height = H/k;
+  const tmp = document.createElement("canvas"); tmp.width = W/k; tmp.height = H/k;
+  g = tmp.getContext("2d"); g.scale(1/k, 1/k); fn(); g = main;
+  const oc2 = oc.getContext("2d"); oc2.filter = `blur(${blur}px)`; oc2.drawImage(tmp, 0, 0);
+  g.save(); g.imageSmoothingQuality = "high"; g.drawImage(oc, 0, 0, W, H); g.restore();
+}
+let seed = {a: 3130805, b: 3130811, c: 3130817, d: 3130823}[MODE] || 1;
+const rnd = () => ((seed = (seed * 1664525 + 1013904223) >>> 0) / 4294967296);
+document.getElementById("stage").className = "day";
+
+function grad(stops, y0 = 0, y1 = H, x0 = 0, x1 = 0){
+  const lg = g.createLinearGradient(x0, y0, x1, y1);
+  stops.forEach(([t, c]) => lg.addColorStop(t, c)); return lg;
+}
+function glow(x, y, r, col, a0 = 1){
+  const rg = g.createRadialGradient(x, y, 0, x, y, r);
+  rg.addColorStop(0, col.replace("A", a0)); rg.addColorStop(1, col.replace("A", 0));
+  g.fillStyle = rg; g.fillRect(x - r, y - r, 2*r, 2*r);
+}
+function snowfall(n, col, aMax, x0 = 0, y0 = 0, w = W, h = H, rMax = 5){
+  for (let i = 0; i < n; i++){
+    const x = x0 + rnd()*w, y = y0 + rnd()*h, r = Math.pow(rnd(), 2)*rMax + 1, a = .15 + rnd()*aMax;
+    const rg = g.createRadialGradient(x, y, 0, x, y, r*2.2);
+    rg.addColorStop(0, `rgba(${col},${a})`); rg.addColorStop(1, `rgba(${col},0)`);
+    g.fillStyle = rg; g.beginPath(); g.arc(x, y, r*2.2, 0, 7); g.fill();
+  }
+}
+function vignette(a, cx = W/2, cy = H*.5){
+  const rg = g.createRadialGradient(cx, cy, H*.25, cx, cy + H*.05, H*.8);
+  rg.addColorStop(0, "rgba(0,0,0,0)"); rg.addColorStop(1, `rgba(0,0,0,${a})`);
+  g.fillStyle = rg; g.fillRect(0, 0, W, H);
+}
+// 画面全体にうすい粒子（絵の具の目）
+function filmGrain(n, a){
+  for (let i = 0; i < n; i++){ g.fillStyle = `rgba(${rnd() < .5 ? "0,0,0" : "255,240,220"},${rnd()*a})`; g.fillRect(rnd()*W, rnd()*H, 1 + rnd()*2, 1 + rnd()*2); }
+}
+// 三次ベジェ
+function bez(P, t){ const u = 1 - t; return [0, 1].map(k => u*u*u*P[0][k] + 3*u*u*t*P[1][k] + 3*u*t*t*P[2][k] + t*t*t*P[3][k]); }
+function bezD(P, t){ const u = 1 - t; return [0, 1].map(k => 3*u*u*(P[1][k] - P[0][k]) + 6*u*t*(P[2][k] - P[1][k]) + 3*t*t*(P[3][k] - P[2][k])); }
+// 中心線 P に沿った帯（耳の形など）
+function ribbon(P, wfn, n = 70){
+  const L = [], R = [];
+  for (let i = 0; i <= n; i++){
+    const t = i/n, [x, y] = bez(P, t), [dx, dy] = bezD(P, t), l = Math.hypot(dx, dy) || 1, nx = -dy/l, ny = dx/l, w = wfn(t);
+    L.push([x + nx*w, y + ny*w]); R.push([x - nx*w, y - ny*w]);
+  }
+  g.beginPath(); L.forEach((p, i) => i ? g.lineTo(...p) : g.moveTo(...p)); R.reverse().forEach(p => g.lineTo(...p)); g.closePath();
+}
+const earW = (wm, b = .5) => t => wm*(b + (1 - b)*Math.sin(Math.PI/2*Math.min(t/.45, 1)))*(t > .62 ? Math.sqrt(Math.max(0, 1 - Math.pow((t - .62)/.38, 2))) : 1);
+// 木目の板（横方向の板、奥 y0 から手前 y1 へ遠近）
+function planks(y0, y1, x0, x1, base, dark, light, nSeam, nGrain){
+  g.fillStyle = base; g.fillRect(x0, y0, x1 - x0, y1 - y0);
+  for (let k = 1; k < nSeam; k++){
+    const y = y0 + (y1 - y0)*Math.pow(k/nSeam, 1.5), p = (y - y0)/(y1 - y0);
+    g.fillStyle = `rgba(${dark},.55)`; g.fillRect(x0, y - 1 - p*2, x1 - x0, 2 + p*4);
+    g.fillStyle = `rgba(${light},.10)`; g.fillRect(x0, y + 2 + p*3, x1 - x0, 1 + p*2);
+  }
+  g.lineCap = "round";
+  for (let i = 0; i < nGrain; i++){
+    const y = y0 + (y1 - y0)*Math.pow(rnd(), 1.3), p = (y - y0)/(y1 - y0), xs = x0 + rnd()*(x1 - x0), L = 200 + rnd()*900;
+    g.strokeStyle = `rgba(${rnd() < .6 ? dark : light},${.04 + rnd()*.10})`; g.lineWidth = .6 + p*3*rnd();
+    g.beginPath(); const ph = rnd()*7, amp = (1 + p*4)*rnd();
+    for (let s = 0; s <= 20; s++){ const x = xs - L/2 + L*s/20, yy = y + Math.sin(s*.7 + ph)*amp; s ? g.lineTo(x, yy) : g.moveTo(x, yy); }
+    g.stroke();
+  }
+}
+// 湯気
+function steam(x0, y0, h, col, n = 6, spread = 60){
+  g.save(); g.lineCap = "round";
+  for (let k = 0; k < n; k++){
+    const sg = g.createLinearGradient(0, y0, 0, y0 - h);
+    sg.addColorStop(0, `rgba(${col},0)`); sg.addColorStop(.12, `rgba(${col},${.20 - k*.015})`); sg.addColorStop(1, `rgba(${col},0)`);
+    g.strokeStyle = sg; g.lineWidth = 10 + k*9; g.filter = `blur(${6 + k*4}px)`;
+    const ph = rnd()*7, dx = (k - n/2)*spread/n, drift = (rnd() - .3)*120, hh = h*(.6 + rnd()*.4);
+    g.beginPath();
+    for (let s = 0; s <= 40; s++){ const t = s/40, y = y0 - t*hh, x = x0 + dx*(1 - t*.4) + Math.sin(t*7 + ph)*50*t + drift*t*t; s ? g.lineTo(x, y) : g.moveTo(x, y); }
+    g.stroke();
+  }
+  g.restore();
+}
+// ════════════════════════════════════════════════════════════
+function metalH(cx, r, warm = 1){
+  const lg = g.createLinearGradient(cx - r, 0, cx + r, 0);
+  [[0, "#0d0804"], [.16, "#3b2712"], [.34, "#94683a"], [.44, warm ? "#e8c286" : "#c9b08a"], [.54, "#a0743e"], [.74, "#3a2511"], [1, "#080502"]].forEach(([t, c]) => lg.addColorStop(t, c));
+  return lg;
+}
+function lathe(cx, yb, pts, k = .25, warm = 1){
+  // pts: [[上への高さ, 半径, 記号]]（下から順に）。記号 L は上面が明るい段
+  const ys = [];
+  for (let i = 0; i < pts.length - 1; i++){
+    const [h0, r0] = pts[i], [h1, r1] = pts[i + 1];
+    for (let h = h0; h < h1; h += 1.5){ const t = (h - h0)/((h1 - h0) || 1), s = t*t*(3 - 2*t); ys.push([h, r0 + (r1 - r0)*s]); }
+  }
+  ys.push([pts[pts.length - 1][0], pts[pts.length - 1][1]]);
+  // 地に落ちる影
+  g.save(); g.filter = "blur(14px)"; g.fillStyle = "rgba(0,0,0,.65)"; g.beginPath(); g.ellipse(cx + 26, yb + 8, pts[0][1]*1.15, pts[0][1]*k*1.3, 0, 0, 7); g.fill(); g.restore();
+  for (const [h, r] of ys){ if (r < .5) continue; g.fillStyle = metalH(cx, r, warm); g.beginPath(); g.ellipse(cx, yb - h, r, Math.max(1, r*k), 0, 0, 7); g.fill(); }
+  // 段の上面
+  for (const p of pts) if (p[2] === "L"){
+    const [h, r] = p, rg = g.createRadialGradient(cx - r*.2, yb - h - r*k*.3, 1, cx, yb - h, r);
+    rg.addColorStop(0, "rgba(255,214,150,.55)"); rg.addColorStop(.7, "rgba(160,110,60,.35)"); rg.addColorStop(1, "rgba(40,25,10,.4)");
+    g.fillStyle = rg; g.beginPath(); g.ellipse(cx, yb - h, r, r*k, 0, 0, 7); g.fill();
+  }
+}
+function fabric(path, o){
+  g.save(); path(); g.clip();
+  g.fillStyle = o.base; g.fillRect(0, 0, W, H);
+  if (o.shade) o.shade();
+  soft(() => { g.lineCap = "round";
+    for (const f of o.folds){ const P = f.P;
+      g.strokeStyle = `rgba(${o.dark},${f.a})`; g.lineWidth = f.w; g.beginPath(); g.moveTo(...P[0]); g.bezierCurveTo(...P[1], ...P[2], ...P[3]); g.stroke();
+      g.save(); g.translate(f.w*.8*(f.side || 1), 0); g.strokeStyle = `rgba(${o.light},${f.a*.85})`; g.lineWidth = f.w*.6; g.beginPath(); g.moveTo(...P[0]); g.bezierCurveTo(...P[1], ...P[2], ...P[3]); g.stroke(); g.restore(); }
+  }, 5, o.blur || 6);
+  // 織り目
+  g.lineWidth = 1.2;
+  for (let y = 0; y < H; y += 4.5){ g.strokeStyle = `rgba(${o.dark},.05)`; g.beginPath(); g.moveTo(0, y); g.lineTo(W, y); g.stroke(); }
+  for (let x = 0; x < W; x += 4.5){ g.strokeStyle = `rgba(${o.light},.05)`; g.beginPath(); g.moveTo(x, 0); g.lineTo(x, H); g.stroke(); }
+  soft(() => { for (let i = 0; i < 6000; i++){ g.fillStyle = `rgba(${rnd() < .5 ? o.dark : o.light},${.05 + rnd()*.07})`; g.fillRect(rnd()*W, rnd()*H, 3 + rnd()*18, 1.5 + rnd()*2.5); } }, 2, .7);
+  for (let i = 0; i < 14000; i++){ const x = rnd()*W, y = rnd()*H, a = rnd()*7, l = 3 + rnd()*7;
+    g.strokeStyle = rnd() < .5 ? `rgba(255,253,246,${rnd()*.14})` : `rgba(${o.dark},${rnd()*.10})`; g.lineWidth = .6 + rnd()*.6;
+    g.beginPath(); g.moveTo(x, y); g.lineTo(x + Math.cos(a)*l, y + Math.sin(a)*l); g.stroke(); }
+  if (o.after) o.after();
+  g.restore();
+}
+function randFolds(n, x0, x1, y0, y1, wMin, wMax, aMax, lean = 0){
+  const F = [];
+  for (let i = 0; i < n; i++){ const x = x0 + rnd()*(x1 - x0), ya = y0 - 100, yb = y1 + 100, sw = (rnd() - .5)*160;
+    F.push({P: [[x, ya], [x + sw + lean*.3, ya + (yb - ya)*.33], [x - sw + lean*.7, ya + (yb - ya)*.66], [x + lean, yb]], w: wMin + rnd()*(wMax - wMin), a: .08 + rnd()*aMax, side: rnd() < .5 ? 1 : -1}); }
+  return F;
+}
+
+// ════════════════════════════════════════════════════════════
+// 第8回『灰色山脈の古砦』の表紙。淡い布の地＋モチーフ（第6回の刺繍、第7回の割符と同じ型）
+// #a 黒パン / #b 羊のチーズ / #c 赤い棘草の実 / #d 三つ
+// 描くもの：ベアタの黒パン（丸、切れ目、粉）、羊の乳の固いチーズ（籠目の皮）、赤い棘草の実（逆棘）
+// 描かないもの：顔、砦、坑守、赤い卵の瓶
+// ════════════════════════════════════════════════════════════
+function cloth(){
+  const all = () => { g.beginPath(); g.rect(-20, -20, W + 40, H + 40); };
+  // 灰色がかった毛織（灰色山脈）。第7回の生成りの麻より少し冷たく
+  fabric(all, {base: "#d2cec5", light: "255,252,246", dark: "92,90,84", folds: randFolds(8, 0, W, 0, H, 80, 200, .2, -30),
+    shade: () => { const rg = g.createRadialGradient(W*.3, H*.15, 100, W*.45, H*.5, H*.9); rg.addColorStop(0, "rgba(255,252,244,.35)"); rg.addColorStop(1, "rgba(60,58,52,.38)"); g.fillStyle = rg; g.fillRect(0, 0, W, H); }});
+}
+function blurShadow(path, dx, dy, b, a){ g.save(); g.filter = `blur(${b}px)`; g.fillStyle = `rgba(45,40,32,${a})`; g.translate(dx, dy); path(); g.fill(); g.restore(); }
+
+// ── 黒パン（丸い田舎パン。ふくらんだ山を、上から少し斜めに）
+function bread(cx, cy, rx, ry, rot = 0){
+  g.save(); g.translate(cx, cy); g.rotate(rot);
+  const ph = rnd()*7;
+  const blob = (k = 1, dy = 0) => { g.beginPath(); for (let i = 0; i <= 120; i++){ const t = i/120*Math.PI*2, w = 1 + .025*Math.sin(3*t + ph) + .015*Math.sin(7*t + ph*2);
+    const x = Math.cos(t)*rx*w*k, y = Math.sin(t)*ry*w*k + dy + (Math.sin(t) > 0 ? Math.sin(t)*ry*.10 : 0); i ? g.lineTo(x, y) : g.moveTo(x, y); } g.closePath(); };
+  blurShadow(() => blob(1.02, ry*.12), 34, 46, 30, .6);
+  g.save(); blob(); g.clip();
+  const rg = g.createRadialGradient(-rx*.32, -ry*.42, rx*.04, -rx*.05, -ry*.08, rx*1.05);
+  rg.addColorStop(0, "#b07d4d"); rg.addColorStop(.35, "#87582f"); rg.addColorStop(.75, "#5a3519"); rg.addColorStop(1, "#2e1a0b");
+  g.fillStyle = rg; g.fillRect(-rx*1.2, -ry*1.3, rx*2.4, ry*2.6);
+  // 山のふくらみ：下手前に陰の三日月
+  const sg = g.createRadialGradient(-rx*.12, -ry*.32, rx*.55, -rx*.05, -ry*.1, rx*1.12); sg.addColorStop(0, "rgba(20,10,4,0)"); sg.addColorStop(1, "rgba(20,10,4,.72)");
+  g.fillStyle = sg; g.fillRect(-rx*1.2, -ry*1.3, rx*2.4, ry*2.6);
+  // 粗い肌
+  for (let i = 0; i < 5200; i++){ const x = -rx + rnd()*rx*2, y = -ry + rnd()*ry*2.2; g.fillStyle = `rgba(${rnd() < .55 ? "30,16,6" : "200,155,105"},${rnd()*.2})`; g.fillRect(x, y, 1 + rnd()*3, 1 + rnd()*2.5); }
+  g.lineCap = "round";
+  for (let i = 0; i < 220; i++){ const x = -rx*.95 + rnd()*rx*1.9, y = -ry*.95 + rnd()*ry*1.9; if ((x*x)/(rx*rx) + (y*y)/(ry*ry) > .9) continue;
+    const a = rnd()*7, l = 6 + rnd()*26; g.strokeStyle = `rgba(35,18,6,${.22 + rnd()*.35})`; g.lineWidth = 1 + rnd()*2;
+    g.beginPath(); g.moveTo(x, y); g.quadraticCurveTo(x + Math.cos(a)*l*.5 + (rnd() - .5)*8, y + Math.sin(a)*l*.5*(ry/rx), x + Math.cos(a)*l, y + Math.sin(a)*l*(ry/rx)); g.stroke(); }
+  // 粉（山の上ほど多い）
+  soft(() => { g.save(); g.translate(cx, cy); g.rotate(rot);
+    for (let i = 0; i < 90; i++){ const x = -rx*.8 + rnd()*rx*1.4, y = -ry*.85 + rnd()*ry*1.2; if ((x*x)/(rx*rx) + (y*y)/(ry*ry) > .62) continue;
+      g.fillStyle = `rgba(240,234,222,${.08 + rnd()*.2})`; g.beginPath(); g.ellipse(x, y, 30 + rnd()*110, 14 + rnd()*50, rnd()*3, 0, 7); g.fill(); }
+    g.restore(); }, 3, 5);
+  for (let i = 0; i < 4200; i++){ const x = -rx + rnd()*rx*2, y = -ry + rnd()*ry*1.5; if ((x*x)/(rx*rx) + (y*y)/(ry*ry) > .6) continue; g.fillStyle = `rgba(248,244,236,${rnd()*.4})`; g.fillRect(x, y, 1 + rnd()*2, 1 + rnd()*2); }
+  // 切れ目（三本。山の丸みに沿って少し弓なり）
+  for (const [ox, len, w] of [[-rx*.40, rx*.95, 46], [0, rx*1.2, 56], [rx*.40, rx*.95, 46]]){
+    const a = -1.0, dx = Math.cos(a)*len/2, dy = Math.sin(a)*len/2*(ry/rx);
+    const p0 = [ox - dx, -ry*.1 - dy], p1 = [ox + dx, -ry*.1 + dy];
+    const nx = -(p1[1] - p0[1]), ny = (p1[0] - p0[0]); const nl = Math.hypot(nx, ny), ux = nx/nl, uy = ny/nl;
+    const mid = [(p0[0] + p1[0])/2 - 14, (p0[1] + p1[1])/2 - 10];
+    const lens = (k) => { g.beginPath(); g.moveTo(...p0); g.quadraticCurveTo(mid[0] + ux*w*k, mid[1] + uy*w*k*.7, ...p1); g.quadraticCurveTo(mid[0] - ux*w*k*.35, mid[1] - uy*w*k*.25, ...p0); g.closePath(); };
+    g.fillStyle = "rgba(25,12,4,.5)"; lens(1.18); g.fill();
+    const lg = g.createLinearGradient(mid[0] - ux*w*.35, mid[1] - uy*w*.35, mid[0] + ux*w, mid[1] + uy*w); lg.addColorStop(0, "#7a5230"); lg.addColorStop(.45, "#c39661"); lg.addColorStop(1, "#e6c595");
+    g.fillStyle = lg; lens(.9); g.fill();
+    for (let i = 0; i < 180; i++){ const t = rnd(), s = (rnd() - .3)*.8; const x = p0[0] + (p1[0] - p0[0])*t + ux*w*s*Math.sin(t*Math.PI), y = p0[1] + (p1[1] - p0[1])*t + uy*w*s*Math.sin(t*Math.PI)*.7;
+      g.fillStyle = `rgba(${rnd() < .5 ? "100,66,34" : "248,226,188"},${rnd()*.4})`; g.fillRect(x, y, 1 + rnd()*2.5, 1 + rnd()*2); }
+    g.strokeStyle = "rgba(40,20,6,.7)"; g.lineWidth = 5; g.beginPath(); g.moveTo(...p0); g.quadraticCurveTo(mid[0] - ux*w*.3, mid[1] - uy*w*.22, ...p1); g.stroke();
+  }
+  g.restore();
+  g.strokeStyle = "rgba(25,12,4,.45)"; g.lineWidth = 3; blob(); g.stroke();
+  g.restore();
+}
+
+// ── 羊の乳の固いチーズ（丸い塊を四つ割りにした一切れ。籠目の皮が手前）
+function cheese(ax, ay, R, k, h, t0, t1){
+  const P = t => [ax + Math.cos(t)*R, ay + Math.sin(t)*R*k];
+  const N = 60, arc = []; for (let i = 0; i <= N; i++) arc.push(t0 + (t1 - t0)*i/N);
+  const topPath = () => { g.beginPath(); g.moveTo(ax, ay); for (const t of arc) g.lineTo(...P(t)); g.closePath(); };
+  blurShadow(() => { g.beginPath(); g.moveTo(ax, ay + h); for (const t of arc){ const [x, y] = P(t); g.lineTo(x, y + h); } g.closePath(); }, 26, 30, 22, .5);
+  // 側面の切り口（見える側だけ）
+  for (const te of [t0, t1]){ const [ex, ey] = P(te); const other = te === t0 ? t1 : t0; const [ox, oy] = P(other);
+    const cross = (ex - ax)*(oy - ay) - (ey - ay)*(ox - ax); const vis = (te === t0 ? 1 : -1)*cross;
+    if ((ey - ay) * (te === t0 ? -1 : 1) > 0 || true){ // 手前を向く面だけ
+      const nxv = -(ey - ay), nyv = ex - ax; const sgn = ((ox - ax)*nxv + (oy - ay)*nyv) > 0 ? -1 : 1; if (nyv*sgn <= 0) continue;
+      const lg = g.createLinearGradient(ax, ay, ex, ey); lg.addColorStop(0, "#e8dcb6"); lg.addColorStop(1, "#cdbd8f");
+      g.fillStyle = lg; g.beginPath(); g.moveTo(ax, ay); g.lineTo(ex, ey); g.lineTo(ex, ey + h); g.lineTo(ax, ay + h); g.closePath(); g.fill();
+      for (let i = 0; i < 26; i++){ const s = .1 + rnd()*.8, x = ax + (ex - ax)*s, y = ay + (ey - ay)*s + rnd()*h*.85 + 6; g.fillStyle = "rgba(150,125,70,.45)"; g.beginPath(); g.ellipse(x, y, 2 + rnd()*5, 1.5 + rnd()*3, 0, 0, 7); g.fill(); } } }
+  // 皮（籠目の帯。手前を向く弧だけ）
+  for (let i = 0; i < N; i++){ const ta = arc[i], tb = arc[i + 1]; if (Math.sin((ta + tb)/2) <= 0) continue;
+    const [x0, y0] = P(ta), [x1, y1] = P(tb); const sh = .55 + .45*Math.cos((ta + tb)/2 - 1.2);
+    g.fillStyle = `rgb(${Math.round(120 + 70*sh)},${Math.round(92 + 58*sh)},${Math.round(48 + 34*sh)})`;
+    g.beginPath(); g.moveTo(x0, y0); g.lineTo(x1, y1); g.lineTo(x1, y1 + h); g.lineTo(x0, y0 + h); g.closePath(); g.fill(); }
+  // 籠目の模様（籠で固めた跡。斜めの編み目が交互に）
+  g.save(); g.beginPath(); for (let i = 0; i <= N; i++){ const [x, y] = P(arc[i]); i ? g.lineTo(x, y) : g.moveTo(x, y); } for (let i = N; i >= 0; i--){ const [x, y] = P(arc[i]); g.lineTo(x, y + h); } g.closePath(); g.clip();
+  const rows = Math.round(h/22);
+  for (let r = 0; r < rows; r++) for (let i = 0; i < 64; i++){ const t = t0 + (t1 - t0)*(i + .5)/64; if (Math.sin(t) <= 0) continue; const [x, y] = P(t);
+    const yy = y + h*(r + .5)/rows, dir = ((i + r) % 2) ? 1 : -1;
+    g.strokeStyle = "rgba(80,58,25,.45)"; g.lineWidth = 3; g.beginPath(); g.moveTo(x - 7, yy - 6*dir); g.lineTo(x + 7, yy + 6*dir); g.stroke();
+    g.strokeStyle = "rgba(255,240,200,.28)"; g.lineWidth = 1.5; g.beginPath(); g.moveTo(x - 6, yy - 6*dir - 2); g.lineTo(x + 6, yy + 6*dir - 2); g.stroke(); }
+  for (let i = 0; i < 900; i++){ const t = t0 + rnd()*(t1 - t0); if (Math.sin(t) <= 0) continue; const [x, y] = P(t); g.fillStyle = `rgba(${rnd() < .5 ? "70,50,20" : "240,220,170"},${rnd()*.25})`; g.fillRect(x + (rnd() - .5)*14, y + rnd()*h, 2, 2); }
+  g.restore();
+  // 上面（切り口）
+  g.save(); topPath(); g.clip();
+  const rg = g.createRadialGradient(ax, ay, 10, ax + R*.3, ay + R*k*.4, R); rg.addColorStop(0, "#f2e4bc"); rg.addColorStop(1, "#d9c48e");
+  g.fillStyle = rg; g.fillRect(ax - R*1.2, ay - R*1.2, R*2.4, R*2.4);
+  for (let i = 0; i < 1600; i++){ g.fillStyle = `rgba(${rnd() < .5 ? "170,150,100" : "255,252,238"},${rnd()*.18})`; g.fillRect(ax - R + rnd()*R*2, ay - R + rnd()*R*2, 1 + rnd()*2, 1 + rnd()*2); }
+  for (let i = 0; i < 40; i++){ const t = t0 + rnd()*(t1 - t0), s = .15 + rnd()*.75, [x, y] = [ax + Math.cos(t)*R*s, ay + Math.sin(t)*R*k*s];
+    g.fillStyle = "rgba(160,135,80,.5)"; g.beginPath(); g.ellipse(x, y, 3 + rnd()*7, 2 + rnd()*4, 0, 0, 7); g.fill(); g.fillStyle = "rgba(255,250,235,.5)"; g.beginPath(); g.ellipse(x + 1, y + 1.5, 2 + rnd()*3, 1, 0, 0, 7); g.fill(); }
+  // 皮の縁（上面の外周に薄い帯）
+  g.lineWidth = 18; g.strokeStyle = "rgba(150,115,60,.8)"; g.beginPath(); for (let i = 0; i <= N; i++){ const [x, y] = P(arc[i]); i ? g.lineTo(x, y) : g.moveTo(x, y); } g.stroke();
+  g.restore();
+  g.strokeStyle = "rgba(110,90,55,.45)"; g.lineWidth = 2; topPath(); g.stroke();
+}
+
+// ── 赤い棘草の実（毛玉のような実、棘の先に逆棘）
+function burr(x, y, r){
+  g.save(); g.filter = "blur(5px)"; g.fillStyle = "rgba(60,30,20,.35)"; g.beginPath(); g.arc(x + r*.35, y + r*.5, r*1.25, 0, 7); g.fill(); g.restore();
+  g.lineCap = "round";
+  const spines = [];
+  for (let i = 0; i < 130; i++){ const a = rnd()*7, el = rnd()*.9; spines.push([a, el]); }
+  spines.sort((p, q) => p[1] - q[1]);
+  const draw = (front) => { for (const [a, el] of spines){ const isFront = el > .45; if (isFront !== front) continue;
+    const L = r*(.45 + rnd()*.25), c = Math.cos(a), s = Math.sin(a), ff = .45 + el*.55;
+    const x0 = x + c*r*.7*ff, y0 = y + s*r*.7*ff, x1 = x + c*(r*.7 + L)*ff, y1 = y + s*(r*.7 + L)*ff;
+    g.strokeStyle = front ? `rgba(${150 + rnd()*40},${30 + rnd()*20},${22},.95)` : "rgba(90,22,14,.8)"; g.lineWidth = r*.07;
+    g.beginPath(); g.moveTo(x0, y0); g.lineTo(x1, y1); g.stroke();
+    // 先の逆棘（小さな鉤）
+    const hk = r*.16, ha = a + 2.4; g.lineWidth = r*.05; g.beginPath(); g.moveTo(x1, y1); g.lineTo(x1 + Math.cos(ha)*hk, y1 + Math.sin(ha)*hk); g.stroke(); } };
+  draw(false);
+  const rg = g.createRadialGradient(x - r*.3, y - r*.35, r*.1, x, y, r*.95); rg.addColorStop(0, "#d8473a"); rg.addColorStop(.55, "#9c2218"); rg.addColorStop(1, "#4f0f09");
+  g.fillStyle = rg; g.beginPath(); g.arc(x, y, r*.85, 0, 7); g.fill();
+  draw(true);
+  g.fillStyle = "rgba(255,220,200,.35)"; g.beginPath(); g.ellipse(x - r*.28, y - r*.32, r*.18, r*.11, -.6, 0, 7); g.fill();
+}
+// 茎についた実（枝先に三つ四つ）
+function sprig(x0, y0, x1, y1, n, r){
+  const P = [[x0, y0], [x0 + (x1 - x0)*.3 + 60, y0 + (y1 - y0)*.3 - 40], [x0 + (x1 - x0)*.7 - 30, y0 + (y1 - y0)*.7 + 30], [x1, y1]];
+  const stem = () => { g.beginPath(); g.moveTo(...P[0]); g.bezierCurveTo(...P[1], ...P[2], ...P[3]); };
+  g.save(); g.filter = "blur(4px)"; g.strokeStyle = "rgba(60,40,25,.35)"; g.lineWidth = 9; g.translate(10, 14); stem(); g.stroke(); g.restore();
+  g.strokeStyle = "#6b4a2c"; g.lineWidth = 7; g.lineCap = "round"; stem(); g.stroke();
+  g.strokeStyle = "rgba(200,160,110,.35)"; g.lineWidth = 2; g.save(); g.translate(-1, -2); stem(); g.stroke(); g.restore();
+  const pts = [];
+  for (let i = 0; i < n; i++){ const t = .35 + .65*i/(n - 1); const [bx, by] = bez(P, t); const d = bezD(P, t), dl = Math.hypot(...d);
+    const side = i % 2 ? 1 : -1, len = 50 + rnd()*40; const ex = bx + (-d[1]/dl)*len*side + d[0]/dl*20, ey = by + (d[0]/dl)*len*side + d[1]/dl*20;
+    g.strokeStyle = "#6b4a2c"; g.lineWidth = 4; g.beginPath(); g.moveTo(bx, by); g.quadraticCurveTo((bx + ex)/2 + 8, (by + ey)/2 - 8, ex, ey); g.stroke(); pts.push([ex, ey]); }
+  // 細い葉（枯れかけ）
+  for (let i = 0; i < 3; i++){ const t = .15 + i*.18, [bx, by] = bez(P, t); const a = (i % 2 ? 1 : -1)*.9 + Math.atan2(...bezD(P, t).slice().reverse());
+    g.fillStyle = "rgba(110,100,60,.8)"; g.beginPath(); g.ellipse(bx + Math.cos(a)*38, by + Math.sin(a)*38, 44, 9, a, 0, 7); g.fill(); }
+  for (const [ex, ey] of pts) burr(ex, ey, r*(.85 + rnd()*.3));
+}
+
+function finish(v = .34){ filmGrain(9000, .05); vignette(v, 700, H*.55); }
+
+function drawA(){ cloth(); bread(690, 1640, 540, 400, -.05);
+  // パンくずと、こぼれた粉
+  for (let i = 0; i < 9; i++){ const x = 300 + rnd()*900, y = 2060 + rnd()*220; g.fillStyle = "#4e321d"; g.beginPath(); g.ellipse(x, y, 6 + rnd()*12, 4 + rnd()*8, rnd()*3, 0, 7); g.fill(); }
+  finish(); }
+function drawB(){ cloth(); cheese(430, 1420, 700, .6, 200, .12, 1.42);
+  finish(); }
+function drawC(){ cloth(); sprig(220, 2300, 900, 1240, 5, 70); burr(1160, 2160, 60); burr(1040, 2300, 50); finish(); }
+function drawD(){ cloth();
+  bread(560, 1380, 420, 310, -.08);
+  cheese(760, 1760, 560, .6, 160, .2, 1.5);
+  burr(1250, 2120, 52); burr(1340, 2200, 44); burr(250, 2050, 48);
+  finish(); }
+({a: drawA, b: drawB, c: drawC, d: drawD})[MODE]();
+document.title = "done";
+</script>
+</body></html>

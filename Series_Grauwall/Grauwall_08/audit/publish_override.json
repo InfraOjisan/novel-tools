@@ -1,0 +1,25 @@
+{
+ "credits": [
+  [
+   "プロデューサー",
+   "くろだ"
+  ],
+  [
+   "原案・構成",
+   "くろだ／Claude"
+  ],
+  [
+   "執筆",
+   "Aion 3.5 Mini（第3章の加筆：Claude）"
+  ],
+  [
+   "審査",
+   "GPT-6 Luna Pro"
+  ],
+  [
+   "校正",
+   "Claude"
+  ]
+ ],
+ "ai_disclosure": "本作の本文は生成AI（Aion 3.5 Mini。第3章の一部は Claude Opus 5.5）が執筆し、GPT-6 Luna Pro が審査し、Claude Opus 5.5 が校正し、人間が企画・監修しました。"
+}
