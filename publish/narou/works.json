@@ -62,6 +62,13 @@
    "narou_novel_id": 3357287,
    "ncode": "n7622mx",
    "romancer_url": "https://r.voyager.co.jp/epm/e1_708552_24102026035500"
+  },
+  "Grauwall_08": {
+   "title": "灰色山脈の古砦",
+   "source": "../../Series_Grauwall/Grauwall_08/output/final_proofread.md",
+   "note": "グラウヴァル第八話（全24章 Aion 3.5 Mini 執筆・GPT-6 Luna Pro 審査・Claude 校正）。校正済み版。1章＝1話。予約掲載を3回に分けて：2026-10-27／29／31 各19:00〜（10分おき、第1〜8話／第9〜16話／第17〜24話、第24話で完結）。Romancer は 2026-10-27 18:00 公開",
+   "narou_novel_id": 3359818,
+   "ncode": "n0154my"
   }
  },
  "notes": {

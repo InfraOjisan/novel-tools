@@ -1,0 +1,153 @@
+{
+ "work": "Grauwall_08",
+ "narou_novel_id": 3359818,
+ "ncode": "n0154my",
+ "status": "reserved",
+ "episodes": [
+  {
+   "seq": 1,
+   "draftId": 9448993,
+   "reserved_at": "2026-10-27 19:00",
+   "end": false
+  },
+  {
+   "seq": 2,
+   "draftId": 9448994,
+   "reserved_at": "2026-10-27 19:10",
+   "end": false
+  },
+  {
+   "seq": 3,
+   "draftId": 9448995,
+   "reserved_at": "2026-10-27 19:20",
+   "end": false
+  },
+  {
+   "seq": 4,
+   "draftId": 9448996,
+   "reserved_at": "2026-10-27 19:30",
+   "end": false
+  },
+  {
+   "seq": 5,
+   "draftId": 9448997,
+   "reserved_at": "2026-10-27 19:40",
+   "end": false
+  },
+  {
+   "seq": 6,
+   "draftId": 9448998,
+   "reserved_at": "2026-10-27 19:50",
+   "end": false
+  },
+  {
+   "seq": 7,
+   "draftId": 9448999,
+   "reserved_at": "2026-10-27 20:00",
+   "end": false
+  },
+  {
+   "seq": 8,
+   "draftId": 9449000,
+   "reserved_at": "2026-10-27 20:10",
+   "end": false
+  },
+  {
+   "seq": 9,
+   "draftId": 9449001,
+   "reserved_at": "2026-10-29 19:00",
+   "end": false
+  },
+  {
+   "seq": 10,
+   "draftId": 9449002,
+   "reserved_at": "2026-10-29 19:10",
+   "end": false
+  },
+  {
+   "seq": 11,
+   "draftId": 9449003,
+   "reserved_at": "2026-10-29 19:20",
+   "end": false
+  },
+  {
+   "seq": 12,
+   "draftId": 9449004,
+   "reserved_at": "2026-10-29 19:30",
+   "end": false
+  },
+  {
+   "seq": 13,
+   "draftId": 9449005,
+   "reserved_at": "2026-10-29 19:40",
+   "end": false
+  },
+  {
+   "seq": 14,
+   "draftId": 9449006,
+   "reserved_at": "2026-10-29 19:50",
+   "end": false
+  },
+  {
+   "seq": 15,
+   "draftId": 9449007,
+   "reserved_at": "2026-10-29 20:00",
+   "end": false
+  },
+  {
+   "seq": 16,
+   "draftId": 9449008,
+   "reserved_at": "2026-10-29 20:10",
+   "end": false
+  },
+  {
+   "seq": 17,
+   "draftId": 9449009,
+   "reserved_at": "2026-10-31 19:00",
+   "end": false
+  },
+  {
+   "seq": 18,
+   "draftId": 9449010,
+   "reserved_at": "2026-10-31 19:10",
+   "end": false
+  },
+  {
+   "seq": 19,
+   "draftId": 9449011,
+   "reserved_at": "2026-10-31 19:20",
+   "end": false
+  },
+  {
+   "seq": 20,
+   "draftId": 9449012,
+   "reserved_at": "2026-10-31 19:30",
+   "end": false
+  },
+  {
+   "seq": 21,
+   "draftId": 9449013,
+   "reserved_at": "2026-10-31 19:40",
+   "end": false
+  },
+  {
+   "seq": 22,
+   "draftId": 9449014,
+   "reserved_at": "2026-10-31 19:50",
+   "end": false
+  },
+  {
+   "seq": 23,
+   "draftId": 9449015,
+   "reserved_at": "2026-10-31 20:00",
+   "end": false
+  },
+  {
+   "seq": 24,
+   "draftId": 9449016,
+   "reserved_at": "2026-10-31 20:10",
+   "end": true
+  }
+ ],
+ "note": "2026-10-26 Claude in Chrome で下書き24話（読み戻し一致）→予約。設定：ハイファンタジー、AI直接使用、あらすじ・キーワード。シリーズ追加は公開後"
+}

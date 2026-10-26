@@ -1,0 +1,200 @@
+{
+  "work": "Grauwall_08",
+  "title": "灰色山脈の古砦",
+  "source": "../../Series_Grauwall/Grauwall_08/output/final_proofread.md",
+  "limit_chars": 5000,
+  "episodes": [
+    {
+      "seq": 1,
+      "file": "001.txt",
+      "subtitle": "第1章　北門の銅貨箱",
+      "chars": 3261,
+      "chars_no_newline": 3166,
+      "sha1": "3ac3636b9f6e628ce9cf4d80cd5d4ed3b49a38c7"
+    },
+    {
+      "seq": 2,
+      "file": "002.txt",
+      "subtitle": "第2章　赤い棘草",
+      "chars": 2999,
+      "chars_no_newline": 2835,
+      "sha1": "f99484de8be74d3904858a170338e045d68c13ae"
+    },
+    {
+      "seq": 3,
+      "file": "003.txt",
+      "subtitle": "第3章　三つ目の一里塚",
+      "chars": 3899,
+      "chars_no_newline": 3675,
+      "sha1": "36554fb3fa59b2a0b5c20ba4b3633734a78e841d"
+    },
+    {
+      "seq": 4,
+      "file": "004.txt",
+      "subtitle": "第4章　糧の村",
+      "chars": 3065,
+      "chars_no_newline": 2895,
+      "sha1": "1dde6abed07694d2dd1fa54a6f514d1580154b79"
+    },
+    {
+      "seq": 5,
+      "file": "005.txt",
+      "subtitle": "第5章　古い糧倉",
+      "chars": 2998,
+      "chars_no_newline": 2822,
+      "sha1": "e1700989043d987b17cb09c11fdcff489a3912d1"
+    },
+    {
+      "seq": 6,
+      "file": "006.txt",
+      "subtitle": "第6章　羊の囲い",
+      "chars": 3100,
+      "chars_no_newline": 2978,
+      "sha1": "1948b4438458b006ff88f0d3cb11a7915f8c5f51"
+    },
+    {
+      "seq": 7,
+      "file": "007.txt",
+      "subtitle": "第7章　峠道",
+      "chars": 2812,
+      "chars_no_newline": 2642,
+      "sha1": "c114901cf522a008293dfb425067a81b41eb87e7"
+    },
+    {
+      "seq": 8,
+      "file": "008.txt",
+      "subtitle": "第8章　片目の男",
+      "chars": 3309,
+      "chars_no_newline": 3129,
+      "sha1": "e0af70e4fc1122ff67e31bbc360117f1dbd9f86f"
+    },
+    {
+      "seq": 9,
+      "file": "009.txt",
+      "subtitle": "第9章　雪潜",
+      "chars": 2785,
+      "chars_no_newline": 2669,
+      "sha1": "fa2aba99fef0c726a12f8703589c1edf4de96425"
+    },
+    {
+      "seq": 10,
+      "file": "010.txt",
+      "subtitle": "第10章　訊かれなかった",
+      "chars": 3181,
+      "chars_no_newline": 3071,
+      "sha1": "9f8b26730699be8f3f862412f742626c57ed8245"
+    },
+    {
+      "seq": 11,
+      "file": "011.txt",
+      "subtitle": "第11章　迎え",
+      "chars": 2829,
+      "chars_no_newline": 2563,
+      "sha1": "d4923ebeba88f9ebc5bcedb0c488324411d6ed3c"
+    },
+    {
+      "seq": 12,
+      "file": "012.txt",
+      "subtitle": "第12章　門の三つの穴",
+      "chars": 3489,
+      "chars_no_newline": 3277,
+      "sha1": "6d3344790210f5b08687d06c19581b8a0c17f3db"
+    },
+    {
+      "seq": 13,
+      "file": "013.txt",
+      "subtitle": "第13章　石の巣",
+      "chars": 2788,
+      "chars_no_newline": 2602,
+      "sha1": "fd6faf4e712f3ce4f6c48e5836f7e246d9629366"
+    },
+    {
+      "seq": 14,
+      "file": "014.txt",
+      "subtitle": "第14章　砦の議",
+      "chars": 2807,
+      "chars_no_newline": 2687,
+      "sha1": "76fcc9fd3eac045e6f1e9c0fcd5e5ea056b48b50"
+    },
+    {
+      "seq": 15,
+      "file": "015.txt",
+      "subtitle": "第15章　書庫",
+      "chars": 3497,
+      "chars_no_newline": 3227,
+      "sha1": "94b574e76480021c057ab785a478e81577fc7907"
+    },
+    {
+      "seq": 16,
+      "file": "016.txt",
+      "subtitle": "第16章　砦の夕餉",
+      "chars": 2719,
+      "chars_no_newline": 2515,
+      "sha1": "54483d160e3d5da4cce8b3873bc7f4f752e2008e"
+    },
+    {
+      "seq": 17,
+      "file": "017.txt",
+      "subtitle": "第17章　水門",
+      "chars": 2640,
+      "chars_no_newline": 2554,
+      "sha1": "f28f402df4183286c8f5007a97ac72fa4c638e78"
+    },
+    {
+      "seq": 18,
+      "file": "018.txt",
+      "subtitle": "第18章　坑へ",
+      "chars": 3066,
+      "chars_no_newline": 2892,
+      "sha1": "9e8a892cc53eecb3f94260e0ace93767ad8b0a2d"
+    },
+    {
+      "seq": 19,
+      "file": "019.txt",
+      "subtitle": "第19章　坑守",
+      "chars": 3400,
+      "chars_no_newline": 3216,
+      "sha1": "62582fa87a806853a151aa79ab17d33829fd6db6"
+    },
+    {
+      "seq": 20,
+      "file": "020.txt",
+      "subtitle": "第20章　水を入れる",
+      "chars": 3693,
+      "chars_no_newline": 3539,
+      "sha1": "525380d6179813ceb44909ae181e5a972a7e68b8"
+    },
+    {
+      "seq": 21,
+      "file": "021.txt",
+      "subtitle": "第21章　白札",
+      "chars": 3034,
+      "chars_no_newline": 2891,
+      "sha1": "564bafc6a3d437e6ef443dbb799100dce4a466ff"
+    },
+    {
+      "seq": 22,
+      "file": "022.txt",
+      "subtitle": "第22章　雪が解けたら",
+      "chars": 3143,
+      "chars_no_newline": 3014,
+      "sha1": "d0e82a1f434fdaba811b10637138497527acffd1"
+    },
+    {
+      "seq": 23,
+      "file": "023.txt",
+      "subtitle": "第23章　閉門の前",
+      "chars": 2750,
+      "chars_no_newline": 2650,
+      "sha1": "66a5b1cfc546b6457c549ce2d5a0e6181887a9be"
+    },
+    {
+      "seq": 24,
+      "file": "024.txt",
+      "subtitle": "第24章　錆びた釘",
+      "chars": 3647,
+      "chars_no_newline": 3530,
+      "sha1": "0ab4acba73e66eb038b7896fdb3c684ae1b7e5f2"
+    }
+  ]
+}
