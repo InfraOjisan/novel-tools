@@ -21,7 +21,7 @@
 8. 既刊の本文（必要な箇所を検索して読む）：
    - `Series_Grauwall/Grauwall_08/output/final_proofread.md` と `Grauwall_08/canon/CANON.md`（第8回。**第15章 書庫の二一二年の紙**〔日付・一行・筆の癖・下半分の破れ・ブリギッテの写し〕、第21章、第23章〔ブリギッテ「明日、アガタ先生のところへ」〕、第24章〔報告書の文面〕、鴉人の長老）
    - `Series_Grauwall/Grauwall_07/output/final_proofread.md` と `Grauwall_07/canon/CANON.md`（第7回。手習い所とアガタ、城壁の歌、ザイデルの黒札、書記局、柱の三本の釘、参事会の十二席と木札）
-   - `Series_Grauwall/Grauwall_06/output/final_proofread.md`（第6回。**第1章の裁き**〔裁き役アルブレヒト、バルタザールの南門、エルノの罪状〕）
+   - `Series_Grauwall/Grauwall_06/output/final.md`（第6回。**第1章の裁き**〔裁き役アルブレヒト、バルタザールの南門、エルノの罪状〕）
    - `Series_Grauwall/Grauwall_01/output/final.md` と `Grauwall_01/canon/CANON.md`（第一作。掟の執行、エルノの「塀を越える灰色を見た」、ザザの証言、灰狼は見分けられない）
 
 ## 点検の項目
