@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8">
+<style>
+  html,body{margin:0;background:#000}
+  #stage{position:relative;width:1600px;height:2560px;overflow:hidden}
+  canvas{position:absolute;inset:0}
+  .title{position:absolute;right:230px;top:280px;writing-mode:vertical-rl;
+    font-family:"Noto Serif CJK JP",serif;font-weight:600;font-size:132px;letter-spacing:.12em}
+  .team{position:absolute;left:120px;bottom:150px;
+    font-family:"Noto Serif CJK JP",serif;font-weight:600;font-size:42px;letter-spacing:.08em}
+  .series{position:absolute;right:120px;top:300px;writing-mode:vertical-rl;
+    font-family:"Noto Serif CJK JP",serif;font-weight:500;font-size:34px;letter-spacing:.5em}
+  .day .title{color:#1f1b17;text-shadow:0 0 18px rgba(255,252,240,.7)}
+  .day .team,.day .series{color:rgba(31,27,23,.72)}
+  .night .title{color:#F2EBDD;text-shadow:0 0 22px rgba(255,214,160,.28),0 0 2px rgba(255,255,255,.55)}
+  .night .team,.night .series{color:rgba(232,220,196,.8)}
+</style></head>
+<body>
+<div id="stage"><canvas id="c" width="1600" height="2560"></canvas>
+  <div class="title">灰壁の掟</div>
+  <div class="series">グラウヴァル　九</div>
+  <div class="team">チームジョバンニ</div>
+</div>
+<script>
+// 第9回『灰壁の掟』の表紙。紙の地＋モチーフ（第6〜8回と同じ型：淡い地、ひとつの物、右に縦の題）
+// #a 筆 / #b 帳面の線（線の下の字は、まだ読めた）/ #c 砦の遠景・昼（墨絵）/ #d 砦の遠景・夜（篝火）
+// 描かないもの：顔、亜人の姿、覚書の文言
+const MODE = location.hash.slice(1) || "a";
+const W = 1600, H = 2560;
+let g = document.getElementById("c").getContext("2d");
+function soft(fn, k = 6, blur = 5){
+  const main = g, oc = document.createElement("canvas"); oc.width = W/k; oc.height = H/k;
+  const tmp = document.createElement("canvas"); tmp.width = W/k; tmp.height = H/k;
+  g = tmp.getContext("2d"); g.scale(1/k, 1/k); fn(); g = main;
+  const oc2 = oc.getContext("2d"); oc2.filter = `blur(${blur}px)`; oc2.drawImage(tmp, 0, 0);
+  g.save(); g.imageSmoothingQuality = "high"; g.drawImage(oc, 0, 0, W, H); g.restore();
+}
+let seed = {a: 2120605, b: 2120604, c: 2120611, d: 2120617}[MODE] || 1;
+const rnd = () => ((seed = (seed * 1664525 + 1013904223) >>> 0) / 4294967296);
+document.getElementById("stage").className = MODE === "d" ? "night" : "day";
+
+function glow(x, y, r, col, a0 = 1){
+  const rg = g.createRadialGradient(x, y, 0, x, y, r);
+  rg.addColorStop(0, col.replace("A", a0)); rg.addColorStop(1, col.replace("A", 0));
+  g.fillStyle = rg; g.fillRect(x - r, y - r, 2*r, 2*r);
+}
+function vignette(a, cx = W/2, cy = H*.5){
+  const rg = g.createRadialGradient(cx, cy, H*.25, cx, cy + H*.05, H*.8);
+  rg.addColorStop(0, "rgba(0,0,0,0)"); rg.addColorStop(1, `rgba(0,0,0,${a})`);
+  g.fillStyle = rg; g.fillRect(0, 0, W, H);
+}
+function filmGrain(n, a){
+  for (let i = 0; i < n; i++){ g.fillStyle = `rgba(${rnd() < .5 ? "0,0,0" : "255,240,220"},${rnd()*a})`; g.fillRect(rnd()*W, rnd()*H, 1 + rnd()*2, 1 + rnd()*2); }
+}
+// 1次元のゆらぎ（稜線用）
+function noise1(n = 6){ const ph = [], fr = [], am = []; for (let i = 0; i < n; i++){ ph.push(rnd()*7); fr.push(.0016*Math.pow(2.1, i)*(.8 + rnd()*.4)); am.push(Math.pow(.52, i)); }
+  return x => { let s = 0; for (let i = 0; i < n; i++) s += am[i]*Math.sin(x*fr[i] + ph[i]); return s; }; }
+
+// ════════════════════════════════════════════════════════════
+// 紙（漉き目のある厚手の紙。生成り。灰壁の書記局の正本の紙）
+function paper(tone = 1){
+  const base = tone ? "#e9e1cf" : "#d9cfb9";
+  g.fillStyle = base; g.fillRect(0, 0, W, H);
+  const rg = g.createRadialGradient(W*.32, H*.18, 100, W*.48, H*.52, H*.9);
+  rg.addColorStop(0, "rgba(255,252,242,.45)"); rg.addColorStop(1, "rgba(120,100,70,.16)"); g.fillStyle = rg; g.fillRect(0, 0, W, H);
+  // 雲のようなむら（漉きのむら）
+  soft(() => { for (let i = 0; i < 420; i++){ g.fillStyle = `rgba(${rnd() < .5 ? "150,128,92" : "255,250,236"},${.012 + rnd()*.025})`;
+    g.beginPath(); g.ellipse(rnd()*W, rnd()*H, 40 + rnd()*220, 30 + rnd()*160, rnd()*3, 0, 7); g.fill(); } }, 4, 8);
+  // 簀の目（横の細い線）と、糸目（縦の太い線）
+  for (let y = 0; y < H; y += 7){ g.fillStyle = `rgba(120,100,70,${.025 + rnd()*.02})`; g.fillRect(0, y, W, 1.4); }
+  for (let x = 40 + rnd()*30; x < W; x += 118 + rnd()*10){ soft(() => { g.fillStyle = "rgba(110,90,60,.10)"; g.fillRect(x, 0, 5, H); }, 4, 2); }
+  // 繊維
+  g.lineCap = "round";
+  for (let i = 0; i < 9000; i++){ const x = rnd()*W, y = rnd()*H, a = rnd()*7, l = 6 + rnd()*26, c = rnd() < .5;
+    g.strokeStyle = c ? `rgba(255,253,244,${rnd()*.22})` : `rgba(110,92,62,${rnd()*.12})`; g.lineWidth = .5 + rnd()*.8;
+    g.beginPath(); g.moveTo(x, y); g.quadraticCurveTo(x + Math.cos(a)*l*.5 + (rnd() - .5)*8, y + Math.sin(a)*l*.5 + (rnd() - .5)*8, x + Math.cos(a)*l, y + Math.sin(a)*l); g.stroke(); }
+  // 古い紙のしみ（少し）
+  soft(() => { for (let i = 0; i < 4; i++){ const x = rnd()*W, y = rnd()*H, r = 6 + rnd()*16; g.fillStyle = `rgba(150,110,60,${.05 + rnd()*.06})`; g.beginPath(); g.arc(x, y, r, 0, 7); g.fill(); } }, 3, 4);
+  for (let i = 0; i < 26000; i++){ g.fillStyle = `rgba(${rnd() < .5 ? "90,74,50" : "255,252,240"},${rnd()*.07})`; g.fillRect(rnd()*W, rnd()*H, 1 + rnd()*2, 1 + rnd()*2); }
+}
+
+// ── 墨のしずく（紙に落ちて、縁がにじむ）
+function inkDrop(x, y, r){
+  soft(() => { g.fillStyle = "rgba(30,26,22,.35)"; g.beginPath(); for (let i = 0; i <= 40; i++){ const t = i/40*7, rr = r*1.35*(1 + .12*Math.sin(5*t + 1) + .08*Math.sin(11*t)); g.lineTo(x + Math.cos(t)*rr, y + Math.sin(t)*rr*.9); } g.fill(); }, 2, 3);
+  g.fillStyle = "#17130f"; g.beginPath(); for (let i = 0; i <= 40; i++){ const t = i/40*7, rr = r*(1 + .06*Math.sin(5*t + 2)); g.lineTo(x + Math.cos(t)*rr, y + Math.sin(t)*rr*.9); } g.fill();
+  g.fillStyle = "rgba(255,250,240,.18)"; g.beginPath(); g.ellipse(x - r*.3, y - r*.3, r*.35, r*.18, -.5, 0, 7); g.fill();
+}
+
+// ── 筆（竹の軸、節、穂は墨を含んで黒く、根元は白い毛）
+function brush(x, y, ang, L){
+  const shaftW = 34, capL = 70, ferL = 46, tipL = 190, tipW = 46;
+  // 影
+  g.save(); g.translate(x + 26, y + 34); g.rotate(ang); g.filter = "blur(16px)"; g.fillStyle = "rgba(60,45,25,.45)";
+  g.beginPath(); g.roundRect(-capL, -shaftW*.5, L + capL + ferL, shaftW, 16); g.fill();
+  g.beginPath(); g.moveTo(L + ferL, -tipW*.5); g.quadraticCurveTo(L + ferL + tipL*.55, -tipW*.55, L + ferL + tipL, 0); g.quadraticCurveTo(L + ferL + tipL*.55, tipW*.55, L + ferL, tipW*.5); g.fill(); g.restore();
+  g.save(); g.translate(x, y); g.rotate(ang);
+  // 吊るし紐の輪（尻の先）
+  g.strokeStyle = "#7a2a1c"; g.lineWidth = 5; g.lineCap = "round";
+  g.beginPath(); g.moveTo(-capL - 4, 0); g.bezierCurveTo(-capL - 70, -40, -capL - 140, 10, -capL - 90, 46); g.bezierCurveTo(-capL - 60, 66, -capL - 20, 30, -capL - 4, 4); g.stroke();
+  g.strokeStyle = "rgba(255,180,150,.25)"; g.lineWidth = 2; g.beginPath(); g.moveTo(-capL - 4, -2); g.bezierCurveTo(-capL - 70, -42, -capL - 138, 8, -capL - 90, 44); g.stroke();
+  // 尻の角（黒い）
+  const cg = g.createLinearGradient(0, -shaftW/2, 0, shaftW/2); [[0, "#5a4636"], [.3, "#2a1e16"], [.55, "#120c08"], [1, "#050302"]].forEach(([t, c]) => cg.addColorStop(t, c));
+  g.fillStyle = cg; g.beginPath(); g.roundRect(-capL, -shaftW*.52, capL + 6, shaftW*1.04, [14, 0, 0, 14]); g.fill();
+  // 竹の軸
+  const sg = g.createLinearGradient(0, -shaftW/2, 0, shaftW/2);
+  [[0, "#8a6a3c"], [.18, "#d9bd86"], [.32, "#f0dcae"], [.5, "#c9a466"], [.78, "#86622f"], [1, "#4a3418"]].forEach(([t, c]) => sg.addColorStop(t, c));
+  g.fillStyle = sg; g.fillRect(0, -shaftW/2, L, shaftW);
+  // 竹の筋と斑
+  for (let i = 0; i < 260; i++){ const yy = -shaftW/2 + rnd()*shaftW, x0 = rnd()*L, l = 20 + rnd()*120; g.strokeStyle = `rgba(${rnd() < .6 ? "90,62,28" : "255,240,200"},${rnd()*.18})`; g.lineWidth = .8; g.beginPath(); g.moveTo(x0, yy); g.lineTo(Math.min(L, x0 + l), yy); g.stroke(); }
+  for (let i = 0; i < 14; i++){ g.fillStyle = `rgba(110,70,30,${.12 + rnd()*.15})`; g.beginPath(); g.ellipse(rnd()*L, -shaftW*.2 + rnd()*shaftW*.5, 4 + rnd()*14, 2 + rnd()*3, 0, 0, 7); g.fill(); }
+  // 節
+  for (const nx of [L*.34, L*.78]){ g.fillStyle = "rgba(70,48,20,.55)"; g.fillRect(nx - 3, -shaftW*.53, 6, shaftW*1.06);
+    g.fillStyle = "rgba(255,236,190,.45)"; g.fillRect(nx + 4, -shaftW*.5, 3, shaftW); g.fillStyle = "rgba(90,60,25,.3)"; g.fillRect(nx - 12, -shaftW*.5, 8, shaftW); }
+  // 口金（角の帯）
+  const fg = g.createLinearGradient(0, -shaftW/2, 0, shaftW/2); [[0, "#4b3a2c"], [.3, "#a08a70"], [.5, "#3a2a1e"], [1, "#0d0906"]].forEach(([t, c]) => fg.addColorStop(t, c));
+  g.fillStyle = fg; g.fillRect(L, -shaftW*.56, ferL, shaftW*1.12);
+  g.fillStyle = "rgba(255,240,220,.25)"; g.fillRect(L + 4, -shaftW*.5, 3, shaftW);
+  // 穂
+  const tip = (w = tipW, l = tipL) => { g.beginPath(); g.moveTo(L + ferL - 2, -w*.46); g.bezierCurveTo(L + ferL + l*.25, -w*.62, L + ferL + l*.62, -w*.38, L + ferL + l, w*.02); g.bezierCurveTo(L + ferL + l*.62, w*.42, L + ferL + l*.25, w*.6, L + ferL - 2, w*.46); g.closePath(); };
+  g.save(); tip(); g.clip();
+  const tg = g.createLinearGradient(L + ferL, 0, L + ferL + tipL, 0); [[0, "#e6dccb"], [.14, "#b8ab96"], [.28, "#3a312a"], [.45, "#141009"], [1, "#050403"]].forEach(([t, c]) => tg.addColorStop(t, c));
+  g.fillStyle = tg; g.fillRect(L, -tipW, tipL + ferL + 10, tipW*2);
+  // 毛並み
+  for (let i = 0; i < 260; i++){ const yy = (rnd() - .5)*tipW*.9, x0 = L + ferL + rnd()*tipL*.5, l = 30 + rnd()*tipL*.7;
+    g.strokeStyle = x0 < L + ferL + tipL*.18 ? `rgba(${rnd() < .5 ? "255,250,240" : "120,100,80"},${rnd()*.4})` : `rgba(${rnd() < .5 ? "90,80,70" : "0,0,0"},${rnd()*.35})`;
+    g.lineWidth = .7; g.beginPath(); g.moveTo(x0, yy); g.quadraticCurveTo(x0 + l*.5, yy*.8, x0 + l, yy*.35); g.stroke(); }
+  // 墨の濡れたつや
+  g.strokeStyle = "rgba(255,255,255,.28)"; g.lineWidth = 3; g.beginPath(); g.moveTo(L + ferL + tipL*.32, -tipW*.32); g.quadraticCurveTo(L + ferL + tipL*.65, -tipW*.25, L + ferL + tipL*.9, -tipW*.04); g.stroke();
+  g.restore();
+  g.strokeStyle = "rgba(0,0,0,.35)"; g.lineWidth = 1.5; tip(); g.stroke();
+  g.restore();
+}
+
+// ── 縦書きの墨の字（にじみ）
+function inkColumn(text, x, y0, size, a = .78){
+  g.save(); g.font = `500 ${size}px "Noto Serif CJK JP"`; g.textAlign = "center"; g.textBaseline = "top";
+  let y = y0;
+  for (const ch of text){
+    if (ch === "　" || ch === " "){ y += size*.6; continue; }
+    const rot = "ー―…".includes(ch);
+    const draw = (dx, dy) => { if (rot){ g.save(); g.translate(x + dx, y + dy + size/2); g.rotate(Math.PI/2); g.fillText(ch, 0, -size/2); g.restore(); } else g.fillText(ch, x + dx, y + dy); };
+    g.filter = "blur(2.2px)"; g.fillStyle = `rgba(40,30,22,${a*.35})`; draw(0, 0);
+    g.filter = "blur(.5px)"; g.fillStyle = `rgba(22,17,12,${a*(.82 + rnd()*.18)})`; draw((rnd() - .5)*1.5, 0);
+    y += size*1.06;
+  }
+  g.restore(); return y;
+}
+// ── 一本の線（筆で引いた、かすれのある線。終わりで小さく跳ねる）
+function strike(x0, y0, x1, y1, w){
+  const n = 140, dx = x1 - x0, dy = y1 - y0, L = Math.hypot(dx, dy), ux = dx/L, uy = dy/L, nx = -uy, ny = ux;
+  // 入り（筆を置いた溜まり）
+  soft(() => { g.fillStyle = "rgba(20,16,12,.55)"; g.beginPath(); g.ellipse(x0, y0, w*.9, w*.7, Math.atan2(dy, dx), 0, 7); g.fill(); }, 2, 2);
+  g.fillStyle = "rgba(14,11,8,.92)"; g.beginPath(); g.ellipse(x0 + ux*w*.3, y0 + uy*w*.3, w*.75, w*.58, Math.atan2(dy, dx) + .3, 0, 7); g.fill();
+  // 本体：毛の筋ごとに描く（終わりへ向けて、かすれる）
+  for (let k = 0; k < 18; k++){ const off = (k/17 - .5)*w, dry = rnd()*.55 + (Math.abs(off)/w)*.7;
+    g.strokeStyle = `rgba(14,11,8,${.55 + rnd()*.4})`; g.lineWidth = w/9 + rnd()*w/10; g.lineCap = "round";
+    g.beginPath(); let pen = false;
+    for (let i = 0; i <= n; i++){ const t = i/n, wob = Math.sin(t*5 + k)*w*.04, x = x0 + dx*t + nx*(off*(1 - t*.15) + wob), y = y0 + dy*t + ny*(off*(1 - t*.15) + wob);
+      const gap = t > .55 && rnd() < dry*(t - .45)*1.4; if (gap){ if (pen) g.stroke(); g.beginPath(); pen = false; continue; }
+      if (!pen){ g.moveTo(x, y); pen = true; } else g.lineTo(x, y); }
+    if (pen) g.stroke(); }
+  // 終わりの跳ね（小さく上へ）
+  g.strokeStyle = "rgba(14,11,8,.85)"; g.lineCap = "round";
+  for (let k = 0; k < 6; k++){ g.lineWidth = w*(.32 - k*.045); g.beginPath(); g.moveTo(x1 - ux*w*.6, y1 - uy*w*.6); g.quadraticCurveTo(x1 + ux*w*.2, y1 + uy*w*.2, x1 + ux*w*.35 - nx*w*(1.0 + k*.05), y1 + uy*w*.35 - ny*w*(1.0 + k*.05)); g.stroke(); }
+}
+
+// ── 墨絵の山並み（遠いほど淡い）
+function ridge(yBase, amp, a, col, seedShift, soften = 4, fill = true){
+  const f = noise1(7);
+  soft(() => { g.fillStyle = `rgba(${col},${a})`; g.beginPath(); g.moveTo(-20, H + 20);
+    for (let x = -20; x <= W + 20; x += 6){ const y = yBase - amp*(f(x + seedShift) + .3*Math.abs(f(x*2.3 + seedShift))); g.lineTo(x, y); }
+    g.lineTo(W + 20, H + 20); g.closePath(); g.fill();
+    // 稜線の濃い縁
+    g.strokeStyle = `rgba(${col},${a*.9})`; g.lineWidth = 8; g.beginPath();
+    for (let x = -20; x <= W + 20; x += 6){ const y = yBase - amp*(f(x + seedShift) + .3*Math.abs(f(x*2.3 + seedShift))); x < -14 ? g.moveTo(x, y) : g.lineTo(x, y); } g.stroke();
+  }, soften, 3);
+  return x => yBase - amp*(f(x + seedShift) + .3*Math.abs(f(x*2.3 + seedShift)));
+}
+// 霧（下からぼかす）
+function mist(y, h, col, a){ const lg = g.createLinearGradient(0, y - h, 0, y + h); lg.addColorStop(0, `rgba(${col},0)`); lg.addColorStop(.55, `rgba(${col},${a})`); lg.addColorStop(1, `rgba(${col},0)`); g.fillStyle = lg; g.fillRect(0, y - h, W, h*2); }
+
+// ── 砦（岩の肩の上。城壁、正門、鴉の見張り台）
+function fort(cx, by, s, ink, fire){
+  // 岩の肩
+  soft(() => { g.save(); g.translate(cx, by); g.scale(s, s); const lg = g.createLinearGradient(0, -30, 0, 260); lg.addColorStop(0, `rgba(${ink},.95)`); lg.addColorStop(.45, `rgba(${ink},.55)`); lg.addColorStop(1, `rgba(${ink},0)`);
+    g.fillStyle = lg; g.beginPath(); g.moveTo(-240, -22); g.lineTo(230, -24); g.bezierCurveTo(260, 40, 330, 120, 420, 260); g.lineTo(-380, 260); g.bezierCurveTo(-300, 120, -260, 40, -240, -22); g.closePath(); g.fill(); g.restore(); }, 2, 2);
+  g.save(); g.translate(cx, by); g.scale(s, s);
+  g.fillStyle = `rgba(${ink},.95)`;
+  // 城壁（狭間のある低い壁）
+  g.beginPath(); g.moveTo(-200, -20); g.lineTo(-200, -78);
+  for (let x = -200; x < 200; x += 28){ g.lineTo(x, -92); g.lineTo(x + 14, -92); g.lineTo(x + 14, -78); g.lineTo(x + 28, -78); }
+  g.lineTo(200, -20); g.closePath(); g.fill();
+  // 正門（南向き、黒い口）
+  g.fillStyle = `rgba(${ink},1)`; g.fillRect(-36, -112, 72, 40);
+  // 鴉の見張り台（細く高い塔、止まり木の穴）
+  g.fillStyle = `rgba(${ink},.97)`; g.beginPath(); g.moveTo(84, -80); g.lineTo(92, -330); g.lineTo(146, -330); g.lineTo(154, -80); g.closePath(); g.fill();
+  g.beginPath(); g.moveTo(82, -330); g.lineTo(156, -330); g.lineTo(152, -352); g.lineTo(86, -352); g.closePath(); g.fill();
+  for (let x = 86; x < 156; x += 16){ g.fillRect(x, -368, 9, 18); }
+  // 礼拝の間（いちばん大きな屋根）
+  g.beginPath(); g.moveTo(-170, -78); g.lineTo(-170, -150); g.lineTo(-90, -205); g.lineTo(-10, -150); g.lineTo(-10, -78); g.closePath(); g.fill();
+  // 小さな塔
+  g.fillRect(-196, -150, 30, 72);
+  g.restore();
+  if (fire){ const fx = cx + 119*s, fy = by - 362*s;
+    glow(fx, fy, 260*s*3, "rgba(255,150,70,A)", .10); glow(fx, fy, 60*s*3, "rgba(255,170,90,A)", .45); glow(fx, fy, 14*s*3, "rgba(255,230,170,A)", .95); }
+}
+
+function finish(v = .26){ filmGrain(9000, .045); vignette(v, 700, H*.55); }
+
+function drawA(){ paper(); inkDrop(1010, 1460, 18); inkDrop(1062, 1420, 7);
+  brush(210, 2150, -.56, 960); finish(); }
+function drawB(){ paper();
+  // 裁きの帳面の控え。線の下の字は、まだ読めた（第8章）
+  const S = 60, cols = [
+    ["水無月四日　裁き方の間　雨", 1000],
+    ["修道女　灰色は手ぶらで裏門を出た", 880],
+    ["蜥蜴人　文箱の前の熱は　すり減ったかかとの人の形", 760],
+    ["灰色の若いの　文箱に触っていない", 640],
+    ["灰色　匂いを嗅いだ　紙は取っていない", 520],
+  ];
+  let ends = [];
+  for (const [t, x] of cols) ends.push(inkColumn(t, x, 330, S));
+  // 三行目の前半（「蜥蜴人〜形」）に一本
+  strike(760 + 3, 330 + S*.1, 760 - 3, ends[2] - S*.2, 11);
+  brush(250, 2230, -.40, 760); inkDrop(1120, 2010, 11);
+  finish(); }
+function landscape(night){
+  paper(night ? 0 : 1);
+  if (night){ const lg = g.createLinearGradient(0, 0, 0, H); lg.addColorStop(0, "rgba(20,24,34,.92)"); lg.addColorStop(.55, "rgba(28,30,38,.82)"); lg.addColorStop(1, "rgba(16,16,20,.9)"); g.fillStyle = lg; g.fillRect(0, 0, W, H);
+    for (let i = 0; i < 160; i++){ const x = rnd()*W, y = rnd()*H*.5; g.fillStyle = `rgba(240,236,220,${rnd()*.5})`; g.fillRect(x, y, 1.5 + rnd()*2, 1.5 + rnd()*2); } }
+  const C = night ? "8,8,12" : "38,34,30";
+  ridge(1050, 260, night ? .35 : .10, C, 0, 6);
+  mist(1150, 260, night ? "30,32,42" : "236,228,212", night ? .5 : .7);
+  ridge(1350, 230, night ? .55 : .2, C, 3000, 5);
+  mist(1450, 220, night ? "30,32,42" : "236,228,212", night ? .45 : .6);
+  const r = ridge(1700, 300, night ? .8 : .42, C, 9000, 4);
+  // 砦は手前の尾根の肩に（題の左、画面の中ほど）
+  let bx = 620, best = 1e9; for (let x = 420; x < 860; x += 4){ const y = r(x); if (y < best){ best = y; bx = x; } }
+  fort(bx, r(bx) + 6, .9, C, night);
+  mist(1900, 260, night ? "30,32,42" : "236,228,212", night ? .55 : .72);
+  ridge(2250, 200, night ? .9 : .6, C, 15000, 3);
+  finish(night ? .4 : .24); }
+function drawC(){ landscape(false); }
+function drawD(){ landscape(true); }
+({a: drawA, b: drawB, c: drawC, d: drawD})[MODE]();
+document.title = "done";
+</script>
+</body></html>
