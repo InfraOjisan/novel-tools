@@ -21,7 +21,7 @@
 8. 既刊の本文（必要な箇所を検索して読む）：
    - `Series_Grauwall/Grauwall_01/output/final.md`（第一作。**第2・4・5・7章**：裏口の床の灰色二人、ヴェイの居場所の証言〔六つ前から館の裏庭、六つ半に戻る、七つに中庭の井戸〕、木彫りの狼二つ、白い布、「知っていて、止めなかった」、首に白い毛、アガタ）
    - `Series_Grauwall/Grauwall_02/output/final_proofread.md` と `Grauwall_02/canon/CANON.md`（第2回。ヴェイ・ナル・ハク・チィ、裏口のスープ、雑役、ザザの寝床、「線が一本引かれたはずだ」）
-   - `Series_Grauwall/Grauwall_04/output/final.md`（第4回。ルルと裏口のスープ、マスターが谷へ下りたことがあるか）
+   - `Series_Grauwall/Grauwall_04/chapters/ch01〜09.md`（第4回。ルルと裏口のスープ、マスターが谷へ下りたことがあるか）
    - `Series_Grauwall/Grauwall_08/output/final_proofread.md`（第8回。**第1章**：北門の銅貨箱「谷の祭りの、お灯明の銅貨です」、ダリオの一枚。第24章：錆び釘亭）
    - `Series_Grauwall/Grauwall_09/output/final_proofread.md`（第9回。**第9章**：谷の歌の四行、長老会の家、雨漏りの桶。**第8章**：判例の文言）
 
