@@ -1,0 +1,87 @@
+{
+ "work": "Grauwall_09",
+ "narou_novel_id": 3363338,
+ "ncode": "n3674my",
+ "status": "reserved",
+ "episodes": [
+  {
+   "seq": 1,
+   "draftId": 9495307,
+   "reserved_at": "2026-10-30 19:00",
+   "end": false
+  },
+  {
+   "seq": 2,
+   "draftId": 9495308,
+   "reserved_at": "2026-10-30 19:10",
+   "end": false
+  },
+  {
+   "seq": 3,
+   "draftId": 9495309,
+   "reserved_at": "2026-10-30 19:20",
+   "end": false
+  },
+  {
+   "seq": 4,
+   "draftId": 9495310,
+   "reserved_at": "2026-10-30 19:30",
+   "end": false
+  },
+  {
+   "seq": 5,
+   "draftId": 9495311,
+   "reserved_at": "2026-10-30 19:40",
+   "end": false
+  },
+  {
+   "seq": 6,
+   "draftId": 9495312,
+   "reserved_at": "2026-10-30 19:50",
+   "end": false
+  },
+  {
+   "seq": 7,
+   "draftId": 9495313,
+   "reserved_at": "2026-10-30 20:00",
+   "end": false
+  },
+  {
+   "seq": 8,
+   "draftId": 9495314,
+   "reserved_at": "2026-10-30 20:10",
+   "end": false
+  },
+  {
+   "seq": 9,
+   "draftId": 9495315,
+   "reserved_at": "2026-10-30 20:20",
+   "end": false
+  },
+  {
+   "seq": 10,
+   "draftId": 9495316,
+   "reserved_at": "2026-10-30 20:30",
+   "end": false
+  },
+  {
+   "seq": 11,
+   "draftId": 9495317,
+   "reserved_at": "2026-10-30 20:40",
+   "end": false
+  },
+  {
+   "seq": 12,
+   "draftId": 9495318,
+   "reserved_at": "2026-10-30 20:50",
+   "end": false
+  },
+  {
+   "seq": 13,
+   "draftId": 9495319,
+   "reserved_at": "2026-10-30 21:00",
+   "end": true
+  }
+ ],
+ "note": "2026-10-29 Claude in Chrome で作品設定（ハイファンタジー、AI直接使用・備考、あらすじ、キーワード）→下書き13話（SHA-1照合・読み戻し一致）→予約 10/30 19:00〜21:00（10分おき、第13話で完結）。シリーズ追加とRomancer併載の一文は公開後"
+}
