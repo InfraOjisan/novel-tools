@@ -1,0 +1,112 @@
+{
+  "work": "Grauwall_09",
+  "title": "灰壁の掟",
+  "source": "../../Series_Grauwall/Grauwall_09/output/final_proofread.md",
+  "limit_chars": 5000,
+  "episodes": [
+    {
+      "seq": 1,
+      "file": "001.txt",
+      "subtitle": "第1章　写し",
+      "chars": 2445,
+      "chars_no_newline": 2335,
+      "sha1": "bb6014e849e65c984b3bb5d8ca08d96ec15ca7b9"
+    },
+    {
+      "seq": 2,
+      "file": "002.txt",
+      "subtitle": "第2章　裁き方の朝",
+      "chars": 2368,
+      "chars_no_newline": 2256,
+      "sha1": "6467738ac248f9a83ed29108ef2e6ff1e7d6ff1d"
+    },
+    {
+      "seq": 3,
+      "file": "003.txt",
+      "subtitle": "第3章　蝋の欠片",
+      "chars": 2271,
+      "chars_no_newline": 2153,
+      "sha1": "bca7f38419a2034c5d60f13732ff4736b53df998"
+    },
+    {
+      "seq": 4,
+      "file": "004.txt",
+      "subtitle": "第4章　洗濯場",
+      "chars": 2239,
+      "chars_no_newline": 2141,
+      "sha1": "5103ffcfa131ddf7a4f916a8b975fb4e92761c28"
+    },
+    {
+      "seq": 5,
+      "file": "005.txt",
+      "subtitle": "第5章　虫干し",
+      "chars": 2110,
+      "chars_no_newline": 2008,
+      "sha1": "773df65d807757f10e695b66f7f9f81ce69ba2c2"
+    },
+    {
+      "seq": 6,
+      "file": "006.txt",
+      "subtitle": "第6章　文箱",
+      "chars": 2240,
+      "chars_no_newline": 2124,
+      "sha1": "d7683a87b958a84c8bd3735214d60f7ea565ed2f"
+    },
+    {
+      "seq": 7,
+      "file": "007.txt",
+      "subtitle": "第7章　訊かない夜",
+      "chars": 1964,
+      "chars_no_newline": 1870,
+      "sha1": "97519c0f0f964dbb4753f28b1dce5478bd319146"
+    },
+    {
+      "seq": 8,
+      "file": "008.txt",
+      "subtitle": "第8章　証言",
+      "chars": 2551,
+      "chars_no_newline": 2421,
+      "sha1": "8432edfa1831fb9f405a6111efa085c534976fd2"
+    },
+    {
+      "seq": 9,
+      "file": "009.txt",
+      "subtitle": "第9章　長老会",
+      "chars": 2198,
+      "chars_no_newline": 2096,
+      "sha1": "fc8ab632d54dec1080e7abf39beea133892de95e"
+    },
+    {
+      "seq": 10,
+      "file": "010.txt",
+      "subtitle": "第10章　柱の釘",
+      "chars": 1947,
+      "chars_no_newline": 1845,
+      "sha1": "514f49f2c08f9df4d60cc6a22072120e16cb780d"
+    },
+    {
+      "seq": 11,
+      "file": "011.txt",
+      "subtitle": "第11章　送り状",
+      "chars": 2048,
+      "chars_no_newline": 1940,
+      "sha1": "593cc4f3ba0d2813cf8ba8f0d9b67d003aeb3ba9"
+    },
+    {
+      "seq": 12,
+      "file": "012.txt",
+      "subtitle": "第12章　開門",
+      "chars": 1880,
+      "chars_no_newline": 1796,
+      "sha1": "e80e6bca941120a2691423f710a3a8342a40967a"
+    },
+    {
+      "seq": 13,
+      "file": "013.txt",
+      "subtitle": "第13章　いちばん古い綴り",
+      "chars": 2167,
+      "chars_no_newline": 2074,
+      "sha1": "b391dfa96b0bb7cb3475a6e29025e373a0e7555d"
+    }
+  ]
+}
