@@ -1,0 +1,35 @@
+{
+ "chapters": 14,
+ "slot_names": {},
+ "slot_plan": {},
+ "publish": {
+  "studio": "AI小説制作スタジオ",
+  "author": "チームジョバンニ",
+  "rating_url": "",
+  "fallback_title": "谷の祭り",
+  "cover_image": "images/cover.jpg",
+  "credits": [
+   [
+    "プロデューサー",
+    "くろだ"
+   ],
+   [
+    "原案・構成",
+    "くろだ／Claude"
+   ],
+   [
+    "執筆",
+    "Claude Opus 5.5"
+   ],
+   [
+    "審査",
+    "GPT-6 Luna Pro"
+   ],
+   [
+    "校正",
+    "Claude Opus 5.5"
+   ]
+  ],
+  "ai_disclosure": "本作の本文は生成AI（Claude Opus 5.5）が執筆・校正し、GPT-6 Luna Pro が審査し、人間が企画・監修しました。"
+ }
+}
