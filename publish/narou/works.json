@@ -74,9 +74,10 @@
   "Grauwall_09": {
    "title": "灰壁の掟",
    "source": "../../Series_Grauwall/Grauwall_09/output/final_proofread.md",
-   "note": "グラウヴァル第九話（全13章 Claude 執筆・校正、設計審査 GPT-6 Luna Pro）。校正済み版。1章＝1話。予約掲載 2026-10-30 19:00〜（10分おき、第13話で完結）。Romancer は 2026-10-30 公開",
+   "note": "グラウヴァル第九話（全13章 Claude 執筆・校正、設計審査 GPT-6 Luna Pro）。校正済み版。1章＝1話。予約掲載 2026-10-30 19:00〜（10分おき、第13話で完結）。Romancer は 2026-10-30 18:00 公開",
    "narou_novel_id": 3363338,
-   "ncode": "n3674my"
+   "ncode": "n3674my",
+   "romancer_url": "https://r.voyager.co.jp/epm/e1_711046_30102026174938"
   }
  },
  "notes": {
