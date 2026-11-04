@@ -1,0 +1,120 @@
+{
+  "work": "Grauwall_10",
+  "title": "谷の祭り",
+  "source": "../../Series_Grauwall/Grauwall_10/output/final_proofread.md",
+  "limit_chars": 5000,
+  "episodes": [
+    {
+      "seq": 1,
+      "file": "001.txt",
+      "subtitle": "第1章　銅貨箱",
+      "chars": 2251,
+      "chars_no_newline": 2137,
+      "sha1": "735cf33c6feb4db7f9f87e14a73b2a88cd164849"
+    },
+    {
+      "seq": 2,
+      "file": "002.txt",
+      "subtitle": "第2章　南からの手紙",
+      "chars": 2191,
+      "chars_no_newline": 2073,
+      "sha1": "7f42bf5de3bf31ccb4a6c87fa57f6838afa3aea0"
+    },
+    {
+      "seq": 3,
+      "file": "003.txt",
+      "subtitle": "第3章　外れの墓の分",
+      "chars": 2096,
+      "chars_no_newline": 1980,
+      "sha1": "7d263eae2089e9fee6ba945ebaf977c1e773c044"
+    },
+    {
+      "seq": 4,
+      "file": "004.txt",
+      "subtitle": "第4章　坂を下りる",
+      "chars": 2154,
+      "chars_no_newline": 2056,
+      "sha1": "a33a592ef767b966c8929630414d2f92216d8489"
+    },
+    {
+      "seq": 5,
+      "file": "005.txt",
+      "subtitle": "第5章　敷物",
+      "chars": 2248,
+      "chars_no_newline": 2140,
+      "sha1": "74e81295e1de76cc4360dc1cd5004f2dc141a09b"
+    },
+    {
+      "seq": 6,
+      "file": "006.txt",
+      "subtitle": "第6章　最初の椀",
+      "chars": 2136,
+      "chars_no_newline": 2024,
+      "sha1": "65fe2b9189130a06bfacaaf56f5fd3155e89d66e"
+    },
+    {
+      "seq": 7,
+      "file": "007.txt",
+      "subtitle": "第7章　裏口の椀",
+      "chars": 2011,
+      "chars_no_newline": 1915,
+      "sha1": "6ebd551b7517cc035343ed059c8786dffd4b3724"
+    },
+    {
+      "seq": 8,
+      "file": "008.txt",
+      "subtitle": "第8章　施療",
+      "chars": 2116,
+      "chars_no_newline": 2014,
+      "sha1": "bc0f98a33df28ee24a61f394f379f314c414f4da"
+    },
+    {
+      "seq": 9,
+      "file": "009.txt",
+      "subtitle": "第9章　日なた",
+      "chars": 2152,
+      "chars_no_newline": 2046,
+      "sha1": "d384860f4d50e19e1aa7addd5a990735e233639e"
+    },
+    {
+      "seq": 10,
+      "file": "010.txt",
+      "subtitle": "第10章　外れの墓",
+      "chars": 2101,
+      "chars_no_newline": 1997,
+      "sha1": "14b46d70dda476d01a1d763e39a12b9416592f5c"
+    },
+    {
+      "seq": 11,
+      "file": "011.txt",
+      "subtitle": "第11章　月の歌",
+      "chars": 2119,
+      "chars_no_newline": 2009,
+      "sha1": "995c858d90769b68a350511473ea0ad9c391bf19"
+    },
+    {
+      "seq": 12,
+      "file": "012.txt",
+      "subtitle": "第12章　包帯",
+      "chars": 2843,
+      "chars_no_newline": 2683,
+      "sha1": "5d68e28d2fe572ab7363722e065bac5420d45190"
+    },
+    {
+      "seq": 13,
+      "file": "013.txt",
+      "subtitle": "第13章　灯明",
+      "chars": 2109,
+      "chars_no_newline": 1975,
+      "sha1": "1114537d9250d5fb8ac7a1d02c3053690f2d8c17"
+    },
+    {
+      "seq": 14,
+      "file": "014.txt",
+      "subtitle": "第14章　裏口",
+      "chars": 1786,
+      "chars_no_newline": 1696,
+      "sha1": "7cc007ab44303073697de46cebd431cf78cf9569"
+    }
+  ]
+}
