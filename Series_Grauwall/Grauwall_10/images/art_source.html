@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8">
+<style>
+  html,body{margin:0;background:#000}
+  #stage{position:relative;width:1600px;height:2560px;overflow:hidden}
+  canvas{position:absolute;inset:0}
+  .title{position:absolute;right:230px;top:280px;writing-mode:vertical-rl;
+    font-family:"Noto Serif CJK JP",serif;font-weight:600;font-size:132px;letter-spacing:.12em}
+  .team{position:absolute;left:120px;bottom:150px;
+    font-family:"Noto Serif CJK JP",serif;font-weight:600;font-size:42px;letter-spacing:.08em}
+  .series{position:absolute;right:120px;top:300px;writing-mode:vertical-rl;
+    font-family:"Noto Serif CJK JP",serif;font-weight:500;font-size:34px;letter-spacing:.5em}
+  .day .title{color:#2a1e17;text-shadow:0 0 18px rgba(255,246,230,.6)}
+  .day .team,.day .series{color:rgba(42,30,23,.75)}
+  .night .title{color:#F2EBDD;text-shadow:0 0 22px rgba(255,200,140,.30),0 0 2px rgba(255,255,255,.55)}
+  .night .team,.night .series{color:rgba(232,220,196,.8)}
+</style></head>
+<body>
+<div id="stage"><canvas id="c" width="1600" height="2560"></canvas>
+  <div class="title">谷の祭り</div>
+  <div class="series">グラウヴァル　十</div>
+  <div class="team">チームジョバンニ</div>
+</div>
+<script>
+// 第10回『谷の祭り』の表紙。
+// #a 並んだ靴（敷物の縁の草履と足袋と、人間の靴）/ #b 灯明（南の壁の根元に北を向いて並ぶ灯）/ #c 石の上の銅貨（無縁墓地の名のない石と薄荷）
+// 描かないもの：顔、亜人の姿、名前
+const MODE = location.hash.slice(1) || "a";
+const W = 1600, H = 2560;
+let g = document.getElementById("c").getContext("2d");
+function soft(fn, k = 6, blur = 5){
+  const main = g, oc = document.createElement("canvas"); oc.width = W/k; oc.height = H/k;
+  const tmp = document.createElement("canvas"); tmp.width = W/k; tmp.height = H/k;
+  g = tmp.getContext("2d"); g.scale(1/k, 1/k); fn(); g = main;
+  const oc2 = oc.getContext("2d"); oc2.filter = `blur(${blur}px)`; oc2.drawImage(tmp, 0, 0);
+  g.save(); g.imageSmoothingQuality = "high"; g.drawImage(oc, 0, 0, W, H); g.restore();
+}
+let seed = {a: 3130715, b: 3130716, c: 3130717}[MODE] || 1;
+const rnd = () => ((seed = (seed * 1664525 + 1013904223) >>> 0) / 4294967296);
+document.getElementById("stage").className = MODE === "a" ? "day" : "night";
+function glow(x, y, r, col, a0 = 1){
+  const rg = g.createRadialGradient(x, y, 0, x, y, r);
+  rg.addColorStop(0, col.replace("A", a0)); rg.addColorStop(1, col.replace("A", 0));
+  g.fillStyle = rg; g.fillRect(x - r, y - r, 2*r, 2*r);
+}
+function vignette(a, cx = W/2, cy = H*.5){
+  const rg = g.createRadialGradient(cx, cy, H*.25, cx, cy + H*.05, H*.8);
+  rg.addColorStop(0, "rgba(0,0,0,0)"); rg.addColorStop(1, `rgba(0,0,0,${a})`);
+  g.fillStyle = rg; g.fillRect(0, 0, W, H);
+}
+function grain(n, a){ for (let i = 0; i < n; i++){ g.fillStyle = `rgba(${rnd() < .5 ? "0,0,0" : "255,240,220"},${rnd()*a})`; g.fillRect(rnd()*W, rnd()*H, 1 + rnd()*2, 1 + rnd()*2); } }
+function blurShadow(path, dx, dy, b, a, col = "30,20,12"){ g.save(); g.filter = `blur(${b}px)`; g.fillStyle = `rgba(${col},${a})`; g.translate(dx, dy); path(); g.fill(); g.restore(); }
+
+// ── 土（踏み固めた窪地の土）
+function earth(y0, y1, base, dark, light){
+  g.fillStyle = base; g.fillRect(0, y0, W, y1 - y0);
+  soft(() => { for (let i = 0; i < 300; i++){ g.fillStyle = `rgba(${rnd() < .5 ? dark : light},${.04 + rnd()*.08})`; g.beginPath(); g.ellipse(rnd()*W, y0 + rnd()*(y1 - y0), 30 + rnd()*160, 10 + rnd()*50, 0, 0, 7); g.fill(); } }, 4, 6);
+  for (let i = 0; i < 20000; i++){ const y = y0 + rnd()*(y1 - y0); g.fillStyle = `rgba(${rnd() < .55 ? dark : light},${rnd()*.25})`; g.fillRect(rnd()*W, y, 1 + rnd()*2.5, 1 + rnd()*2); }
+  for (let i = 0; i < 240; i++){ const x = rnd()*W, y = y0 + rnd()*(y1 - y0), r = 2 + rnd()*7; g.fillStyle = `rgba(${dark},.35)`; g.beginPath(); g.ellipse(x + 2, y + 2, r, r*.7, 0, 0, 7); g.fill(); g.fillStyle = `rgba(${light},.22)`; g.beginPath(); g.ellipse(x, y, r, r*.7, 0, 0, 7); g.fill(); }
+}
+
+// ════ A：並んだ靴 ════════════════════════════════════════════
+// 古い羊毛の敷物（赤と茶の縞が日と膝で薄れた）
+function rug(y1){
+  const bands = ["#cfae96", "#dccab0", "#c5a08a", "#d8c4a8", "#cba68e", "#ddcdb4"];
+  let y = -10, k = 0;
+  while (y < y1){ const h = (k % 2 ? 40 + rnd()*40 : 120 + rnd()*160); g.fillStyle = bands[k % bands.length]; g.fillRect(0, y, W, h); y += h; k++; }
+  // 色あせ（日の当たる面）
+  const rg = g.createRadialGradient(W*.35, H*.25, 100, W*.5, H*.4, H*.8); rg.addColorStop(0, "rgba(255,248,232,.38)"); rg.addColorStop(1, "rgba(110,70,50,.18)");
+  g.fillStyle = rg; g.fillRect(0, 0, W, y1);
+  // 織り目
+  for (let yy = 0; yy < y1; yy += 5){ g.fillStyle = `rgba(90,55,40,${.04 + rnd()*.03})`; g.fillRect(0, yy, W, 1.6); }
+  for (let xx = 0; xx < W; xx += 6){ g.fillStyle = `rgba(255,245,225,${.03 + rnd()*.03})`; g.fillRect(xx, 0, 1.4, y1); }
+  // 毛羽とすり切れ（膝の跡）
+  soft(() => { for (let i = 0; i < 14; i++){ g.fillStyle = `rgba(240,225,200,${.12 + rnd()*.15})`; g.beginPath(); g.ellipse(200 + rnd()*1200, 300 + rnd()*(y1 - 500), 90 + rnd()*180, 50 + rnd()*90, rnd()*3, 0, 7); g.fill(); } }, 4, 10);
+  g.lineCap = "round";
+  for (let i = 0; i < 16000; i++){ const x = rnd()*W, yy = rnd()*y1, a = rnd()*7, l = 3 + rnd()*9; g.strokeStyle = rnd() < .5 ? `rgba(255,248,232,${rnd()*.2})` : `rgba(80,45,30,${rnd()*.12})`; g.lineWidth = .7; g.beginPath(); g.moveTo(x, yy); g.lineTo(x + Math.cos(a)*l, yy + Math.sin(a)*l); g.stroke(); }
+  // 縁の文様（菱つなぎ、薄れている）
+  for (let x = 0; x < W; x += 60){ g.fillStyle = "rgba(120,70,50,.35)"; g.beginPath(); g.moveTo(x, y1 - 90); g.lineTo(x + 30, y1 - 60); g.lineTo(x, y1 - 30); g.lineTo(x - 30, y1 - 60); g.closePath(); g.fill(); }
+  g.fillStyle = "rgba(120,70,50,.3)"; g.fillRect(0, y1 - 104, W, 8); g.fillRect(0, y1 - 20, W, 6);
+  // 縁（房）
+  g.fillStyle = "#a9785f"; g.fillRect(0, y1 - 26, W, 26);
+  for (let x = 0; x < W; x += 11){ const l = 34 + rnd()*20; g.strokeStyle = `rgba(${rnd() < .5 ? "190,150,120" : "150,105,80"},.9)`; g.lineWidth = 4; g.beginPath(); g.moveTo(x, y1 - 4); g.quadraticCurveTo(x + (rnd() - .5)*10, y1 + l*.5, x + (rnd() - .5)*16, y1 + l); g.stroke(); }
+  // 敷物の縁の影
+  soft(() => { g.fillStyle = "rgba(40,25,15,.45)"; g.fillRect(0, y1 + 10, W, 40); }, 3, 6);
+}
+// 上から見た靴底の輪郭（t=0 かかと → 1 つま先）。side=+1 右足 / -1 左足
+function soleOutline(L, Wd, side){
+  const pts = [];
+  const prof = t => { const heel = .72, waist = .6, ball = 1, toe = .9;
+    if (t < .2) return heel*Math.sin(Math.PI/2*Math.min(1, t/.08 + .25));
+    if (t < .45) return heel + (waist - heel)*((t - .2)/.25);
+    if (t < .72) return waist + (ball - waist)*((t - .45)/.27);
+    return ball - (ball - toe)*((t - .72)/.18)*(t < .9 ? 1 : 1) - (t > .9 ? Math.pow((t - .9)/.1, 2)*.9 : 0); };
+  const N = 60;
+  for (let i = 0; i <= N; i++){ const t = i/N, w = prof(t)*Wd/2, inner = side*(t > .4 && t < .8 ? .1 : 0)*Wd; pts.push([w + inner*.3 + side*Wd*.04*Math.sin(Math.PI*t), -t*L]); }
+  for (let i = N; i >= 0; i--){ const t = i/N, w = prof(t)*Wd/2; pts.push([-w - side*Wd*.06*Math.sin(Math.PI*t*.9), -t*L]); }
+  return pts;
+}
+function polyPath(pts){ g.beginPath(); pts.forEach(([x, y], i) => i ? g.lineTo(x, y) : g.moveTo(x, y)); g.closePath(); }
+function shoe(cx, cy, ang, L, Wd, side){
+  g.save(); g.translate(cx, cy); g.rotate(ang);
+  const out = soleOutline(L, Wd*1.08, side), up = soleOutline(L*.97, Wd, side).map(([x, y]) => [x, y - L*.012]);
+  blurShadow(() => polyPath(out), 18, 22, 16, .55);
+  // 靴底の縁（こげ茶）
+  g.fillStyle = "#2b1a10"; polyPath(out); g.fill();
+  // 甲の革
+  g.save(); polyPath(up); g.clip();
+  const lg = g.createLinearGradient(-Wd/2, 0, Wd/2, 0); [[0, "#3b2414"], [.3, "#6e4526"], [.55, "#8a5a33"], [.8, "#5d391e"], [1, "#2e1b0e"]].forEach(([t, c]) => lg.addColorStop(t, c));
+  g.fillStyle = lg; g.fillRect(-Wd, -L*1.1, Wd*2, L*1.2);
+  const rg = g.createRadialGradient(-Wd*.1, -L*.72, 10, 0, -L*.65, L*.45); rg.addColorStop(0, "rgba(255,220,170,.28)"); rg.addColorStop(1, "rgba(0,0,0,0)"); g.fillStyle = rg; g.fillRect(-Wd, -L*1.1, Wd*2, L*1.2);
+  for (let i = 0; i < 1800; i++){ g.fillStyle = `rgba(${rnd() < .5 ? "20,10,4" : "220,180,140"},${rnd()*.12})`; g.fillRect((rnd() - .5)*Wd*1.2, -rnd()*L, 1 + rnd()*2, 1 + rnd()*2); }
+  // 履き皺（甲の付け根）
+  g.strokeStyle = "rgba(25,12,5,.5)"; g.lineWidth = 3; for (let k = 0; k < 4; k++){ const y = -L*(.66 + k*.02); g.beginPath(); g.moveTo(-Wd*.4, y + 6); g.quadraticCurveTo(0, y - 10 - rnd()*8, Wd*.4, y + 6); g.stroke(); }
+  // つま先の縫い目
+  g.strokeStyle = "rgba(20,10,4,.55)"; g.lineWidth = 2.5; g.setLineDash([7, 6]); g.beginPath(); g.ellipse(0, -L*.86, Wd*.38, L*.1, 0, Math.PI, 0); g.stroke(); g.setLineDash([]);
+  g.restore();
+  // 履き口
+  g.fillStyle = "#130a05"; g.beginPath(); g.ellipse(0, -L*.2, Wd*.3, L*.17, 0, 0, 7); g.fill();
+  g.fillStyle = "rgba(150,110,75,.55)"; g.beginPath(); g.ellipse(0, -L*.12, Wd*.22, L*.08, 0, 0, Math.PI); g.fill();
+  g.strokeStyle = "#4a2d17"; g.lineWidth = 7; g.beginPath(); g.ellipse(0, -L*.2, Wd*.3, L*.17, 0, 0, 7); g.stroke();
+  // 舌革
+  g.fillStyle = "#7a4f2c"; g.beginPath(); g.moveTo(-Wd*.17, -L*.33); g.lineTo(Wd*.17, -L*.33); g.lineTo(Wd*.13, -L*.6); g.quadraticCurveTo(0, -L*.63, -Wd*.13, -L*.6); g.closePath(); g.fill();
+  // 紐（ほどいたまま、端が垂れる）
+  const eyes = []; for (let k = 0; k < 5; k++){ const y = -L*(.34 + k*.055); eyes.push([[-Wd*.21, y], [Wd*.21, y]]); }
+  for (const [l, r] of eyes){ for (const p of [l, r]){ g.fillStyle = "#1a0f07"; g.beginPath(); g.arc(p[0], p[1], 6, 0, 7); g.fill(); g.fillStyle = "rgba(200,170,120,.6)"; g.beginPath(); g.arc(p[0] - 1, p[1] - 1, 2.5, 0, 7); g.fill(); } }
+  g.strokeStyle = "#c9b18a"; g.lineWidth = 5; g.lineCap = "round";
+  for (let k = 0; k < eyes.length - 1; k++){ const [l0, r0] = eyes[k], [l1, r1] = eyes[k + 1]; g.beginPath(); g.moveTo(...l1); g.lineTo(...r0); g.stroke(); g.beginPath(); g.moveTo(...r1); g.lineTo(...l0); g.stroke(); }
+  const [l0, r0] = eyes[0];
+  g.beginPath(); g.moveTo(...l0); g.bezierCurveTo(l0[0] - 30, l0[1] + 60, l0[0] - 80*side - 30, l0[1] + 120, l0[0] - 110*side - 20, l0[1] + 150); g.stroke();
+  g.beginPath(); g.moveTo(...r0); g.bezierCurveTo(r0[0] + 30, r0[1] + 50, r0[0] + 70*side + 40, r0[1] + 110, r0[0] + 90*side + 60, r0[1] + 120); g.stroke();
+  g.restore();
+}
+// 草履（藁を編んだ平たい底と鼻緒）
+function sandal(cx, cy, ang, L, Wd, strap){
+  g.save(); g.translate(cx, cy); g.rotate(ang);
+  const path = () => { g.beginPath(); g.ellipse(0, -L/2, Wd/2, L/2, 0, 0, 7); };
+  blurShadow(path, 12, 16, 12, .45);
+  const rg = g.createRadialGradient(-Wd*.1, -L*.6, 10, 0, -L/2, L*.6); rg.addColorStop(0, "#d9c18c"); rg.addColorStop(1, "#a88a55");
+  g.fillStyle = rg; path(); g.fill();
+  g.save(); path(); g.clip();
+  for (let k = 1; k < 14; k++){ g.strokeStyle = `rgba(110,85,45,${.35 + rnd()*.2})`; g.lineWidth = 3; g.beginPath(); g.ellipse(0, -L/2, Wd/2*k/14, L/2*k/14, 0, 0, 7); g.stroke(); }
+  for (let i = 0; i < 900; i++){ const a = rnd()*7, r = rnd(); g.fillStyle = `rgba(${rnd() < .5 ? "90,70,35" : "250,235,190"},${rnd()*.3})`; g.fillRect(Math.cos(a)*Wd/2*r, -L/2 + Math.sin(a)*L/2*r, 2, 2); }
+  // 踏みへこみ（かかとと指の跡、すり切れ）
+  g.fillStyle = "rgba(80,60,30,.25)"; g.beginPath(); g.ellipse(0, -L*.2, Wd*.25, L*.12, 0, 0, 7); g.fill(); g.beginPath(); g.ellipse(Wd*.05, -L*.75, Wd*.28, L*.1, 0, 0, 7); g.fill();
+  g.restore();
+  g.strokeStyle = "rgba(90,70,40,.6)"; g.lineWidth = 3; path(); g.stroke();
+  // 鼻緒
+  g.strokeStyle = strap; g.lineWidth = 14; g.lineCap = "round";
+  g.beginPath(); g.moveTo(0, -L*.82); g.quadraticCurveTo(-Wd*.25, -L*.68, -Wd*.44, -L*.5); g.stroke();
+  g.beginPath(); g.moveTo(0, -L*.82); g.quadraticCurveTo(Wd*.25, -L*.68, Wd*.44, -L*.5); g.stroke();
+  g.strokeStyle = "rgba(255,255,255,.18)"; g.lineWidth = 4; g.beginPath(); g.moveTo(0, -L*.82); g.quadraticCurveTo(-Wd*.25, -L*.7, -Wd*.42, -L*.53); g.stroke();
+  g.fillStyle = strap; g.beginPath(); g.arc(0, -L*.82, 10, 0, 7); g.fill();
+  g.restore();
+}
+// 土竜人の厚い布の足袋（つま先が丸く、指が分かれていない）
+function tabi(cx, cy, ang, L, Wd){
+  g.save(); g.translate(cx, cy); g.rotate(ang);
+  const path = () => { g.beginPath(); g.moveTo(-Wd*.4, 0); g.quadraticCurveTo(-Wd*.55, -L*.5, -Wd*.45, -L*.85); g.quadraticCurveTo(0, -L*1.08, Wd*.45, -L*.85); g.quadraticCurveTo(Wd*.55, -L*.5, Wd*.4, 0); g.quadraticCurveTo(0, L*.08, -Wd*.4, 0); g.closePath(); };
+  blurShadow(path, 12, 16, 12, .45);
+  g.fillStyle = "#6f7480"; path(); g.fill();
+  g.save(); path(); g.clip();
+  for (let k = 0; k < 9; k++){ const y = -L*(.1 + k*.1); g.strokeStyle = "rgba(40,44,52,.35)"; g.lineWidth = 4; g.beginPath(); g.moveTo(-Wd*.6, y + rnd()*10); g.quadraticCurveTo(0, y - 12, Wd*.6, y + rnd()*10); g.stroke(); }
+  for (let i = 0; i < 1200; i++){ g.fillStyle = `rgba(${rnd() < .5 ? "30,32,40" : "200,205,215"},${rnd()*.18})`; g.fillRect((rnd() - .5)*Wd, -rnd()*L, 2, 2); }
+  g.fillStyle = "rgba(120,100,80,.6)"; g.fillRect(-Wd, -L*.18, Wd*2, 18);
+  g.restore();
+  g.restore();
+}
+function drawA(){
+  const y1 = 1760;
+  rug(y1);
+  earth(y1, H, "#8d7861", "60,45,30", "200,180,150");
+  // 敷物の縁に揃えて並んだ履物（左から：草履、足袋、草履、人間の靴）
+  const row = 2200;
+  sandal(140, row, -.06, 330, 150, "#7a2f22");
+  sandal(300, row + 8, .03, 330, 150, "#7a2f22");
+  tabi(475, row - 10, -.04, 280, 165);
+  tabi(648, row - 2, .05, 280, 165);
+  sandal(820, row + 6, .0, 320, 145, "#2f3c55");
+  sandal(975, row, .07, 320, 145, "#2f3c55");
+  shoe(1170, row + 20, -.04, 450, 170, -1);
+  shoe(1370, row + 28, .05, 450, 170, 1);
+  grain(9000, .04); vignette(.32, 760, H*.55);
+}
+
+// ════ B：灯明 ════════════════════════════════════════════════
+function wall(y0, y1, light){
+  // 石積み（夜。灯で下から照らされる）
+  g.fillStyle = "#1e2128"; g.fillRect(0, y0, W, y1 - y0);
+  let y = y1;
+  const rows = [];
+  while (y > y0){ const h = 120 + rnd()*60; rows.push([y - h, h]); y -= h; }
+  for (const [ry, rh] of rows){
+    let x = -rnd()*200;
+    while (x < W){ const w = 180 + rnd()*200;
+      const d = (y1 - (ry + rh/2))/(y1 - y0); // 0=根元 1=上
+      const base = 36 + rnd()*14 - d*14;
+      const lg = g.createLinearGradient(0, ry, 0, ry + rh); lg.addColorStop(0, `rgb(${base},${base + 3},${base + 10})`); lg.addColorStop(1, `rgb(${base + 10},${base + 10},${base + 14})`);
+      g.fillStyle = lg; g.beginPath(); g.roundRect(x + 5, ry + 5, w - 10, rh - 10, 10); g.fill();
+      for (let i = 0; i < 260; i++){ g.fillStyle = `rgba(${rnd() < .5 ? "0,0,0" : "160,165,180"},${rnd()*.15})`; g.fillRect(x + 8 + rnd()*(w - 16), ry + 8 + rnd()*(rh - 16), 2, 2); }
+      // 夏草（継ぎ目）
+      if (rnd() < .06){ g.strokeStyle = "rgba(60,80,55,.6)"; g.lineWidth = 3; for (let k = 0; k < 6; k++){ g.beginPath(); g.moveTo(x + 2, ry + rh - 4); g.quadraticCurveTo(x + 10 + k*4, ry + rh - 40, x + 20 + k*8, ry + rh - 60 - rnd()*30); g.stroke(); } }
+      x += w; }
+  }
+  if (light) light();
+}
+function dish(x, y, s){
+  // 素焼きの小皿と、芯の火
+  g.fillStyle = "rgba(0,0,0,.5)"; g.beginPath(); g.ellipse(x + 6*s, y + 10*s, 46*s, 12*s, 0, 0, 7); g.fill();
+  const lg = g.createLinearGradient(x - 44*s, 0, x + 44*s, 0); lg.addColorStop(0, "#3a1e12"); lg.addColorStop(.45, "#a7603a"); lg.addColorStop(1, "#4a2616");
+  g.fillStyle = lg; g.beginPath(); g.moveTo(x - 44*s, y - 6*s); g.quadraticCurveTo(x, y + 26*s, x + 44*s, y - 6*s); g.closePath(); g.fill();
+  g.fillStyle = "#c57a4b"; g.beginPath(); g.ellipse(x, y - 6*s, 44*s, 11*s, 0, 0, 7); g.fill();
+  g.fillStyle = "#4a3418"; g.beginPath(); g.ellipse(x, y - 6*s, 37*s, 8*s, 0, 0, 7); g.fill();
+  g.fillStyle = "rgba(255,210,120,.35)"; g.beginPath(); g.ellipse(x - 6*s, y - 7*s, 22*s, 4*s, 0, 0, 7); g.fill();
+  // 芯と火
+  g.strokeStyle = "#221408"; g.lineWidth = 3*s; g.beginPath(); g.moveTo(x + 18*s, y - 8*s); g.lineTo(x + 24*s, y - 20*s); g.stroke();
+  const fx = x + 24*s, fy = y - 22*s;
+  glow(fx, fy - 10*s, 260*s, "rgba(255,150,60,A)", .16);
+  glow(fx, fy - 10*s, 70*s, "rgba(255,180,90,A)", .5);
+  g.fillStyle = "rgba(255,190,90,.95)"; g.beginPath(); g.moveTo(fx - 9*s, fy); g.quadraticCurveTo(fx - 10*s, fy - 22*s, fx, fy - 44*s); g.quadraticCurveTo(fx + 10*s, fy - 22*s, fx + 9*s, fy); g.closePath(); g.fill();
+  g.fillStyle = "rgba(255,250,220,.95)"; g.beginPath(); g.moveTo(fx - 4*s, fy - 2*s); g.quadraticCurveTo(fx - 5*s, fy - 14*s, fx, fy - 26*s); g.quadraticCurveTo(fx + 5*s, fy - 14*s, fx + 4*s, fy - 2*s); g.closePath(); g.fill();
+}
+function drawB(){
+  // 夜空（壁の上に少しだけ）と月の光
+  const sky = g.createLinearGradient(0, 0, 0, 700); sky.addColorStop(0, "#0d1220"); sky.addColorStop(1, "#1b2233"); g.fillStyle = sky; g.fillRect(0, 0, W, 700);
+  for (let i = 0; i < 140; i++){ g.fillStyle = `rgba(240,236,220,${rnd()*.5})`; g.fillRect(rnd()*W, rnd()*560, 1.5 + rnd()*2, 1.5 + rnd()*2); }
+  glow(300, 180, 520, "rgba(200,210,235,A)", .12);
+  const ledge = 2150;
+  wall(620, ledge, null);
+  // 壁の縁（上）
+  g.fillStyle = "#14171d"; g.fillRect(0, 600, W, 34);
+  // 鴉人の影（壁の上の縁に一つ。顔は描かない）
+  g.fillStyle = "#07080b"; g.beginPath(); g.ellipse(1060, 588, 34, 44, 0, 0, 7); g.fill(); g.beginPath(); g.ellipse(1060, 530, 20, 22, 0, 0, 7); g.fill();
+  g.beginPath(); g.moveTo(1030, 570); g.quadraticCurveTo(1000, 610, 1024, 632); g.lineTo(1050, 600); g.fill(); g.beginPath(); g.moveTo(1090, 570); g.quadraticCurveTo(1120, 610, 1096, 632); g.lineTo(1070, 600); g.fill();
+  // 石の出っ張り（灯を並べる帯）
+  const lg = g.createLinearGradient(0, ledge - 30, 0, ledge + 70); lg.addColorStop(0, "#3d3a38"); lg.addColorStop(1, "#1a1918"); g.fillStyle = lg; g.fillRect(0, ledge - 30, W, 100);
+  // 下の土
+  g.fillStyle = "#14110e"; g.fillRect(0, ledge + 70, W, H - ledge - 70);
+  for (let i = 0; i < 8000; i++){ g.fillStyle = `rgba(${rnd() < .5 ? "0,0,0" : "120,100,80"},${rnd()*.2})`; g.fillRect(rnd()*W, ledge + 70 + rnd()*(H - ledge - 70), 2, 2); }
+  // 灯の列（左から右へ。右端の一つは少し離して、最後に灯った一つ）
+  const xs = []; for (let x = 90; x < W - 330; x += 175 + rnd()*20) xs.push(x);
+  for (const x of xs) dish(x, ledge - 22 + (rnd() - .5)*6, 1.55 + rnd()*.12);
+  dish(W - 150, ledge - 22, 1.65);
+  // 灯が壁を下から照らす
+  g.save(); g.globalCompositeOperation = "lighter";
+  const up = g.createLinearGradient(0, ledge, 0, ledge - 800); up.addColorStop(0, "rgba(255,140,60,.22)"); up.addColorStop(1, "rgba(255,140,60,0)"); g.fillStyle = up; g.fillRect(0, ledge - 800, W, 800);
+  g.restore();
+  // 月の光で、足元がうっすら見える
+  const mg = g.createLinearGradient(0, ledge + 70, 0, H); mg.addColorStop(0, "rgba(150,165,200,.06)"); mg.addColorStop(1, "rgba(0,0,0,.3)"); g.fillStyle = mg; g.fillRect(0, ledge + 70, W, H - ledge - 70);
+  grain(9000, .05); vignette(.45, 800, H*.6);
+}
+
+// ════ C：石の上の銅貨 ═════════════════════════════════════════
+function mint(x, y, s, ang){
+  g.save(); g.translate(x, y); g.rotate(ang);
+  g.strokeStyle = "#3b4a2a"; g.lineWidth = 5*s; g.beginPath(); g.moveTo(0, 0); g.lineTo(0, -160*s); g.stroke();
+  for (let k = 0; k < 4; k++){ const yy = -30*s - k*38*s, sz = (1 - k*.15)*s;
+    for (const sd of [-1, 1]){ g.save(); g.translate(0, yy); g.rotate(sd*.9);
+      const lg = g.createLinearGradient(0, 0, 70*sz, 0); lg.addColorStop(0, "#4f6a3a"); lg.addColorStop(1, "#6f8f52"); g.fillStyle = lg;
+      g.beginPath(); g.moveTo(0, 0); g.quadraticCurveTo(35*sz, -28*sz, 72*sz, 0); g.quadraticCurveTo(35*sz, 28*sz, 0, 0); g.fill();
+      g.strokeStyle = "rgba(30,45,20,.6)"; g.lineWidth = 2; g.beginPath(); g.moveTo(4*sz, 0); g.lineTo(66*sz, 0); g.stroke();
+      for (let j = 1; j < 5; j++){ g.beginPath(); g.moveTo(j*13*sz, 0); g.lineTo(j*13*sz + 9*sz, -10*sz); g.moveTo(j*13*sz, 0); g.lineTo(j*13*sz + 9*sz, 10*sz); g.stroke(); }
+      g.restore(); } }
+  g.restore();
+}
+function coin(x, y, r){
+  g.save(); g.filter = "blur(6px)"; g.fillStyle = "rgba(0,0,0,.55)"; g.beginPath(); g.ellipse(x + 10, y + 14, r*1.02, r*.98, 0, 0, 7); g.fill(); g.restore();
+  // 縁（厚み）
+  g.fillStyle = "#5a2c14"; g.beginPath(); g.arc(x + 3, y + 6, r, 0, 7); g.fill();
+  const rg = g.createRadialGradient(x - r*.35, y - r*.4, r*.1, x, y, r*1.05); rg.addColorStop(0, "#e0a27a"); rg.addColorStop(.5, "#b66a3e"); rg.addColorStop(1, "#6e3519");
+  g.fillStyle = rg; g.beginPath(); g.arc(x, y, r, 0, 7); g.fill();
+  g.strokeStyle = "rgba(60,25,10,.7)"; g.lineWidth = 5; g.beginPath(); g.arc(x, y, r*.86, 0, 7); g.stroke();
+  g.strokeStyle = "rgba(255,210,170,.35)"; g.lineWidth = 2; g.beginPath(); g.arc(x - 1, y - 1, r*.86, Math.PI*.9, Math.PI*1.6); g.stroke();
+  // 擦り減った刻印（何の印かは読めない）
+  for (let k = 0; k < 16; k++){ const a = k/16*Math.PI*2; g.fillStyle = `rgba(70,30,12,${.18 + rnd()*.2})`; g.beginPath(); g.arc(x + Math.cos(a)*r*.62, y + Math.sin(a)*r*.62, 3.5, 0, 7); g.fill(); }
+  g.strokeStyle = "rgba(70,30,12,.25)"; g.lineWidth = 4; g.beginPath(); g.arc(x, y, r*.3, 0, 7); g.stroke();
+  // 緑青と傷
+  for (let i = 0; i < 260; i++){ const a = rnd()*7, rr = rnd()*r*.95; g.fillStyle = rnd() < .2 ? `rgba(80,140,110,${rnd()*.35})` : `rgba(${rnd() < .5 ? "60,25,10" : "255,220,190"},${rnd()*.25})`; g.fillRect(x + Math.cos(a)*rr, y + Math.sin(a)*rr, 2, 2); }
+}
+function drawC(){
+  // 夕方の、日の当たらない壁の角の土
+  earth(0, H, "#3a3329", "15,12,8", "120,105,85");
+  const dusk = g.createLinearGradient(0, 0, W, H); dusk.addColorStop(0, "rgba(255,170,120,.10)"); dusk.addColorStop(.5, "rgba(0,0,0,0)"); dusk.addColorStop(1, "rgba(10,12,25,.45)"); g.fillStyle = dusk; g.fillRect(0, 0, W, H);
+  // 薄荷（石と石のあいだ）
+  mint(180, 2380, 1.3, -.2); mint(1180, 2050, 1.2, .5); mint(1260, 2090, .9, .9); mint(230, 1500, 1.0, -.6); mint(260, 2420, 1.0, .25); mint(1350, 1260, 1.1, .4); mint(1450, 1300, .9, -.1); mint(300, 1180, .8, .1);
+  // 名のない平たい石
+  const cx = 700, cy = 1640, R = 520;
+  const pts = []; const ph = rnd()*7; for (let i = 0; i < 36; i++){ const a = i/36*Math.PI*2, r = R*(1 + .07*Math.sin(3*a + ph) + .05*Math.sin(5*a + 1) + (rnd() - .5)*.04); pts.push([cx + Math.cos(a)*r*1.05, cy + Math.sin(a)*r*.8]); }
+  blurShadow(() => polyPath(pts), 24, 34, 26, .7, "0,0,0");
+  g.save(); polyPath(pts); g.clip();
+  const rg = g.createRadialGradient(cx - 160, cy - 200, 50, cx, cy, R*1.1); rg.addColorStop(0, "#8f8b84"); rg.addColorStop(.6, "#6a6760"); rg.addColorStop(1, "#3c3a36"); g.fillStyle = rg; g.fillRect(0, 0, W, H);
+  for (let i = 0; i < 9000; i++){ const x = cx - R*1.1 + rnd()*R*2.2, y = cy - R + rnd()*R*2; g.fillStyle = `rgba(${rnd() < .5 ? "25,25,22" : "200,198,190"},${rnd()*.14})`; g.fillRect(x, y, 1 + rnd()*3, 1 + rnd()*3); }
+  // 地衣（苔）
+  soft(() => { for (let i = 0; i < 12; i++){ const a = rnd()*7, rr = R*(.6 + rnd()*.4); for (let j = 0; j < 14; j++){ g.fillStyle = `rgba(${rnd() < .5 ? "120,128,95" : "150,150,115"},${.10 + rnd()*.12})`; g.beginPath(); g.arc(cx + Math.cos(a)*rr + (rnd() - .5)*60, cy + Math.sin(a)*rr*.8 + (rnd() - .5)*40, 4 + rnd()*12, 0, 7); g.fill(); } } }, 2, 1);
+  // 割れ目一本
+  g.strokeStyle = "rgba(20,20,18,.6)"; g.lineWidth = 3; g.beginPath(); g.moveTo(cx - R*.9, cy + R*.2); g.quadraticCurveTo(cx - R*.4, cy + R*.05, cx - R*.1, cy + R*.35); g.stroke();
+  g.restore();
+  g.strokeStyle = "rgba(15,15,12,.5)"; g.lineWidth = 3; polyPath(pts); g.stroke();
+  // 銅貨一枚
+  coin(cx + 60, cy - 40, 92);
+  grain(9000, .05); vignette(.45, 700, H*.55);
+}
+({a: drawA, b: drawB, c: drawC})[MODE]();
+document.title = "done";
+</script>
+</body></html>
