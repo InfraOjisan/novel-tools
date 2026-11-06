@@ -2,7 +2,7 @@
  "work": "Grauwall_10",
  "narou_novel_id": 3369997,
  "ncode": "n0334mz",
- "status": "reserved",
+ "status": "published",
  "episodes": [
   {
    "seq": 1,
@@ -88,5 +88,7 @@
    "reserved_at": "2026-11-06 21:00",
    "end": true
   }
- ]
+ ],
+ "published_at": "2026-11-06 21:00",
+ "series": "S9023K"
 }
