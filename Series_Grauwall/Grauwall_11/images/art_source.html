@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8">
+<style>
+  html,body{margin:0;background:#000}
+  #stage{position:relative;width:1600px;height:2560px;overflow:hidden}
+  canvas{position:absolute;inset:0}
+  .title{position:absolute;right:230px;top:280px;writing-mode:vertical-rl;
+    font-family:"Noto Serif CJK JP",serif;font-weight:600;font-size:132px;letter-spacing:.12em}
+  .team{position:absolute;left:120px;bottom:150px;
+    font-family:"Noto Serif CJK JP",serif;font-weight:600;font-size:42px;letter-spacing:.08em}
+  .series{position:absolute;right:120px;top:300px;writing-mode:vertical-rl;
+    font-family:"Noto Serif CJK JP",serif;font-weight:500;font-size:34px;letter-spacing:.5em}
+  .day .title{color:#2a1e17;text-shadow:0 0 18px rgba(255,246,230,.6)}
+  .day .team,.day .series{color:rgba(42,30,23,.75)}
+  .night .title{color:#F2EBDD;text-shadow:0 0 22px rgba(255,200,140,.30),0 0 2px rgba(255,255,255,.55)}
+  .night .team,.night .series{color:rgba(232,220,196,.8)}
+</style></head>
+<body>
+<div id="stage"><canvas id="c" width="1600" height="2560"></canvas>
+  <div class="title">南の川港</div>
+  <div class="series">グラウヴァル　十一</div>
+  <div class="team">チームジョバンニ</div>
+</div>
+<script>
+// 第11回『南の川港』の表紙。
+// #a 賽（浮き灯の盤の上の二つの賽と、開いた壺）/ #b 灯証（証文と、その脇の小さな灯）/ #c 浮き灯（夜の川の真ん中に繋いだ平底の大舟と、舷の灯）
+// 描かないもの：顔、亜人の姿、読める字、すり替えの手口（壺は開いて脇に置く）
+const MODE = location.hash.slice(1) || "a";
+const W = 1600, H = 2560;
+let g = document.getElementById("c").getContext("2d");
+function soft(fn, k = 6, blur = 5){
+  const main = g, oc = document.createElement("canvas"); oc.width = W/k; oc.height = H/k;
+  const tmp = document.createElement("canvas"); tmp.width = W/k; tmp.height = H/k;
+  g = tmp.getContext("2d"); g.scale(1/k, 1/k); fn(); g = main;
+  const oc2 = oc.getContext("2d"); oc2.filter = `blur(${blur}px)`; oc2.drawImage(tmp, 0, 0);
+  g.save(); g.imageSmoothingQuality = "high"; g.drawImage(oc, 0, 0, W, H); g.restore();
+}
+let seed = {a: 3130801, b: 3130802, c: 3130803}[MODE] || 1;
+const rnd = () => ((seed = (seed * 1664525 + 1013904223) >>> 0) / 4294967296);
+document.getElementById("stage").className = MODE === "b" ? "day" : "night";
+function glow(x, y, r, col, a0 = 1){
+  const rg = g.createRadialGradient(x, y, 0, x, y, r);
+  rg.addColorStop(0, col.replace("A", a0)); rg.addColorStop(1, col.replace("A", 0));
+  g.fillStyle = rg; g.fillRect(x - r, y - r, 2*r, 2*r);
+}
+function vignette(a, cx = W/2, cy = H*.5){
+  const rg = g.createRadialGradient(cx, cy, H*.25, cx, cy + H*.05, H*.8);
+  rg.addColorStop(0, "rgba(0,0,0,0)"); rg.addColorStop(1, `rgba(0,0,0,${a})`);
+  g.fillStyle = rg; g.fillRect(0, 0, W, H);
+}
+function grain(n, a){ for (let i = 0; i < n; i++){ g.fillStyle = `rgba(${rnd() < .5 ? "0,0,0" : "255,240,220"},${rnd()*a})`; g.fillRect(rnd()*W, rnd()*H, 1 + rnd()*2, 1 + rnd()*2); } }
+function flame(fx, fy, s, big = 1){
+  glow(fx, fy - 10*s, 300*s*big, "rgba(255,150,60,A)", .16);
+  glow(fx, fy - 10*s, 80*s, "rgba(255,180,90,A)", .5);
+  g.fillStyle = "rgba(255,190,90,.95)"; g.beginPath(); g.moveTo(fx - 9*s, fy); g.quadraticCurveTo(fx - 10*s, fy - 22*s, fx, fy - 44*s); g.quadraticCurveTo(fx + 10*s, fy - 22*s, fx + 9*s, fy); g.closePath(); g.fill();
+  g.fillStyle = "rgba(255,250,220,.95)"; g.beginPath(); g.moveTo(fx - 4*s, fy - 2*s); g.quadraticCurveTo(fx - 5*s, fy - 14*s, fx, fy - 26*s); g.quadraticCurveTo(fx + 5*s, fy - 14*s, fx + 4*s, fy - 2*s); g.closePath(); g.fill();
+}
+function oilDish(x, y, s){
+  g.fillStyle = "rgba(0,0,0,.45)"; g.beginPath(); g.ellipse(x + 6*s, y + 10*s, 46*s, 12*s, 0, 0, 7); g.fill();
+  const lg = g.createLinearGradient(x - 44*s, 0, x + 44*s, 0); lg.addColorStop(0, "#3a1e12"); lg.addColorStop(.45, "#a7603a"); lg.addColorStop(1, "#4a2616");
+  g.fillStyle = lg; g.beginPath(); g.moveTo(x - 44*s, y - 6*s); g.quadraticCurveTo(x, y + 26*s, x + 44*s, y - 6*s); g.closePath(); g.fill();
+  g.fillStyle = "#c57a4b"; g.beginPath(); g.ellipse(x, y - 6*s, 44*s, 11*s, 0, 0, 7); g.fill();
+  g.fillStyle = "#4a3418"; g.beginPath(); g.ellipse(x, y - 6*s, 37*s, 8*s, 0, 0, 7); g.fill();
+  g.strokeStyle = "#221408"; g.lineWidth = 3*s; g.beginPath(); g.moveTo(x + 18*s, y - 8*s); g.lineTo(x + 24*s, y - 20*s); g.stroke();
+  flame(x + 24*s, y - 22*s, s);
+}
+
+// ════ A：賽 ════════════════════════════════════════════════
+function planks(){
+  // 浮き灯の板の間（上から斜めに見下ろす）
+  g.fillStyle = "#2a1c12"; g.fillRect(0, 0, W, H);
+  let x = -40;
+  while (x < W){ const w = 220 + rnd()*90;
+    const base = 52 + rnd()*20;
+    const lg = g.createLinearGradient(x, 0, x + w, 0); lg.addColorStop(0, `rgb(${base - 10},${base*0.66 - 8},${base*0.42 - 6})`); lg.addColorStop(.5, `rgb(${base},${base*0.68},${base*0.44})`); lg.addColorStop(1, `rgb(${base - 14},${base*0.62 - 10},${base*0.4 - 8})`);
+    g.fillStyle = lg; g.fillRect(x + 3, 0, w - 6, H);
+    // 木目
+    for (let i = 0; i < 40; i++){ const xx = x + 10 + rnd()*(w - 20); g.strokeStyle = `rgba(20,10,4,${.08 + rnd()*.14})`; g.lineWidth = 1 + rnd()*2; g.beginPath(); g.moveTo(xx, 0); for (let y = 0; y < H; y += 160) g.lineTo(xx + Math.sin(y/300 + i)*6*rnd(), y); g.stroke(); }
+    // 節
+    if (rnd() < .5){ const ny = rnd()*H; g.strokeStyle = "rgba(20,10,4,.35)"; g.lineWidth = 3; for (let k = 0; k < 4; k++){ g.beginPath(); g.ellipse(x + w/2, ny, 14 + k*9, 30 + k*14, 0, 0, 7); g.stroke(); } }
+    // 板の継ぎ目
+    g.fillStyle = "rgba(8,4,2,.85)"; g.fillRect(x, 0, 4, H);
+    x += w; }
+  for (let i = 0; i < 20000; i++){ g.fillStyle = `rgba(${rnd() < .5 ? "0,0,0" : "200,160,110"},${rnd()*.1})`; g.fillRect(rnd()*W, rnd()*H, 2, 2); }
+}
+function face(o, u, v, fill, pips, pipCol){
+  // o=左上の角、u・v=辺のベクトル。単位正方形に変換して描く
+  g.save(); g.transform(u[0], u[1], v[0], v[1], o[0], o[1]);
+  g.fillStyle = fill; g.beginPath(); g.roundRect(0, 0, 1, 1, .12); g.fill();
+  g.fillStyle = pipCol;
+  for (const [px, py] of pips){ g.beginPath(); g.arc(px, py, .085, 0, 7); g.fill(); }
+  g.restore();
+}
+const PIPS = {1: [[.5,.5]], 2: [[.27,.27],[.73,.73]], 3: [[.25,.25],[.5,.5],[.75,.75]], 4: [[.27,.27],[.73,.27],[.27,.73],[.73,.73]], 5: [[.25,.25],[.75,.25],[.5,.5],[.25,.75],[.75,.75]], 6: [[.27,.22],[.73,.22],[.27,.5],[.73,.5],[.27,.78],[.73,.78]]};
+function die(cx, cy, s, ang, top, left, right){
+  // 角を手前に向けた立方体（上面・左面・右面）
+  const c = Math.cos(ang), sn = Math.sin(ang);
+  const ex = [c*s, sn*s*.55], ey = [-sn*s, c*s*.55], ez = [0, -s*.92];
+  const P = (a, b, h) => [cx + ex[0]*a + ey[0]*b + ez[0]*h, cy + ex[1]*a + ey[1]*b + ez[1]*h];
+  // 影
+  g.save(); g.filter = "blur(14px)"; g.fillStyle = "rgba(0,0,0,.6)"; g.beginPath(); const s0 = P(0,0,0), s1 = P(1,0,0), s2 = P(1,1,0), s3 = P(0,1,0);
+  g.moveTo(s0[0] + 24, s0[1] + 30); g.lineTo(s1[0] + 24, s1[1] + 30); g.lineTo(s2[0] + 24, s2[1] + 30); g.lineTo(s3[0] + 24, s3[1] + 30); g.closePath(); g.fill(); g.restore();
+  const bone = "#e9dcc2", boneL = "#d2c2a2", boneD = "#b5a283", pip = "#3a1810", pipRed = "#7a1c14";
+  // 左面（ey 方向の面：a=0）
+  face(P(0,0,1), [ey[0], ey[1]], [-ez[0], -ez[1]], boneL, PIPS[left], pip);
+  // 右面（ex 方向の面：b=1）
+  face(P(0,1,1), [ex[0], ex[1]], [-ez[0], -ez[1]], boneD, PIPS[right], pip);
+  // 上面
+  face(P(0,0,1), [ex[0], ex[1]], [ey[0], ey[1]], bone, PIPS[top], top === 1 ? pipRed : pip);
+  // 上面のつや
+  const t = P(.35, .3, 1); glow(t[0], t[1], s*.45, "rgba(255,240,210,A)", .18);
+}
+function cup(cx, cy, s){
+  // 開いて横に伏せた壺（漆の黒）。口をこちらに向けて置いてある
+  g.save(); g.filter = "blur(18px)"; g.fillStyle = "rgba(0,0,0,.65)"; g.beginPath(); g.ellipse(cx + 40, cy + 70*s, 260*s, 80*s, 0, 0, 7); g.fill(); g.restore();
+  const lg = g.createLinearGradient(cx - 230*s, 0, cx + 230*s, 0); lg.addColorStop(0, "#0e0807"); lg.addColorStop(.4, "#3b1d14"); lg.addColorStop(.55, "#5c2e1e"); lg.addColorStop(1, "#120a08");
+  g.fillStyle = lg; g.beginPath(); g.ellipse(cx, cy, 230*s, 170*s, -.25, 0, 7); g.fill();
+  // 口（中の暗がり）
+  g.fillStyle = "#050303"; g.beginPath(); g.ellipse(cx + 150*s, cy + 40*s, 80*s, 150*s, -.25, 0, 7); g.fill();
+  g.strokeStyle = "rgba(160,80,40,.55)"; g.lineWidth = 6*s; g.beginPath(); g.ellipse(cx + 150*s, cy + 40*s, 80*s, 150*s, -.25, 0, 7); g.stroke();
+  // 漆のつや
+  g.strokeStyle = "rgba(255,210,170,.22)"; g.lineWidth = 14*s; g.beginPath(); g.ellipse(cx - 30*s, cy - 40*s, 150*s, 90*s, -.25, 3.6, 4.6); g.stroke();
+}
+function drawA(){
+  planks();
+  // 盤（奇偶の盤。中央に浅い枠）
+  g.save(); g.translate(W/2 - 40, 1650); g.rotate(-.05);
+  g.fillStyle = "rgba(0,0,0,.5)"; g.filter = "blur(20px)"; g.fillRect(-640 + 30, -470 + 40, 1280, 940); g.filter = "none";
+  const bl = g.createLinearGradient(-640, -470, 640, 470); bl.addColorStop(0, "#5a3a22"); bl.addColorStop(1, "#2e1c10"); g.fillStyle = bl; g.fillRect(-640, -470, 1280, 940);
+  g.fillStyle = "#1f3226"; g.fillRect(-590, -420, 1180, 840); // 盤の布（深い緑）
+  for (let i = 0; i < 9000; i++){ g.fillStyle = `rgba(${rnd() < .5 ? "0,0,0" : "120,150,120"},${rnd()*.12})`; g.fillRect(-590 + rnd()*1180, -420 + rnd()*840, 2, 2); }
+  g.strokeStyle = "rgba(200,170,110,.35)"; g.lineWidth = 4; g.strokeRect(-560, -390, 1120, 780);
+  g.beginPath(); g.moveTo(0, -390); g.lineTo(0, 390); g.stroke(); // 奇と偶の境
+  g.restore();
+  // 灯（左上から差す、礼拝堂の火を移した灯）
+  g.save(); g.globalCompositeOperation = "lighter"; glow(260, 700, 1300, "rgba(255,150,70,A)", .22); g.restore();
+  oilDish(250, 760, 2.0);
+  // 開いた壺と、二つの賽
+  cup(1060, 1380, 1.0);
+  die(560, 1790, 230, .35, 3, 2, 6);
+  die(880, 1950, 220, -.25, 4, 5, 1);
+  // 銅貨が数枚（張り）
+  for (const [x, y, r] of [[300, 2140, 52], [370, 2180, 52], [1240, 2060, 50], [1190, 2110, 50]]){ g.fillStyle = "rgba(0,0,0,.5)"; g.beginPath(); g.ellipse(x + 8, y + 10, r, r*.55, 0, 0, 7); g.fill(); const cg = g.createRadialGradient(x - r*.3, y - r*.3, 2, x, y, r); cg.addColorStop(0, "#d79a5a"); cg.addColorStop(1, "#6b3a1c"); g.fillStyle = cg; g.beginPath(); g.ellipse(x, y, r, r*.55, 0, 0, 7); g.fill(); g.strokeStyle = "rgba(60,30,10,.7)"; g.lineWidth = 3; g.beginPath(); g.ellipse(x, y, r*.72, r*.4, 0, 0, 7); g.stroke(); }
+  grain(9000, .05); vignette(.55, 700, H*.62);
+}
+
+// ════ B：灯証 ════════════════════════════════════════════════
+function paperBG(){
+  g.fillStyle = "#ece4d3"; g.fillRect(0, 0, W, H);
+  soft(() => { for (let i = 0; i < 260; i++){ g.fillStyle = `rgba(${rnd() < .5 ? "160,140,110" : "255,252,240"},${.05 + rnd()*.08})`; g.beginPath(); g.ellipse(rnd()*W, rnd()*H, 60 + rnd()*260, 20 + rnd()*90, rnd()*3, 0, 7); g.fill(); } }, 4, 8);
+  // 布目
+  for (let y = 0; y < H; y += 5){ g.fillStyle = `rgba(120,100,70,${.025 + rnd()*.02})`; g.fillRect(0, y, W, 1); }
+  for (let x = 0; x < W; x += 5){ g.fillStyle = `rgba(120,100,70,${.02 + rnd()*.02})`; g.fillRect(x, 0, 1, H); }
+}
+function inkStroke(x, y, len, w){
+  // 読めない字の行（縦書きの墨の筆跡を抽象化。一字＝筆の画を三〜六本）
+  let yy = y;
+  g.lineCap = "round";
+  while (yy < y + len){ const h = w*(.85 + rnd()*.3);
+    const n = 3 + Math.floor(rnd()*4);
+    for (let k = 0; k < n; k++){
+      const t = rnd(); let x0, y0, x1, y1;
+      if (t < .35){ x0 = x - w*.4 + rnd()*w*.2; y0 = yy + rnd()*h; x1 = x0 + w*(.4 + rnd()*.4); y1 = y0 + (rnd() - .5)*6; }       // 横画
+      else if (t < .65){ x0 = x - w*.25 + rnd()*w*.5; y0 = yy + rnd()*h*.3; x1 = x0 + (rnd() - .5)*6; y1 = y0 + h*(.4 + rnd()*.5); } // 縦画
+      else if (t < .85){ x0 = x + rnd()*w*.2; y0 = yy + h*.3 + rnd()*h*.3; x1 = x0 - w*(.3 + rnd()*.25); y1 = y0 + h*(.3 + rnd()*.3); } // 払い
+      else { x0 = x - w*.1 + rnd()*w*.2; y0 = yy + h*.4 + rnd()*h*.3; x1 = x0 + w*(.2 + rnd()*.2); y1 = y0 + h*(.15 + rnd()*.2); } // 点・はね
+      g.strokeStyle = `rgba(26,18,14,${.7 + rnd()*.25})`; g.lineWidth = 4 + rnd()*7;
+      g.beginPath(); g.moveTo(x0, y0); g.quadraticCurveTo((x0 + x1)/2 + (rnd() - .5)*8, (y0 + y1)/2 + (rnd() - .5)*8, x1, y1); g.stroke();
+    }
+    yy += h + w*(.25 + rnd()*.15); }
+}
+function drawB(){
+  paperBG();
+  // 証文（少し斜めに置いた一枚）
+  g.save(); g.translate(660, 1500); g.rotate(-.06);
+  g.fillStyle = "rgba(80,60,40,.25)"; g.filter = "blur(24px)"; g.fillRect(-450 + 26, -780 + 34, 900, 1560); g.filter = "none";
+  const pl = g.createLinearGradient(-450, -780, 450, 780); pl.addColorStop(0, "#f7f0de"); pl.addColorStop(1, "#e6dbc2"); g.fillStyle = pl; g.fillRect(-450, -780, 900, 1560);
+  for (let i = 0; i < 6000; i++){ g.fillStyle = `rgba(${rnd() < .5 ? "150,130,100" : "255,255,245"},${rnd()*.08})`; g.fillRect(-450 + rnd()*900, -780 + rnd()*1560, 2, 2); }
+  // 縦書きの行（右から左へ）。読める字は書かない
+  const cols = [330, 220, 110, 0, -110];
+  cols.forEach((cx, i) => inkStroke(cx, -680, i === 3 ? 420 : 1100 - rnd()*180, 64));
+  // 立会人の名の行（左下）と、灯の印（朱の丸い印）
+  inkStroke(-300, 140, 380, 60);
+  g.fillStyle = "rgba(170,40,30,.78)"; g.beginPath(); g.arc(-300, 640, 66, 0, 7); g.fill();
+  g.strokeStyle = "rgba(250,230,210,.55)"; g.lineWidth = 6; g.beginPath(); g.arc(-300, 640, 50, 0, 7); g.stroke();
+  // 印の中の炎の形（灯火の印を簡略に）
+  g.fillStyle = "rgba(250,230,210,.7)"; g.beginPath(); g.moveTo(-300, 602); g.quadraticCurveTo(-278, 640, -300, 670); g.quadraticCurveTo(-322, 640, -300, 602); g.fill();
+  // 紙の折り目
+  g.strokeStyle = "rgba(120,100,70,.18)"; g.lineWidth = 3; g.beginPath(); g.moveTo(-450, 0); g.lineTo(450, 0); g.stroke();
+  g.restore();
+  // 証文の脇の小さな灯（右下）
+  g.save(); g.globalCompositeOperation = "multiply"; glow(1250, 2150, 700, "rgba(255,200,140,A)", .35); g.restore();
+  oilDish(1250, 2200, 2.2);
+  vignette(.22, 760, H*.55);
+}
+
+// ════ C：浮き灯 ══════════════════════════════════════════════
+function drawC(){
+  // 夜空と川
+  const sky = g.createLinearGradient(0, 0, 0, 1150); sky.addColorStop(0, "#070a12"); sky.addColorStop(1, "#151a26"); g.fillStyle = sky; g.fillRect(0, 0, W, 1150);
+  for (let i = 0; i < 160; i++){ g.fillStyle = `rgba(240,236,220,${rnd()*.45})`; g.fillRect(rnd()*W, rnd()*900, 1.5 + rnd()*2, 1.5 + rnd()*2); }
+  // 向こう岸（低い葦の原と林の影）
+  g.fillStyle = "#0b0d12"; g.beginPath(); g.moveTo(0, 1150); for (let x = 0; x <= W; x += 40) g.lineTo(x, 1080 - Math.sin(x/170)*24 - rnd()*30); g.lineTo(W, 1150); g.closePath(); g.fill();
+  const wtr = g.createLinearGradient(0, 1150, 0, H); wtr.addColorStop(0, "#10141c"); wtr.addColorStop(1, "#06080c"); g.fillStyle = wtr; g.fillRect(0, 1150, W, H - 1150);
+  // さざ波
+  for (let i = 0; i < 900; i++){ const y = 1160 + rnd()*(H - 1160), x = rnd()*W, l = 30 + rnd()*120*(y/H); g.strokeStyle = `rgba(120,140,170,${rnd()*.12})`; g.lineWidth = 1.5; g.beginPath(); g.moveTo(x, y); g.lineTo(x + l, y + (rnd() - .5)*2); g.stroke(); }
+  // 川霧の帯
+  soft(() => { for (let i = 0; i < 60; i++){ g.fillStyle = `rgba(170,180,200,${.05 + rnd()*.05})`; g.beginPath(); g.ellipse(rnd()*W, 1150 + rnd()*260, 200 + rnd()*400, 30 + rnd()*40, 0, 0, 7); g.fill(); } }, 4, 10);
+  // 浮き灯（平底の大舟と屋根）
+  const bx = 300, by = 1560, bw = 1000;
+  // 水の中の灯の映り（縦の揺れる帯）
+  g.save(); g.globalCompositeOperation = "lighter";
+  for (let k = 0; k < 8; k++){ const x = bx + 60 + k*(bw - 120)/7;
+    for (let y = by + 90; y < by + 900; y += 10){ const a = .22*(1 - (y - by)/900); const ww = 10 + rnd()*26; g.fillStyle = `rgba(255,160,70,${a*rnd()})`; g.fillRect(x - ww/2 + Math.sin(y/23 + k)*10, y, ww, 6); } }
+  g.restore();
+  // 船体
+  g.fillStyle = "#120c09"; g.beginPath(); g.moveTo(bx - 60, by); g.lineTo(bx + bw + 60, by); g.lineTo(bx + bw + 10, by + 90); g.lineTo(bx - 10, by + 90); g.closePath(); g.fill();
+  g.fillStyle = "#2a1a10"; g.fillRect(bx - 60, by - 14, bw + 120, 18);
+  // 屋根と柱
+  g.fillStyle = "#0c0807"; for (let k = 0; k <= 5; k++){ g.fillRect(bx + 20 + k*(bw - 40)/5, by - 300, 14, 300); }
+  g.beginPath(); g.moveTo(bx - 40, by - 300); g.lineTo(bx + bw/2, by - 400); g.lineTo(bx + bw + 40, by - 300); g.closePath(); g.fill();
+  // 屋根の下の明かり（板の間）
+  g.save(); g.globalCompositeOperation = "lighter"; const inner = g.createLinearGradient(0, by - 300, 0, by); inner.addColorStop(0, "rgba(255,150,70,.05)"); inner.addColorStop(1, "rgba(255,150,70,.30)"); g.fillStyle = inner; g.fillRect(bx + 30, by - 290, bw - 60, 280); g.restore();
+  // 奥の灯（礼拝堂から移した灯）
+  flame(bx + bw/2, by - 120, 1.5, 1.4);
+  // 舷の油皿の灯（並び）
+  for (let k = 0; k < 8; k++){ const x = bx + 60 + k*(bw - 120)/7; flame(x, by - 18, .9, .8); }
+  // 手前の渡し舟（舳先に小さな舟灯一つ）
+  g.fillStyle = "#0a0706"; g.beginPath(); g.moveTo(120, 2250); g.quadraticCurveTo(420, 2330, 760, 2240); g.lineTo(720, 2290); g.quadraticCurveTo(420, 2370, 160, 2295); g.closePath(); g.fill();
+  g.strokeStyle = "rgba(255,170,90,.35)"; g.lineWidth = 3; g.beginPath(); g.moveTo(130, 2252); g.quadraticCurveTo(420, 2332, 755, 2242); g.stroke();
+  g.strokeStyle = "#0a0706"; g.lineWidth = 8; g.beginPath(); g.moveTo(700, 2240); g.lineTo(700, 2120); g.stroke();
+  flame(700, 2112, 1.0, .9);
+  g.save(); g.globalCompositeOperation = "lighter"; for (let y = 2300; y < 2560; y += 9){ g.fillStyle = `rgba(255,160,70,${.16*rnd()*(1 - (y - 2300)/260)})`; g.fillRect(690 + Math.sin(y/17)*8, y, 18, 5); } g.restore();
+  grain(9000, .05); vignette(.5, 800, H*.6);
+}
+({a: drawA, b: drawB, c: drawC})[MODE]();
+document.title = "done";
+</script>
+</body></html>
