@@ -1,0 +1,19 @@
+{
+  "chars": 2645,
+  "mech": [],
+  "review": {
+    "pass": true,
+    "slots_found": {
+      "W1": "reinforced"
+    },
+    "violations": [
+      {
+        "severity": "low",
+        "type": "insert",
+        "detail": "「町の番所の男が、帳面を開いて櫂の数を数えた」と、ゾルムの番所の人物と確認の手順が追加されている。正典との矛盾はない。",
+        "fix": "追加設定を避ける場合は、番所の男と櫂の数え上げを省き、焼き印を見せて関を通る描写に留める。"
+      }
+    ]
+  },
+  "problems": []
+}

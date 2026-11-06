@@ -1,0 +1,1 @@
+{"pass":false,"slots_found":{"N1":"none","R1":"recovered"},"violations":[{"severity":"high","type":"slots","detail":"N1の回収台詞「名指しは、高くついた」がありません。原稿では「満額だ」などの会話はありますが、指定された台詞は語られていません。","fix":"ダリオに「名指しは、高くついた」と言わせる。"}]}

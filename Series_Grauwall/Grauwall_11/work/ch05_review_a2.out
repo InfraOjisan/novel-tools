@@ -1,0 +1,1 @@
+{"pass":false,"slots_found":{"Z1":"planted"},"violations":[{"severity":"high","type":"canon","detail":"章末の「（明日は、組の寄合だな）」は、寄合が第3章ですでに行われた事実と食い違います。","fix":"この一文を削除するか、翌日の予定として正典に反しない内容に差し替えてください。"}]}

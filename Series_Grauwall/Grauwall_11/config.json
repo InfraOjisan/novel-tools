@@ -1,7 +1,7 @@
 {
  "chapters": 16,
  "chapter_chars": {
-  "target": 2700,
+  "target": 3400,
   "min": 2500,
   "max": 5000
  },
@@ -280,9 +280,7 @@
     "reasoning_effort": "medium",
     "system": "あなたは日本語で書く小説家です。依頼文の指示と出力形式に厳密に従い、指定された成果物だけを返します。",
     "deadline_sec": 420,
-    "fallback_models": [
-     "openai/gpt-6-luna-pro"
-    ]
+    "fallback_models": []
    },
    "reviewer": {
     "model": "openai/gpt-6-luna-pro",
@@ -302,9 +300,7 @@
     "reasoning_effort": "low",
     "system": "あなたは日本語の小説の文体を磨く名手です。筋・事実・台詞の中身は一切変えず、文章の色・リズム・五感の描写だけを豊かにします。指定された成果物だけを返します。",
     "deadline_sec": 420,
-    "fallback_models": [
-     "openai/gpt-6-luna-pro"
-    ]
+    "fallback_models": []
    }
   },
   "task_overrides": {
@@ -321,7 +317,8 @@
   "idle_timeout_sec": 180,
   "model_env_roles": [],
   "_comment_provider": "第11回：OpenRouter のキー（.env の OPENROUTER_API_KEY）を使う。Haiku 5.5 と GPT-6 Luna Pro はどちらも OpenRouter にある。進行役は .env を開かない・表示しない・写さない。",
-  "_comment_writer_2026_11_06": "第11回（プロデューサー決定 2026-11-05）：書き手と磨きは Claude Haiku 5.5、審査は GPT-6 Luna Pro。Aion は使わない。"
+  "_comment_writer_2026_11_06": "第11回（プロデューサー決定 2026-11-05）：書き手と磨きは Claude Haiku 5.5、審査は GPT-6 Luna Pro。Aion は使わない。",
+  "_comment_fallback_2026_11_06": "第11回：書き手と磨きの予備（fallback）を外した。Haiku が呼べないときに黙って Luna が本文を書かないように、止まって知らせる。2026-11-06 の ping で writer が Luna で返ったため。"
  },
  "polisher_cmd": [
   "python3",
@@ -385,5 +382,6 @@
  ],
  "_comment_writer": "第11回：書き手は config の llm.profiles.writer（Claude Haiku 5.5）。CANON は Claude が書いた（design 段階は使わない）。",
  "given_chapters": [],
- "_comment_given": "given_chapters：Claude が先に書いた章。novelctl は書かずに審査役に記録（LEDGER）だけを作らせて通過し、設計・CANON審査のパケットに『既に書かれた章』として差し込む。2026-10-11"
+ "_comment_given": "given_chapters：Claude が先に書いた章。novelctl は書かずに審査役に記録（LEDGER）だけを作らせて通過し、設計・CANON審査のパケットに『既に書かれた章』として差し込む。2026-10-11",
+ "_comment_chars_2026_11_06": "第11回：第1章で Haiku が目安2700字に対して1574〜1836字しか書かなかったため、目安を3400字に上げた（第6回は3000字目安で約2600字、第8回は3400字目安）。最低2500字は変えない。"
 }
