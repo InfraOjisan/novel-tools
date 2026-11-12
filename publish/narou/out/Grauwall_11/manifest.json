@@ -1,0 +1,136 @@
+{
+  "work": "Grauwall_11",
+  "title": "南の川港",
+  "source": "../../Series_Grauwall/Grauwall_11/output/final_proofread.md",
+  "limit_chars": 5000,
+  "episodes": [
+    {
+      "seq": 1,
+      "file": "001.txt",
+      "subtitle": "第1章　名指し",
+      "chars": 2839,
+      "chars_no_newline": 2731,
+      "sha1": "dc3d7f2c751d3b3c608574e6df8b29dc896fab4b"
+    },
+    {
+      "seq": 2,
+      "file": "002.txt",
+      "subtitle": "第2章　南街道",
+      "chars": 2883,
+      "chars_no_newline": 2759,
+      "sha1": "2e6a35f5261ee25161feee8dc764ff63f175f4aa"
+    },
+    {
+      "seq": 3,
+      "file": "003.txt",
+      "subtitle": "第3章　荷揚げ場",
+      "chars": 2920,
+      "chars_no_newline": 2756,
+      "sha1": "b2db65b6bb5424cb868cbe1efe65516edfc2936f"
+    },
+    {
+      "seq": 4,
+      "file": "004.txt",
+      "subtitle": "第4章　渡し場の礼拝堂",
+      "chars": 3164,
+      "chars_no_newline": 3009,
+      "sha1": "538c2e64f756a3d184bc651a821a8c9217035080"
+    },
+    {
+      "seq": 5,
+      "file": "005.txt",
+      "subtitle": "第5章　頭巾の客",
+      "chars": 2627,
+      "chars_no_newline": 2485,
+      "sha1": "4b9be20202a99e59dd07b3e6927b992332a9ef6f"
+    },
+    {
+      "seq": 6,
+      "file": "006.txt",
+      "subtitle": "第6章　浮き灯",
+      "chars": 2883,
+      "chars_no_newline": 2695,
+      "sha1": "4bd334b8bfb4260c87258d1186685f73ca435309"
+    },
+    {
+      "seq": 7,
+      "file": "007.txt",
+      "subtitle": "第7章　秋の荷",
+      "chars": 2858,
+      "chars_no_newline": 2690,
+      "sha1": "fd3a9b6800e34aec431e62d33cf4ca64d9d65ce2"
+    },
+    {
+      "seq": 8,
+      "file": "008.txt",
+      "subtitle": "第8章　荷の値の綴り",
+      "chars": 2934,
+      "chars_no_newline": 2786,
+      "sha1": "05382ccac7f881b26653f51ccddb24d5966b1ede"
+    },
+    {
+      "seq": 9,
+      "file": "009.txt",
+      "subtitle": "第9章　耳の白い給仕",
+      "chars": 2767,
+      "chars_no_newline": 2643,
+      "sha1": "353a669fe379aa36f5d30c5ab0bc9af71bce2b94"
+    },
+    {
+      "seq": 10,
+      "file": "010.txt",
+      "subtitle": "第10章　灯流し",
+      "chars": 2681,
+      "chars_no_newline": 2553,
+      "sha1": "ddf345f21aaa7f88e44f9309dbff1cedcb9b62d3"
+    },
+    {
+      "seq": 11,
+      "file": "011.txt",
+      "subtitle": "第11章　目を閉じているあいだに",
+      "chars": 2350,
+      "chars_no_newline": 2258,
+      "sha1": "6669ba54d48e13ac339c2bea493e2d77ce18e4fd"
+    },
+    {
+      "seq": 12,
+      "file": "012.txt",
+      "subtitle": "第12章　定型の文",
+      "chars": 3078,
+      "chars_no_newline": 2946,
+      "sha1": "f107ae127895ea7fe96d6f24b59e0a2232475a28"
+    },
+    {
+      "seq": 13,
+      "file": "013.txt",
+      "subtitle": "第13章　明けの一振り",
+      "chars": 2863,
+      "chars_no_newline": 2761,
+      "sha1": "82d8ca1a2ae928aa888e2cfd3719d3c3afe84cca"
+    },
+    {
+      "seq": 14,
+      "file": "014.txt",
+      "subtitle": "第14章　提灯の川",
+      "chars": 3812,
+      "chars_no_newline": 3634,
+      "sha1": "89181b70ed73439e8fe35f0e0e6aa3a232ec1887"
+    },
+    {
+      "seq": 15,
+      "file": "015.txt",
+      "subtitle": "第15章　舟と油",
+      "chars": 3141,
+      "chars_no_newline": 3025,
+      "sha1": "0b537bd10033208de8acf5dfb350d2075e99c54a"
+    },
+    {
+      "seq": 16,
+      "file": "016.txt",
+      "subtitle": "第16章　名指しは高い",
+      "chars": 2728,
+      "chars_no_newline": 2618,
+      "sha1": "bc5814f1c38c6cf2f6edc62fe3786227f94bf17e"
+    }
+  ]
+}

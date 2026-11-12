@@ -1,0 +1,104 @@
+{
+ "work": "Grauwall_11",
+ "narou_novel_id": 3378362,
+ "ncode": null,
+ "status": "reserved",
+ "episodes": [
+  {
+   "seq": 1,
+   "draftId": 9700378,
+   "reserved_at": "2026-11-13 21:00",
+   "end": false
+  },
+  {
+   "seq": 2,
+   "draftId": 9700380,
+   "reserved_at": "2026-11-13 21:00",
+   "end": false
+  },
+  {
+   "seq": 3,
+   "draftId": 9700381,
+   "reserved_at": "2026-11-13 21:00",
+   "end": false
+  },
+  {
+   "seq": 4,
+   "draftId": 9700382,
+   "reserved_at": "2026-11-13 21:00",
+   "end": false
+  },
+  {
+   "seq": 5,
+   "draftId": 9700384,
+   "reserved_at": "2026-11-13 21:00",
+   "end": false
+  },
+  {
+   "seq": 6,
+   "draftId": 9700385,
+   "reserved_at": "2026-11-13 21:00",
+   "end": false
+  },
+  {
+   "seq": 7,
+   "draftId": 9700387,
+   "reserved_at": "2026-11-13 21:00",
+   "end": false
+  },
+  {
+   "seq": 8,
+   "draftId": 9700388,
+   "reserved_at": "2026-11-13 21:00",
+   "end": false
+  },
+  {
+   "seq": 9,
+   "draftId": 9700389,
+   "reserved_at": "2026-11-14 21:00",
+   "end": false
+  },
+  {
+   "seq": 10,
+   "draftId": 9700390,
+   "reserved_at": "2026-11-14 21:00",
+   "end": false
+  },
+  {
+   "seq": 11,
+   "draftId": 9700392,
+   "reserved_at": "2026-11-14 21:00",
+   "end": false
+  },
+  {
+   "seq": 12,
+   "draftId": 9700393,
+   "reserved_at": "2026-11-14 21:00",
+   "end": false
+  },
+  {
+   "seq": 13,
+   "draftId": 9700394,
+   "reserved_at": "2026-11-14 21:00",
+   "end": false
+  },
+  {
+   "seq": 14,
+   "draftId": 9700395,
+   "reserved_at": "2026-11-14 21:00",
+   "end": false
+  },
+  {
+   "seq": 15,
+   "draftId": 9700396,
+   "reserved_at": "2026-11-14 21:00",
+   "end": false
+  },
+  {
+   "seq": 16,
+   "draftId": 9700397,
+   "reserved_at": "2026-11-14 21:00",
+   "end": true
+  }
+ ]
+}
