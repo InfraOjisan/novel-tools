@@ -1,8 +1,8 @@
 {
  "work": "Grauwall_11",
  "narou_novel_id": 3378362,
- "ncode": null,
- "status": "reserved",
+ "ncode": "n8699mz",
+ "status": "published_part",
  "episodes": [
   {
    "seq": 1,
@@ -100,5 +100,7 @@
    "reserved_at": "2026-11-14 21:00",
    "end": true
   }
- ]
+ ],
+ "published_at": "2026-11-13 21:00（第1〜8話）／2026-11-14 21:00（第9〜16話、予約）",
+ "series": "S9023K"
 }
