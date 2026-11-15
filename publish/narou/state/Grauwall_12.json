@@ -1,0 +1,156 @@
+{
+ "work": "Grauwall_12",
+ "narou_novel_id": 3381081,
+ "source_commit": "18fdff0a028ee5058eccde7da1255cb7229e5390",
+ "episodes": [
+  {
+   "seq": 1,
+   "subtitle": "第1章　二枚半",
+   "draftId": 9743905,
+   "state": "reserved",
+   "reserve_at": "2026-11-21 17:00",
+   "end": false
+  },
+  {
+   "seq": 2,
+   "subtitle": "第2章　布",
+   "draftId": 9743908,
+   "state": "reserved",
+   "reserve_at": "2026-11-21 17:00",
+   "end": false
+  },
+  {
+   "seq": 3,
+   "subtitle": "第3章　裁き役の戸",
+   "draftId": 9743909,
+   "state": "reserved",
+   "reserve_at": "2026-11-21 17:00",
+   "end": false
+  },
+  {
+   "seq": 4,
+   "subtitle": "第4章　右の腕",
+   "draftId": 9743910,
+   "state": "reserved",
+   "reserve_at": "2026-11-21 17:00",
+   "end": false
+  },
+  {
+   "seq": 5,
+   "subtitle": "第5章　令状",
+   "draftId": 9743912,
+   "state": "reserved",
+   "reserve_at": "2026-11-21 17:00",
+   "end": false
+  },
+  {
+   "seq": 6,
+   "subtitle": "第6章　南門",
+   "draftId": 9743913,
+   "state": "reserved",
+   "reserve_at": "2026-11-21 17:00",
+   "end": false
+  },
+  {
+   "seq": 7,
+   "subtitle": "第7章　普請",
+   "draftId": 9743915,
+   "state": "reserved",
+   "reserve_at": "2026-11-21 17:00",
+   "end": false
+  },
+  {
+   "seq": 8,
+   "subtitle": "第8章　灯の前",
+   "draftId": 9743916,
+   "state": "reserved",
+   "reserve_at": "2026-11-21 17:00",
+   "end": false
+  },
+  {
+   "seq": 9,
+   "subtitle": "第9章　触れ",
+   "draftId": 9743917,
+   "state": "reserved",
+   "reserve_at": "2026-11-21 17:00",
+   "end": false
+  },
+  {
+   "seq": 10,
+   "subtitle": "第10章　盤",
+   "draftId": 9743919,
+   "state": "reserved",
+   "reserve_at": "2026-11-21 17:00",
+   "end": false
+  },
+  {
+   "seq": 11,
+   "subtitle": "第11章　登録簿",
+   "draftId": 9743920,
+   "state": "reserved",
+   "reserve_at": "2026-11-21 17:00",
+   "end": false
+  },
+  {
+   "seq": 12,
+   "subtitle": "第12章　南へ",
+   "draftId": 9743921,
+   "state": "reserved",
+   "reserve_at": "2026-11-21 17:00",
+   "end": false
+  },
+  {
+   "seq": 13,
+   "subtitle": "第13章　部屋",
+   "draftId": 9743922,
+   "state": "reserved",
+   "reserve_at": "2026-11-21 17:00",
+   "end": false
+  },
+  {
+   "seq": 14,
+   "subtitle": "第14章　看板",
+   "draftId": 9743923,
+   "state": "reserved",
+   "reserve_at": "2026-11-21 17:00",
+   "end": false
+  },
+  {
+   "seq": 15,
+   "subtitle": "第15章　十三個目",
+   "draftId": 9743925,
+   "state": "reserved",
+   "reserve_at": "2026-11-21 17:00",
+   "end": false
+  },
+  {
+   "seq": 16,
+   "subtitle": "第16章　船着き場",
+   "draftId": 9743926,
+   "state": "reserved",
+   "reserve_at": "2026-11-21 17:00",
+   "end": true
+  }
+ ],
+ "verified": "2026-11-15 下書き保存後に updateinput から読み戻して題・本文一致（16/16）。予約は確認画面の題・日時（第16話は完結設定）を照合して実行。",
+ "replaced_2026-11-15": {
+  "Novel_3": {
+   "ep": 13,
+   "noveldataid": 30754301
+  },
+  "Grauwall_03": [
+   {
+    "ep": 3,
+    "noveldataid": 30806699
+   },
+   {
+    "ep": 14,
+    "noveldataid": 30806750
+   },
+   {
+    "ep": 16,
+    "noveldataid": 30806762
+   }
+  ]
+ }
+}
