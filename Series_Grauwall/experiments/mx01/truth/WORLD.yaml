@@ -1,0 +1,365 @@
+# ============================================================
+# mx01 — 真相台帳（World Log）
+# 【作者のみ】このファイルは書き手（第1・2章）にも読者役にも渡さない。
+#   書き手に渡すのは tools/mx.py project が作る投影パケットだけ。
+# ============================================================
+
+meta:
+  id: mx01
+  title: 七つの鐘の鴉（仮題）
+  series: グラウヴァル（番外・実験。正典に入れない）
+  period: 灰壁暦三一三年 水無月十日〜十四日（梅雨）
+  genre: 日常の謎（フーダニット＋ハウダニット。ホワイは軽く）
+  viewpoint: dario
+  narration: 三人称一元（ダリオの目と耳だけ）・過去形
+  solution_chapter: 3
+  max_blind_spots: 1
+  days: {D1: 水無月十日, D2: 水無月十一日, D3: 水無月十二日, D4: 水無月十三日, D5: 水無月十四日}
+  # 書き手パケットに一語でも出たら止める語（真相側にしかない語）
+  leak_tokens: [キリ, kiri, 妹, BS1, 死角, 真相, もう一人の鴉人, 別の鴉人, 二人の鴉人, 未登録, 見習い]
+
+# ------------------------------------------------------------
+# 場所。interior: 組合の建物の中（鉄の誓約が効く）
+# ------------------------------------------------------------
+places:
+  counter:     {name: 錆び釘亭の酒場, interior: true}
+  erika_room:  {name: 二階の組合長の部屋, interior: true}
+  courtyard:   {name: 中庭（裏口の軒下・井戸）, interior: false}
+  loft_stairs: {name: 厩の外階段, interior: false}
+  loft:        {name: 厩の二階, interior: false}
+  alley:       {name: 裏木戸の外の路地, interior: false}
+  bakery:      {name: 下町のパン屋, interior: false}
+  tsumesho:    {name: 治安維持隊詰所, interior: false}
+  valley:      {name: 下の谷, interior: false}
+  lodging:     {name: リナの下宿, interior: false}
+
+edges:   # 徒歩の分数
+  - [counter, courtyard, 1]
+  - [courtyard, loft_stairs, 0]   # 外階段の上り下りは、階段の出来事（loft_stairs）の時間の中に含める
+  - [loft_stairs, loft, 0]
+  - [courtyard, alley, 1]
+  - [counter, erika_room, 1]
+  - [counter, bakery, 8]
+  - [counter, tsumesho, 10]
+  - [alley, valley, 14]
+  - [counter, lodging, 10]
+
+visibility:   # その場所から見える別の場所
+  courtyard: [loft_stairs]
+  loft_stairs: [courtyard]
+
+# ------------------------------------------------------------
+# 人物。hidden: 視点人物が最後まで（解決章まで）存在を知らない
+# assumes: 見分けられない種族を見たとき、誰だと思うか
+# knows:   見分けられなくても、名乗られて知っている相手
+# ------------------------------------------------------------
+entities:
+  dario:  {name: ダリオ, kind: human, member: true, distinguishes: false, assumes: {鴉人: kol, 蜥蜴人: zaza},
+           attrs: {desc: 剣士・大男・酒好き・髭の端が縮れている, arm: 左腕を吊っている（皐月に折った）}}
+  hugo:   {name: フーゴ, kind: human, member: true, distinguishes: false, assumes: {鴉人: kol, 蜥蜴人: zaza},
+           attrs: {desc: 人間の若い剣士・登録二年・まっすぐで心配性。リナの友人}}
+  rina:   {name: リナ, kind: human, member: true, distinguishes: false, knows: [kiri],
+           attrs: {desc: 人間・十六・魔法使い・麦藁色の髪・父のお下がりの杖・金に目がない・勘定が組合でいちばん速い}}
+  erika:  {name: エーリカ, kind: human, member: false, oath_master: true, distinguishes: true,
+           attrs: {desc: 組合長・元弓使い・狩人の目・亜人を見分ける・嘘が下手}}
+  master: {name: マスター, kind: human, member: false, distinguishes: true,
+           attrs: {desc: 錆び釘亭の酒場番。丁寧語}}
+  zaza:   {name: ザザ, kind: 蜥蜴人, member: false, demihuman: true, distinguishes: true,
+           attrs: {desc: 掃除番・老人・熱が見える・人を足で覚えて呼ぶ・訊かれたことだけ答える}}
+  kol:    {name: コル, kind: 鴉人, member: false, demihuman: true, distinguishes: true, role: 伝令,
+           attrs: {desc: 組合の伝令（雑役）の若者・厩の梁で寝る・伝言を一字も盛らない, counts_by: 3, feather: 大きく真っ黒, feet: 大人の鴉人の足}}
+  kiri:   {name: キリ, kind: 鴉人, member: false, demihuman: true, distinguishes: true, hidden: true,
+           attrs: {desc: 鴉人の娘・十二・下の谷から通う, relation: コルの妹, registered: false,
+                   counts_by: 3, feather: 小ぶりで縁が灰色（若い鴉人）, feet: 小さい足,
+                   wish: 兄のような伝令になりたい。伝令は人間の釣り銭を十ずつ勘定できないと務まらない}}
+  magda:  {name: マグダ隊長, kind: human, member: false, distinguishes: false, offscreen: true,
+           attrs: {desc: 治安維持隊長}}
+
+objects:
+  feather1: {owner: kiri, attrs: {size: small, edge: grey}, desc: 外階段の三段目に落ちていた小さな黒い羽根}
+
+# ------------------------------------------------------------
+# 死角（この作品は一つだけ）
+# ------------------------------------------------------------
+blind_spots:
+  - id: BS1
+    axis: 認識
+    mask: who
+    target: kiri
+    perceived_as: kol
+    applies_to: [hugo, dario]
+    description: >-
+      人間の多くは鴉人の個体を見分けない。組合の敷地で鴉人を見れば、組合にいるただ一人の鴉人、伝令のコルだと思う。
+      コルとキリは兄妹で、雨の夕方の軒下からは大きさの違いも分かりにくい。
+
+# ------------------------------------------------------------
+# 出来事（真相）。t は "HH:MM-HH:MM"。acts は言明の真偽判定に使う
+# ------------------------------------------------------------
+events:
+  # ---- D1（十日）：最初の授業
+  - {id: E101, day: D1, t: "18:58-19:00", place: loft_stairs, actors: [rina, kiri], action: 外階段を上がる}
+  - {id: E102, day: D1, t: "19:00-20:00", place: loft, actors: [rina, kiri], action: 授業（銅貨を十ずつ数える稽古）, truth_only: true}
+
+  # ---- D2（十一日）
+  - {id: E200, day: D2, t: "17:00-23:00", place: counter, actors: [master], action: 店番}
+  - {id: E201, day: D2, t: "18:20-18:25", place: counter, actors: [rina, hugo], action: リナが煮込みを頼まない,
+     acts: [{by: rina, verb: decline_stew}]}
+  - {id: E202, day: D2, t: "18:35-18:42", place: bakery, actors: [rina], action: 小さなパンを一つ買う（銅貨三枚）,
+     acts: [{by: rina, verb: buy_bread}]}
+  - {id: E203, day: D2, t: "18:52-18:57", place: alley, actors: [rina, kiri], action: 裏木戸の外で落ち合う}
+  - {id: E204, day: D2, t: "18:58-19:00", place: loft_stairs, actors: [rina, kiri], action: 外階段を上がる}
+  - {id: E205, day: D2, t: "19:00-20:00", place: loft, actors: [rina, kiri], action: 授業, truth_only: true}
+  - {id: E206, day: D2, t: "18:50-19:10", place: courtyard, actors: [zaza], action: 井戸で水を汲む}
+  - {id: E207, day: D2, t: "18:20-20:30", place: counter, actors: [hugo], action: 飲んでいる}
+  - {id: E208, day: D2, t: "20:05-20:10", place: counter, actors: [rina], action: 戻る。髪に小さな羽根、指先に白い粉}
+
+  # ---- D3（十二日）
+  - {id: E300, day: D3, t: "17:00-23:00", place: counter, actors: [master], action: 店番}
+  - {id: E301, day: D3, t: "18:35-18:42", place: bakery, actors: [rina], action: パンを買う, acts: [{by: rina, verb: buy_bread}]}
+  - {id: E302, day: D3, t: "18:52-18:57", place: alley, actors: [rina, kiri], action: 落ち合う}
+  - {id: E303, day: D3, t: "18:50-19:20", place: courtyard, actors: [hugo], action: 樽の陰の軒下から厩を見張る}
+  - {id: E304, day: D3, t: "18:50-19:10", place: courtyard, actors: [zaza], action: 井戸で水を汲む}
+  - {id: E305, day: D3, t: "18:58-19:00", place: loft_stairs, actors: [rina, kiri],
+     action: 外階段を上がる。上の段でリナが稽古用の銅貨を数枚キリに渡す,
+     acts: [{by: rina, verb: give_coins, to: kiri}]}
+  - {id: E306, day: D3, t: "19:00-20:00", place: loft, actors: [rina, kiri], action: 授業, truth_only: true}
+  - {id: E307, day: D3, t: "19:00-19:10", place: counter, actors: [kol], action: 夕方の使いから戻り、返事を届ける}
+  - {id: E308, day: D3, t: "19:21-21:00", place: counter, actors: [hugo], action: リナを待つ}
+  - {id: E309, day: D3, t: "20:00-20:01", place: courtyard, actors: [rina, kiri], action: 降りる。キリはパンを抱えて裏木戸から帰る,
+     acts: [{by: kiri, verb: leave_backgate_with_parcel}]}
+  - {id: E310, day: D3, t: "20:05-20:40", place: counter, actors: [rina], action: 戻ってフーゴに問われる}
+
+  # ---- D4（十三日）：相談の夜（第1章）
+  - {id: E400, day: D4, t: "17:00-23:00", place: counter, actors: [master], action: 店番}
+  - {id: E401, day: D4, t: "18:00-21:30", place: counter, actors: [dario], action: 早い時間から飲んでいる（片腕で）}
+  - {id: E402, day: D4, t: "18:15-18:22", place: bakery, actors: [rina], action: パンを買う, acts: [{by: rina, verb: buy_bread}]}
+  - {id: E403, day: D4, t: "18:30-18:31", place: counter, actors: [rina], action: 紙の包みを抱えて表から入り、まっすぐ裏口へ}
+  - {id: E404, day: D4, t: "18:33-18:57", place: alley, actors: [rina], action: 路地で石板を見直しながら待つ}
+  - {id: E405, day: D4, t: "18:54-18:57", place: alley, actors: [kiri], action: 下の谷から来て落ち合う}
+  - {id: E406, day: D4, t: "18:30-18:40", place: tsumesho, actors: [magda, kol], action: 隊長がダリオ宛ての伝言を託す,
+     acts: [{by: magda, verb: message, to: kol}]}
+  - {id: E407, day: D4, t: "18:45-18:46", place: counter, actors: [hugo], action: 落ち着かない顔で裏口から出ていく}
+  - {id: E408, day: D4, t: "18:47-20:02", place: courtyard, actors: [hugo], action: 樽の陰の軒下から厩を見張る}
+  - {id: E409, day: D4, t: "18:50-19:10", place: courtyard, actors: [zaza], action: 井戸で水を汲む}
+  - {id: E410, day: D4, t: "18:58-19:00", place: loft_stairs, actors: [rina, kiri], action: 七つの鐘が鳴るあいだに外階段を上がる}
+  - {id: E411, day: D4, t: "19:00-19:10", place: counter, actors: [kol, dario],
+     action: 雨に濡れて表の扉から入り、ダリオにマグダの伝言を届ける。駄賃の銅貨を三つずつ数える}
+  - {id: E412, day: D4, t: "19:00-20:00", place: loft, actors: [rina, kiri], action: 授業, truth_only: true}
+  - {id: E413, day: D4, t: "19:20-19:30", place: tsumesho, actors: [kol, magda], action: ダリオの返事を届ける}
+  - {id: E414, day: D4, t: "20:00-20:01", place: courtyard, actors: [rina, kiri], action: 降りる。キリは紙の包みを抱えて裏木戸から帰る,
+     acts: [{by: kiri, verb: leave_backgate_with_parcel}]}
+  - {id: E415, day: D4, t: "20:20-20:30", place: valley, actors: [kiri], action: 家に帰る, truth_only: true}
+  - {id: E416, day: D4, t: "20:04-20:10", place: counter, actors: [rina], action: 戻る。髪に小さな黒い羽根、指先に白い粉、あくび。表から下宿へ帰る}
+  - {id: E417, day: D4, t: "20:05-21:30", place: counter, actors: [hugo], action: 戻る}
+  - {id: E418, day: D4, t: "20:30-21:00", place: counter, actors: [hugo, dario], action: フーゴがダリオに相談する}
+  - {id: E419, day: D4, t: "21:00-21:01", place: courtyard, actors: [kol], action: 使いから戻り、厩の梁で寝る}
+
+  # ---- D5（十四日）：第2・3章
+  - {id: E500, day: D5, t: "09:00-23:00", place: counter, actors: [master], action: 店番}
+  - {id: E501, day: D5, t: "10:00-10:20", place: counter, actors: [rina, dario], action: リナが卓で石板に書いている}
+  - {id: E502, day: D5, t: "10:30-10:35", place: loft_stairs, actors: [dario], action: 外階段の三段目で羽根を拾う,
+     objects: [feather1]}
+  - {id: E503, day: D5, t: "10:40-11:10", place: counter, actors: [dario], action: 親父と話す}
+  - {id: E504, day: D5, t: "11:00-11:05", place: counter, actors: [zaza], action: 床を掃いている}
+  - {id: E505, day: D5, t: "15:00-16:30", place: erika_room, actors: [dario, erika], action: ダリオが組合長に持ち込む}
+  - {id: E506, day: D5, t: "18:15-18:22", place: bakery, actors: [rina], action: パンを買う, acts: [{by: rina, verb: buy_bread}]}
+  - {id: E507, day: D5, t: "18:33-18:57", place: alley, actors: [rina], action: 待つ}
+  - {id: E508, day: D5, t: "18:54-18:57", place: alley, actors: [kiri], action: 落ち合う}
+  - {id: E509, day: D5, t: "18:50-19:02", place: courtyard, actors: [erika, dario], action: 軒下で見る}
+  - {id: E510, day: D5, t: "18:58-19:00", place: loft_stairs, actors: [rina, kiri], action: 外階段を上がる}
+  - {id: E511, day: D5, t: "19:00-19:10", place: counter, actors: [kol], action: 使いから戻る}
+  - {id: E512, day: D5, t: "19:03-19:08", place: counter, actors: [erika, dario], action: エーリカがコルに一つだけ訊く}
+  - {id: E513, day: D5, t: "19:00-19:45", place: loft, actors: [rina, kiri], action: 授業}
+  - {id: E514, day: D5, t: "19:12-19:45", place: loft, actors: [erika, dario], action: 二階に上がる。解決}
+
+# ------------------------------------------------------------
+# 知覚（誰が、どの出来事を、どう見たか）
+# sees: 真の人物 → 観測者に見えた呼び名。"?:" で始まる呼び名は「名は知らないが別人と分かる」
+# grounds: 見分けられない観測者が名で呼べる根拠（role＝その役目の者は一人しかいない）
+# ------------------------------------------------------------
+perceptions:
+  # フーゴ（第1章でダリオに語る内容の根拠）
+  - {id: P_h201, observer: hugo, event: E201, sees: {rina: リナ}, notes: [煮込みを頼まなかった]}
+  - {id: P_h208, observer: hugo, event: E208, sees: {rina: リナ}, notes: [髪に小さな黒い羽根, 指先が白い]}
+  - {id: P_h304, observer: hugo, event: E304, sees: {zaza: ザザ}, notes: [井戸にいた]}
+  - {id: P_h305, observer: hugo, event: E305, sees: {rina: リナ, kiri: コル}, blind_spot: BS1,
+     notes: [階段の上で、リナが鴉人に銅貨を渡した。銅貨の鳴る音がした]}
+  - {id: P_h409, observer: hugo, event: E409, sees: {zaza: ザザ}, notes: [井戸にいた]}
+  - {id: P_h410, observer: hugo, event: E410, sees: {rina: リナ, kiri: コル}, blind_spot: BS1,
+     notes: [七つの鐘を数え終わる前に、二人で外階段を上がっていった]}
+  - {id: P_h414, observer: hugo, event: E414, sees: {rina: リナ, kiri: コル}, blind_spot: BS1,
+     notes: [八つの鐘のあと、鴉人が紙の包みを抱えて裏木戸から出ていった]}
+
+  # ダリオ（視点人物）第1章
+  - {id: P_d403, observer: dario, event: E403, sees: {rina: リナ}, chapter: 1,
+     notes: [紙の包みを抱えて表の扉から入り、まっすぐ裏口へ抜けた, 夕飯は食べないと言った]}
+  - {id: P_d407, observer: dario, event: E407, sees: {hugo: フーゴ}, chapter: 1,
+     notes: [落ち着かない顔で裏口から出ていった]}
+  - {id: P_d411, observer: dario, event: E411, sees: {kol: コル}, grounds: role, chapter: 1,
+     notes: [七つの鐘が鳴り終わるころ、雨に濡れて表の扉から入ってきた, 駄賃の銅貨を卓に並べて三つずつ数えた, 伝言を一字も盛らない]}
+  - {id: P_d416, observer: dario, event: E416, sees: {rina: リナ}, chapter: 1,
+     notes: [髪に小さな黒い羽根, 指先が白い粉で汚れている, あくびをした, 頬が赤い, 表から帰っていった]}
+  - {id: P_d417, observer: dario, event: E417, sees: {hugo: フーゴ}, chapter: 1,
+     notes: [リナのすぐあとに裏口から入ってきた。髪が雨で濡れている]}
+  # 第2章
+  - {id: P_d501, observer: dario, event: E501, sees: {rina: リナ}, chapter: 2,
+     notes: ["石板に『三、六、九、十二』と書いて線で消し、横に『十』と書き直した", リナは石板を伏せた,
+             息に酒の匂いはない。石筆の粉と干し草の匂い]}
+  - {id: P_d502, observer: dario, event: E502, sees: {}, chapter: 2,
+     notes: [外階段の三段目に、小さな黒い羽根。縁が灰色, 片腕で手すりにつかまって拾った]}
+  - {id: P_d504, observer: dario, event: E504, sees: {zaza: ザザ}, chapter: 2, notes: [床を掃いている]}
+  - {id: P_d505, observer: dario, event: E505, sees: {erika: エーリカ}, chapter: 2, notes: [組合長は帳簿から顔を上げなかった]}
+  # 第3章（解決）
+  - {id: P_d510, observer: dario, event: E510, sees: {rina: リナ, kiri: コル}, blind_spot: BS1, chapter: 3,
+     notes: [七つの鐘のあいだに、リナと鴉人が外階段を上がった]}
+  - {id: P_e510, observer: erika, event: E510, sees: {rina: リナ, kiri: "?:鴉人の娘"}, chapter: 3,
+     notes: [コルより頭一つ小さい, 足が小さい, 羽根の縁が灰色]}
+  - {id: P_e512, observer: erika, event: E511, sees: {kol: コル}, chapter: 3, notes: [同じ鐘のあいだ、コルはカウンターにいた]}
+  - {id: P_d514, observer: dario, event: E513, sees: {rina: リナ, kiri: "?:鴉人の娘"}, grounds: "told:S17", chapter: 3,
+     notes: [灯の下で、リナと小さな鴉人の娘が、銅貨を十ずつ並べている, 卓にパンが半分]}
+  # 真相を知る側（言明の根拠用）
+  - {id: P_z409, observer: zaza, event: E410, sees: {rina: 細い足の人間の娘, kiri: 小さい足の鴉人}, notes: [井戸から外階段が見える]}
+  - {id: P_z304, observer: zaza, event: E305, sees: {rina: 細い足の人間の娘, kiri: 小さい足の鴉人}}
+
+# ------------------------------------------------------------
+# 言明（台詞）。claim は真偽を機械で判定する形。basis は話し手の根拠となる知覚
+# ------------------------------------------------------------
+statements:
+  - {id: S01, day: D3, t: "20:30", place: counter, speaker: rina, to: [hugo], heard_by: [hugo, master],
+     context: 『毎晩コルと厩の二階で何してんだよ』と訊かれて,
+     text: 『コルとは、何もしてないわよ』,
+     claim: {type: no_joint, a: rina, b: kol, days: [D1, D2, D3]}}
+
+  - {id: S02, day: D4, t: "18:30", place: counter, speaker: dario, to: [rina], heard_by: [rina, master], chapter: 1,
+     text: 『飯は食わねえのか』, claim: {type: none}}
+  - {id: S02b, day: D4, t: "18:31", place: counter, speaker: rina, to: [dario], heard_by: [dario, master], chapter: 1,
+     text: 『いい』, claim: {type: none}}
+  - {id: S03, day: D4, t: "19:02", place: counter, speaker: kol, to: [dario], heard_by: [dario, master], chapter: 1,
+     text: 『マグダ隊長から、ダリオへ。つけを払え。詰所の分、銀貨二枚』,
+     claim: {type: relay, from: magda, before_event: E406}}
+  - {id: S03b, day: D4, t: "19:04", place: counter, speaker: dario, to: [kol], heard_by: [kol, master], chapter: 1,
+     text: 『払うと言っとけ』, claim: {type: none}}
+  - {id: S03c, day: D4, t: "19:05", place: counter, speaker: kol, to: [dario], heard_by: [dario, master], chapter: 1,
+     text: 『〈払うと言っとけ〉と伝える』, claim: {type: none}}
+  - {id: S04, day: D4, t: "19:07", place: counter, speaker: master, to: [dario], heard_by: [dario], chapter: 1,
+     context: コルが駄賃を三つずつ数えるのを見て,
+     text: 『鴉人は、三つずつ数えるんですよ』,
+     claim: {type: expr, expr: "E['kol']['attrs']['counts_by'] == 3"}}
+
+  - {id: S05, day: D4, t: "20:32", place: counter, speaker: hugo, to: [dario], heard_by: [dario, master], chapter: 1,
+     text: 『リナがおかしいんだ。このところ、煮込みを頼まねえ』, claim: {type: events, refs: [E201]}}
+  - {id: S06, day: D4, t: "20:35", place: counter, speaker: hugo, to: [dario], heard_by: [dario, master], chapter: 1,
+     text: 『昨日の七つ、厩の外階段の上で、リナがコルに銅貨を渡してた。音がした』,
+     claim: {type: action, by: rina, verb: give_coins, to: kol, day: D3}, basis: [P_h305]}
+  - {id: S07, day: D4, t: "20:38", place: counter, speaker: hugo, to: [dario], heard_by: [dario, master], chapter: 1,
+     text: 『で、昨日の晩ここで訊いたんだ。毎晩コルと厩の二階で何してんだって。そしたら〈コルとは、何もしてないわよ〉だと』,
+     claim: {type: report, ref: S01}}
+  - {id: S08, day: D4, t: "20:40", place: counter, speaker: hugo, to: [dario], heard_by: [dario, master], chapter: 1,
+     text: 『リナは組合の中じゃ嘘をつけねえ。なのに嘘をついた。なら、酒か、金だ』,
+     claim: {type: opinion}}
+  - {id: S09, day: D4, t: "20:45", place: counter, speaker: hugo, to: [dario], heard_by: [dario, master], chapter: 1,
+     text: 『今夜もだ。軒下で鐘を七つ数えた。鳴り終わる前に、リナとコルが外階段を上がってった』,
+     claim: {type: copresence, actors: [rina, kol], place: loft_stairs, day: D4, t: "19:00"}, basis: [P_h410]}
+  - {id: S10, day: D4, t: "20:48", place: counter, speaker: hugo, to: [dario], heard_by: [dario, master], chapter: 1,
+     text: 『八つの鐘のあと、コルが紙の包みを抱えて裏木戸から出てった』,
+     claim: {type: action, by: kol, verb: leave_backgate_with_parcel, day: D4}, basis: [P_h414]}
+  - {id: S11, day: D4, t: "20:50", place: counter, speaker: hugo, to: [dario], heard_by: [dario, master], chapter: 1,
+     text: 『井戸にはザザがいた。いつもの水汲みだ』,
+     claim: {type: copresence, actors: [zaza], place: courtyard, day: D4, t: "19:00"}, basis: [P_h409]}
+
+  - {id: S12q, day: D5, t: "10:05", place: counter, speaker: dario, to: [rina], heard_by: [rina, master], chapter: 2,
+     text: 『酒、飲んでねえだろうな』, claim: {type: none}}
+  - {id: S12, day: D5, t: "10:06", place: counter, speaker: rina, to: [dario], heard_by: [dario, master], chapter: 2,
+     text: 『飲んでないわよ。朝から何よ』, claim: {type: no_act, by: rina, verb: drink}}
+  - {id: S13, day: D5, t: "10:45", place: counter, speaker: master, to: [dario], heard_by: [dario], chapter: 2,
+     context: ダリオが拾った羽根を見て,
+     text: 『コルの羽根にしちゃ、小ぶりですね』,
+     claim: {type: expr, expr: "O['feather1']['attrs']['size'] == 'small' and O['feather1']['owner'] != 'kol'"}}
+  - {id: S14, day: D5, t: "10:48", place: counter, speaker: master, to: [dario], heard_by: [dario], chapter: 2,
+     text: 『リナさん、このところ外からパンを持って入ってきますね。うちの煮込みは頼まずに』,
+     claim: {type: events, refs: [E202, E301, E402]}}
+  - {id: S15q, day: D5, t: "10:50", place: counter, speaker: dario, to: [master], heard_by: [master], chapter: 2,
+     text: 『誰か、リナに銭を渡してるやつはいねえか』, claim: {type: none}}
+  - {id: S15, day: D5, t: "10:51", place: counter, speaker: master, to: [dario], heard_by: [dario], chapter: 2,
+     text: 『うちの店で、リナさんに銭を払う人は見ませんね』,
+     claim: {type: no_act, verb: pay, to: rina}}
+  - {id: S16q, day: D5, t: "11:01", place: counter, speaker: dario, to: [zaza], heard_by: [zaza, master], chapter: 2,
+     text: 『ザザ。毎晩七つのころ、厩の外階段を上がってくのは誰だ』, claim: {type: none}}
+  - {id: S16, day: D5, t: "11:02", place: counter, speaker: zaza, to: [dario], heard_by: [dario, master], chapter: 2,
+     text: 『細い足の、人間の娘。それと、小さい足の、鴉人』,
+     claim: {type: who_at, place: loft_stairs, days: [D2, D3, D4], window: "18:50-19:10", set: [rina, kiri]}}
+
+  - {id: S17q, day: D5, t: "19:04", place: counter, speaker: erika, to: [kol], heard_by: [kol, dario, master], chapter: 3,
+     text: 『コル。あなたに、妹はいる？』, claim: {type: none}}
+  - {id: S17, day: D5, t: "19:05", place: counter, speaker: kol, to: [erika], heard_by: [erika, dario, master], chapter: 3,
+     text: 『いる。キリ。十二』,
+     claim: {type: expr, expr: "E['kiri']['attrs']['relation'] == 'コルの妹'"}}
+
+# ------------------------------------------------------------
+# 章ごとの設計（書き手パケットに入る）。beliefs_end は章末の視点人物の見立て
+# ------------------------------------------------------------
+chapters:
+  1:
+    title: 七つの鐘
+    target_chars: 3000
+    span: "D4 18:00-21:00"
+    function: >-
+      雨の錆び釘亭。片腕のダリオが早くから飲んでいる。リナが夕飯を断って裏へ抜け、七つの鐘にコルがマグダ隊長の
+      「つけを払え」を届けに来る（駄賃を三つずつ数える）。リナが羽根と白い指で帰っていき、そのあとフーゴが
+      ダリオに相談する。章末、ダリオは厄介なことを引き受けたと思う。
+    beliefs_end:
+      - リナは毎晩、七つの鐘のころ、コルと厩の二階に上がっているらしい（フーゴが見た）
+      - リナはフーゴに嘘をついた、とフーゴは言う。組合の中で組合員が嘘をつけるのは、酒か、金か、長の命のときだけ
+      - 長の命ではあるまい。酒か、金か。ダリオはまだ決めかねている
+    free: [雨と軒の音, ダリオの吊った腕と片手の麦酒, マスターとの軽口, マグダのつけの冗談, フーゴの若さと心配性, リナの金への執着の小さな見せ場]
+  2:
+    title: 酒精か、代価か
+    target_chars: 3000
+    span: "D5 10:00-16:30"
+    function: >-
+      翌朝、ダリオが不器用に調べる。リナの息に酒の匂いはない（石板の数字）。外階段で小さな羽根を拾う。
+      マスターの二言三言。ザザに一つだけ訊く。酒でも金でもなさそうだが、フーゴは確かにコルを見た。
+      手に負えず、二階の組合長の部屋へ持っていく。
+    beliefs_end:
+      - 酒ではない。朝の息に酒の匂いはなかった
+      - 店でリナに銭を払う者もいない。代価でもなさそうだ
+      - それでも、フーゴは確かにリナとコルを見た。ザザも鴉人が上がっていくと言った
+      - 自分では分からない。組合長に持っていく
+    free: [片腕で外階段を上がる滑稽さ, ザザの掃除と短い答え, リナの杖と石板, 雨上がりの中庭]
+  3:
+    title: 群れの数え方
+    target_chars: 3500
+    span: "D5 15:00-19:45"
+    function: >-
+      解決。エーリカがダリオの話を聞き、二つ三つ訊き返して、七つの鐘に中庭へ出る。鴉人は二人いる。
+      コルに一つだけ訊き、厩の二階に上がる。リナはキリに十ずつの勘定を教えていた。
+    free: [エーリカの決断の前の一呼吸, リナの照れ隠しと金勘定, キリの三ずつの癖, フーゴがパン代を払わされる結び]
+
+# ------------------------------------------------------------
+# 解答キー（第3章でエーリカが示す推理。fairness 判定にも使う）
+# refs は視点人物（ダリオ）が受け取った知覚・言明の id。chapter はそれが出る章
+# ------------------------------------------------------------
+solution:
+  answer:
+    who: 厩の二階でリナと会っているのはコルではなく、コルの妹キリ（鴉人・十二・未登録）
+    how: 人間には鴉人の個体が見分けられない。同じ七つの鐘に、コルはカウンターでダリオに伝言を届けていた
+    lie: リナは嘘をついていない。『コル「とは」何もしていない』は字義どおり本当
+    why_light: >-
+      キリは兄のような伝令になりたい。伝令は人間の釣り銭を十ずつ勘定できないと務まらない（鴉人は三ずつ数える）。
+      組合でいちばん勘定の速いリナが、煮込み代でキリの夕飯のパンを買って、毎晩教えていた。
+      未登録の子を夜に厩へ上げていること、金に目がないリナが只で教えていることを、知られたくなかった。
+  clues:
+    - {id: K1, text: 七つの鐘のころ、コルはカウンターでダリオに伝言を届けていた, refs: [P_d411], chapter: 1}
+    - {id: K2, text: フーゴは同じ七つの鐘に、リナと鴉人が外階段を上がるのを見た, refs: [S09], chapter: 1}
+    - {id: K3, text: リナの答えは『コル「とは」何もしてない』。嘘をつけない者のはぐらかし, refs: [S07], chapter: 1}
+    - {id: K4, text: 鴉人は三つずつ数える, refs: [S04, P_d411], chapter: 1}
+    - {id: K5, text: 石板の『三、六、九、十二』を消して『十』, refs: [P_d501], chapter: 2}
+    - {id: K6, text: 外階段の羽根はコルのより小ぶりで、縁が灰色, refs: [P_d502, S13], chapter: 2}
+    - {id: K7, text: ザザは『小さい足の、鴉人』と言った, refs: [S16], chapter: 2}
+    - {id: K8, text: リナは外からパンを持ち込み、鴉人が紙の包みを抱えて裏木戸から出た, refs: [P_d403, S10, S14], chapter: 2}
+  misreadings:   # 読者に起こしたい誤読（章末）
+    1: リナはコルと会っていて、フーゴに嘘をついた。酒精か代価のどちらか（銭を渡しているので代価か）
+    2: 酒精ではない。代価も見えない。それでもコルと会っている――なぜ嘘がつけたのか分からない（確信できない状態）
+  fairness:
+    must_not_solve_after: 1     # 第1章の後で「鴉人は二人」と確信されたら失格（早すぎる看破）
+    solvable_after: 2           # 第2章の後には、手がかりから推理できること

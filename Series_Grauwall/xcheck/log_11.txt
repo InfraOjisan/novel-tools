@@ -1,0 +1,6 @@
+ep11_01 ok 96s in=39694 out=10588
+ep11_02 ok 91s in=38711 out=10097
+ep11_03 ok 134s in=41365 out=11626
+ep11_04 ok 96s in=37046 out=10038
+ep11_05 FAILED KeyError('choices')
+ep11_06 ok 89s in=31218 out=10270

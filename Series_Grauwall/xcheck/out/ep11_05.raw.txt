@@ -1,0 +1,287 @@
+{
+  "episode": "11",
+  "dates": [
+    {"when": "夕方五つ半を過ぎたころ", "ref": "L1713"},
+    {"when": "明けの夜", "ref": "L1737"},
+    {"when": "昨夜", "ref": "L1737"}
+  ],
+  "characters": [
+    {
+      "name": "ブリギッテ",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [
+        {"target": "グレゴール", "word": "グレゴールさん", "ref": "L1753"},
+        {"target": "アンゼルム", "word": "アンゼルム様", "ref": "L1759"}
+      ],
+      "speech": [
+        {"feature": "丁寧な口調", "example": "落としません", "ref": "L1717"}
+      ],
+      "looks": [
+        {"feature": "薬箱を胸に抱えている", "ref": "L1713"}
+      ],
+      "traits": [
+        {"feature": "袖を三度まくろうとする", "ref": "L1749"},
+        {"feature": "礼拝堂で借りた写しを広げ、証文を示す", "ref": "L1767"}
+      ],
+      "whereabouts": [
+        {"when": "夕方五つ半を過ぎたころ", "where": "浮き灯の艫", "doing": "薬箱を抱えて渡し舟から乗り移る", "ref": "L1713"},
+        {"when": "明けの夜", "where": "浮き灯の板の間", "doing": "アンゼルムに問い、証文を示す", "ref": "L1755"},
+        {"when": "明けの夜", "where": "ヤーコプの舟「樫」", "doing": "ダリオに乾いた布をかける", "ref": "L1968"}
+      ]
+    },
+    {
+      "name": "ダリオ",
+      "aliases": ["剣士"],
+      "first_person": [
+        {"word": "俺", "ref": "L1779"}
+      ],
+      "calls_others": [
+        {"target": "ヤーコプ", "word": "親方", "ref": "L1842"},
+        {"target": "頭巾の客", "word": "頭巾の", "ref": "L1950"}
+      ],
+      "speech": [
+        {"feature": "荒めの口調。「〜ねえ」「〜ぜ」を使う", "example": "俺は見てた", "ref": "L1779"},
+        {"feature": "泳げないことを「泳がねえ」と言う", "example": "泳がねえんだ", "ref": "L1994"}
+      ],
+      "looks": [
+        {"feature": "髭があり、左の先が蝋燭で焦げて縮れている", "ref": "L1721"}
+      ],
+      "traits": [
+        {"feature": "髭の先をつまむ", "ref": "L1721"},
+        {"feature": "泳げないことを誰にも言ったことがない", "ref": "L1906"}
+      ],
+      "whereabouts": [
+        {"when": "明けの夜", "where": "浮き灯の板の間", "doing": "アンゼルムの指が壺の縁に触れたと証言する", "ref": "L1777"},
+        {"when": "明けの夜", "where": "鷺", "doing": "グレゴールと組み合い、川へ落ちる", "ref": "L1880"},
+        {"when": "明けの夜", "where": "小さな渡し舟", "doing": "舟頭と頭巾の客に救助される", "ref": "L1928"},
+        {"when": "明けの夜", "where": "樫", "doing": "濡れたまま座る", "ref": "L1984"}
+      ]
+    },
+    {
+      "name": "ミッツィ",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [
+        {"feature": "かすれた声で短く問いかける", "example": "燕は", "ref": "L1799"}
+      ],
+      "looks": [
+        {"feature": "若い女の舟主", "ref": "L1729"}
+      ],
+      "traits": [
+        {"feature": "袖の端を何度も引っ張る", "ref": "L1729"},
+        {"feature": "膝の上で袖を握りしめる", "ref": "L1799"}
+      ],
+      "whereabouts": [
+        {"when": "明けの夜", "where": "浮き灯の板の間、盤の端", "doing": "ほかの舟主らと黙って座る", "ref": "L1729"},
+        {"when": "明けの夜", "where": "浮き灯の板の間", "doing": "燕について問いかける", "ref": "L1799"}
+      ]
+    },
+    {
+      "name": "ヴェルナー",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [
+        {"feature": "短く問いかけ、目を伏せる", "example": "鷺は", "ref": "L1803"}
+      ],
+      "looks": [
+        {"feature": "老いた舟主", "ref": "L1729"}
+      ],
+      "traits": [
+        {"feature": "膝の上で組んだ両手を動かさない", "ref": "L1729"},
+        {"feature": "盤を見ず、問いかけのあと目を伏せる", "ref": "L1803"}
+      ],
+      "whereabouts": [
+        {"when": "明けの夜", "where": "浮き灯の板の間、盤の端", "doing": "ほかの舟主らと黙って座る", "ref": "L1729"},
+        {"when": "明けの夜", "where": "浮き灯の板の間", "doing": "鷺について問いかける", "ref": "L1803"}
+      ]
+    },
+    {
+      "name": "グレゴール",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [
+        {"target": "ダリオ", "word": "剣士さん", "ref": "L1884"}
+      ],
+      "speech": [
+        {"feature": "愛想のいい声で呼びかける", "example": "明けの一振りだ！", "ref": "L1735"},
+        {"feature": "笑いながら話す", "example": "水の上では弱いもんだ", "ref": "L1888"}
+      ],
+      "looks": [
+        {"feature": "日焼けの抜けない太い腕", "ref": "L1735"},
+        {"feature": "太い指", "ref": "L1882"}
+      ],
+      "traits": [
+        {"feature": "壺を手にしたまま笑う", "ref": "L1807"}
+      ],
+      "whereabouts": [
+        {"when": "明けの夜", "where": "浮き灯の板の間、盤の向こう", "doing": "明けの一振りを宣言する", "ref": "L1735"},
+        {"when": "明けの夜", "where": "鷺", "doing": "ダリオと組み合い、川へ押し落とす", "ref": "L1880"},
+        {"when": "明けの夜", "where": "砂洲", "doing": "組の舟乗り三人に腕を押さえられる", "ref": "L1974"}
+      ]
+    },
+    {
+      "name": "アンゼルム",
+      "aliases": ["修道士", "修道士様"],
+      "first_person": [
+        {"word": "わたし", "ref": "L1771"}
+      ],
+      "calls_others": [],
+      "speech": [
+        {"feature": "静かな声で答える", "example": "祈っていました", "ref": "L1765"}
+      ],
+      "looks": [
+        {"feature": "痩せた肩、繕った跡のある法衣", "ref": "L1741"}
+      ],
+      "traits": [
+        {"feature": "両手を膝の上で組み、指先が灯の熱で赤くなる", "ref": "L1741"}
+      ],
+      "whereabouts": [
+        {"when": "明けの夜", "where": "浮き灯の板の間、移された灯の脇", "doing": "膝をついて祈る", "ref": "L1741"}
+      ]
+    },
+    {
+      "name": "リナ",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [
+        {"target": "ダリオ", "word": "ダリオさん", "ref": "L1860"}
+      ],
+      "speech": [
+        {"feature": "ダリオを気遣う問いかけ", "example": "生きてる？", "ref": "L1960"}
+      ],
+      "looks": [
+        {"feature": "麦藁色の髪、杖を持つ", "ref": "L1862"}
+      ],
+      "traits": [
+        {"feature": "杖の先を床板にそっと突く", "ref": "L1745"},
+        {"feature": "杖の先から小さな火を走らせる", "ref": "L1866"}
+      ],
+      "whereabouts": [
+        {"when": "明けの夜", "where": "浮き灯の板の間", "doing": "杖を床板に突く", "ref": "L1745"},
+        {"when": "明けの夜", "where": "樫", "doing": "杖を上げ、鷺の帆に火をつける", "ref": "L1862"},
+        {"when": "明けの夜", "where": "樫", "doing": "ダリオの生存を確かめる", "ref": "L1960"}
+      ]
+    },
+    {
+      "name": "ヤーコプ",
+      "aliases": ["親方"],
+      "first_person": [
+        {"word": "俺", "ref": "L1980"}
+      ],
+      "calls_others": [
+        {"target": "ダリオ", "word": "剣士", "ref": "L1844"},
+        {"target": "ダリオ", "word": "剣士", "ref": "L1990"}
+      ],
+      "speech": [
+        {"feature": "荒い口調で命じる", "example": "乗れ", "ref": "L1836"},
+        {"feature": "「〜ねえ」を使う", "example": "言われなくても追う", "ref": "L1844"}
+      ],
+      "looks": [
+        {"feature": "麦わらを噛む", "ref": "L1791"}
+      ],
+      "traits": [
+        {"feature": "舷の縄を撫で、結び目を確かめる", "ref": "L1791"},
+        {"feature": "曲がり目と杭の数を把握している", "ref": "L1976"}
+      ],
+      "whereabouts": [
+        {"when": "明けの夜", "where": "浮き灯の舷", "doing": "樫の舵を手繰り、追跡を命じる", "ref": "L1834"},
+        {"when": "明けの夜", "where": "樫", "doing": "鷺を追い、舵を取る", "ref": "L1874"},
+        {"when": "明けの夜", "where": "樫", "doing": "ダリオの隣に腰を下ろす", "ref": "L1988"}
+      ]
+    }
+  ],
+  "places": [
+    {
+      "name": "浮き灯",
+      "layout": [
+        {"feature": "艫の板は渡し舟の舷より一段高い", "ref": "L1723"},
+        {"feature": "艫の隅に塩の俵が三つ積まれている", "ref": "L1723"},
+        {"feature": "板の間の盤の端に四人が固まる", "ref": "L1729"},
+        {"feature": "舟の艫に賭けで取られた四艘が舫ってある", "ref": "L1822"}
+      ],
+      "scenery": [
+        {"feature": "白い板張りの大舟、舷に油皿が並ぶ", "ref": "L1713"},
+        {"feature": "梁に乾いた網、屋根の下に麦酒と魚の油の匂い", "ref": "L1725"},
+        {"feature": "床板の下で川水が舷を叩く", "ref": "L1727"}
+      ],
+      "weather_season": [
+        {"feature": "川面は夕方の赤を失い灰色に沈む", "ref": "L1713"},
+        {"feature": "川風が吹き込む", "ref": "L1813"}
+      ]
+    },
+    {
+      "name": "渡し舟",
+      "layout": [
+        {"feature": "浮き灯の艫へ寄り、舷から板へ乗り移る", "ref": "L1713"}
+      ],
+      "scenery": [
+        {"feature": "提灯を一つ吊った小さな舟", "ref": "L1928"}
+      ],
+      "weather_season": [
+        {"feature": "舟べりの板が濡れて冷たい", "ref": "L1926"}
+      ]
+    },
+    {
+      "name": "礼拝堂",
+      "layout": [
+        {"feature": "小さな堂で、油壺の底が見えていた", "ref": "L1757"}
+      ],
+      "scenery": [
+        {"feature": "礼拝堂でブリギッテとアンゼルムが並んで祈った", "ref": "L1757"}
+      ],
+      "weather_season": []
+    },
+    {
+      "name": "舟宿",
+      "layout": [
+        {"feature": "二階がある", "ref": "L1787"}
+      ],
+      "scenery": [
+        {"feature": "ダリオが目を開けていたとブリギッテが思い出す", "ref": "L1787"}
+      ],
+      "weather_season": []
+    },
+    {
+      "name": "川",
+      "layout": [
+        {"feature": "燕は岸寄りの浅い方、鷺は川の真ん中の深い方へ分かれる", "ref": "L1852"},
+        {"feature": "川下に曲がり目が三つあるとされる", "ref": "L1844"},
+        {"feature": "四つ目の曲がり目の先、杭の十二本目のあとに砂洲がある", "ref": "L1976"}
+      ],
+      "scenery": [
+        {"feature": "明けの夜、紙の提灯を吊るした舟が行き交う", "ref": "L1848"},
+        {"feature": "笛と太鼓が鳴り、舟の上で人が踊る", "ref": "L1850"},
+        {"feature": "川霧が船縁を撫でて流れる", "ref": "L1874"}
+      ],
+      "weather_season": [
+        {"feature": "水は冷たい", "ref": "L1898"},
+        {"feature": "川風が冷たい", "ref": "L1986"}
+      ]
+    },
+    {
+      "name": "岸の石段",
+      "layout": [
+        {"feature": "燕が押し寄せられ、手下たちが舟から這い出す", "ref": "L1870"}
+      ],
+      "scenery": [
+        {"feature": "石段に濡れた苔が光る", "ref": "L1870"}
+      ],
+      "weather_season": []
+    },
+    {
+      "name": "砂洲",
+      "layout": [
+        {"feature": "塩を積んだ鷺が乗り上げる", "ref": "L1974"}
+      ],
+      "scenery": [
+        {"feature": "川下の闇の向こうで白く浮かぶ", "ref": "L1988"}
+      ],
+      "weather_season": []
+    }
+  ],
+  "season_mismatch": [],
+  "inner_inconsistencies": []
+}

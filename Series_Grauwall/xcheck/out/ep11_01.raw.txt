@@ -1,0 +1,351 @@
+{
+  "episode": "11",
+  "dates": [
+    {"when": "夏の夜", "ref": "L72"},
+    {"when": "秋の荷を運ぶ予定", "ref": "L8"},
+    {"when": "春に川を上ったとき（回想）", "ref": "L276"},
+    {"when": "弥生（回想）", "ref": "L290"}
+  ],
+  "characters": [
+    {
+      "name": "ダリオ",
+      "aliases": ["剣士"],
+      "first_person": [
+        {"word": "俺", "ref": "L40"}
+      ],
+      "calls_others": [
+        {"target": "リナ", "word": "お前", "ref": "L40"},
+        {"target": "ヤーコプ", "word": "親方", "ref": "L284"}
+      ],
+      "speech": [
+        {"feature": "くだけた口調。「〜ねえ」「〜だろ」など", "example": "そりゃ計算が合わねえだろ", "ref": "L44"},
+        {"feature": "嘘もつけると言う", "example": "俺は嘘もつける", "ref": "L94"}
+      ],
+      "looks": [
+        {"feature": "太い指", "ref": "L6"},
+        {"feature": "顎の左の髭先は蝋燭で焦がしたまま伸び、右は短い", "ref": "L48"}
+      ],
+      "traits": [
+        {"feature": "名指しで呼ばれるのを悪く思わず、依頼を断る理由もない", "ref": "L20"},
+        {"feature": "泳ぎの話には返事をせず、杯の縁を拭く", "ref": "L100"},
+        {"feature": "祈りのとき、周囲と違って目を開けている", "ref": "L376"}
+      ],
+      "whereabouts": [
+        {"when": "夜九つごろ", "where": "錆び釘亭のカウンター", "doing": "川舟の組からの手紙を読む", "ref": "L4"},
+        {"when": "南街道の二日目の昼", "where": "小川の手前", "doing": "浅瀬を避けて石橋へ向かう", "ref": "L149"},
+        {"when": "荷揚げ場での寄合", "where": "古い倉の二階", "doing": "護衛依頼を聞く", "ref": "L306"}
+      ]
+    },
+    {
+      "name": "リナ",
+      "aliases": [],
+      "first_person": [
+        {"word": "わたし", "ref": "L42"}
+      ],
+      "calls_others": [
+        {"target": "ダリオ", "word": "ダリオさん", "ref": "L42"},
+        {"target": "ブリギッテ", "word": "ブリギッテさん", "ref": "L42"}
+      ],
+      "speech": [
+        {"feature": "丁寧な口調。「です」「ます」を使う", "example": "わたしは数えません", "ref": "L42"},
+        {"feature": "金額や計算に細かい", "example": "一部屋が銀貨一枚半", "ref": "L396"}
+      ],
+      "looks": [
+        {"feature": "十六歳の魔法使い", "ref": "L18"},
+        {"feature": "麦藁色の髪。父のお下がりの杖を使い、杖頭の溝は父の脂で黒く光る", "ref": "L18"},
+        {"feature": "髪を一つにまとめ、紐の先が肩の上で跳ねる", "ref": "L127"}
+      ],
+      "traits": [
+        {"feature": "金の話になると目が据わり、指先で木目に何かを書いては消す", "ref": "L18"},
+        {"feature": "ダリオの髭をからかう", "ref": "L46"},
+        {"feature": "礼金の分も含めて硬貨を数える", "ref": "L400"}
+      ],
+      "whereabouts": [
+        {"when": "夜", "where": "錆び釘亭", "doing": "川港への依頼について話す", "ref": "L18"},
+        {"when": "南街道の二日目", "where": "小川の浅瀬", "doing": "裾をたくし上げて渡る", "ref": "L169"},
+        {"when": "寄合の夕方", "where": "古い倉の二階", "doing": "舟の値の記録を尋ねる", "ref": "L352"}
+      ]
+    },
+    {
+      "name": "エーリカ",
+      "aliases": ["組合長"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [
+        {"feature": "語尾に「わ」を使う", "example": "組合は口銭を取らないわ", "ref": "L14"}
+      ],
+      "looks": [],
+      "traits": [
+        {"feature": "片足をわずかに引き、杯の縁を指で拭く", "ref": "L12"}
+      ],
+      "whereabouts": [
+        {"when": "夜", "where": "錆び釘亭", "doing": "礼金の条件をダリオに伝える", "ref": "L12"}
+      ]
+    },
+    {
+      "name": "ブリギッテ",
+      "aliases": [],
+      "first_person": [
+        {"word": "わたし", "ref": "L28"}
+      ],
+      "calls_others": [
+        {"target": "アガタ", "word": "先生", "ref": "L28"},
+        {"target": "ダリオ", "word": "ダリオさん", "ref": "L201"}
+      ],
+      "speech": [
+        {"feature": "丁寧な口調。「です」「ます」を使う", "example": "置いていかれません", "ref": "L123"}
+      ],
+      "looks": [
+        {"feature": "背が高く、赤茶の短髪。そばかすがあり、薬箱を肩にかけている", "ref": "L26"},
+        {"feature": "薬箱を胸の前に抱える", "ref": "L125"}
+      ],
+      "traits": [
+        {"feature": "アガタからの文を届け、自分も同行すると即答する", "ref": "L28"},
+        {"feature": "宿で短く祈り、胸の前で両手を組む", "ref": "L193"}
+      ],
+      "whereabouts": [
+        {"when": "夜", "where": "錆び釘亭", "doing": "アガタの文を届け、同行を申し出る", "ref": "L28"},
+        {"when": "旅の晩", "where": "石橋の宿", "doing": "薬箱の上の灯に向かって祈る", "ref": "L191"}
+      ]
+    },
+    {
+      "name": "アガタ",
+      "aliases": ["アガタ先生", "先生"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [],
+      "traits": [],
+      "whereabouts": [
+        {"when": "本文では時刻不明", "where": "不明", "doing": "ブリギッテに文を託す", "ref": "L28"}
+      ]
+    },
+    {
+      "name": "ヴィルマ",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [
+        {"feature": "村からの便りについて話す", "example": "村から便りが来た", "ref": "L66"}
+      ],
+      "looks": [
+        {"feature": "毛布を肩まで引き上げ、髪に枕にしていた布の跡がついて片側だけ跳ねている", "ref": "L64"}
+      ],
+      "traits": [
+        {"feature": "目を閉じ、息だけで笑う", "ref": "L70"}
+      ],
+      "whereabouts": [
+        {"when": "夏の夜", "where": "錆び釘亭の隅の長椅子", "doing": "毛布をかぶり、村からの便りを話す", "ref": "L64"}
+      ]
+    },
+    {
+      "name": "マスター",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [
+        {"feature": "大きな声では話さない", "example": "名指しは、高いんでしたね", "ref": "L78"}
+      ],
+      "looks": [
+        {"feature": "太い手で、指の節が白く擦れている。酒の染みが抜けない前掛けを着ける", "ref": "L76"}
+      ],
+      "traits": [
+        {"feature": "ダリオに黒パンと干し肉を渡し、水は沸かすよう忠告する", "ref": "L106"}
+      ],
+      "whereabouts": [
+        {"when": "夜", "where": "錆び釘亭", "doing": "麦酒を注ぎ、旅用の食料を渡す", "ref": "L76"}
+      ]
+    },
+    {
+      "name": "ヤーコプ",
+      "aliases": ["親方"],
+      "first_person": [
+        {"word": "俺", "ref": "L280"}
+      ],
+      "calls_others": [
+        {"target": "ダリオ", "word": "あんた", "ref": "L290"},
+        {"target": "リナたち一行", "word": "杭", "ref": "L312"}
+      ],
+      "speech": [
+        {"feature": "くだけた口調で、吐き捨てるように話す", "example": "理屈は知らねえ", "ref": "L338"}
+      ],
+      "looks": [
+        {"feature": "白髪", "ref": "L260"}
+      ],
+      "traits": [
+        {"feature": "ダリオの夜番を評価し、護衛に推薦した", "ref": "L280"},
+        {"feature": "笑ったのか咳をしたのか分からない笑い方をする", "ref": "L302"}
+      ],
+      "whereabouts": [
+        {"when": "夕方", "where": "荷揚げ場から古い倉へ", "doing": "ダリオたちを案内する", "ref": "L282"},
+        {"when": "寄合の夕方", "where": "古い倉の二階", "doing": "秋の荷の護衛を依頼する", "ref": "L350"}
+      ]
+    },
+    {
+      "name": "ミッツィ",
+      "aliases": ["燕の主"],
+      "first_person": [
+        {"word": "わたし", "ref": "L344"}
+      ],
+      "calls_others": [],
+      "speech": [
+        {"feature": "短く言い切る", "example": "負けたのは、わたしだ", "ref": "L344"}
+      ],
+      "looks": [
+        {"feature": "日に焼けた頬に髪が一筋かかる", "ref": "L328"}
+      ],
+      "traits": [
+        {"feature": "会釈せずダリオを睨む", "ref": "L332"},
+        {"feature": "祈りのとき腕を組んだまま目を閉じる", "ref": "L372"}
+      ],
+      "whereabouts": [
+        {"when": "寄合の夕方", "where": "古い倉の二階", "doing": "親の舟を継いだ者として紹介され、賭けに負けたと話す", "ref": "L330"}
+      ]
+    },
+    {
+      "name": "隊商の男",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [],
+      "traits": [
+        {"feature": "小川を渡らず橋へ向かうダリオを見て笑う", "ref": "L167"}
+      ],
+      "whereabouts": [
+        {"when": "旅の二日目", "where": "小川", "doing": "隊商の一員として渡河する", "ref": "L167"}
+      ]
+    },
+    {
+      "name": "荷揚げ場の年寄り",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [
+        {"target": "ダリオ", "word": "剣士", "ref": "L274"}
+      ],
+      "speech": [
+        {"feature": "短く、断定的に話す", "example": "白いのは白いのだ", "ref": "L266"}
+      ],
+      "looks": [
+        {"feature": "白髪の頭が夕日に赤く透ける", "ref": "L260"}
+      ],
+      "traits": [
+        {"feature": "麦わらを噛み、吐いてから一行を見る", "ref": "L272"}
+      ],
+      "whereabouts": [
+        {"when": "夕方", "where": "荷揚げ場の塩の俵の陰", "doing": "ダリオを剣士と呼ぶ", "ref": "L260"}
+      ]
+    }
+  ],
+  "places": [
+    {
+      "name": "錆び釘亭",
+      "layout": [
+        {"feature": "低い天井に煙で黒い梁。壁に燭台、カウンターの奥に客用の卓、隅に長椅子がある", "ref": "L6"},
+        {"feature": "表の扉は開け放してあり、窓の鎧戸も開いている", "ref": "L6"}
+      ],
+      "scenery": [
+        {"feature": "カウンターは杯の輪で白く擦れ、燭台には短い蝋燭が三本ある", "ref": "L6"},
+        {"feature": "豆を煮る匂い、麦酒、人いきれがあり、床板は踏むと湿ったような音を立てる", "ref": "L64"}
+      ],
+      "weather_season": [
+        {"feature": "夏の夜。風は入らず、夜も石畳に昼の熱が残る", "ref": "L72"}
+      ]
+    },
+    {
+      "name": "南門と南街道",
+      "layout": [
+        {"feature": "門の内側で石畳が終わり、外は乾いた土の道。門前に荷車の列が並ぶ", "ref": "L115"},
+        {"feature": "街道の両側に刈り入れの済んだ麦畑が広がる", "ref": "L129"}
+      ],
+      "scenery": [
+        {"feature": "荷車の輪跡が白く固まり、道端に輪が掘った溝が続く", "ref": "L117"},
+        {"feature": "朝露が溝に溜まり、隊商の俵が縄を鳴らして揺れる", "ref": "L131"}
+      ],
+      "weather_season": [
+        {"feature": "朝の空は灰色で、空気は冷たい", "ref": "L117"},
+        {"feature": "三日目、道は白く乾き、土の熱が足裏に伝わる", "ref": "L221"}
+      ]
+    },
+    {
+      "name": "街道の小川",
+      "layout": [
+        {"feature": "街道が川を横切る。川幅は二十歩ほどで、水深は膝まで", "ref": "L147"},
+        {"feature": "半里上流に石橋があり、川底は白い砂", "ref": "L147"}
+      ],
+      "scenery": [
+        {"feature": "向こう岸に柳が川下へ傾き、川底の石は丸い", "ref": "L147"}
+      ],
+      "weather_season": []
+    },
+    {
+      "name": "石橋の宿",
+      "layout": [
+        {"feature": "小川に石を四枚並べた橋の袂に、川石を積んだ宿が一軒ある", "ref": "L181"},
+        {"feature": "土間の隅に藁と旅人の荷袋があり、奥に竈がある", "ref": "L189"}
+      ],
+      "scenery": [
+        {"feature": "煤けた梁が低く、竈の煙が天井にこもる", "ref": "L189"},
+        {"feature": "宿の隅の卓に灯が置かれ、油の匂いが酢と汗の匂いに混じる", "ref": "L191"}
+      ],
+      "weather_season": []
+    },
+    {
+      "name": "ネーベル",
+      "layout": [
+        {"feature": "川の大きな曲がりに沿って屋根が並び、川の向こう岸は低い葦原、その先に林が続く", "ref": "L225"},
+        {"feature": "川面に帆を畳んだ舟が杭につながれて並ぶ", "ref": "L229"}
+      ],
+      "scenery": [
+        {"feature": "川の匂いは濡れた縄、魚、油の匂い", "ref": "L239"}
+      ],
+      "weather_season": [
+        {"feature": "丘の上に白い雲が一つ動かずに見える", "ref": "L227"}
+      ]
+    },
+    {
+      "name": "ネーベルの荷揚げ場",
+      "layout": [
+        {"feature": "濡れた石段の脇に杭と縄がある。塩俵の隣に魚箱、その隣に羊毛の梱が並ぶ", "ref": "L244"},
+        {"feature": "川の真ん中に白い舟がつながれ、法衣の者たちは石段へ降りる", "ref": "L252"}
+      ],
+      "scenery": [
+        {"feature": "魚箱から生臭さと干し魚の匂いがし、塩の粒が傾いた日の光を拾う", "ref": "L246"},
+        {"feature": "白い舟の帆は畳まれ、帆に印はない", "ref": "L252"}
+      ],
+      "weather_season": [
+        {"feature": "夕日の色が荷の塩に差し、川は赤く染まる", "ref": "L246"}
+      ]
+    },
+    {
+      "name": "古い倉",
+      "layout": [
+        {"feature": "低い戸口から入り、二階に帳面三冊のある窓際の机と奥の帳場がある", "ref": "L296"},
+        {"feature": "二階の隅に若い女がいる", "ref": "L328"}
+      ],
+      "scenery": [
+        {"feature": "羊毛と灯油の匂いが混ざり、窓の光が帳面の角を照らす", "ref": "L306"},
+        {"feature": "窓の外の川の真ん中に浮き灯の大舟の灯が見える", "ref": "L378"}
+      ],
+      "weather_season": [
+        {"feature": "夕方、窓の外の川が赤く染まる", "ref": "L364"}
+      ]
+    },
+    {
+      "name": "舟宿",
+      "layout": [
+        {"feature": "二部屋あり、床が川の上へ張り出している", "ref": "L386"},
+        {"feature": "寝台のある部屋に窓の板戸があり、廊下の向こうで鈴が鳴る", "ref": "L402"}
+      ],
+      "scenery": [
+        {"feature": "梁に乾いた網がかかり、板の隙間から川の匂いと水の冷たさが上がる", "ref": "L388"},
+        {"feature": "川霧が暗い水の上に残り、床下で水音がする", "ref": "L404"}
+      ],
+      "weather_season": [
+        {"feature": "川霧が残っている", "ref": "L404"}
+      ]
+    }
+  ],
+  "season_mismatch": [],
+  "inner_inconsistencies": []
+}

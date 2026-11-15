@@ -1,0 +1,310 @@
+{
+  "episode": "08",
+  "dates": [
+    {"when": "皐月五日、曇り", "ref": "L669"},
+    {"when": "皐月五日の夕方", "ref": "L847"},
+    {"when": "六日", "ref": "L920"},
+    {"when": "皐月七日の朝", "ref": "L973"}
+  ],
+  "characters": [
+    {
+      "name": "ヴィルマ",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [
+        {"feature": "短く言い切る", "example": "道は知ってる", "ref": "L729"},
+        {"feature": "予測を簡潔に告げる", "example": "この空は、降る", "ref": "L932"}
+      ],
+      "looks": [
+        {"feature": "手の甲に古い火傷の痕がある", "ref": "L906"}
+      ],
+      "traits": [
+        {"feature": "村の道を歩いて覚えている", "ref": "L733"},
+        {"feature": "囲いの縄を順に確かめ、緩みを締め直す", "ref": "L906"},
+        {"feature": "山へ向かう轍を見て踵を返す", "ref": "L914"}
+      ],
+      "whereabouts": [
+        {"when": "皐月五日朝", "where": "村長の家", "doing": "包みを卓に置く", "ref": "L685"},
+        {"when": "皐月五日", "where": "古い糧倉", "doing": "山へ送る麦袋を見る", "ref": "L771"},
+        {"when": "皐月五日夕方", "where": "羊の囲い", "doing": "柵の縄を確かめる", "ref": "L906"},
+        {"when": "皐月七日", "where": "峠道", "doing": "一行を先導する", "ref": "L1003"}
+      ]
+    },
+    {
+      "name": "ダリオ",
+      "aliases": [],
+      "first_person": [
+        {"word": "俺", "ref": "L864"}
+      ],
+      "calls_others": [
+        {"target": "ヴィルマ", "word": "北の姐さん", "ref": "L993"}
+      ],
+      "speech": [
+        {"feature": "くだけた口調", "example": "水だぞ", "ref": "L1111"},
+        {"feature": "荒めのくだけた口調", "example": "俺らはただ", "ref": "L954"}
+      ],
+      "looks": [
+        {"feature": "長靴を履き、荷を担ぐ", "ref": "L864"},
+        {"feature": "黒パンを三つ食べる", "ref": "L942"}
+      ],
+      "traits": [
+        {"feature": "足跡を自分の長靴と比べる", "ref": "L864"},
+        {"feature": "足跡を調べながら腹を鳴らす", "ref": "L916"}
+      ],
+      "whereabouts": [
+        {"when": "皐月五日朝", "where": "村長の家", "doing": "請負状の写しを卓に置く", "ref": "L699"},
+        {"when": "皐月五日夕方", "where": "羊の囲い", "doing": "雪潜の足跡を調べる", "ref": "L864"},
+        {"when": "皐月六日夜", "where": "ベアタの家", "doing": "黒パンを食べる", "ref": "L942"},
+        {"when": "皐月七日", "where": "峠道の沢", "doing": "水に落ちたブリギッテを覗き込む", "ref": "L1099"}
+      ]
+    },
+    {
+      "name": "リナ",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [
+        {"target": "ヴィルマ", "word": "ヴィルマさん", "ref": "L727"},
+        {"target": "ケス", "word": "ケスさん", "ref": "L948"}
+      ],
+      "speech": [
+        {"feature": "丁寧な口調", "example": "水を汲みますね", "ref": "L1071"},
+        {"feature": "丁寧な口調", "example": "冷たいです", "ref": "L1109"}
+      ],
+      "looks": [
+        {"feature": "父のお下がりの杖を持つ", "ref": "L1003"}
+      ],
+      "traits": [
+        {"feature": "足跡を覗き込んで半歩引く", "ref": "L872"},
+        {"feature": "ブリギッテを引き上げる", "ref": "L1107"}
+      ],
+      "whereabouts": [
+        {"when": "皐月五日朝", "where": "村長の家", "doing": "ヴィルマに案内について尋ねる", "ref": "L725"},
+        {"when": "皐月七日", "where": "峠道の沢", "doing": "ブリギッテを引き上げる", "ref": "L1107"}
+      ]
+    },
+    {
+      "name": "村長",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [
+        {"feature": "短く簡潔に話す", "example": "行けば分かる", "ref": "L721"}
+      ],
+      "looks": [
+        {"feature": "六十の男。白髭で背が少し曲がっている", "ref": "L681"},
+        {"feature": "目は細く、しわが深い", "ref": "L697"}
+      ],
+      "traits": [
+        {"feature": "包みを開けず引き出しにしまう", "ref": "L689"},
+        {"feature": "問いにすぐには答えない", "ref": "L717"}
+      ],
+      "whereabouts": [
+        {"when": "皐月五日朝", "where": "自宅の卓の前", "doing": "包みをしまい、一行に砦のことを話す", "ref": "L681"}
+      ]
+    },
+    {
+      "name": "ブリギッテ",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [
+        {"feature": "丁寧な口調", "example": "薬箱は無事です", "ref": "L1093"},
+        {"feature": "丁寧な口調", "example": "冷たいです", "ref": "L1109"}
+      ],
+      "looks": [
+        {"feature": "薬箱を背負い、袖が肘まで上がる", "ref": "L1017"},
+        {"feature": "背が高いと思っている", "ref": "L1015"}
+      ],
+      "traits": [
+        {"feature": "薬箱を両手で抱え込んで守る", "ref": "L1085"},
+        {"feature": "転んでも薬箱の無事を真っ先に報告する", "ref": "L1093"}
+      ],
+      "whereabouts": [
+        {"when": "皐月五日", "where": "古い糧倉", "doing": "薬箱から棘草の実を子どもに返してもらう", "ref": "L787"},
+        {"when": "皐月七日朝", "where": "ベアタの家", "doing": "目を覚まして空を見る", "ref": "L975"},
+        {"when": "皐月七日昼", "where": "峠道の沢", "doing": "水を汲もうとして滑り、水に落ちる", "ref": "L1073"}
+      ]
+    },
+    {
+      "name": "ケス",
+      "aliases": ["鴉人の斥候"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [
+        {"feature": "低く静かな声", "example": "上で、何か見てる", "ref": "L833"},
+        {"feature": "短く言う", "example": "灯は見えん", "ref": "L966"}
+      ],
+      "looks": [
+        {"feature": "羽があり、羽の先が風に伏せられる", "ref": "L831"}
+      ],
+      "traits": [
+        {"feature": "高い所から空や周囲を見張る", "ref": "L825"},
+        {"feature": "羽を一本ずつ撫でて整える", "ref": "L928"}
+      ],
+      "whereabouts": [
+        {"when": "皐月五日", "where": "古い糧倉の外", "doing": "雲を見上げる", "ref": "L825"},
+        {"when": "皐月五日夕方", "where": "羊の囲いの門柱", "doing": "風向きを確かめる", "ref": "L856"},
+        {"when": "皐月七日昼", "where": "峠道", "doing": "一行の上を旋回して尾根の向こうへ飛ぶ", "ref": "L1115"}
+      ]
+    },
+    {
+      "name": "パウル",
+      "aliases": ["白いの"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [
+        {"feature": "丁寧な口調", "example": "朝には、乾くでしょう", "ref": "L924"}
+      ],
+      "looks": [
+        {"feature": "白い法衣を着ている。裾は泥で染まっている", "ref": "L920"}
+      ],
+      "traits": [],
+      "whereabouts": [
+        {"when": "六日", "where": "ベアタの家の戸口", "doing": "法衣の裾の泥を叩く", "ref": "L920"},
+        {"when": "皐月七日", "where": "峠道", "doing": "山の煙を見て「人の火」と言う", "ref": "L1043"}
+      ]
+    },
+    {
+      "name": "ベアタ",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [
+        {"feature": "親しげな口調", "example": "よく眠れたかい", "ref": "L983"}
+      ],
+      "looks": [
+        {"feature": "小柄で、よく笑い、よく揺れる", "ref": "L981"}
+      ],
+      "traits": [
+        {"feature": "ダリオが四つ目のパンに手を伸ばすと笑う", "ref": "L942"},
+        {"feature": "娘を見送り、背に手を上げて下ろす", "ref": "L997"}
+      ],
+      "whereabouts": [
+        {"when": "六日夜", "where": "自宅", "doing": "炉から焼きたての黒パンを出す", "ref": "L942"},
+        {"when": "皐月七日朝", "where": "自宅の炉の前", "doing": "腕を拭いている", "ref": "L981"}
+      ]
+    }
+  ],
+  "places": [
+    {
+      "name": "村",
+      "layout": [
+        {"feature": "村長の家や家々があり、北側に古い糧倉がある", "ref": "L675"},
+        {"feature": "村はずれに羊の囲いがある", "ref": "L847"}
+      ],
+      "scenery": [
+        {"feature": "鶏と遠くの羊の声がする", "ref": "L671"},
+        {"feature": "家々の竈から細い煙が立つ", "ref": "L675"}
+      ],
+      "weather_season": [
+        {"feature": "皐月五日の朝は曇り、靄がかかる", "ref": "L669"}
+      ]
+    },
+    {
+      "name": "村長の家",
+      "layout": [
+        {"feature": "石と泥の家。入り口脇に鍬と鎌が立てかけてある", "ref": "L677"},
+        {"feature": "家の前の広い土間に水甕がある", "ref": "L679"},
+        {"feature": "小さな紙張りの窓があり、卓の前に村長が座る", "ref": "L681"}
+      ],
+      "scenery": [
+        {"feature": "梁から乾いた薬草が束で下がる", "ref": "L683"},
+        {"feature": "火と薬草と土の匂いがする", "ref": "L683"},
+        {"feature": "卓の木は手の油で黒く光る部分と削れて白い部分がある", "ref": "L683"}
+      ],
+      "weather_season": [
+        {"feature": "窓の外は靄のかかった麦畑", "ref": "L697"}
+      ]
+    },
+    {
+      "name": "古い糧倉",
+      "layout": [
+        {"feature": "村の北側にある石積みの建物。屋根は板張り", "ref": "L749"},
+        {"feature": "扉脇の石に古い鉄の環が埋まる", "ref": "L751"},
+        {"feature": "棚は二つに分かれ、手前は町へ納める分、奥は山へ送る麦袋", "ref": "L757"},
+        {"feature": "天井が高く、梁は煤けて黒い", "ref": "L749"}
+      ],
+      "scenery": [
+        {"feature": "中は暗く、埃と麦の匂いがする", "ref": "L753"},
+        {"feature": "戸口の光が床の石に長く落ち、埃が浮く", "ref": "L755"},
+        {"feature": "梁に刻みの印が並ぶ", "ref": "L819"}
+      ],
+      "weather_season": []
+    },
+    {
+      "name": "羊の囲い",
+      "layout": [
+        {"feature": "柵は石積みの土台に木の横木を渡した造り", "ref": "L850"},
+        {"feature": "柵の門柱があり、脇から山へ登る道が続く", "ref": "L856"},
+        {"feature": "囲いの外を雪潜の足跡が回り、柵近くの横木下に爪跡がある", "ref": "L878"}
+      ],
+      "scenery": [
+        {"feature": "羊は百を少し超えるほど", "ref": "L850"},
+        {"feature": "泥に羊毛がところどころ引っかかる", "ref": "L850"},
+        {"feature": "高い岩から鴉人が群れを見下ろす", "ref": "L852"}
+      ],
+      "weather_season": [
+        {"feature": "皐月五日夕方、北の山頂は雲に呑まれる", "ref": "L847"},
+        {"feature": "夕方の冷えが来る", "ref": "L916"}
+      ]
+    },
+    {
+      "name": "囲いの番小屋",
+      "layout": [
+        {"feature": "羊の囲いのそばにある", "ref": "L890"}
+      ],
+      "scenery": [
+        {"feature": "前に老人が座り、近くに火桶がある", "ref": "L890"},
+        {"feature": "火桶の炭が一つ赤く息をしている", "ref": "L890"}
+      ],
+      "weather_season": [
+        {"feature": "夕方の薄い光の中", "ref": "L890"}
+      ]
+    },
+    {
+      "name": "ベアタの家",
+      "layout": [
+        {"feature": "炉があり、隣の部屋で寝支度をする", "ref": "L958"}
+      ],
+      "scenery": [
+        {"feature": "羊毛と羊の脂の灯の匂いが満ちる", "ref": "L958"},
+        {"feature": "焼きたての黒パンが卓に置かれる", "ref": "L989"}
+      ],
+      "weather_season": [
+        {"feature": "六日の夜、雨が屋根を叩く", "ref": "L940"}
+      ]
+    },
+    {
+      "name": "峠道",
+      "layout": [
+        {"feature": "村から畑、羊の囲いを過ぎて山へ入ると道が石に替わる", "ref": "L1003"},
+        {"feature": "登り道の脇に雪解け水が流れる", "ref": "L1011"},
+        {"feature": "道の脇にハイマツが生える", "ref": "L1021"}
+      ],
+      "scenery": [
+        {"feature": "岩の上に小さな黄色い花が咲く", "ref": "L1023"},
+        {"feature": "山の肩に白い煙が一本立つ", "ref": "L1035"}
+      ],
+      "weather_season": [
+        {"feature": "七日の朝は晴れ、空は青い", "ref": "L975"},
+        {"feature": "昼には日が高く、岩が熱を持つ", "ref": "L1067"}
+      ]
+    },
+    {
+      "name": "峠道の沢",
+      "layout": [
+        {"feature": "岩場を滑る沢があり、石の間を水が下る", "ref": "L1031"}
+      ],
+      "scenery": [
+        {"feature": "水は白く泡立ち、石は濡れて黒く光る", "ref": "L1031"},
+        {"feature": "平たい岩に足をかけると滑る", "ref": "L1075"}
+      ],
+      "weather_season": [
+        {"feature": "水は冷たく、膝まで浸かる", "ref": "L1091"}
+      ]
+    }
+  ],
+  "season_mismatch": [],
+  "inner_inconsistencies": []
+}

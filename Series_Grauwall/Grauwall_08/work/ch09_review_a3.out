@@ -1,0 +1,1 @@
+{"pass":true,"slots_found":{"N1":"reinforced"},"violations":[{"severity":"low","type":"typo","detail":"「ハイマツの低い茂みを抿けると」の「抿」は誤字です。","fix":"「ハイマツの低い茂みを抜けると」に直してください。"},{"severity":"low","type":"typo","detail":"「振動の主，つまり自分——へ向く」に日本語の読点ではない「，」が混じっています。","fix":"「振動の主、つまり自分——へ向く」に直してください。"}]}

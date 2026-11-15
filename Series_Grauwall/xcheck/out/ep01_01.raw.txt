@@ -1,0 +1,371 @@
+{
+  "episode": "01",
+  "dates": [
+    {"when": "春の祝福の日（宝石が大聖堂に捧げられた日）", "ref": "L88"},
+    {"when": "今夜。九つの鐘の少し前に騒ぎが始まった", "ref": "L38"},
+    {"when": "夕方。六つの鐘の少し前から七つ半まで語り手は氷を買いに出ていた", "ref": "L72"},
+    {"when": "官憲は夜明けの開門前に来る予定", "ref": "L230"}
+  ],
+  "characters": [
+    {
+      "name": "俺（語り手）",
+      "aliases": ["マスター"],
+      "first_person": [{"word": "俺", "ref": "L10"}],
+      "calls_others": [
+        {"target": "バルタザール", "word": "バルタザール", "ref": "L78"},
+        {"target": "ルル", "word": "ルル", "ref": "L124"}
+      ],
+      "speech": [
+        {"feature": "落ち着いた口調で、状況や理屈を確認する", "example": "「出たところで」", "ref": "L14"}
+      ],
+      "looks": [
+        {"feature": "外見の記述なし。名前はあるが誰も呼ばない", "ref": "L50"},
+        {"feature": "昔は斥候で、組合を抜けて十年", "ref": "L48"}
+      ],
+      "traits": [
+        {"feature": "部屋に入ると人数と出口を数える癖がある", "ref": "L48"},
+        {"feature": "疑われないよう、騒ぎの際にもグラスを拭き続ける", "ref": "L10"},
+        {"feature": "石取りではザザにたいてい負ける", "ref": "L70"}
+      ],
+      "whereabouts": [
+        {"when": "九つの鐘のころ", "where": "錆び釘亭のカウンター内側", "doing": "グラスを拭き、騒ぎを見ている", "ref": "L10"},
+        {"when": "六つの鐘から七つ半", "where": "北の氷室と錆び釘亭", "doing": "氷を買って戻る", "ref": "L72"}
+      ]
+    },
+    {
+      "name": "バルタザール・グロック",
+      "aliases": ["バルタザール", "組合長", "組合長さん", "叔父"],
+      "first_person": [{"word": "俺", "ref": "L30"}],
+      "calls_others": [
+        {"target": "ルル", "word": "バニー", "ref": "L138"},
+        {"target": "灰狼族", "word": "灰色", "ref": "L122"},
+        {"target": "エルノ", "word": "エルノ", "ref": "L246"}
+      ],
+      "speech": [
+        {"feature": "怒鳴る。荒い命令口調", "example": "「とっとと誰でもいいから」", "ref": "L4"},
+        {"feature": "「俺」と称し、組合の誓約に縛られないと主張する", "example": "「俺は誓約の主だ」", "ref": "L30"}
+      ],
+      "looks": [
+        {"feature": "体重と声が大きい。底の厚い大きな靴を履く", "ref": "L8"},
+        {"feature": "治安維持隊の封蝋つきの紙を持つ", "ref": "L8"}
+      ],
+      "traits": [
+        {"feature": "組合の建物の出入口に閂をかけさせる", "ref": "L12"},
+        {"feature": "誓約の主は誓約に縛られないと言う", "ref": "L30"},
+        {"feature": "灰狼族の言葉は帳面に書かれないと述べる", "ref": "L110"}
+      ],
+      "whereabouts": [
+        {"when": "九つの鐘のころ", "where": "錆び釘亭の階段・酒場", "doing": "階段を下り、盗人を突き出すよう怒鳴る", "ref": "L6"},
+        {"when": "夜明け前まで", "where": "錆び釘亭", "doing": "盗人を見つけようとする", "ref": "L232"}
+      ]
+    },
+    {
+      "name": "ダリオ",
+      "aliases": ["剣士のダリオ", "ダリオさん"],
+      "first_person": [{"word": "俺", "ref": "L36"}],
+      "calls_others": [
+        {"target": "アガタ", "word": "シスター", "ref": "L194"},
+        {"target": "エルノ", "word": "神官様", "ref": "L186"}
+      ],
+      "speech": [
+        {"feature": "荒い口調で「俺」と称する", "example": "「俺は素面だ」", "ref": "L172"},
+        {"feature": "酔っているのに素面だと言い張る", "example": "「俺は素面だ」", "ref": "L172"}
+      ],
+      "looks": [
+        {"feature": "大男。髭に麦酒の泡がついている", "ref": "L160"}
+      ],
+      "traits": [
+        {"feature": "夕方の五つから飲み、六杯目の麦酒を飲んでいる", "ref": "L60"},
+        {"feature": "酔っているが、扉の閂を一人で担いでかける", "ref": "L20"},
+        {"feature": "拳に擦り傷がある", "ref": "L62"}
+      ],
+      "whereabouts": [
+        {"when": "騒ぎの最中", "where": "錆び釘亭の暖炉前", "doing": "飲み、灰狼が赤い物を咥えて走ったと話す", "ref": "L160"}
+      ]
+    },
+    {
+      "name": "ルル",
+      "aliases": ["バニー", "給仕", "この店の看板"],
+      "first_person": [{"word": "あたし", "ref": "L128"}],
+      "calls_others": [
+        {"target": "語り手", "word": "マスター", "ref": "L144"},
+        {"target": "バルタザール", "word": "組合長さん", "ref": "L144"}
+      ],
+      "speech": [
+        {"feature": "くだけた口調で「あたし」と称する", "example": "「あたしに訊くの？」", "ref": "L140"},
+        {"feature": "相手をからかうように酒を勧める", "example": "「怒鳴ると喉が渇くでしょ」", "ref": "L144"}
+      ],
+      "looks": [
+        {"feature": "黒い胴着、網の靴下、白い付け襟、白いカフス", "ref": "L52"},
+        {"feature": "頭に白い耳が二本、腰の後ろに白い丸い尾。亜麻色の髪を耳の横に長く垂らす", "ref": "L52"},
+        {"feature": "三年前、空腹で街に来たところを語り手に拾われ雇われた", "ref": "L52"}
+      ],
+      "traits": [
+        {"feature": "灰狼二人を見分け、名前と特徴を把握している", "ref": "L128"},
+        {"feature": "バルタザールに耳を侮辱されても何も言わず笑う", "ref": "L148"},
+        {"feature": "客にスープを出す", "ref": "L128"}
+      ],
+      "whereabouts": [
+        {"when": "九つの鐘より少し前", "where": "錆び釘亭のカウンター端", "doing": "扉の音に気づき、使いから紙を受け取る", "ref": "L40"},
+        {"when": "夕方", "where": "錆び釘亭", "doing": "語り手の留守中、店番をする", "ref": "L72"}
+      ]
+    },
+    {
+      "name": "イゾルデ",
+      "aliases": ["バルタザールの姪"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [
+        {"feature": "魔法使い。三十を少し過ぎた痩せた女", "ref": "L54"}
+      ],
+      "traits": [
+        {"feature": "いつも帳簿の匂いがすると描写される", "ref": "L54"},
+        {"feature": "エルノの証言後、帳面を抱えた腕に力を入れる", "ref": "L256"}
+      ],
+      "whereabouts": [
+        {"when": "騒ぎの最中", "where": "錆び釘亭の階段付近、バルタザールの横", "doing": "帳面を抱えている", "ref": "L54"}
+      ]
+    },
+    {
+      "name": "エルノ",
+      "aliases": ["神官様", "白い法衣の男"],
+      "first_person": [{"word": "私", "ref": "L252"}],
+      "calls_others": [],
+      "speech": [
+        {"feature": "丁寧な口調", "example": "「私は上町の坂を」", "ref": "L252"},
+        {"feature": "祈りの言葉につかえる", "example": "「この手の……」", "ref": "L182"}
+      ],
+      "looks": [
+        {"feature": "白い法衣。胸に灯火の刺繍。四十がらみで指が細い", "ref": "L56"},
+        {"feature": "法衣の袖口に小さな焦げがある", "ref": "L56"}
+      ],
+      "traits": [
+        {"feature": "灯火教会の者として癒しの祈りを使う", "ref": "L180"},
+        {"feature": "灰狼を目撃したと証言するが、二人の見分けはつかない", "ref": "L252"}
+      ],
+      "whereabouts": [
+        {"when": "六つの鐘の少しあと", "where": "上町の坂、ロズモンド館の横", "doing": "塀を越える灰色の亜人を見る", "ref": "L252"},
+        {"when": "騒ぎの最中", "where": "錆び釘亭の窓際の卓", "doing": "ダリオの拳を癒やす", "ref": "L180"}
+      ]
+    },
+    {
+      "name": "ニコ",
+      "aliases": ["盗賊のニコ"],
+      "first_person": [],
+      "calls_others": [
+        {"target": "バルタザール", "word": "組合長", "ref": "L28"}
+      ],
+      "speech": [
+        {"feature": "くだけた口調", "example": "「つまり、嘘つき放題ってわけだ」", "ref": "L32"}
+      ],
+      "looks": [
+        {"feature": "二十歳を少し出た小柄な男", "ref": "L58"}
+      ],
+      "traits": [
+        {"feature": "椅子の上でもいつでも跳べる座り方をする", "ref": "L58"},
+        {"feature": "灰狼は嘘をつけないのだから訊けばよいと提案する", "ref": "L104"}
+      ],
+      "whereabouts": [
+        {"when": "騒ぎの最中", "where": "錆び釘亭の窓際の卓", "doing": "誓約についてバルタザールに問いかける", "ref": "L28"}
+      ]
+    },
+    {
+      "name": "アガタ",
+      "aliases": ["修道女", "シスター"],
+      "first_person": [{"word": "わたし", "ref": "L188"}],
+      "calls_others": [
+        {"target": "ダリオ", "word": "ダリオ", "ref": "L92"},
+        {"target": "ダリオ", "word": "あなた", "ref": "L170"},
+        {"target": "エルノ", "word": "神官様", "ref": "L198"}
+      ],
+      "speech": [
+        {"feature": "丁寧で静かな口調", "example": "「あなたは飲んでいますね」", "ref": "L170"},
+        {"feature": "「わたしども」と称し、誓願について説明する", "example": "「偽りを申しません」", "ref": "L188"}
+      ],
+      "looks": [
+        {"feature": "白い手袋をはめている", "ref": "L62"}
+      ],
+      "traits": [
+        {"feature": "灯火教会から月に一度、施療に来る", "ref": "L62"},
+        {"feature": "癒しと祈りを行うが、攻めの術は使えない", "ref": "L188"},
+        {"feature": "ダリオの傷を診て手当てする", "ref": "L174"}
+      ],
+      "whereabouts": [
+        {"when": "騒ぎの最中", "where": "錆び釘亭の暖炉の反対側", "doing": "ダリオの拳の傷を診る", "ref": "L62"}
+      ]
+    },
+    {
+      "name": "ザザ",
+      "aliases": ["蜥蜴人", "掃除番"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [
+        {"feature": "年寄りで、箒を抱えている", "ref": "L66"}
+      ],
+      "traits": [
+        {"feature": "言葉が少ない", "ref": "L66"},
+        {"feature": "石取りが強く、語り手はたいてい負ける", "ref": "L70"}
+      ],
+      "whereabouts": [
+        {"when": "騒ぎの最中", "where": "錆び釘亭の階段下の暗がり", "doing": "箒を抱えて壁の一部のようにしゃがむ", "ref": "L66"},
+        {"when": "六つから七つ半", "where": "錆び釘亭の隅", "doing": "店に残る", "ref": "L72"}
+      ]
+    },
+    {
+      "name": "ヴェイ",
+      "aliases": ["灰狼族の男", "首に白い毛があるほう"],
+      "first_person": [{"word": "僕", "ref": "L134"}],
+      "calls_others": [],
+      "speech": [
+        {"feature": "短く、訊かれたことだけ答える", "example": "「僕は館にいた」", "ref": "L134"}
+      ],
+      "looks": [
+        {"feature": "灰色の毛並み。首に白い毛の房がある", "ref": "L128"},
+        {"feature": "背丈と肩幅はもう一人の灰狼とほとんど同じ", "ref": "L64"}
+      ],
+      "traits": [
+        {"feature": "嘘をつけず、訊かれたことだけ答えて黙る", "ref": "L136"}
+      ],
+      "whereabouts": [
+        {"when": "夕方", "where": "ロズモンド館の裏庭", "doing": "依頼で酒樽を運ぶ", "ref": "L134"},
+        {"when": "騒ぎの最中", "where": "錆び釘亭の裏口近くの床", "doing": "館にいたことを認める", "ref": "L132"}
+      ]
+    },
+    {
+      "name": "シグ",
+      "aliases": ["灰狼族の男", "耳の欠けてるほう"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [
+        {"feature": "灰色の毛並み。左耳の先が欠けている", "ref": "L130"},
+        {"feature": "背丈と肩幅はヴェイとほとんど同じ", "ref": "L64"}
+      ],
+      "traits": [
+        {"feature": "騒ぎの最中、隣のヴェイを一度見て何か言いかけ、やめる", "ref": "L268"}
+      ],
+      "whereabouts": [
+        {"when": "騒ぎの最中", "where": "錆び釘亭の裏口近くの床", "doing": "ヴェイとともに動かずにいる", "ref": "L268"}
+      ]
+    },
+    {
+      "name": "ロズモンド夫人",
+      "aliases": ["夫人"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [],
+      "traits": [
+        {"feature": "夜啼きの涙を所有し、大聖堂に捧げ物をした", "ref": "L88"}
+      ],
+      "whereabouts": [
+        {"when": "夕方", "where": "ロズモンド館から大聖堂へ向かう", "doing": "大聖堂へ行くと料理番が話す", "ref": "L284"}
+      ]
+    }
+  ],
+  "places": [
+    {
+      "name": "錆び釘亭",
+      "layout": [
+        {"feature": "酒場に表扉と裏口があり、どちらにも閂がかけられる", "ref": "L20"},
+        {"feature": "二階にバルタザールの部屋があり、酒場の真上。床板が薄い", "ref": "L42"},
+        {"feature": "階段の三段目にバルタザールが座る", "ref": "L24"},
+        {"feature": "カウンター、窓際の卓、暖炉、階段下の暗がりがある", "ref": "L52"},
+        {"feature": "裏口近くの床に灰狼族二人がいる", "ref": "L64"},
+        {"feature": "中庭の厩の二階で灰狼族が寝起きする", "ref": "L64"}
+      ],
+      "scenery": [
+        {"feature": "暖炉の薪がはぜ、酒場の空気が冷える", "ref": "L18"},
+        {"feature": "階段は悲鳴を上げ、バルタザールの足音が響く", "ref": "L8"},
+        {"feature": "カウンターに赤蕪の汁で漬けた鶉の卵の瓶がある", "ref": "L74"}
+      ],
+      "weather_season": [
+        {"feature": "酒場の空気が一段冷える", "ref": "L18"}
+      ]
+    },
+    {
+      "name": "城門・街",
+      "layout": [
+        {"feature": "城門が閉まっており、街から出られないと語り手が言う", "ref": "L14"},
+        {"feature": "街の下に谷がある", "ref": "L16"}
+      ],
+      "scenery": [],
+      "weather_season": []
+    },
+    {
+      "name": "北の氷室",
+      "layout": [],
+      "scenery": [
+        {"feature": "語り手が氷を買いに出かける", "ref": "L72"}
+      ],
+      "weather_season": []
+    },
+    {
+      "name": "ロズモンド館",
+      "layout": [
+        {"feature": "化粧部屋から宝石が消えた", "ref": "L80"},
+        {"feature": "裏庭に石畳があり、台所の窓が面している", "ref": "L280"},
+        {"feature": "館の塀があり、裏庭側へ越える者をエルノが見た", "ref": "L252"},
+        {"feature": "屋根に天窓がある", "ref": "L288"}
+      ],
+      "scenery": [
+        {"feature": "裏庭に石鹸、焼いた肉、甘い香水の匂いがする", "ref": "L280"},
+        {"feature": "明日の夜会の酒樽が運び込まれている", "ref": "L280"}
+      ],
+      "weather_season": [
+        {"feature": "裏庭の石畳は夕方の湿りを吸って滑りやすい", "ref": "L278"},
+        {"feature": "西の空がまだ赤い夕刻", "ref": "L288"}
+      ]
+    },
+    {
+      "name": "上町の坂",
+      "layout": [
+        {"feature": "ロズモンド館の横を通る", "ref": "L252"}
+      ],
+      "scenery": [],
+      "weather_season": []
+    },
+    {
+      "name": "大聖堂",
+      "layout": [],
+      "scenery": [
+        {"feature": "春の祝福の日に夫人が宝石を捧げた", "ref": "L88"}
+      ],
+      "weather_season": [
+        {"feature": "夕べの祈りの鐘が鳴る", "ref": "L284"}
+      ]
+    },
+    {
+      "name": "下町の小さな礼拝所",
+      "layout": [],
+      "scenery": [],
+      "weather_season": []
+    },
+    {
+      "name": "灯火教会",
+      "layout": [],
+      "scenery": [],
+      "weather_season": []
+    },
+    {
+      "name": "白塔",
+      "layout": [],
+      "scenery": [
+        {"feature": "賢者も白い法衣を着る", "ref": "L192"}
+      ],
+      "weather_season": []
+    },
+    {
+      "name": "下の谷",
+      "layout": [],
+      "scenery": [
+        {"feature": "灰狼族や蜥蜴人が戻れなくなることを恐れる場所として語られる", "ref": "L108"}
+      ],
+      "weather_season": []
+    }
+  ],
+  "season_mismatch": [],
+  "inner_inconsistencies": []
+}

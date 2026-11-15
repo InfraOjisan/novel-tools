@@ -1,0 +1,342 @@
+{
+  "episode": "12",
+  "dates": [
+    {"when": "十一年前の夏", "ref": "L814"},
+    {"when": "春の長雨", "ref": "L816"},
+    {"when": "秋の初め", "ref": "L882"},
+    {"when": "冬", "ref": "L898"},
+    {"when": "神無月十日の夜、十の鐘のあと半刻ほど", "ref": "L925"},
+    {"when": "明日の朝四つ（神無月十一日）", "ref": "L937"},
+    {"when": "灰壁暦三一二年霜月朔日", "ref": "L1093"},
+    {"when": "灰壁暦三一三年神無月十一日", "ref": "L1147"},
+    {"when": "雪の日", "ref": "L910"},
+    {"when": "月のない夜", "ref": "L1044"}
+  ],
+  "characters": [
+    {
+      "name": "アガタ",
+      "aliases": ["先生"],
+      "first_person": [{"word": "自分", "ref": "L878"}],
+      "calls_others": [
+        {"target": "パウル", "word": "あなた", "ref": "L1003"},
+        {"target": "土竜人の日雇い", "word": "先生と呼ばれる", "ref": "L862"}
+      ],
+      "speech": [
+        {"feature": "丁寧な言い方", "example": "お使いになりますか", "ref": "L850"},
+        {"feature": "丁寧な依頼", "example": "夜分に申し訳ありません", "ref": "L987"},
+        {"feature": "誓いを返す言葉", "example": "この誓いを、灯にお返しします", "ref": "L965"}
+      ],
+      "looks": [
+        {"feature": "白い手袋を着用していたが、誓願を返す夜に外す", "ref": "L961"},
+        {"feature": "手は思ったより皺が多い", "ref": "L961"},
+        {"feature": "三十年、施療や祈り、裁きの間でも手袋を着用", "ref": "L961"},
+        {"feature": "教会の衣を畳み、上着だけを残す", "ref": "L971"}
+      ],
+      "traits": [
+        {"feature": "斥候の過去を知りながら何も訊かない", "ref": "L846"},
+        {"feature": "灯の芯を整えるとき、自分も指を置くことがある", "ref": "L878"},
+        {"feature": "白い手袋の指先が雪で冷えている", "ref": "L920"},
+        {"feature": "誓願を返すと決めるまで十一年かかった", "ref": "L955"},
+        {"feature": "パウルに三度力になると約束する", "ref": "L1003"},
+        {"feature": "裁きで事実でないことを申すと決める", "ref": "L943"}
+      ],
+      "whereabouts": [
+        {"when": "十一年前の夏", "where": "北門の外の普請場", "doing": "日雇いたちに水を運び、斥候にも水を渡す", "ref": "L818"},
+        {"when": "秋の初め", "where": "組合の書庫", "doing": "布を並べ、書記の話を聞く", "ref": "L882"},
+        {"when": "神無月十日の夜", "where": "大聖堂", "doing": "誓願を返し、白い衣を手袋の脇に置いて堂を出る", "ref": "L959"},
+        {"when": "同夜", "where": "白塔の賢者パウルの宿", "doing": "白塔の衣を借りる", "ref": "L977"},
+        {"when": "神無月十一日朝四つ", "where": "裁きの間", "doing": "ブラントの裁きで証言する", "ref": "L1049"}
+      ]
+    },
+    {
+      "name": "斥候",
+      "aliases": ["酒場番", "痩せた男"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [
+        {"feature": "アガタに礼を述べる", "example": "ありがとうございます", "ref": "L844"},
+        {"feature": "手の豆をそのままにすると答える", "example": "手が覚えるまで", "ref": "L854"}
+      ],
+      "looks": [
+        {"feature": "痩せた人間の男", "ref": "L828"},
+        {"feature": "手のひらに豆ができ、のちに硬い皮に変わる", "ref": "L848"},
+        {"feature": "酒場で前掛けをして杯を拭いている", "ref": "L912"}
+      ],
+      "traits": [
+        {"feature": "石を据え、隙間が気に入らないと持ち上げ直す", "ref": "L836"},
+        {"feature": "ほとんど何も言わず、柄杓の水を一口だけ飲む", "ref": "L838"},
+        {"feature": "石の面を手のひらでゆっくり撫でる", "ref": "L872"},
+        {"feature": "労役の最後の日、列の外で手を洗う", "ref": "L900"},
+        {"feature": "店内で人数、窓、戸の順に見回す", "ref": "L918"}
+      ],
+      "whereabouts": [
+        {"when": "十一年前の夏", "where": "北門外の普請場", "doing": "石を積む", "ref": "L834"},
+        {"when": "普請の最後の日", "where": "普請場", "doing": "列の外で手を洗い、若者から置かれたパンを食べる", "ref": "L900"},
+        {"when": "その日の夕方", "where": "普請の済んだ壁の上", "doing": "北街道の先を見ている", "ref": "L906"},
+        {"when": "その冬", "where": "錆び釘亭", "doing": "酒場番として杯を拭く", "ref": "L910"}
+      ]
+    },
+    {
+      "name": "白い房の灰狼の若者",
+      "aliases": ["白い房の若者"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [{"feature": "首の下に白い毛の房がある灰狼の若者", "ref": "L840"}],
+      "traits": [{"feature": "自分の黒パンを半分に割り、斥候のそばに置く", "ref": "L902"}],
+      "whereabouts": [
+        {"when": "十一年前の夏", "where": "北門外の普請場", "doing": "石を運び、斥候の足もとに下ろす", "ref": "L840"},
+        {"when": "普請の最後の日", "where": "普請場", "doing": "黒パンを斥候のそばに置いて背を向ける", "ref": "L902"}
+      ]
+    },
+    {
+      "name": "北門を開ける年寄りの男",
+      "aliases": ["門の閂を引く年寄り"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [{"feature": "指が太く、関節が節くれている年寄り", "ref": "L824"}],
+      "traits": [{"feature": "鐘の六つ目が鳴り終わると同時に閂を抜く", "ref": "L824"}],
+      "whereabouts": [
+        {"when": "十一年前の夏の朝", "where": "北門", "doing": "閂を引いて門を開け、アガタに会釈する", "ref": "L824"},
+        {"when": "普請の最後の日の夕方", "where": "櫓の下", "doing": "壁の上の斥候を見上げる", "ref": "L906"}
+      ]
+    },
+    {
+      "name": "年かさの土竜人",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [{"target": "アガタ", "word": "先生", "ref": "L862"}],
+      "speech": [{"feature": "影で水を飲みたいと頼む", "example": "そっちの、影で", "ref": "L862"}],
+      "looks": [],
+      "traits": [],
+      "whereabouts": [{"when": "十一年前の夏", "where": "北門外の普請場の壁の影", "doing": "影で水を飲む", "ref": "L864"}]
+    },
+    {
+      "name": "若い土竜人",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [],
+      "traits": [],
+      "whereabouts": [{"when": "十一年前の夏", "where": "北門外の普請場の壁の影", "doing": "影で水を飲む", "ref": "L864"}]
+    },
+    {
+      "name": "組合の書記",
+      "aliases": ["年寄りの男"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [
+        {"feature": "独り言のように告げる", "example": "あの人の名には、線が引かれました", "ref": "L886"},
+        {"feature": "決まりについて説明する", "example": "決まりなので", "ref": "L890"}
+      ],
+      "looks": [{"feature": "年寄りの男で、組合に三十年いる", "ref": "L882"}],
+      "traits": [{"feature": "登録簿を閉じるところだった", "ref": "L888"}],
+      "whereabouts": [{"when": "秋の初め", "where": "組合の書庫", "doing": "机で帳面を広げ、アガタに話す", "ref": "L882"}]
+    },
+    {
+      "name": "ブリギッテ",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [{"feature": "短く返事をする", "example": "はい", "ref": "L933"}],
+      "looks": [],
+      "traits": [{"feature": "施療の日を早める理由を訊かない", "ref": "L933"}],
+      "whereabouts": [{"when": "神無月十日の夕方", "where": "本文に記載なし", "doing": "翌日の谷の施療に下りるよう言いつけられる", "ref": "L933"}]
+    },
+    {
+      "name": "ブラント",
+      "aliases": ["勘定方ブラント", "参事ゲルハルト・ブラント"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [{"feature": "低い声でゆっくり話す", "example": "そのとおりだ", "ref": "L1069"}],
+      "looks": [{"feature": "灰色の毛皮の襟を立て、膝の上で指を組む", "ref": "L1055"}],
+      "traits": [{"feature": "指を組んだまま説明し、のちに組んだ指をほどく", "ref": "L1069"}],
+      "whereabouts": [{"when": "神無月十一日朝四つ", "where": "裁きの間", "doing": "勘定方として裁きを受ける", "ref": "L1055"}]
+    },
+    {
+      "name": "エーリカ",
+      "aliases": ["組合長"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [{"feature": "帳面と相場の数値を説明する", "example": "四年とも四十俵", "ref": "L1067"}],
+      "looks": [{"feature": "右の脚を少し前に出して座る", "ref": "L1055"}],
+      "traits": [{"feature": "ブラントの不正を訴え出る", "ref": "L939"}],
+      "whereabouts": [{"when": "神無月十一日朝四つ", "where": "裁きの間", "doing": "証拠を提出し、ブラントについて証言する", "ref": "L1063"}]
+    },
+    {
+      "name": "アルブレヒト",
+      "aliases": ["裁き役"],
+      "first_person": [],
+      "calls_others": [{"target": "ヨーナス", "word": "書記", "ref": "L1081"}],
+      "speech": [
+        {"feature": "声が以前より小さく、言葉が少ない", "example": "声はあのころより小さく", "ref": "L1053"},
+        {"feature": "裁きの判断を述べる", "example": "罰はしない", "ref": "L1165"}
+      ],
+      "looks": [{"feature": "七十近くになっている", "ref": "L1053"}],
+      "traits": [{"feature": "証拠を指で端をそろえるように見る", "ref": "L1077"}],
+      "whereabouts": [{"when": "神無月十一日朝四つ", "where": "裁きの間", "doing": "ブラントとマグダの裁きを行う", "ref": "L1053"}]
+    },
+    {
+      "name": "ヨーナス",
+      "aliases": ["書記"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [{"feature": "袖口にインクの染みがある", "ref": "L1053"}],
+      "traits": [{"feature": "綴りを開いて行を探し、読み上げる", "ref": "L1085"}],
+      "whereabouts": [{"when": "神無月十一日朝四つ", "where": "裁きの間の書記の席", "doing": "証拠を受け取り、記録を読む", "ref": "L1053"}]
+    },
+    {
+      "name": "ロズモンド夫人",
+      "aliases": ["夫人"],
+      "first_person": [{"word": "私", "ref": "L1127"}],
+      "calls_others": [{"target": "アガタ", "word": "先生", "ref": "L1127"}],
+      "speech": [{"feature": "丁寧な女性語の語尾「わ」", "example": "言ったことはありませんわ", "ref": "L1127"}],
+      "looks": [],
+      "traits": [{"feature": "アガタの胸元を見て、何も言わず顔を戻す", "ref": "L1111"}],
+      "whereabouts": [{"when": "神無月十一日朝四つ", "where": "裁きの間の傍聴席", "doing": "証言し、席に戻る", "ref": "L1125"}]
+    },
+    {
+      "name": "執事",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [],
+      "traits": [{"feature": "夫人にハンカチを渡しかけて引っ込める", "ref": "L1129"}],
+      "whereabouts": [{"when": "神無月十一日朝四つ", "where": "裁きの間の傍聴席", "doing": "夫人の隣に座る", "ref": "L1057"}]
+    },
+    {
+      "name": "マグダ",
+      "aliases": ["隊長マグダ", "治安維持隊の隊長"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [{"feature": "短く返答する", "example": "はい", "ref": "L1169"}],
+      "looks": [{"feature": "治安維持隊の外套を着て、喉元の留め金二つを留めている", "ref": "L1057"}],
+      "traits": [{"feature": "留め金に触れるが外さない", "ref": "L1171"}],
+      "whereabouts": [{"when": "神無月十一日朝四つ", "where": "裁きの間の傍聴席", "doing": "訴えの裁きを受け、任を解かれる", "ref": "L1057"}]
+    },
+    {
+      "name": "ホルン",
+      "aliases": ["治安方"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [{"feature": "大きな声でマグダを告発する", "example": "隊を動かし", "ref": "L1161"}],
+      "looks": [],
+      "traits": [],
+      "whereabouts": [{"when": "神無月十一日朝四つ", "where": "裁きの間", "doing": "治安方の訴えを述べる", "ref": "L1159"}]
+    },
+    {
+      "name": "白塔の賢者パウル",
+      "aliases": ["パウル", "白塔の賢者"],
+      "first_person": [],
+      "calls_others": [{"target": "アガタ", "word": "アガタ先生", "ref": "L985"}],
+      "speech": [
+        {"feature": "半拍遅れて返事をする", "example": "どうぞ", "ref": "L989"},
+        {"feature": "アガタの約束を確認する", "example": "三度、ですね", "ref": "L1034"}
+      ],
+      "looks": [
+        {"feature": "二十八ほどの、色の白い細い男", "ref": "L983"},
+        {"feature": "指にインクと煤がついている", "ref": "L983"}
+      ],
+      "traits": [
+        {"feature": "半拍遅れて頷く", "ref": "L999"},
+        {"feature": "衣を探して部屋の紙の山を崩す", "ref": "L1009"},
+        {"feature": "額に煤がついても気づかない", "ref": "L1038"}
+      ],
+      "whereabouts": [{"when": "神無月十日の夜", "where": "大聖堂裏手の坂の宿、二階角部屋", "doing": "アガタに白塔の衣を貸す", "ref": "L977"}]
+    },
+    {
+      "name": "バルタザール",
+      "aliases": ["組合長のバルタザール"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [],
+      "traits": [{"feature": "その冬、店に新しい酒場番を雇う", "ref": "L916"}],
+      "whereabouts": [{"when": "その冬", "where": "錆び釘亭", "doing": "新しい酒場番を雇ったと伝えられる", "ref": "L916"}]
+    },
+    {
+      "name": "堂守",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [],
+      "traits": [{"feature": "小部屋で眠り、いびきをかく", "ref": "L927"}],
+      "whereabouts": [{"when": "神無月十日の夜", "where": "大聖堂の戸口脇の小部屋", "doing": "眠っている", "ref": "L927"}]
+    }
+  ],
+  "places": [
+    {
+      "name": "北の城壁外の普請場",
+      "layout": [{"feature": "北門の外の崩れた壁の根もとで石を積む", "ref": "L816"}],
+      "scenery": [{"feature": "朝から晩まで石を積む音が続く", "ref": "L814"}],
+      "weather_season": [{"feature": "春の長雨で壁の一か所が崩れた", "ref": "L816"}, {"feature": "十一年前の夏で暑い日は昼までに三往復する", "ref": "L814"}]
+    },
+    {
+      "name": "北門",
+      "layout": [{"feature": "城壁の門で、閂を引いて開ける", "ref": "L824"}],
+      "scenery": [{"feature": "朝六つの鐘で開く", "ref": "L824"}],
+      "weather_season": []
+    },
+    {
+      "name": "北街道と丘",
+      "layout": [{"feature": "門の外から丘の向こうへ道が延びる", "ref": "L826"}],
+      "scenery": [{"feature": "朝霧が道の上に低くかかる", "ref": "L826"}],
+      "weather_season": [{"feature": "夏の草で丘が青く、空は白い", "ref": "L876"}]
+    },
+    {
+      "name": "北の城壁",
+      "layout": [{"feature": "普請後、斥候が壁の上に立つ", "ref": "L906"}],
+      "scenery": [{"feature": "壁の上を燕が低く飛ぶ", "ref": "L876"}],
+      "weather_season": [{"feature": "雨が近いかもしれない", "ref": "L876"}]
+    },
+    {
+      "name": "組合の書庫",
+      "layout": [{"feature": "机と、奥の棚のいちばん下に置かれた登録簿がある", "ref": "L888"}],
+      "scenery": [{"feature": "登録簿が埃をかぶって寝かせてある", "ref": "L888"}],
+      "weather_season": []
+    },
+    {
+      "name": "錆び釘亭",
+      "layout": [{"feature": "軒に吊り看板があり、窓の中にカウンターが見える", "ref": "L910"}],
+      "scenery": [{"feature": "看板には釘三本を交差させた焼き印がある", "ref": "L910"}, {"feature": "窓に灯が入り、男がカウンターで杯を拭く", "ref": "L912"}],
+      "weather_season": [{"feature": "雪が看板に薄く積もる", "ref": "L910"}]
+    },
+    {
+      "name": "錆び釘亭前の坂",
+      "layout": [{"feature": "坂を下ると店の前を通る", "ref": "L910"}],
+      "scenery": [{"feature": "窓の灯が雪の中で小さく揺れる", "ref": "L920"}],
+      "weather_season": [{"feature": "雪の日", "ref": "L910"}]
+    },
+    {
+      "name": "大聖堂",
+      "layout": [{"feature": "長椅子の先に祭壇があり、灯の台は胸の高さ", "ref": "L929"}, {"feature": "戸口脇に堂守の小部屋がある", "ref": "L927"}],
+      "scenery": [{"feature": "祭壇の灯が奥に一つ立つ", "ref": "L927"}, {"feature": "石の壁に堂守のいびきが響く", "ref": "L927"}],
+      "weather_season": [{"feature": "神無月十日の夜", "ref": "L925"}]
+    },
+    {
+      "name": "白塔の賢者パウルの宿",
+      "layout": [{"feature": "大聖堂裏手の坂を少し上がったところ、二階角部屋", "ref": "L977"}, {"feature": "窓際の机の周囲に紙の山があり、暖炉前にも紙束がある", "ref": "L995"}],
+      "scenery": [{"feature": "窓に灯が入り、床や寝台、椅子に紙が積まれる", "ref": "L977"}, {"feature": "暖炉の火は小さい", "ref": "L995"}],
+      "weather_season": []
+    },
+    {
+      "name": "裁きの間",
+      "layout": [{"feature": "正面に裁き役の机、脇に書記の机、反対の脇に灯の台", "ref": "L1051"}, {"feature": "傍聴席と参事の腰掛けがある", "ref": "L1055"}],
+      "scenery": [{"feature": "高い窓があり、灯の炎はまっすぐ立つ", "ref": "L1051"}, {"feature": "石の床を白い衣の裾が擦る", "ref": "L1107"}],
+      "weather_season": [{"feature": "神無月十一日朝四つ", "ref": "L1049"}]
+    },
+    {
+      "name": "大聖堂裏手の坂・石畳",
+      "layout": [{"feature": "坂の石畳を下ると下町の屋根が見える", "ref": "L1044"}],
+      "scenery": [{"feature": "屋根の上に星がいくつか出ている", "ref": "L1044"}],
+      "weather_season": [{"feature": "月のない夜で、手袋のない手が冷たい", "ref": "L1044"}]
+    }
+  ],
+  "season_mismatch": [],
+  "inner_inconsistencies": []
+}

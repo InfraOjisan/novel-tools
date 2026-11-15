@@ -1,0 +1,362 @@
+{
+  "episode": "07",
+  "dates": [
+    {"when": "卯月二日の朝", "ref": "L368"},
+    {"when": "去年の祝福の日", "ref": "L386"},
+    {"when": "去年の秋", "ref": "L386"},
+    {"when": "夜、祝福の日の前の晩餐", "ref": "L398"},
+    {"when": "冬のあいだ", "ref": "L450"},
+    {"when": "卯月三日、昼から雨", "ref": "L480"},
+    {"when": "先月", "ref": "L494"},
+    {"when": "霜月から", "ref": "L528"},
+    {"when": "夕方、六つの鐘の少し前", "ref": "L601"},
+    {"when": "卯月三日の夕方五つ半", "ref": "L610"},
+    {"when": "去年の霜月", "ref": "L618"},
+    {"when": "三日前の夕方", "ref": "L618"},
+    {"when": "四日の朝", "ref": "L640"},
+    {"when": "三〇九年から三一二年までの四年分", "ref": "L666"},
+    {"when": "如月", "ref": "L721"}
+  ],
+  "characters": [
+    {
+      "name": "アーデルハイト",
+      "aliases": ["奥様"],
+      "first_person": [],
+      "calls_others": [{"target": "ヘルマン", "word": "ヘルマン", "ref": "L471"}],
+      "speech": [
+        {"feature": "夜までに考えると言う", "example": "夜までに考えるわ", "ref": "L394"},
+        {"feature": "依頼を丁寧に頼む", "example": "譲ってくださる？", "ref": "L458"}
+      ],
+      "looks": [{"feature": "上町の織物商の娘としてロズモンド家に入った", "ref": "L378"}],
+      "traits": [
+        {"feature": "席順を二十年かけて覚えた", "ref": "L378"},
+        {"feature": "石を失くしたことをそれ以上考えない", "ref": "L388"},
+        {"feature": "不安を表に出さず杯を口に運ぶ", "ref": "L428"},
+        {"feature": "給仕が杖に引っかからないよう椅子を引く", "ref": "L465"}
+      ],
+      "whereabouts": [
+        {"when": "卯月二日の朝", "where": "ロズモンド館の小食堂", "doing": "ヘルマンの段取りを聞く", "ref": "L368"},
+        {"when": "夜", "where": "ザイデル館の晩餐", "doing": "晩餐に出席する", "ref": "L398"},
+        {"when": "帰り", "where": "馬車", "doing": "暗い上町を眺め、ヘルマンに錆び釘亭の樽を尋ねる", "ref": "L469"}
+      ]
+    },
+    {
+      "name": "ヘルマン",
+      "aliases": ["執事"],
+      "first_person": [],
+      "calls_others": [{"target": "アーデルハイト", "word": "奥様", "ref": "L472"}],
+      "speech": [
+        {"feature": "丁寧語で段取りを読み上げる", "example": "でございます", "ref": "L370"},
+        {"feature": "声が平ら", "example": "よく磨いた銀器のように平ら", "ref": "L372"}
+      ],
+      "looks": [{"feature": "黒い上着の胸にロズモンド家の紋", "ref": "L372"}],
+      "traits": [],
+      "whereabouts": [{"when": "卯月二日の朝", "where": "ロズモンド館の小食堂", "doing": "行列の段取りを読み上げる", "ref": "L368"}]
+    },
+    {
+      "name": "ルートヴィヒ・ザイデル",
+      "aliases": ["ザイデル", "当主"],
+      "first_person": [{"word": "我が家", "ref": "L408"}],
+      "calls_others": [],
+      "speech": [
+        {"feature": "語尾に「ですな」「してな」がある", "example": "務めでしてな", "ref": "L408"},
+        {"feature": "亜人を抱えた組合を問題視する", "example": "あの組合にか", "ref": "L436"}
+      ],
+      "looks": [
+        {"feature": "六十歳、白い髭を胸まで垂らす", "ref": "L404"},
+        {"feature": "杖を椅子の脇に立てかけている", "ref": "L404"}
+      ],
+      "traits": [{"feature": "食卓の下の杖で給仕の足を三度引っかけかける", "ref": "L404"}],
+      "whereabouts": [{"when": "祝福の日の前の晩", "where": "ザイデル館の晩餐", "doing": "晩餐を開き、祝福の日の捧げ物について語る", "ref": "L400"}]
+    },
+    {
+      "name": "ブラント",
+      "aliases": ["勘定方のブラント"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [{"feature": "数字をゆっくり言い、減った数字だけ少し速くなる", "example": "百九十枚が、百二十五枚に", "ref": "L416"}],
+      "looks": [{"feature": "灰色の毛皮の襟を着けている", "ref": "L414"}],
+      "traits": [],
+      "whereabouts": [{"when": "祝福の日の前の晩", "where": "ザイデル館の食卓", "doing": "北の税の減少を話す", "ref": "L414"}]
+    },
+    {
+      "name": "クルーガー",
+      "aliases": ["衛生方のクルーガー"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [{"feature": "春になると谷の井戸や石灰の話をする", "example": "石灰を倍にしなければ", "ref": "L430"}],
+      "looks": [{"feature": "薬種商らしい乾いた指", "ref": "L430"}],
+      "traits": [{"feature": "話すたび店の石灰の納め高が増える", "ref": "L430"}],
+      "whereabouts": [{"when": "祝福の日の前の晩", "where": "ザイデル館の食卓", "doing": "魚の骨をつまみ、話を下の谷へ移す", "ref": "L430"}]
+    },
+    {
+      "name": "ローレンツ",
+      "aliases": ["普請方のローレンツ"],
+      "first_person": [{"word": "ですな", "ref": "L434"}],
+      "calls_others": [],
+      "speech": [{"feature": "平気な顔で語り、語尾に「ですな」がある", "example": "決まりましたからな", "ref": "L434"}],
+      "looks": [{"feature": "大きな手", "ref": "L448"}],
+      "traits": [{"feature": "指を三本交差させて浮き彫りを示す", "ref": "L452"}],
+      "whereabouts": [{"when": "祝福の日の前の晩", "where": "ザイデル館の食卓", "doing": "北の古砦を見に行く話と基礎石の浮き彫りを話す", "ref": "L434"}]
+    },
+    {
+      "name": "ホルン",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [],
+      "traits": [{"feature": "聞こえないふりをして魚の骨を外す", "ref": "L440"}],
+      "whereabouts": [{"when": "祝福の日の前の晩", "where": "ザイデル館の食卓の向こう端", "doing": "魚の骨を外す", "ref": "L440"}]
+    },
+    {
+      "name": "ダリオ",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [{"target": "ヴィルマ", "word": "親父の代", "ref": "L569"}],
+      "speech": [],
+      "looks": [],
+      "traits": [{"feature": "ブリギッテに受け止められた杯を見る", "ref": "L498"}],
+      "whereabouts": [
+        {"when": "卯月三日の昼", "where": "錆び釘亭", "doing": "杯を持っており、ブリギッテに受け止められる", "ref": "L496"},
+        {"when": "雨の午後", "where": "錆び釘亭", "doing": "麦酒を飲み、フィンの隣に座る", "ref": "L593"}
+      ]
+    },
+    {
+      "name": "ブリギッテ",
+      "aliases": ["アガタの使い"],
+      "first_person": [{"word": "わたし", "ref": "L514"}],
+      "calls_others": [{"target": "アガタ", "word": "アガタ先生", "ref": "L494"}],
+      "speech": [
+        {"feature": "声が早い", "example": "声が早かった", "ref": "L492"},
+        {"feature": "杯を受けるほうが得意だと冗談を言う", "example": "施療より、杯を受けるほうが得意", "ref": "L500"}
+      ],
+      "looks": [
+        {"feature": "背が高く、赤茶の短い髪でそばかすがある", "ref": "L486"},
+        {"feature": "白い法衣の袖を肘の上までまくる", "ref": "L486"},
+        {"feature": "肩に木の薬箱をかける", "ref": "L486"},
+        {"feature": "胸に灯火教会の小さな炎の刺繍", "ref": "L488"}
+      ],
+      "traits": [
+        {"feature": "言い終わる前に薬箱を下ろす", "ref": "L492"},
+        {"feature": "灯の術を使わず素手で杯を受け止める", "ref": "L496"},
+        {"feature": "手燭より薬箱が性に合うと言う", "ref": "L524"}
+      ],
+      "whereabouts": [{"when": "卯月三日、雨の昼", "where": "錆び釘亭", "doing": "薬を届け、組合への登録を頼む", "ref": "L490"}]
+    },
+    {
+      "name": "アガタ",
+      "aliases": ["修道女アガタ", "アガタ先生"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [],
+      "traits": [{"feature": "施療の薬の残りを組合の棚に置くよう指示する", "ref": "L494"}],
+      "whereabouts": []
+    },
+    {
+      "name": "テオ",
+      "aliases": ["修道士テオ"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [{"feature": "灯の前で話すことではないと言う", "example": "灯の前で話すことではない", "ref": "L520"}],
+      "looks": [{"feature": "若い修道士", "ref": "L518"}],
+      "traits": [{"feature": "帰還後、手燭の蓋を開けたり閉めたりしている", "ref": "L520"}],
+      "whereabouts": [{"when": "先月", "where": "白塔", "doing": "護送の一行に教会の立会いとして付いていく", "ref": "L518"}]
+    },
+    {
+      "name": "ヴィルマ",
+      "aliases": [],
+      "first_person": [{"word": "あたし", "ref": "L553"}],
+      "calls_others": [],
+      "speech": [{"feature": "くだけた口調", "example": "宿を出された", "ref": "L549"}],
+      "looks": [
+        {"feature": "黒い髪を縛り直す", "ref": "L551"},
+        {"feature": "背負い袋を担ぎ、腰に革の道具巻きを持つ", "ref": "L547"},
+        {"feature": "北の村の鉱夫の娘", "ref": "L565"}
+      ],
+      "traits": [
+        {"feature": "錠前を十数えるほどで開ける", "ref": "L557"},
+        {"feature": "鉱道具箱の錠や獣の罠を自分で扱う", "ref": "L565"},
+        {"feature": "村へ手ぶらで帰れないとして登録を望む", "ref": "L577"}
+      ],
+      "whereabouts": [
+        {"when": "卯月三日の昼すぎ", "where": "錆び釘亭", "doing": "宿を出されたと告げ、銭箱の錠を開ける", "ref": "L547"},
+        {"when": "雨の午後", "where": "錆び釘亭の隅の小卓", "doing": "包みを膝に置いて座る", "ref": "L581"},
+        {"when": "店が閉まったあと", "where": "錆び釘亭の隅の長椅子", "doing": "背負い袋を枕に横になる", "ref": "L687"}
+      ]
+    },
+    {
+      "name": "ケス",
+      "aliases": ["鴉人のケス"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [{"feature": "黒い羽をたたみ、首を少し傾けている", "ref": "L591"}],
+      "traits": [{"feature": "店の隅で一人でおり、誰も話しかけない", "ref": "L591"}],
+      "whereabouts": [{"when": "雨の午後", "where": "錆び釘亭の梁の下", "doing": "一人でいる", "ref": "L591"}]
+    },
+    {
+      "name": "フィン",
+      "aliases": ["隊の若い隊員"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [{"feature": "隊から護送の一行に一人だけ出た男", "ref": "L593"}],
+      "traits": [],
+      "whereabouts": [{"when": "雨の午後", "where": "錆び釘亭の卓", "doing": "外套の雨を払い、リナの卓に腰を下ろす", "ref": "L593"}]
+    },
+    {
+      "name": "エーリカ",
+      "aliases": ["組合長"],
+      "first_person": [{"word": "わたし", "ref": "L646"}],
+      "calls_others": [{"target": "ヨーナス", "word": "ヨーナス", "ref": "L677"}],
+      "speech": [{"feature": "落ち着いた丁寧な口調", "example": "ありがとう、ヨーナス", "ref": "L677"}],
+      "looks": [{"feature": "片足をかばって歩く", "ref": "L628"}],
+      "traits": [
+        {"feature": "必要な事実だけを伝え、全部は話さない", "ref": "L648"},
+        {"feature": "同じ手は二度目には効きが落ちると考える", "ref": "L721"},
+        {"feature": "ヴィルマの割符を確かめる", "ref": "L699"}
+      ],
+      "whereabouts": [
+        {"when": "卯月三日の夕方五つ半", "where": "市参事会館の控えの間", "doing": "白塔から届いた文の写しを読む", "ref": "L610"},
+        {"when": "卯月三日の夕方", "where": "市参事会館から錆び釘亭への道", "doing": "雨の中、片足をかばって坂を下る", "ref": "L628"},
+        {"when": "四日の朝", "where": "書記局", "doing": "北の村の歳入の綴りを調べる", "ref": "L644"},
+        {"when": "その夜、店が閉まったあと", "where": "錆び釘亭", "doing": "ヴィルマの割符を確認する", "ref": "L685"},
+        {"when": "その夜", "where": "二階の部屋", "doing": "記録を紙に写し、弓の箱にしまう", "ref": "L733"}
+      ]
+    },
+    {
+      "name": "エルノ・ファルク",
+      "aliases": ["囚人", "賢者"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [],
+      "traits": [{"feature": "神官を騙り、隊の前で火を放った", "ref": "L618"}],
+      "whereabouts": [{"when": "先月、護送後の三日前の夕方には帰還", "where": "白塔", "doing": "隊と組合の者に送り届けられた後、『もういない』と文書で報告される", "ref": "L614"}]
+    },
+    {
+      "name": "ヨーナス",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [{"target": "エーリカ", "word": "組合長", "ref": "L644"}],
+      "speech": [{"feature": "袖口のインクの染みをこすりながら話す", "example": "ここにあります", "ref": "L644"}],
+      "looks": [{"feature": "袖口にインクの染み", "ref": "L644"}],
+      "traits": [{"feature": "綴りを見たことを勘定方に言うべきか確認する", "ref": "L678"}],
+      "whereabouts": [{"when": "四日の朝", "where": "書記局", "doing": "北の村の歳入の綴りをエーリカに渡す", "ref": "L644"}]
+    },
+    {
+      "name": "リナ",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [{"feature": "魔法使いで、金に目がないとされる", "ref": "L715"}],
+      "traits": [{"feature": "換えの差を銀貨と銅貨にしてすぐ言えるとエーリカが考える", "ref": "L715"}],
+      "whereabouts": [{"when": "雨の午後", "where": "錆び釘亭の卓", "doing": "銅貨を並べる", "ref": "L591"}]
+    },
+    {
+      "name": "ザザ",
+      "aliases": ["トカゲ"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [{"feature": "トカゲ", "ref": "L739"}],
+      "traits": [],
+      "whereabouts": [{"when": "本文では時刻不明", "where": "厩の二階", "doing": "寝床を使っている", "ref": "L739"}]
+    }
+  ],
+  "places": [
+    {
+      "name": "ロズモンド館の小食堂",
+      "layout": [{"feature": "窓辺に鉢植えがある", "ref": "L380"}],
+      "scenery": [{"feature": "茶の杯が置かれる", "ref": "L374"}],
+      "weather_season": []
+    },
+    {
+      "name": "ザイデル館",
+      "layout": [{"feature": "長い食卓に二十人が座り、アーデルハイトは当主の右から三つ目", "ref": "L400"}],
+      "scenery": [{"feature": "川魚の骨を皿の縁に並べる", "ref": "L406"}],
+      "weather_season": [{"feature": "祝福の日の前の晩餐", "ref": "L398"}]
+    },
+    {
+      "name": "馬車",
+      "layout": [{"feature": "窓から上町が見える", "ref": "L469"}],
+      "scenery": [{"feature": "窓の外は暗い上町", "ref": "L469"}],
+      "weather_season": []
+    },
+    {
+      "name": "錆び釘亭",
+      "layout": [
+        {"feature": "カウンターの端に古い銭箱がある", "ref": "L555"},
+        {"feature": "店の隅に小卓がある", "ref": "L581"},
+        {"feature": "店の隅に梁があり、その下に席がある", "ref": "L591"},
+        {"feature": "カウンター、暖炉、窓がある", "ref": "L482"}
+      ],
+      "scenery": [
+        {"feature": "窓が白く曇り、雨樋の水が窓下の石に跳ねる", "ref": "L482"},
+        {"feature": "暖炉の火が小さくなり、灰に赤い筋が残る", "ref": "L591"},
+        {"feature": "雨樋の水音がする", "ref": "L597"}
+      ],
+      "weather_season": [
+        {"feature": "卯月三日は昼から雨", "ref": "L480"},
+        {"feature": "雨の日は薪を数える。雨が三日続けば薪が足りなくなる", "ref": "L482"},
+        {"feature": "空は鉛色で、雨が強くなる", "ref": "L543"}
+      ]
+    },
+    {
+      "name": "市参事会館",
+      "layout": [{"feature": "控えの間がある", "ref": "L610"}],
+      "scenery": [{"feature": "石段があり、外に下町への坂が続く", "ref": "L628"}],
+      "weather_season": [{"feature": "卯月三日の外は雨", "ref": "L626"}]
+    },
+    {
+      "name": "下町への坂・石畳",
+      "layout": [{"feature": "石畳の窪みに水が溜まる", "ref": "L628"}],
+      "scenery": [{"feature": "水たまりが灰色の空を映す", "ref": "L628"}],
+      "weather_season": [{"feature": "雨が降っている", "ref": "L628"}]
+    },
+    {
+      "name": "書記局",
+      "layout": [
+        {"feature": "窓があり、外に雨樋の縁が見える", "ref": "L642"},
+        {"feature": "奥に棚があり、古い綴りの束が置かれている", "ref": "L650"}
+      ],
+      "scenery": [{"feature": "雨樋の縁に鳩が三羽並び、一羽は逆向き", "ref": "L642"}],
+      "weather_season": [{"feature": "四日の朝、雨上がり", "ref": "L640"}]
+    },
+    {
+      "name": "大聖堂",
+      "layout": [{"feature": "捧げ物の台がある", "ref": "L386"}],
+      "scenery": [{"feature": "祝福を受けた宝石が持ち主に返される慣わし", "ref": "L386"}],
+      "weather_season": []
+    },
+    {
+      "name": "白塔",
+      "layout": [],
+      "scenery": [{"feature": "参事会へ文書を送る", "ref": "L612"}],
+      "weather_season": []
+    },
+    {
+      "name": "錆び釘亭の二階の部屋",
+      "layout": [{"feature": "部屋の隅に弦を外した長弓の箱がある", "ref": "L737"}],
+      "scenery": [{"feature": "弓の下に紙を差し込む", "ref": "L737"}],
+      "weather_season": []
+    },
+    {
+      "name": "厩の二階",
+      "layout": [{"feature": "ザザの寝床の下に前の組合長の裏帳面がある", "ref": "L739"}],
+      "scenery": [],
+      "weather_season": []
+    },
+    {
+      "name": "北の古砦",
+      "layout": [{"feature": "北の村の向こうにあり、古い基礎石がある", "ref": "L569"}],
+      "scenery": [{"feature": "古い基礎石の裏に釘三本が交差した浮き彫り", "ref": "L450"}],
+      "weather_season": [{"feature": "雪が解けたら組合が見に行く予定", "ref": "L434"}]
+    }
+  ],
+  "season_mismatch": [],
+  "inner_inconsistencies": []
+}

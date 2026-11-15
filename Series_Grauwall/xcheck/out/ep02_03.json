@@ -1,0 +1,770 @@
+{
+ "episode": "02",
+ "dates": [
+  {
+   "when": "二十五日",
+   "ref": "L807"
+  },
+  {
+   "when": "二十七日の夜",
+   "ref": "L952"
+  },
+  {
+   "when": "二十八日",
+   "ref": "L1087"
+  },
+  {
+   "when": "朔日、十の鐘",
+   "ref": "L875"
+  }
+ ],
+ "characters": [
+  {
+   "name": "俺",
+   "aliases": [
+    "マスター"
+   ],
+   "first_person": [
+    {
+     "word": "俺",
+     "ref": "L823"
+    }
+   ],
+   "calls_others": [],
+   "speech": [
+    {
+     "feature": "丁寧な口調",
+     "example": "二枚です。",
+     "ref": "L825"
+    },
+    {
+     "feature": "客に敬語で勧める",
+     "example": "もう一ついかがです",
+     "ref": "L939"
+    }
+   ],
+   "looks": [],
+   "traits": [
+    {
+     "feature": "店内の人数や出口、危険を数える",
+     "ref": "L1022"
+    },
+    {
+     "feature": "エーリカの夜の外出を確かめに出ない",
+     "ref": "L1084"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "二十五日の昼",
+     "where": "店のカウンター",
+     "doing": "卵をトマスに出し、話をする",
+     "ref": "L843"
+    },
+    {
+     "when": "二十七日の夜",
+     "where": "店",
+     "doing": "客を見て、倒れた麦酒を拭く",
+     "ref": "L1028"
+    },
+    {
+     "when": "二十八日",
+     "where": "店と階段下",
+     "doing": "帳簿箱を出し、エーリカに渡す",
+     "ref": "L1107"
+    }
+   ]
+  },
+  {
+   "name": "トマス",
+   "aliases": [
+    "治安維持隊のトマス",
+    "若者"
+   ],
+   "first_person": [
+    {
+     "word": "俺",
+     "ref": "L949"
+    }
+   ],
+   "calls_others": [
+    {
+     "target": "ザザ",
+     "word": "ザザさん",
+     "ref": "L853"
+    },
+    {
+     "target": "隊長",
+     "word": "隊長",
+     "ref": "L899"
+    },
+    {
+     "target": "ヨーナス",
+     "word": "ヨーナスさん",
+     "ref": "L885"
+    }
+   ],
+   "speech": [
+    {
+     "feature": "「っす」を多用するくだけた口調",
+     "example": "三枚あった気がしたんすよ",
+     "ref": "L827"
+    },
+    {
+     "feature": "謝罪は丁寧語",
+     "example": "すんません",
+     "ref": "L913"
+    }
+   ],
+   "looks": [
+    {
+     "feature": "頬に産毛が残る若い男",
+     "ref": "L811"
+    },
+    {
+     "feature": "非番で、洗いざらしの上着を着ている。裾に赤い筋がある",
+     "ref": "L811"
+    },
+    {
+     "feature": "隠しに隊の詰所の合鍵と乾いた栗の殻を入れている",
+     "ref": "L833"
+    }
+   ],
+   "traits": [
+    {
+     "feature": "給金が出ると卵を一つ食べ、二つは食べない",
+     "ref": "L849"
+    },
+    {
+     "feature": "隊長の物真似をしてむせる",
+     "ref": "L905"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "二十五日の昼",
+     "where": "店のカウンター前",
+     "doing": "卵を一つ食べ、亜人排除や検分の噂を話す",
+     "ref": "L817"
+    },
+    {
+     "when": "二十五日の昼",
+     "where": "店",
+     "doing": "話を終えて扉のほうへ向かう",
+     "ref": "L943"
+    }
+   ]
+  },
+  {
+   "name": "ザザ",
+   "aliases": [
+    "蜥蜴人"
+   ],
+   "first_person": [],
+   "calls_others": [],
+   "speech": [
+    {
+     "feature": "短く答える",
+     "example": "寒い",
+     "ref": "L855"
+    },
+    {
+     "feature": "訊かれたことだけに答える",
+     "example": "そうだ",
+     "ref": "L1191"
+    }
+   ],
+   "looks": [
+    {
+     "feature": "鱗があり、日光に当たって乾かす",
+     "ref": "L1149"
+    }
+   ],
+   "traits": [
+    {
+     "feature": "階段下で箒を動かしている",
+     "ref": "L851"
+    },
+    {
+     "feature": "日だまりで目を半分閉じ、ときどき瞼を動かす",
+     "ref": "L1149"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "二十五日の昼",
+     "where": "階段の下の暗がり",
+     "doing": "箒を動かす",
+     "ref": "L851"
+    },
+    {
+     "when": "二十七日の夜",
+     "where": "厩の二階",
+     "doing": "ドゥンと寝ている",
+     "ref": "L972"
+    },
+    {
+     "when": "二十八日の昼",
+     "where": "階段の日だまり",
+     "doing": "鱗を乾かす",
+     "ref": "L1149"
+    }
+   ]
+  },
+  {
+   "name": "エーリカ",
+   "aliases": [
+    "新しい組合長",
+    "組合長"
+   ],
+   "first_person": [],
+   "calls_others": [
+    {
+     "target": "俺",
+     "word": "マスター",
+     "ref": "L1093"
+    },
+    {
+     "target": "アガタ",
+     "word": "先生",
+     "ref": "L1167"
+    },
+    {
+     "target": "コル",
+     "word": "コル",
+     "ref": "L1225"
+    },
+    {
+     "target": "ヨーナス",
+     "word": "ヨーナス",
+     "ref": "L1225"
+    }
+   ],
+   "speech": [
+    {
+     "feature": "丁寧な口調",
+     "example": "ありがとう",
+     "ref": "L935"
+    },
+    {
+     "feature": "短く率直に答える",
+     "example": "少し",
+     "ref": "L1175"
+    }
+   ],
+   "looks": [
+    {
+     "feature": "右膝をかばい、立ち上がるのが一呼吸遅れる",
+     "ref": "L1000"
+    },
+    {
+     "feature": "外套の肩に焼き栗の殻が載っていた",
+     "ref": "L960"
+    }
+   ],
+   "traits": [
+    {
+     "feature": "帳面を一冊ずつ読む",
+     "ref": "L891"
+    },
+    {
+     "feature": "両手を組み、親指で人差し指の腹を何度もなぞる",
+     "ref": "L1046"
+    },
+    {
+     "feature": "規約を一条ずつ指でなぞって読む",
+     "ref": "L1123"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "二十五日の昼",
+     "where": "店のカウンター端",
+     "doing": "出納帳を読んでいる",
+     "ref": "L891"
+    },
+    {
+     "when": "二十七日の夜",
+     "where": "店のカウンター端",
+     "doing": "麦酒を前に置き、客の騒ぎを見ている",
+     "ref": "L960"
+    },
+    {
+     "when": "二十七日の夜半過ぎ",
+     "where": "店から中庭へ",
+     "doing": "裏口から出る",
+     "ref": "L1076"
+    },
+    {
+     "when": "二十八日の朝",
+     "where": "階段下とカウンター端",
+     "doing": "古い組合規約を読む",
+     "ref": "L1093"
+    },
+    {
+     "when": "二十八日の夕方",
+     "where": "カウンター端",
+     "doing": "書状を書いてコルに託す",
+     "ref": "L1217"
+    }
+   ]
+  },
+  {
+   "name": "隊長",
+   "aliases": [
+    "マグダ"
+   ],
+   "first_person": [],
+   "calls_others": [],
+   "speech": [
+    {
+     "feature": "トマスの物真似では低い声",
+     "example": "予算で飯を食ってる",
+     "ref": "L907"
+    }
+   ],
+   "looks": [],
+   "traits": [
+    {
+     "feature": "隊の者や街の人々に好かれているが、何を考えているか分からないと言われる",
+     "ref": "L899"
+    },
+    {
+     "feature": "組合に検分に来る参事会の人に付き添う",
+     "ref": "L875"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "二十八日夕方",
+     "where": "店",
+     "doing": "巡回の途中で水を飲み、エーリカに朔日の時刻を伝える",
+     "ref": "L1197"
+    }
+   ]
+  },
+  {
+   "name": "ヨーナス",
+   "aliases": [
+    "参事会の書記局の人",
+    "書記さん"
+   ],
+   "first_person": [],
+   "calls_others": [],
+   "speech": [],
+   "looks": [
+    {
+     "feature": "いつも帳面を胸に抱えて歩く。袖口にインクをつけている",
+     "ref": "L885"
+    }
+   ],
+   "traits": [],
+   "whereabouts": [
+    {
+     "when": "朔日、十の鐘",
+     "where": "組合",
+     "doing": "参事会の書記として検分に来る予定",
+     "ref": "L875"
+    }
+   ]
+  },
+  {
+   "name": "フーゴ",
+   "aliases": [
+    "若い剣士"
+   ],
+   "first_person": [
+    {
+     "word": "俺",
+     "ref": "L988"
+    }
+   ],
+   "calls_others": [
+    {
+     "target": "亜人たち",
+     "word": "あいつら",
+     "ref": "L976"
+    }
+   ],
+   "speech": [
+    {
+     "feature": "荒い口調で、語尾を「ええ／ねえ」とする",
+     "example": "灰色臭えんだよ",
+     "ref": "L970"
+    }
+   ],
+   "looks": [],
+   "traits": [
+    {
+     "feature": "登録して二年。腕は悪くないが、口のほうが先に出る",
+     "ref": "L966"
+    },
+    {
+     "feature": "酒に酔って大声で亜人を罵り、厩へ行こうとする",
+     "ref": "L968"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "二十七日の夜",
+     "where": "店の窓際の卓から裏口へ",
+     "doing": "亜人に直接言おうとして、ダリオにつまみ上げられる",
+     "ref": "L964"
+    }
+   ]
+  },
+  {
+   "name": "ダリオ",
+   "aliases": [
+    "大男"
+   ],
+   "first_person": [],
+   "calls_others": [
+    {
+     "target": "フーゴ",
+     "word": "お前",
+     "ref": "L1016"
+    },
+    {
+     "target": "エーリカ",
+     "word": "組合長",
+     "ref": "L1050"
+    }
+   ],
+   "speech": [
+    {
+     "feature": "荒い口調",
+     "example": "気にすんな",
+     "ref": "L1050"
+    }
+   ],
+   "looks": [
+    {
+     "feature": "大男",
+     "ref": "L1008"
+    }
+   ],
+   "traits": [
+    {
+     "feature": "二本の指でフーゴの襟首をつまみ、持ち上げる",
+     "ref": "L1008"
+    },
+    {
+     "feature": "エーリカを気遣う",
+     "ref": "L1050"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "二十七日の夜",
+     "where": "店の隅の卓から裏口付近へ",
+     "doing": "フーゴを止め、床に下ろす",
+     "ref": "L980"
+    },
+    {
+     "when": "二十八日",
+     "where": "店",
+     "doing": "アガタに肘の擦り傷を診てもらう",
+     "ref": "L1157"
+    }
+   ]
+  },
+  {
+   "name": "アガタ",
+   "aliases": [
+    "修道女のアガタ",
+    "先生"
+   ],
+   "first_person": [],
+   "calls_others": [
+    {
+     "target": "エーリカ",
+     "word": "あなた",
+     "ref": "L1163"
+    },
+    {
+     "target": "ザザ",
+     "word": "ザザさん",
+     "ref": "L1187"
+    }
+   ],
+   "speech": [
+    {
+     "feature": "穏やかな口調",
+     "example": "冷えますか",
+     "ref": "L1173"
+    }
+   ],
+   "looks": [
+    {
+     "feature": "六十を過ぎている。白い手袋をしている",
+     "ref": "L1155"
+    }
+   ],
+   "traits": [
+    {
+     "feature": "組合員の古傷や咳を診て、薬草を置いていく",
+     "ref": "L1155"
+    },
+    {
+     "feature": "エーリカに何を読んでいるか訊かない",
+     "ref": "L1181"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "二十八日の昼すぎ",
+     "where": "店",
+     "doing": "組合員を診て、エーリカに薬草を渡す",
+     "ref": "L1153"
+    }
+   ]
+  },
+  {
+   "name": "ドゥン",
+   "aliases": [],
+   "first_person": [],
+   "calls_others": [],
+   "speech": [],
+   "looks": [],
+   "traits": [],
+   "whereabouts": [
+    {
+     "when": "二十七日の夜",
+     "where": "厩の二階",
+     "doing": "ザザと寝ている",
+     "ref": "L972"
+    },
+    {
+     "when": "二十八日",
+     "where": "店",
+     "doing": "アガタに目薬を差してもらう",
+     "ref": "L1157"
+    }
+   ]
+  },
+  {
+   "name": "コル",
+   "aliases": [
+    "鴉人"
+   ],
+   "first_person": [],
+   "calls_others": [],
+   "speech": [],
+   "looks": [
+    {
+     "feature": "鴉人",
+     "ref": "L1227"
+    }
+   ],
+   "traits": [
+    {
+     "feature": "伝言を一字も盛らず、書状を開けない",
+     "ref": "L1227"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "二十七日の夜",
+     "where": "厩の梁の上",
+     "doing": "いる",
+     "ref": "L972"
+    },
+    {
+     "when": "二十八日の夕方",
+     "where": "中庭の厩の梁",
+     "doing": "参事会の書記局への書状を預かる",
+     "ref": "L1225"
+    }
+   ]
+  },
+  {
+   "name": "ヴェイ",
+   "aliases": [],
+   "first_person": [],
+   "calls_others": [],
+   "speech": [],
+   "looks": [],
+   "traits": [],
+   "whereabouts": [
+    {
+     "when": "二十七日の夜",
+     "where": "谷の家",
+     "doing": "夜番ではないため、そこにいるはず",
+     "ref": "L972"
+    }
+   ]
+  },
+  {
+   "name": "鋳掛け屋",
+   "aliases": [],
+   "first_person": [],
+   "calls_others": [],
+   "speech": [
+    {
+     "feature": "鍋や釜を直す呼び声",
+     "example": "鍋、釜、直しまぁす",
+     "ref": "L921"
+    }
+   ],
+   "looks": [],
+   "traits": [
+    {
+     "feature": "毎月、同じ日に同じ声で回ってくる",
+     "ref": "L923"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "二十五日の曇った昼",
+     "where": "広場のほう",
+     "doing": "鍋釜を直す呼び声を上げる",
+     "ref": "L919"
+    }
+   ]
+  }
+ ],
+ "places": [
+  {
+   "name": "店",
+   "layout": [
+    {
+     "feature": "表の扉があり、裏口の向こうに中庭、その向こうに厩がある",
+     "ref": "L972"
+    },
+    {
+     "feature": "卓は六つ、カウンターがあり、階段が一つある",
+     "ref": "L958"
+    },
+    {
+     "feature": "階段の下に扉のない物置がある",
+     "ref": "L1101"
+    },
+    {
+     "feature": "階段を上がった廊下の奥に語り手の部屋があり、隣にエーリカの部屋がある",
+     "ref": "L1066"
+    },
+    {
+     "feature": "裏口は重い閂で閉じる",
+     "ref": "L1078"
+    }
+   ],
+   "scenery": [
+    {
+     "feature": "カウンター端の赤い瓶に赤蕪の漬け汁と鶉の卵が入っている",
+     "ref": "L839"
+    },
+    {
+     "feature": "錆びた釘形の看板が鎖で軒に吊られている",
+     "ref": "L954"
+    },
+    {
+     "feature": "物置に箒三本と鉄補強のある古い帳簿箱が積まれている",
+     "ref": "L1103"
+    }
+   ],
+   "weather_season": [
+    {
+     "feature": "二十五日は朝から曇り、昼も曇っている",
+     "ref": "L807"
+    },
+    {
+     "feature": "二十七日の夜は風が強い",
+     "ref": "L952"
+    },
+    {
+     "feature": "二十八日は風がやみ、よく晴れる",
+     "ref": "L1087"
+    },
+    {
+     "feature": "二十八日の昼は冬の晴れた昼",
+     "ref": "L1149"
+    }
+   ]
+  },
+  {
+   "name": "中庭",
+   "layout": [
+    {
+     "feature": "裏口の向こうにあり、その向こうに厩がある",
+     "ref": "L972"
+    }
+   ],
+   "scenery": [
+    {
+     "feature": "夜に霜を踏む足音は店内まで届かない",
+     "ref": "L1082"
+    }
+   ],
+   "weather_season": [
+    {
+     "feature": "二十七日の夜、霜がある",
+     "ref": "L1082"
+    }
+   ]
+  },
+  {
+   "name": "厩",
+   "layout": [
+    {
+     "feature": "中庭の向こうにあり、二階と梁がある",
+     "ref": "L972"
+    }
+   ],
+   "scenery": [
+    {
+     "feature": "屋根のほうで大きな羽ばたきが一度聞こえる",
+     "ref": "L1082"
+    }
+   ],
+   "weather_season": []
+  },
+  {
+   "name": "広場",
+   "layout": [],
+   "scenery": [
+    {
+     "feature": "鋳掛け屋の呼び声が聞こえる",
+     "ref": "L919"
+    }
+   ],
+   "weather_season": [
+    {
+     "feature": "二十五日の曇った昼",
+     "ref": "L923"
+    }
+   ]
+  },
+  {
+   "name": "黒猫の尾",
+   "layout": [],
+   "scenery": [
+    {
+     "feature": "若い剣士たちが酒を飲み、亜人への不満を話した",
+     "ref": "L949"
+    }
+   ],
+   "weather_season": []
+  },
+  {
+   "name": "隊の詰所",
+   "layout": [],
+   "scenery": [],
+   "weather_season": []
+  },
+  {
+   "name": "参事会の書記局",
+   "layout": [],
+   "scenery": [],
+   "weather_season": []
+  },
+  {
+   "name": "谷の家",
+   "layout": [],
+   "scenery": [],
+   "weather_season": []
+  }
+ ],
+ "season_mismatch": [],
+ "inner_inconsistencies": []
+}

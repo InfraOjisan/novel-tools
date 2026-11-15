@@ -1,0 +1,385 @@
+{
+  "episode": "01",
+  "dates": [
+    {"when": "夜明け前、五つ半の鐘の後。開門まであと半刻", "ref": "L1788"},
+    {"when": "三年前、この店に来た夜", "ref": "L1774"}
+  ],
+  "characters": [
+    {
+      "name": "俺（酒場番）",
+      "aliases": ["酒場番"],
+      "first_person": [{"word": "俺", "ref": "L1524"}],
+      "calls_others": [
+        {"target": "隊長", "word": "隊長", "ref": "L1526"},
+        {"target": "ダリオ", "word": "ダリオさん", "ref": "L1550"},
+        {"target": "エルノ", "word": "エルノさん", "ref": "L1554"},
+        {"target": "イゾルデ", "word": "イゾルデさん", "ref": "L1562"},
+        {"target": "アガタ", "word": "アガタさん", "ref": "L1558"},
+        {"target": "ニコ", "word": "ニコ", "ref": "L1570"}
+      ],
+      "speech": [
+        {"feature": "丁寧な依頼・説明口調", "example": "少しお時間をください", "ref": "L1526"},
+        {"feature": "隊長には「ありませんね」と丁寧に答える", "example": "ありませんね", "ref": "L1686"}
+      ],
+      "looks": [],
+      "traits": [
+        {"feature": "黒板に白墨で証言と時刻を整理し、推理を説明する", "ref": "L1540"},
+        {"feature": "自分が組合を抜け、誓約に縛られないと述べる", "ref": "L1688"},
+        {"feature": "耳の欠けた灰色を止めず、真相も明かさない", "ref": "L1760"}
+      ],
+      "whereabouts": [
+        {"when": "四つの鐘の後", "where": "酒場の黒板の前", "doing": "石取りの盤に見立てて証言を説明する", "ref": "L1524"},
+        {"when": "六つから七つ半", "where": "酒場の外", "doing": "氷を買いに出ていた", "ref": "L1684"}
+      ]
+    },
+    {
+      "name": "隊長",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [
+        {"target": "バルタザール", "word": "バルタザール・グロック", "ref": "L1704"},
+        {"target": "アガタ", "word": "修道女", "ref": "L1726"},
+        {"target": "酒場番", "word": "酒場番", "ref": "L1676"}
+      ],
+      "speech": [
+        {"feature": "短く命令する口調", "example": "言ってみろ", "ref": "L1530"},
+        {"feature": "掟を告げる断定的な口調", "example": "掟は、罪を量らない", "ref": "L1726"}
+      ],
+      "looks": [],
+      "traits": [
+        {"feature": "バルタザールを目で制止する", "ref": "L1568"},
+        {"feature": "耳の欠けた灰色に問い、同じ答えが返ると知って追及をやめる", "ref": "L1758"}
+      ],
+      "whereabouts": [
+        {"when": "夜明け前", "where": "酒場", "doing": "聞き取りをし、罪人を連行させる", "ref": "L1702"}
+      ]
+    },
+    {
+      "name": "バルタザール",
+      "aliases": ["バルタザール・グロック", "組合長", "長"],
+      "first_person": [{"word": "俺", "ref": "L1708"}],
+      "calls_others": [
+        {"target": "ニコ", "word": "ニコ", "ref": "L1606"},
+        {"target": "酒場番", "word": "酒場番", "ref": "L1530"}
+      ],
+      "speech": [
+        {"feature": "酒場番に講釈を止める荒い口調", "example": "講釈はいい", "ref": "L1536"},
+        {"feature": "逮捕時に組合長の立場を主張する", "example": "俺は組合長だぞ", "ref": "L1708"}
+      ],
+      "looks": [
+        {"feature": "顔が赤くなる", "ref": "L1568"}
+      ],
+      "traits": [
+        {"feature": "盗みを仕組み、石を階段下の帳簿箱に隠したと推理される", "ref": "L1624"}
+      ],
+      "whereabouts": [
+        {"when": "夜明け前", "where": "酒場の階段三段目", "doing": "隊員に両腕を掴まれて引きずり下ろされる", "ref": "L1706"}
+      ]
+    },
+    {
+      "name": "イゾルデ",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [
+        {"feature": "帳面を持ち、そこに顔を伏せている", "ref": "L1564"}
+      ],
+      "traits": [
+        {"feature": "命のないところで組合長の動きを言い直す", "ref": "L1562"},
+        {"feature": "連行時、帳面を置いても手を離さず、隊員に指を一本ずつはがされる", "ref": "L1712"}
+      ],
+      "whereabouts": [
+        {"when": "夜明け前", "where": "酒場の卓", "doing": "帳面を置き、隊員に連行される", "ref": "L1712"}
+      ]
+    },
+    {
+      "name": "ニコ",
+      "aliases": ["盗賊ニコ"],
+      "first_person": [{"word": "俺", "ref": "L1604"}],
+      "calls_others": [
+        {"target": "バルタザール", "word": "組合長", "ref": "L1574"}
+      ],
+      "speech": [
+        {"feature": "荒い口調・「ねえ」などの語尾", "example": "うるせえ", "ref": "L1608"},
+        {"feature": "金貨二十枚を受け取ったと白状する", "example": "金貨で二十枚", "ref": "L1604"}
+      ],
+      "looks": [
+        {"feature": "素手の指を組んだり開いたりする", "ref": "L1576"}
+      ],
+      "traits": [
+        {"feature": "酒代を金貨で払い、菫の匂いをつけていた", "ref": "L1574"},
+        {"feature": "自分から両手を差し出す", "ref": "L1712"}
+      ],
+      "whereabouts": [
+        {"when": "六つから八つ", "where": "黒猫の尾", "doing": "札をやっていたと主張するが、その話は嘘とされる", "ref": "L1574"},
+        {"when": "夜明け前", "where": "窓際の卓", "doing": "盗みを白状する", "ref": "L1604"}
+      ]
+    },
+    {
+      "name": "エルノ",
+      "aliases": ["白塔の賢者", "賢者エルノ"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [
+        {"feature": "焦げた袖口がある", "ref": "L1532"}
+      ],
+      "traits": [
+        {"feature": "袖口を握り、何も言わない", "ref": "L1556"},
+        {"feature": "連行時、焦げた袖口を一度見て黙って腕を取らせる", "ref": "L1712"}
+      ],
+      "whereabouts": [
+        {"when": "夜明け前", "where": "酒場", "doing": "偽りの証言で隊員に連行される", "ref": "L1704"}
+      ]
+    },
+    {
+      "name": "アガタ",
+      "aliases": ["修道女"],
+      "first_person": [],
+      "calls_others": [
+        {"target": "隊長", "word": "隊長", "ref": "L1724"}
+      ],
+      "speech": [
+        {"feature": "丁寧に異議を唱える", "example": "待ってください", "ref": "L1724"}
+      ],
+      "looks": [
+        {"feature": "手袋をしている", "ref": "L1532"}
+      ],
+      "traits": [
+        {"feature": "手袋の指を組む", "ref": "L1532"},
+        {"feature": "館にいた灰色は囮だと隊長に訴える", "ref": "L1724"}
+      ],
+      "whereabouts": [
+        {"when": "夜明け前", "where": "酒場", "doing": "灰色をかばって立ち上がる", "ref": "L1724"}
+      ]
+    },
+    {
+      "name": "ダリオ",
+      "aliases": ["剣士ダリオ"],
+      "first_person": [{"word": "俺", "ref": "L1552"}],
+      "calls_others": [],
+      "speech": [
+        {"feature": "素面だと否定した後、飲んでいると認める", "example": "俺は素面だ", "ref": "L1552"},
+        {"feature": "小さく言い訳する", "example": "夕焼けが", "ref": "L1612"}
+      ],
+      "looks": [],
+      "traits": [
+        {"feature": "舟を漕いでいたが、話を聞く場でやめる", "ref": "L1532"},
+        {"feature": "頭をかいて飲酒を認める", "ref": "L1552"}
+      ],
+      "whereabouts": [
+        {"when": "夕方五つから夜明け前", "where": "酒場", "doing": "飲酒していた", "ref": "L1550"}
+      ]
+    },
+    {
+      "name": "ルル",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [
+        {"feature": "兎人族。亜麻色の長い髪、人間の耳はなく、白い耳と白い丸い尾がある", "ref": "L1774"},
+        {"feature": "黒い胴着、網の靴下、白いカフスを着る", "ref": "L1778"}
+      ],
+      "traits": [
+        {"feature": "嘘をつけず、月影の戒めを信じる谷の者", "ref": "L1778"},
+        {"feature": "白い耳を伏せ、耳の欠けた灰色を見つめる", "ref": "L1770"}
+      ],
+      "whereabouts": [
+        {"when": "夜明け前", "where": "酒場のカウンターの端", "doing": "頬杖をついたまま耳の欠けた灰色を見る", "ref": "L1782"}
+      ]
+    },
+    {
+      "name": "ザザ",
+      "aliases": ["蜥蜴人"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [
+        {"feature": "蜥蜴人。人を足で覚え、温かいものも見える", "ref": "L1694"}
+      ],
+      "traits": [
+        {"feature": "箒を抱えている", "ref": "L1532"},
+        {"feature": "訊かれていないため何も言わない", "ref": "L1694"}
+      ],
+      "whereabouts": [
+        {"when": "夜明け前", "where": "階段の下の壁ぎわ", "doing": "酒場番の足もとを見る", "ref": "L1694"}
+      ]
+    },
+    {
+      "name": "トマス",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [],
+      "traits": [
+        {"feature": "隊長の合図で板に書く", "ref": "L1614"}
+      ],
+      "whereabouts": [
+        {"when": "夜明け前", "where": "酒場", "doing": "板に書く", "ref": "L1614"}
+      ]
+    },
+    {
+      "name": "首に白い毛の灰色",
+      "aliases": ["館にいた灰色"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [
+        {"feature": "首に白い毛がある", "ref": "L1532"},
+        {"feature": "木彫りの狼を抱いている", "ref": "L1532"}
+      ],
+      "traits": [
+        {"feature": "嘘をつけない", "ref": "L1550"},
+        {"feature": "耳の欠けた灰色に肩を押さえられ、言いかけたことを口にしない", "ref": "L1730"}
+      ],
+      "whereabouts": [
+        {"when": "六つ", "where": "館の裏庭", "doing": "樽を運び、屋根の影を見上げる", "ref": "L1592"},
+        {"when": "七つ", "where": "中庭の井戸", "doing": "擦りむいた腕を洗う", "ref": "L1636"}
+      ]
+    },
+    {
+      "name": "耳の欠けた灰色",
+      "aliases": ["灰色"],
+      "first_person": [{"word": "僕", "ref": "L1656"}],
+      "calls_others": [],
+      "speech": [
+        {"feature": "短く答え、館にいたかという問いには同じ返答を繰り返す", "example": "出ていくのは、僕だ", "ref": "L1752"}
+      ],
+      "looks": [
+        {"feature": "片耳が欠けている", "ref": "L1532"}
+      ],
+      "traits": [
+        {"feature": "嘘をつけないため、言えないことには黙る", "ref": "L1668"},
+        {"feature": "自分が門の外へ出ると申し出る", "ref": "L1734"}
+      ],
+      "whereabouts": [
+        {"when": "夜明け前", "where": "酒場の裏口の床", "doing": "座っていた後、立ち上がって隊長の前に立つ", "ref": "L1654"}
+      ]
+    },
+    {
+      "name": "夫人",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [],
+      "traits": [],
+      "whereabouts": [
+        {"when": "六つ", "where": "大聖堂", "doing": "夕べの祈りに出ていた", "ref": "L1592"}
+      ]
+    }
+  ],
+  "places": [
+    {
+      "name": "錆び釘亭（酒場）",
+      "layout": [
+        {"feature": "黒板があり、カウンターの端にルル、階段下の壁ぎわにザザがいる", "ref": "L1532"},
+        {"feature": "階段の三段目にバルタザール、二階にバルタザールの部屋がある", "ref": "L1532"},
+        {"feature": "裏口の床に灰色の二人が座っていた", "ref": "L1532"},
+        {"feature": "表の扉は壊れている", "ref": "L1784"},
+        {"feature": "床板が薄く、二階で椅子を引く音が下に響く", "ref": "L1682"}
+      ],
+      "scenery": [
+        {"feature": "ランプの光がある", "ref": "L1770"},
+        {"feature": "酒場の人々が黒板の前の酒場番を見る", "ref": "L1532"}
+      ],
+      "weather_season": []
+    },
+    {
+      "name": "酒場の階段下・箒の部屋",
+      "layout": [
+        {"feature": "階段下に古い帳簿箱がいくつも積まれている", "ref": "L1680"},
+        {"feature": "箒を二本どけると箱の蓋が鳴る", "ref": "L1680"}
+      ],
+      "scenery": [],
+      "weather_season": []
+    },
+    {
+      "name": "組合の建物",
+      "layout": [
+        {"feature": "酒場番が「この建物」と呼び、路地の奥に裏口がある", "ref": "L1598"}
+      ],
+      "scenery": [],
+      "weather_season": []
+    },
+    {
+      "name": "組合の裏路地",
+      "layout": [
+        {"feature": "路地の奥に組合の建物の裏口がある", "ref": "L1598"}
+      ],
+      "scenery": [
+        {"feature": "小柄で足音のしない男から菫の香りがした", "ref": "L1598"}
+      ],
+      "weather_season": []
+    },
+    {
+      "name": "館",
+      "layout": [
+        {"feature": "塀があり、裏庭、屋根、化粧部屋の天窓がある", "ref": "L1592"},
+        {"feature": "化粧部屋の天窓は普段閉まっているが、この夜は開いていた", "ref": "L1592"}
+      ],
+      "scenery": [
+        {"feature": "裏庭で樽が運ばれていた", "ref": "L1592"},
+        {"feature": "屋根の上を猫より大きい影が滑り、天窓のあたりで消えた", "ref": "L1592"}
+      ],
+      "weather_season": []
+    },
+    {
+      "name": "黒猫の尾",
+      "layout": [],
+      "scenery": [],
+      "weather_season": []
+    },
+    {
+      "name": "上町",
+      "layout": [],
+      "scenery": [
+        {"feature": "首に白い毛の灰色が上町から走ってきたという証言がある", "ref": "L1550"}
+      ],
+      "weather_season": []
+    },
+    {
+      "name": "下町の小さな礼拝所",
+      "layout": [],
+      "scenery": [],
+      "weather_season": []
+    },
+    {
+      "name": "大聖堂",
+      "layout": [],
+      "scenery": [],
+      "weather_season": []
+    },
+    {
+      "name": "館の中庭",
+      "layout": [
+        {"feature": "井戸がある", "ref": "L1636"}
+      ],
+      "scenery": [],
+      "weather_season": []
+    },
+    {
+      "name": "北門",
+      "layout": [
+        {"feature": "灰壁の掟により、灰色一匹を開門とともにここから出す", "ref": "L1722"}
+      ],
+      "scenery": [],
+      "weather_season": []
+    },
+    {
+      "name": "外の広場",
+      "layout": [],
+      "scenery": [
+        {"feature": "松明がいらないくらいに白み始めていた", "ref": "L1784"}
+      ],
+      "weather_season": [
+        {"feature": "東の空が城壁の上で薄くなっていた", "ref": "L1786"}
+      ]
+    }
+  ],
+  "season_mismatch": [],
+  "inner_inconsistencies": []
+}

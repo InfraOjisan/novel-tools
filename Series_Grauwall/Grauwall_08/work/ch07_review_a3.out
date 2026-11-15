@@ -1,0 +1,1 @@
+{"pass":true,"slots_found":{"G1":"reinforced"},"violations":[{"severity":"low","type":"insert","detail":"薬箱の中身として「折れた針も一本、予備で入っている」とあります。章カード・正典にない小道具の追加です。","fix":"追加を避ける場合は、薬箱の中身の列挙から折れた針を削る。"}]}

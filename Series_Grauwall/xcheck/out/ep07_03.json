@@ -1,0 +1,1049 @@
+{
+ "episode": "07",
+ "dates": [
+  {
+   "when": "卯月五日、市の日",
+   "ref": "L744"
+  },
+  {
+   "when": "卯月五日、朝十の鐘ごろ",
+   "ref": "L746"
+  },
+  {
+   "when": "卯月五日、昼の鐘のあと",
+   "ref": "L867"
+  },
+  {
+   "when": "卯月五日、午後二つ",
+   "ref": "L886"
+  },
+  {
+   "when": "卯月六日、曇り",
+   "ref": "L1023"
+  },
+  {
+   "when": "卯月六日、夕方五つの鐘のあと",
+   "ref": "L1025"
+  },
+  {
+   "when": "卯月六日の夜、夜十の鐘",
+   "ref": "L1106"
+  }
+ ],
+ "characters": [
+  {
+   "name": "マグダ",
+   "aliases": [
+    "隊長"
+   ],
+   "first_person": [
+    {
+     "word": "私",
+     "ref": "L810"
+    }
+   ],
+   "calls_others": [
+    {
+     "target": "カスパル",
+     "word": "旦那様",
+     "ref": "L788"
+    },
+    {
+     "target": "アガタ",
+     "word": "先生",
+     "ref": "L860"
+    }
+   ],
+   "speech": [
+    {
+     "feature": "簡潔な命令口調",
+     "example": "「やめろ」",
+     "ref": "L774"
+    },
+    {
+     "feature": "予算を理由に断る",
+     "example": "「隊は予算で飯を食ってる」",
+     "ref": "L821"
+    }
+   ],
+   "looks": [
+    {
+     "feature": "人間の男の拳が肩当てに当たる",
+     "ref": "L776"
+    },
+    {
+     "feature": "子どものころ背が高かった",
+     "ref": "L945"
+    }
+   ],
+   "traits": [
+    {
+     "feature": "人だかりの数や通り道の幅を数える",
+     "ref": "L746"
+    },
+    {
+     "feature": "隊長が走ると人だかりが増すと考え、走らない",
+     "ref": "L764"
+    },
+    {
+     "feature": "隊員や自分の銭で人員を手配する",
+     "ref": "L854"
+    },
+    {
+     "feature": "殴った男と殴られた土竜人の名を訊かない",
+     "ref": "L879"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "卯月五日、朝十の鐘ごろ",
+     "where": "詰所の戸口・中央広場を見渡す位置",
+     "doing": "屋台と人の通り道を数える",
+     "ref": "L746"
+    },
+    {
+     "when": "卯月五日、市の日",
+     "where": "穀物商の倉の前",
+     "doing": "殴り合う二人の間に入り、喧嘩を裁く",
+     "ref": "L776"
+    },
+    {
+     "when": "卯月五日、昼の鐘のあと",
+     "where": "詰所の戸口",
+     "doing": "懐の財布を開いて銅貨を数える",
+     "ref": "L867"
+    }
+   ]
+  },
+  {
+   "name": "カスパル",
+   "aliases": [
+    "倉の番頭"
+   ],
+   "first_person": [],
+   "calls_others": [
+    {
+     "target": "マグダ",
+     "word": "隊長",
+     "ref": "L820"
+    }
+   ],
+   "speech": [
+    {
+     "feature": "丁寧で改まった言い方",
+     "example": "「左様で」",
+     "ref": "L789"
+    },
+    {
+     "feature": "旦那様の決定として説明する",
+     "example": "「旦那様のお決めになったことで」",
+     "ref": "L786"
+    }
+   ],
+   "looks": [
+    {
+     "feature": "帳面を胸に抱えている",
+     "ref": "L772"
+    }
+   ],
+   "traits": [
+    {
+     "feature": "帳面の角を指でそろえる",
+     "ref": "L823"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "卯月五日、市の日",
+     "where": "穀物商の倉の戸の前",
+     "doing": "帳面を抱えて喧嘩を止めずにいる",
+     "ref": "L772"
+    }
+   ]
+  },
+  {
+   "name": "トマス",
+   "aliases": [],
+   "first_person": [],
+   "calls_others": [
+    {
+     "target": "マグダ",
+     "word": "隊長",
+     "ref": "L843"
+    }
+   ],
+   "speech": [
+    {
+     "feature": "息を切らして報告する",
+     "example": "「隊長、喧嘩だって」",
+     "ref": "L843"
+    }
+   ],
+   "looks": [
+    {
+     "feature": "綱の束を肩にかけている",
+     "ref": "L841"
+    }
+   ],
+   "traits": [],
+   "whereabouts": [
+    {
+     "when": "卯月五日、市の日",
+     "where": "広場から倉の前へ",
+     "doing": "二人を広場の掃除番へ連れていく",
+     "ref": "L841"
+    }
+   ]
+  },
+  {
+   "name": "アガタ",
+   "aliases": [
+    "白い手袋の修道女",
+    "先生",
+    "修道女"
+   ],
+   "first_person": [],
+   "calls_others": [
+    {
+     "target": "アーデルハイト",
+     "word": "奥様",
+     "ref": "L1003"
+    }
+   ],
+   "speech": [
+    {
+     "feature": "丁寧な言葉遣い",
+     "example": "「ありがとうございます」",
+     "ref": "L854"
+    },
+    {
+     "feature": "歌の続きを問われ「歌には」と限定して答える",
+     "example": "「歌には、ありません」",
+     "ref": "L977"
+    }
+   ],
+   "looks": [
+    {
+     "feature": "白い手袋をしている",
+     "ref": "L850"
+    },
+    {
+     "feature": "灯火教会の法衣に灯の刺繍があり、芯は丸い炎で皿の下に短い脚が一本",
+     "ref": "L1057"
+    }
+   ],
+   "traits": [
+    {
+     "feature": "子どもたちに歌を教え、誤りを直さない",
+     "ref": "L909"
+    },
+    {
+     "feature": "子どもたちの歌をどちらも直さない",
+     "ref": "L931"
+    },
+    {
+     "feature": "嘘をつかないと地の文で述べられる",
+     "ref": "L863"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "卯月五日、市の日",
+     "where": "大聖堂の脇",
+     "doing": "籠を下げ、施しの段取りをマグダに伝える",
+     "ref": "L848"
+    },
+    {
+     "when": "卯月五日",
+     "where": "大聖堂裏手の灯火教会の手習い所",
+     "doing": "子どもたちに歌を教え、石板を拭く",
+     "ref": "L909"
+    }
+   ]
+  },
+  {
+   "name": "リナ",
+   "aliases": [],
+   "first_person": [],
+   "calls_others": [],
+   "speech": [],
+   "looks": [],
+   "traits": [],
+   "whereabouts": [
+    {
+     "when": "祝福の日",
+     "where": "大聖堂の階段の左手",
+     "doing": "子らの列につく予定",
+     "ref": "L855"
+    }
+   ]
+  },
+  {
+   "name": "アーデルハイト",
+   "aliases": [
+    "ロズモンドの奥様",
+    "奥様"
+   ],
+   "first_person": [
+    {
+     "word": "わたし",
+     "ref": "L991"
+    }
+   ],
+   "calls_others": [
+    {
+     "target": "アガタ",
+     "word": "先生",
+     "ref": "L973"
+    }
+   ],
+   "speech": [
+    {
+     "feature": "柔らかい女性的な語尾",
+     "example": "「読めなかったわ」",
+     "ref": "L991"
+    }
+   ],
+   "looks": [
+    {
+     "feature": "手袋をしている",
+     "ref": "L933"
+    }
+   ],
+   "traits": [
+    {
+     "feature": "笑うと声が少し高くなるのを聞かれたくない",
+     "ref": "L933"
+    },
+    {
+     "feature": "席順が乱れないことの値打ちを知っている",
+     "ref": "L959"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "卯月五日、午後二つ",
+     "where": "大聖堂",
+     "doing": "聖具係に捧げ物の台の寸法を書いた紙を渡す",
+     "ref": "L886"
+    },
+    {
+     "when": "卯月五日",
+     "where": "大聖堂裏手の手習い所",
+     "doing": "扉の陰で子どもたちの歌を聞く",
+     "ref": "L907"
+    },
+    {
+     "when": "卯月五日",
+     "where": "手習い所",
+     "doing": "アガタに歌の続きと石の字について尋ねる",
+     "ref": "L963"
+    }
+   ]
+  },
+  {
+   "name": "ヘルマン",
+   "aliases": [],
+   "first_person": [],
+   "calls_others": [
+    {
+     "target": "アーデルハイト",
+     "word": "奥様",
+     "ref": "L1015"
+    }
+   ],
+   "speech": [
+    {
+     "feature": "丁寧な問いかけ",
+     "example": "「先生は、お元気でしたか」",
+     "ref": "L1015"
+    }
+   ],
+   "looks": [],
+   "traits": [],
+   "whereabouts": [
+    {
+     "when": "卯月五日",
+     "where": "広場の向こう",
+     "doing": "馬車の扉を開けて待つ",
+     "ref": "L1013"
+    }
+   ]
+  },
+  {
+   "name": "ダリオ",
+   "aliases": [],
+   "first_person": [],
+   "calls_others": [
+    {
+     "target": "白い法衣の男",
+     "word": "白いの",
+     "ref": "L1086"
+    }
+   ],
+   "speech": [
+    {
+     "feature": "ぶっきらぼうな言い方",
+     "example": "「また白い法衣か」",
+     "ref": "L1033"
+    }
+   ],
+   "looks": [],
+   "traits": [],
+   "whereabouts": [
+    {
+     "when": "卯月六日、夕方以降",
+     "where": "店のカウンター",
+     "doing": "麦酒を飲む",
+     "ref": "L1031"
+    }
+   ]
+  },
+  {
+   "name": "パウル",
+   "aliases": [
+    "白い法衣の若い男"
+   ],
+   "first_person": [
+    {
+     "word": "私",
+     "ref": "L1045"
+    }
+   ],
+   "calls_others": [],
+   "speech": [
+    {
+     "feature": "丁寧な言い方",
+     "example": "「登録をお願いしたいのです」",
+     "ref": "L1051"
+    }
+   ],
+   "looks": [
+    {
+     "feature": "色白で細身、二十八歳くらい",
+     "ref": "L1027"
+    },
+    {
+     "feature": "新しい白い法衣、裾に旅の泥が乾いて白くこびりつく",
+     "ref": "L1027"
+    },
+    {
+     "feature": "革の書物袋と細長い筆箱を持つ",
+     "ref": "L1027"
+    },
+    {
+     "feature": "胸の刺繍は芯が細い塔形で、上に環、皿の下は三段",
+     "ref": "L1059"
+    },
+    {
+     "feature": "指にインクと煤が染みている",
+     "ref": "L1081"
+    }
+   ],
+   "traits": [
+    {
+     "feature": "振り向くのが半拍遅い",
+     "ref": "L1043"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "卯月六日、夕方五つの鐘のあと",
+     "where": "店",
+     "doing": "組合への登録を頼み、麦酒を一杯飲む",
+     "ref": "L1025"
+    },
+    {
+     "when": "その夜",
+     "where": "大聖堂の近く",
+     "doing": "宿を取ってあると言って帰る",
+     "ref": "L1083"
+    }
+   ]
+  },
+  {
+   "name": "リナ",
+   "aliases": [],
+   "first_person": [],
+   "calls_others": [],
+   "speech": [],
+   "looks": [],
+   "traits": [
+    {
+     "feature": "銅貨を数える手を止める",
+     "ref": "L1041"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "卯月六日、夕方",
+     "where": "店",
+     "doing": "銅貨を数えている",
+     "ref": "L1041"
+    }
+   ]
+  },
+  {
+   "name": "ハク",
+   "aliases": [],
+   "first_person": [],
+   "calls_others": [],
+   "speech": [],
+   "looks": [],
+   "traits": [
+    {
+     "feature": "椀を両手で受け、小さく頭を下げる",
+     "ref": "L1112"
+    },
+    {
+     "feature": "チィが音を外すと止まり、同じところを歌い直す",
+     "ref": "L1118"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "卯月六日の夜",
+     "where": "店の裏口の石段",
+     "doing": "スープを食べながら祭りの歌を口ずさむ",
+     "ref": "L1114"
+    }
+   ]
+  },
+  {
+   "name": "チィ",
+   "aliases": [],
+   "first_person": [],
+   "calls_others": [],
+   "speech": [],
+   "looks": [],
+   "traits": [
+    {
+     "feature": "椀を受けるとすぐ口をつけ、歌の音を外しても歌い直す",
+     "ref": "L1112"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "卯月六日の夜",
+     "where": "店の裏口の石段",
+     "doing": "スープを食べながら祭りの歌を口ずさむ",
+     "ref": "L1114"
+    }
+   ]
+  },
+  {
+   "name": "ケス",
+   "aliases": [],
+   "first_person": [],
+   "calls_others": [],
+   "speech": [
+    {
+     "feature": "古い歌のような言葉を独り言のように言う",
+     "example": "「山の上に、石の巣がある」",
+     "ref": "L1132"
+    }
+   ],
+   "looks": [],
+   "traits": [
+    {
+     "feature": "話したあと目を閉じる",
+     "ref": "L1134"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "卯月六日の夜",
+     "where": "店の梁の下",
+     "doing": "目を開けて言葉を口にし、また目を閉じる",
+     "ref": "L1126"
+    }
+   ]
+  },
+  {
+   "name": "ドゥン",
+   "aliases": [
+    "土竜人"
+   ],
+   "first_person": [],
+   "calls_others": [],
+   "speech": [
+    {
+     "feature": "断定的に話す",
+     "example": "「入れたんだ」",
+     "ref": "L1138"
+    }
+   ],
+   "looks": [
+    {
+     "feature": "土竜人。暗がりでも手元が見えるらしい",
+     "ref": "L1136"
+    }
+   ],
+   "traits": [
+    {
+     "feature": "灯を使わず井戸の釣瓶を修理する",
+     "ref": "L1136"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "卯月六日の夜",
+     "where": "店の中庭の井戸",
+     "doing": "釣瓶の滑車に油を差し、縄を掛け直す",
+     "ref": "L1136"
+    }
+   ]
+  },
+  {
+   "name": "ヴィルマ",
+   "aliases": [],
+   "first_person": [],
+   "calls_others": [
+    {
+     "target": "パウル",
+     "word": "賢者さん",
+     "ref": "L1093"
+    }
+   ],
+   "speech": [
+    {
+     "feature": "くだけた口調",
+     "example": "「北へ行くのかね」",
+     "ref": "L1093"
+    }
+   ],
+   "looks": [
+    {
+     "feature": "膝の上に布の包みを置いている",
+     "ref": "L1128"
+    }
+   ],
+   "traits": [
+    {
+     "feature": "店の隅の長椅子で寝ている",
+     "ref": "L1089"
+    },
+    {
+     "feature": "麦酒を勧められると懐に手を入れかけてやめる",
+     "ref": "L1098"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "三日前から、昼と夕方",
+     "where": "店の隅の長椅子",
+     "doing": "昼は口入れ屋を回り、夕方に店へ戻って閉店まで座る",
+     "ref": "L1089"
+    },
+    {
+     "when": "卯月六日の夜",
+     "where": "店の隅",
+     "doing": "杯を置き、膝の上の布包みに手を置く",
+     "ref": "L1128"
+    }
+   ]
+  },
+  {
+   "name": "エルノ",
+   "aliases": [
+    "神官を名乗った賢者"
+   ],
+   "first_person": [],
+   "calls_others": [],
+   "speech": [],
+   "looks": [
+    {
+     "feature": "胸の法衣の刺繍がパウルのものと同じ形",
+     "ref": "L1063"
+    }
+   ],
+   "traits": [],
+   "whereabouts": []
+  },
+  {
+   "name": "土竜人の若者",
+   "aliases": [
+    "谷の衆",
+    "谷の者"
+   ],
+   "first_person": [
+    {
+     "word": "俺",
+     "ref": "L829"
+    }
+   ],
+   "calls_others": [],
+   "speech": [
+    {
+     "feature": "自分も悪いと認めて謝る",
+     "example": "「俺も悪い」",
+     "ref": "L829"
+    }
+   ],
+   "looks": [
+    {
+     "feature": "背が低く腕が長い",
+     "ref": "L768"
+    },
+    {
+     "feature": "爪先の泥が乾いて白い",
+     "ref": "L768"
+    },
+    {
+     "feature": "昼の光の下ではほとんど目が利かない",
+     "ref": "L825"
+    }
+   ],
+   "traits": [
+    {
+     "feature": "殴り返したことを認め、深く頭を下げる",
+     "ref": "L829"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "卯月五日、市の日",
+     "where": "穀物商の倉の前",
+     "doing": "人間の男と殴り合い、のち広場へ連れていかれる",
+     "ref": "L766"
+    }
+   ]
+  },
+  {
+   "name": "人間の若い男",
+   "aliases": [
+    "荷運びの男"
+   ],
+   "first_person": [
+    {
+     "word": "俺",
+     "ref": "L782"
+    }
+   ],
+   "calls_others": [
+    {
+     "target": "土竜人の若者",
+     "word": "こいつら",
+     "ref": "L782"
+    }
+   ],
+   "speech": [
+    {
+     "feature": "くだけた口調",
+     "example": "「半値だからって」",
+     "ref": "L782"
+    }
+   ],
+   "looks": [
+    {
+     "feature": "腕が太く、肩に麻の荷運びの当て布をしている",
+     "ref": "L768"
+    }
+   ],
+   "traits": [
+    {
+     "feature": "相手がマグダと分かると拳をほどく",
+     "ref": "L776"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "卯月五日、市の日",
+     "where": "穀物商の倉の前",
+     "doing": "土竜人の若者と殴り合い、のち広場へ連れていかれる",
+     "ref": "L766"
+    }
+   ]
+  },
+  {
+   "name": "ブラント参事",
+   "aliases": [
+    "倉の主"
+   ],
+   "first_person": [],
+   "calls_others": [],
+   "speech": [],
+   "looks": [],
+   "traits": [],
+   "whereabouts": [
+    {
+     "when": "卯月五日",
+     "where": "坂の下の勘定方の倉の主",
+     "doing": "本文では登場せず、倉の主として言及される",
+     "ref": "L762"
+    }
+   ]
+  },
+  {
+   "name": "先代の酒場番",
+   "aliases": [],
+   "first_person": [],
+   "calls_others": [],
+   "speech": [
+    {
+     "feature": "釘は砦の門から抜いてきたと話した",
+     "example": "「砦の門から抜いてきた釘」",
+     "ref": "L1156"
+    }
+   ],
+   "looks": [],
+   "traits": [],
+   "whereabouts": []
+  },
+  {
+   "name": "組合長",
+   "aliases": [],
+   "first_person": [],
+   "calls_others": [],
+   "speech": [],
+   "looks": [],
+   "traits": [
+    {
+     "feature": "封を切らない",
+     "ref": "L860"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "卯月六日",
+     "where": "普請方",
+     "doing": "出ている",
+     "ref": "L1067"
+    }
+   ]
+  },
+  {
+   "name": "聖具係",
+   "aliases": [],
+   "first_person": [],
+   "calls_others": [
+    {
+     "target": "アーデルハイト",
+     "word": "奥様",
+     "ref": "L892"
+    }
+   ],
+   "speech": [
+    {
+     "feature": "簡潔に答える",
+     "example": "「十分に載ります」",
+     "ref": "L890"
+    }
+   ],
+   "looks": [],
+   "traits": [],
+   "whereabouts": [
+    {
+     "when": "卯月五日、午後二つ",
+     "where": "大聖堂",
+     "doing": "捧げ物の台の寸法を書いた紙を読む",
+     "ref": "L890"
+    }
+   ]
+  }
+ ],
+ "places": [
+  {
+   "name": "中央広場",
+   "layout": [
+    {
+     "feature": "朝十の鐘ごろ屋台が四十と少し並ぶ",
+     "ref": "L746"
+    },
+    {
+     "feature": "屋台と屋台のあいだに人がすれ違える幅が残る",
+     "ref": "L746"
+    }
+   ],
+   "scenery": [
+    {
+     "feature": "青物の山に芹、若い葱の葉、泥のついた蕪",
+     "ref": "L748"
+    },
+    {
+     "feature": "屋台の下に鳩が集まり、パン屑を待つ",
+     "ref": "L756"
+    }
+   ],
+   "weather_season": [
+    {
+     "feature": "春の色の生の青物が並ぶ",
+     "ref": "L748"
+    }
+   ]
+  },
+  {
+   "name": "詰所",
+   "layout": [
+    {
+     "feature": "戸口から中央広場と倉の前を見渡す",
+     "ref": "L746"
+    }
+   ],
+   "scenery": [],
+   "weather_season": []
+  },
+  {
+   "name": "上町の坂の下・穀物商の倉",
+   "layout": [
+    {
+     "feature": "詰所の戸口から見て右手に人だかりがある",
+     "ref": "L762"
+    },
+    {
+     "feature": "坂の下でいちばん大きい勘定方の倉",
+     "ref": "L762"
+    },
+    {
+     "feature": "倉の戸の前に番頭がいる",
+     "ref": "L772"
+    }
+   ],
+   "scenery": [
+    {
+     "feature": "人の輪の中で二人が殴り合う",
+     "ref": "L766"
+    }
+   ],
+   "weather_season": []
+  },
+  {
+   "name": "大聖堂",
+   "layout": [
+    {
+     "feature": "脇に外へ出る扉がある",
+     "ref": "L895"
+    },
+    {
+     "feature": "捧げ物の台は祭壇の前に置かれる",
+     "ref": "L888"
+    },
+    {
+     "feature": "施しは階段の右手、子らの列は左手",
+     "ref": "L852"
+    }
+   ],
+   "scenery": [
+    {
+     "feature": "祭壇前の台は樫の板で幅四尺と少し",
+     "ref": "L888"
+    }
+   ],
+   "weather_season": []
+  },
+  {
+   "name": "灯火教会の手習い所",
+   "layout": [
+    {
+     "feature": "大聖堂の裏手にある低い石造りの建物",
+     "ref": "L901"
+    },
+    {
+     "feature": "窓が三つあり、床板の窓から三枚目に穴がある",
+     "ref": "L903"
+    },
+    {
+     "feature": "室内に長机があり、以前は机が三つ並んでいた",
+     "ref": "L909"
+    }
+   ],
+   "scenery": [
+    {
+     "feature": "窓の下に豆の芽の鉢が並ぶ",
+     "ref": "L903"
+    },
+    {
+     "feature": "机の上に石板がある",
+     "ref": "L965"
+    }
+   ],
+   "weather_season": [
+    {
+     "feature": "窓の外で風に豆の鉢が傾く",
+     "ref": "L1001"
+    }
+   ]
+  },
+  {
+   "name": "店",
+   "layout": [
+    {
+     "feature": "梁、カウンター、樽、奥の卓、裏口がある",
+     "ref": "L1029"
+    },
+    {
+     "feature": "梁の下にケス、店の隅に長椅子がある",
+     "ref": "L1089"
+    },
+    {
+     "feature": "カウンター奥の柱は酒樽の陰になる",
+     "ref": "L1150"
+    }
+   ],
+   "scenery": [
+    {
+     "feature": "油の灯の匂いが曇りの夜には天井の下に溜まる",
+     "ref": "L1108"
+    },
+    {
+     "feature": "柱に錆びた大釘が三本、交差して打ち込まれている",
+     "ref": "L1150"
+    }
+   ],
+   "weather_season": [
+    {
+     "feature": "曇りの夜の湿った空気",
+     "ref": "L1108"
+    }
+   ]
+  },
+  {
+   "name": "店の裏口・中庭",
+   "layout": [
+    {
+     "feature": "裏口の外に石段があり、中庭に井戸がある",
+     "ref": "L1110"
+    },
+    {
+     "feature": "井戸の釣瓶に滑車と縄がある",
+     "ref": "L1136"
+    }
+   ],
+   "scenery": [
+    {
+     "feature": "鍋のスープは豆と大麦",
+     "ref": "L1112"
+    }
+   ],
+   "weather_season": []
+  },
+  {
+   "name": "大聖堂近くの宿",
+   "layout": [],
+   "scenery": [],
+   "weather_season": [
+    {
+     "feature": "パウルが宿を取ってあると言う",
+     "ref": "L1083"
+    }
+   ]
+  }
+ ],
+ "season_mismatch": [],
+ "inner_inconsistencies": [
+  {
+   "text": "リナはこの日の場面では祝福の日に子らの列につく予定だが、同名のリナは店で銅貨を数えている。別人物か同一人物かは本文で明示されない。",
+   "refs": [
+    "L855",
+    "L1041"
+   ]
+  },
+  {
+   "text": "土竜人の若者は広場へ連れていかれ、掃除をすることになっているが、後に名を訊かなかったと述べられる。呼び名は「谷の衆」ともされる。",
+   "refs": [
+    "L810",
+    "L879"
+   ]
+  }
+ ]
+}

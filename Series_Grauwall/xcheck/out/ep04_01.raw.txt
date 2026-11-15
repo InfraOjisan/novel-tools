@@ -1,0 +1,320 @@
+{
+  "episode": "04",
+  "dates": [
+    {"when": "灰壁暦三〇九年、師走の二十日", "ref": "L6"},
+    {"when": "師走二十日の雪の夜、十の鐘から半刻ほど後", "ref": "L6"},
+    {"when": "朝六つの鐘", "ref": "L139"},
+    {"when": "睦月の十日", "ref": "L253"},
+    {"when": "灰壁暦三〇九年、師走二十日（触れ書きの日付）", "ref": "L272"},
+    {"when": "翌朝六つ", "ref": "L270"}
+  ],
+  "characters": [
+    {
+      "name": "俺／マスター",
+      "aliases": ["マスター", "酒場番"],
+      "first_person": [{"word": "俺", "ref": "L8"}],
+      "calls_others": [
+        {"target": "ザザ", "word": "ザザ", "ref": "L157"},
+        {"target": "ヴェイ", "word": "ヴェイ", "ref": "L332"}
+      ],
+      "speech": [
+        {"feature": "丁寧な言い方をする", "example": "ありがとうございます", "ref": "L233"},
+        {"feature": "客に閉店を告げる", "example": "閉店です", "ref": "L62"}
+      ],
+      "looks": [],
+      "traits": [
+        {"feature": "酒場の仕事を一人で担い、片付けや帳場もする", "ref": "L12"},
+        {"feature": "部屋に入ると人数と出口を数える癖がある", "ref": "L48"},
+        {"feature": "娘にスープを出し、毛布を掛けて薪を足す", "ref": "L78"},
+        {"feature": "ザザの言うことが外れたのを見たことがないと述べる", "ref": "L149"}
+      ],
+      "whereabouts": [
+        {"when": "雪の夜、閉店後", "where": "錆び釘亭", "doing": "椅子を卓に上げ、店を片付ける", "ref": "L8"},
+        {"when": "翌朝", "where": "錆び釘亭のカウンター", "doing": "ルルに茶を出して話す", "ref": "L181"},
+        {"when": "昼前", "where": "中央広場", "doing": "触れ書きを読む", "ref": "L261"},
+        {"when": "夜", "where": "錆び釘亭", "doing": "ヴェイとドゥンに二階の客について尋ねる", "ref": "L326"},
+        {"when": "閉店後", "where": "階段下の物置", "doing": "古い長持ちを引きずり出す", "ref": "L344"}
+      ]
+    },
+    {
+      "name": "ルル",
+      "aliases": ["娘", "兎人"],
+      "first_person": [{"word": "あたし", "ref": "L197"}],
+      "calls_others": [
+        {"target": "酒場番", "word": "マスター", "ref": "L197"}
+      ],
+      "speech": [
+        {"feature": "「あら」を使い、柔らかい口調で話す", "example": "あら、おいしい", "ref": "L96"},
+        {"feature": "語尾に「わ」を使う", "example": "美味しかったわよ", "ref": "L187"},
+        {"feature": "質問を問いで返す", "example": "どこから来たように見える？", "ref": "L211"}
+      ],
+      "looks": [
+        {"feature": "泥で固まった髪で、元の色は不明", "ref": "L40"},
+        {"feature": "白く長い兎の耳が二本ある", "ref": "L42"},
+        {"feature": "灰色の古い肩掛けを巻き、裾が濡れて重そう", "ref": "L38"},
+        {"feature": "布を足に巻いて紐で縛った靴。爪先が擦り切れ、指が二本のぞく", "ref": "L38"},
+        {"feature": "荷物を持っていない", "ref": "L38"}
+      ],
+      "traits": [
+        {"feature": "空腹で疲れ切り、腹を押さえる元気もない様子", "ref": "L58"},
+        {"feature": "スープを四杯目まで飲み、カウンターで眠る", "ref": "L110"},
+        {"feature": "耳が音や鍋のある方へ動く", "ref": "L106"},
+        {"feature": "訊かれたことに問いで返し、からかっているのではないと地の文に記される", "ref": "L213"}
+      ],
+      "whereabouts": [
+        {"when": "雪の夜", "where": "錆び釘亭", "doing": "暖炉へ歩き、豆のスープを食べて眠る", "ref": "L54"},
+        {"when": "翌朝", "where": "錆び釘亭のカウンター", "doing": "茶を飲み、酒場番と話す", "ref": "L181"},
+        {"when": "昼前", "where": "二階の空き部屋", "doing": "毛布ごと運ばれて眠り直す", "ref": "L225"},
+        {"when": "午後", "where": "錆び釘亭", "doing": "谷へ行く案について話す", "ref": "L306"}
+      ]
+    },
+    {
+      "name": "ザザ",
+      "aliases": ["掃除番", "年寄りの蜥蜴人"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [
+        {"feature": "簡潔に答える", "example": "違う。跳ねる足だ", "ref": "L161"}
+      ],
+      "looks": [
+        {"feature": "年寄りの蜥蜴人", "ref": "L141"},
+        {"feature": "乾いた鱗の手で箒を抱えている", "ref": "L141"}
+      ],
+      "traits": [
+        {"feature": "寒い朝は動きが遅く、雪の朝はさらに遅い", "ref": "L141"},
+        {"feature": "人を顔ではなく足で覚える", "ref": "L149"},
+        {"feature": "嘘をつけないと地の文に記される", "ref": "L151"}
+      ],
+      "whereabouts": [
+        {"when": "雪の朝、朝六つの鐘のころ", "where": "錆び釘亭の階段下", "doing": "暗がりから出てきて箒を抱える", "ref": "L139"},
+        {"when": "翌朝", "where": "錆び釘亭の床", "doing": "娘の足元を避けるように掃く", "ref": "L179"}
+      ]
+    },
+    {
+      "name": "トマス",
+      "aliases": ["少年"],
+      "first_person": [],
+      "calls_others": [
+        {"target": "酒場番", "word": "マスター", "ref": "L231"}
+      ],
+      "speech": [
+        {"feature": "語尾に「っす」を使う", "example": "今日も二十四っす", "ref": "L231"}
+      ],
+      "looks": [
+        {"feature": "十五歳で、頬にまだ産毛がある", "ref": "L229"},
+        {"feature": "鶉の卵の籠を抱えている", "ref": "L227"}
+      ],
+      "traits": [
+        {"feature": "届けた日に卵を一つもらうのを楽しみにしている", "ref": "L235"},
+        {"feature": "卵を大事そうに噛み、指を舐める", "ref": "L249"}
+      ],
+      "whereabouts": [
+        {"when": "昼前", "where": "錆び釘亭の裏口", "doing": "鶉の卵を届け、広場の触れを伝える", "ref": "L227"}
+      ]
+    },
+    {
+      "name": "ゲルハルト・ブラント",
+      "aliases": ["参事会勘定方"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [],
+      "traits": [],
+      "whereabouts": [
+        {"when": "灰壁暦三〇九年、師走二十日", "where": "触れ書き（所在の記載なし）", "doing": "参事会勘定方として触れ書きに名を記す", "ref": "L272"}
+      ]
+    },
+    {
+      "name": "バルタザール",
+      "aliases": ["組合長"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [
+        {"feature": "雑役は足りていると言うだろう、と地の文で予想される", "example": "雑役は足りとる", "ref": "L314"}
+      ],
+      "looks": [],
+      "traits": [],
+      "whereabouts": []
+    },
+    {
+      "name": "ヴェイ",
+      "aliases": [],
+      "first_person": [{"word": "僕", "ref": "L334"}],
+      "calls_others": [],
+      "speech": [
+        {"feature": "分かることを限定して述べる", "example": "僕は、それしか分からない", "ref": "L334"}
+      ],
+      "looks": [
+        {"feature": "灰狼族の若い男で、首の下に白い毛の房がある", "ref": "L328"}
+      ],
+      "traits": [
+        {"feature": "鼻を少し上げて二階を見て、何も言わない", "ref": "L330"}
+      ],
+      "whereabouts": [
+        {"when": "夜", "where": "錆び釘亭", "doing": "夜番に来て、二階の客の匂いについて答える", "ref": "L326"},
+        {"when": "夜番の夜", "where": "厩の二階", "doing": "そこで寝る", "ref": "L328"}
+      ]
+    },
+    {
+      "name": "ドゥン",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [
+        {"feature": "短く特徴を述べる", "example": "軽い。跳ぶ", "ref": "L340"}
+      ],
+      "looks": [
+        {"feature": "土竜人で、目が弱い", "ref": "L336"}
+      ],
+      "traits": [
+        {"feature": "床の震えで人を知る", "ref": "L336"},
+        {"feature": "床に掌を当ててしばらく黙る", "ref": "L338"}
+      ],
+      "whereabouts": [
+        {"when": "夜", "where": "錆び釘亭", "doing": "井戸の手入れを終えて上がり、床の震えからルルの動きを知る", "ref": "L336"}
+      ]
+    },
+    {
+      "name": "栗売りの婆さん",
+      "aliases": ["栗売りの婆さん"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [],
+      "traits": [
+        {"feature": "触れ書きには目もくれず、炭を団扇であおぐ", "ref": "L263"}
+      ],
+      "whereabouts": [
+        {"when": "昼前", "where": "中央広場の掲示板前", "doing": "焼き栗の屋台で炭をあおぐ", "ref": "L263"}
+      ]
+    }
+  ],
+  "places": [
+    {
+      "name": "錆び釘亭／グラウヴァルの冒険者組合",
+      "layout": [
+        {"feature": "建物の一階が酒場の錆び釘亭", "ref": "L10"},
+        {"feature": "表の扉、裏口、二階への階段がある", "ref": "L50"},
+        {"feature": "暖炉に鍋があり、カウンターがある", "ref": "L16"},
+        {"feature": "カウンターの前に丸椅子がある", "ref": "L110"},
+        {"feature": "二階の廊下の奥に小部屋が二つあり、一つは酒場番の寝床、もう一つは物置代わり", "ref": "L225"},
+        {"feature": "階段下に物置がある", "ref": "L344"}
+      ],
+      "scenery": [
+        {"feature": "暖炉の火、豆のスープの鍋、カウンターの灯", "ref": "L14"},
+        {"feature": "床に椅子を上げて片付ける", "ref": "L8"},
+        {"feature": "カウンターの端に赤蕪の汁で漬けた卵の瓶がある", "ref": "L229"}
+      ],
+      "weather_season": [
+        {"feature": "雪の夜で、外では雪が降り続いている", "ref": "L126"},
+        {"feature": "雪の朝で寒い", "ref": "L141"}
+      ]
+    },
+    {
+      "name": "表の通り",
+      "layout": [
+        {"feature": "錆び釘亭の表の扉の外に通りがある", "ref": "L30"},
+        {"feature": "向かいにパン屋がある", "ref": "L28"}
+      ],
+      "scenery": [
+        {"feature": "雪が通りの音を消し、パン屋の煙突の煙がまっすぐ立つ", "ref": "L28"},
+        {"feature": "足跡が雪に半分ほど埋まる見込み", "ref": "L126"}
+      ],
+      "weather_season": [
+        {"feature": "雪の夜。風はなく、雪が積もる夜", "ref": "L28"}
+      ]
+    },
+    {
+      "name": "パン屋",
+      "layout": [
+        {"feature": "酒場の向かいにあり、煙突がある", "ref": "L28"}
+      ],
+      "scenery": [
+        {"feature": "昼間は戸を叩く音が聞こえ、煙突から煙が上がる", "ref": "L28"}
+      ],
+      "weather_season": [
+        {"feature": "雪の夜、煙が止む", "ref": "L126"}
+      ]
+    },
+    {
+      "name": "広場の肉屋",
+      "layout": [],
+      "scenery": [
+        {"feature": "朝から戸を閉めている", "ref": "L22"}
+      ],
+      "weather_season": [
+        {"feature": "朝から雪", "ref": "L22"}
+      ]
+    },
+    {
+      "name": "錆び釘亭の二階",
+      "layout": [
+        {"feature": "廊下の奥に空き部屋があり、もう一つの小部屋は酒場番の寝床", "ref": "L225"}
+      ],
+      "scenery": [
+        {"feature": "ルルが毛布ごと運ばれ、部屋で眠り直す", "ref": "L225"}
+      ],
+      "weather_season": []
+    },
+    {
+      "name": "中央広場",
+      "layout": [
+        {"feature": "掲示板の前に人だかりができる", "ref": "L263"},
+        {"feature": "掲示板前の石畳の端に焼き栗の屋台がある", "ref": "L263"}
+      ],
+      "scenery": [
+        {"feature": "厚い紙の触れ書きが掲示板に貼られ、赤い封蝋が七つ並ぶ", "ref": "L265"},
+        {"feature": "焼き栗の甘い煙が人だかりの上を流れる", "ref": "L263"}
+      ],
+      "weather_season": [
+        {"feature": "雪かきをした石畳がある", "ref": "L263"}
+      ]
+    },
+    {
+      "name": "下の谷",
+      "layout": [
+        {"feature": "城壁の内側の窪地で、亜人たちが住む", "ref": "L304"},
+        {"feature": "長老会があり、谷の者の名簿を持つ", "ref": "L304"}
+      ],
+      "scenery": [],
+      "weather_season": []
+    },
+    {
+      "name": "北門",
+      "layout": [
+        {"feature": "翌朝六つに、名簿にない亜人を城外へ出す門として記される", "ref": "L270"}
+      ],
+      "scenery": [
+        {"feature": "追放の門とされ、出ていった亜人が戻った話を聞いたことがない", "ref": "L296"}
+      ],
+      "weather_season": []
+    },
+    {
+      "name": "厩",
+      "layout": [
+        {"feature": "二階に藁があり、ヴェイが夜番の夜に寝る", "ref": "L328"},
+        {"feature": "兎人の雑役は厩の二階の藁で寝ると述べられる", "ref": "L314"}
+      ],
+      "scenery": [],
+      "weather_season": []
+    },
+    {
+      "name": "下町の外れ",
+      "layout": [
+        {"feature": "トマスの母親が鶉小屋を営む", "ref": "L229"}
+      ],
+      "scenery": [],
+      "weather_season": []
+    },
+    {
+      "name": "城壁の中",
+      "layout": [
+        {"feature": "グラウヴァルの城壁内。酒場番はここで兎人を見たのは初めてだと述べる", "ref": "L136"}
+      ],
+      "scenery": [],
+      "weather_season": []
+    }
+  ],
+  "season_mismatch": [],
+  "inner_inconsistencies": []
+}

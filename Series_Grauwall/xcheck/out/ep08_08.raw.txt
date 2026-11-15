@@ -1,0 +1,290 @@
+{
+  "episode": "08",
+  "dates": [
+    {"when": "皐月十三日", "ref": "L3290"},
+    {"when": "皐月十四日", "ref": "L3447"},
+    {"when": "如月から毎晩、壁の鉄籠で火を焚いていた", "ref": "L3432"},
+    {"when": "夜、皐月十三日", "ref": "L3428"}
+  ],
+  "characters": [
+    {
+      "name": "ヴィルマ",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [
+        {"feature": "短く応じる", "example": "ああ", "ref": "L3422"},
+        {"feature": "父の道具で幼い頃から槌を打っていたと話す", "example": "子どものころから打ってる", "ref": "L3416"}
+      ],
+      "looks": [
+        {"feature": "ヤラより肩が低い", "ref": "L3436"},
+        {"feature": "槌で掌が赤くなり、握りの跡が残る", "ref": "L3328"}
+      ],
+      "traits": [
+        {"feature": "父の楔を使い、水門の梁を打ち込む", "ref": "L3312"},
+        {"feature": "油紙の名簿の写しを荷物に丁寧にしまう", "ref": "L3566"}
+      ],
+      "whereabouts": [
+        {"when": "皐月十三日朝", "where": "坑の上の段、水門の間", "doing": "梁を溝に入れ、楔を打つ", "ref": "L3292"},
+        {"when": "皐月十三日夕方", "where": "岩の肩", "doing": "岩に座って干し肉を食べる", "ref": "L3400"},
+        {"when": "皐月十三日夜", "where": "壁の上", "doing": "星空を眺め、ヤラと並んで立つ", "ref": "L3428"},
+        {"when": "皐月十四日", "where": "礼拝の間", "doing": "羊の償いを村長に伝える役を引き受ける", "ref": "L3557"}
+      ]
+    },
+    {
+      "name": "オド",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [
+        {"feature": "低く、ゆっくりした声", "example": "声は低く、ゆっくりしていた", "ref": "L3518"},
+        {"feature": "口語的な言い回し", "example": "右が、浮いとる", "ref": "L3318"}
+      ],
+      "looks": [
+        {"feature": "杖をついている", "ref": "L3298"},
+        {"feature": "礼拝の間で杖を膝に立て、目を閉じていた", "ref": "L3514"}
+      ],
+      "traits": [
+        {"feature": "足の裏で岩や氷の震えを聞く", "ref": "L3308"},
+        {"feature": "ブリギッテに、急がなくても道はあると言う", "ref": "L3583"}
+      ],
+      "whereabouts": [
+        {"when": "皐月十三日朝", "where": "水門の間", "doing": "足で岩の震えを聞き、梁の据わりを確かめる", "ref": "L3308"},
+        {"when": "皐月十三日夕方", "where": "岩", "doing": "座って足で水の音を聞く", "ref": "L3404"},
+        {"when": "皐月十四日", "where": "礼拝の間", "doing": "議を進め、投票結果を告げる", "ref": "L3514"}
+      ]
+    },
+    {
+      "name": "ダリオ",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [
+        {"feature": "短く、くだけた口調", "example": "一回でいい", "ref": "L3364"},
+        {"feature": "ヴィルマの槌の手を褒める", "example": "槌の手は、いいな", "ref": "L3412"}
+      ],
+      "looks": [
+        {"feature": "左腕を吊っている", "ref": "L3302"},
+        {"feature": "右頬に雪潜の爪痕がある", "ref": "L3302"},
+        {"feature": "髭の左側が焦げている", "ref": "L3475"},
+        {"feature": "革のブーツを履く", "ref": "L3475"}
+      ],
+      "traits": [
+        {"feature": "水門作業を見守る", "ref": "L3302"},
+        {"feature": "痛みを率直に答える", "ref": "L3483"}
+      ],
+      "whereabouts": [
+        {"when": "皐月十三日朝", "where": "水門の間", "doing": "左腕を吊り、作業を見ている", "ref": "L3302"},
+        {"when": "皐月十三日夕方", "where": "岩の肩", "doing": "右手だけで干し肉を食べる", "ref": "L3400"},
+        {"when": "皐月十四日朝", "where": "倉の二階から石段を下りた場所", "doing": "ブリギッテに腕を診てもらう", "ref": "L3474"}
+      ]
+    },
+    {
+      "name": "リナ",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [
+        {"feature": "丁寧な言い方をする", "example": "凍らせます", "ref": "L3348"},
+        {"feature": "成功を繰り返し報告し、声が少し上ずる", "example": "出ました、出ました", "ref": "L3352"},
+        {"feature": "返事は丁寧", "example": "あ、はい", "ref": "L3368"}
+      ],
+      "looks": [
+        {"feature": "杖を握っている", "ref": "L3304"}
+      ],
+      "traits": [
+        {"feature": "緊張すると杖の握りを強く握る癖がある", "ref": "L3350"},
+        {"feature": "水の継ぎ目を凍らせて塞ぐ", "ref": "L3350"}
+      ],
+      "whereabouts": [
+        {"when": "皐月十三日朝", "where": "水門の間", "doing": "杖で継ぎ目の水を凍らせる", "ref": "L3348"},
+        {"when": "皐月十三日夕方", "where": "岩の肩", "doing": "杖を膝に置き、黒パンをちぎる", "ref": "L3400"},
+        {"when": "皐月十四日", "where": "水門のところ", "doing": "水の音を聞いている", "ref": "L3500"}
+      ]
+    },
+    {
+      "name": "ケス",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [
+        {"feature": "翼を畳んで岩の上に止まっている", "ref": "L3304"}
+      ],
+      "traits": [
+        {"feature": "中継ぎの態勢でいる", "ref": "L3304"}
+      ],
+      "whereabouts": [
+        {"when": "皐月十三日朝", "where": "坑の口の岩の上", "doing": "翼を畳んで止まっている", "ref": "L3304"}
+      ]
+    },
+    {
+      "name": "ブリギッテ",
+      "aliases": [],
+      "first_person": [
+        {"word": "わたし", "ref": "L3544"}
+      ],
+      "calls_others": [],
+      "speech": [
+        {"feature": "丁寧な口調", "example": "また明日、見に来ます", "ref": "L3468"},
+        {"feature": "嘘はつけないと言う", "example": "嘘はつけません", "ref": "L3546"}
+      ],
+      "looks": [
+        {"feature": "薬箱を持ち、手袋をしている", "ref": "L3304"}
+      ],
+      "traits": [
+        {"feature": "病人の傷を毎日洗い、灯の術を当てる", "ref": "L3450"},
+        {"feature": "薬箱の留め金をきちんと閉める", "ref": "L3466"},
+        {"feature": "訊かれたら答え、嘘はつかないと決めている", "ref": "L3544"}
+      ],
+      "whereabouts": [
+        {"when": "皐月十三日朝", "where": "水門の間", "doing": "薬箱を置いて手袋をしている", "ref": "L3304"},
+        {"when": "皐月十四日朝", "where": "病人の間", "doing": "若い蜥蜴人の足首を診る", "ref": "L3450"},
+        {"when": "皐月十四日", "where": "礼拝の間", "doing": "投票に立ち会い、質問には答えると述べる", "ref": "L3510"}
+      ]
+    },
+    {
+      "name": "ヤラ",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [
+        {"target": "ヴィルマ", "word": "あんた", "ref": "L3549"}
+      ],
+      "speech": [
+        {"feature": "ヴィルマに北の言い回しで話す", "example": "雪が解けたら", "ref": "L3440"},
+        {"feature": "口語的な言い方", "example": "あんたが嘘をつかなくていいように", "ref": "L3549"}
+      ],
+      "looks": [
+        {"feature": "ヴィルマより肩が高い", "ref": "L3436"},
+        {"feature": "灰の毛並み", "ref": "L3548"}
+      ],
+      "traits": [
+        {"feature": "ヴィルマに名簿の写しを渡す", "ref": "L3560"}
+      ],
+      "whereabouts": [
+        {"when": "皐月十三日夜", "where": "壁の上", "doing": "ヴィルマの隣に立つ", "ref": "L3436"},
+        {"when": "皐月十四日", "where": "礼拝の間", "doing": "ブリギッテに書く者が書けばよいと言う", "ref": "L3548"},
+        {"when": "皐月十四日", "where": "礼拝の間", "doing": "ヴィルマに名簿の写しを渡す", "ref": "L3560"}
+      ]
+    },
+    {
+      "name": "エーリカ",
+      "aliases": ["組合長のエーリカさん"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [],
+      "traits": [],
+      "whereabouts": []
+    },
+    {
+      "name": "アガタ",
+      "aliases": ["アガタ先生"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [],
+      "traits": [],
+      "whereabouts": []
+    }
+  ],
+  "places": [
+    {
+      "name": "坑の上の段・水門の間",
+      "layout": [
+        {"feature": "峠道から脇へそれた、岩の擦り減った登り道の先にある", "ref": "L3292"},
+        {"feature": "岩の肩で沢が二つに分かれ、一方は谷へ、もう一方は坑へ続く水路に入る", "ref": "L3294"},
+        {"feature": "岩に石の溝が掘られ、樫の梁を据える", "ref": "L3310"},
+        {"feature": "水路の石を外して水の流れを坑へ切り替える", "ref": "L3338"}
+      ],
+      "scenery": [
+        {"feature": "樫の梁が六本並び、鉄の楔が脇にある", "ref": "L3296"},
+        {"feature": "水門の六本の梁は濡れて黒く光る", "ref": "L3390"},
+        {"feature": "坑の口から湿った土や水の匂いが立ち上る", "ref": "L3340"}
+      ],
+      "weather_season": [
+        {"feature": "皐月十三日、朝から晴れ。夜の冷えが残り、息が白く、昨夜の霜が残る", "ref": "L3290"},
+        {"feature": "日が高くなると岩の影が短くなる", "ref": "L3328"},
+        {"feature": "夕方は日が西に傾き、風が少し冷たくなる", "ref": "L3398"}
+      ]
+    },
+    {
+      "name": "坑",
+      "layout": [
+        {"feature": "水路の水が坑へ注ぎ、坑の口から奥へ落ちていく", "ref": "L3340"},
+        {"feature": "水の落ちる音は坑の深い底から返ってくる", "ref": "L3384"}
+      ],
+      "scenery": [
+        {"feature": "穴の中は暗く、水の落ちる重い音が響く", "ref": "L3384"},
+        {"feature": "坑の水が満ち、乾いた岩が水を吸い込む音がする", "ref": "L3402"}
+      ],
+      "weather_season": []
+    },
+    {
+      "name": "壁の上",
+      "layout": [
+        {"feature": "石の階段を登って行く", "ref": "L3428"},
+        {"feature": "鉄籠がある", "ref": "L3430"}
+      ],
+      "scenery": [
+        {"feature": "鉄籠に火はなく、黒い炭があり、煙はない", "ref": "L3430"},
+        {"feature": "山道は真っ黒で、村の灯りは尾根の陰に隠れて見えない", "ref": "L3434"}
+      ],
+      "weather_season": [
+        {"feature": "星が出て北の空が澄み、風は冷たいが雪の匂いはしない", "ref": "L3434"},
+        {"feature": "夜の露で石段と手すりが濡れている", "ref": "L3428"}
+      ]
+    },
+    {
+      "name": "病人の間",
+      "layout": [
+        {"feature": "石の床と石の壁がある", "ref": "L3448"}
+      ],
+      "scenery": [
+        {"feature": "朝の光が床に長く差し、細かな埃が浮く", "ref": "L3448"},
+        {"feature": "薬箱には干した薬草、油、布切れが入っている", "ref": "L3466"}
+      ],
+      "weather_season": [
+        {"feature": "石の壁は夜の冷たさをまだ放っている", "ref": "L3448"}
+      ]
+    },
+    {
+      "name": "倉",
+      "layout": [
+        {"feature": "二階にダリオの寝床があり、石の階段で下りる", "ref": "L3474"}
+      ],
+      "scenery": [
+        {"feature": "石段を革のブーツが踏む音がする", "ref": "L3475"}
+      ],
+      "weather_season": []
+    },
+    {
+      "name": "礼拝の間",
+      "layout": [
+        {"feature": "高い窓があり、入口近くに壺を置いた石の台がある", "ref": "L3510"},
+        {"feature": "石の席があり、八人が座り四つの席が空いている", "ref": "L3513"},
+        {"feature": "ブリギッテたちは入り口近くに立つよう言われる", "ref": "L3515"}
+      ],
+      "scenery": [
+        {"feature": "白と黒の木札を壺に入れて投票する", "ref": "L3522"},
+        {"feature": "白が八、黒はなかった", "ref": "L3530"},
+        {"feature": "昼の光の筋の中で埃が回りながら落ちる", "ref": "L3511"}
+      ],
+      "weather_season": [
+        {"feature": "皐月十四日、晴れ。朝の光が差す", "ref": "L3447"}
+      ]
+    },
+    {
+      "name": "石の廊下",
+      "layout": [
+        {"feature": "礼拝の間から出ると石の廊下に続く", "ref": "L3577"}
+      ],
+      "scenery": [
+        {"feature": "ブリギッテの足音がカツカツと響く", "ref": "L3577"}
+      ],
+      "weather_season": []
+    }
+  ],
+  "season_mismatch": [],
+  "inner_inconsistencies": []
+}

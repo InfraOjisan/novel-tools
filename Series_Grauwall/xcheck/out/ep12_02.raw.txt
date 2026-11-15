@@ -1,0 +1,601 @@
+{
+  "episode": "12",
+  "dates": [
+    {"when": "十一年前、水無月十二日の朝四つ", "ref": "L419"},
+    {"when": "卯月二十八日", "ref": "L427"},
+    {"when": "神無月三日の夜", "ref": "L548"},
+    {"when": "神無月四日の夜明け前", "ref": "L698"}
+  ],
+  "characters": [
+    {
+      "name": "アガタ",
+      "aliases": ["灯火教会のアガタ"],
+      "first_person": [{"word": "わたくし", "ref": "L497"}],
+      "calls_others": [],
+      "speech": [
+        {"feature": "丁寧な口調で証言する", "example": "見たことだけを申します", "ref": "L497"},
+        {"feature": "名乗りに「と申します」を使う", "example": "アガタと申します", "ref": "L501"}
+      ],
+      "looks": [
+        {"feature": "白い手袋を着けている", "ref": "L423"},
+        {"feature": "白い衣を着ている", "ref": "L425"}
+      ],
+      "traits": [
+        {"feature": "手袋の中で指を動かす", "ref": "L439"},
+        {"feature": "斥候の証言を疑い、帳面を持って証言する", "ref": "L495"}
+      ],
+      "whereabouts": [
+        {"when": "十一年前、水無月十二日の朝四つ", "where": "市参事会館一階の裁きの間、戸口近くの椅子", "doing": "裁きに呼ばれて座っている", "ref": "L419"},
+        {"when": "裁きの最中", "where": "裁きの間の灯の台の前", "doing": "施療の帳面を開いて証言する", "ref": "L495"}
+      ]
+    },
+    {
+      "name": "アルブレヒト",
+      "aliases": ["裁き役"],
+      "first_person": [],
+      "calls_others": [
+        {"target": "マグダ", "word": "隊長", "ref": "L713"}
+      ],
+      "speech": [
+        {"feature": "声が小さく、言葉が少ない", "example": "声が小さく", "ref": "L431"},
+        {"feature": "簡潔に問いかける", "example": "見たか", "ref": "L465"}
+      ],
+      "looks": [
+        {"feature": "五十代の終わりの男", "ref": "L431"}
+      ],
+      "traits": [
+        {"feature": "証言者に現場にいたかを確認する", "ref": "L445"},
+        {"feature": "人の申告だけでは亜人の種を定めないとする", "ref": "L517"}
+      ],
+      "whereabouts": [
+        {"when": "十一年前の裁き", "where": "市参事会館一階の裁きの間", "doing": "裁き役として証言を聞く", "ref": "L431"},
+        {"when": "神無月四日、昼すぎ", "where": "裁きの間", "doing": "令状を出し、使いを詰所へ送る", "ref": "L803"}
+      ]
+    },
+    {
+      "name": "エーリカ",
+      "aliases": ["参事会の書記", "組合長"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [
+        {"feature": "三十代の女", "ref": "L433"}
+      ],
+      "traits": [
+        {"feature": "席に着く者の手と足元を一人ずつ見る", "ref": "L433"},
+        {"feature": "書記として証言を記録する", "ref": "L505"}
+      ],
+      "whereabouts": [
+        {"when": "十一年前の裁き", "where": "裁きの間の書記の席", "doing": "証言を記録する", "ref": "L433"},
+        {"when": "神無月三日の昼すぎから夜", "where": "店にはいない", "doing": "裁き役のところへ行っているとリナが話す", "ref": "L626"}
+      ]
+    },
+    {
+      "name": "ザザ",
+      "aliases": ["組合の掃除番の蜥蜴人", "掃除番"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [
+        {"feature": "短く、問いに必要なことだけ答える", "example": "昼すぎまで、厩で荷を運んでいた", "ref": "L511"}
+      ],
+      "looks": [
+        {"feature": "年寄りの蜥蜴人", "ref": "L435"},
+        {"feature": "箒は持っていない", "ref": "L435"}
+      ],
+      "traits": [
+        {"feature": "若者が尻尾を踏んでいると指摘する", "ref": "L437"},
+        {"feature": "訊かれたこと以上は答えない", "ref": "L513"}
+      ],
+      "whereabouts": [
+        {"when": "十一年前の裁き", "where": "裁きの間、戸口近くの椅子", "doing": "若者の足元を見て発言する", "ref": "L435"}
+      ]
+    },
+    {
+      "name": "ヴェイ",
+      "aliases": ["灰狼の若者", "灰狼の若い方", "灰色"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [
+        {"feature": "灰狼の若者", "ref": "L435"},
+        {"feature": "右の前腕に擦り傷があり、白い布を巻かれていた", "ref": "L505"}
+      ],
+      "traits": [
+        {"feature": "緊張して尻尾を自分の足の下に敷いていた", "ref": "L435"}
+      ],
+      "whereabouts": [
+        {"when": "卯月二十八日の昼すぎまで", "where": "組合の厩", "doing": "荷を運んで働く", "ref": "L481"},
+        {"when": "十一年前の裁き", "where": "裁きの間の長椅子", "doing": "座らされている", "ref": "L435"}
+      ]
+    },
+    {
+      "name": "隊商の頭",
+      "aliases": ["隊商の頭"],
+      "first_person": [{"word": "わし", "ref": "L443"}],
+      "calls_others": [],
+      "speech": [
+        {"feature": "話し始めると止まらない", "example": "この目で背中の毛を", "ref": "L441"},
+        {"feature": "証言を言い直す", "example": "全部いました", "ref": "L455"}
+      ],
+      "looks": [
+        {"feature": "肉の厚い男", "ref": "L441"}
+      ],
+      "traits": [
+        {"feature": "荷車の下に隠れていたことを認める", "ref": "L451"}
+      ],
+      "whereabouts": [
+        {"when": "裁きの時", "where": "裁きの間", "doing": "北街道での襲撃を申し立てる", "ref": "L441"}
+      ]
+    },
+    {
+      "name": "組合の斥候",
+      "aliases": ["斥候"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [
+        {"feature": "低く、よく通る声", "example": "右の腕に、白い布", "ref": "L469"}
+      ],
+      "looks": [
+        {"feature": "痩せた男", "ref": "L461"},
+        {"feature": "組合の札を首から紐で下げている", "ref": "L461"}
+      ],
+      "traits": [
+        {"feature": "部屋の人数と窓と戸を数える", "ref": "L461"},
+        {"feature": "灰狼の若者を一度も見ずに証言する", "ref": "L471"},
+        {"feature": "裁きの後、組合の札を返す", "ref": "L541"}
+      ],
+      "whereabouts": [
+        {"when": "裁きの時", "where": "裁きの間", "doing": "灰色が白い布を巻いて北へ走ったと証言する", "ref": "L467"},
+        {"when": "裁きの後", "where": "書記の机の前", "doing": "組合の札を机に置く", "ref": "L541"}
+      ]
+    },
+    {
+      "name": "バルタザール",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [],
+      "traits": [
+        {"feature": "膝の上で手を組み替える", "ref": "L533"}
+      ],
+      "whereabouts": [
+        {"when": "斥候への裁きの時", "where": "傍聴の腰掛けの端", "doing": "膝の上の手を組み替える", "ref": "L533"}
+      ]
+    },
+    {
+      "name": "語り手",
+      "aliases": ["俺", "マスター"],
+      "first_person": [{"word": "俺", "ref": "L550"}],
+      "calls_others": [
+        {"target": "リナ", "word": "マスター（リナから）", "ref": "L630"}
+      ],
+      "speech": [
+        {"feature": "丁寧な返答をする", "example": "そうですか", "ref": "L694"},
+        {"feature": "客に丁寧に促す", "example": "早く召し上がってください", "ref": "L574"}
+      ],
+      "looks": [],
+      "traits": [
+        {"feature": "扉に楔をかませる", "ref": "L550"},
+        {"feature": "チィの鼻先の豆の皮に気づいても何も言わない", "ref": "L576"}
+      ],
+      "whereabouts": [
+        {"when": "神無月三日の夜", "where": "錆び釘亭のカウンター", "doing": "店を切り盛りする", "ref": "L550"},
+        {"when": "夜半の鐘のころ", "where": "錆び釘亭の裏口", "doing": "閂を確かめる", "ref": "L686"}
+      ]
+    },
+    {
+      "name": "ハク",
+      "aliases": ["ヴェイの子"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [
+        {"feature": "九歳で、言い方が大人に似てきた", "example": "風の日は、豆が冷める", "ref": "L572"}
+      ],
+      "looks": [
+        {"feature": "九歳", "ref": "L572"}
+      ],
+      "traits": [
+        {"feature": "チィの真似をして背中を風に向ける", "ref": "L570"},
+        {"feature": "チィの鼻先の豆の皮を取る", "ref": "L576"}
+      ],
+      "whereabouts": [
+        {"when": "神無月三日の夜、八つ半", "where": "錆び釘亭の裏口", "doing": "豆のスープを食べる", "ref": "L568"}
+      ]
+    },
+    {
+      "name": "チィ",
+      "aliases": ["ヴェイの子"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [
+        {"feature": "鼻先に豆の皮がつく", "ref": "L576"}
+      ],
+      "traits": [
+        {"feature": "椀を両手で抱え、背中を風に向ける", "ref": "L570"},
+        {"feature": "脂身を先に食べ、豆をあとに残す", "ref": "L576"}
+      ],
+      "whereabouts": [
+        {"when": "神無月三日の夜、八つ半", "where": "錆び釘亭の裏口", "doing": "豆のスープを食べる", "ref": "L568"}
+      ]
+    },
+    {
+      "name": "トマス",
+      "aliases": ["隊の若いの", "隊員"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [
+        {"feature": "頬にまだ産毛が残っている", "ref": "L598"}
+      ],
+      "traits": [
+        {"feature": "連れの袖を引いて、それ以上話さないよう促す", "ref": "L620"},
+        {"feature": "桶の数を数え直す", "ref": "L801"}
+      ],
+      "whereabouts": [
+        {"when": "神無月三日の夜、九つ半ごろ", "where": "錆び釘亭", "doing": "卵を買って食べる", "ref": "L598"},
+        {"when": "神無月四日、昼すぎ", "where": "詰所の廊下", "doing": "桶の数を数える", "ref": "L801"}
+      ]
+    },
+    {
+      "name": "リナ",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [
+        {"target": "語り手", "word": "マスター", "ref": "L630"},
+        {"target": "エーリカ", "word": "組合長", "ref": "L640"}
+      ],
+      "speech": [
+        {"feature": "費用について具体的に質問する", "example": "誰が払うんです", "ref": "L634"}
+      ],
+      "looks": [],
+      "traits": [
+        {"feature": "指を一本立ててから下ろす", "ref": "L638"},
+        {"feature": "蝋燭代を今月に入って五回話題にする", "ref": "L642"}
+      ],
+      "whereabouts": [
+        {"when": "神無月三日の夜", "where": "錆び釘亭のカウンター端、エーリカの席の隣", "doing": "語り手に令状の費用を尋ねる", "ref": "L628"}
+      ]
+    },
+    {
+      "name": "ダリオ",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [
+        {"target": "ヴィルマ", "word": "北の女", "ref": "L668"}
+      ],
+      "speech": [
+        {"feature": "くだけた口調で謝る", "example": "すまねえ", "ref": "L668"}
+      ],
+      "looks": [],
+      "traits": [
+        {"feature": "杯を長椅子の端に置き、こぼした後に長椅子を睨む", "ref": "L650"}
+      ],
+      "whereabouts": [
+        {"when": "神無月三日の夜", "where": "錆び釘亭の戸口近くの席", "doing": "一人で飲む", "ref": "L646"}
+      ]
+    },
+    {
+      "name": "ヴィルマ",
+      "aliases": ["北の女"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [
+        {"feature": "短く理屈を言う", "example": "長椅子は、寝る場所だ", "ref": "L662"}
+      ],
+      "looks": [
+        {"feature": "外套をかぶって寝ている", "ref": "L648"}
+      ],
+      "traits": [
+        {"feature": "ダリオの杯がこぼれても、目だけを出して指摘する", "ref": "L656"}
+      ],
+      "whereabouts": [
+        {"when": "神無月三日の夜", "where": "錆び釘亭の壁際の長椅子", "doing": "外套をかぶって寝ている", "ref": "L648"}
+      ]
+    },
+    {
+      "name": "マグダ",
+      "aliases": ["隊長"],
+      "first_person": [],
+      "calls_others": [
+        {"target": "ブラント", "word": "勘定方殿", "ref": "L771"},
+        {"target": "ブラント", "word": "隊長（ブラントから）", "ref": "L773"}
+      ],
+      "speech": [
+        {"feature": "決然と短く言う", "example": "改める", "ref": "L755"},
+        {"feature": "自分の責任を引き受ける", "example": "払う首は、一つしかない", "ref": "L775"}
+      ],
+      "looks": [
+        {"feature": "ブラントよりわずかに背が低い", "ref": "L739"},
+        {"feature": "左の頬に傷がある", "ref": "L777"},
+        {"feature": "隊の外套を着ている", "ref": "L701"}
+      ],
+      "traits": [
+        {"feature": "足音をそろえないよう隊員に言う", "ref": "L701"},
+        {"feature": "役の帽子を脱ぐ癖があり、喉元の留め金を外す", "ref": "L751"},
+        {"feature": "命じられていないことをしに行く", "ref": "L705"}
+      ],
+      "whereabouts": [
+        {"when": "神無月四日の夜明け前", "where": "南門内側の荷車の溜まり場", "doing": "隊員六人と荷の改めに向かう", "ref": "L698"},
+        {"when": "神無月四日、昼すぎ", "where": "詰所", "doing": "届いた令状を机に置く", "ref": "L803"}
+      ]
+    },
+    {
+      "name": "ホルン",
+      "aliases": ["治安方"],
+      "first_person": [],
+      "calls_others": [
+        {"target": "マグダ", "word": "マグダ（呼び捨て）", "ref": "L715"}
+      ],
+      "speech": [
+        {"feature": "声が大きい", "example": "動かすな。令状がない", "ref": "L713"}
+      ],
+      "looks": [
+        {"feature": "首が太い", "ref": "L715"}
+      ],
+      "traits": [
+        {"feature": "面倒の当事者になるのを嫌い、決めずに済むことは決めない", "ref": "L715"}
+      ],
+      "whereabouts": [
+        {"when": "神無月四日、昼すぎ", "where": "詰所の廊下", "doing": "マグダを大声で呼ぶ", "ref": "L807"}
+      ]
+    },
+    {
+      "name": "ブラント",
+      "aliases": ["勘定方", "勘定方殿"],
+      "first_person": [],
+      "calls_others": [
+        {"target": "マグダ", "word": "隊長", "ref": "L747"}
+      ],
+      "speech": [
+        {"feature": "低い声で数字を一つずつ置くように話す", "example": "荷車が四台", "ref": "L745"}
+      ],
+      "looks": [
+        {"feature": "背の高い痩せた男", "ref": "L729"},
+        {"feature": "灰色の毛皮の襟を顎まで立てている", "ref": "L729"},
+        {"feature": "マグダよりわずかに背が高い", "ref": "L739"}
+      ],
+      "traits": [
+        {"feature": "荷を改めることの理屈を説く", "ref": "L745"},
+        {"feature": "連行を告げられても、番頭に荷車を倉へ戻すよう言う", "ref": "L777"}
+      ],
+      "whereabouts": [
+        {"when": "神無月四日の夜明け前", "where": "南門内側の荷車の溜まり場", "doing": "先頭の荷車の御者台の横に立つ", "ref": "L729"},
+        {"when": "神無月四日の朝", "where": "詰所の奥の小部屋", "doing": "湯に手をつけず窓の外を見る", "ref": "L787"}
+      ]
+    },
+    {
+      "name": "城壁の家の年寄り",
+      "aliases": ["門の開け閉めを受け持つ家の者"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [
+        {"feature": "年寄り", "ref": "L733"}
+      ],
+      "traits": [
+        {"feature": "隊が来ても閂から手を離さない", "ref": "L733"}
+      ],
+      "whereabouts": [
+        {"when": "神無月四日の夜明け前", "where": "南門の閂の前", "doing": "開門の鐘を待つ", "ref": "L733"},
+        {"when": "開門の鐘の時", "where": "南門", "doing": "閂を引いて門を開ける", "ref": "L781"}
+      ]
+    },
+    {
+      "name": "隊員",
+      "aliases": ["隊の若いの（複数）", "連れの隊員"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [
+        {"feature": "令状がないため隊が動けないと話す", "example": "令状がないって", "ref": "L608"}
+      ],
+      "looks": [],
+      "traits": [
+        {"feature": "一人が麦袋の口を開ける", "ref": "L759"},
+        {"feature": "馬が麦を食べるのを見て判断に迷う", "ref": "L763"}
+      ],
+      "whereabouts": [
+        {"when": "神無月三日の夜、九つ半ごろ", "where": "錆び釘亭", "doing": "荷車について話す", "ref": "L598"},
+        {"when": "神無月四日の夜明け前", "where": "南門内側の荷車の溜まり場", "doing": "マグダと荷を改める", "ref": "L735"}
+      ]
+    },
+    {
+      "name": "番頭",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [],
+      "traits": [
+        {"feature": "馬が麦を食べるのを見なかったふりをして空を見る", "ref": "L767"}
+      ],
+      "whereabouts": [
+        {"when": "神無月四日の夜明け前", "where": "南門内側の荷車の溜まり場", "doing": "荷車のそばにいる", "ref": "L729"}
+      ]
+    },
+    {
+      "name": "荷車引き",
+      "aliases": ["荷車引きの二人"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [
+        {"feature": "くだけた口調で噂話をする", "example": "知るかよ", "ref": "L562"}
+      ],
+      "looks": [
+        {"feature": "一人は荷車引きの男", "ref": "L688"}
+      ],
+      "traits": [
+        {"feature": "勘定方や懸賞金について話す", "ref": "L554"}
+      ],
+      "whereabouts": [
+        {"when": "神無月三日の夜、九つの鐘のころ", "where": "錆び釘亭の暖炉前の席", "doing": "麦の運搬について話す", "ref": "L552"}
+      ]
+    }
+  ],
+  "places": [
+    {
+      "name": "市参事会館一階・裁きの間",
+      "layout": [
+        {"feature": "アガタは戸口近くの椅子に座る", "ref": "L419"},
+        {"feature": "正面に裁き役の机、脇に書記の机と灯の台がある", "ref": "L421"},
+        {"feature": "灯の台は裁き役の机の脇にある", "ref": "L421"},
+        {"feature": "呼ばれた側の長椅子がある", "ref": "L435"},
+        {"feature": "傍聴の腰掛けがある", "ref": "L455"}
+      ],
+      "scenery": [
+        {"feature": "高い窓から白く平たい光が入る", "ref": "L421"},
+        {"feature": "灯の芯は短く、炎はまっすぐ立つ", "ref": "L495"}
+      ],
+      "weather_season": [
+        {"feature": "梅雨の曇り空", "ref": "L421"}
+      ]
+    },
+    {
+      "name": "錆び釘亭",
+      "layout": [
+        {"feature": "表の扉に閂があり、楔をかませる", "ref": "L548"},
+        {"feature": "暖炉前に席がある", "ref": "L552"},
+        {"feature": "壁の黒板の脇に白っぽい四角が残る", "ref": "L580"},
+        {"feature": "カウンター端にエーリカがいつも座る席がある", "ref": "L628"},
+        {"feature": "戸口近くにダリオの席があり、壁際に長椅子がある", "ref": "L646"}
+      ],
+      "scenery": [
+        {"feature": "軒の吊り看板が鎖の先で揺れる", "ref": "L550"},
+        {"feature": "看板の焼き印の三本の釘が音を立てる", "ref": "L550"},
+        {"feature": "暖炉前で客が話す", "ref": "L552"},
+        {"feature": "長椅子から麦酒が床へ流れる", "ref": "L652"}
+      ],
+      "weather_season": [
+        {"feature": "神無月三日の夜、風が強い", "ref": "L548"},
+        {"feature": "風が路地を抜けてスープの湯気を横へさらう", "ref": "L570"},
+        {"feature": "北から風が吹き、雲が速い", "ref": "L678"}
+      ]
+    },
+    {
+      "name": "錆び釘亭の裏口・路地",
+      "layout": [
+        {"feature": "裏口に閂があり、外側に台がある", "ref": "L568"}
+      ],
+      "scenery": [
+        {"feature": "台に豆のスープの椀を二つ出す", "ref": "L570"}
+      ],
+      "weather_season": [
+        {"feature": "風が路地を抜ける", "ref": "L570"}
+      ]
+    },
+    {
+      "name": "錆び釘亭の外・坂",
+      "layout": [
+        {"feature": "坂の下に家々が並ぶ", "ref": "L676"},
+        {"feature": "南門は坂を下り、下町を抜けた先にある", "ref": "L680"}
+      ],
+      "scenery": [
+        {"feature": "家々の窓はほとんど暗い", "ref": "L676"},
+        {"feature": "南の空に星が三つ見える", "ref": "L678"}
+      ],
+      "weather_season": [
+        {"feature": "神無月三日の夜、北風が吹き雲が速い", "ref": "L678"}
+      ]
+    },
+    {
+      "name": "北街道",
+      "layout": [
+        {"feature": "三つ目の一里塚の先に藪がある", "ref": "L443"}
+      ],
+      "scenery": [
+        {"feature": "隊商の頭は荷車の下に隠れたと証言する", "ref": "L443"}
+      ],
+      "weather_season": []
+    },
+    {
+      "name": "組合の厩",
+      "layout": [],
+      "scenery": [
+        {"feature": "荷を運ぶ灰狼の若者がいた", "ref": "L481"}
+      ],
+      "weather_season": []
+    },
+    {
+      "name": "南門内側・荷車の溜まり場",
+      "layout": [
+        {"feature": "南門の閂の前に門の開け閉めを受け持つ者がいる", "ref": "L733"},
+        {"feature": "荷車が四台並ぶ", "ref": "L727"},
+        {"feature": "四台の荷車に麦袋が肩の高さまで積まれている", "ref": "L729"}
+      ],
+      "scenery": [
+        {"feature": "馬が繋がれ、鼻から白い息を吐く", "ref": "L729"},
+        {"feature": "石畳の霜の上に麦粒が散る", "ref": "L759"}
+      ],
+      "weather_season": [
+        {"feature": "神無月四日の夜明け前、霜が降りている", "ref": "L698"},
+        {"feature": "吐く息が白く、留め金が肌に冷たい", "ref": "L701"}
+      ]
+    },
+    {
+      "name": "南門",
+      "layout": [
+        {"feature": "門の内側に荷車の溜まり場がある", "ref": "L680"},
+        {"feature": "開門の鐘の後、年寄りが閂を引いて開ける", "ref": "L781"}
+      ],
+      "scenery": [
+        {"feature": "門の外に南街道が延びる", "ref": "L783"}
+      ],
+      "weather_season": [
+        {"feature": "門の外の南街道に霜が降りている", "ref": "L783"}
+      ]
+    },
+    {
+      "name": "南街道",
+      "layout": [
+        {"feature": "南門の外へ延びる", "ref": "L783"},
+        {"feature": "三日下ると川港のネーベルに着く", "ref": "L721"}
+      ],
+      "scenery": [
+        {"feature": "霜で白く見える", "ref": "L783"}
+      ],
+      "weather_season": [
+        {"feature": "神無月四日の朝、霜が降りている", "ref": "L783"}
+      ]
+    },
+    {
+      "name": "下町",
+      "layout": [
+        {"feature": "坂を下りた先にあり、その先に南門がある", "ref": "L680"}
+      ],
+      "scenery": [
+        {"feature": "屋根の上にパン屋の窯の煙が一本上がる", "ref": "L703"}
+      ],
+      "weather_season": [
+        {"feature": "神無月四日の夜明け前、霜が降りている", "ref": "L703"}
+      ]
+    },
+    {
+      "name": "詰所",
+      "layout": [
+        {"feature": "机があり、廊下と奥の小部屋がある", "ref": "L711"},
+        {"feature": "奥の小部屋には机と椅子が一つずつある", "ref": "L787"}
+      ],
+      "scenery": [
+        {"feature": "小部屋に窓があり、ブラントが外を見る", "ref": "L789"},
+        {"feature": "廊下でトマスが桶を数える", "ref": "L801"}
+      ],
+      "weather_season": []
+    },
+    {
+      "name": "川港ネーベル",
+      "layout": [
+        {"feature": "南街道を三日下った先にあり、そこから先は川筋", "ref": "L721"}
+      ],
+      "scenery": [],
+      "weather_season": []
+    }
+  ],
+  "season_mismatch": [],
+  "inner_inconsistencies": [
+    {
+      "text": "エーリカは裁きの場面では参事会の書記、後の場面では組合長と呼ばれる。",
+      "refs": ["L433", "L626"]
+    }
+  ]
+}

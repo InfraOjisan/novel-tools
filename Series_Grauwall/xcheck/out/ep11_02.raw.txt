@@ -1,0 +1,337 @@
+{
+  "episode": "11",
+  "dates": [
+    {"when": "水無月にアガタが南の村々を回った", "ref": "L449"},
+    {"when": "文月十日", "ref": "L493"},
+    {"when": "文月二十五日の夜", "ref": "L567"},
+    {"when": "文月二十六日、夕方五つ半", "ref": "L712"},
+    {"when": "朝", "ref": "L534"}
+  ],
+  "characters": [
+    {
+      "name": "ブリギッテ",
+      "aliases": ["灯火教会のブリギッテ"],
+      "first_person": [
+        {"word": "わたし", "ref": "L437"}
+      ],
+      "calls_others": [
+        {"target": "アガタ", "word": "先生", "ref": "L447"},
+        {"target": "アンゼルム", "word": "修道士様", "ref": "L463"}
+      ],
+      "speech": [
+        {"feature": "丁寧な口調で話す", "example": "わたしは舟宿の帳場で", "ref": "L411"},
+        {"feature": "口が先に出ると言う", "example": "わたし、口が先に出るんです", "ref": "L437"}
+      ],
+      "looks": [
+        {"feature": "薬箱を胸に抱える", "ref": "L411"},
+        {"feature": "そばかすがある", "ref": "L724"}
+      ],
+      "traits": [
+        {"feature": "濡れた石段を足の裏で確かめながら下りる", "ref": "L411"},
+        {"feature": "思わず思ったことを口にして口を押さえる", "ref": "L431"},
+        {"feature": "灯の前で笑ってから慌てて口を押さえる", "ref": "L768"}
+      ],
+      "whereabouts": [
+        {"when": "朝", "where": "渡し場の礼拝堂", "doing": "薬箱を持ってアンゼルムと話す", "ref": "L447"},
+        {"when": "文月二十六日、夕方五つ半の後", "where": "浮き灯", "doing": "薬箱を抱えて舟に乗り、祈る", "ref": "L720"}
+      ]
+    },
+    {
+      "name": "ダリオ",
+      "aliases": ["剣士のダリオ", "グラウヴァルの組合のダリオ"],
+      "first_person": [
+        {"word": "俺", "ref": "L623"}
+      ],
+      "calls_others": [],
+      "speech": [
+        {"feature": "荒めの口調で話す", "example": "数えるなって言ってんだろ", "ref": "L766"},
+        {"feature": "相手を「あんた」と呼ぶ", "example": "あんたも、ここの豆か？", "ref": "L613"}
+      ],
+      "looks": [
+        {"feature": "髭があり、笑うと髭の端が揺れる", "ref": "L629"}
+      ],
+      "traits": [
+        {"feature": "黙っているのが性に合わない", "ref": "L621"},
+        {"feature": "よけられた小魚を考えるより先に食べる", "ref": "L659"},
+        {"feature": "賽を見ていて、目を閉じない", "ref": "L830"},
+        {"feature": "右の指を一本ずつ押して確かめる", "ref": "L894"}
+      ],
+      "whereabouts": [
+        {"when": "文月二十五日の夜", "where": "川沿いの酒場", "doing": "頭巾の客と同じ卓に座り、食事をする", "ref": "L607"},
+        {"when": "文月二十五日の夜", "where": "坂、代書の看板の前", "doing": "看板を見て先へ歩く", "ref": "L693"},
+        {"when": "文月二十六日、夕方", "where": "浮き灯", "doing": "賭けを見届け、グレゴールに壺に触ったと言う", "ref": "L862"}
+      ]
+    },
+    {
+      "name": "リナ",
+      "aliases": [],
+      "first_person": [
+        {"word": "わたし", "ref": "L411"}
+      ],
+      "calls_others": [
+        {"target": "ダリオ", "word": "ダリオさん", "ref": "L589"}
+      ],
+      "speech": [
+        {"feature": "丁寧な口調で話す", "example": "わたしは舟宿の帳場で", "ref": "L411"}
+      ],
+      "looks": [
+        {"feature": "文月二十六日に杖を膝に立てる", "ref": "L824"}
+      ],
+      "traits": [
+        {"feature": "部屋代の控えを先にもらうと言う", "ref": "L411"},
+        {"feature": "銭を数え、ダリオに数えるなと言われる", "ref": "L754"}
+      ],
+      "whereabouts": [
+        {"when": "朝", "where": "舟宿の帳場", "doing": "部屋代の控えをもらうと言う", "ref": "L411"},
+        {"when": "文月二十五日の夜", "where": "川沿いの酒場", "doing": "ダリオの後ろから食べたのはダリオだと言う", "ref": "L589"},
+        {"when": "文月二十六日、夕方", "where": "浮き灯", "doing": "舟の中ほどで財布の紐を指に巻き、祈る", "ref": "L726"}
+      ]
+    },
+    {
+      "name": "アンゼルム",
+      "aliases": ["修道士", "修道士様"],
+      "first_person": [
+        {"word": "わたし", "ref": "L510"}
+      ],
+      "calls_others": [
+        {"target": "アガタ", "word": "先生", "ref": "L451"}
+      ],
+      "speech": [
+        {"feature": "静かに話す", "example": "賽は灯が見ていました", "ref": "L872"},
+        {"feature": "丁寧な口調", "example": "ありがとうございます", "ref": "L886"}
+      ],
+      "looks": [
+        {"feature": "痩せている", "ref": "L439"},
+        {"feature": "法衣の袖に繕った跡があり、糸の色が少し違う", "ref": "L439"}
+      ],
+      "traits": [
+        {"feature": "静かに笑う", "ref": "L441"},
+        {"feature": "証文を丁寧に畳んで箱へ戻す", "ref": "L516"},
+        {"feature": "祈るとき目を閉じ、灯のほうを向く", "ref": "L820"}
+      ],
+      "whereabouts": [
+        {"when": "朝", "where": "渡し場の礼拝堂", "doing": "ブリギッテから文を受け取る", "ref": "L443"},
+        {"when": "文月二十六日、夕方", "where": "浮き灯", "doing": "立会人として証文を書き、祈る", "ref": "L798"}
+      ]
+    },
+    {
+      "name": "アガタ",
+      "aliases": ["アガタ先生", "先生"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [
+        {"feature": "廊下を走るなと叱る", "example": "廊下を走るなと", "ref": "L453"}
+      ],
+      "looks": [],
+      "traits": [
+        {"feature": "水無月に南の村々を回った", "ref": "L449"}
+      ],
+      "whereabouts": [
+        {"when": "水無月", "where": "南の村々", "doing": "村々を回る。ネーベルには立ち寄らなかった", "ref": "L449"}
+      ]
+    },
+    {
+      "name": "ピッペ",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [
+        {"target": "ダリオ", "word": "小魚の人", "ref": "L581"}
+      ],
+      "speech": [
+        {"feature": "親しげな口調", "example": "覚えてるよ", "ref": "L585"}
+      ],
+      "looks": [
+        {"feature": "頭に白い兎の付け耳をつけ、網の靴下を履く", "ref": "L579"}
+      ],
+      "traits": [
+        {"feature": "干し小魚を客に添える", "ref": "L649"}
+      ],
+      "whereabouts": [
+        {"when": "文月二十五日の夜", "where": "川沿いの酒場", "doing": "給仕をし、ダリオに声をかける", "ref": "L579"}
+      ]
+    },
+    {
+      "name": "ミッツィ",
+      "aliases": ["ミッツィさん"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [],
+      "traits": [
+        {"feature": "舳先の修理代が必要で、舟「燕」を賭けたとされる", "ref": "L506"}
+      ],
+      "whereabouts": [
+        {"when": "文月十日", "where": "浮き灯", "doing": "舟「燕」を賭けた証文に張る者として記される", "ref": "L493"}
+      ]
+    },
+    {
+      "name": "グレゴール",
+      "aliases": ["胴元"],
+      "first_person": [],
+      "calls_others": [
+        {"target": "アンゼルム", "word": "修道士様", "ref": "L796"}
+      ],
+      "speech": [
+        {"feature": "愛想のよい、穏やかな声", "example": "いいだろう", "ref": "L794"}
+      ],
+      "looks": [
+        {"feature": "太い指で、手の甲に舟乗りの日焼けが残る", "ref": "L742"}
+      ],
+      "traits": [
+        {"feature": "愛想のいい笑い方をする", "ref": "L742"},
+        {"feature": "壺の縁をしっかり押さえる", "ref": "L814"}
+      ],
+      "whereabouts": [
+        {"when": "文月二十六日、夕方", "where": "浮き灯", "doing": "胴元として賭けを進行し、壺を上げる", "ref": "L846"}
+      ]
+    },
+    {
+      "name": "ヴェルナー",
+      "aliases": ["老いた舟主"],
+      "first_person": [
+        {"word": "わし", "ref": "L858"}
+      ],
+      "calls_others": [],
+      "speech": [
+        {"feature": "無口で、短く話す", "example": "舟を張る", "ref": "L780"}
+      ],
+      "looks": [
+        {"feature": "老いた舟主", "ref": "L776"}
+      ],
+      "traits": [
+        {"feature": "寄合の端に座り、一言も口を利かなかった", "ref": "L778"}
+      ],
+      "whereabouts": [
+        {"when": "文月二十六日、夕方", "where": "浮き灯", "doing": "舟「鷺」を賭け、負けて灯に背を向ける", "ref": "L780"}
+      ]
+    }
+  ],
+  "places": [
+    {
+      "name": "渡し場の礼拝堂",
+      "layout": [
+        {"feature": "屋根は小さく、板が反り、壁に雨跡がある", "ref": "L419"},
+        {"feature": "小窓、床板、長い腰掛けが二つある", "ref": "L427"},
+        {"feature": "奥に祭壇があり、その脇の台に油壺が置かれている", "ref": "L429"},
+        {"feature": "壁際に刻み蝋燭がある", "ref": "L534"},
+        {"feature": "壁際の棚に証文の控えを入れる木箱がある", "ref": "L487"}
+      ],
+      "scenery": [
+        {"feature": "祭壇に灯が一つ立つ", "ref": "L429"},
+        {"feature": "堂内は薄暗く、床板が足音で鳴る", "ref": "L427"},
+        {"feature": "霧が窓の隙間から細く流れ込む", "ref": "L548"}
+      ],
+      "weather_season": [
+        {"feature": "朝霧が石段や堂の周囲を覆う", "ref": "L409"},
+        {"feature": "石段が霧で白く濡れている", "ref": "L556"}
+      ]
+    },
+    {
+      "name": "渡し場の石段",
+      "layout": [
+        {"feature": "礼拝堂へ下る石段で、苔が生えている", "ref": "L411"}
+      ],
+      "scenery": [
+        {"feature": "舟の綱がきしみ、濡れ縄と魚の匂いがする", "ref": "L415"}
+      ],
+      "weather_season": [
+        {"feature": "朝霧が石段を白く隠す", "ref": "L409"}
+      ]
+    },
+    {
+      "name": "舟宿",
+      "layout": [
+        {"feature": "川へ張り出した二階建て", "ref": "L699"},
+        {"feature": "二階の窓から川へ桶を空ける音が聞こえる", "ref": "L413"}
+      ],
+      "scenery": [
+        {"feature": "格子窓の向こうに舟灯が川面に浮く", "ref": "L699"},
+        {"feature": "床の下で水が鳴る", "ref": "L699"}
+      ],
+      "weather_season": []
+    },
+    {
+      "name": "川沿いの酒場",
+      "layout": [
+        {"feature": "窓の下がそのまま川に面する", "ref": "L567"},
+        {"feature": "低い天井と煤けた梁があり、卓が並ぶ", "ref": "L571"},
+        {"feature": "壁の釘に濡れた綱や古い櫂がかかる", "ref": "L571"},
+        {"feature": "奥に竈があり、厨房の奥に真鍮の鈴がある", "ref": "L575"}
+      ],
+      "scenery": [
+        {"feature": "灯油と焼き魚の脂の匂いがこもる", "ref": "L573"},
+        {"feature": "梁の網に魚の骨や鱗が引っかかる", "ref": "L569"},
+        {"feature": "窓から川の水音と舟灯が見える", "ref": "L599"}
+      ],
+      "weather_season": [
+        {"feature": "文月二十五日の夜、ぬるい風が入り、川霧はまだ出ていない", "ref": "L567"},
+        {"feature": "川風がダリオの火照った頬を冷ます", "ref": "L679"}
+      ]
+    },
+    {
+      "name": "坂と代書の看板の前",
+      "layout": [
+        {"feature": "酒場を出て坂を上った途中に代書の看板がある", "ref": "L683"},
+        {"feature": "看板には証文・手紙・帳面の写しとある", "ref": "L687"}
+      ],
+      "scenery": [
+        {"feature": "荷揚げ場の灯が消えかけ、塩の俵が暗がりに並ぶ", "ref": "L685"},
+        {"feature": "坂の石段の苔が濡れたように黒く光る", "ref": "L685"}
+      ],
+      "weather_season": [
+        {"feature": "昼の日差しを吸った石が夜も温かい", "ref": "L685"},
+        {"feature": "川風は冷たくないが湿っている", "ref": "L685"}
+      ]
+    },
+    {
+      "name": "荷揚げ場",
+      "layout": [
+        {"feature": "積みかけの塩の俵が並び、舟が杭に舫われている", "ref": "L685"}
+      ],
+      "scenery": [
+        {"feature": "荷揚げ場の灯が消えかけている", "ref": "L685"},
+        {"feature": "舟の縄が杭に擦れる音がする", "ref": "L685"}
+      ],
+      "weather_season": [
+        {"feature": "昼の日差しを吸った石が夜も温かい", "ref": "L685"}
+      ]
+    },
+    {
+      "name": "渡し舟",
+      "layout": [
+        {"feature": "平底の舟で、舳先に舟灯を吊る", "ref": "L712"},
+        {"feature": "ブリギッテは薬箱を抱え、リナは中ほど、ダリオは真ん中に座る", "ref": "L726"}
+      ],
+      "scenery": [
+        {"feature": "礼拝堂の祭壇から移した火が舟灯にある", "ref": "L714"}
+      ],
+      "weather_season": [
+        {"feature": "川風が冷たく舷を撫でる", "ref": "L890"}
+      ]
+    },
+    {
+      "name": "浮き灯",
+      "layout": [
+        {"feature": "川の真ん中に繋がれた大きな平底の舟", "ref": "L730"},
+        {"feature": "屋根があり、広い板の間の中央に奇偶の盤がある", "ref": "L732"},
+        {"feature": "奥の一段高いところに灯と刻み蝋燭がある", "ref": "L734"},
+        {"feature": "舷に油皿が並び、艫側に塩の俵が積まれる", "ref": "L738"}
+      ],
+      "scenery": [
+        {"feature": "油皿の芯がじじと鳴り、蛾が火の縁を回る", "ref": "L772"},
+        {"feature": "賽を振る壺と盤がある", "ref": "L814"}
+      ],
+      "weather_season": [
+        {"feature": "川の水音が舟の下で鳴る", "ref": "L832"}
+      ]
+    }
+  ],
+  "season_mismatch": [
+    {
+      "text": "この暑いのに、よくかぶっていられるな",
+      "why": "暑いと描写される夜に、客は頭巾と長い外套を着ている",
+      "ref": "L605"
+    }
+  ],
+  "inner_inconsistencies": []
+}

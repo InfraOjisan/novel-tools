@@ -1,0 +1,386 @@
+{
+  "episode": "09",
+  "dates": [
+    {"when": "灰壁暦三一三年、水無月十日", "ref": "L4"},
+    {"when": "皐月の終わりから南の村々へ施療し、昨日の夕方に帰着", "ref": "L16"},
+    {"when": "先月、北の古い砦へ行った", "ref": "L20"},
+    {"when": "写しの紙の日付は灰壁暦二一二年", "ref": "L34"},
+    {"when": "灰壁暦二一二年、水無月一日", "ref": "L117"},
+    {"when": "水無月一日の夕方", "ref": "L231"},
+    {"when": "翌日、ザイデル家の虫干し", "ref": "L217"},
+    {"when": "明日、館の中庭に紙が並ぶ", "ref": "L294"}
+  ],
+  "characters": [
+    {
+      "name": "ブリギッテ",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [
+        {"target": "アガタ", "word": "先生", "ref": "L12"},
+        {"target": "鴉人の長老", "word": "長老様", "ref": "L34"}
+      ],
+      "speech": [
+        {"feature": "先生には丁寧な言葉遣い", "example": "お帰りなさいませ", "ref": "L12"},
+        {"feature": "緊張すると言葉を重ね、途切れがちに話す", "example": "それで、あの", "ref": "L44"}
+      ],
+      "looks": [
+        {"feature": "背が高い", "ref": "L8"},
+        {"feature": "袖をまくり直す", "ref": "L8"}
+      ],
+      "traits": [
+        {"feature": "自分のものではない字の癖まで写す", "ref": "L38"},
+        {"feature": "先生が行き先を言わなくても訊かない", "ref": "L104"}
+      ],
+      "whereabouts": [
+        {"when": "灰壁暦三一三年、水無月十日、昼の鐘が鳴りやむころ", "where": "雨の手習い所", "doing": "薬箱を長机の端に置き、アガタに写しを見せる", "ref": "L4"},
+        {"when": "先月", "where": "北の古い砦", "doing": "冒険者組合の一行と訪れ、古い紙を写す", "ref": "L20"},
+        {"when": "同日、アガタが出たあと", "where": "手習い所", "doing": "石板を拭きながら窓の外を見る", "ref": "L108"}
+      ]
+    },
+    {
+      "name": "アガタ",
+      "aliases": ["先生"],
+      "first_person": [{"word": "わたし", "ref": "L76"}],
+      "calls_others": [],
+      "speech": [
+        {"feature": "丁寧な口調", "example": "ゆっくりでいいですよ", "ref": "L46"},
+        {"feature": "リーゼルという修道女から教わったと話す", "example": "リーゼルという修道女です", "ref": "L76"}
+      ],
+      "looks": [
+        {"feature": "白い手袋をしている。手袋を外すと素手の指の腹で字をなぞる", "ref": "L36"},
+        {"feature": "法衣を着ている", "ref": "L100"}
+      ],
+      "traits": [
+        {"feature": "写しを長いこと黙って見る", "ref": "L40"},
+        {"feature": "棘が手袋に絡んだ実を外そうとして、外れないと分かると机に置く", "ref": "L92"}
+      ],
+      "whereabouts": [
+        {"when": "水無月十日、昼の鐘が鳴りやむころ", "where": "雨の手習い所の窓ぎわ", "doing": "子らの石板を拭き、ブリギッテの写しを見る", "ref": "L10"},
+        {"when": "同日、写しを見たあと", "where": "手習い所から上町へ向かう雨の坂", "doing": "傘を差して出かける", "ref": "L100"}
+      ]
+    },
+    {
+      "name": "ゲオルク",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [
+        {"target": "コンラート", "word": "コンラート", "ref": "L123"},
+        {"target": "リーゼル", "word": "娘", "ref": "L175"}
+      ],
+      "speech": [
+        {"feature": "短く返答する", "example": "はい", "ref": "L129"},
+        {"feature": "娘の字の癖を指摘され、否定する", "example": "手は振っていない", "ref": "L189"}
+      ],
+      "looks": [
+        {"feature": "左の袖口を紐で留め、右の中指に墨だこがある", "ref": "L121"},
+        {"feature": "裁き方の書記を十九年務めている", "ref": "L121"}
+      ],
+      "traits": [
+        {"feature": "裁きに要ることだけを書き、要らないことは書かない", "ref": "L133"},
+        {"feature": "娘の字を直さない", "ref": "L195"},
+        {"feature": "廊下の立ち話を記録しない", "ref": "L169"}
+      ],
+      "whereabouts": [
+        {"when": "灰壁暦二一二年、水無月一日、朝の鐘が八つ鳴ったとき", "where": "参事会館一階の裁き方の部屋", "doing": "墨をすっている", "ref": "L117"},
+        {"when": "同日、昼の鐘のあと", "where": "裁き方の部屋", "doing": "娘から弁当を受け取り、裁きの写しを書く", "ref": "L175"},
+        {"when": "同日、昼の鐘から半刻ほどして", "where": "裁き方の部屋", "doing": "北の使いの来訪後、写しの続きに戻る", "ref": "L207"}
+      ]
+    },
+    {
+      "name": "コンラート",
+      "aliases": ["裁き役"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [
+        {"feature": "「書いておけ」が口癖", "example": "書いておけ", "ref": "L131"},
+        {"feature": "裁きに関係ない発言は書くなと指示する", "example": "心根のほうは書くな", "ref": "L145"}
+      ],
+      "looks": [
+        {"feature": "指が太い", "ref": "L127"}
+      ],
+      "traits": [
+        {"feature": "綴りを撫で、紙を慎重にめくる", "ref": "L123"},
+        {"feature": "同じことには同じ裁きを、と述べる", "ref": "L127"}
+      ],
+      "whereabouts": [
+        {"when": "水無月一日、朝", "where": "参事会館一階の裁き方の部屋", "doing": "綴りを撫で、ゲオルクに記録を命じる", "ref": "L123"},
+        {"when": "同日、十の鐘のころ", "where": "裁き方の部屋", "doing": "パン屋二軒の争いを裁く", "ref": "L137"}
+      ]
+    },
+    {
+      "name": "リーゼル",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [
+        {"target": "ゲオルク", "word": "父さん", "ref": "L179"},
+        {"target": "ゲオルク", "word": "父さん", "ref": "L187"}
+      ],
+      "speech": [
+        {"feature": "父の字を見て、最後に手を振っているようだと言う", "example": "さよならって", "ref": "L191"}
+      ],
+      "looks": [
+        {"feature": "十二歳。袖口に墨が付いている", "ref": "L177"}
+      ],
+      "traits": [
+        {"feature": "字の形を誰より先に見る", "ref": "L183"},
+        {"feature": "父の字を石板に真似て書く", "ref": "L185"}
+      ],
+      "whereabouts": [
+        {"when": "水無月一日、昼の鐘のあと", "where": "参事会館一階の裁き方の部屋", "doing": "父に弁当を届け、字を真似て書く", "ref": "L175"}
+      ]
+    },
+    {
+      "name": "トゥル",
+      "aliases": ["灰色"],
+      "first_person": [{"word": "俺", "ref": "L300"}],
+      "calls_others": [
+        {"target": "クラク", "word": "クラク", "ref": "L296"},
+        {"target": "ミル", "word": "ミル", "ref": "L330"}
+      ],
+      "speech": [
+        {"feature": "短く答える", "example": "やる", "ref": "L334"}
+      ],
+      "looks": [
+        {"feature": "十八歳。耳の先だけ白い灰狼", "ref": "L244"}
+      ],
+      "traits": [
+        {"feature": "人間を顔より匂いで覚える", "ref": "L246"},
+        {"feature": "腹を立てても銀貨は増えないと考える", "ref": "L250"},
+        {"feature": "蝋の匂いを嗅ぎ分ける", "ref": "L286"}
+      ],
+      "whereabouts": [
+        {"when": "水無月一日の夕方", "where": "下の谷の路地", "doing": "妹に尻尾をつかまれ、クラクと話す", "ref": "L231"},
+        {"when": "同日、夕方", "where": "谷の家", "doing": "母アッカが煮る豆のそばで、蝋の欠片を懐に入れる", "ref": "L340"}
+      ]
+    },
+    {
+      "name": "ミル",
+      "aliases": [],
+      "first_person": [{"word": "わたし", "ref": "L268"}],
+      "calls_others": [
+        {"target": "トゥル", "word": "兄ちゃん", "ref": "L234"}
+      ],
+      "speech": [
+        {"feature": "自分は一人だと鴉人に言う", "example": "わたし、一人だよ", "ref": "L268"}
+      ],
+      "looks": [],
+      "traits": [
+        {"feature": "兄の尻尾を引っぱる", "ref": "L242"},
+        {"feature": "鴉人の「群れ」に納得しない", "ref": "L270"}
+      ],
+      "whereabouts": [
+        {"when": "水無月一日の夕方", "where": "下の谷の路地、井戸のそば", "doing": "兄の尻尾を引き、クラクと話す", "ref": "L260"}
+      ]
+    },
+    {
+      "name": "クラク",
+      "aliases": ["鴉人", "北の使い"],
+      "first_person": [{"word": "俺", "ref": "L306"}],
+      "calls_others": [
+        {"target": "トゥル", "word": "お前", "ref": "L274"}
+      ],
+      "speech": [
+        {"feature": "訊かれたら答えると言う", "example": "訊かれたら答える", "ref": "L300"},
+        {"feature": "砦の様子を簡潔に話す", "example": "高い所だ", "ref": "L316"}
+      ],
+      "looks": [
+        {"feature": "黒い羽を半分だけ畳み、首から割符の束のある紐を下げる", "ref": "L262"}
+      ],
+      "traits": [
+        {"feature": "名を名乗る", "ref": "L278"},
+        {"feature": "訊かれた分だけを答える", "ref": "L302"}
+      ],
+      "whereabouts": [
+        {"when": "水無月一日の夕方", "where": "下の谷の井戸の縁", "doing": "トゥルに蝋の欠片を渡し、館で紙を探すよう頼む", "ref": "L260"},
+        {"when": "同日、夕方", "where": "井戸の縁から上町へ", "doing": "羽を広げて飛び去る", "ref": "L336"}
+      ]
+    },
+    {
+      "name": "アッカ",
+      "aliases": ["母"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [
+        {"feature": "トゥルに遅かったねと言う", "example": "遅かったね", "ref": "L342"}
+      ],
+      "looks": [],
+      "traits": [
+        {"feature": "トゥルにそれ以上訊かない", "ref": "L346"}
+      ],
+      "whereabouts": [
+        {"when": "水無月一日の夕方", "where": "谷の家", "doing": "豆を煮ている", "ref": "L340"}
+      ]
+    },
+    {
+      "name": "ヴィルマ",
+      "aliases": ["道案内"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [],
+      "traits": [
+        {"feature": "砦に誰がいるか知っていたが、訊かれるまで言わなかった", "ref": "L54"}
+      ],
+      "whereabouts": []
+    },
+    {
+      "name": "リーゼルという修道女",
+      "aliases": ["リーゼル"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [
+        {"feature": "修道女。アガタがここに来たとき、すでに年を取っていた", "ref": "L76"}
+      ],
+      "traits": [
+        {"feature": "アガタに「終わりで息を止めなさい」と教えた", "ref": "L64"}
+      ],
+      "whereabouts": []
+    },
+    {
+      "name": "ザイデル",
+      "aliases": ["ザイデル様"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [],
+      "traits": [],
+      "whereabouts": [
+        {"when": "水無月二日、虫干しの予定", "where": "上町の館", "doing": "館で虫干しが行われる予定", "ref": "L217"}
+      ]
+    }
+  ],
+  "places": [
+    {
+      "name": "雨の手習い所",
+      "layout": [
+        {"feature": "長机があり、ブリギッテは端に薬箱を置く。アガタは窓ぎわの席にいる", "ref": "L4"},
+        {"feature": "窓の外を子どもが走って通る", "ref": "L80"}
+      ],
+      "scenery": [
+        {"feature": "机に石板と使い減りした筆が並ぶ", "ref": "L6"},
+        {"feature": "長机には墨の染みが残る", "ref": "L94"}
+      ],
+      "weather_season": [
+        {"feature": "朝から雨が続き、屋根の樋が鳴る", "ref": "L6"},
+        {"feature": "水無月十日。窓の外は雨の光で白く薄い", "ref": "L40"}
+      ]
+    },
+    {
+      "name": "北の古い砦",
+      "layout": [
+        {"feature": "書庫は塔の下の冷たい部屋", "ref": "L26"},
+        {"feature": "峠を向いた見張り台があり、見張り・伝令・畑を耕す者がいる", "ref": "L316"}
+      ],
+      "scenery": [
+        {"feature": "書庫に油布にくるんだ古い紙の束がある", "ref": "L26"},
+        {"feature": "夜ごと篝火を焚く", "ref": "L316"}
+      ],
+      "weather_season": [
+        {"feature": "冬は山から下りる獣を糧の村の手前で追い返す", "ref": "L316"}
+      ]
+    },
+    {
+      "name": "参事会館一階・裁き方の部屋",
+      "layout": [
+        {"feature": "ゲオルクの机と、奥のコンラートの机がある", "ref": "L123"},
+        {"feature": "硯の上で墨をすり、裁きの帳面を開く", "ref": "L119"}
+      ],
+      "scenery": [
+        {"feature": "湿った曇りの朝、墨の匂いが部屋の底に溜まる", "ref": "L119"},
+        {"feature": "麻の綴じ紐で綴じた『例』の一冊がある", "ref": "L125"}
+      ],
+      "weather_season": [
+        {"feature": "水無月一日の朝、曇り。窓の外は白い", "ref": "L117"}
+      ]
+    },
+    {
+      "name": "参事会館の廊下・階段・二階議場",
+      "layout": [
+        {"feature": "参事たちは二階の議場へ上がる前に廊下で立ち話をする。戸は半分開いている", "ref": "L155"},
+        {"feature": "参事たちは階段を上り、議場では木札が壺に落ちる", "ref": "L165"}
+      ],
+      "scenery": [
+        {"feature": "廊下から声が部屋に入ってくる", "ref": "L155"},
+        {"feature": "議場から木札が壺に落ちる音が聞こえる", "ref": "L227"}
+      ],
+      "weather_season": []
+    },
+    {
+      "name": "南の村々",
+      "layout": [],
+      "scenery": [
+        {"feature": "麦が黄色くなりかけていた", "ref": "L14"}
+      ],
+      "weather_season": [
+        {"feature": "皐月の終わりにアガタが施療に出た", "ref": "L16"}
+      ]
+    },
+    {
+      "name": "北街道の荒れ野",
+      "layout": [],
+      "scenery": [
+        {"feature": "赤い棘草が生え、実が袖についてくる", "ref": "L20"},
+        {"feature": "棘草の実を一つ手習い所へ持ち帰る", "ref": "L90"}
+      ],
+      "weather_season": []
+    },
+    {
+      "name": "下の谷の路地・井戸",
+      "layout": [
+        {"feature": "窪地の底に家々があり、井戸の縁に鴉人が降りてくる", "ref": "L258"},
+        {"feature": "井戸のそばにトゥル、ミル、クラクが集まる", "ref": "L260"}
+      ],
+      "scenery": [
+        {"feature": "獣脂の灯、煮える豆、焦げる脂の匂いが路地に溜まる", "ref": "L258"},
+        {"feature": "井戸の水に石と苔の匂いがある", "ref": "L310"}
+      ],
+      "weather_season": [
+        {"feature": "水無月一日の夕方", "ref": "L231"}
+      ]
+    },
+    {
+      "name": "谷の家",
+      "layout": [],
+      "scenery": [
+        {"feature": "アッカが豆を煮ている", "ref": "L340"}
+      ],
+      "weather_season": []
+    },
+    {
+      "name": "ザイデル家の館・中庭",
+      "layout": [
+        {"feature": "虫干しの日には文書蔵の紙を中庭に出して風を通す", "ref": "L219"},
+        {"feature": "翌日、中庭に紙が並ぶ予定", "ref": "L294"}
+      ],
+      "scenery": [
+        {"feature": "文書蔵には古い家ほど紙が多い", "ref": "L219"}
+      ],
+      "weather_season": [
+        {"feature": "虫干しは梅雨の前の晴れた日に行う年中行事", "ref": "L219"}
+      ]
+    },
+    {
+      "name": "上町の商家",
+      "layout": [],
+      "scenery": [
+        {"feature": "樽を運ぶ仕事がある", "ref": "L248"}
+      ],
+      "weather_season": []
+    },
+    {
+      "name": "雨の坂から上町へ向かう道",
+      "layout": [
+        {"feature": "下町や大聖堂の方向ではなく、上町のほうへ上る", "ref": "L112"}
+      ],
+      "scenery": [
+        {"feature": "黒い傘が雨の坂を上り、一度も立ち止まらない", "ref": "L110"}
+      ],
+      "weather_season": [
+        {"feature": "雨が降っている", "ref": "L110"}
+      ]
+    }
+  ],
+  "season_mismatch": [],
+  "inner_inconsistencies": []
+}

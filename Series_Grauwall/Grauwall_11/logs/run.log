@@ -417,3 +417,4 @@
 2026-11-07T00:49:19 CALL reviewer final.packet.md -> final_review.out
 2026-11-07T00:49:53   usage: in=119939 out=2737 reasoning_chars=475 content_chars=570 cost=0.0048558213 sec=34 model=openai/gpt-6-luna-pro
 2026-11-07T00:49:53 ESCALATE FINAL_REVIEW_FAILED: 最終審査で重大な指摘あり（output/final_report.md 参照）
+2026-11-07T00:55:38 RESOLVE FINAL_REVIEW_FAILED ['--done']

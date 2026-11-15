@@ -1,0 +1,349 @@
+{
+  "episode": "03",
+  "dates": [
+    {"when": "師走二十日", "ref": "L2324"},
+    {"when": "師走二十一日", "ref": "L2502"},
+    {"when": "雪の季節。雪原を進み、雪が解けるまで街にいる", "ref": "L2601"},
+    {"when": "一週間の雪原行の後", "ref": "L2524"}
+  ],
+  "characters": [
+    {
+      "name": "ダリオ",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [
+        {"feature": "短く命令する", "example": "「止まれ」", "ref": "L2279"},
+        {"feature": "荒っぽく簡潔な口調", "example": "「足はある」", "ref": "L2297"}
+      ],
+      "looks": [
+        {"feature": "左肩を負傷し、外套ごと皮膚を裂かれた。肩に布を巻いている", "ref": "L2223"},
+        {"feature": "肩の布は血を吸って固まり、板のようになっている", "ref": "L2328"}
+      ],
+      "traits": [
+        {"feature": "剣を抜かず鞘で雪の天井を掘る", "ref": "L2127"},
+        {"feature": "負傷しても一行の最後に雪原へ出る", "ref": "L2231"},
+        {"feature": "白い毛に触れず、持ち主がいるなら探しに来ると言う", "ref": "L2400"}
+      ],
+      "whereabouts": [
+        {"when": "魔物との戦闘時", "where": "雪の天井の下の狭い廊下", "doing": "鞘で雪を掘り、獣と戦う", "ref": "L2151"},
+        {"when": "戦闘後", "where": "雪原", "doing": "ヨーストをそりに乗せ、一行を南へ導く", "ref": "L2257"},
+        {"when": "師走二十日の夜", "where": "枯木の並びと岩の風除けの野営地", "doing": "見張り番の岩の上に座る", "ref": "L2470"},
+        {"when": "師走二十一日", "where": "北門、錆び釘亭", "doing": "街に戻り、食事をする", "ref": "L2502"}
+      ]
+    },
+    {
+      "name": "ガズ",
+      "aliases": [],
+      "first_person": [{"word": "私", "ref": "L2604"}],
+      "calls_others": [],
+      "speech": [
+        {"feature": "熱を感知する説明をする", "example": "「熱は、薄い」", "ref": "L2352"},
+        {"feature": "真顔で冗談めいた助言をする", "example": "「そのほうが、暖かい」", "ref": "L2436"}
+      ],
+      "looks": [
+        {"feature": "鱗のある指、太い尻尾を持つ", "ref": "L2141"},
+        {"feature": "蜥蜴の身体", "ref": "L2446"}
+      ],
+      "traits": [
+        {"feature": "石の床に指の腹を当て、音や熱を探る", "ref": "L2141"},
+        {"feature": "火の近くで尻尾を丸めて目を閉じる", "ref": "L2446"}
+      ],
+      "whereabouts": [
+        {"when": "魔物との戦闘時", "where": "廊下", "doing": "獣の位置を知らせ、尻尾で鼻先を殴る", "ref": "L2183"},
+        {"when": "師走二十日の夜", "where": "野営地の焚き火の近く", "doing": "尻尾を丸めて休む", "ref": "L2446"},
+        {"when": "街に戻った後", "where": "錆び釘亭の竈のそばの石", "doing": "尻尾を丸めて座る", "ref": "L2544"},
+        {"when": "冬の間", "where": "組合の馬小屋の屋根", "doing": "そこにいるつもりだと言う", "ref": "L2604"}
+      ]
+    },
+    {
+      "name": "リナ",
+      "aliases": ["彼女"],
+      "first_person": [{"word": "あたし", "ref": "L2303"}, {"word": "私", "ref": "L2602"}],
+      "calls_others": [],
+      "speech": [
+        {"feature": "丁寧語を使う", "example": "「雪、払えば食えるやつです」", "ref": "L2253"},
+        {"feature": "くだけた言い方をする", "example": "「溶けちゃった」", "ref": "L2199"},
+        {"feature": "計算に夢中になる", "example": "「六百四十杯！」", "ref": "L2558"}
+      ],
+      "looks": [
+        {"feature": "杖を持つ", "ref": "L2137"},
+        {"feature": "転んで鼻を擦りむき、鼻の穴に雪が詰まる", "ref": "L2428"}
+      ],
+      "traits": [
+        {"feature": "杖の火で雪を溶かし、凍らせて獣の足を止める", "ref": "L2191"},
+        {"feature": "転んだ後も杖が折れていないかを気にする", "ref": "L2430"},
+        {"feature": "金貨と銅貨を数え、使い道を考える", "ref": "L2553"}
+      ],
+      "whereabouts": [
+        {"when": "魔物との戦闘時", "where": "廊下", "doing": "杖で火と氷の魔法を使う", "ref": "L2191"},
+        {"when": "師走二十日の夜", "where": "野営地", "doing": "そりを誘導中に雪へ転ぶ", "ref": "L2416"},
+        {"when": "街に戻った後", "where": "錆び釘亭のカウンター", "doing": "金貨を数える", "ref": "L2553"},
+        {"when": "街に戻った後", "where": "街", "doing": "組合にいると言う", "ref": "L2602"}
+      ]
+    },
+    {
+      "name": "フィン",
+      "aliases": [],
+      "first_person": [{"word": "私", "ref": "L2299"}],
+      "calls_others": [],
+      "speech": [
+        {"feature": "丁寧語で話す", "example": "「ゆっくり飲んでください」", "ref": "L2336"},
+        {"feature": "参事会への報告を申し出る", "example": "「私から報告する」", "ref": "L2299"}
+      ],
+      "looks": [
+        {"feature": "帳簿の小箱を抱える", "ref": "L2332"}
+      ],
+      "traits": [
+        {"feature": "自分の袖を裂いてダリオの肩に巻く", "ref": "L2293"},
+        {"feature": "帳簿の小箱を懐に入れて手で押さえる", "ref": "L2257"}
+      ],
+      "whereabouts": [
+        {"when": "魔物との戦闘時", "where": "廊下の奥", "doing": "火打石と松明を持つ", "ref": "L2147"},
+        {"when": "師走二十日の夜", "where": "野営地", "doing": "ダリオの肩に布を巻く", "ref": "L2293"},
+        {"when": "師走二十一日", "where": "錆び釘亭", "doing": "参事会へ帳簿と小箱を届けると話す", "ref": "L2575"}
+      ]
+    },
+    {
+      "name": "アルドリック",
+      "aliases": ["徴税役", "税の御方"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [
+        {"feature": "嗄れた声で水を求める", "example": "「水を」", "ref": "L2334"}
+      ],
+      "looks": [
+        {"feature": "足を引きずり、背筋を伸ばして歩く", "ref": "L2508"}
+      ],
+      "traits": [
+        {"feature": "地下の石の部屋に二週間籠もっていた", "ref": "L2332"},
+        {"feature": "帳簿を引き取って渡すと言う", "ref": "L2577"}
+      ],
+      "whereabouts": [
+        {"when": "雪原を南へ移動中", "where": "そりの後ろ", "doing": "よろめきながら歩く", "ref": "L2332"},
+        {"when": "街に戻った後", "where": "錆び釘亭", "doing": "帳簿を引き取ると話す", "ref": "L2577"}
+      ]
+    },
+    {
+      "name": "ヨースト",
+      "aliases": ["若い男", "息子"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [
+        {"feature": "負傷して担架やそりに乗せられ、毛布にくるまれる", "ref": "L2330"},
+        {"feature": "顔色はまだ悪いが、目は生き返っている", "ref": "L2544"}
+      ],
+      "traits": [
+        {"feature": "父の肩に寄りかかって干し肉を少しずつ齧る", "ref": "L2442"}
+      ],
+      "whereabouts": [
+        {"when": "戦闘後", "where": "担架の上からそりへ", "doing": "運ばれる", "ref": "L2147"},
+        {"when": "師走二十日の夜", "where": "野営地", "doing": "父の肩に寄りかかって食べる", "ref": "L2442"},
+        {"when": "街に戻った後", "where": "錆び釘亭", "doing": "椅子に足を伸ばして湯冷ましを飲む", "ref": "L2544"}
+      ]
+    },
+    {
+      "name": "ベルント",
+      "aliases": ["初老の商人", "父"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [
+        {"feature": "息子と自分の借りを述べる", "example": "「あなた方には借りるばかりだ」", "ref": "L2583"}
+      ],
+      "looks": [
+        {"feature": "雪と疲労で顔が濁っている", "ref": "L2330"}
+      ],
+      "traits": [
+        {"feature": "そりの綱と息子の足首を握り続ける", "ref": "L2330"},
+        {"feature": "荷の紐を一度だけ触る", "ref": "L2551"}
+      ],
+      "whereabouts": [
+        {"when": "雪原を移動中", "where": "そりの傍ら", "doing": "綱を持ち、息子の足首を握って歩く", "ref": "L2330"},
+        {"when": "街に戻った後", "where": "錆び釘亭", "doing": "礼の銀貨を渡し、息子を支える", "ref": "L2548"}
+      ]
+    },
+    {
+      "name": "ケス",
+      "aliases": ["鴉"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [
+        {"feature": "短く状況を報告する", "example": "「跡は西」", "ref": "L2261"}
+      ],
+      "looks": [
+        {"feature": "鴉。翼を広げ、飛ぶ", "ref": "L2366"}
+      ],
+      "traits": [
+        {"feature": "枯木に登って西と北を見張る", "ref": "L2259"},
+        {"feature": "枝から人の声のように発言する", "ref": "L2261"}
+      ],
+      "whereabouts": [
+        {"when": "戦闘後", "where": "枯木の枝", "doing": "西と北をのぞく", "ref": "L2259"},
+        {"when": "師走二十日の夕方", "where": "切り株と棘草の茂み", "doing": "白い毛を示す", "ref": "L2366"},
+        {"when": "街に戻った後", "where": "錆び釘亭の梁", "doing": "止まって湯気で羽を暖める", "ref": "L2544"},
+        {"when": "冬の間", "where": "街のゴミ捨て場", "doing": "そこにいると言う", "ref": "L2603"}
+      ]
+    },
+    {
+      "name": "トマス",
+      "aliases": ["門番"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [
+        {"feature": "驚いて人数を尋ねる", "example": "「なんだ、この人数は」", "ref": "L2505"},
+        {"feature": "丁寧に案内する", "example": "「入りたまえ」", "ref": "L2515"}
+      ],
+      "looks": [
+        {"feature": "若い目をしている", "ref": "L2502"}
+      ],
+      "traits": [
+        {"feature": "鴉にぎくりと身を引く", "ref": "L2513"},
+        {"feature": "そりが通れるよう門を大きく開ける", "ref": "L2515"}
+      ],
+      "whereabouts": [
+        {"when": "師走二十一日、朝六つの鐘の後", "where": "北門", "doing": "一行を迎えて門を開ける", "ref": "L2502"}
+      ]
+    },
+    {
+      "name": "マスター",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [
+        {"feature": "丁寧語を使う", "example": "「お帰りなさいませ」", "ref": "L2531"},
+        {"feature": "丁寧語を使う", "example": "「当然でございます」", "ref": "L2542"}
+      ],
+      "looks": [
+        {"feature": "カウンターの中にいて、手ぬぐいを肩で直す", "ref": "L2530"}
+      ],
+      "traits": [
+        {"feature": "ダリオの傷を見て湯冷ましを添える", "ref": "L2535"}
+      ],
+      "whereabouts": [
+        {"when": "師走二十一日", "where": "錆び釘亭のカウンター", "doing": "煮込みと麦酒を運ぶ", "ref": "L2535"}
+      ]
+    }
+  ],
+  "places": [
+    {
+      "name": "雪の天井の下の廊下",
+      "layout": [
+        {"feature": "入口の上の雪の天井は薄く、掘ると吹き抜けになる", "ref": "L2131"},
+        {"feature": "廊下は獣にも人にも狭すぎる", "ref": "L2135"},
+        {"feature": "石積みの壁があり、獣が通過して崩す", "ref": "L2175"}
+      ],
+      "scenery": [
+        {"feature": "松明の火の中を石の粉と雪が舞う", "ref": "L2175"},
+        {"feature": "白い毛皮の獣が雪の穴から滑り込む", "ref": "L2159"}
+      ],
+      "weather_season": [
+        {"feature": "雪が天井を作り、入口に積もっている", "ref": "L2131"}
+      ]
+    },
+    {
+      "name": "雪原",
+      "layout": [
+        {"feature": "掘った穴から雪原へ出る", "ref": "L2221"},
+        {"feature": "戦いの跡は塚の裏にあり、穴が口を開けている", "ref": "L2263"},
+        {"feature": "十歩先に獣がいる", "ref": "L2239"}
+      ],
+      "scenery": [
+        {"feature": "氷の破片、黒い血、踏み荒らされた雪がある", "ref": "L2265"},
+        {"feature": "六本指の足跡と引きずった溝が西の茂みに向かう", "ref": "L2271"}
+      ],
+      "weather_season": [
+        {"feature": "外は晴れ、昼の雪の照り返しが目を刺す", "ref": "L2233"},
+        {"feature": "雪面は風に削られ硬い灰色の殻になっている", "ref": "L2326"},
+        {"feature": "風が足跡の縁を削りはじめる", "ref": "L2315"}
+      ]
+    },
+    {
+      "name": "枯木と棘草の茂み",
+      "layout": [
+        {"feature": "枯木の並びに荷馬が繋がれ、そりがある", "ref": "L2249"},
+        {"feature": "棘草の茂みは西にあり、枯木の梢から見える", "ref": "L2362"}
+      ],
+      "scenery": [
+        {"feature": "棘に拳ほどの白い毛が絡んでいる", "ref": "L2370"}
+      ],
+      "weather_season": [
+        {"feature": "棘草は枯れ、周囲は雪原", "ref": "L2366"}
+      ]
+    },
+    {
+      "name": "雪原の野営地",
+      "layout": [
+        {"feature": "枯木の並びの陰、岩が風除けになる場所で野営", "ref": "L2414"},
+        {"feature": "見張り番が座る岩がある", "ref": "L2470"}
+      ],
+      "scenery": [
+        {"feature": "焚き火で肉を焼き、パンとスープを食べる", "ref": "L2440"},
+        {"feature": "東に赤い星、北に白い星が並ぶ", "ref": "L2450"}
+      ],
+      "weather_season": [
+        {"feature": "夜空が暗く、星がこの一週間で最も澄んでいる", "ref": "L2448"},
+        {"feature": "首が冷えるほどの寒さ", "ref": "L2456"}
+      ]
+    },
+    {
+      "name": "北門",
+      "layout": [
+        {"feature": "重い扉が内側へ引かれ、門の上に狭間がある", "ref": "L2502"},
+        {"feature": "門の内側に人だかりができかける", "ref": "L2522"}
+      ],
+      "scenery": [
+        {"feature": "門番が一行とそりの荷を確認する", "ref": "L2502"}
+      ],
+      "weather_season": [
+        {"feature": "師走二十一日の朝、雪をかき分けて一行が現れる", "ref": "L2502"}
+      ]
+    },
+    {
+      "name": "街の中",
+      "layout": [
+        {"feature": "石畳の道があり、そりが通れる", "ref": "L2515"},
+        {"feature": "路地の角に雪を担いだ男がいる", "ref": "L2607"}
+      ],
+      "scenery": [
+        {"feature": "雪解け水、泥、馬の糞の匂いがする", "ref": "L2524"},
+        {"feature": "子どもたちが雪玉を投げている", "ref": "L2607"}
+      ],
+      "weather_season": [
+        {"feature": "街にも雪があり、雪はまだ降っていない", "ref": "L2611"}
+      ]
+    },
+    {
+      "name": "錆び釘亭",
+      "layout": [
+        {"feature": "カウンター、長椅子、テーブル、壁際の席がある", "ref": "L2534"},
+        {"feature": "竈のそばに石があり、天井には煤けた梁がある", "ref": "L2538"}
+      ],
+      "scenery": [
+        {"feature": "湿った暖かさと煮込んだ肉の匂い", "ref": "L2528"},
+        {"feature": "煮込みの鍋から湯気が上り、天井の梁へ消える", "ref": "L2538"}
+      ],
+      "weather_season": [
+        {"feature": "外は雪の季節だが、店内は暖かい", "ref": "L2528"}
+      ]
+    },
+    {
+      "name": "参事会",
+      "layout": [],
+      "scenery": [],
+      "weather_season": []
+    },
+    {
+      "name": "組合の馬小屋",
+      "layout": [
+        {"feature": "馬小屋の屋根がある", "ref": "L2604"}
+      ],
+      "scenery": [],
+      "weather_season": [
+        {"feature": "冬でも屋根は日当たりがよいとガズが言う", "ref": "L2604"}
+      ]
+    }
+  ],
+  "season_mismatch": [],
+  "inner_inconsistencies": []
+}

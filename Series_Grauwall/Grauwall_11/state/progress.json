@@ -1,18 +1,12 @@
 {
-  "phase": "final",
+  "phase": "done",
   "design_state": "draft",
   "design_attempts": 0,
   "canon_sha256": "65c79758a2ff30f1cb23ed30799688a3ec1b5b392f52516639bc064de9de524b",
   "current": 16,
   "final_state": "review",
   "final_reopened": false,
-  "escalation": {
-    "code": "FINAL_REVIEW_FAILED",
-    "detail": "最終審査で重大な指摘あり（output/final_report.md 参照）",
-    "hint": "該当章を `reset-chapter N` で巻き戻すか、原稿のまま完成とするなら `resolve --done`",
-    "phase": "final",
-    "chapter": 16
-  },
+  "escalation": null,
   "chapters": {
     "1": {
       "state": "done",

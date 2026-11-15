@@ -1,0 +1,7 @@
+ep06_01 ok 115s in=26545 out=6783
+ep06_02 ok 108s in=25080 out=6008
+ep06_03 ok 110s in=40286 out=11784
+ep06_04 FAILED KeyError('choices')
+ep06_05 ok 146s in=33367 out=10614
+ep06_06 ok 116s in=26619 out=6450
+ep06_07 FAILED KeyError('choices')

@@ -1,0 +1,727 @@
+{
+ "episode": "07",
+ "dates": [
+  {
+   "when": "祝福の日の夜",
+   "ref": "L1534"
+  },
+  {
+   "when": "去年の霜月",
+   "ref": "L1543"
+  },
+  {
+   "when": "去年の師走",
+   "ref": "L1677"
+  },
+  {
+   "when": "春",
+   "ref": "L1709"
+  },
+  {
+   "when": "ひと月前の春の議",
+   "ref": "L1738"
+  },
+  {
+   "when": "冬を越した葡萄酒",
+   "ref": "L1732"
+  },
+  {
+   "when": "夜半の鐘の少し前",
+   "ref": "L1777"
+  },
+  {
+   "when": "夜半",
+   "ref": "L1800"
+  }
+ ],
+ "characters": [
+  {
+   "name": "俺（酒場番）",
+   "aliases": [
+    "酒場番さん"
+   ],
+   "first_person": [
+    {
+     "word": "俺",
+     "ref": "L1541"
+    }
+   ],
+   "calls_others": [
+    {
+     "target": "上町の夫人",
+     "word": "夫人",
+     "ref": "L1571"
+    },
+    {
+     "target": "隊長",
+     "word": "隊長",
+     "ref": "L1655"
+    }
+   ],
+   "speech": [
+    {
+     "feature": "客には丁寧な口調",
+     "example": "いらっしゃいませ",
+     "ref": "L1571"
+    },
+    {
+     "feature": "丁寧な口調",
+     "example": "おやめください",
+     "ref": "L1541"
+    },
+    {
+     "feature": "短く答える",
+     "example": "さて",
+     "ref": "L1601"
+    }
+   ],
+   "looks": [],
+   "traits": [
+    {
+     "feature": "客を客として迎える",
+     "ref": "L1569"
+    },
+    {
+     "feature": "杯を拭きながら、言うべきことを言わない",
+     "ref": "L1615"
+    },
+    {
+     "feature": "夫人の卵の底の一つをよける",
+     "ref": "L1633"
+    },
+    {
+     "feature": "店の古い毛布をヴィルマにかける",
+     "ref": "L1804"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "祝福の日の夜",
+     "where": "酒場のカウンター内",
+     "doing": "客を迎え、杯を拭く",
+     "ref": "L1541"
+    },
+    {
+     "when": "祝福の日の夜",
+     "where": "酒場",
+     "doing": "夫人に葡萄酒と卵を出す",
+     "ref": "L1575"
+    }
+   ]
+  },
+  {
+   "name": "ダリオ",
+   "aliases": [],
+   "first_person": [
+    {
+     "word": "俺",
+     "ref": "L1719"
+    }
+   ],
+   "calls_others": [
+    {
+     "target": "上町の夫人",
+     "word": "奥方",
+     "ref": "L1607"
+    },
+    {
+     "target": "執事ヘルマン",
+     "word": "執事さん",
+     "ref": "L1579"
+    }
+   ],
+   "speech": [
+    {
+     "feature": "くだけた口調",
+     "example": "味見は、俺が最初だ",
+     "ref": "L1719"
+    },
+    {
+     "feature": "髭の味もすると冗談を言う",
+     "example": "髭の味もする",
+     "ref": "L1724"
+    }
+   ],
+   "looks": [
+    {
+     "feature": "左の髭の先が蝋燭で焦げ、右より短い",
+     "ref": "L1538"
+    }
+   ],
+   "traits": [
+    {
+     "feature": "葡萄酒が顔にかかると髭を舐める",
+     "ref": "L1717"
+    },
+    {
+     "feature": "樽の近くまで椅子をずらしていた",
+     "ref": "L1715"
+    },
+    {
+     "feature": "悪気があったことはたぶん一度もない",
+     "ref": "L1605"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "祝福の日の夜",
+     "where": "酒場のカウンター端",
+     "doing": "飲んでいる",
+     "ref": "L1538"
+    },
+    {
+     "when": "樽の栓を抜いたとき",
+     "where": "樽のすぐ近く",
+     "doing": "葡萄酒を顔に浴びる",
+     "ref": "L1715"
+    }
+   ]
+  },
+  {
+   "name": "リナ",
+   "aliases": [],
+   "first_person": [],
+   "calls_others": [],
+   "speech": [],
+   "looks": [],
+   "traits": [
+    {
+     "feature": "日当の銀貨を銅貨に崩せないか尋ねる",
+     "ref": "L1545"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "祝福の日の夜",
+     "where": "酒場の奥の卓",
+     "doing": "日当の銀貨二枚を卓に並べる",
+     "ref": "L1545"
+    }
+   ]
+  },
+  {
+   "name": "ケス",
+   "aliases": [],
+   "first_person": [],
+   "calls_others": [],
+   "speech": [],
+   "looks": [],
+   "traits": [
+    {
+     "feature": "一度だけ目を開けて、また閉じる",
+     "ref": "L1638"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "祝福の日の夜",
+     "where": "梁の下",
+     "doing": "目を閉じている",
+     "ref": "L1547"
+    }
+   ]
+  },
+  {
+   "name": "ヴィルマ",
+   "aliases": [],
+   "first_person": [],
+   "calls_others": [],
+   "speech": [],
+   "looks": [
+    {
+     "feature": "首から組合の札を下げ、革紐はまだ硬そう",
+     "ref": "L1547"
+    },
+    {
+     "feature": "布の包みを持っている。包みは割符の包み",
+     "ref": "L1802"
+    }
+   ],
+   "traits": [
+    {
+     "feature": "上町の夫人を見ないふりするのがまだうまくない",
+     "ref": "L1640"
+    },
+    {
+     "feature": "店の隅で眠り、包みを枕にする",
+     "ref": "L1802"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "祝福の日の夜",
+     "where": "店の隅の長椅子",
+     "doing": "包みに手を置いて麦酒を一杯置いている",
+     "ref": "L1547"
+    },
+    {
+     "when": "最後の客が帰った後",
+     "where": "店の隅の長椅子",
+     "doing": "包みを枕に眠る",
+     "ref": "L1802"
+    }
+   ]
+  },
+  {
+   "name": "上町の夫人",
+   "aliases": [
+    "夫人",
+    "奥方"
+   ],
+   "first_person": [
+    {
+     "word": "私",
+     "ref": "L1736"
+    }
+   ],
+   "calls_others": [
+    {
+     "target": "酒場番",
+     "word": "酒場番さん",
+     "ref": "L1573"
+    },
+    {
+     "target": "組合長エーリカ",
+     "word": "エーリカ",
+     "ref": "L1664"
+    },
+    {
+     "target": "隊長",
+     "word": "隊長",
+     "ref": "L1650"
+    }
+   ],
+   "speech": [
+    {
+     "feature": "低い声",
+     "example": "葡萄酒を。この店で",
+     "ref": "L1573"
+    },
+    {
+     "feature": "「〜わ」の語尾を使う",
+     "example": "知っているわ",
+     "ref": "L1740"
+    }
+   ],
+   "looks": [
+    {
+     "feature": "栗色の髪を結い上げ、祝福の日の濃い色の衣",
+     "ref": "L1565"
+    },
+    {
+     "feature": "灰色の革の手袋をしている",
+     "ref": "L1557"
+    }
+   ],
+   "traits": [
+    {
+     "feature": "葡萄酒を一口飲んでも表情を変えない",
+     "ref": "L1575"
+    },
+    {
+     "feature": "卵を一口で食べる",
+     "ref": "L1637"
+    },
+    {
+     "feature": "樽の札を読み、三人を指す",
+     "ref": "L1677"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "祝福の日の夜",
+     "where": "酒場のカウンター前",
+     "doing": "葡萄酒を飲む",
+     "ref": "L1567"
+    },
+    {
+     "when": "夜半の鐘の少し前",
+     "where": "酒場",
+     "doing": "立ち上がって帰る",
+     "ref": "L1777"
+    }
+   ]
+  },
+  {
+   "name": "ヘルマン",
+   "aliases": [
+    "執事"
+   ],
+   "first_person": [],
+   "calls_others": [],
+   "speech": [
+    {
+     "feature": "簡潔で事務的な口調",
+     "example": "勤務中です",
+     "ref": "L1583"
+    }
+   ],
+   "looks": [
+    {
+     "feature": "白いハンカチを鼻に当てている",
+     "ref": "L1555"
+    }
+   ],
+   "traits": [
+    {
+     "feature": "勤務中だと言って酒を断る",
+     "ref": "L1583"
+    },
+    {
+     "feature": "夫人の帰りに戸口の壁から背を離す",
+     "ref": "L1779"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "祝福の日の夜",
+     "where": "戸口の脇の壁際",
+     "doing": "壁を背にして立つ",
+     "ref": "L1591"
+    },
+    {
+     "when": "夜半の鐘の少し前",
+     "where": "酒場の戸口",
+     "doing": "夫人と帰る",
+     "ref": "L1779"
+    }
+   ]
+  },
+  {
+   "name": "隊長",
+   "aliases": [],
+   "first_person": [
+    {
+     "word": "私",
+     "ref": "L1736"
+    }
+   ],
+   "calls_others": [
+    {
+     "target": "上町の夫人",
+     "word": "夫人",
+     "ref": "L1650"
+    }
+   ],
+   "speech": [
+    {
+     "feature": "只酒は飲まないと言う",
+     "example": "私の分は、只酒じゃない",
+     "ref": "L1736"
+    }
+   ],
+   "looks": [
+    {
+     "feature": "祝福の日の警備の外套を着ていた",
+     "ref": "L1646"
+    }
+   ],
+   "traits": [
+    {
+     "feature": "夫人の隣に立ち、座らない",
+     "ref": "L1648"
+    },
+    {
+     "feature": "頼んでいない杯を置かれても何も頼まない",
+     "ref": "L1655"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "祝福の日の夜",
+     "where": "酒場のカウンター前",
+     "doing": "夫人の隣に立つ",
+     "ref": "L1648"
+    },
+    {
+     "when": "夜半の鐘の少し前",
+     "where": "夜の通り",
+     "doing": "外套の留め金を留めずに帰る",
+     "ref": "L1788"
+    }
+   ]
+  },
+  {
+   "name": "組合長（エーリカ）",
+   "aliases": [
+    "エーリカ"
+   ],
+   "first_person": [],
+   "calls_others": [
+    {
+     "target": "上町の夫人",
+     "word": "夫人",
+     "ref": "L1663"
+    },
+    {
+     "target": "隊長",
+     "word": "隊長",
+     "ref": "L1663"
+    }
+   ],
+   "speech": [
+    {
+     "feature": "「〜わ」の語尾を使う",
+     "example": "するしかないわ",
+     "ref": "L1761"
+    }
+   ],
+   "looks": [
+    {
+     "feature": "片足を少し引いて歩く",
+     "ref": "L1659"
+    }
+   ],
+   "traits": [
+    {
+     "feature": "樽の栓を迷わず抜く",
+     "ref": "L1711"
+    },
+    {
+     "feature": "杯を上げるが何も言わない",
+     "ref": "L1742"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "祝福の日の夜",
+     "where": "二階から酒場へ下りる",
+     "doing": "手すりに手を置いて一段ずつ下りる",
+     "ref": "L1659"
+    },
+    {
+     "when": "祝福の日の夜",
+     "where": "酒場の樽の前",
+     "doing": "樽の栓を抜く",
+     "ref": "L1707"
+    }
+   ]
+  },
+  {
+   "name": "ハク",
+   "aliases": [],
+   "first_person": [],
+   "calls_others": [],
+   "speech": [],
+   "looks": [],
+   "traits": [
+    {
+     "feature": "チィが歌を外すと止まり、歌い直す",
+     "ref": "L1808"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "祭りの夜",
+     "where": "酒場裏の路地",
+     "doing": "チィと歌いながら谷へ帰る",
+     "ref": "L1808"
+    }
+   ]
+  },
+  {
+   "name": "チィ",
+   "aliases": [],
+   "first_person": [],
+   "calls_others": [],
+   "speech": [],
+   "looks": [],
+   "traits": [
+    {
+     "feature": "月の歌の同じところで音を外す",
+     "ref": "L1808"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "祭りの夜",
+     "where": "酒場裏の路地",
+     "doing": "ハクと歌いながら谷へ帰る",
+     "ref": "L1808"
+    }
+   ]
+  }
+ ],
+ "places": [
+  {
+   "name": "酒場",
+   "layout": [
+    {
+     "feature": "カウンターの前に立ち飲み客が二重に並ぶ",
+     "ref": "L1536"
+    },
+    {
+     "feature": "奥に卓がある",
+     "ref": "L1545"
+    },
+    {
+     "feature": "梁の下にケスがいる",
+     "ref": "L1547"
+    },
+    {
+     "feature": "店の隅に長椅子がある",
+     "ref": "L1547"
+    },
+    {
+     "feature": "酒樽の陰の柱に大釘が三本交差して打たれている",
+     "ref": "L1611"
+    },
+    {
+     "feature": "二階へ続く階段がある",
+     "ref": "L1659"
+    },
+    {
+     "feature": "樽はカウンターの脇にあり、縄に札が結ばれている",
+     "ref": "L1674"
+    },
+    {
+     "feature": "表の戸と裏口がある",
+     "ref": "L1806"
+    }
+   ],
+   "scenery": [
+    {
+     "feature": "祝福の日の夜は卓が埋まる",
+     "ref": "L1534"
+    },
+    {
+     "feature": "カウンターに赤い卵の瓶がある",
+     "ref": "L1627"
+    },
+    {
+     "feature": "椅子を卓に上げる乾いた音が夜半の店に続く",
+     "ref": "L1800"
+    }
+   ],
+   "weather_season": [
+    {
+     "feature": "祝福の日の夜",
+     "ref": "L1534"
+    }
+   ]
+  },
+  {
+   "name": "下町の通り・角",
+   "layout": [
+    {
+     "feature": "下町の角ごとに笛を吹く者がいる",
+     "ref": "L1549"
+    }
+   ],
+   "scenery": [
+    {
+     "feature": "外から笛の音が聞こえる",
+     "ref": "L1549"
+    }
+   ],
+   "weather_season": [
+    {
+     "feature": "祭りの夜",
+     "ref": "L1549"
+    }
+   ]
+  },
+  {
+   "name": "大聖堂",
+   "layout": [
+    {
+     "feature": "祭壇の脇に釘の石がある",
+     "ref": "L1763"
+    }
+   ],
+   "scenery": [
+    {
+     "feature": "組合の焼き印に似た石の板が捧げられた",
+     "ref": "L1607"
+    }
+   ],
+   "weather_season": []
+  },
+  {
+   "name": "南の川港",
+   "layout": [],
+   "scenery": [
+    {
+     "feature": "夫人が温かい石の噂を聞いた場所",
+     "ref": "L1752"
+    }
+   ],
+   "weather_season": []
+  },
+  {
+   "name": "北の古い砦",
+   "layout": [],
+   "scenery": [
+    {
+     "feature": "組合の一行が古い砦を見に行く予定",
+     "ref": "L1758"
+    }
+   ],
+   "weather_season": [
+    {
+     "feature": "峠の雪が解けたら北へ行く",
+     "ref": "L1758"
+    }
+   ]
+  },
+  {
+   "name": "手習い所",
+   "layout": [
+    {
+     "feature": "三人が同じ部屋で同じ歌を習った",
+     "ref": "L1765"
+    },
+    {
+     "feature": "部屋に窓がある",
+     "ref": "L1765"
+    }
+   ],
+   "scenery": [
+    {
+     "feature": "先生の手袋について話す",
+     "ref": "L1765"
+    }
+   ],
+   "weather_season": []
+  },
+  {
+   "name": "谷へ向かう道・裏の路地",
+   "layout": [
+    {
+     "feature": "酒場の裏口の外から裏の路地へ続く",
+     "ref": "L1806"
+    }
+   ],
+   "scenery": [
+    {
+     "feature": "ハクとチィの足音と歌が遠ざかる",
+     "ref": "L1808"
+    }
+   ],
+   "weather_season": [
+    {
+     "feature": "祭りの夜",
+     "ref": "L1808"
+    }
+   ]
+  },
+  {
+   "name": "夜の通り",
+   "layout": [],
+   "scenery": [
+    {
+     "feature": "隊長が留め金を留めずに出ていく",
+     "ref": "L1788"
+    }
+   ],
+   "weather_season": [
+    {
+     "feature": "夜半の鐘の少し前",
+     "ref": "L1777"
+    }
+   ]
+  }
+ ],
+ "season_mismatch": [],
+ "inner_inconsistencies": []
+}

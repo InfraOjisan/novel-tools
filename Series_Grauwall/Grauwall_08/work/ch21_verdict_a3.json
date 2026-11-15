@@ -1,0 +1,19 @@
+{
+  "chars": 2901,
+  "mech": [],
+  "review": {
+    "pass": true,
+    "slots_found": {
+      "K1": "recovered"
+    },
+    "violations": [
+      {
+        "severity": "low",
+        "type": "typo",
+        "detail": "「彼は、もう一步、踏み出した」の「一步」は日本語の表記として誤りです。",
+        "fix": "「彼は、もう一歩、踏み出した」に修正する。"
+      }
+    ]
+  },
+  "problems": []
+}

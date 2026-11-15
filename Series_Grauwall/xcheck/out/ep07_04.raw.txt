@@ -1,0 +1,566 @@
+{
+  "episode": "07",
+  "dates": [
+    {"when": "灰壁暦三一三年弥生十四日", "ref": "L1180"},
+    {"when": "弥生の晦日", "ref": "L1165"},
+    {"when": "卯月六日の夜十の鐘のあと", "ref": "L1163"},
+    {"when": "卯月七日", "ref": "L1198"},
+    {"when": "卯月八日", "ref": "L1308"},
+    {"when": "祝福の日", "ref": "L1299"},
+    {"when": "去年の秋", "ref": "L1515"},
+    {"when": "春", "ref": "L1436"},
+    {"when": "峠の雪が解ける皐月", "ref": "L1169"}
+  ],
+  "characters": [
+    {
+      "name": "エーリカ",
+      "aliases": ["組合長", "エーリカ・ランゲ"],
+      "first_person": [],
+      "calls_others": [
+        {"target": "パウル", "word": "パウルさん", "ref": "L1230"}
+      ],
+      "speech": [
+        {"feature": "「わ」終わりの口調", "example": "貸したつもりはないわ", "ref": "L1209"}
+      ],
+      "looks": [],
+      "traits": [
+        {"feature": "顔に何も出さない", "ref": "L1228"},
+        {"feature": "規約と登録簿に照らしてパウルを受け入れる", "ref": "L1256"},
+        {"feature": "七歩歩くことを封を切る前の習慣としている", "ref": "L1188"}
+      ],
+      "whereabouts": [
+        {"when": "卯月六日夜", "where": "二階の部屋", "doing": "普請方の封を切る", "ref": "L1163"},
+        {"when": "今日の午後", "where": "普請方の石切場の事務所", "doing": "ローレンツに会い推挙状を受け取る", "ref": "L1167"},
+        {"when": "卯月七日の朝", "where": "組合の登録簿の前", "doing": "ヴィルマ、ブリギッテ、パウルの登録を扱う", "ref": "L1192"},
+        {"when": "昼すぎ", "where": "組合の一階奥の卓", "doing": "一行に請負状を読み上げる", "ref": "L1268"},
+        {"when": "夕方", "where": "場所の記載なし", "doing": "マグダに一筆書き、ザザに渡す", "ref": "L1297"}
+      ]
+    },
+    {
+      "name": "ローレンツ",
+      "aliases": ["普請方　ローレンツ"],
+      "first_person": [],
+      "calls_others": [
+        {"target": "エーリカ", "word": "組合長", "ref": "L1169"}
+      ],
+      "speech": [
+        {"feature": "道と峠の雪について言う", "example": "道は待ちません", "ref": "L1169"}
+      ],
+      "looks": [
+        {"feature": "爪のあいだに石の粉が詰まっている", "ref": "L1167"},
+        {"feature": "大きな手", "ref": "L1167"}
+      ],
+      "traits": [],
+      "whereabouts": [
+        {"when": "今日の午後", "where": "普請方の石切場の事務所", "doing": "エーリカに賢者の推挙状を渡す", "ref": "L1167"}
+      ]
+    },
+    {
+      "name": "ホルン",
+      "aliases": ["治安方　ホルン", "ホルン参事"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [
+        {"feature": "太い首", "ref": "L1466"}
+      ],
+      "traits": [],
+      "whereabouts": [
+        {"when": "祝福の日", "where": "大聖堂の祭壇前", "doing": "蝋燭を燭架に立て、ブラントの手を見る", "ref": "L1466"}
+      ]
+    },
+    {
+      "name": "ヴィルマ",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [
+        {"target": "エーリカ", "word": "（呼びかけなし）", "ref": "L1208"}
+      ],
+      "speech": [
+        {"feature": "短く言う", "example": "借りだね", "ref": "L1208"},
+        {"feature": "北の言い回しで返す", "example": "雪が解けたら、返す", "ref": "L1210"}
+      ],
+      "looks": [
+        {"feature": "職は盗賊、出身はカルトブルン", "ref": "L1198"},
+        {"feature": "背は低く、肩が広い", "ref": "L1330"},
+        {"feature": "新しい革紐の組合札を首から下げる", "ref": "L1330"}
+      ],
+      "traits": [
+        {"feature": "膝の上の布の包みに手を置く", "ref": "L1289"},
+        {"feature": "人波を肩で分けて道を作る", "ref": "L1389"},
+        {"feature": "元の場所に戻り、何も言わない", "ref": "L1395"}
+      ],
+      "whereabouts": [
+        {"when": "卯月七日", "where": "組合の登録簿の前", "doing": "登録し、誓約を立てる", "ref": "L1196"},
+        {"when": "昼すぎ", "where": "組合の一階奥の卓", "doing": "北へ行くのかエーリカに尋ねる", "ref": "L1284"},
+        {"when": "祝福の日", "where": "広場の北の角", "doing": "人波を分けて迷子の男の子を通す", "ref": "L1330"}
+      ]
+    },
+    {
+      "name": "ブリギッテ",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [
+        {"feature": "早口で誓願を言う", "example": "灯の前に、偽りなし", "ref": "L1250"}
+      ],
+      "looks": [
+        {"feature": "職は聖職者、出身はグラウヴァル下町", "ref": "L1214"},
+        {"feature": "袖をまくっている", "ref": "L1214"}
+      ],
+      "traits": [
+        {"feature": "誓願のあと少し照れたように袖を下ろし、すぐまた上げる", "ref": "L1250"}
+      ],
+      "whereabouts": [
+        {"when": "卯月七日", "where": "組合の登録簿の前", "doing": "登録され、灯火教会の誓願を立てる", "ref": "L1214"}
+      ]
+    },
+    {
+      "name": "パウル",
+      "aliases": ["白塔の賢者", "白塔から来た者"],
+      "first_person": [],
+      "calls_others": [
+        {"target": "エーリカ", "word": "（呼びかけなし）", "ref": "L1234"}
+      ],
+      "speech": [
+        {"feature": "丁寧で平らな声", "example": "書くことが、ありませんので", "ref": "L1236"}
+      ],
+      "looks": [
+        {"feature": "細い、若い男", "ref": "L1368"},
+        {"feature": "白い法衣を着ている", "ref": "L1368"}
+      ],
+      "traits": [
+        {"feature": "出身欄を速く書き、空欄は迷わず空ける", "ref": "L1224"},
+        {"feature": "名の欄だけ一画ずつ丁寧に書く", "ref": "L1226"},
+        {"feature": "呼ばれて半拍遅れて顔を上げる", "ref": "L1232"}
+      ],
+      "whereabouts": [
+        {"when": "卯月七日", "where": "組合の登録簿の前", "doing": "登録し、鉄の誓約を立てる", "ref": "L1216"},
+        {"when": "祝福の日", "where": "大聖堂の階段のいちばん端", "doing": "修道士の列の外で同じ方を向いて立つ", "ref": "L1368"}
+      ]
+    },
+    {
+      "name": "ダリオ",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [
+        {"feature": "働く前に分けるなと言う", "example": "まだ働いてない", "ref": "L1280"},
+        {"feature": "髭について冗談を言う", "example": "これで右と揃う", "ref": "L1356"}
+      ],
+      "looks": [
+        {"feature": "体が大きい", "ref": "L1328"},
+        {"feature": "左右の髭の長さが違う", "ref": "L1358"}
+      ],
+      "traits": [
+        {"feature": "押されて転びかけた子どもを受け止める", "ref": "L1350"}
+      ],
+      "whereabouts": [
+        {"when": "祝福の日", "where": "大聖堂の階段の下", "doing": "人波を受け止め、子どもを助ける", "ref": "L1328"}
+      ]
+    },
+    {
+      "name": "リナ",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [
+        {"feature": "前金の分け方を即座に計算する", "example": "一息だった", "ref": "L1276"}
+      ],
+      "looks": [],
+      "traits": [
+        {"feature": "子どもの前で銅貨を指の上で転がし、列を揃える", "ref": "L1332"}
+      ],
+      "whereabouts": [
+        {"when": "昼すぎ", "where": "組合の一階奥の卓", "doing": "前金の分け方を計算する", "ref": "L1274"},
+        {"when": "祝福の日", "where": "子らの列の脇", "doing": "銅貨を見せて子どもの列を整える", "ref": "L1332"}
+      ]
+    },
+    {
+      "name": "ケス",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [],
+      "traits": [
+        {"feature": "組合員ではなく、日当で北の空を見る雇い", "ref": "L1270"}
+      ],
+      "whereabouts": [
+        {"when": "昼すぎ", "where": "組合の一階奥の卓", "doing": "一行として集まる", "ref": "L1270"}
+      ]
+    },
+    {
+      "name": "マグダ",
+      "aliases": ["隊長"],
+      "first_person": [],
+      "calls_others": [
+        {"target": "アーデルハイト", "word": "アーデル", "ref": "L1413"},
+        {"target": "アーデルハイト", "word": "夫人", "ref": "L1409"}
+      ],
+      "speech": [
+        {"feature": "夫人を人前では夫人と呼ぶ", "example": "夫人", "ref": "L1409"}
+      ],
+      "looks": [],
+      "traits": [
+        {"feature": "ダリオに何も言わず、髭を焦がしに行かせない", "ref": "L1360"},
+        {"feature": "迷子の子に母親の前掛けの色を尋ねる", "ref": "L1386"}
+      ],
+      "whereabouts": [
+        {"when": "卯月八日朝六つの鐘", "where": "広場の真ん中", "doing": "祝福の日の警備を指揮する", "ref": "L1308"},
+        {"when": "祝福の儀のあと", "where": "大聖堂の階段の脇", "doing": "下りてくる人々を見てアーデルハイトと話す", "ref": "L1403"}
+      ]
+    },
+    {
+      "name": "ザザ",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [{"feature": "何も言わない", "example": "何も言わず", "ref": "L1301"}],
+      "looks": [],
+      "traits": [],
+      "whereabouts": [
+        {"when": "夕方", "where": "組合から下りていく", "doing": "エーリカの手紙を受け取って運ぶ", "ref": "L1301"}
+      ]
+    },
+    {
+      "name": "ドゥン",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [],
+      "traits": [],
+      "whereabouts": [
+        {"when": "昨夜", "where": "組合の中庭の井戸", "doing": "釣瓶を直す", "ref": "L1293"}
+      ]
+    },
+    {
+      "name": "トマス",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [{"target": "マグダ", "word": "隊長", "ref": "L1316"}],
+      "speech": [
+        {"feature": "数えた回数を答える", "example": "三回", "ref": "L1318"}
+      ],
+      "looks": [],
+      "traits": [
+        {"feature": "綱を三回数えたことを誇らしげにする", "ref": "L1320"}
+      ],
+      "whereabouts": [
+        {"when": "祝福の日の朝", "where": "広場", "doing": "綱を持ってきて数を報告する", "ref": "L1314"}
+      ]
+    },
+    {
+      "name": "ザイデル家の白い髭の老人",
+      "aliases": ["旧家の当主"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [
+        {"feature": "白い髭で杖をつく", "ref": "L1342"}
+      ],
+      "traits": [
+        {"feature": "石を見て杖の握りを一度握り直す", "ref": "L1456"}
+      ],
+      "whereabouts": [
+        {"when": "祝福の日", "where": "行列の先頭", "doing": "家の者に灰色の帳を持たせて歩く", "ref": "L1342"},
+        {"when": "祝福の日", "where": "大聖堂の前列", "doing": "台の上の石を見る", "ref": "L1456"}
+      ]
+    },
+    {
+      "name": "アーデルハイト",
+      "aliases": ["アーデル", "夫人", "ロズモンドの奥様"],
+      "first_person": [],
+      "calls_others": [
+        {"target": "アガタ", "word": "先生", "ref": "L1486"},
+        {"target": "ヘルマン", "word": "ヘルマン", "ref": "L1527"}
+      ],
+      "speech": [
+        {"feature": "「ちょうだい」終わりの依頼口調", "example": "錆び釘亭に寄ってちょうだい", "ref": "L1529"}
+      ],
+      "looks": [
+        {"feature": "灰色の革の手袋を着けている", "ref": "L1405"}
+      ],
+      "traits": [
+        {"feature": "誰が誰に話しかけないかを観察する", "ref": "L1499"},
+        {"feature": "不満の均衡を守ろうとする", "ref": "L1521"},
+        {"feature": "手袋の指を口元に当てる", "ref": "L1472"}
+      ],
+      "whereabouts": [
+        {"when": "祝福の日", "where": "大聖堂の身廊右手、上町の家々の席の前から三列目", "doing": "祝福の儀に参列する", "ref": "L1434"},
+        {"when": "祝福の日の午後", "where": "市参事会館の広間", "doing": "祝いの席で人々と話す", "ref": "L1499"},
+        {"when": "夜七つの鐘のあと", "where": "馬車の中", "doing": "ネーベルからの文を読み、錆び釘亭に寄るよう命じる", "ref": "L1503"}
+      ]
+    },
+    {
+      "name": "ザイデル参事",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [],
+      "traits": [
+        {"feature": "ロズモンド家の石の板を見て顔が少し固くなる", "ref": "L1454"},
+        {"feature": "石の板のことを口にしない", "ref": "L1501"}
+      ],
+      "whereabouts": [
+        {"when": "祝福の日", "where": "大聖堂", "doing": "ロズモンド家の石の板を見る", "ref": "L1454"},
+        {"when": "祝福の日の午後", "where": "市参事会館の広間", "doing": "アーデルハイトと話す", "ref": "L1501"}
+      ]
+    },
+    {
+      "name": "ブラント参事",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [
+        {"feature": "灰色の毛皮の襟を着けている", "ref": "L1462"}
+      ],
+      "traits": [
+        {"feature": "隣の短い蝋燭に手を伸ばしかけ、目が合うと自分の蝋燭に戻す", "ref": "L1464"}
+      ],
+      "whereabouts": [
+        {"when": "祝福の日", "where": "大聖堂の祭壇前の燭架", "doing": "蝋燭を立てる", "ref": "L1460"}
+      ]
+    },
+    {
+      "name": "アガタ",
+      "aliases": ["修道女アガタ", "先生"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [
+        {"feature": "捧げ物をよいと評する", "example": "よい捧げ物でした", "ref": "L1487"}
+      ],
+      "looks": [
+        {"feature": "白い手袋をしている", "ref": "L1482"}
+      ],
+      "traits": [
+        {"feature": "石の欠けた字を一つずつ見ている", "ref": "L1484"}
+      ],
+      "whereabouts": [
+        {"when": "祝福の日", "where": "大聖堂の祭壇右脇", "doing": "石の板の字を見る", "ref": "L1482"}
+      ]
+    },
+    {
+      "name": "テオ",
+      "aliases": ["若い修道士"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [
+        {"feature": "若い修道士で、手燭を持つ", "ref": "L1491"}
+      ],
+      "traits": [
+        {"feature": "振り向かず祭壇の奥へ歩く", "ref": "L1493"}
+      ],
+      "whereabouts": [
+        {"when": "祝福の日の儀のあと", "where": "大聖堂", "doing": "手燭を持って石の前を通り、祭壇の奥へ行く", "ref": "L1491"}
+      ]
+    },
+    {
+      "name": "ヘルマン",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [{"target": "アーデルハイト", "word": "奥様", "ref": "L1528"}],
+      "speech": [
+        {"feature": "丁寧な口調", "example": "今朝届きました", "ref": "L1505"}
+      ],
+      "looks": [],
+      "traits": [
+        {"feature": "儀の前には文を渡さないほうがいいと考える", "ref": "L1507"}
+      ],
+      "whereabouts": [
+        {"when": "祝福の日の夜七つの鐘のあと", "where": "馬車", "doing": "アーデルハイトに文を差し出す", "ref": "L1503"}
+      ]
+    },
+    {
+      "name": "カスパル",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [],
+      "traits": [],
+      "whereabouts": [
+        {"when": "祝福の日の前日", "where": "倉", "doing": "倉前の掃除の日当を倉で持つと使いを寄越す", "ref": "L1336"}
+      ]
+    },
+    {
+      "name": "ロズモンド夫人",
+      "aliases": ["夫人", "アーデルハイト", "アーデル"],
+      "first_person": [],
+      "calls_others": [
+        {"target": "マグダ", "word": "マグダ", "ref": "L1417"}
+      ],
+      "speech": [
+        {"feature": "笑うと声が少し高くなる", "example": "声が少し高くなる", "ref": "L1421"}
+      ],
+      "looks": [],
+      "traits": [],
+      "whereabouts": [
+        {"when": "祝福の日の儀のあと", "where": "大聖堂の階段", "doing": "マグダと話す", "ref": "L1417"}
+      ]
+    },
+    {
+      "name": "ネーベルの代理人",
+      "aliases": ["代理人の者"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [],
+      "traits": [],
+      "whereabouts": [
+        {"when": "祝福の日の朝", "where": "南の川港", "doing": "人肌に温かい赤い石についての情報を文で知らせる", "ref": "L1505"}
+      ]
+    },
+    {
+      "name": "迷子の男の子",
+      "aliases": ["小さな男の子"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [
+        {"feature": "母親の前掛けの色を答える", "example": "あお", "ref": "L1387"}
+      ],
+      "looks": [
+        {"feature": "四つか五つで、靴が片方脱げかけている", "ref": "L1380"}
+      ],
+      "traits": [
+        {"feature": "人波の中で立ったまま泣く", "ref": "L1380"}
+      ],
+      "whereabouts": [
+        {"when": "祝福の日、行列が大聖堂に入りきったころ", "where": "広場の北の角", "doing": "母親とはぐれて泣く", "ref": "L1378"}
+      ]
+    },
+    {
+      "name": "男の子の母親",
+      "aliases": ["青い前掛けの女"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [{"feature": "青い前掛けを着けている", "ref": "L1391"}],
+      "traits": [],
+      "whereabouts": [
+        {"when": "祝福の日", "where": "上町の坂の下", "doing": "男の子の名を呼ぶ", "ref": "L1391"}
+      ]
+    }
+  ],
+  "places": [
+    {
+      "name": "エーリカの二階の部屋",
+      "layout": [{"feature": "二階にある", "ref": "L1163"}],
+      "scenery": [{"feature": "机の上で金貨が灯の下に鈍く光る", "ref": "L1182"}],
+      "weather_season": []
+    },
+    {
+      "name": "普請方の石切場の事務所",
+      "layout": [],
+      "scenery": [{"feature": "石の粉がある", "ref": "L1167"}],
+      "weather_season": []
+    },
+    {
+      "name": "冒険者組合の建物",
+      "layout": [
+        {"feature": "一階の奥に卓がある", "ref": "L1268"},
+        {"feature": "中庭に井戸がある", "ref": "L1293"},
+        {"feature": "建物の中で仲間への偽りを禁じる誓約を立てる", "ref": "L1244"}
+      ],
+      "scenery": [
+        {"feature": "牛革の登録簿に新しい擦り傷が一本ある", "ref": "L1194"},
+        {"feature": "井戸の釣瓶は修理後、もう軋まない", "ref": "L1293"}
+      ],
+      "weather_season": []
+    },
+    {
+      "name": "広場",
+      "layout": [
+        {"feature": "四つの角に隊員を四人ずつ配置", "ref": "L1312"},
+        {"feature": "大聖堂の階段両脇に隊員を四人ずつ配置", "ref": "L1312"},
+        {"feature": "行列の道に綱を張る", "ref": "L1312"},
+        {"feature": "北の角は上町の坂から人が下りてくる場所", "ref": "L1330"}
+      ],
+      "scenery": [
+        {"feature": "大聖堂前で子らが城壁の歌を歌う", "ref": "L1399"},
+        {"feature": "行列の蝋燭の火で髭が焦げる匂いがする", "ref": "L1352"}
+      ],
+      "weather_season": [
+        {"feature": "卯月八日朝は晴れ、風がない", "ref": "L1310"},
+        {"feature": "石畳は夜の冷たさを残し、昼には暖かくなる", "ref": "L1310"}
+      ]
+    },
+    {
+      "name": "大聖堂",
+      "layout": [
+        {"feature": "階段の上に修道士が両脇一列ずつ並ぶ", "ref": "L1364"},
+        {"feature": "祭壇前に幅四尺と少しの樫の台がある", "ref": "L1430"},
+        {"feature": "旧家の帳は祭壇左、上町の品はその手前、石板は祭壇右脇に置く", "ref": "L1476"},
+        {"feature": "身廊右手に上町の家々の席がある", "ref": "L1434"}
+      ],
+      "scenery": [
+        {"feature": "色硝子の光が床に青と赤の四角を落とす", "ref": "L1436"},
+        {"feature": "石板の浮き彫りは交差する三本の釘", "ref": "L1442"},
+        {"feature": "手燭の光で三本の釘の影が伸びて縮む", "ref": "L1491"}
+      ],
+      "weather_season": [
+        {"feature": "春の光はまだ低い", "ref": "L1436"}
+      ]
+    },
+    {
+      "name": "上町の坂",
+      "layout": [
+        {"feature": "行列は坂の上から出て下りてくる", "ref": "L1340"}
+      ],
+      "scenery": [],
+      "weather_season": []
+    },
+    {
+      "name": "上町の坂の下",
+      "layout": [],
+      "scenery": [{"feature": "青い前掛けの女が子の名を呼ぶ", "ref": "L1391"}],
+      "weather_season": []
+    },
+    {
+      "name": "市参事会館の広間",
+      "layout": [
+        {"feature": "祝福の日の午後、上町の家々が集まる", "ref": "L1499"},
+        {"feature": "椅子はなく、立ったまま過ごす", "ref": "L1499"}
+      ],
+      "scenery": [{"feature": "葡萄酒を一杯ずつ飲む", "ref": "L1499"}],
+      "weather_season": []
+    },
+    {
+      "name": "馬車",
+      "layout": [],
+      "scenery": [{"feature": "ヘルマンが文を差し出す", "ref": "L1503"}],
+      "weather_season": []
+    },
+    {
+      "name": "南の川港",
+      "layout": [],
+      "scenery": [{"feature": "ロズモンド家が商いの代理人を置く", "ref": "L1507"}],
+      "weather_season": []
+    },
+    {
+      "name": "ロズモンド館",
+      "aliases": ["ロズモンド家の館"],
+      "layout": [{"feature": "門の前で馬車が止まりかける", "ref": "L1525"}],
+      "scenery": [],
+      "weather_season": []
+    },
+    {
+      "name": "錆び釘亭",
+      "layout": [],
+      "scenery": [{"feature": "看板に釘三本がある", "ref": "L1449"}],
+      "weather_season": []
+    },
+    {
+      "name": "北街道から灰色山脈の古き砦に至る道",
+      "layout": [{"feature": "北街道三つ目の一里塚より先に続く", "ref": "L1176"}],
+      "scenery": [],
+      "weather_season": [{"feature": "峠の雪が解けるのを待って出立する", "ref": "L1179"}]
+    }
+  ],
+  "season_mismatch": [],
+  "inner_inconsistencies": []
+}

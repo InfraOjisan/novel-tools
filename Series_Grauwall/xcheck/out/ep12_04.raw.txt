@@ -1,0 +1,490 @@
+{
+  "episode": "12",
+  "dates": [
+    {"when": "神無月十四日、昼すぎ", "ref": "L1182"},
+    {"when": "神無月二十日、夜。雨", "ref": "L1325"},
+    {"when": "二十二日の昼", "ref": "L1381"},
+    {"when": "霜月二日の朝", "ref": "L1450"},
+    {"when": "霜月二日の夕方", "ref": "L1498"},
+    {"when": "霜月二日の九つの鐘のころ", "ref": "L1560"},
+    {"when": "霜月二日の十の鐘", "ref": "L1576"},
+    {"when": "神無月十四日の三日前", "ref": "L1188"},
+    {"when": "十一年前の春の晩", "ref": "L1250"},
+    {"when": "去年の霜月の晩", "ref": "L1250"},
+    {"when": "去年の冬", "ref": "L1276"}
+  ],
+  "characters": [
+    {
+      "name": "俺（酒場番）",
+      "aliases": ["酒場番"],
+      "first_person": [{"word": "俺", "ref": "L1202"}],
+      "calls_others": [],
+      "speech": [
+        {"feature": "丁寧な「です」調を使う", "example": "銅貨二枚です", "ref": "L1258"},
+        {"feature": "丁寧に応答する", "example": "存じています", "ref": "L1447"}
+      ],
+      "looks": [],
+      "traits": [
+        {"feature": "杯を伏せる手を止めず、客の噂を聞く", "ref": "L1192"},
+        {"feature": "ザザとの盤の対局を続けている", "ref": "L1198"},
+        {"feature": "店じまいを十年、毎晩同じ順でしている", "ref": "L1375"}
+      ],
+      "whereabouts": [
+        {"when": "神無月十四日昼すぎ", "where": "錆び釘亭", "doing": "杯を洗って伏せ、ザザと盤を打つ", "ref": "L1182"},
+        {"when": "神無月二十日夜、十の鐘のあと", "where": "錆び釘亭の裏口", "doing": "閂を外して待つ", "ref": "L1325"},
+        {"when": "二十二日の昼", "where": "二階の書庫", "doing": "長机の端から登録簿の記入を見る", "ref": "L1403"},
+        {"when": "霜月二日の朝、六つの鐘の少し前", "where": "錆び釘亭の前の石畳", "doing": "霜を掃く", "ref": "L1450"}
+      ]
+    },
+    {
+      "name": "ザザ",
+      "aliases": ["蜥蜴人の老人"],
+      "first_person": [],
+      "calls_others": [
+        {"target": "俺", "word": "あなた", "ref": "L1210"}
+      ],
+      "speech": [
+        {"feature": "短く、見えていることを告げる", "example": "見えている", "ref": "L1204"},
+        {"feature": "訊かれたことにしか答えない", "example": "ない", "ref": "L1236"}
+      ],
+      "looks": [
+        {"feature": "蜥蜴人の老人。瞼が下から閉じる", "ref": "L1200"}
+      ],
+      "traits": [
+        {"feature": "考えるときは瞼を半分閉じ、石を置くとき全部開ける", "ref": "L1200"},
+        {"feature": "熱が見え、夜目が利く", "ref": "L1248"},
+        {"feature": "見たものを数えず、訊かれなければ黙って箒を抱いている", "ref": "L1250"}
+      ],
+      "whereabouts": [
+        {"when": "神無月十四日昼すぎ", "where": "錆び釘亭のカウンターの端", "doing": "俺と盤を打つ", "ref": "L1196"}
+      ]
+    },
+    {
+      "name": "マグダ",
+      "aliases": [],
+      "first_person": [{"word": "私", "ref": "L1349"}],
+      "calls_others": [
+        {"target": "俺", "word": "酒場番", "ref": "L1337"}
+      ],
+      "speech": [
+        {"feature": "「〜かい」と訊ねる", "example": "まだここにあるのかい", "ref": "L1232"},
+        {"feature": "「〜な」と言う", "example": "酸っぱいな", "ref": "L1272"}
+      ],
+      "looks": [
+        {"feature": "背の高い女", "ref": "L1222"},
+        {"feature": "茶色の毛織の上着を着ている", "ref": "L1222"},
+        {"feature": "左頬に耳の下から口の端まで一本の傷がある", "ref": "L1228"}
+      ],
+      "traits": [
+        {"feature": "喉元の襟の合わせ目に指をやり、何もないことを確かめる", "ref": "L1226"},
+        {"feature": "自分の銅貨で卵を買い、手元を見届ける", "ref": "L1260"},
+        {"feature": "笑うと左頬の傷が引きつる", "ref": "L1355"}
+      ],
+      "whereabouts": [
+        {"when": "神無月十四日昼", "where": "錆び釘亭", "doing": "ザザに問い、卵を食べる", "ref": "L1222"},
+        {"when": "神無月二十日夜", "where": "錆び釘亭の裏口", "doing": "酒場番と話し、返事をせず路地の奥へ戻る", "ref": "L1335"}
+      ]
+    },
+    {
+      "name": "トマス",
+      "aliases": ["詰所のトマス"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [],
+      "traits": [
+        {"feature": "言伝の相手を訊かず、頷いて坂を上る", "ref": "L1329"},
+        {"feature": "如月にマグダの言葉を真顔で聞いて頷いた", "ref": "L1353"}
+      ],
+      "whereabouts": [
+        {"when": "神無月二十日の日中", "where": "詰所の前", "doing": "酒場番から言伝を頼まれる", "ref": "L1329"}
+      ]
+    },
+    {
+      "name": "エーリカ",
+      "aliases": ["組合長エーリカ・ランゲ"],
+      "first_person": [],
+      "calls_others": [
+        {"target": "リナ", "word": "あなた", "ref": "L1540"}
+      ],
+      "speech": [
+        {"feature": "「〜わ」の語尾を使う", "example": "名指しは、高いわよ", "ref": "L1445"},
+        {"feature": "短く言い切る", "example": "戻らないわ", "ref": "L1528"}
+      ],
+      "looks": [
+        {"feature": "右の脚を前に出して座る", "ref": "L1510"},
+        {"feature": "歩くとき左の足が先、右の足があとから追いつく", "ref": "L1570"}
+      ],
+      "traits": [
+        {"feature": "理由を訊かず、黒板に書き置きをする", "ref": "L1367"},
+        {"feature": "登録簿に名と職を書き、議事内容を簡潔に話す", "ref": "L1397"}
+      ],
+      "whereabouts": [
+        {"when": "二十二日の昼", "where": "二階の書庫", "doing": "登録簿を開き、北から来た者たちの登録をする", "ref": "L1383"},
+        {"when": "霜月二日、八つ半ごろ", "where": "錆び釘亭", "doing": "いつもの席で湯を飲み、議の結果を話す", "ref": "L1510"},
+        {"when": "霜月二日、九つの鐘のころ", "where": "錆び釘亭から二階へ", "doing": "墓の分の銅貨を預けて二階へ上がる", "ref": "L1560"}
+      ]
+    },
+    {
+      "name": "ゴルム",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [
+        {"feature": "短く確認する", "example": "染みは", "ref": "L1419"}
+      ],
+      "looks": [
+        {"feature": "片目で、もう片方の目に古い縦傷がある", "ref": "L1385"}
+      ],
+      "traits": [
+        {"feature": "羽根の筆を短剣の柄のように握る", "ref": "L1411"},
+        {"feature": "ヴィルマに手を添えられて自分の名を書く", "ref": "L1417"}
+      ],
+      "whereabouts": [
+        {"when": "二十二日の昼", "where": "二階の書庫", "doing": "登録簿に自分の名を書く", "ref": "L1411"}
+      ]
+    },
+    {
+      "name": "ヴィルマ",
+      "aliases": ["カルトブルンのヴィルマ"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [
+        {"feature": "事実を簡潔に述べる", "example": "四年、村の麦に手を出していない", "ref": "L1389"},
+        {"feature": "染みは名に含まれないと答える", "example": "名のうちに入らない", "ref": "L1421"}
+      ],
+      "looks": [],
+      "traits": [
+        {"feature": "村の者として立ち会い、知っていることを必要なだけ話す", "ref": "L1387"},
+        {"feature": "ゴルムの手を取り、筆を持たせる", "ref": "L1415"}
+      ],
+      "whereabouts": [
+        {"when": "二十二日の昼", "where": "二階の書庫", "doing": "登録に立ち会い、ゴルムの筆記を助ける", "ref": "L1387"}
+      ]
+    },
+    {
+      "name": "ヘルマン",
+      "aliases": ["ロズモンド館の執事"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [
+        {"feature": "奥様からの封を届ける", "example": "奥様から、組合長に", "ref": "L1431"}
+      ],
+      "looks": [
+        {"feature": "ハンカチで鼻を押さえている", "ref": "L1429"}
+      ],
+      "traits": [
+        {"feature": "書庫の匂いを避けるようにハンカチを鼻に当てる", "ref": "L1429"}
+      ],
+      "whereabouts": [
+        {"when": "二十二日の昼", "where": "二階の書庫", "doing": "封を届け、階段を下りる", "ref": "L1429"}
+      ]
+    },
+    {
+      "name": "ブリギッテ",
+      "aliases": ["灯火教会のブリギッテ"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [
+        {"feature": "この場面では短い発言のみ", "example": "麦酒を一杯", "ref": "L1478"}
+      ],
+      "looks": [
+        {"feature": "二十代のはじめ。赤茶の短い髪、そばかす", "ref": "L1472"},
+        {"feature": "薬箱を肩にかけている", "ref": "L1476"}
+      ],
+      "traits": [
+        {"feature": "口が先に出る娘だが、この日は口が出なかった", "ref": "L1472"},
+        {"feature": "麦酒を半分一息で飲み、残りをゆっくり飲む", "ref": "L1482"},
+        {"feature": "出るとき裾を踏んで躓きかけるが、走ってはいない", "ref": "L1494"}
+      ],
+      "whereabouts": [
+        {"when": "霜月二日、昼の客がはけかけたころ", "where": "錆び釘亭", "doing": "麦酒を飲み、薬箱を持って出ていく", "ref": "L1470"}
+      ]
+    },
+    {
+      "name": "ダリオ",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [
+        {"target": "エーリカ", "word": "それで", "ref": "L1526"}
+      ],
+      "speech": [
+        {"feature": "「〜ねえ」と荒い口調で話す", "example": "泳がねえんだ", "ref": "L1504"}
+      ],
+      "looks": [],
+      "traits": [
+        {"feature": "泳ぐことを考えても、麦酒を飲むと考えが流れたようになる", "ref": "L1508"}
+      ],
+      "whereabouts": [
+        {"when": "霜月二日夕方", "where": "錆び釘亭のカウンターの端", "doing": "麦酒を飲み、リナと話す", "ref": "L1498"}
+      ]
+    },
+    {
+      "name": "リナ",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [
+        {"target": "ダリオ", "word": "ダリオさん", "ref": "L1502"}
+      ],
+      "speech": [
+        {"feature": "丁寧な問いかけをする", "example": "覚える気はないんですか", "ref": "L1502"}
+      ],
+      "looks": [],
+      "traits": [
+        {"feature": "煮込みの二皿目の値を二度確かめる", "ref": "L1500"},
+        {"feature": "礼金などを指折りで数える", "ref": "L1546"}
+      ],
+      "whereabouts": [
+        {"when": "霜月二日夕方", "where": "錆び釘亭のカウンターの端", "doing": "煮込みを食べ、ダリオに話しかける", "ref": "L1498"}
+      ]
+    },
+    {
+      "name": "ハク",
+      "aliases": ["灰狼の子"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [
+        {"feature": "灰狼の子。焚きつけの小枝を背にくくりつけている", "ref": "L1462"}
+      ],
+      "traits": [
+        {"feature": "店の前で頭を下げ、また駆けていく", "ref": "L1462"}
+      ],
+      "whereabouts": [
+        {"when": "霜月二日の朝", "where": "坂の下から錆び釘亭の前へ", "doing": "小枝の束を背負って坂を駆け上がる", "ref": "L1462"}
+      ]
+    },
+    {
+      "name": "チィ",
+      "aliases": ["灰狼の子"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [
+        {"feature": "灰狼の子。焚きつけの小枝を背にくくりつけている", "ref": "L1462"}
+      ],
+      "traits": [
+        {"feature": "店の前で頭を下げ、また駆けていく", "ref": "L1462"}
+      ],
+      "whereabouts": [
+        {"when": "霜月二日の朝", "where": "坂の下から錆び釘亭の前へ", "doing": "小枝の束を背負って坂を駆け上がる", "ref": "L1462"}
+      ]
+    },
+    {
+      "name": "勘定方だった男",
+      "aliases": ["勘定方"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [
+        {"feature": "灰色の毛皮の襟を顎まで立てていた", "ref": "L1188"}
+      ],
+      "traits": [],
+      "whereabouts": [
+        {"when": "裁きの翌朝", "where": "南門", "doing": "背負い袋一つで街を出る", "ref": "L1188"},
+        {"when": "霜月二日までに伝わった話", "where": "南の川筋", "doing": "川沿いの商会の倉へ下ったとされる", "ref": "L1552"}
+      ]
+    },
+    {
+      "name": "隊長",
+      "aliases": ["新しい隊長"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [],
+      "traits": [],
+      "whereabouts": []
+    },
+    {
+      "name": "白い衣の年寄りの修道女",
+      "aliases": ["年寄りの修道女"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [
+        {"feature": "裁きの席で一言だけ申したとされる", "example": "一言だけ申した", "ref": "L1190"}
+      ],
+      "looks": [
+        {"feature": "年寄りで白い衣を着ている", "ref": "L1190"}
+      ],
+      "traits": [],
+      "whereabouts": [
+        {"when": "三日前の裁き", "where": "裁きの席", "doing": "一言だけ申したと客が語る", "ref": "L1190"}
+      ]
+    },
+    {
+      "name": "城壁の家の年寄り",
+      "aliases": ["年寄り"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [],
+      "traits": [
+        {"feature": "何も言わず南門の閂を引いた", "ref": "L1188"}
+      ],
+      "whereabouts": [
+        {"when": "勘定方が南門を出るとき", "where": "南門", "doing": "閂を引く", "ref": "L1188"}
+      ]
+    },
+    {
+      "name": "ロズモンド夫人",
+      "aliases": ["奥様"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [],
+      "traits": [
+        {"feature": "本人は書庫に来ず、封で用件を済ませた", "ref": "L1441"}
+      ],
+      "whereabouts": []
+    },
+    {
+      "name": "ロズモンド",
+      "aliases": ["ロズモンド家"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [],
+      "traits": [],
+      "whereabouts": []
+    }
+  ],
+  "places": [
+    {
+      "name": "錆び釘亭",
+      "layout": [
+        {"feature": "カウンターがあり、端で盤を打つ", "ref": "L1196"},
+        {"feature": "窓から日が入り、暖炉がある", "ref": "L1184"},
+        {"feature": "椅子は卓の上に上げられ、六つの卓に二十四脚", "ref": "L1373"},
+        {"feature": "階段の下に灯があり、帳簿箱の上に盤がある", "ref": "L1373"}
+      ],
+      "scenery": [
+        {"feature": "杯を布に十二個並べると端まで埋まり、十三個目は板にはみ出す", "ref": "L1184"},
+        {"feature": "床を掃いた後の湿った木の匂い", "ref": "L1186"},
+        {"feature": "昼の光がカウンターの木目を斜めに横切る", "ref": "L1184"},
+        {"feature": "赤蕪の汁の中に卵が沈み、底は赤黒く見える", "ref": "L1270"}
+      ],
+      "weather_season": [
+        {"feature": "神無月十四日、秋の日が窓から入る", "ref": "L1184"},
+        {"feature": "神無月二十日の夜は雨", "ref": "L1325"},
+        {"feature": "裏口から秋の風が一度入る", "ref": "L1304"},
+        {"feature": "霜月二日の朝、霜が降りていた", "ref": "L1452"}
+      ]
+    },
+    {
+      "name": "錆び釘亭の裏口と外の路地",
+      "layout": [
+        {"feature": "裏口の外は狭い路地で、雨水の溝が流れている", "ref": "L1327"},
+        {"feature": "豆のスープを出す台が軒の下にあり、台の上は空", "ref": "L1327"},
+        {"feature": "裏口の軒は低い", "ref": "L1335"}
+      ],
+      "scenery": [
+        {"feature": "雨水の溝が音を立てて流れる", "ref": "L1327"},
+        {"feature": "軒から落ちる雨が台に当たって跳ねる", "ref": "L1327"}
+      ],
+      "weather_season": [
+        {"feature": "神無月二十日の夜、雨が夜半まで降り続く", "ref": "L1325"},
+        {"feature": "雨が手の甲に落ちる", "ref": "L1341"}
+      ]
+    },
+    {
+      "name": "二階の書庫",
+      "layout": [
+        {"feature": "登録簿の棚の前に長机が出されている", "ref": "L1383"},
+        {"feature": "長机の向かいに北から来た男たちが立つ", "ref": "L1385"}
+      ],
+      "scenery": [
+        {"feature": "埃を払った古い登録簿と新しい登録簿が机上にある", "ref": "L1383"},
+        {"feature": "紙と埃の匂いがする", "ref": "L1429"}
+      ],
+      "weather_season": []
+    },
+    {
+      "name": "錆び釘亭の前の石畳と坂",
+      "layout": [
+        {"feature": "店は坂の上にあり、坂の下に家々が並ぶ", "ref": "L1578"},
+        {"feature": "坂の上に大聖堂がある", "ref": "L1454"},
+        {"feature": "南門は坂を下り、下町の屋根を越えた先にある", "ref": "L1458"}
+      ],
+      "scenery": [
+        {"feature": "吊り看板の下だけ霜が薄い", "ref": "L1452"},
+        {"feature": "坂の下に朝の煙が何本か立つ", "ref": "L1464"},
+        {"feature": "南門の方から荷車の車輪が石を噛む音が遠くで聞こえる", "ref": "L1458"}
+      ],
+      "weather_season": [
+        {"feature": "霜月二日の朝、霜が降りている", "ref": "L1452"},
+        {"feature": "夜には霜が朝より厚くなりそう", "ref": "L1578"},
+        {"feature": "南の空には雲がない", "ref": "L1578"}
+      ]
+    },
+    {
+      "name": "南門",
+      "layout": [
+        {"feature": "錆び釘亭からは見えず、坂を下りて下町の屋根を越えた先にある", "ref": "L1458"}
+      ],
+      "scenery": [
+        {"feature": "閂を引く音が届いたように感じられる", "ref": "L1456"}
+      ],
+      "weather_season": []
+    },
+    {
+      "name": "ロズモンド館",
+      "layout": [],
+      "scenery": [],
+      "weather_season": []
+    },
+    {
+      "name": "北街道の荒れ野",
+      "layout": [],
+      "scenery": [
+        {"feature": "ゴルムらは何年も冬を越してきた", "ref": "L1385"}
+      ],
+      "weather_season": []
+    },
+    {
+      "name": "北の村カルトブルン",
+      "layout": [],
+      "scenery": [],
+      "weather_season": []
+    },
+    {
+      "name": "北の古砦",
+      "layout": [
+        {"feature": "兵の名簿で人間と亜人が同じ頁に名を並べた前例がある", "ref": "L1518"}
+      ],
+      "scenery": [],
+      "weather_season": []
+    },
+    {
+      "name": "南の川筋・川沿いの商会の倉",
+      "layout": [
+        {"feature": "川沿いに商会の倉があると話される", "ref": "L1552"}
+      ],
+      "scenery": [],
+      "weather_season": []
+    },
+    {
+      "name": "ネーベルの船着き場",
+      "layout": [
+        {"feature": "船着き場の裏に代書屋の看板が出ている", "ref": "L1554"}
+      ],
+      "scenery": [],
+      "weather_season": []
+    },
+    {
+      "name": "外れの墓",
+      "layout": [],
+      "scenery": [],
+      "weather_season": []
+    },
+    {
+      "name": "二股の宿",
+      "layout": [
+        {"feature": "南街道の一日目の宿。荷車なら日暮れに着く", "ref": "L1580"}
+      ],
+      "scenery": [],
+      "weather_season": []
+    }
+  ],
+  "season_mismatch": [],
+  "inner_inconsistencies": []
+}

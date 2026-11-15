@@ -1,0 +1,679 @@
+{
+ "episode": "10",
+ "dates": [
+  {
+   "when": "夜八つの鐘",
+   "ref": "L1384"
+  },
+  {
+   "when": "満月の夜",
+   "ref": "L1392"
+  },
+  {
+   "when": "祭りの夜",
+   "ref": "L1557"
+  },
+  {
+   "when": "夜半を過ぎて",
+   "ref": "L1521"
+  },
+  {
+   "when": "夜明けの少し前",
+   "ref": "L1595"
+  }
+ ],
+ "characters": [
+  {
+   "name": "俺",
+   "aliases": [
+    "マスター"
+   ],
+   "first_person": [
+    {
+     "word": "俺",
+     "ref": "L1388"
+    }
+   ],
+   "calls_others": [],
+   "speech": [
+    {
+     "feature": "ヴェイには「私」と言う",
+     "example": "なぜ、私を",
+     "ref": "L1482"
+    }
+   ],
+   "looks": [
+    {
+     "feature": "前掛けを着け、革の小袋をかくしに入れている",
+     "ref": "L1593"
+    }
+   ],
+   "traits": [
+    {
+     "feature": "灯を数えるのが癖",
+     "ref": "L1410"
+    },
+    {
+     "feature": "斥候だったころから靴紐をほどけにくく結ぶ",
+     "ref": "L1567"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "夜半過ぎ",
+     "where": "谷から石段を上がり、店の裏口へ",
+     "doing": "帰り、裏口の段に座る",
+     "ref": "L1521"
+    }
+   ]
+  },
+  {
+   "name": "チィ",
+   "aliases": [],
+   "first_person": [],
+   "calls_others": [],
+   "speech": [
+    {
+     "feature": "火を移すたび「ついた」と言う",
+     "example": "ついた",
+     "ref": "L1412"
+    }
+   ],
+   "looks": [
+    {
+     "feature": "火種の壺を抱えている",
+     "ref": "L1434"
+    }
+   ],
+   "traits": [
+    {
+     "feature": "最後の皿に火を移そうとして立ち止まり、黙る",
+     "ref": "L1452"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "灯明の儀式の間",
+     "where": "南の城壁の根元",
+     "doing": "皿に火を移す",
+     "ref": "L1412"
+    },
+    {
+     "when": "夜",
+     "where": "ナルの膝",
+     "doing": "眠っている",
+     "ref": "L1525"
+    }
+   ]
+  },
+  {
+   "name": "ハク",
+   "aliases": [],
+   "first_person": [],
+   "calls_others": [
+    {
+     "target": "チィ",
+     "word": "いちいち言うな",
+     "ref": "L1416"
+    }
+   ],
+   "speech": [
+    {
+     "feature": "チィの「ついた」に口を挟む",
+     "example": "いちいち言うな",
+     "ref": "L1416"
+    }
+   ],
+   "looks": [],
+   "traits": [
+    {
+     "feature": "最後には何も言わない",
+     "ref": "L1518"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "夜",
+     "where": "ナルの膝",
+     "doing": "チィと眠っている",
+     "ref": "L1525"
+    }
+   ]
+  },
+  {
+   "name": "灰狼の長老",
+   "aliases": [
+    "長老"
+   ],
+   "first_person": [],
+   "calls_others": [
+    {
+     "target": "ヴェイ",
+     "word": "シグ",
+     "ref": "L1456"
+    }
+   ],
+   "speech": [
+    {
+     "feature": "名を一つずつ告げ、声は変わらない",
+     "example": "長老の声は変わらなかった",
+     "ref": "L1448"
+    }
+   ],
+   "looks": [],
+   "traits": [
+    {
+     "feature": "紙を持たず、名を一つも詰まらずに言う",
+     "ref": "L1406"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "灯明の儀式",
+     "where": "南の城壁の左端",
+     "doing": "名を告げる",
+     "ref": "L1398"
+    }
+   ]
+  },
+  {
+   "name": "ヴェイ",
+   "aliases": [],
+   "first_person": [
+    {
+     "word": "僕",
+     "ref": "L1486"
+    }
+   ],
+   "calls_others": [
+    {
+     "target": "俺",
+     "word": "マスター",
+     "ref": "L1486"
+    }
+   ],
+   "speech": [
+    {
+     "feature": "自分を「僕」と呼ぶ",
+     "example": "僕が出ても",
+     "ref": "L1486"
+    }
+   ],
+   "looks": [
+    {
+     "feature": "耳が少し後ろに倒れてまた立つ",
+     "ref": "L1510"
+    },
+    {
+     "feature": "自分の小さな灯を持っている",
+     "ref": "L1460"
+    }
+   ],
+   "traits": [
+    {
+     "feature": "子どもの火種を受け取らず、自分の灯から火を移す",
+     "ref": "L1460"
+    },
+    {
+     "feature": "尋ねられると、過去の出来事を三つ挙げて答える",
+     "ref": "L1486"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "灯明の儀式",
+     "where": "右端の皿の前",
+     "doing": "自分の灯から火を移す",
+     "ref": "L1460"
+    },
+    {
+     "when": "夜",
+     "where": "右端の灯の前",
+     "doing": "灯の前に立つ",
+     "ref": "L1474"
+    }
+   ]
+  },
+  {
+   "name": "ナル",
+   "aliases": [],
+   "first_person": [],
+   "calls_others": [],
+   "speech": [],
+   "looks": [],
+   "traits": [
+    {
+     "feature": "今年初めてのはずの灯を、毎年見ているように見ている",
+     "ref": "L1462"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "夜",
+     "where": "広場",
+     "doing": "粥の鍋の蓋を開ける",
+     "ref": "L1512"
+    }
+   ]
+  },
+  {
+   "name": "シグ",
+   "aliases": [],
+   "first_person": [],
+   "calls_others": [],
+   "speech": [
+    {
+     "feature": "裏口の床でマスターのスープの話をした",
+     "example": "裏口のスープは続く",
+     "ref": "L1486"
+    }
+   ],
+   "looks": [],
+   "traits": [],
+   "whereabouts": [
+    {
+     "when": "あの晩",
+     "where": "裏口の床",
+     "doing": "マスターのスープの話をする",
+     "ref": "L1486"
+    }
+   ]
+  },
+  {
+   "name": "ダリオ",
+   "aliases": [],
+   "first_person": [],
+   "calls_others": [],
+   "speech": [
+    {
+     "feature": "荒い口調の書き置き",
+     "example": "閉まってるじゃねえか",
+     "ref": "L1541"
+    }
+   ],
+   "looks": [],
+   "traits": [],
+   "whereabouts": [
+    {
+     "when": "朝に店を閉めた後",
+     "where": "店の扉",
+     "doing": "扉に白墨で書く",
+     "ref": "L1547"
+    }
+   ]
+  },
+  {
+   "name": "リナ",
+   "aliases": [],
+   "first_person": [],
+   "calls_others": [],
+   "speech": [
+    {
+     "feature": "丁寧な口調の書き置き",
+     "example": "閉まってるって言ったでしょ",
+     "ref": "L1545"
+    }
+   ],
+   "looks": [],
+   "traits": [],
+   "whereabouts": [
+    {
+     "when": "朝に店を閉めた後",
+     "where": "店の扉",
+     "doing": "別の手で白墨を書き足す",
+     "ref": "L1547"
+    }
+   ]
+  },
+  {
+   "name": "ブリギッテ",
+   "aliases": [],
+   "first_person": [],
+   "calls_others": [],
+   "speech": [],
+   "looks": [],
+   "traits": [],
+   "whereabouts": []
+  },
+  {
+   "name": "アガタ",
+   "aliases": [],
+   "first_person": [],
+   "calls_others": [],
+   "speech": [
+    {
+     "feature": "休むことを勧めた",
+     "example": "休むことです",
+     "ref": "L1527"
+    }
+   ],
+   "looks": [],
+   "traits": [],
+   "whereabouts": []
+  },
+  {
+   "name": "イス",
+   "aliases": [],
+   "first_person": [],
+   "calls_others": [
+    {
+     "target": "ザザ",
+     "word": "もう広場ではない",
+     "ref": "L1523"
+    }
+   ],
+   "speech": [],
+   "looks": [],
+   "traits": [
+    {
+     "feature": "粥を四杯目まで注ごうとするが、杓子を引く",
+     "ref": "L1523"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "夜半過ぎ",
+     "where": "谷の広場",
+     "doing": "俺に粥を注ごうとする",
+     "ref": "L1523"
+    }
+   ]
+  },
+  {
+   "name": "ザザ",
+   "aliases": [],
+   "first_person": [],
+   "calls_others": [],
+   "speech": [
+    {
+     "feature": "短く問い、断定する口調",
+     "example": "知っていた",
+     "ref": "L1583"
+    }
+   ],
+   "looks": [
+    {
+     "feature": "歩く音に尻尾が地面を擦る音が混じる",
+     "ref": "L1572"
+    }
+   ],
+   "traits": [
+    {
+     "feature": "瞬きが遅くなる",
+     "ref": "L1581"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "祭りの夜",
+     "where": "裏口の段の前",
+     "doing": "俺の靴を見て尋ねる",
+     "ref": "L1575"
+    },
+    {
+     "when": "夜",
+     "where": "厩のいちばん奥の寝床",
+     "doing": "寝る",
+     "ref": "L1585"
+    }
+   ]
+  },
+  {
+   "name": "ドゥン",
+   "aliases": [],
+   "first_person": [],
+   "calls_others": [],
+   "speech": [],
+   "looks": [],
+   "traits": [],
+   "whereabouts": [
+    {
+     "when": "夜",
+     "where": "谷",
+     "doing": "谷にいると思われる",
+     "ref": "L1553"
+    }
+   ]
+  },
+  {
+   "name": "コル",
+   "aliases": [],
+   "first_person": [],
+   "calls_others": [],
+   "speech": [],
+   "looks": [
+    {
+     "feature": "屋根の棟にいると黒い塊に見える",
+     "ref": "L1553"
+    }
+   ],
+   "traits": [],
+   "whereabouts": [
+    {
+     "when": "夜",
+     "where": "屋根の棟",
+     "doing": "そこにはいない",
+     "ref": "L1553"
+    }
+   ]
+  },
+  {
+   "name": "鴉人",
+   "aliases": [],
+   "first_person": [],
+   "calls_others": [],
+   "speech": [],
+   "looks": [
+    {
+     "feature": "黒い羽を持ち、壁の上に止まる",
+     "ref": "L1390"
+    }
+   ],
+   "traits": [],
+   "whereabouts": [
+    {
+     "when": "夜通し",
+     "where": "谷の壁の上",
+     "doing": "灯を見ていたと思われる",
+     "ref": "L1601"
+    },
+    {
+     "when": "夜明け前",
+     "where": "北門の上から北の空へ",
+     "doing": "飛び去る",
+     "ref": "L1601"
+    }
+   ]
+  }
+ ],
+ "places": [
+  {
+   "name": "窪地・谷",
+   "layout": [
+    {
+     "feature": "底に広場があり、南側に城壁がある",
+     "ref": "L1384"
+    }
+   ],
+   "scenery": [
+    {
+     "feature": "谷の者たちが城壁の前に集まる",
+     "ref": "L1394"
+    }
+   ],
+   "weather_season": []
+  },
+  {
+   "name": "南の城壁",
+   "layout": [
+    {
+     "feature": "根元の石の出っ張りに小皿が一列に並ぶ",
+     "ref": "L1386"
+    },
+    {
+     "feature": "壁の上の縁に鴉人が止まる",
+     "ref": "L1390"
+    },
+    {
+     "feature": "壁の内側の面は北を向く",
+     "ref": "L1440"
+    }
+   ],
+   "scenery": [
+    {
+     "feature": "百三十一の灯が北を向いて並ぶ",
+     "ref": "L1470"
+    }
+   ],
+   "weather_season": [
+    {
+     "feature": "月明かりで足元や皿の縁が見える",
+     "ref": "L1392"
+    }
+   ]
+  },
+  {
+   "name": "広場",
+   "layout": [
+    {
+     "feature": "城壁の前に谷の者たちが集まる",
+     "ref": "L1394"
+    }
+   ],
+   "scenery": [
+    {
+     "feature": "粥の鍋がある",
+     "ref": "L1512"
+    }
+   ],
+   "weather_season": []
+  },
+  {
+   "name": "上の街・北門・北街道",
+   "layout": [
+    {
+     "feature": "壁の北側の先に上の街、北門、北街道が続く",
+     "ref": "L1440"
+    }
+   ],
+   "scenery": [],
+   "weather_season": []
+  },
+  {
+   "name": "石段",
+   "layout": [
+    {
+     "feature": "窪地の底から上へ続き、最後の段がある",
+     "ref": "L1529"
+    }
+   ],
+   "scenery": [],
+   "weather_season": []
+  },
+  {
+   "name": "下町の石畳",
+   "layout": [],
+   "scenery": [],
+   "weather_season": [
+    {
+     "feature": "昼の熱を吐き出し終え、夜の石は冷たい",
+     "ref": "L1535"
+    }
+   ]
+  },
+  {
+   "name": "店",
+   "layout": [
+    {
+     "feature": "表の扉があり、奥にカウンターと柱がある",
+     "ref": "L1537"
+    },
+    {
+     "feature": "カウンター奥の柱に錆びた釘が三本ある",
+     "ref": "L1609"
+    }
+   ],
+   "scenery": [
+    {
+     "feature": "店内は暗い",
+     "ref": "L1537"
+    }
+   ],
+   "weather_season": []
+  },
+  {
+   "name": "店の裏の路地",
+   "layout": [
+    {
+     "feature": "店の表から裏へ回ると路地がある",
+     "ref": "L1549"
+    }
+   ],
+   "scenery": [],
+   "weather_season": []
+  },
+  {
+   "name": "中庭",
+   "layout": [
+    {
+     "feature": "入口に木戸があり、井戸と裏口の段がある",
+     "ref": "L1551"
+    },
+    {
+     "feature": "東の屋根の上が見える",
+     "ref": "L1597"
+    }
+   ],
+   "scenery": [
+    {
+     "feature": "井戸の縁に月が映り、釣瓶の縄が少し揺れる",
+     "ref": "L1553"
+    }
+   ],
+   "weather_season": [
+    {
+     "feature": "夜は静かで、風もない",
+     "ref": "L1553"
+    }
+   ]
+  },
+  {
+   "name": "裏口",
+   "layout": [
+    {
+     "feature": "段に椀が二つ伏せてあり、鍵を開けて店に入る",
+     "ref": "L1555"
+    }
+   ],
+   "scenery": [
+    {
+     "feature": "段に座って靴紐を締め直す",
+     "ref": "L1559"
+    }
+   ],
+   "weather_season": []
+  },
+  {
+   "name": "厩",
+   "layout": [
+    {
+     "feature": "二階に窓があり、奥に寝床がある",
+     "ref": "L1553"
+    },
+    {
+     "feature": "いちばん奥にザザの寝床がある",
+     "ref": "L1585"
+    }
+   ],
+   "scenery": [
+    {
+     "feature": "藁の鳴る音がする",
+     "ref": "L1585"
+    }
+   ],
+   "weather_season": []
+  }
+ ],
+ "season_mismatch": [],
+ "inner_inconsistencies": []
+}

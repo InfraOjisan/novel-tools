@@ -1,0 +1,495 @@
+{
+  "episode": "05",
+  "dates": [
+    {"when": "如月十六日、夕べの祈りの六つの鐘のあと", "ref": "L1458"},
+    {"when": "二九〇年、弥生十二日、朝六つ", "ref": "L1488"},
+    {"when": "如月十七日、朝六つ半", "ref": "L1733"},
+    {"when": "如月十七日、夕方五つ", "ref": "L1769"},
+    {"when": "如月二十五日", "ref": "L1872"},
+    {"when": "如月二十五日、九つの鐘のころ", "ref": "L1888"},
+    {"when": "二九〇年の弥生十二日の頁に監査役が届いた朝。日付は特定されない", "ref": "L1785"},
+    {"when": "八日後", "ref": "L1870"}
+  ],
+  "characters": [
+    {
+      "name": "俺（酒場番／マスター）",
+      "aliases": ["酒場番", "マスター"],
+      "first_person": [
+        {"word": "俺", "ref": "L1464"},
+        {"word": "私", "ref": "L1691"}
+      ],
+      "calls_others": [
+        {"target": "トマス", "word": "トマスさん", "ref": "L1616"},
+        {"target": "エーリカ", "word": "マスター", "ref": "L1653"},
+        {"target": "コル", "word": "コル", "ref": "L1859"}
+      ],
+      "speech": [
+        {"feature": "丁寧な言い方をする", "example": "夜分に失礼します", "ref": "L1655"},
+        {"feature": "簡潔に答える", "example": "さて", "ref": "L1851"}
+      ],
+      "looks": [
+        {"feature": "懐に油紙の包みを入れている", "ref": "L1464"}
+      ],
+      "traits": [
+        {"feature": "包みを隊長にも見せずに持ち続ける", "ref": "L1636"},
+        {"feature": "トマスを呼び止め、指折りを止めさせる", "ref": "L1616"},
+        {"feature": "見聞きしたことを観察し、口にしないことがある", "ref": "L1972"}
+      ],
+      "whereabouts": [
+        {"when": "如月十六日、夕方", "where": "酒場のカウンター", "doing": "杯を拭き、隊長とトマスに飲み物を出す", "ref": "L1464"},
+        {"when": "十の鐘のあと", "where": "酒場二階の組合長の部屋の前", "doing": "油紙の包みをエーリカに渡す", "ref": "L1641"},
+        {"when": "如月十七日、朝六つ半", "where": "中庭の井戸", "doing": "釣瓶の氷を湯で溶かす", "ref": "L1733"},
+        {"when": "如月二十五日、夜", "where": "錆び釘亭", "doing": "店を切り盛りし、隊長に麦酒を出す", "ref": "L1874"}
+      ]
+    },
+    {
+      "name": "隊長",
+      "aliases": ["マグダ（帳場の記載）"],
+      "first_person": [
+        {"word": "私", "ref": "L1528"}
+      ],
+      "calls_others": [
+        {"target": "トマス", "word": "お前", "ref": "L1484"},
+        {"target": "酒場番", "word": "酒場番", "ref": "L1948"}
+      ],
+      "speech": [
+        {"feature": "話を飾らず、一つずつ置くように話す", "example": "短い話だった", "ref": "L1492"},
+        {"feature": "トマスに「っす」調を使わない", "example": "転ぶなよ", "ref": "L1926"},
+        {"feature": "留め金を外すと口ぶりが少し崩れる", "example": "樽は、まだか", "ref": "L1946"},
+        {"feature": "予算や損得を口にする", "example": "予算が一人分浮く", "ref": "L1610"}
+      ],
+      "looks": [
+        {"feature": "茶色の外套と灰色の襟巻きを着け、戸口で少しかがむ", "ref": "L1466"},
+        {"feature": "隊でいちばん背が高く、現在もそうだという", "ref": "L1506"},
+        {"feature": "左耳の下から口の端へ槍の穂先で傷を負い、痕が残った", "ref": "L1534"},
+        {"feature": "灰色の外套には鉄の留め金が二つある。上の一つを外すと隊長でなくなるという", "ref": "L1916"},
+        {"feature": "二十三年前は二十三歳で、隊に入って四年目だった", "ref": "L1504"}
+      ],
+      "traits": [
+        {"feature": "子どもを打とうとしたハーゲンの槍の柄をつかみ、手放さなかった", "ref": "L1530"},
+        {"feature": "子どもの顔は覚えていないが、手が小さかったことは覚えている", "ref": "L1572"},
+        {"feature": "言う真実を選び、選ばなかったことは言わない", "ref": "L1972"},
+        {"feature": "コルに伝令の手間賃として銅貨二枚を渡す", "ref": "L1998"}
+      ],
+      "whereabouts": [
+        {"when": "如月十六日、夕方", "where": "錆び釘亭のカウンター", "doing": "トマスに二十三年前の出来事を話す", "ref": "L1466"},
+        {"when": "二九〇年、弥生十二日、朝六つ", "where": "北門", "doing": "子どもを打とうとしたハーゲンの槍を止め、頬に傷を負う", "ref": "L1488"},
+        {"when": "如月二十五日、夜", "where": "錆び釘亭", "doing": "麦酒を飲み、コルに銅貨を渡す", "ref": "L1910"}
+      ]
+    },
+    {
+      "name": "トマス",
+      "aliases": [],
+      "first_person": [
+        {"word": "俺", "ref": "L1831"}
+      ],
+      "calls_others": [
+        {"target": "酒場番", "word": "マスター", "ref": "L1773"},
+        {"target": "隊長", "word": "隊長", "ref": "L1586"},
+        {"target": "オスカー", "word": "オスカーさん", "ref": "L1902"}
+      ],
+      "speech": [
+        {"feature": "「っす」を語尾に使う", "example": "呼ばれたっす", "ref": "L1470"},
+        {"feature": "隊長には「っす」を用いず「言った」と述べる箇所がある", "example": "転んだって、言ったっす", "ref": "L1586"},
+        {"feature": "正直さを強調する", "example": "嘘は、ついてないっす", "ref": "L1823"}
+      ],
+      "looks": [
+        {"feature": "灰色の外套を着ている", "ref": "L1771"}
+      ],
+      "traits": [
+        {"feature": "白湯を飲まずに杯を握って話を聞く", "ref": "L1582"},
+        {"feature": "隊長の給金を指折りで計算し、指を止められて赤くなる", "ref": "L1612"},
+        {"feature": "監査役の質問に、門番日誌の写しを持っているとは明かさず、棚にあると答える", "ref": "L1793"},
+        {"feature": "帳面のつかない借りはしないというオスカーの言葉を守ろうとする", "ref": "L1902"}
+      ],
+      "whereabouts": [
+        {"when": "如月十六日、夕方", "where": "錆び釘亭のカウンター", "doing": "隊長の話を聞く", "ref": "L1468"},
+        {"when": "如月十七日、夕方五つ", "where": "錆び釘亭", "doing": "監査が止まった経緯を酒場番に話す", "ref": "L1769"},
+        {"when": "如月二十五日、九つの鐘のころ", "where": "錆び釘亭のカウンター", "doing": "卵の代金を払い、隊長と話す", "ref": "L1888"}
+      ]
+    },
+    {
+      "name": "エーリカ",
+      "aliases": ["組合長"],
+      "first_person": [
+        {"word": "わたし", "ref": "L1699"}
+      ],
+      "calls_others": [
+        {"target": "酒場番", "word": "マスター", "ref": "L1653"},
+        {"target": "コル", "word": "コル", "ref": "L1741"},
+        {"target": "ザザ", "word": "ザザ", "ref": "L1761"}
+      ],
+      "speech": [
+        {"feature": "丁寧な言い方をする", "example": "入ってください", "ref": "L1671"}
+      ],
+      "looks": [
+        {"feature": "灰色がかった栗色の髪を首の後ろで一本に編んでいる", "ref": "L1651"},
+        {"feature": "寝支度をしていない", "ref": "L1651"},
+        {"feature": "左の足から厩の前の段を下りる", "ref": "L1737"}
+      ],
+      "traits": [
+        {"feature": "昔は弓を持って組合におり、その後、参事会の書記を長く務めた", "ref": "L1681"},
+        {"feature": "帳面を読み、写した一行の内容や送付先を明かさない", "ref": "L1715"},
+        {"feature": "ザザに厩の二階でさらに上に寝てくれるか頼む", "ref": "L1761"}
+      ],
+      "whereabouts": [
+        {"when": "十の鐘のあと", "where": "酒場二階の組合長の部屋", "doing": "受け取った帳面を読み、一行を写して封をする", "ref": "L1651"},
+        {"when": "如月十七日、朝六つ半", "where": "中庭と厩", "doing": "コルに封書を渡し、その後、厩に戻る", "ref": "L1737"}
+      ]
+    },
+    {
+      "name": "ダリオ",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [
+        {"feature": "酒が入ると賭け金の話を盛る", "example": "酒が入ってるから、十八枚だ", "ref": "L1882"}
+      ],
+      "looks": [],
+      "traits": [
+        {"feature": "上町の見習い騎士から銀貨を取り立てた話をする。三度目で額が増えていた", "ref": "L1878"}
+      ],
+      "whereabouts": [
+        {"when": "如月二十五日、夜", "where": "錆び釘亭の窓際の卓", "doing": "隊員たちに賭け札の話をする", "ref": "L1878"},
+        {"when": "十の鐘のあと", "where": "錆び釘亭の窓際", "doing": "寝ている", "ref": "L1643"}
+      ]
+    },
+    {
+      "name": "フィン",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [],
+      "traits": [
+        {"feature": "給金の日でも酒を飲まない", "ref": "L1886"}
+      ],
+      "whereabouts": [
+        {"when": "如月二十五日、夜", "where": "錆び釘亭の卓", "doing": "白湯を飲んでいる", "ref": "L1886"}
+      ]
+    },
+    {
+      "name": "コル",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [
+        {"feature": "短く復唱し、言葉を盛らない", "example": "一回分、走る", "ref": "L2008"}
+      ],
+      "looks": [
+        {"feature": "黒い羽根と黒い目が描写される", "ref": "L1743"}
+      ],
+      "traits": [
+        {"feature": "伝言を一字も盛らずに復唱する", "ref": "L1753"},
+        {"feature": "隊の走りを三回したという", "ref": "L1863"}
+      ],
+      "whereabouts": [
+        {"when": "如月十七日、朝", "where": "厩の二階の窓から中庭へ", "doing": "封書を受け取り、屋根伝いに上町へ向かう", "ref": "L1743"},
+        {"when": "如月十七日、夕方以降", "where": "錆び釘亭の厨房・裏口", "doing": "隊の走りの後、鍋を覗きに来る", "ref": "L1855"},
+        {"when": "如月二十五日、夜", "where": "錆び釘亭の裏口と梁", "doing": "隊長から銅貨を受け取り、梁の上で拾う", "ref": "L2002"}
+      ]
+    },
+    {
+      "name": "ザザ",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [
+        {"feature": "短く答える", "example": "寝る", "ref": "L1765"}
+      ],
+      "looks": [],
+      "traits": [],
+      "whereabouts": [
+        {"when": "如月十七日、朝", "where": "厩の二階", "doing": "寝床で寝ている", "ref": "L1761"}
+      ]
+    },
+    {
+      "name": "ヴォルフ・ハーゲン",
+      "aliases": ["ハーゲン", "班長"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [
+        {"feature": "子どもを離させるよう命じる", "example": "離れんなら、離させる", "ref": "L1518"}
+      ],
+      "looks": [
+        {"feature": "三十代の大柄な男で、隊でいちばん槍が上手かった", "ref": "L1520"}
+      ],
+      "traits": [
+        {"feature": "短い槍を逆さに持ち、柄で子どもの腕を打とうとする", "ref": "L1520"},
+        {"feature": "後に隊長となり、マグダを跡目に推した", "ref": "L1568"}
+      ],
+      "whereabouts": [
+        {"when": "二九〇年、弥生十二日、朝六つ", "where": "北門", "doing": "槍で子どもの腕を打とうとし、槍を取られて尻餅をつく", "ref": "L1520"}
+      ]
+    },
+    {
+      "name": "マグダ",
+      "aliases": ["隊員マグダ"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [
+        {"feature": "隊長が負傷した際、帳場の記載に「隊員マグダ」とある", "ref": "L1564"}
+      ],
+      "traits": [],
+      "whereabouts": [
+        {"when": "二九〇年、弥生十二日、朝六つ", "where": "北門", "doing": "ハーゲンの槍を止めて頬に傷を負う", "ref": "L1528"}
+      ]
+    },
+    {
+      "name": "修道女",
+      "aliases": ["灯火教会の修道女"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [],
+      "traits": [
+        {"feature": "何も訊かず、灯の術で隊長の傷を閉じる", "ref": "L1552"}
+      ],
+      "whereabouts": [
+        {"when": "二九〇年、弥生十二日、追放の朝", "where": "北門の内側", "doing": "黒パンを渡し終え、隊長の傷を治療する", "ref": "L1550"}
+      ]
+    },
+    {
+      "name": "帳場の男",
+      "aliases": ["帳場"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [
+        {"feature": "四十前で、まだ髪が黒い", "ref": "L1562"}
+      ],
+      "traits": [
+        {"feature": "何も訊かずに見舞金の記録を書く", "ref": "L1562"}
+      ],
+      "whereabouts": [
+        {"when": "二九〇年、弥生十二日の後", "where": "詰所の帳場", "doing": "見舞金の綴りに隊長の負傷を記録する", "ref": "L1562"}
+      ]
+    },
+    {
+      "name": "カスパル",
+      "aliases": ["監査役のカスパル"],
+      "first_person": [],
+      "calls_others": [
+        {"target": "トマス", "word": "おい", "ref": "L1793"}
+      ],
+      "speech": [
+        {"feature": "帳面の記載の正しさを問い、門番日誌との照合を尋ねる", "example": "門番日誌と照らしたか", "ref": "L1799"}
+      ],
+      "looks": [],
+      "traits": [
+        {"feature": "記録を指で叩き、舌打ちする", "ref": "L1789"}
+      ],
+      "whereabouts": [
+        {"when": "監査中、日付不詳", "where": "詰所の帳場", "doing": "二九〇年の綴りを調べ、弥生十二日の記録を確認する", "ref": "L1785"}
+      ]
+    },
+    {
+      "name": "ホルン参事",
+      "aliases": ["治安方ホルン参事"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [],
+      "traits": [],
+      "whereabouts": [
+        {"when": "如月十七日、昼の鐘のあと", "where": "参事会（名が記された非番解除の通知）", "doing": "隊長の非番解除を命じる", "ref": "L1809"}
+      ]
+    },
+    {
+      "name": "ブラント参事",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [],
+      "traits": [],
+      "whereabouts": [
+        {"when": "如月十七日、朝", "where": "上町へ向かう先として言及される", "doing": "コル宛て封書の届け先", "ref": "L1747"}
+      ]
+    },
+    {
+      "name": "オスカー",
+      "aliases": ["オスカーさん"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [
+        {"feature": "帳面のつかない借りはするなと言う", "example": "帳面のつかない借りはするな", "ref": "L1902"}
+      ],
+      "looks": [],
+      "traits": [],
+      "whereabouts": []
+    },
+    {
+      "name": "灰狼の女",
+      "aliases": ["母親"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [
+        {"feature": "煤けた緑色の外套を着ている", "ref": "L1512"}
+      ],
+      "traits": [],
+      "whereabouts": [
+        {"when": "二九〇年、弥生十二日、朝六つ", "where": "北門", "doing": "追放され、一人で門を出ていく", "ref": "L1546"}
+      ]
+    },
+    {
+      "name": "女の子ども",
+      "aliases": ["子ども"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [
+        {"feature": "八つくらいの小さな子ども", "ref": "L1510"}
+      ],
+      "traits": [
+        {"feature": "母親の外套の裾をつかんで離さず、引き離された後も手を伸ばす", "ref": "L1510"}
+      ],
+      "whereabouts": [
+        {"when": "二九〇年、弥生十二日、朝六つ", "where": "北門", "doing": "母親にしがみつき、谷の者に引き離される", "ref": "L1510"}
+      ]
+    },
+    {
+      "name": "ハク",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [],
+      "traits": [],
+      "whereabouts": [
+        {"when": "如月二十五日、夜", "where": "錆び釘亭の裏口", "doing": "裏口のスープを受け取る対象として言及される", "ref": "L1978"}
+      ]
+    },
+    {
+      "name": "チィ",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [],
+      "traits": [],
+      "whereabouts": [
+        {"when": "如月二十五日、夜", "where": "錆び釘亭の裏口", "doing": "裏口のスープを受け取る対象として言及される", "ref": "L1978"}
+      ]
+    }
+  ],
+  "places": [
+    {
+      "name": "錆び釘亭（酒場）",
+      "layout": [
+        {"feature": "カウンターに丸椅子があり、隊長とトマスが隣り合って座る", "ref": "L1472"},
+        {"feature": "窓際に卓があり、別の卓ではフィンが白湯を飲む", "ref": "L1878"},
+        {"feature": "裏口が厨房につながり、厨房の上に梁がある", "ref": "L2002"},
+        {"feature": "二階の真上に組合長の部屋があり、床板が薄い", "ref": "L1968"}
+      ],
+      "scenery": [
+        {"feature": "客のいない刻に、軒の水音が聞こえる", "ref": "L1460"},
+        {"feature": "給金の日は隊員や冒険者が別々の卓に集まり、銅貨の音がする", "ref": "L1874"}
+      ],
+      "weather_season": [
+        {"feature": "如月十六日、昼に緩んだ雪が夕方に再び固まり始める", "ref": "L1460"}
+      ]
+    },
+    {
+      "name": "上町の屋敷",
+      "layout": [
+        {"feature": "屋敷で銀の杯が一つなくなり、灰狼の女が洗い物をしていた", "ref": "L1496"}
+      ],
+      "scenery": [],
+      "weather_season": []
+    },
+    {
+      "name": "北門",
+      "layout": [
+        {"feature": "門の前に子どもがおり、門の内側には修道女がいる", "ref": "L1508"},
+        {"feature": "門番が閂に手をかけ、開門後に母親が門を出る", "ref": "L1514"}
+      ],
+      "scenery": [
+        {"feature": "追放される者に教会の者が黒パンを渡す", "ref": "L1552"}
+      ],
+      "weather_season": [
+        {"feature": "朝、雪が残っており、血が雪の上に落ちる", "ref": "L1488"}
+      ]
+    },
+    {
+      "name": "詰所の帳場",
+      "layout": [
+        {"feature": "帳場の机の上で監査役が綴りをめくる", "ref": "L1785"}
+      ],
+      "scenery": [
+        {"feature": "見舞金の綴りに「訓練中の事故」と記録されている", "ref": "L1564"}
+      ],
+      "weather_season": []
+    },
+    {
+      "name": "北門の番小屋",
+      "layout": [
+        {"feature": "門番日誌が北門の棚にある", "ref": "L1801"}
+      ],
+      "scenery": [],
+      "weather_season": []
+    },
+    {
+      "name": "酒場二階の組合長の部屋",
+      "layout": [
+        {"feature": "酒場の真上にあり、扉の前の廊下で足音が聞こえる", "ref": "L1645"},
+        {"feature": "部屋の奥に机があり、机上に灯と紙がある", "ref": "L1651"},
+        {"feature": "壁に弦を外した長弓が立てかけてある", "ref": "L1651"}
+      ],
+      "scenery": [
+        {"feature": "机上の灯の陰で帳面の行が見えず、封蝋は煤を吸って黒ずむ", "ref": "L1715"}
+      ],
+      "weather_season": []
+    },
+    {
+      "name": "中庭",
+      "layout": [
+        {"feature": "井戸があり、釣瓶を使う。厩の戸と塀がある", "ref": "L1735"},
+        {"feature": "厩の前に段があり、エーリカが左足から下りる", "ref": "L1737"}
+      ],
+      "scenery": [
+        {"feature": "エーリカが中庭の真ん中から厩の梁を見上げる", "ref": "L1739"}
+      ],
+      "weather_season": [
+        {"feature": "釣瓶に氷が張っており、湯で溶かしている", "ref": "L1735"}
+      ]
+    },
+    {
+      "name": "厩",
+      "layout": [
+        {"feature": "二階にザザの寝床があり、二階の窓からコルが顔を出す", "ref": "L1665"},
+        {"feature": "二階に窓と梁がある", "ref": "L1743"}
+      ],
+      "scenery": [],
+      "weather_season": []
+    },
+    {
+      "name": "上町の屋根伝いの道",
+      "layout": [
+        {"feature": "コルが塀から屋根へ上がり、屋根伝いに上町へ向かう", "ref": "L1753"}
+      ],
+      "scenery": [],
+      "weather_season": []
+    },
+    {
+      "name": "参事会",
+      "layout": [],
+      "scenery": [
+        {"feature": "参事会の使いが詰所に来て、監査の取り下げを伝える", "ref": "L1805"}
+      ],
+      "weather_season": []
+    },
+    {
+      "name": "下町",
+      "layout": [
+        {"feature": "給金の日に隊員たちが下町の酒場へ散らばる", "ref": "L1874"}
+      ],
+      "scenery": [],
+      "weather_season": []
+    }
+  ],
+  "season_mismatch": [],
+  "inner_inconsistencies": []
+}

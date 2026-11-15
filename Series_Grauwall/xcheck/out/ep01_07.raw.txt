@@ -1,0 +1,309 @@
+{
+  "episode": "01",
+  "dates": [
+    {"when": "朝、開門の鐘", "ref": "L1795"},
+    {"when": "朝七つの鐘が鳴り終わるころ", "ref": "L1881"},
+    {"when": "三年前の冬の夜", "ref": "L1891"},
+    {"when": "昼の鐘", "ref": "L2001"},
+    {"when": "夕方六つの鐘の少し前", "ref": "L2009"},
+    {"when": "夕方六つの鐘", "ref": "L2029"},
+    {"when": "その夜", "ref": "L2031"},
+    {"when": "翌朝", "ref": "L2045"},
+    {"when": "冬が近いころ", "ref": "L2073"}
+  ],
+  "characters": [
+    {
+      "name": "僕",
+      "aliases": ["灰色", "首に白い毛のある灰色", "灰色の狼"],
+      "first_person": [{"word": "僕", "ref": "L1793"}],
+      "calls_others": [],
+      "speech": [],
+      "looks": [
+        {"feature": "左耳が欠けている", "ref": "L1797"},
+        {"feature": "首に白い毛がある", "ref": "L1845"},
+        {"feature": "左腕に擦り傷がある", "ref": "L1857"}
+      ],
+      "traits": [
+        {"feature": "木彫りの狼を二つ抱えている", "ref": "L1845"},
+        {"feature": "振り返らずに門を出る", "ref": "L1817"}
+      ],
+      "whereabouts": [
+        {"when": "朝、開門後", "where": "北門から北街道へ", "doing": "街を出て歩く", "ref": "L1805"},
+        {"when": "朝", "where": "北街道の三つ目の一里塚の先の棘草", "doing": "待つつもりでいる", "ref": "L1819"},
+        {"when": "朝", "where": "錆び釘亭の裏口から中庭、谷へ向かう道", "doing": "木彫りの狼を抱えて立ち去る", "ref": "L1857"}
+      ]
+    },
+    {
+      "name": "酒場番",
+      "aliases": ["マスター", "俺"],
+      "first_person": [{"word": "俺", "ref": "L1829"}],
+      "calls_others": [
+        {"target": "アガタ", "word": "シスター", "ref": "L1839"},
+        {"target": "ルル", "word": "ルル", "ref": "L1903"},
+        {"target": "ザザ", "word": "ザザ", "ref": "L1963"}
+      ],
+      "speech": [
+        {"feature": "丁寧な言い方をする", "example": "「知っていますよ」", "ref": "L1851"},
+        {"feature": "丁寧な言い方をする", "example": "「そうですか」", "ref": "L1865"}
+      ],
+      "looks": [
+        {"feature": "外見の記述はない", "ref": "L1871"}
+      ],
+      "traits": [
+        {"feature": "ルルを見送らなかったと語る", "ref": "L1829"},
+        {"feature": "倒れた卓を一つずつ起こす", "ref": "L1859"},
+        {"feature": "ルルに金貨四十枚の袋を渡す", "ref": "L1941"},
+        {"feature": "細い短剣を丁寧に拭う", "ref": "L2017"},
+        {"feature": "翌朝、報告を聞いても「物騒ですね」と答える", "ref": "L2075"}
+      ],
+      "whereabouts": [
+        {"when": "朝", "where": "錆び釘亭", "doing": "グラスを拭く", "ref": "L1829"},
+        {"when": "朝", "where": "錆び釘亭", "doing": "ルルに紅玉と革袋を渡す", "ref": "L1937"},
+        {"when": "昼", "where": "北の氷室へ向かう", "doing": "店に札を下げて出かける", "ref": "L2001"},
+        {"when": "夕方", "where": "錆び釘亭", "doing": "短剣を拭い、革袋を金庫へ戻す", "ref": "L2017"},
+        {"when": "その夜", "where": "錆び釘亭の階段下", "doing": "ザザと石取りをする", "ref": "L2035"}
+      ]
+    },
+    {
+      "name": "隊長",
+      "aliases": ["マグダ隊長", "頬に傷のある隊長"],
+      "first_person": [],
+      "calls_others": [
+        {"target": "酒場番", "word": "酒場番", "ref": "L1867"}
+      ],
+      "speech": [
+        {"feature": "命令形で話す", "example": "「行け」", "ref": "L1803"},
+        {"feature": "率直な口調", "example": "「たいしたもんだ」", "ref": "L1863"}
+      ],
+      "looks": [
+        {"feature": "頬に傷がある", "ref": "L1795"},
+        {"feature": "外套の裾に朝露がついている", "ref": "L1861"}
+      ],
+      "traits": [
+        {"feature": "腕を組んで門番の横に立つ", "ref": "L1795"}
+      ],
+      "whereabouts": [
+        {"when": "朝", "where": "北門", "doing": "門番の横で灰色を見送る", "ref": "L1795"},
+        {"when": "朝", "where": "錆び釘亭の扉", "doing": "戻る途中に店内を覗く", "ref": "L1861"}
+      ]
+    },
+    {
+      "name": "ルル",
+      "aliases": ["白い耳", "白い耳の娘", "この娘"],
+      "first_person": [{"word": "あたし", "ref": "L1905"}, {"word": "私", "ref": "L1977"}],
+      "calls_others": [
+        {"target": "酒場番", "word": "マスター", "ref": "L1885"},
+        {"target": "ザザ", "word": "ザザ", "ref": "L1965"}
+      ],
+      "speech": [
+        {"feature": "語尾に「わ」を使う", "example": "「門、開いたわ」", "ref": "L1893"},
+        {"feature": "問い返す言い方をする", "example": "「あら？　なんのこと？」", "ref": "L1911"},
+        {"feature": "「あら？」とよく言う", "example": "「あら。じゃあ」", "ref": "L1949"}
+      ],
+      "looks": [
+        {"feature": "白い耳がある", "ref": "L1883"},
+        {"feature": "亜麻色の髪、黒い胴着、網の靴下", "ref": "L1883"},
+        {"feature": "白いカフスを着けている", "ref": "L1889"},
+        {"feature": "三年前は耳が伏せ、髪が泥で固まっていた", "ref": "L1891"}
+      ],
+      "traits": [
+        {"feature": "耳がよく、階段下から二階の話を聞く", "ref": "L1905"},
+        {"feature": "蝶の形に物の紐を結ぶ", "ref": "L1951"},
+        {"feature": "カウンター端の瓶から紅玉を取り出す", "ref": "L1929"}
+      ],
+      "whereabouts": [
+        {"when": "開門のころ", "where": "錆び釘亭から北門方面", "doing": "隊の最後尾を待ち、走って向かう", "ref": "L1829"},
+        {"when": "朝七つの鐘のころ", "where": "錆び釘亭", "doing": "戻って店内を見回す", "ref": "L1881"},
+        {"when": "朝", "where": "錆び釘亭のカウンター", "doing": "紅玉を取り出し、酒場番から革袋を受け取る", "ref": "L1929"},
+        {"when": "朝", "where": "錆び釘亭の扉から広場、北門方面", "doing": "店を出て北門へ向かう", "ref": "L1993"}
+      ]
+    },
+    {
+      "name": "ダリオ",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [
+        {"feature": "縮れた髭がある", "ref": "L1833"}
+      ],
+      "traits": [
+        {"feature": "暖炉前の床で大の字になって眠る", "ref": "L1833"}
+      ],
+      "whereabouts": [
+        {"when": "朝", "where": "錆び釘亭の暖炉前", "doing": "眠っている", "ref": "L1833"}
+      ]
+    },
+    {
+      "name": "アガタ",
+      "aliases": ["シスター", "修道女"],
+      "first_person": [],
+      "calls_others": [
+        {"target": "酒場番", "word": "マスター", "ref": "L1837"}
+      ],
+      "speech": [
+        {"feature": "祈るような丁寧な口調", "example": "「灯のご加護がありますように」", "ref": "L1837"}
+      ],
+      "looks": [
+        {"feature": "手袋をはめ直す", "ref": "L1835"}
+      ],
+      "traits": [
+        {"feature": "何か言いたそうに酒場番を見て、何も言わない", "ref": "L1841"}
+      ],
+      "whereabouts": [
+        {"when": "朝", "where": "錆び釘亭の戸口から広場", "doing": "振り返った後、店を出る", "ref": "L1835"}
+      ]
+    },
+    {
+      "name": "ザザ",
+      "aliases": ["蜥蜴人"],
+      "first_person": [{"word": "私は", "ref": "L1969"}],
+      "calls_others": [],
+      "speech": [
+        {"feature": "簡潔で断定的に話す", "example": "「訊かれたことを言っただけだ」", "ref": "L1969"},
+        {"feature": "酒場番には「あんた」と言う", "example": "「あんたの負けだ」", "ref": "L2039"}
+      ],
+      "looks": [
+        {"feature": "肩に鱗がある", "ref": "L1979"}
+      ],
+      "traits": [
+        {"feature": "箒を抱いている", "ref": "L2087"},
+        {"feature": "人を足で覚える", "ref": "L2025"},
+        {"feature": "訊かれていないことは言わない", "ref": "L2027"}
+      ],
+      "whereabouts": [
+        {"when": "朝", "where": "錆び釘亭の階段下の壁ぎわ", "doing": "倒れた箒を起こす", "ref": "L1843"},
+        {"when": "朝", "where": "錆び釘亭の裏口から中庭", "doing": "灰色を見送る", "ref": "L1857"},
+        {"when": "その夜", "where": "錆び釘亭の階段下", "doing": "酒場番と石取りをする", "ref": "L2035"}
+      ]
+    },
+    {
+      "name": "トマス",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [
+        {"target": "酒場番", "word": "酒場番さん", "ref": "L2049"}
+      ],
+      "speech": [
+        {"feature": "「っす」を語尾に使う", "example": "「給金、出たっす」", "ref": "L2049"},
+        {"feature": "砕けた口調", "example": "「酸っぱっ」", "ref": "L2059"}
+      ],
+      "looks": [
+        {"feature": "隊の外套ではなく洗いざらしの上着を着ている", "ref": "L2047"}
+      ],
+      "traits": [
+        {"feature": "赤蕪の汁を上着の裾で拭く", "ref": "L2071"},
+        {"feature": "頭をかく", "ref": "L2083"}
+      ],
+      "whereabouts": [
+        {"when": "翌朝", "where": "錆び釘亭", "doing": "銅貨二枚を払い、卵を食べる", "ref": "L2045"},
+        {"when": "翌朝", "where": "錆び釘亭から外", "doing": "扉の隙間から出ていく", "ref": "L2085"}
+      ]
+    }
+  ],
+  "places": [
+    {
+      "name": "北門",
+      "layout": [
+        {"feature": "門の内側に隊の人間が六人並び、隊長が門番の横に立つ", "ref": "L1795"},
+        {"feature": "門番が閂の鎖に手をかける", "ref": "L1795"},
+        {"feature": "北の氷室は北門のすぐ内側にある", "ref": "L2005"}
+      ],
+      "scenery": [
+        {"feature": "鎖が鳴って門が開き、軋む音が城壁に響く", "ref": "L1801"}
+      ],
+      "weather_season": [
+        {"feature": "朝の風が門の隙間から入る", "ref": "L1797"}
+      ]
+    },
+    {
+      "name": "北街道・荒れ野",
+      "layout": [
+        {"feature": "北街道は荒れ野の中をまっすぐ伸びる", "ref": "L1813"},
+        {"feature": "道の脇に一里塚がある", "ref": "L1813"},
+        {"feature": "三つ目の一里塚の先に棘草がある", "ref": "L1819"}
+      ],
+      "scenery": [
+        {"feature": "棘草の実が靴紐や毛に絡みつく", "ref": "L1821"}
+      ],
+      "weather_season": [
+        {"feature": "道の両側の枯れ草が赤みを帯びる", "ref": "L1821"},
+        {"feature": "朝の風が吹く", "ref": "L1823"}
+      ]
+    },
+    {
+      "name": "錆び釘亭",
+      "layout": [
+        {"feature": "カウンターの端に瓶がある", "ref": "L1867"},
+        {"feature": "階段下の壁ぎわにザザがいる", "ref": "L1843"},
+        {"feature": "二階の真下に組合長の部屋がある", "ref": "L1903"},
+        {"feature": "壊れた扉の内側に卓を立てかける", "ref": "L2033"}
+      ],
+      "scenery": [
+        {"feature": "扉の蝶番が一つ外れ、風に鳴る", "ref": "L1831"},
+        {"feature": "梁に黒い焦げ、床に倒れた卓と割れた杯がある", "ref": "L1831"},
+        {"feature": "暖炉の灰が床に散っている", "ref": "L1831"},
+        {"feature": "カウンター端の木目が擦り減って色が薄い", "ref": "L2033"}
+      ],
+      "weather_season": [
+        {"feature": "朝の風が壊れた扉から入る", "ref": "L1831"},
+        {"feature": "夕方、棘草の実が暖炉で小さくはぜる", "ref": "L2015"}
+      ]
+    },
+    {
+      "name": "広場",
+      "layout": [],
+      "scenery": [
+        {"feature": "白み始めた広場をルルが横切る", "ref": "L1829"},
+        {"feature": "ルルが朝の人波の上を北門へ遠ざかる", "ref": "L1993"}
+      ],
+      "weather_season": [
+        {"feature": "朝の光が差す", "ref": "L1989"}
+      ]
+    },
+    {
+      "name": "錆び釘亭の中庭",
+      "layout": [
+        {"feature": "中庭に井戸がある", "ref": "L1857"}
+      ],
+      "scenery": [],
+      "weather_season": []
+    },
+    {
+      "name": "北の氷室",
+      "layout": [
+        {"feature": "北門のすぐ内側にある", "ref": "L2005"}
+      ],
+      "scenery": [],
+      "weather_season": []
+    },
+    {
+      "name": "大聖堂",
+      "layout": [],
+      "scenery": [
+        {"feature": "鐘が朝、七つ半、昼、夕方六つに鳴る", "ref": "L1995"}
+      ],
+      "weather_season": []
+    },
+    {
+      "name": "城壁の外",
+      "layout": [],
+      "scenery": [
+        {"feature": "枯れ草、霜、遠い獣、土の匂いがする", "ref": "L1797"}
+      ],
+      "weather_season": [
+        {"feature": "霜がある", "ref": "L1797"}
+      ]
+    },
+    {
+      "name": "谷",
+      "layout": [],
+      "scenery": [
+        {"feature": "チビたちがいる", "ref": "L1811"}
+      ],
+      "weather_season": []
+    }
+  ],
+  "season_mismatch": [],
+  "inner_inconsistencies": []
+}

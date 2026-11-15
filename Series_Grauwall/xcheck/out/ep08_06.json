@@ -1,0 +1,989 @@
+{
+ "episode": "08",
+ "dates": [
+  {
+   "when": "皐月十日、午後",
+   "ref": "L2234"
+  },
+  {
+   "when": "昨日の夕方（皐月九日と読める）",
+   "ref": "L2236"
+  },
+  {
+   "when": "皐月十一日の午前",
+   "ref": "L2357"
+  },
+  {
+   "when": "卯月（組合で名を書いたとき）",
+   "ref": "L2354"
+  },
+  {
+   "when": "皐月十一日の夕方",
+   "ref": "L2630"
+  },
+  {
+   "when": "夜",
+   "ref": "L2782"
+  },
+  {
+   "when": "明日の夜明け",
+   "ref": "L2814"
+  }
+ ],
+ "characters": [
+  {
+   "name": "ヴィルマ",
+   "aliases": [],
+   "first_person": [],
+   "calls_others": [],
+   "speech": [
+    {
+     "feature": "短く答える",
+     "example": "分かった",
+     "ref": "L2240"
+    }
+   ],
+   "looks": [],
+   "traits": [
+    {
+     "feature": "訊かれていないことは自分も言わない",
+     "ref": "L2352"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "皐月十日午後",
+     "where": "古砦の礼拝の間",
+     "doing": "議を聞く",
+     "ref": "L2234"
+    },
+    {
+     "when": "議の後",
+     "where": "礼拝の間",
+     "doing": "一行のあとを追い、戸口で足を止める",
+     "ref": "L2342"
+    }
+   ]
+  },
+  {
+   "name": "ヤラ",
+   "aliases": [],
+   "first_person": [],
+   "calls_others": [
+    {
+     "target": "ダリオ",
+     "word": "ダリオ",
+     "ref": "L2810"
+    },
+    {
+     "target": "オド",
+     "word": "オド",
+     "ref": "L2814"
+    }
+   ],
+   "speech": [
+    {
+     "feature": "短く答える",
+     "example": "知らない",
+     "ref": "L2776"
+    },
+    {
+     "feature": "短く言う",
+     "example": "気にするな",
+     "ref": "L2483"
+    }
+   ],
+   "looks": [
+    {
+     "feature": "左の耳が欠けている",
+     "ref": "L2250"
+    }
+   ],
+   "traits": [
+    {
+     "feature": "オドの手の下へ壺をそっと置き直す",
+     "ref": "L2296"
+    },
+    {
+     "feature": "左の耳がぴくりと動く",
+     "ref": "L2485"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "皐月十日午後",
+     "where": "礼拝の間",
+     "doing": "議に参加し、オドの投票を助ける",
+     "ref": "L2296"
+    },
+    {
+     "when": "夜",
+     "where": "古砦の壁の上",
+     "doing": "ダリオに翌朝の話を伝える",
+     "ref": "L2808"
+    }
+   ]
+  },
+  {
+   "name": "ダリオ",
+   "aliases": [
+    "大男"
+   ],
+   "first_person": [
+    {
+     "word": "俺",
+     "ref": "L2567"
+    }
+   ],
+   "calls_others": [
+    {
+     "target": "ヤラ",
+     "word": "ヤラ",
+     "ref": "L2764"
+    },
+    {
+     "target": "オド",
+     "word": "爺さん",
+     "ref": "L2816"
+    }
+   ],
+   "speech": [
+    {
+     "feature": "くだけた口調",
+     "example": "席は十二、尻は八だ",
+     "ref": "L2260"
+    },
+    {
+     "feature": "くだけた口調",
+     "example": "朝は弱いんだが",
+     "ref": "L2824"
+    }
+   ],
+   "looks": [
+    {
+     "feature": "大男で、肩幅が広い",
+     "ref": "L2551"
+    },
+    {
+     "feature": "左側の髭が焦げている",
+     "ref": "L2696"
+    }
+   ],
+   "traits": [
+    {
+     "feature": "子どもの手を指の背でそっと払う",
+     "ref": "L2698"
+    },
+    {
+     "feature": "子に茸を分ける",
+     "ref": "L2706"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "皐月十日午後",
+     "where": "礼拝の間",
+     "doing": "壁ぎわに立って議を聞く",
+     "ref": "L2256"
+    },
+    {
+     "when": "皐月十一日夕方",
+     "where": "古砦の中庭の石段",
+     "doing": "粥を食べる",
+     "ref": "L2632"
+    },
+    {
+     "when": "夜",
+     "where": "古砦の壁の上",
+     "doing": "北の坑口を見る",
+     "ref": "L2788"
+    }
+   ]
+  },
+  {
+   "name": "ケス",
+   "aliases": [],
+   "first_person": [],
+   "calls_others": [
+    {
+     "target": "ブリギッテ",
+     "word": "ブリギッテ",
+     "ref": "L2441"
+    }
+   ],
+   "speech": [
+    {
+     "feature": "名前の発音を訂正する",
+     "example": "語尾を、カッと鳴らす",
+     "ref": "L2443"
+    }
+   ],
+   "looks": [
+    {
+     "feature": "翼がある",
+     "ref": "L2461"
+    }
+   ],
+   "traits": [
+    {
+     "feature": "首を右、次に左へ傾ける",
+     "ref": "L2469"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "皐月十日午後",
+     "where": "礼拝の間",
+     "doing": "石の席をじっと見る",
+     "ref": "L2256"
+    },
+    {
+     "when": "皐月十一日午前",
+     "where": "書庫",
+     "doing": "ツィルクの名の読みを訂正する",
+     "ref": "L2441"
+    }
+   ]
+  },
+  {
+   "name": "リナ",
+   "aliases": [],
+   "first_person": [
+    {
+     "word": "わたし",
+     "ref": "L2746"
+    }
+   ],
+   "calls_others": [],
+   "speech": [
+    {
+     "feature": "丁寧な口調",
+     "example": "いい匂いですね",
+     "ref": "L2636"
+    },
+    {
+     "feature": "丁寧な口調",
+     "example": "待ってください",
+     "ref": "L2724"
+    }
+   ],
+   "looks": [
+    {
+     "feature": "杖を持つ",
+     "ref": "L2256"
+    }
+   ],
+   "traits": [
+    {
+     "feature": "数を人間の数に直そうとする",
+     "ref": "L2742"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "皐月十日午後",
+     "where": "礼拝の間",
+     "doing": "杖を両手で握る",
+     "ref": "L2256"
+    },
+    {
+     "when": "皐月十一日夕方",
+     "where": "古砦の中庭の石段",
+     "doing": "粥を食べ、人数を計算する",
+     "ref": "L2718"
+    }
+   ]
+  },
+  {
+   "name": "ブリギッテ",
+   "aliases": [],
+   "first_person": [],
+   "calls_others": [
+    {
+     "target": "ダリオ",
+     "word": "ダリオさん",
+     "ref": "L2555"
+    },
+    {
+     "target": "鴉人の長老",
+     "word": "長老様",
+     "ref": "L2523"
+    }
+   ],
+   "speech": [
+    {
+     "feature": "丁寧な口調",
+     "example": "ありがとうございます",
+     "ref": "L2535"
+    },
+    {
+     "feature": "早口",
+     "example": "山羊の乳って、こんなに",
+     "ref": "L2652"
+    }
+   ],
+   "looks": [
+    {
+     "feature": "袖をまくっている",
+     "ref": "L2652"
+    },
+    {
+     "feature": "腰に袋を持ち、薬箱を携帯する",
+     "ref": "L2537"
+    }
+   ],
+   "traits": [
+    {
+     "feature": "くしゃみをこらえて袖口で鼻を押さえる",
+     "ref": "L2393"
+    },
+    {
+     "feature": "写した紙を薬箱に隠す",
+     "ref": "L2613"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "皐月十一日午前",
+     "where": "砦の書庫",
+     "doing": "名簿を読み、古い紙を書き写す",
+     "ref": "L2359"
+    },
+    {
+     "when": "皐月十一日",
+     "where": "古砦の中庭",
+     "doing": "写した紙を薬箱にしまう",
+     "ref": "L2607"
+    },
+    {
+     "when": "皐月十一日夕方",
+     "where": "古砦の中庭",
+     "doing": "夕餉を食べる",
+     "ref": "L2652"
+    }
+   ]
+  },
+  {
+   "name": "オド",
+   "aliases": [
+    "土竜人の長老"
+   ],
+   "first_person": [],
+   "calls_others": [],
+   "speech": [
+    {
+     "feature": "ゆっくり話し、言葉の間が長い",
+     "example": "坑のことと、水門のことを話す",
+     "ref": "L2270"
+    }
+   ],
+   "looks": [
+    {
+     "feature": "杖をつく土竜人",
+     "ref": "L2250"
+    }
+   ],
+   "traits": [
+    {
+     "feature": "杖を頼りにゆっくり歩く",
+     "ref": "L2294"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "皐月十日午後",
+     "where": "礼拝の間",
+     "doing": "坑と水門について議を進める",
+     "ref": "L2268"
+    }
+   ]
+  },
+  {
+   "name": "灰狼の長老",
+   "aliases": [
+    "口先の白い灰狼の長老"
+   ],
+   "first_person": [],
+   "calls_others": [],
+   "speech": [
+    {
+     "feature": "理由を簡潔に述べる",
+     "example": "壁の街は砦を知る",
+     "ref": "L2326"
+    }
+   ],
+   "looks": [
+    {
+     "feature": "口先の毛が白い",
+     "ref": "L2250"
+    },
+    {
+     "feature": "立ち上がると白い毛が膨らむ",
+     "ref": "L2290"
+    }
+   ],
+   "traits": [
+    {
+     "feature": "壁の街の者を坑に入れることに反対票を投じる",
+     "ref": "L2326"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "皐月十日午後",
+     "where": "礼拝の間",
+     "doing": "投票し、反対理由を述べる",
+     "ref": "L2290"
+    }
+   ]
+  },
+  {
+   "name": "蜥蜴人の長老",
+   "aliases": [],
+   "first_person": [],
+   "calls_others": [],
+   "speech": [],
+   "looks": [
+    {
+     "feature": "鱗のつやが消えている",
+     "ref": "L2250"
+    }
+   ],
+   "traits": [],
+   "whereabouts": [
+    {
+     "when": "皐月十日午後",
+     "where": "礼拝の間",
+     "doing": "投票する",
+     "ref": "L2292"
+    }
+   ]
+  },
+  {
+   "name": "鴉人の長老",
+   "aliases": [
+    "長老"
+   ],
+   "first_person": [],
+   "calls_others": [
+    {
+     "target": "ブリギッテ",
+     "word": "ブリギッテ",
+     "ref": "L2529"
+    }
+   ],
+   "speech": [
+    {
+     "feature": "簡潔な言い方",
+     "example": "群れは群れだ",
+     "ref": "L2736"
+    }
+   ],
+   "looks": [
+    {
+     "feature": "羽に白まじり",
+     "ref": "L2250"
+    },
+    {
+     "feature": "翼の先がある",
+     "ref": "L2365"
+    }
+   ],
+   "traits": [
+    {
+     "feature": "段の数を数えるようにゆっくり降りる",
+     "ref": "L2363"
+    },
+    {
+     "feature": "紙の束を両手で運ぶ",
+     "ref": "L2379"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "皐月十一日午前",
+     "where": "書庫",
+     "doing": "ブリギッテに名簿と古い紙を見せる",
+     "ref": "L2377"
+    },
+    {
+     "when": "皐月十一日夕方",
+     "where": "古砦の中庭",
+     "doing": "子どもを数える",
+     "ref": "L2728"
+    }
+   ]
+  },
+  {
+   "name": "若い鴉人",
+   "aliases": [],
+   "first_person": [],
+   "calls_others": [],
+   "speech": [
+    {
+     "feature": "投票結果を数えて告げる",
+     "example": "白が六つ。黒が二つ",
+     "ref": "L2312"
+    }
+   ],
+   "looks": [],
+   "traits": [
+    {
+     "feature": "壺から札を出して数える",
+     "ref": "L2306"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "皐月十日午後",
+     "where": "礼拝の間",
+     "doing": "投票札を数える",
+     "ref": "L2306"
+    }
+   ]
+  },
+  {
+   "name": "蜥蜴人の女",
+   "aliases": [],
+   "first_person": [],
+   "calls_others": [],
+   "speech": [],
+   "looks": [
+    {
+     "feature": "指が四本",
+     "ref": "L2642"
+    }
+   ],
+   "traits": [
+    {
+     "feature": "鍋をかき回し、粥をよそう",
+     "ref": "L2642"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "皐月十一日夕方",
+     "where": "古砦の中庭",
+     "doing": "麦粥を調理する",
+     "ref": "L2642"
+    }
+   ]
+  },
+  {
+   "name": "蜥蜴人の若い男",
+   "aliases": [],
+   "first_person": [],
+   "calls_others": [],
+   "speech": [
+    {
+     "feature": "鍋の量を独特の数え方で答える",
+     "example": "八が六つと、二だ",
+     "ref": "L2716"
+    }
+   ],
+   "looks": [],
+   "traits": [],
+   "whereabouts": [
+    {
+     "when": "皐月十一日夕方",
+     "where": "古砦の中庭",
+     "doing": "鍋の量を答える",
+     "ref": "L2714"
+    }
+   ]
+  },
+  {
+   "name": "若い灰狼",
+   "aliases": [
+    "壁の番"
+   ],
+   "first_person": [],
+   "calls_others": [],
+   "speech": [
+    {
+     "feature": "短く返答する",
+     "example": "毎晩、焚く",
+     "ref": "L2802"
+    }
+   ],
+   "looks": [],
+   "traits": [
+    {
+     "feature": "ダリオの横顔を嗅いでうなずく",
+     "ref": "L2790"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "夜",
+     "where": "古砦の壁の上",
+     "doing": "壁の番をする",
+     "ref": "L2790"
+    }
+   ]
+  },
+  {
+   "name": "パウル",
+   "aliases": [],
+   "first_person": [],
+   "calls_others": [],
+   "speech": [],
+   "looks": [
+    {
+     "feature": "書物袋を持ち、紙と筆を出す",
+     "ref": "L2346"
+    }
+   ],
+   "traits": [
+    {
+     "feature": "筆を一画ごとに止めて書く",
+     "ref": "L2354"
+    },
+    {
+     "feature": "自分のことを話さない",
+     "ref": "L2595"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "皐月十日、議の後",
+     "where": "礼拝の間の奥壁",
+     "doing": "壁の刻みを紙に写す",
+     "ref": "L2346"
+    }
+   ]
+  },
+  {
+   "name": "ゴルド",
+   "aliases": [],
+   "first_person": [],
+   "calls_others": [],
+   "speech": [],
+   "looks": [],
+   "traits": [],
+   "whereabouts": []
+  },
+  {
+   "name": "ミラ",
+   "aliases": [],
+   "first_person": [],
+   "calls_others": [],
+   "speech": [],
+   "looks": [],
+   "traits": [],
+   "whereabouts": []
+  },
+  {
+   "name": "ツィルク",
+   "aliases": [
+    "狼のツィルク",
+    "鴉のツィルク"
+   ],
+   "first_person": [],
+   "calls_others": [],
+   "speech": [],
+   "looks": [],
+   "traits": [],
+   "whereabouts": []
+  },
+  {
+   "name": "アガタ",
+   "aliases": [
+    "アガタ先生",
+    "先生"
+   ],
+   "first_person": [],
+   "calls_others": [],
+   "speech": [
+    {
+     "feature": "字の書き方を教える際の言葉",
+     "example": "終わりで、息を止めなさい",
+     "ref": "L2517"
+    }
+   ],
+   "looks": [],
+   "traits": [
+    {
+     "feature": "手習い所でブリギッテに字の書き方を注意していた",
+     "ref": "L2517"
+    }
+   ],
+   "whereabouts": []
+  }
+ ],
+ "places": [
+  {
+   "name": "古砦の礼拝の間",
+   "layout": [
+    {
+     "feature": "砦で最も広い石の間で、鐘はない",
+     "ref": "L2244"
+    },
+    {
+     "feature": "奥に半円形の石の席が十二あり、八人が座り四つが空く",
+     "ref": "L2248"
+    },
+    {
+     "feature": "奥壁の高い所に古い刻みがある",
+     "ref": "L2264"
+    },
+    {
+     "feature": "入口そばに石の台と壺がある",
+     "ref": "L2288"
+    }
+   ],
+   "scenery": [
+    {
+     "feature": "高窓の光が床に細長い菱形を作る",
+     "ref": "L2244"
+    },
+    {
+     "feature": "梁は煤で黒く、壁に蝋燭の跡が重なる",
+     "ref": "L2246"
+    },
+    {
+     "feature": "石と煤、羊毛、脂の匂いがする",
+     "ref": "L2244"
+    }
+   ],
+   "weather_season": []
+  },
+  {
+   "name": "廊下",
+   "layout": [
+    {
+     "feature": "石の床と壁がある",
+     "ref": "L2242"
+    }
+   ],
+   "scenery": [
+    {
+     "feature": "灰狼の子が二人、壁にもたれている",
+     "ref": "L2242"
+    },
+    {
+     "feature": "石と古い藁の匂いがする",
+     "ref": "L2242"
+    }
+   ],
+   "weather_season": [
+    {
+     "feature": "外より少し冷たい",
+     "ref": "L2242"
+    }
+   ]
+  },
+  {
+   "name": "古砦の書庫",
+   "layout": [
+    {
+     "feature": "塔の下の石段を降りた先にある",
+     "ref": "L2359"
+    },
+    {
+     "feature": "狭い扉の内側にある石造りの小部屋で、窓はない",
+     "ref": "L2371"
+    },
+    {
+     "feature": "壁沿いに木の棚があり、その隙間に木箱が積まれる",
+     "ref": "L2371"
+    },
+    {
+     "feature": "机がある",
+     "ref": "L2395"
+    }
+   ],
+   "scenery": [
+    {
+     "feature": "油と古い紙、古い油と埃の匂い",
+     "ref": "L2361"
+    },
+    {
+     "feature": "掌の灯が棚や箱を橙色に照らす",
+     "ref": "L2369"
+    },
+    {
+     "feature": "棚に藁と羽毛が少し残る",
+     "ref": "L2371"
+    }
+   ],
+   "weather_season": [
+    {
+     "feature": "中庭よりずっと冷えている",
+     "ref": "L2375"
+    }
+   ]
+  },
+  {
+   "name": "古砦の中庭",
+   "layout": [
+    {
+     "feature": "石の炉に大きな鍋が二つある",
+     "ref": "L2632"
+    },
+    {
+     "feature": "石段の列に水差しが回る",
+     "ref": "L2642"
+    },
+    {
+     "feature": "山羊の囲いがある",
+     "ref": "L2611"
+    }
+   ],
+   "scenery": [
+    {
+     "feature": "夕方は麦粥の匂いが満ちる",
+     "ref": "L2630"
+    },
+    {
+     "feature": "山羊の乳は温かく、青草の匂いがする",
+     "ref": "L2660"
+    },
+    {
+     "feature": "子どもたちの声と山羊の角がぶつかる音",
+     "ref": "L2611"
+    }
+   ],
+   "weather_season": [
+    {
+     "feature": "雲の隙間から光が漏れ、風はまだ冷たい",
+     "ref": "L2609"
+    }
+   ]
+  },
+  {
+   "name": "古砦の門",
+   "layout": [
+    {
+     "feature": "門柱に拳が入る三つの穴がある",
+     "ref": "L2762"
+    },
+    {
+     "feature": "楣に古い字が刻まれている",
+     "ref": "L2762"
+    }
+   ],
+   "scenery": [],
+   "weather_season": []
+  },
+  {
+   "name": "古砦の壁・上の通路",
+   "layout": [
+    {
+     "feature": "壁に階段があり、一番上に通路がある",
+     "ref": "L2788"
+    },
+    {
+     "feature": "篝火の鉄籠が三歩先にある",
+     "ref": "L2792"
+    }
+   ],
+   "scenery": [
+    {
+     "feature": "鉄籠の篝火から樹脂の匂いがし、薪が爆ぜる",
+     "ref": "L2784"
+    },
+    {
+     "feature": "山羊の鈴が遠くで一度鳴り、沢の音が続く",
+     "ref": "L2786"
+    }
+   ],
+   "weather_season": [
+    {
+     "feature": "谷から吹き上げる夜風が煙を斜めに流す",
+     "ref": "L2786"
+    },
+    {
+     "feature": "冬のあいだ坑から下りてくるものがあった",
+     "ref": "L2796"
+    }
+   ]
+  },
+  {
+   "name": "北の坑口",
+   "layout": [
+    {
+     "feature": "尾根の腹に坑の口がある",
+     "ref": "L2796"
+    }
+   ],
+   "scenery": [
+    {
+     "feature": "雲が月を隠し、坑口は黒い窪みに見える",
+     "ref": "L2796"
+    }
+   ],
+   "weather_season": []
+  },
+  {
+   "name": "カルトブルン",
+   "layout": [
+    {
+     "feature": "北の村で、砦の下にある",
+     "ref": "L2236"
+    }
+   ],
+   "scenery": [
+    {
+     "feature": "村の羊がいる",
+     "ref": "L2276"
+    }
+   ],
+   "weather_season": []
+  },
+  {
+   "name": "壁の街",
+   "layout": [],
+   "scenery": [],
+   "weather_season": []
+  },
+  {
+   "name": "手習い所",
+   "layout": [],
+   "scenery": [],
+   "weather_season": []
+  },
+  {
+   "name": "沢",
+   "layout": [],
+   "scenery": [
+    {
+     "feature": "音がずっと下で続く",
+     "ref": "L2786"
+    }
+   ],
+   "weather_season": []
+  },
+  {
+   "name": "荒れ野",
+   "layout": [],
+   "scenery": [
+    {
+     "feature": "歩いていた晩、山の肩に小さな灯が見えた",
+     "ref": "L2784"
+    }
+   ],
+   "weather_season": []
+  }
+ ],
+ "season_mismatch": [],
+ "inner_inconsistencies": [
+  {
+   "text": "ツィルクが鴉と狼の両方として説明されるが、別人か同名者か判然としない",
+   "refs": [
+    "L2441",
+    "L2451",
+    "L2459"
+   ]
+  },
+  {
+   "text": "「三つ。……六つ」と数えた後、「白が六つ、黒が二つ」と結果を告げる",
+   "refs": [
+    "L2306",
+    "L2308",
+    "L2310",
+    "L2312"
+   ]
+  }
+ ]
+}

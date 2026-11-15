@@ -1,0 +1,432 @@
+{
+  "episode": "03",
+  "dates": [
+    {"when": "師走、雪が降り続く夜", "ref": "L4"},
+    {"when": "師走十四日、朝七つの鐘", "ref": "L119"},
+    {"when": "師走十五日、夜明け前", "ref": "L252"}
+  ],
+  "characters": [
+    {
+      "name": "ダリオ",
+      "aliases": ["ダリオさん", "親父"],
+      "first_person": [
+        {"word": "俺", "ref": "L111"}
+      ],
+      "calls_others": [
+        {"target": "リナ", "word": "新人", "ref": "L388"},
+        {"target": "マスター", "word": "マスター", "ref": "L22"},
+        {"target": "ガズ", "word": "ガズ", "ref": "L402"},
+        {"target": "トマス", "word": "トマス", "ref": "L326"}
+      ],
+      "speech": [
+        {"feature": "くだけた口調。「〜だ」「〜だろう」など", "example": "雪が解けたら払う", "ref": "L82"},
+        {"feature": "「〜ねえ」など荒めの言い方", "example": "誰がこんな雪の中、北へ行くもんか", "ref": "L37"}
+      ],
+      "looks": [
+        {"feature": "三十代半ばの大男。腰に剣を吊る", "ref": "L8"},
+        {"feature": "擦り切れた毛皮の外套を着ている", "ref": "L8"},
+        {"feature": "縮れた髭があり、髭に雪がついて白くなる", "ref": "L8"}
+      ],
+      "traits": [
+        {"feature": "寒さに身を縮め、足を速める", "ref": "L11"},
+        {"feature": "髭をひねる", "ref": "L87"},
+        {"feature": "荷馬の鼻を撫で、文句を言わせてやれと言う", "ref": "L442"}
+      ],
+      "whereabouts": [
+        {"when": "師走の雪の夜", "where": "錆び釘亭", "doing": "飲食し、白い耳の娘の噂を聞く", "ref": "L13"},
+        {"when": "師走十四日、朝七つ", "where": "冒険者組合", "doing": "北の依頼を受ける", "ref": "L119"},
+        {"when": "師走十五日、夜明け前", "where": "錆び釘亭", "doing": "銅貨二枚のツケを払い、食料を受け取る", "ref": "L256"},
+        {"when": "師走十五日", "where": "北門から北街道へ", "doing": "一行を率いて北へ向かう", "ref": "L336"}
+      ]
+    },
+    {
+      "name": "マスター",
+      "aliases": ["マスター"],
+      "first_person": [],
+      "calls_others": [
+        {"target": "ダリオ", "word": "ダリオさん", "ref": "L15"}
+      ],
+      "speech": [
+        {"feature": "丁寧な声・丁寧語", "example": "火には通しますよ", "ref": "L24"}
+      ],
+      "looks": [
+        {"feature": "五十代。肩に手ぬぐいを掛けている", "ref": "L17"}
+      ],
+      "traits": [
+        {"feature": "ダリオのツケを帳簿につける", "ref": "L91"},
+        {"feature": "出発するダリオに黒パンと干し肉を渡す", "ref": "L270"}
+      ],
+      "whereabouts": [
+        {"when": "師走の夜", "where": "錆び釘亭", "doing": "店を切り盛りし、客に料理や酒を出す", "ref": "L18"}
+      ]
+    },
+    {
+      "name": "羊毛商人",
+      "aliases": ["商人"],
+      "first_person": [],
+      "calls_others": [
+        {"target": "老人", "word": "爺さん", "ref": "L46"}
+      ],
+      "speech": [
+        {"feature": "老人の話を笑い、くだけた口調で話す", "example": "寒さで脳みそが凍ったんだろう", "ref": "L46"}
+      ],
+      "looks": [],
+      "traits": [
+        {"feature": "赤蕪漬けに沈んだ鶉卵を小壺からつまみ出す", "ref": "L63"}
+      ],
+      "whereabouts": [
+        {"when": "師走の夜", "where": "錆び釘亭", "doing": "茶を飲み、白い耳の娘の噂を笑う", "ref": "L30"}
+      ]
+    },
+    {
+      "name": "老人",
+      "aliases": ["爺さん", "炭焼きの爺さま（話中の呼称）"],
+      "first_person": [
+        {"word": "おる", "ref": "L43"}
+      ],
+      "calls_others": [],
+      "speech": [
+        {"feature": "低く乾いた声で噂を語る", "example": "それだけじゃないぞ", "ref": "L41"}
+      ],
+      "looks": [],
+      "traits": [
+        {"feature": "茶碗を両手で包み、壁の染みを見る", "ref": "L48"},
+        {"feature": "噂を笑わず、茶碗の縁を指でなぞる", "ref": "L52"}
+      ],
+      "whereabouts": [
+        {"when": "師走の夜", "where": "錆び釘亭", "doing": "白い耳の娘の目撃談を話す", "ref": "L43"}
+      ]
+    },
+    {
+      "name": "荷馬車の御者",
+      "aliases": ["御者"],
+      "first_person": [],
+      "calls_others": [
+        {"target": "老人", "word": "爺さん", "ref": "L50"}
+      ],
+      "speech": [
+        {"feature": "くだけた口調", "example": "北街道は駄目だろうな", "ref": "L33"}
+      ],
+      "looks": [],
+      "traits": [
+        {"feature": "煮込みを食べ、のちに角の席で丸くなる", "ref": "L30"},
+        {"feature": "幽霊だろうと笑うが、その後黙る", "ref": "L50"}
+      ],
+      "whereabouts": [
+        {"when": "師走の夜", "where": "錆び釘亭", "doing": "北街道の雪と消えた隊商について話す", "ref": "L33"}
+      ]
+    },
+    {
+      "name": "若い男",
+      "aliases": ["日雇いらしい若い男"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [],
+      "traits": [
+        {"feature": "柱にもたれて居眠りし、銅貨の音で片目を開ける", "ref": "L30"}
+      ],
+      "whereabouts": [
+        {"when": "師走の夜", "where": "錆び釘亭", "doing": "柱にもたれて居眠りする", "ref": "L30"}
+      ]
+    },
+    {
+      "name": "エーリカ・ランゲ",
+      "aliases": ["エーリカ", "組合長"],
+      "first_person": [],
+      "calls_others": [
+        {"target": "ダリオ", "word": "あんた", "ref": "L145"}
+      ],
+      "speech": [
+        {"feature": "事務的な口調", "example": "報酬は、総額金貨五十枚", "ref": "L156"}
+      ],
+      "looks": [
+        {"feature": "四十代半ば。刃のような目つきの女", "ref": "L129"}
+      ],
+      "traits": [
+        {"feature": "依頼票に条件を書き込み、力のこもった角のある字で署名する", "ref": "L235"}
+      ],
+      "whereabouts": [
+        {"when": "師走十四日、朝七つ頃", "where": "冒険者組合の奥の卓", "doing": "依頼を説明し、条件を決める", "ref": "L129"}
+      ]
+    },
+    {
+      "name": "ベルント",
+      "aliases": ["ベルント様", "南の商人殿"],
+      "first_person": [
+        {"word": "俺", "ref": "L152"}
+      ],
+      "calls_others": [
+        {"target": "アルドリック", "word": "徴税役殿", "ref": "L154"}
+      ],
+      "speech": [
+        {"feature": "南訛り。荷を探してほしいと丁寧に話す", "example": "荷は命なんです", "ref": "L232"}
+      ],
+      "looks": [
+        {"feature": "腹の出た五十代の商人", "ref": "L131"},
+        {"feature": "膝の革鞄を持つ", "ref": "L131"}
+      ],
+      "traits": [
+        {"feature": "話す前に荷の紐を触る癖がある", "ref": "L131"},
+        {"feature": "紐をなぞって緩みを確かめる", "ref": "L294"}
+      ],
+      "whereabouts": [
+        {"when": "師走十四日、朝七つ頃", "where": "冒険者組合", "doing": "依頼に金貨二十枚を足し、自ら一行に加わる", "ref": "L129"},
+        {"when": "師走十五日、夜明け", "where": "北門", "doing": "そりの紐を確かめる", "ref": "L294"}
+      ]
+    },
+    {
+      "name": "リナ",
+      "aliases": [],
+      "first_person": [
+        {"word": "私", "ref": "L170"}
+      ],
+      "calls_others": [
+        {"target": "ダリオ", "word": "親父", "ref": "L218"}
+      ],
+      "speech": [
+        {"feature": "丁寧語を使う", "example": "数えるのが好きなんです", "ref": "L205"}
+      ],
+      "looks": [
+        {"feature": "十六歳の魔法使い。麦藁色の髪", "ref": "L169"},
+        {"feature": "父親のお下がりの杖を持つ", "ref": "L170"}
+      ],
+      "traits": [
+        {"feature": "緊張すると杖を握りしめる", "ref": "L175"},
+        {"feature": "金を数えるのが好きで、毎晩寝る前に数えると言う", "ref": "L205"},
+        {"feature": "金貨を卓に並べ、指で計算する", "ref": "L206"}
+      ],
+      "whereabouts": [
+        {"when": "師走十四日", "where": "冒険者組合", "doing": "依頼に加わり、前払いの金貨を数える", "ref": "L169"},
+        {"when": "師走十五日、夜明け", "where": "北門", "doing": "空を見上げ、天気を述べる", "ref": "L296"},
+        {"when": "師走十五日", "where": "北街道", "doing": "一行と北へ進む", "ref": "L366"}
+      ]
+    },
+    {
+      "name": "ケス",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [
+        {"feature": "低く乾いた声。短く言い切る", "example": "鴉は嘘をつかない", "ref": "L181"}
+      ],
+      "looks": [
+        {"feature": "鴉人。黒い羽と鋭い目", "ref": "L177"}
+      ],
+      "traits": [
+        {"feature": "高い場所に座り、遠くを見張る", "ref": "L178"},
+        {"feature": "風向きと空模様を報告する", "ref": "L304"}
+      ],
+      "whereabouts": [
+        {"when": "師走十四日", "where": "冒険者組合の窓際", "doing": "窓枠の高いところにいる", "ref": "L177"},
+        {"when": "師走十五日、夜明け", "where": "北門の門櫓", "doing": "一行を見下ろす", "ref": "L304"},
+        {"when": "師走十五日", "where": "北街道", "doing": "頭上から道を見張る", "ref": "L346"}
+      ]
+    },
+    {
+      "name": "ガズ",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [
+        {"feature": "言葉少な", "example": "……暖かい", "ref": "L408"}
+      ],
+      "looks": [
+        {"feature": "蜥蜴人。灰色の鱗と太い尻尾", "ref": "L184"}
+      ],
+      "traits": [
+        {"feature": "靴と手を見て人を覚える", "ref": "L187"},
+        {"feature": "暖かい岩の前で立ち止まり、尻尾を地面に叩く", "ref": "L398"}
+      ],
+      "whereabouts": [
+        {"when": "師走十四日", "where": "冒険者組合", "doing": "壁にもたれている", "ref": "L184"},
+        {"when": "師走十五日、夜明け", "where": "北門", "doing": "荷馬の横の雪上に立つ", "ref": "L314"},
+        {"when": "師走十五日", "where": "北街道の岩の前", "doing": "暖かさを感じて立ち止まる", "ref": "L398"}
+      ]
+    },
+    {
+      "name": "フィン",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [
+        {"feature": "真面目そうな、比較的改まった口調", "example": "命令だ", "ref": "L194"}
+      ],
+      "looks": [
+        {"feature": "若い男。灰色の外套を着て姿勢よく座る", "ref": "L191"}
+      ],
+      "traits": [
+        {"feature": "荷馬の異変に気づき、剣の柄に手をかける", "ref": "L440"}
+      ],
+      "whereabouts": [
+        {"when": "師走十四日", "where": "冒険者組合", "doing": "治安維持隊員として任務を説明する", "ref": "L191"},
+        {"when": "師走十五日、夜明け", "where": "北門", "doing": "外套の襟を立てる", "ref": "L302"},
+        {"when": "師走十五日", "where": "北街道", "doing": "一行と北へ進む", "ref": "L350"}
+      ]
+    },
+    {
+      "name": "アルドリック",
+      "aliases": ["徴税役", "徴税役殿"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [],
+      "traits": [],
+      "whereabouts": [
+        {"when": "師走十四日時点", "where": "カルトブルン", "doing": "雪に足止めされ、税の帳簿と集めた税の一部を持っている", "ref": "L143"}
+      ]
+    },
+    {
+      "name": "トマス",
+      "aliases": [],
+      "first_person": [
+        {"word": "私", "ref": "L330"}
+      ],
+      "calls_others": [
+        {"target": "ダリオ", "word": "ダリオ（呼びかけへの返答）", "ref": "L326"}
+      ],
+      "speech": [
+        {"feature": "丁寧語", "example": "無事でお帰りください", "ref": "L334"}
+      ],
+      "looks": [
+        {"feature": "門番。若い顔で、槍を持つ", "ref": "L324"}
+      ],
+      "traits": [
+        {"feature": "ダリオに声をかけられると顔が少し解ける", "ref": "L328"}
+      ],
+      "whereabouts": [
+        {"when": "師走十五日、朝六つの開門時", "where": "北門", "doing": "槍を持って門番を務める", "ref": "L324"}
+      ]
+    },
+    {
+      "name": "木こり",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [],
+      "traits": [
+        {"feature": "ケスとガズを見て少し離れ、騾馬に何か低く言う", "ref": "L316"},
+        {"feature": "門が開くと騾馬を引いて先に通り、二度ほど振り返る", "ref": "L322"}
+      ],
+      "whereabouts": [
+        {"when": "師走十五日、開門前後", "where": "北門の内側", "doing": "騾馬と開門を待ち、門を通り抜ける", "ref": "L316"}
+      ]
+    },
+    {
+      "name": "白い耳の娘",
+      "aliases": ["娘"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [
+        {"feature": "白い耳を持つと噂される", "ref": "L45"}
+      ],
+      "traits": [
+        {"feature": "雪の上を歩いても足跡がなく、近づいても逃げないという目撃談", "ref": "L49"}
+      ],
+      "whereabouts": [
+        {"when": "晩秋から続くという話", "where": "三つ目の一里塚の先", "doing": "雪の中を歩いていると噂される", "ref": "L43"}
+      ]
+    }
+  ],
+  "places": [
+    {
+      "name": "グラウヴァル下町の通り",
+      "layout": [
+        {"feature": "店々が通り沿いにあり、夜には板を下ろす", "ref": "L6"},
+        {"feature": "北門は街の北側にあり、城壁の外へ通じる", "ref": "L6"}
+      ],
+      "scenery": [
+        {"feature": "雪に埋もれた通り。櫓は黒い影となり、見張り番の灯りは消えている", "ref": "L6"}
+      ],
+      "weather_season": [
+        {"feature": "師走の雪が降り、夜の街を埋める", "ref": "L4"}
+      ]
+    },
+    {
+      "name": "錆び釘亭",
+      "layout": [
+        {"feature": "角に炉があり、カウンター席がある", "ref": "L18"},
+        {"feature": "土間は融けた雪で濡れている", "ref": "L13"}
+      ],
+      "scenery": [
+        {"feature": "炉に黒い鉄鍋がかかり、梁は煙で黒い", "ref": "L18"},
+        {"feature": "湯気、麦酒、湿った羊毛皮の匂いがする", "ref": "L13"}
+      ],
+      "weather_season": [
+        {"feature": "外よりいくらか暖かい", "ref": "L18"},
+        {"feature": "外では雪が降り続く", "ref": "L115"}
+      ]
+    },
+    {
+      "name": "冒険者組合",
+      "layout": [
+        {"feature": "奥に卓があり、窓際に座れる場所がある", "ref": "L129"},
+        {"feature": "石壁と床板があり、暖炉がある", "ref": "L120"}
+      ],
+      "scenery": [
+        {"feature": "石壁は冷たく、古い紙の匂いがする", "ref": "L120"},
+        {"feature": "松薪の火の粉が石壁へ飛び、床板に焦げ跡が点々と残る", "ref": "L123"}
+      ],
+      "weather_season": []
+    },
+    {
+      "name": "北門",
+      "layout": [
+        {"feature": "門の脇に松明があり、門櫓の上に手すりがある", "ref": "L294"},
+        {"feature": "重い扉は閂を抜いて開く", "ref": "L320"}
+      ],
+      "scenery": [
+        {"feature": "荷馬二頭と、毛布・薪・食料を積んだそりが集まる", "ref": "L294"},
+        {"feature": "開門を待つ木こりと騾馬がいる", "ref": "L316"}
+      ],
+      "weather_season": [
+        {"feature": "星が残り、風は北寄りで、上空は晴れと報告される", "ref": "L298"},
+        {"feature": "雪面を松明がぼんやり照らす", "ref": "L294"}
+      ]
+    },
+    {
+      "name": "北街道・雪野の荒れ野",
+      "layout": [
+        {"feature": "街道が北へ走り、一里塚が道沿いにある", "ref": "L338"},
+        {"feature": "二里目の一里塚を過ぎると両側に荒れ野が広がる", "ref": "L360"},
+        {"feature": "三里目から先は冬のあいだ隊商が通れないとされる", "ref": "L350"}
+      ],
+      "scenery": [
+        {"feature": "最初の一里塚は雪に半分埋もれ、標木だけが見える", "ref": "L342"},
+        {"feature": "雪と枯れ草の中に赤い棘草と赤い実がある", "ref": "L362"},
+        {"feature": "雪面に雪塵が光の中で舞う", "ref": "L394"}
+      ],
+      "weather_season": [
+        {"feature": "師走十五日、夜明け前は空が暗い", "ref": "L252"},
+        {"feature": "風がない一方、冷えが骨まで入る", "ref": "L344"},
+        {"feature": "日が傾くと雪が青灰色になり、風が鋭さを増す", "ref": "L454"},
+        {"feature": "野営時、空の端が暗い藍色に沈みはじめる", "ref": "L460"}
+      ]
+    },
+    {
+      "name": "カルトブルン",
+      "layout": [],
+      "scenery": [
+        {"feature": "寒村とされる", "ref": "L143"}
+      ],
+      "weather_season": [
+        {"feature": "徴税役が雪に足止めされている", "ref": "L143"}
+      ]
+    }
+  ],
+  "season_mismatch": [
+    {
+      "text": "雪の中で「ここだけ、夏」",
+      "why": "師走の雪野で、ガズが岩の場所を夏のように暖かいと感じている。意図的な感覚描写かもしれない。",
+      "ref": "L412"
+    },
+    {
+      "text": "師走十五日の日中、雪面がまぶしく輝く",
+      "why": "雪景色の中で日が高くなり、光が強くなる描写。季節と矛盾するとは本文だけでは断定できない。",
+      "ref": "L394"
+    }
+  ],
+  "inner_inconsistencies": []
+}

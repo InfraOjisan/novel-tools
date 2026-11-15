@@ -1,0 +1,1125 @@
+{
+ "episode": "06",
+ "dates": [
+  {
+   "when": "弥生十二日、昼の鐘が鳴り終わるころ",
+   "ref": "L4"
+  },
+  {
+   "when": "去年の霜月の夜",
+   "ref": "L38"
+  },
+  {
+   "when": "三一二年神無月十日（登録日）",
+   "ref": "L177"
+  },
+  {
+   "when": "弥生十三日の朝",
+   "ref": "L320"
+  },
+  {
+   "when": "昼すぎ",
+   "ref": "L372"
+  },
+  {
+   "when": "午後のなかば",
+   "ref": "L416"
+  },
+  {
+   "when": "夕方",
+   "ref": "L454"
+  }
+ ],
+ "characters": [
+  {
+   "name": "フィン",
+   "aliases": [
+    "隊の方"
+   ],
+   "first_person": [],
+   "calls_others": [
+    {
+     "target": "バルタザール",
+     "word": "前の組合長",
+     "ref": "L334"
+    },
+    {
+     "target": "エルノ",
+     "word": "偽の神官",
+     "ref": "L317"
+    }
+   ],
+   "speech": [
+    {
+     "feature": "短く命令する",
+     "example": "行け",
+     "ref": "L334"
+    },
+    {
+     "feature": "くだけた口調",
+     "example": "なんだ",
+     "ref": "L308"
+    },
+    {
+     "feature": "謝罪する",
+     "example": "すみません",
+     "ref": "L380"
+    }
+   ],
+   "looks": [],
+   "traits": [
+    {
+     "feature": "牢でバルタザールの顔を毎晩見ていた",
+     "ref": "L82"
+    },
+    {
+     "feature": "隊の言い返さない理由を予算と結びつけて理解している",
+     "ref": "L46"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "弥生十二日、昼",
+     "where": "詰所の牢から裁きの間",
+     "doing": "四人の囚人を連れ出す",
+     "ref": "L4"
+    },
+    {
+     "when": "弥生十三日の朝",
+     "where": "南門",
+     "doing": "バルタザールの縄を持つ",
+     "ref": "L324"
+    },
+    {
+     "when": "昼すぎ",
+     "where": "冒険者組合",
+     "doing": "引き渡し状を持ち、護送の依頼を相談する",
+     "ref": "L372"
+    }
+   ]
+  },
+  {
+   "name": "バルタザール・グロック",
+   "aliases": [
+    "前の組合長",
+    "組合長",
+    "叔父"
+   ],
+   "first_person": [
+    {
+     "word": "俺",
+     "ref": "L62"
+    }
+   ],
+   "calls_others": [],
+   "speech": [
+    {
+     "feature": "罪を認める",
+     "example": "認める",
+     "ref": "L56"
+    },
+    {
+     "feature": "知らないと言い張る",
+     "example": "知らん",
+     "ref": "L78"
+    }
+   ],
+   "looks": [
+    {
+     "feature": "四か月の牢で腹がひと回り小さくなった",
+     "ref": "L10"
+    },
+    {
+     "feature": "底の厚い靴を履く",
+     "ref": "L10"
+    },
+    {
+     "feature": "古い外套を一枚だけ着て、麻袋を一つ持つ",
+     "ref": "L326"
+    }
+   ],
+   "traits": [
+    {
+     "feature": "自分一人で仕組んだと答える",
+     "ref": "L62"
+    },
+    {
+     "feature": "目を参事たちの席に一度だけ走らせ、どの顔でも止めない",
+     "ref": "L64"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "弥生十二日",
+     "where": "裁きの間",
+     "doing": "罪を認め、石の所在は知らないと答える",
+     "ref": "L52"
+    },
+    {
+     "when": "弥生十三日の朝",
+     "where": "南門から南街道へ",
+     "doing": "街を出る",
+     "ref": "L336"
+    }
+   ]
+  },
+  {
+   "name": "ニコ",
+   "aliases": [
+    "盗賊"
+   ],
+   "first_person": [
+    {
+     "word": "俺",
+     "ref": "L94"
+    }
+   ],
+   "calls_others": [],
+   "speech": [
+    {
+     "feature": "荒いくだけた口調、「ねえ」「だろ」を使う",
+     "example": "上を見ねえ",
+     "ref": "L98"
+    },
+    {
+     "feature": "語尾に「だよ」を使う",
+     "example": "三枚きりで",
+     "ref": "L108"
+    }
+   ],
+   "looks": [],
+   "traits": [
+    {
+     "feature": "縄を引かれる前に自分で立つ",
+     "ref": "L92"
+    },
+    {
+     "feature": "盗みの手口を自分から話す",
+     "ref": "L94"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "弥生十二日",
+     "where": "裁きの間",
+     "doing": "盗みを認め、手口を説明する",
+     "ref": "L90"
+    }
+   ]
+  },
+  {
+   "name": "イゾルデ",
+   "aliases": [
+    "姪",
+    "魔法使い"
+   ],
+   "first_person": [],
+   "calls_others": [
+    {
+     "target": "バルタザール",
+     "word": "叔父",
+     "ref": "L134"
+    }
+   ],
+   "speech": [
+    {
+     "feature": "丁寧に短く答える",
+     "example": "はい",
+     "ref": "L130"
+    }
+   ],
+   "looks": [
+    {
+     "feature": "紙の束を麻紐で十字に縛って抱えている",
+     "ref": "L10"
+    },
+    {
+     "feature": "古い灰色の外套を着る",
+     "ref": "L356"
+    }
+   ],
+   "traits": [
+    {
+     "feature": "放免後、叔父が出ていった扉を見つめる",
+     "ref": "L160"
+    },
+    {
+     "feature": "叔父の十歩後ろを歩き、追いつこうとせず、一度も振り返らない",
+     "ref": "L364"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "弥生十二日",
+     "where": "裁きの間",
+     "doing": "隊の前では本当のことを言ったと証言し、放免される",
+     "ref": "L142"
+    },
+    {
+     "when": "弥生十三日の朝",
+     "where": "南門から霧の中の南街道へ",
+     "doing": "叔父の後を歩く",
+     "ref": "L358"
+    }
+   ]
+  },
+  {
+   "name": "エルノ・ファルク",
+   "aliases": [
+    "白い法衣の男",
+    "賢者",
+    "偽の神官"
+   ],
+   "first_person": [
+    {
+     "word": "私",
+     "ref": "L305"
+    }
+   ],
+   "calls_others": [
+    {
+     "target": "フィン",
+     "word": "隊の方",
+     "ref": "L305"
+    }
+   ],
+   "speech": [
+    {
+     "feature": "小さく礼儀正しい声",
+     "example": "はい",
+     "ref": "L183"
+    },
+    {
+     "feature": "丁寧な言い方",
+     "example": "伺ってもよろしいですか",
+     "ref": "L305"
+    }
+   ],
+   "looks": [
+    {
+     "feature": "白い法衣を着る",
+     "ref": "L12"
+    },
+    {
+     "feature": "両掌を胸の前で合わせ、手首から指の根もとまで革紐で巻かれる",
+     "ref": "L14"
+    },
+    {
+     "feature": "細い指の先が落ち着かず動く",
+     "ref": "L173"
+    }
+   ],
+   "traits": [
+    {
+     "feature": "自分の灯がどこに置かれるかを気にする",
+     "ref": "L309"
+    },
+    {
+     "feature": "灯に未練を残しているようにフィンには見える",
+     "ref": "L317"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "弥生十二日",
+     "where": "裁きの間",
+     "doing": "聖職を騙ったことなどを裁かれ、白塔へ引き渡されることになる",
+     "ref": "L221"
+    },
+    {
+     "when": "弥生十二日",
+     "where": "牢へ戻る廊下",
+     "doing": "押さえられた灯の置き場所をフィンに尋ねる",
+     "ref": "L301"
+    }
+   ]
+  },
+  {
+   "name": "アルブレヒト",
+   "aliases": [
+    "裁き役"
+   ],
+   "first_person": [],
+   "calls_others": [
+    {
+     "target": "エルノ",
+     "word": "この者",
+     "ref": "L263"
+    }
+   ],
+   "speech": [
+    {
+     "feature": "小さい声だが壁まで届く",
+     "example": "始める",
+     "ref": "L36"
+    },
+    {
+     "feature": "簡潔に裁定を述べる",
+     "example": "放免",
+     "ref": "L146"
+    }
+   ],
+   "looks": [
+    {
+     "feature": "七十近く、乾いた紙のような老人",
+     "ref": "L22"
+    }
+   ],
+   "traits": [
+    {
+     "feature": "笑いが起きても笑わない",
+     "ref": "L219"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "弥生十二日",
+     "where": "裁きの間の正面の高い席",
+     "doing": "四人を裁く",
+     "ref": "L22"
+    }
+   ]
+  },
+  {
+   "name": "ヘルマン",
+   "aliases": [
+    "ロズモンド館の執事"
+   ],
+   "first_person": [],
+   "calls_others": [
+    {
+     "target": "アルブレヒト",
+     "word": "裁き役様",
+     "ref": "L68"
+    }
+   ],
+   "speech": [
+    {
+     "feature": "よく磨いた声が少し震える",
+     "example": "石は、どこに",
+     "ref": "L74"
+    }
+   ],
+   "looks": [],
+   "traits": [],
+   "whereabouts": [
+    {
+     "when": "弥生十二日",
+     "where": "裁きの間の訴える側の席",
+     "doing": "夫人の石の所在を尋ねる",
+     "ref": "L24"
+    }
+   ]
+  },
+  {
+   "name": "マグダ",
+   "aliases": [
+    "隊長"
+   ],
+   "first_person": [],
+   "calls_others": [
+    {
+     "target": "フィン",
+     "word": "お前",
+     "ref": "L289"
+    }
+   ],
+   "speech": [
+    {
+     "feature": "簡潔に命じる",
+     "example": "お前が行け",
+     "ref": "L289"
+    }
+   ],
+   "looks": [
+    {
+     "feature": "灰色の外套を着て、喉元に鉄の留め金が二つある",
+     "ref": "L26"
+    }
+   ],
+   "traits": [
+    {
+     "feature": "報告が短い",
+     "ref": "L38"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "弥生十二日",
+     "where": "裁きの間",
+     "doing": "去年の霜月の夜のことを報告し、フィンに護送を命じる",
+     "ref": "L38"
+    }
+   ]
+  },
+  {
+   "name": "ダリオ",
+   "aliases": [
+    "剣士"
+   ],
+   "first_person": [
+    {
+     "word": "俺",
+     "ref": "L211"
+    }
+   ],
+   "calls_others": [],
+   "speech": [
+    {
+     "feature": "くだけた口調",
+     "example": "俺だ",
+     "ref": "L211"
+    },
+    {
+     "feature": "荒い語尾",
+     "example": "髭は嘘をつかねえ",
+     "ref": "L217"
+    }
+   ],
+   "looks": [
+    {
+     "feature": "髭の端が縮れている",
+     "ref": "L28"
+    }
+   ],
+   "traits": [
+    {
+     "feature": "髭の焦げを見せて証言する",
+     "ref": "L211"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "弥生十二日",
+     "where": "裁きの間の傍聴席最前列",
+     "doing": "エルノの術で髭が焦げたと証言する",
+     "ref": "L209"
+    },
+    {
+     "when": "昼すぎ",
+     "where": "冒険者組合",
+     "doing": "護送に志願する",
+     "ref": "L386"
+    }
+   ]
+  },
+  {
+   "name": "エーリカ・ランゲ",
+   "aliases": [
+    "新しい組合長",
+    "組合長"
+   ],
+   "first_person": [],
+   "calls_others": [
+    {
+     "target": "フィン",
+     "word": "フィンさん",
+     "ref": "L382"
+    }
+   ],
+   "speech": [
+    {
+     "feature": "丁寧に申し上げる",
+     "example": "組合長として申し上げます",
+     "ref": "L152"
+    },
+    {
+     "feature": "依頼条件を明瞭に説明する",
+     "example": "報酬は金貨十二枚",
+     "ref": "L378"
+    }
+   ],
+   "looks": [
+    {
+     "feature": "栗色の髪を首の後ろで一本に編む",
+     "ref": "L150"
+    },
+    {
+     "feature": "右の足を少し引いて前へ出る",
+     "ref": "L150"
+    }
+   ],
+   "traits": [
+    {
+     "feature": "書面の字を指でたどる速さがずいぶん速い",
+     "ref": "L376"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "弥生十二日",
+     "where": "裁きの間",
+     "doing": "ニコとイゾルデの名を登録簿から除く",
+     "ref": "L150"
+    },
+    {
+     "when": "昼すぎ",
+     "where": "冒険者組合の隅の卓",
+     "doing": "参事会の依頼書を読み、護送を募集する",
+     "ref": "L376"
+    }
+   ]
+  },
+  {
+   "name": "アガタ",
+   "aliases": [
+    "修道女"
+   ],
+   "first_person": [
+    {
+     "word": "わたし",
+     "ref": "L191"
+    }
+   ],
+   "calls_others": [
+    {
+     "target": "エルノ",
+     "word": "この方",
+     "ref": "L191"
+    }
+   ],
+   "speech": [
+    {
+     "feature": "「灯の前に偽りは申しません」と述べる",
+     "example": "灯の前に偽りは",
+     "ref": "L191"
+    },
+    {
+     "feature": "訊かれたことだけに答える",
+     "example": "訊かれていないことは言わない",
+     "ref": "L197"
+    }
+   ],
+   "looks": [
+    {
+     "feature": "白い手袋をしている",
+     "ref": "L189"
+    }
+   ],
+   "traits": [],
+   "whereabouts": [
+    {
+     "when": "弥生十二日",
+     "where": "裁きの間",
+     "doing": "エルノについて証言し、テオを立会いに指名する",
+     "ref": "L189"
+    }
+   ]
+  },
+  {
+   "name": "メルヒオル",
+   "aliases": [
+    "白い法衣の二人のうちの一人",
+    "白い服の爺さん"
+   ],
+   "first_person": [
+    {
+     "word": "私",
+     "ref": "L233"
+    }
+   ],
+   "calls_others": [],
+   "speech": [
+    {
+     "feature": "小さいが隅々まで届く、話し慣れた声",
+     "example": "白塔より参りました",
+     "ref": "L231"
+    },
+    {
+     "feature": "丁寧な言い方",
+     "example": "よろしくお願いいたします",
+     "ref": "L432"
+    }
+   ],
+   "looks": [
+    {
+     "feature": "六十がらみの痩せた男",
+     "ref": "L231"
+    },
+    {
+     "feature": "白い手袋をしている",
+     "ref": "L231"
+    }
+   ],
+   "traits": [
+    {
+     "feature": "一行の顔を一人ずつ見て、数えるように見える",
+     "ref": "L430"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "弥生十二日",
+     "where": "裁きの間",
+     "doing": "白塔との約定を示し、エルノの引き渡しを求める",
+     "ref": "L229"
+    },
+    {
+     "when": "午後のなかば",
+     "where": "冒険者組合の戸口",
+     "doing": "一行に挨拶し、宿や囚人の手の拘束を確認する",
+     "ref": "L428"
+    }
+   ]
+  },
+  {
+   "name": "イルザ",
+   "aliases": [
+    "書記役"
+   ],
+   "first_person": [],
+   "calls_others": [],
+   "speech": [],
+   "looks": [
+    {
+     "feature": "三十代の終わりの女。手帳と小さな算盤を胸に抱える",
+     "ref": "L235"
+    }
+   ],
+   "traits": [
+    {
+     "feature": "エルノを一度も見ず、手帳に書きつける",
+     "ref": "L255"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "弥生十二日",
+     "where": "裁きの間",
+     "doing": "メルヒオルとともに書状の写しを渡す",
+     "ref": "L235"
+    },
+    {
+     "when": "午後のなかば",
+     "where": "冒険者組合の戸口",
+     "doing": "手帳に何かを書く",
+     "ref": "L430"
+    }
+   ]
+  },
+  {
+   "name": "テオ",
+   "aliases": [
+    "若い修道士",
+    "立会いの者"
+   ],
+   "first_person": [
+    {
+     "word": "僕",
+     "ref": "L418"
+    }
+   ],
+   "calls_others": [],
+   "speech": [
+    {
+     "feature": "率直で、怖いこともそのまま言う",
+     "example": "怖いですが、行きます",
+     "ref": "L275"
+    },
+    {
+     "feature": "嘘をつかないと明言する",
+     "example": "嘘をつきません",
+     "ref": "L418"
+    }
+   ],
+   "looks": [
+    {
+     "feature": "二十を少し過ぎたくらい",
+     "ref": "L273"
+    },
+    {
+     "feature": "小さな手燭を持つ",
+     "ref": "L273"
+    }
+   ],
+   "traits": [
+    {
+     "feature": "旅も剣も未経験で、癒しの術は上手ではないと申告する",
+     "ref": "L418"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "弥生十二日",
+     "where": "裁きの間の傍聴席のいちばん後ろ",
+     "doing": "立会いに指名され、白塔行きを引き受ける",
+     "ref": "L273"
+    },
+    {
+     "when": "午後のなかば",
+     "where": "冒険者組合の戸口",
+     "doing": "立会いとして挨拶する",
+     "ref": "L416"
+    }
+   ]
+  },
+  {
+   "name": "トマス",
+   "aliases": [
+    "門の番"
+   ],
+   "first_person": [],
+   "calls_others": [],
+   "speech": [
+    {
+     "feature": "語尾に「っす」を使う",
+     "example": "六つ、鳴るっすよ",
+     "ref": "L328"
+    },
+    {
+     "feature": "語尾に「んす」を使う",
+     "example": "止めなくていいんすか",
+     "ref": "L360"
+    }
+   ],
+   "looks": [
+    {
+     "feature": "若い隊員で、頬に産毛が残る",
+     "ref": "L324"
+    }
+   ],
+   "traits": [
+    {
+     "feature": "鎖を握る手に息を吹きかける",
+     "ref": "L324"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "弥生十三日の朝",
+     "where": "南門",
+     "doing": "門の鎖を引き、門を開ける",
+     "ref": "L324"
+    }
+   ]
+  },
+  {
+   "name": "マスター",
+   "aliases": [
+    "酒場番"
+   ],
+   "first_person": [],
+   "calls_others": [
+    {
+     "target": "フィン",
+     "word": "フィンさん",
+     "ref": "L434"
+    }
+   ],
+   "speech": [
+    {
+     "feature": "丁寧な口調",
+     "example": "川の上は、冷えるそうですよ",
+     "ref": "L456"
+    },
+    {
+     "feature": "客への旅の初めの包みは代金を取らないと決める",
+     "example": "今日から、本当です",
+     "ref": "L466"
+    }
+   ],
+   "looks": [],
+   "traits": [
+    {
+     "feature": "カウンターの奥で杯を拭く",
+     "ref": "L374"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "昼すぎから夕方",
+     "where": "冒険者組合の一階酒場",
+     "doing": "杯を拭き、旅の食料を一行に渡す",
+     "ref": "L374"
+    }
+   ]
+  },
+  {
+   "name": "リナ",
+   "aliases": [
+    "新人の魔法使い",
+    "麦藁色の髪の娘"
+   ],
+   "first_person": [
+    {
+     "word": "私",
+     "ref": "L396"
+    }
+   ],
+   "calls_others": [],
+   "speech": [
+    {
+     "feature": "報酬の安さを率直に口にする",
+     "example": "安い！",
+     "ref": "L396"
+    },
+    {
+     "feature": "護送に行く意思を示す",
+     "example": "行く",
+     "ref": "L400"
+    }
+   ],
+   "looks": [
+    {
+     "feature": "麦藁色の髪",
+     "ref": "L394"
+    },
+    {
+     "feature": "父親のお下がりの杖を持つ",
+     "ref": "L394"
+    }
+   ],
+   "traits": [
+    {
+     "feature": "賢者の術を近くで見たいと言う",
+     "ref": "L400"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "昼すぎ",
+     "where": "冒険者組合の隣の卓",
+     "doing": "護送に志願する",
+     "ref": "L394"
+    }
+   ]
+  },
+  {
+   "name": "ケス",
+   "aliases": [
+    "黒い羽の鴉人"
+   ],
+   "first_person": [
+    {
+     "word": "俺",
+     "ref": "L444"
+    }
+   ],
+   "calls_others": [],
+   "speech": [
+    {
+     "feature": "短く答える",
+     "example": "なら、行く",
+     "ref": "L410"
+    },
+    {
+     "feature": "見聞きしたことを簡潔に告げる",
+     "example": "指が動いた",
+     "ref": "L448"
+    }
+   ],
+   "looks": [
+    {
+     "feature": "黒い羽の鴉人",
+     "ref": "L404"
+    }
+   ],
+   "traits": [
+    {
+     "feature": "組合に雇われていないが、組合の屋根の上が好き",
+     "ref": "L404"
+    },
+    {
+     "feature": "嘘をつけず、行くと言えば行く",
+     "ref": "L412"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "昼すぎ",
+     "where": "冒険者組合の窓枠",
+     "doing": "護送に加わると答える",
+     "ref": "L404"
+    }
+   ]
+  }
+ ],
+ "places": [
+  {
+   "name": "詰所の牢",
+   "layout": [
+    {
+     "feature": "四人の囚人が収監され、牢番がいる",
+     "ref": "L4"
+    }
+   ],
+   "scenery": [
+    {
+     "feature": "四人分の麦粥が隊の帳場の負担になっている",
+     "ref": "L6"
+    }
+   ],
+   "weather_season": []
+  },
+  {
+   "name": "広場",
+   "layout": [
+    {
+     "feature": "縄で一列につながれた囚人たちが渡る",
+     "ref": "L8"
+    }
+   ],
+   "scenery": [
+    {
+     "feature": "物売りがエルノを見て胸に灯の印を描きかける",
+     "ref": "L16"
+    }
+   ],
+   "weather_season": []
+  },
+  {
+   "name": "市参事会館の裁きの間",
+   "layout": [
+    {
+     "feature": "正面の高い席に裁き役、左右に半円形の参事席が十二席ある",
+     "ref": "L22"
+    },
+    {
+     "feature": "訴える側の席、囚人の席、傍聴席がある",
+     "ref": "L24"
+    },
+    {
+     "feature": "壁ぎわに棚があり、古い綴りは最上段に置かれている",
+     "ref": "L241"
+    }
+   ],
+   "scenery": [
+    {
+     "feature": "思っていたより狭い",
+     "ref": "L20"
+    },
+    {
+     "feature": "百年分の埃が降り、ダリオがくしゃみをする",
+     "ref": "L241"
+    }
+   ],
+   "weather_season": []
+  },
+  {
+   "name": "下町の路地の奥の礼拝所",
+   "layout": [
+    {
+     "feature": "灯を掲げた一間",
+     "ref": "L195"
+    }
+   ],
+   "scenery": [
+    {
+     "feature": "灯台と油壺が押さえられた品として挙げられる",
+     "ref": "L201"
+    }
+   ],
+   "weather_season": []
+  },
+  {
+   "name": "牢へ戻る廊下",
+   "layout": [
+    {
+     "feature": "石の壁があり、途中に角がある",
+     "ref": "L301"
+    }
+   ],
+   "scenery": [
+    {
+     "feature": "石の壁が冷たい",
+     "ref": "L301"
+    }
+   ],
+   "weather_season": []
+  },
+  {
+   "name": "南門",
+   "layout": [
+    {
+     "feature": "門の内側と反対側に隊員が立ち、鎖を引いて門を開ける",
+     "ref": "L324"
+    }
+   ],
+   "scenery": [
+    {
+     "feature": "門の下をくぐると城壁と街が見える",
+     "ref": "L338"
+    }
+   ],
+   "weather_season": [
+    {
+     "feature": "弥生十三日の朝、川から上がる霧が出る。春先はたいていこうなる",
+     "ref": "L320"
+    }
+   ]
+  },
+  {
+   "name": "南街道",
+   "layout": [
+    {
+     "feature": "南門の向こうへ続き、三十歩先から見えなくなる",
+     "ref": "L322"
+    }
+   ],
+   "scenery": [
+    {
+     "feature": "三日行けば川港の町がある",
+     "ref": "L346"
+    }
+   ],
+   "weather_season": [
+    {
+     "feature": "霧の中で先が見えない",
+     "ref": "L322"
+    }
+   ]
+  },
+  {
+   "name": "冒険者組合",
+   "layout": [
+    {
+     "feature": "一階に酒場があり、二階から組合長が下りてくる",
+     "ref": "L374"
+    },
+    {
+     "feature": "窓枠があり、ケスがそこにしゃがむ",
+     "ref": "L404"
+    }
+   ],
+   "scenery": [
+    {
+     "feature": "一階の酒場は昼の客がまばら",
+     "ref": "L374"
+    },
+    {
+     "feature": "梁に去年の焦げが一か所残る",
+     "ref": "L374"
+    },
+    {
+     "feature": "カウンターの奥でマスターが杯を拭く",
+     "ref": "L374"
+    }
+   ],
+   "weather_season": []
+  },
+  {
+   "name": "大聖堂",
+   "layout": [],
+   "scenery": [
+    {
+     "feature": "夕べの祈りの鐘が鳴る間、上町の人々が集まる",
+     "ref": "L98"
+    }
+   ],
+   "weather_season": []
+  },
+  {
+   "name": "組合の建物",
+   "layout": [
+    {
+     "feature": "酒場番のいる酒場がある",
+     "ref": "L134"
+    }
+   ],
+   "scenery": [],
+   "weather_season": []
+  }
+ ],
+ "season_mismatch": [],
+ "inner_inconsistencies": []
+}

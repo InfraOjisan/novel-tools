@@ -1,0 +1,4 @@
+ep02_01 ok 91s in=38157 out=10070
+ep02_02 ok 100s in=37763 out=11277
+ep02_03 ok 98s in=36700 out=9981
+ep02_04 ok 99s in=37609 out=10700

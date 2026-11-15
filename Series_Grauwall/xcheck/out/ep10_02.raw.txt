@@ -1,0 +1,327 @@
+{
+  "episode": "10",
+  "dates": [
+    {"when": "文月十五日、昼の鐘が鳴り終わるころ", "ref": "L361"},
+    {"when": "祭りの日の昼", "ref": "L391"},
+    {"when": "昼すぎ一つの鐘", "ref": "L462"}
+  ],
+  "characters": [
+    {
+      "name": "俺（名前は本文中で明かされない）",
+      "aliases": ["マスター", "札の人"],
+      "first_person": [{"word": "俺", "ref": "L361"}],
+      "calls_others": [],
+      "speech": [
+        {"feature": "丁寧な口調", "example": "そうですか", "ref": "L395"},
+        {"feature": "丁寧な口調", "example": "人間は、五本です", "ref": "L506"}
+      ],
+      "looks": [
+        {"feature": "人間。革紐で締める靴を履いていた", "ref": "L387"},
+        {"feature": "背負い子に油の壺を括りつけ、肩に掛けていた", "ref": "L363"}
+      ],
+      "traits": [
+        {"feature": "人数と出口を数える癖がある", "ref": "L431"},
+        {"feature": "ハクの言葉を字義どおりに受け取り、靴を脱がずに歩く", "ref": "L397"},
+        {"feature": "何の借りかを訊かなかった", "ref": "L601"}
+      ],
+      "whereabouts": [
+        {"when": "文月十五日の昼", "where": "下の谷へ下りる坂の上から窪地の底、広場へ", "doing": "油の壺を運び、長老たちの席に座って祭りに参加する", "ref": "L361"},
+        {"when": "祭りの昼", "where": "広場の敷物の端", "doing": "粥や祭りの料理を食べる", "ref": "L585"}
+      ]
+    },
+    {
+      "name": "ハク",
+      "aliases": ["ハク"],
+      "first_person": [],
+      "calls_others": [{"target": "俺", "word": "マスター", "ref": "L393"}],
+      "speech": [
+        {"feature": "谷では靴はいらないと伝える", "example": "谷では、靴はいらないよ", "ref": "L393"},
+        {"feature": "小声で説明する", "example": "谷が借りのある人に出す", "ref": "L597"}
+      ],
+      "looks": [
+        {"feature": "祭りの日らしく、首に赤い紐を一本巻いている", "ref": "L391"}
+      ],
+      "traits": [
+        {"feature": "俺の上着の裾を引いて空席を示す", "ref": "L478"}
+      ],
+      "whereabouts": [
+        {"when": "祭りの日", "where": "窪地の広場", "doing": "俺を案内し、借りのある人に最初の椀を出す習わしを説明する", "ref": "L597"}
+      ]
+    },
+    {
+      "name": "チィ",
+      "aliases": ["チィ"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [
+        {"feature": "人間がいる理由を尋ねる", "example": "なんで人間がいるの", "ref": "L403"}
+      ],
+      "looks": [],
+      "traits": [
+        {"feature": "俺の顔と周りの子どもたちを見て、壺の匂いに気づく", "ref": "L401"}
+      ],
+      "whereabouts": [
+        {"when": "祭りの日", "where": "窪地の広場", "doing": "俺を見て、油の匂いに気づく", "ref": "L401"}
+      ]
+    },
+    {
+      "name": "ナル",
+      "aliases": ["ヴェイの妻"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [
+        {"feature": "低い声で話す", "example": "低い声だった", "ref": "L417"},
+        {"feature": "低く短い声で何かを言いつける", "example": "低い声で、短く", "ref": "L566"}
+      ],
+      "looks": [
+        {"feature": "大きな鍋の前で長い杓子を持つ", "ref": "L415"}
+      ],
+      "traits": [
+        {"feature": "俺と壺と子どもたちを見て少し笑う", "ref": "L415"}
+      ],
+      "whereabouts": [
+        {"when": "祭りの日", "where": "広場の端の日陰、大鍋の前", "doing": "鍋を扱い、粥をよそう", "ref": "L575"}
+      ]
+    },
+    {
+      "name": "ヴェイ",
+      "aliases": ["ナルの夫"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [],
+      "traits": [],
+      "whereabouts": []
+    },
+    {
+      "name": "鴉人（個人名なし）",
+      "aliases": ["鴉人"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [
+        {"feature": "低く、よく通る声", "example": "声は低く、よく通った", "ref": "L441"}
+      ],
+      "looks": [
+        {"feature": "羽を半分畳み、壁の縁にしゃがむ。羽の先に旅の埃が白くついている", "ref": "L437"}
+      ],
+      "traits": [
+        {"feature": "子どもたちを見て数を数え、「群れだ」と言う", "ref": "L441"}
+      ],
+      "whereabouts": [
+        {"when": "祭りの日", "where": "広場南側の壁の上", "doing": "壁の縁から広場の子どもたちを見ている", "ref": "L437"}
+      ]
+    },
+    {
+      "name": "灰狼の長老（老女）",
+      "aliases": ["灰狼の老女", "長老"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [
+        {"feature": "左目が白く濁り、右目で広場を見る", "ref": "L470"}
+      ],
+      "traits": [
+        {"feature": "俺の名を呼び、最初の椀を自分でよそって俺の前に置く", "ref": "L581"}
+      ],
+      "whereabouts": [
+        {"when": "祭りの日", "where": "広場の敷物、のちに大鍋の前", "doing": "長老の席に座り、粥をよそって俺に渡す", "ref": "L581"}
+      ]
+    },
+    {
+      "name": "蜥蜴人の長老（個人名なし）",
+      "aliases": ["隣の蜥蜴人の長老"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [
+        {"feature": "俺を灰狼の長老と同じ名で呼ぶ。喉の奥で少し擦れる発音", "example": "同じ名で俺を呼んだ", "ref": "L546"},
+        {"feature": "北の村から買った品だと説明する", "example": "年に一度、祭りの日だけ買う", "ref": "L621"}
+      ],
+      "looks": [],
+      "traits": [],
+      "whereabouts": [
+        {"when": "祭りの日", "where": "広場の敷物の上", "doing": "長老として座り、北の品について話す", "ref": "L621"}
+      ]
+    },
+    {
+      "name": "土竜人の長老（個人名なし）",
+      "aliases": ["土竜人の長老"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [
+        {"feature": "敷物について北の羊の毛だと話す", "example": "北の羊の毛だ", "ref": "L558"}
+      ],
+      "looks": [
+        {"feature": "目が弱い", "ref": "L546"}
+      ],
+      "traits": [
+        {"feature": "俺を見ず、俺の足のほうへ顔を向けて名を呼ぶ", "ref": "L546"}
+      ],
+      "whereabouts": [
+        {"when": "祭りの日", "where": "広場の敷物の上", "doing": "長老として座り、敷物を手のひらで撫でる", "ref": "L556"}
+      ]
+    },
+    {
+      "name": "ザザ",
+      "aliases": ["ザザ"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [
+        {"feature": "俺の靴が脱げるか尋ねる", "example": "その靴は、脱げるのか", "ref": "L522"},
+        {"feature": "短く事実を述べる", "example": "ここは広場だ", "ref": "L681"}
+      ],
+      "looks": [
+        {"feature": "尻尾を日向のほうへ伸ばして座る", "ref": "L518"}
+      ],
+      "traits": [
+        {"feature": "考えるとき、瞬きが遅くなる", "ref": "L526"},
+        {"feature": "笑った子の足を見て名を呼ぶ", "ref": "L532"}
+      ],
+      "whereabouts": [
+        {"when": "祭りの日", "where": "広場の敷物の端", "doing": "俺の足と靴を交互に見ている", "ref": "L516"}
+      ]
+    },
+    {
+      "name": "ドゥン",
+      "aliases": ["ドゥン"],
+      "first_person": [
+        {"word": "俺", "ref": "L637"}
+      ],
+      "calls_others": [],
+      "speech": [
+        {"feature": "北から倉に入る麦の荷を担ぐと話す", "example": "俺が担ぐから知ってる", "ref": "L637"}
+      ],
+      "looks": [],
+      "traits": [
+        {"feature": "根菜をかじりながら話し、その後また根菜をかじる", "ref": "L635"}
+      ],
+      "whereabouts": [
+        {"when": "祭りの日", "where": "広場", "doing": "根菜を食べ、麦の荷について話す", "ref": "L635"}
+      ]
+    },
+    {
+      "name": "イス",
+      "aliases": ["ザザの末の妹の息子"],
+      "first_person": [],
+      "calls_others": [{"target": "俺", "word": "さん", "ref": "L665"}],
+      "speech": [
+        {"feature": "丁寧な口調", "example": "ありがとうございます", "ref": "L661"},
+        {"feature": "丁寧な口調", "example": "さんは、いりません", "ref": "L667"}
+      ],
+      "looks": [
+        {"feature": "十九か二十くらい。背が高く、鱗の色が若い", "ref": "L659"}
+      ],
+      "traits": [
+        {"feature": "黙って粥を注ぎ、裏口での決まりを説明する", "ref": "L659"}
+      ],
+      "whereabouts": [
+        {"when": "祭りの日", "where": "広場の鍋のそば", "doing": "俺に粥を注ぐ", "ref": "L659"}
+      ]
+    },
+    {
+      "name": "蜥蜴人の子（名前なし）",
+      "aliases": ["蜥蜴人の子"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [
+        {"feature": "俺の足の指を数えて本数の違いを指摘する", "example": "一本、多い", "ref": "L504"}
+      ],
+      "looks": [
+        {"feature": "手足の指は四本ずつ", "ref": "L502"}
+      ],
+      "traits": [
+        {"feature": "自分と俺の足の指を見比べ、数え直す", "ref": "L500"}
+      ],
+      "whereabouts": [
+        {"when": "祭りの日", "where": "敷物の縁", "doing": "俺の足の指を数える", "ref": "L498"}
+      ]
+    }
+  ],
+  "places": [
+    {
+      "name": "下町",
+      "layout": [
+        {"feature": "端で道が切れ、そこから窪地へ石段が下る", "ref": "L365"}
+      ],
+      "scenery": [
+        {"feature": "石畳の道がある", "ref": "L363"},
+        {"feature": "屋根の向こうに南の壁の上の縁が見える", "ref": "L429"}
+      ],
+      "weather_season": []
+    },
+    {
+      "name": "下の谷へ下りる坂・石段",
+      "layout": [
+        {"feature": "石段が折れ曲がりながら窪地の底へ下りる。折れ曲がりの先は見えない", "ref": "L365"},
+        {"feature": "石段の両側に石垣がある", "ref": "L377"}
+      ],
+      "scenery": [
+        {"feature": "下から谷の匂いが上がってくる", "ref": "L367"}
+      ],
+      "weather_season": [
+        {"feature": "昼の日が石垣に蓄えられ、底へ近づくほど暑い", "ref": "L377"},
+        {"feature": "下りるごとに涼しくなると思ったが、日陰になるためだった", "ref": "L375"}
+      ]
+    },
+    {
+      "name": "窪地の底（谷）",
+      "layout": [
+        {"feature": "真ん中に細い水路が一本通っている", "ref": "L379"},
+        {"feature": "周囲を谷の家々が段になって囲む", "ref": "L425"},
+        {"feature": "南側は街の城壁。東西に路地が一本ずつあり、石段へ通じる", "ref": "L427"}
+      ],
+      "scenery": [
+        {"feature": "水路の水音が聞こえる", "ref": "L379"},
+        {"feature": "獣脂の灯、豆、川魚、羊の脂の匂いがする", "ref": "L369"}
+      ],
+      "weather_season": [
+        {"feature": "風が通らず、石垣が昼の日を溜めこんで底は暑い", "ref": "L377"}
+      ]
+    },
+    {
+      "name": "広場",
+      "layout": [
+        {"feature": "窪地のいちばん底にある", "ref": "L423"},
+        {"feature": "南側が城壁。出口は石段と東西の路地で、南の壁に出口はない", "ref": "L433"},
+        {"feature": "北寄りに大きな敷物と低い木の台が一列にある", "ref": "L466"},
+        {"feature": "日陰に粥の大鍋が据えてある", "ref": "L573"}
+      ],
+      "scenery": [
+        {"feature": "土と石の家の戸口に日に焼けた布が下がり、細い路地から煙が上がる", "ref": "L425"},
+        {"feature": "南の城壁の石の継ぎ目に夏草が生えている", "ref": "L429"},
+        {"feature": "広場の隅に塩の袋や鉄釘の束が積まれている", "ref": "L643"}
+      ],
+      "weather_season": [
+        {"feature": "祭りの日の昼、日陰が少しずつ東へずれていく", "ref": "L564"},
+        {"feature": "窪地の底の土が熱く、裸足の子どもたちは日向を駆ける", "ref": "L459"}
+      ]
+    },
+    {
+      "name": "広場の南側の城壁",
+      "layout": [
+        {"feature": "窪地の底から空のほうへまっすぐ積み上がる街の南の壁", "ref": "L429"}
+      ],
+      "scenery": [
+        {"feature": "灰色の石で、石の継ぎ目に夏草が生える", "ref": "L429"},
+        {"feature": "壁の縁に鴉人がしゃがんでいる", "ref": "L437"}
+      ],
+      "weather_season": []
+    },
+    {
+      "name": "広場の敷物",
+      "layout": [
+        {"feature": "北寄りに敷かれ、上に低い木の台が一列に並ぶ", "ref": "L466"},
+        {"feature": "敷物の手前の縁に履物が並ぶ", "ref": "L472"},
+        {"feature": "台の列の端に一人分の空席があり、小さな座布団が置かれている", "ref": "L482"}
+      ],
+      "scenery": [
+        {"feature": "古い羊毛敷物は、もとは赤と茶の縞で、色が薄くなっている", "ref": "L468"},
+        {"feature": "敷物の上に年寄りたちが座る", "ref": "L468"}
+      ],
+      "weather_season": [
+        {"feature": "敷物の上の日陰が少しずつ東へずれる", "ref": "L564"}
+      ]
+    }
+  ],
+  "season_mismatch": [],
+  "inner_inconsistencies": []
+}

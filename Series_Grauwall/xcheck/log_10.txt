@@ -1,0 +1,5 @@
+ep10_01 ok 105s in=32124 out=10353
+ep10_02 FAILED KeyError('choices')
+ep10_03 ok 98s in=20485 out=5799
+ep10_04 ok 118s in=39289 out=14686
+ep10_05 ok 80s in=23992 out=8628

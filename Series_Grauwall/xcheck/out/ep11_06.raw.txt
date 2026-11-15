@@ -1,0 +1,354 @@
+{
+  "episode": "11",
+  "dates": [
+    {"when": "夜明け", "ref": "L1999"},
+    {"when": "四日の朝", "ref": "L2109"},
+    {"when": "四日の朝に発ち、南街道を三日下った後の六日の夕方", "ref": "L2118"},
+    {"when": "夏も終わりの夜", "ref": "L2120"},
+    {"when": "大聖堂の鐘が八つ鳴った時", "ref": "L2206"}
+  ],
+  "characters": [
+    {
+      "name": "ダリオ",
+      "aliases": ["剣士"],
+      "first_person": [
+        {"word": "俺", "ref": "L2144"}
+      ],
+      "calls_others": [
+        {"target": "リナ", "word": "リナ", "ref": "L2150"},
+        {"target": "ブリギッテ", "word": "薬箱の", "ref": "L2140"}
+      ],
+      "speech": [
+        {"feature": "荒めの口調で、泳げないことを「泳がねえ」と言う", "example": "泳がねえんだ", "ref": "L2071"},
+        {"feature": "命令形を使う", "example": "二度言うな", "ref": "L2156"},
+        {"feature": "「俺」を使う", "example": "それから俺は", "ref": "L2144"}
+      ],
+      "looks": [
+        {"feature": "髭があり、右側が短く、左の先が焦げて縮れている", "ref": "L2128"}
+      ],
+      "traits": [
+        {"feature": "分からないことを分からないままにしている", "ref": "L2015"},
+        {"feature": "川に落ちたことを大したことではないと話す", "ref": "L2144"}
+      ],
+      "whereabouts": [
+        {"when": "夜明け", "where": "荷揚げ場", "doing": "頭巾の客の舟が舫われていた杭を探す", "ref": "L1999"},
+        {"when": "朝", "where": "礼拝堂の下の石段", "doing": "川面を見る", "ref": "L2069"},
+        {"when": "六日の夕方以降", "where": "錆び釘亭", "doing": "麦酒を飲み、ネーベルでの出来事を話す", "ref": "L2128"}
+      ]
+    },
+    {
+      "name": "リナ",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [
+        {"target": "ダリオ", "word": "ダリオさん", "ref": "L2085"},
+        {"target": "エーリカ", "word": "組合長さん", "ref": "L2164"}
+      ],
+      "speech": [
+        {"feature": "丁寧語を使う", "example": "満額です", "ref": "L2089"},
+        {"feature": "泳げないと丁寧に言い直す", "example": "泳げないんです", "ref": "L2154"}
+      ],
+      "looks": [
+        {"feature": "杖を持ち、靴には泥の跡が残っている", "ref": "L2083"}
+      ],
+      "traits": [
+        {"feature": "手帳を懐にしまう", "ref": "L2015"},
+        {"feature": "硬貨を同じ数になるまで数え直す", "ref": "L2091"},
+        {"feature": "泳げないことをダリオに指摘する", "ref": "L2148"}
+      ],
+      "whereabouts": [
+        {"when": "夜明け", "where": "荷揚げ場", "doing": "手帳を懐にしまう", "ref": "L2015"},
+        {"when": "朝", "where": "石段", "doing": "手帳を広げ、硬貨を数える", "ref": "L2083"},
+        {"when": "六日の夕方以降", "where": "錆び釘亭", "doing": "エーリカに写しを渡す", "ref": "L2164"}
+      ]
+    },
+    {
+      "name": "ブリギッテ",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [
+        {"target": "アンゼルム", "word": "先生", "ref": "L2103"}
+      ],
+      "speech": [
+        {"feature": "丁寧語を使う", "example": "はい", "ref": "L2103"}
+      ],
+      "looks": [
+        {"feature": "薬箱を持っている", "ref": "L2015"}
+      ],
+      "traits": [
+        {"feature": "薬箱を抱え直す", "ref": "L2015"},
+        {"feature": "ダリオの話に小さく咳をし、肩を震わせる", "ref": "L2158"}
+      ],
+      "whereabouts": [
+        {"when": "夜明け", "where": "荷揚げ場", "doing": "薬箱を抱え直す", "ref": "L2015"},
+        {"when": "朝", "where": "礼拝堂の戸口", "doing": "アンゼルムに呼ばれる", "ref": "L2099"},
+        {"when": "六日の夕方以降", "where": "錆び釘亭", "doing": "薬箱を足元に置き、リナとマスターに小声で話す", "ref": "L2128"}
+      ]
+    },
+    {
+      "name": "グレゴール",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [
+        {"feature": "短い言葉で発言する", "example": "灯は見ていた", "ref": "L2027"}
+      ],
+      "looks": [
+        {"feature": "手首を縄で縛られている", "ref": "L2023"}
+      ],
+      "traits": [
+        {"feature": "階段の途中で足を止めて振り返る", "ref": "L2025"}
+      ],
+      "whereabouts": [
+        {"when": "朝", "where": "倉の階段から荷揚げ場へ", "doing": "番屋の男二人に連れられて下りる", "ref": "L2023"}
+      ]
+    },
+    {
+      "name": "ヤーコプ",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [
+        {"feature": "組が油を持つと言う", "example": "油は組が持つ", "ref": "L2055"}
+      ],
+      "looks": [
+        {"feature": "麦わらを噛んでいる", "ref": "L2029"}
+      ],
+      "traits": [
+        {"feature": "壁にもたれて麦わらを噛む", "ref": "L2029"},
+        {"feature": "麦わらを口の端に移してから続けて話す", "ref": "L2057"}
+      ],
+      "whereabouts": [
+        {"when": "朝", "where": "組の寄合の部屋", "doing": "壁にもたれている", "ref": "L2029"},
+        {"when": "朝", "where": "礼拝堂の戸口", "doing": "油は組が持つと言う", "ref": "L2057"}
+      ]
+    },
+    {
+      "name": "ヴェルナー",
+      "aliases": [],
+      "first_person": [
+        {"word": "わし", "ref": "L2075"}
+      ],
+      "calls_others": [
+        {"target": "ダリオ", "word": "剣士", "ref": "L2067"}
+      ],
+      "speech": [
+        {"feature": "「わし」を使う", "example": "わしは六つで", "ref": "L2075"}
+      ],
+      "looks": [
+        {"feature": "肩が昨日より小さく見える", "ref": "L2029"},
+        {"feature": "手は櫂を握り続けた者の厚さ", "ref": "L2065"}
+      ],
+      "traits": [
+        {"feature": "泳ぎを教えると申し出る", "ref": "L2067"},
+        {"feature": "六つで溺れかけ、鮒を掴んで上がったと話す", "ref": "L2075"}
+      ],
+      "whereabouts": [
+        {"when": "朝", "where": "組の寄合の部屋", "doing": "目を伏せる", "ref": "L2029"},
+        {"when": "朝", "where": "礼拝堂の下の石段", "doing": "ダリオに泳ぎを教えると言う", "ref": "L2065"}
+      ]
+    },
+    {
+      "name": "アンゼルム",
+      "aliases": ["先生"],
+      "first_person": [],
+      "calls_others": [
+        {"target": "ブリギッテ", "word": "ブリギッテさん", "ref": "L2101"}
+      ],
+      "speech": [
+        {"feature": "丁寧な言い方をする", "example": "これは、灯で解きます", "ref": "L2041"}
+      ],
+      "looks": [
+        {"feature": "頭を深く下げると、背中が思ったより小さく見える", "ref": "L2061"}
+      ],
+      "traits": [
+        {"feature": "控えを灯に差し入れて燃やす", "ref": "L2043"},
+        {"feature": "灰になった後、手を合わせる", "ref": "L2045"}
+      ],
+      "whereabouts": [
+        {"when": "朝", "where": "渡し場の礼拝堂", "doing": "四枚の控えを灯で燃やす", "ref": "L2037"},
+        {"when": "朝", "where": "礼拝堂の戸口", "doing": "ブリギッテに先生への伝言を頼む", "ref": "L2101"}
+      ]
+    },
+    {
+      "name": "ミッツィ",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [
+        {"feature": "一語だけで礼を言う", "example": "礼", "ref": "L2095"}
+      ],
+      "looks": [
+        {"feature": "髪が川霧で少し湿っている", "ref": "L2093"}
+      ],
+      "traits": [
+        {"feature": "ダリオの手に木片を置き、指を閉じさせる", "ref": "L2093"}
+      ],
+      "whereabouts": [
+        {"when": "朝", "where": "石段", "doing": "ダリオに燕の舳先から削ったらしい木片を渡す", "ref": "L2093"}
+      ]
+    },
+    {
+      "name": "エーリカ",
+      "aliases": ["組合長"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [
+        {"feature": "「わ」を使う", "example": "受け取ったわ", "ref": "L2172"}
+      ],
+      "looks": [
+        {"feature": "右脚を少し前に出して座り、手元に灯を寄せている", "ref": "L2162"}
+      ],
+      "traits": [
+        {"feature": "写しの行を指でなぞり、裏返してから礼を言う", "ref": "L2170"}
+      ],
+      "whereabouts": [
+        {"when": "六日の夕方以降", "where": "錆び釘亭のカウンター端、階段の近く", "doing": "帳面を広げている", "ref": "L2162"}
+      ]
+    },
+    {
+      "name": "ハク",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [
+        {"target": "チィ", "word": "妹", "ref": "L2216"}
+      ],
+      "speech": [
+        {"feature": "チィに肉は最後に取っておくよう言う", "example": "肉は最後に", "ref": "L2218"}
+      ],
+      "looks": [
+        {"feature": "灰色の狼の子で、背が高い。袖をまくっている", "ref": "L2212"}
+      ],
+      "traits": [
+        {"feature": "冷えた指を擦り合わせる", "ref": "L2212"},
+        {"feature": "受け取った椀を妹に渡す", "ref": "L2216"}
+      ],
+      "whereabouts": [
+        {"when": "夜、鐘が八つ鳴った後", "where": "錆び釘亭の裏口", "doing": "チィとともにスープを受け取る", "ref": "L2212"}
+      ]
+    },
+    {
+      "name": "チィ",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [
+        {"target": "ハク", "word": "兄", "ref": "L2212"}
+      ],
+      "speech": [],
+      "looks": [
+        {"feature": "灰色の狼の子で、ハクより頭一つ小さい。右足を少し外に向けて立つ", "ref": "L2212"}
+      ],
+      "traits": [
+        {"feature": "スープの脂身をためらわず指でつまみ、ゆっくり噛む", "ref": "L2216"}
+      ],
+      "whereabouts": [
+        {"when": "夜、鐘が八つ鳴った後", "where": "錆び釘亭の裏口", "doing": "豆のスープを受け取り、脂身を食べる", "ref": "L2214"}
+      ]
+    }
+  ],
+  "places": [
+    {
+      "name": "荷揚げ場",
+      "layout": [
+        {"feature": "石段のそばに杭があり、杭に縄が垂れている", "ref": "L2001"}
+      ],
+      "scenery": [
+        {"feature": "石段の苔が濡れて黒く、塩俵が白くにじんで見える", "ref": "L1999"},
+        {"feature": "舟灯が霧の中で灯り、川面に細い道を作る", "ref": "L2017"}
+      ],
+      "weather_season": [
+        {"feature": "夜明けの霧が動かず、露で指先が冷たい", "ref": "L1999"}
+      ]
+    },
+    {
+      "name": "倉の二階の組の寄合の部屋",
+      "layout": [
+        {"feature": "倉の二階にあり、階段の途中に窓がある", "ref": "L2021"}
+      ],
+      "scenery": [
+        {"feature": "壁に古い櫂が立てかけてあり、湿った木の匂いがする", "ref": "L2021"}
+      ],
+      "weather_season": []
+    },
+    {
+      "name": "帳場",
+      "layout": [
+        {"feature": "机に墨壺と細い筆が並んでいる", "ref": "L2031"}
+      ],
+      "scenery": [
+        {"feature": "紙の端が風で少しめくれる", "ref": "L2031"}
+      ],
+      "weather_season": []
+    },
+    {
+      "name": "渡し場の礼拝堂",
+      "layout": [
+        {"feature": "戸口から川霧が入り、祭壇の前に控えを並べる", "ref": "L2037"},
+        {"feature": "祭壇に灯と油の壺がある", "ref": "L2037"}
+      ],
+      "scenery": [
+        {"feature": "壁に雨の跡が筋を引き、梁に湿りの黒い染みがある", "ref": "L2037"},
+        {"feature": "灯と油の匂いが堂内に広がる", "ref": "L2045"}
+      ],
+      "weather_season": [
+        {"feature": "朝でも薄暗く、川霧が戸口から細く入る", "ref": "L2037"}
+      ]
+    },
+    {
+      "name": "礼拝堂の下の石段",
+      "layout": [
+        {"feature": "石段の脇に舫い杭が一列に並ぶ", "ref": "L2065"}
+      ],
+      "scenery": [
+        {"feature": "向こう岸に洗い場があり、石の縁に濡れた布が干してある", "ref": "L2069"}
+      ],
+      "weather_season": [
+        {"feature": "朝の光が川面と石段の苔を照らす", "ref": "L2069"}
+      ]
+    },
+    {
+      "name": "ネーベルから南街道、グラウヴァル南門まで",
+      "layout": [
+        {"feature": "ネーベルから南街道を三日下り、グラウヴァル南門に至る", "ref": "L2118"}
+      ],
+      "scenery": [
+        {"feature": "坂の石畳を塩俵の荷車が通る", "ref": "L2111"},
+        {"feature": "坂の両側に家が並び、窓の下に干した網が張られている", "ref": "L2113"}
+      ],
+      "weather_season": [
+        {"feature": "四日の朝、石畳が夜露で濡れている", "ref": "L2111"}
+      ]
+    },
+    {
+      "name": "錆び釘亭",
+      "layout": [
+        {"feature": "カウンターがあり、奥に卓、裏口の外は狭い路地", "ref": "L2128"},
+        {"feature": "カウンター端の階段近くにエーリカの席がある", "ref": "L2162"}
+      ],
+      "scenery": [
+        {"feature": "低い梁から草束が吊られ、壁の釘に外套が掛かる", "ref": "L2120"},
+        {"feature": "竈の火が赤く残り、薪がはぜる", "ref": "L2120"},
+        {"feature": "店内に油と麦酒の匂いがする", "ref": "L2120"}
+      ],
+      "weather_season": [
+        {"feature": "夏も終わりの夜、扉の隙間から少し風が入る", "ref": "L2120"}
+      ]
+    },
+    {
+      "name": "錆び釘亭の裏口の路地",
+      "layout": [
+        {"feature": "裏口の外は狭い路地で、雨水の溝がある", "ref": "L2212"},
+        {"feature": "裏口の台に鍋を置き、木の椀を並べる", "ref": "L2214"}
+      ],
+      "scenery": [
+        {"feature": "雨水の溝に黒い水が溜まり、路地の奥で猫が鳴く", "ref": "L2212"},
+        {"feature": "豆のスープの湯気が冷えた空気の中でほどける", "ref": "L2214"}
+      ],
+      "weather_season": [
+        {"feature": "路地の空気が冷えている", "ref": "L2214"}
+      ]
+    }
+  ],
+  "season_mismatch": [],
+  "inner_inconsistencies": []
+}

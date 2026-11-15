@@ -1,0 +1,9 @@
+ep08_01 ok 97s in=32499 out=10498
+ep08_02 ok 149s in=23260 out=6931
+ep08_03 FAILED KeyError('choices')
+ep08_04 ok 100s in=26349 out=5405
+ep08_05 FAILED KeyError('choices')
+ep08_06 ok 102s in=26989 out=5785
+ep08_07 ok 88s in=25646 out=4634
+ep08_08 ok 88s in=20825 out=4476
+ep08_09 FAILED KeyError('choices')

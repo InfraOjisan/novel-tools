@@ -1,0 +1,31 @@
+{
+  "chars": 2716,
+  "mech": [],
+  "review": {
+    "pass": true,
+    "slots_found": {
+      "K1": "reinforced"
+    },
+    "violations": [
+      {
+        "severity": "low",
+        "type": "typo",
+        "detail": "「今日の昼は倉の二階で黒パンと羊のチーズを食った。食後しばらって」。「しばらって」は誤りです。",
+        "fix": "「食後しばらくして」に直す。"
+      },
+      {
+        "severity": "low",
+        "type": "typo",
+        "detail": "「座面が磨られて光っていた」。「磨られて」は誤りです。",
+        "fix": "「座面が磨かれて光っていた」に直す。"
+      },
+      {
+        "severity": "low",
+        "type": "typo",
+        "detail": "「リナが袖口で口元を押えた」。「押えた」は送り仮名の誤りです。",
+        "fix": "「口元を押さえた」に直す。"
+      }
+    ]
+  },
+  "problems": []
+}

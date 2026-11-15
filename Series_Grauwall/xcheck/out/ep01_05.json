@@ -1,0 +1,934 @@
+{
+ "episode": "01",
+ "dates": [
+  {
+   "when": "夜半を過ぎたころ",
+   "ref": "L1196"
+  },
+  {
+   "when": "夕方六つから七つ半まで",
+   "ref": "L1378"
+  },
+  {
+   "when": "鐘が六つ鳴り、半の鐘が一つ鳴ったとき",
+   "ref": "L1340"
+  },
+  {
+   "when": "鐘が七つ鳴ったとき",
+   "ref": "L1396"
+  },
+  {
+   "when": "朝六つの開門まであと三刻",
+   "ref": "L1509"
+  },
+  {
+   "when": "冬のあいだ",
+   "ref": "L1503"
+  }
+ ],
+ "characters": [
+  {
+   "name": "俺",
+   "aliases": [
+    "酒場番"
+   ],
+   "first_person": [
+    {
+     "word": "俺",
+     "ref": "L1258"
+    }
+   ],
+   "calls_others": [
+    {
+     "target": "ザザ",
+     "word": "ザザ",
+     "ref": "L1334"
+    },
+    {
+     "target": "隊長",
+     "word": "隊長",
+     "ref": "L1499"
+    }
+   ],
+   "speech": [
+    {
+     "feature": "落ち着いた丁寧語で短剣の用途を答える",
+     "example": "果物を剥くのに使います",
+     "ref": "L1258"
+    }
+   ],
+   "looks": [
+    {
+     "feature": "外見の記述なし。斥候だったころから同じ砥石で短剣を研いでいる",
+     "ref": "L1264"
+    }
+   ],
+   "traits": [
+    {
+     "feature": "時刻ごとに黒板へ情報を整理する",
+     "ref": "L1450"
+    },
+    {
+     "feature": "瓶の異変に気づいても何も言わない",
+     "ref": "L1487"
+    },
+    {
+     "feature": "金貨三百枚を頭の中で一度だけ数える",
+     "ref": "L1495"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "夜半過ぎ",
+     "where": "酒場のカウンター",
+     "doing": "隊員に短剣を見つけられ、用途を説明する",
+     "ref": "L1250"
+    },
+    {
+     "when": "夜半過ぎ",
+     "where": "階段下の暗がり",
+     "doing": "ザザに箒が動いた時刻と人物を尋ねる",
+     "ref": "L1328"
+    },
+    {
+     "when": "夜半過ぎ",
+     "where": "酒場のカウンター",
+     "doing": "卵の瓶の温度と数を確かめる",
+     "ref": "L1475"
+    }
+   ]
+  },
+  {
+   "name": "ダリオ",
+   "aliases": [],
+   "first_person": [
+    {
+     "word": "俺",
+     "ref": "L1200"
+    }
+   ],
+   "calls_others": [
+    {
+     "target": "隊員",
+     "word": "てめえ",
+     "ref": "L1204"
+    }
+   ],
+   "speech": [
+    {
+     "feature": "荒い口調",
+     "example": "何も隠してねえよ",
+     "ref": "L1224"
+    }
+   ],
+   "looks": [
+    {
+     "feature": "髭の端がまだ縮れている",
+     "ref": "L1206"
+    }
+   ],
+   "traits": [
+    {
+     "feature": "指輪を見つけて立ち上がりかけ、アガタに止められる",
+     "ref": "L1206"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "夜半過ぎ",
+     "where": "酒場",
+     "doing": "検めで上着を脱がされ、腹を調べられる",
+     "ref": "L1224"
+    },
+    {
+     "when": "夜半過ぎ",
+     "where": "酒場",
+     "doing": "舟を漕いでいる",
+     "ref": "L1511"
+    }
+   ]
+  },
+  {
+   "name": "アガタ",
+   "aliases": [
+    "修道女"
+   ],
+   "first_person": [],
+   "calls_others": [
+    {
+     "target": "隊長",
+     "word": "隊長さん",
+     "ref": "L1432"
+    }
+   ],
+   "speech": [
+    {
+     "feature": "礼を保った口調",
+     "example": "ご覧になりましたか",
+     "ref": "L1432"
+    }
+   ],
+   "looks": [
+    {
+     "feature": "皺の多い白い手。手袋を着用する",
+     "ref": "L1224"
+    }
+   ],
+   "traits": [
+    {
+     "feature": "ダリオの袖を引いて座らせる",
+     "ref": "L1206"
+    },
+    {
+     "feature": "灰色の子どもを思いやり、隊長に訴えようとする",
+     "ref": "L1432"
+    },
+    {
+     "feature": "声を出さずに祈る",
+     "ref": "L1511"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "夜半過ぎ",
+     "where": "酒場",
+     "doing": "手袋を外すよう命じられ、黙って外す",
+     "ref": "L1224"
+    },
+    {
+     "when": "夜半過ぎ",
+     "where": "酒場",
+     "doing": "木彫りの狼を根拠に隊長へ話す",
+     "ref": "L1432"
+    }
+   ]
+  },
+  {
+   "name": "バルタザール",
+   "aliases": [
+    "組合長",
+    "長"
+   ],
+   "first_person": [
+    {
+     "word": "俺",
+     "ref": "L1366"
+    }
+   ],
+   "calls_others": [
+    {
+     "target": "ザザ",
+     "word": "トカゲ",
+     "ref": "L1366"
+    }
+   ],
+   "speech": [
+    {
+     "feature": "断定的で荒い口調",
+     "example": "灰色が隠したんだ",
+     "ref": "L1320"
+    },
+    {
+     "feature": "声を張り上げる",
+     "example": "ほら見ろ！",
+     "ref": "L1410"
+    }
+   ],
+   "looks": [
+    {
+     "feature": "太った腹。底の厚い靴",
+     "ref": "L1226"
+    }
+   ],
+   "traits": [
+    {
+     "feature": "太い指で膝の埃を払う",
+     "ref": "L1216"
+    },
+    {
+     "feature": "ザザの証言を否定し、灰色に罪を着せようとする",
+     "ref": "L1366"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "夜半過ぎ",
+     "where": "厩の二階の階段三段目",
+     "doing": "荷袋の検査を見ている",
+     "ref": "L1210"
+    },
+    {
+     "when": "夜半過ぎ",
+     "where": "階段の三段目",
+     "doing": "ザザの証言を否定する",
+     "ref": "L1364"
+    }
+   ]
+  },
+  {
+   "name": "ニコ",
+   "aliases": [],
+   "first_person": [],
+   "calls_others": [],
+   "speech": [],
+   "looks": [
+    {
+     "feature": "手袋を二枚とも取り上げられ、指の股まで調べられる",
+     "ref": "L1224"
+    }
+   ],
+   "traits": [
+    {
+     "feature": "所在なげに指を組んだり開いたりする",
+     "ref": "L1511"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "夜半過ぎ",
+     "where": "酒場",
+     "doing": "検めを受け、その後指を組んだり開いたりする",
+     "ref": "L1224"
+    }
+   ]
+  },
+  {
+   "name": "エルノ",
+   "aliases": [],
+   "first_person": [],
+   "calls_others": [],
+   "speech": [],
+   "looks": [
+    {
+     "feature": "法衣の袖口に焦げが二つある",
+     "ref": "L1224"
+    }
+   ],
+   "traits": [
+    {
+     "feature": "袖口の焦げを見ている",
+     "ref": "L1511"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "夜半過ぎ",
+     "where": "酒場",
+     "doing": "法衣の袖を検められる",
+     "ref": "L1224"
+    }
+   ]
+  },
+  {
+   "name": "イゾルデ",
+   "aliases": [],
+   "first_person": [],
+   "calls_others": [],
+   "speech": [
+    {
+     "feature": "小さな声で証言する",
+     "example": "下りて、いきました",
+     "ref": "L1386"
+    }
+   ],
+   "looks": [
+    {
+     "feature": "帳面を胸に抱く",
+     "ref": "L1366"
+    }
+   ],
+   "traits": [
+    {
+     "feature": "組合長に促されていた証言を訂正し、首を横に振る",
+     "ref": "L1384"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "夜半過ぎ",
+     "where": "酒場",
+     "doing": "帳面を検められる",
+     "ref": "L1224"
+    },
+    {
+     "when": "夜半過ぎ",
+     "where": "酒場",
+     "doing": "組合長の所在について証言する",
+     "ref": "L1386"
+    }
+   ]
+  },
+  {
+   "name": "ルル",
+   "aliases": [
+    "給仕"
+   ],
+   "first_person": [],
+   "calls_others": [
+    {
+     "target": "トマス",
+     "word": "あら",
+     "ref": "L1286"
+    }
+   ],
+   "speech": [
+    {
+     "feature": "「あら」を使い、柔らかな女性口調で「わ」と言う",
+     "example": "一個、銅貨二枚よ？",
+     "ref": "L1286"
+    },
+    {
+     "feature": "語尾に「わ」を使う",
+     "example": "言ったわね",
+     "ref": "L1298"
+    }
+   ],
+   "looks": [
+    {
+     "feature": "黒い胴着、網の靴下、白いカフス、付け襟",
+     "ref": "L1232"
+    },
+    {
+     "feature": "白い付け耳があり、耳の根もとに隙間はない",
+     "ref": "L1234"
+    }
+   ],
+   "traits": [
+    {
+     "feature": "耳は敏感だと言って身を引く",
+     "ref": "L1236"
+    },
+    {
+     "feature": "頬杖をついてトマスに卵を売ろうとする",
+     "ref": "L1286"
+    },
+    {
+     "feature": "瓶を見ず、壁の依頼票を見る",
+     "ref": "L1308"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "夜半過ぎ",
+     "where": "酒場",
+     "doing": "女隊員に身体を検められる",
+     "ref": "L1228"
+    },
+    {
+     "when": "夜半過ぎ",
+     "where": "カウンターの向こう側",
+     "doing": "トマスに卵の値段を告げる",
+     "ref": "L1286"
+    },
+    {
+     "when": "夜半過ぎ",
+     "where": "カウンターの向こう",
+     "doing": "頬杖をついている",
+     "ref": "L1493"
+    }
+   ]
+  },
+  {
+   "name": "トマス",
+   "aliases": [],
+   "first_person": [
+    {
+     "word": "俺",
+     "ref": "L1296"
+    }
+   ],
+   "calls_others": [],
+   "speech": [
+    {
+     "feature": "「っす」を使う口調",
+     "example": "これ、検めていいっすか",
+     "ref": "L1282"
+    },
+    {
+     "feature": "給金が出たら買うと言う",
+     "example": "あとで、給金が出たら",
+     "ref": "L1300"
+    }
+   ],
+   "looks": [],
+   "traits": [
+    {
+     "feature": "卵をつまみたい様子で蓋に手を伸ばし、値段を聞いて引っ込める",
+     "ref": "L1284"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "夜半過ぎ",
+     "where": "カウンターの端",
+     "doing": "卵の瓶を検めてよいか尋ねる",
+     "ref": "L1278"
+    },
+    {
+     "when": "夜半過ぎ",
+     "where": "酒蔵のほう",
+     "doing": "検めに行く",
+     "ref": "L1304"
+    }
+   ]
+  },
+  {
+   "name": "ザザ",
+   "aliases": [
+    "トカゲ",
+    "蜥蜴人"
+   ],
+   "first_person": [
+    {
+     "word": "私",
+     "ref": "L1350"
+    }
+   ],
+   "calls_others": [],
+   "speech": [
+    {
+     "feature": "ゆっくり話し、乾いた落ち葉をこするような声",
+     "example": "太い靴が、私の箒の部屋に入った",
+     "ref": "L1350"
+    }
+   ],
+   "looks": [
+    {
+     "feature": "蜥蜴人。瞼は下から上へ閉じる",
+     "ref": "L1354"
+    }
+   ],
+   "traits": [
+    {
+     "feature": "動かず箒を抱えている",
+     "ref": "L1330"
+    },
+    {
+     "feature": "熱を明るさとして見る",
+     "ref": "L1354"
+    },
+    {
+     "feature": "低い位置から足と手だけを見て証言する",
+     "ref": "L1408"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "夜半過ぎ",
+     "where": "階段下の壁ぎわ",
+     "doing": "箒を抱えてしゃがんでいる",
+     "ref": "L1330"
+    },
+    {
+     "when": "夜半過ぎ",
+     "where": "酒場",
+     "doing": "箒の部屋での出来事を証言する",
+     "ref": "L1350"
+    }
+   ]
+  },
+  {
+   "name": "隊長",
+   "aliases": [],
+   "first_person": [],
+   "calls_others": [
+    {
+     "target": "イゾルデ",
+     "word": "お前",
+     "ref": "L1378"
+    },
+    {
+     "target": "アガタ",
+     "word": "修道女",
+     "ref": "L1434"
+    },
+    {
+     "target": "ザザ",
+     "word": "蜥蜴人",
+     "ref": "L1370"
+    }
+   ],
+   "speech": [
+    {
+     "feature": "短く断定的に話す",
+     "example": "出ないな",
+     "ref": "L1318"
+    }
+   ],
+   "looks": [],
+   "traits": [
+    {
+     "feature": "組合長と灰色の行為を分けて裁くと言う",
+     "ref": "L1418"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "夜半過ぎ",
+     "where": "酒場の真ん中の卓",
+     "doing": "腕を組んでいる",
+     "ref": "L1316"
+    },
+    {
+     "when": "夜半過ぎ",
+     "where": "酒場",
+     "doing": "ザザとイゾルデの証言を聞く",
+     "ref": "L1370"
+    }
+   ]
+  },
+  {
+   "name": "首に白い毛のある灰色",
+   "aliases": [
+    "灰色",
+    "灰色たちの一匹"
+   ],
+   "first_person": [
+    {
+     "word": "僕",
+     "ref": "L1424"
+    }
+   ],
+   "calls_others": [],
+   "speech": [
+    {
+     "feature": "石を持ち出していないと否定する",
+     "example": "石は、持ち出していない",
+     "ref": "L1424"
+    }
+   ],
+   "looks": [
+    {
+     "feature": "首に白い毛がある灰色",
+     "ref": "L1218"
+    }
+   ],
+   "traits": [
+    {
+     "feature": "木彫りの狼を二つ胸に抱える",
+     "ref": "L1513"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "夜半過ぎ",
+     "where": "裏口の床",
+     "doing": "木彫りの狼を胸に抱えて目を閉じている",
+     "ref": "L1513"
+    },
+    {
+     "when": "七つ",
+     "where": "中庭の井戸",
+     "doing": "そこにいたと黒板に記される",
+     "ref": "L1463"
+    }
+   ]
+  },
+  {
+   "name": "耳の欠けた灰色",
+   "aliases": [
+    "灰色",
+    "灰色たちの一匹"
+   ],
+   "first_person": [],
+   "calls_others": [],
+   "speech": [],
+   "looks": [
+    {
+     "feature": "耳が欠けている",
+     "ref": "L1218"
+    }
+   ],
+   "traits": [
+    {
+     "feature": "白い布を拾って懐にしまう",
+     "ref": "L1218"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "夜半過ぎ",
+     "where": "裏口の床",
+     "doing": "白い毛の灰色の肩に手を置いて黙っている",
+     "ref": "L1416"
+    }
+   ]
+  },
+  {
+   "name": "女の隊員",
+   "aliases": [
+    "隊員"
+   ],
+   "first_person": [],
+   "calls_others": [
+    {
+     "target": "ルル",
+     "word": "給仕",
+     "ref": "L1230"
+    }
+   ],
+   "speech": [
+    {
+     "feature": "命令口調",
+     "example": "腕を上げろ",
+     "ref": "L1230"
+    }
+   ],
+   "looks": [],
+   "traits": [
+    {
+     "feature": "ルルの耳は触らず、隙間を覗き込む",
+     "ref": "L1242"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "夜半過ぎ",
+     "where": "酒場",
+     "doing": "ルルを検める",
+     "ref": "L1228"
+    }
+   ]
+  }
+ ],
+ "places": [
+  {
+   "name": "組合の建物",
+   "layout": [
+    {
+     "feature": "二階の書庫から地下の酒蔵まで捜索される",
+     "ref": "L1198"
+    },
+    {
+     "feature": "中庭の厩には二階がある",
+     "ref": "L1208"
+    },
+    {
+     "feature": "階段下に暗がりがある",
+     "ref": "L1328"
+    }
+   ],
+   "scenery": [
+    {
+     "feature": "隊員が建物をひっくり返すように捜索する",
+     "ref": "L1196"
+    }
+   ],
+   "weather_season": []
+  },
+  {
+   "name": "二階の書庫",
+   "layout": [
+    {
+     "feature": "建物の二階にあり、本棚の本が一冊ずつ調べられる",
+     "ref": "L1198"
+    }
+   ],
+   "scenery": [],
+   "weather_season": []
+  },
+  {
+   "name": "地下の酒蔵",
+   "layout": [
+    {
+     "feature": "建物の地下にあり、樽を一つずつ叩いて調べる",
+     "ref": "L1198"
+    }
+   ],
+   "scenery": [],
+   "weather_season": []
+  },
+  {
+   "name": "中庭の厩",
+   "layout": [
+    {
+     "feature": "厩の二階へ階段があり、寝藁などが石畳へ放り出される",
+     "ref": "L1208"
+    }
+   ],
+   "scenery": [
+    {
+     "feature": "寝藁、毛布二枚、木椀二つ、荷袋二つが石畳に出される",
+     "ref": "L1208"
+    }
+   ],
+   "weather_season": []
+  },
+  {
+   "name": "中庭の石畳",
+   "layout": [
+    {
+     "feature": "厩の二階から寝藁などが放り出される場所",
+     "ref": "L1208"
+    }
+   ],
+   "scenery": [
+    {
+     "feature": "石畳に荷物が山になり、木彫りの狼が落ちている",
+     "ref": "L1208"
+    }
+   ],
+   "weather_season": []
+  },
+  {
+   "name": "酒場",
+   "layout": [
+    {
+     "feature": "人の検めは真ん中で行われる",
+     "ref": "L1222"
+    },
+    {
+     "feature": "中央に卓があり、端にカウンターがある",
+     "ref": "L1316"
+    },
+    {
+     "feature": "階段下に暗がりがあり、壁ぎわにザザがいる",
+     "ref": "L1330"
+    },
+    {
+     "feature": "壁に依頼票がある",
+     "ref": "L1308"
+    },
+    {
+     "feature": "裏口がある",
+     "ref": "L1412"
+    }
+   ],
+   "scenery": [
+    {
+     "feature": "暖炉、ランプ、カウンターの酒瓶がある",
+     "ref": "L1250"
+    },
+    {
+     "feature": "ランプの光が瓶の卵を照らす",
+     "ref": "L1280"
+    }
+   ],
+   "weather_season": [
+    {
+     "feature": "夜半を過ぎて腹の減る刻",
+     "ref": "L1280"
+    }
+   ]
+  },
+  {
+   "name": "カウンター",
+   "layout": [
+    {
+     "feature": "内側に隊員二人が入り、下の奥に手を入れる",
+     "ref": "L1250"
+    },
+    {
+     "feature": "カウンターの下に短剣の元の場所がある",
+     "ref": "L1274"
+    }
+   ],
+   "scenery": [
+    {
+     "feature": "赤蕪の汁に漬かった鶉の卵の瓶が置かれている",
+     "ref": "L1280"
+    }
+   ],
+   "weather_season": []
+  },
+  {
+   "name": "階段下の暗がり",
+   "layout": [
+    {
+     "feature": "ザザが壁ぎわにしゃがむ場所",
+     "ref": "L1330"
+    }
+   ],
+   "scenery": [
+    {
+     "feature": "箒を抱えたザザがいる",
+     "ref": "L1330"
+    }
+   ],
+   "weather_season": []
+  },
+  {
+   "name": "箒の部屋",
+   "layout": [
+    {
+     "feature": "箒が置かれ、箱がある。出入口からは低い位置で足と手が見える",
+     "ref": "L1408"
+    }
+   ],
+   "scenery": [
+    {
+     "feature": "箱の蓋が鳴り、箒が動かされる",
+     "ref": "L1350"
+    }
+   ],
+   "weather_season": []
+  },
+  {
+   "name": "裏庭",
+   "layout": [
+    {
+     "feature": "隊長が灰色の隠し場所の候補として挙げる",
+     "ref": "L1320"
+    }
+   ],
+   "scenery": [],
+   "weather_season": []
+  },
+  {
+   "name": "下の谷",
+   "layout": [
+    {
+     "feature": "城壁の内側で、城門の閂の外にある",
+     "ref": "L1322"
+    }
+   ],
+   "scenery": [],
+   "weather_season": []
+  },
+  {
+   "name": "裏の路地",
+   "layout": [
+    {
+     "feature": "六つ半の時刻に菫の男がいたと黒板に記される",
+     "ref": "L1461"
+    }
+   ],
+   "scenery": [],
+   "weather_season": []
+  },
+  {
+   "name": "中庭の井戸",
+   "layout": [
+    {
+     "feature": "中庭にあり、白い毛の灰色が七つにいたと記される",
+     "ref": "L1463"
+    }
+   ],
+   "scenery": [],
+   "weather_season": []
+  },
+  {
+   "name": "北門・北街道",
+   "layout": [
+    {
+     "feature": "追放者は北門から北街道を通って荒れ野へ出される",
+     "ref": "L1501"
+    }
+   ],
+   "scenery": [
+    {
+     "feature": "三つ目の一里塚の先は赤い棘草の荒れ野で、身を隠す場所が多い",
+     "ref": "L1503"
+    }
+   ],
+   "weather_season": [
+    {
+     "feature": "冬のあいだは隊商も通らない",
+     "ref": "L1503"
+    }
+   ]
+  }
+ ],
+ "season_mismatch": [],
+ "inner_inconsistencies": []
+}

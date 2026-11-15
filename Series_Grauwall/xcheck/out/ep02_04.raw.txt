@@ -1,0 +1,225 @@
+{
+  "episode": "02",
+  "dates": [
+    {"when": "師走の朔日", "ref": "L1234"},
+    {"when": "十の鐘の少し前", "ref": "L1238"},
+    {"when": "四日前の夜", "ref": "L1350"},
+    {"when": "朔日の夕方、六つの鐘", "ref": "L1408"},
+    {"when": "師走の二日、昼すぎ", "ref": "L1547"},
+    {"when": "霜月の二十二日（十日前）", "ref": "L1572"},
+    {"when": "昼の鐘のあと", "ref": "L1556"},
+    {"when": "七つの鐘の少し前", "ref": "L1503"},
+    {"when": "春の議", "ref": "L1515"},
+    {"when": "夜半の鐘", "ref": "L1670"}
+  ],
+  "characters": [
+    {
+      "name": "俺",
+      "aliases": ["マスター"],
+      "first_person": [{"word": "俺", "ref": "L1242"}],
+      "calls_others": [{"target": "隊長", "word": "隊長", "ref": "L1634"}, {"target": "ザザ", "word": "ザザ", "ref": "L1475"}],
+      "speech": [{"feature": "短く、落ち着いた口調", "example": "スープは店の決まりです", "ref": "L1459"}],
+      "looks": [],
+      "traits": [{"feature": "確かめに出ず、杯を拭き続ける", "ref": "L1354"}, {"feature": "訊かないでほしいという目を見て質問をやめる", "ref": "L1497"}],
+      "whereabouts": [{"when": "師走の朔日、朝", "where": "錆び釘亭のカウンター内", "doing": "隊長と話す", "ref": "L1242"}, {"when": "師走の二日、夕方", "where": "錆び釘亭の裏口", "doing": "ハクとチィにスープを出す", "ref": "L1648"}]
+    },
+    {
+      "name": "隊長",
+      "aliases": ["治安維持隊の隊長"],
+      "first_person": [{"word": "私", "ref": "L1533"}],
+      "calls_others": [{"target": "ヨーナス", "word": "書記殿", "ref": "L1374"}, {"target": "エーリカ", "word": "お前", "ref": "L1519"}],
+      "speech": [{"feature": "普段はくだけた口調", "example": "遅れるな", "ref": "L1248"}, {"feature": "公的な場面で隊長らしい声になる", "example": "参事会でお決めになればいい", "ref": "L1376"}],
+      "looks": [{"feature": "背が高い", "ref": "L1372"}, {"feature": "外套の喉元に留め金がある", "ref": "L1240"}, {"feature": "頬に傷がある", "ref": "L1614"}],
+      "traits": [{"feature": "付き添いの役目より先に来るのが癖", "ref": "L1240"}, {"feature": "片側だけで笑う", "ref": "L1276"}, {"feature": "勤務中は酒を頼まず水を飲む", "ref": "L1505"}],
+      "whereabouts": [{"when": "朔日、十の鐘の少し前", "where": "錆び釘亭", "doing": "水を頼み、俺と話す", "ref": "L1238"}, {"when": "朔日、七つの鐘の少し前", "where": "錆び釘亭", "doing": "参事会の内示撤回を伝える", "ref": "L1503"}, {"when": "師走の二日", "where": "錆び釘亭", "doing": "巡回中に立ち寄り、樽を見る", "ref": "L1604"}]
+    },
+    {
+      "name": "ヨーナス",
+      "aliases": ["参事会書記局の書記"],
+      "first_person": [{"word": "わたし", "ref": "L1286"}],
+      "calls_others": [{"target": "エーリカ", "word": "ランゲさん", "ref": "L1268"}, {"target": "エーリカ", "word": "組合長", "ref": "L1268"}, {"target": "ザザ", "word": "お前", "ref": "L1324"}, {"target": "ザザ", "word": "トカゲ", "ref": "L1324"}],
+      "speech": [{"feature": "丁寧語を使う", "example": "おはようございます", "ref": "L1268"}, {"feature": "声が少し上ずる", "example": "声が少し上ずっていた", "ref": "L1284"}, {"feature": "ザザに尖った声で命じる", "example": "答えろ", "ref": "L1324"}],
+      "looks": [{"feature": "三十すぎの痩せた男", "ref": "L1258"}, {"feature": "袖口にインクの染みが三つある", "ref": "L1258"}, {"feature": "帳面を胸に抱いている", "ref": "L1258"}],
+      "traits": [{"feature": "紙をひったくるように受け取る", "ref": "L1276"}, {"feature": "唇を噛む", "ref": "L1320"}],
+      "whereabouts": [{"when": "朔日、十の鐘", "where": "錆び釘亭", "doing": "返書についてエーリカに申し入れる", "ref": "L1256"}]
+    },
+    {
+      "name": "エーリカ",
+      "aliases": ["ランゲさん", "組合長"],
+      "first_person": [{"word": "わたし", "ref": "L1445"}],
+      "calls_others": [],
+      "speech": [{"feature": "落ち着いた口調で規約を説明する", "example": "ここから先が、雑役です", "ref": "L1294"}, {"feature": "短く断定する", "example": "使いません", "ref": "L1584"}],
+      "looks": [{"feature": "左の足から一段ずつ階段を下り、上がる", "ref": "L1264"}],
+      "traits": [{"feature": "登録簿と規約を静かな手つきで閉じる", "ref": "L1400"}, {"feature": "答えを口に出すのがつらそうな顔をする", "ref": "L1439"}, {"feature": "春まで樽の栓を抜かないと決める", "ref": "L1642"}],
+      "whereabouts": [{"when": "朔日、十の鐘", "where": "錆び釘亭", "doing": "ヨーナスに規約と登録簿を示す", "ref": "L1264"}, {"when": "朔日、夕方", "where": "錆び釘亭", "doing": "ヴェイに返答する", "ref": "L1421"}, {"when": "師走の二日", "where": "錆び釘亭", "doing": "着任祝いの樽を受け取り、春まで開けないと決める", "ref": "L1566"}]
+    },
+    {
+      "name": "ダリオ",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [{"target": "エーリカ", "word": "組合長", "ref": "L1582"}],
+      "speech": [{"feature": "くだけた口調", "example": "だよな", "ref": "L1590"}],
+      "looks": [],
+      "traits": [{"feature": "珍しく素面で隅の卓にいる", "ref": "L1264"}, {"feature": "落ちた紙を拾って読む", "ref": "L1272"}, {"feature": "樽を斜めにして運ぶ", "ref": "L1590"}, {"feature": "樽の栓に手をかけ、名残惜しそうに撫でる", "ref": "L1638"}],
+      "whereabouts": [{"when": "朔日、朝", "where": "錆び釘亭の隅の卓", "doing": "紙を拾って読む", "ref": "L1264"}, {"when": "師走の二日", "where": "錆び釘亭", "doing": "中樽を扉から運び入れる", "ref": "L1580"}]
+    },
+    {
+      "name": "ザザ",
+      "aliases": ["蜥蜴人", "トカゲ"],
+      "first_person": [{"word": "私", "ref": "L1479"}],
+      "calls_others": [{"target": "ヨーナス", "word": "お前", "ref": "L1324"}],
+      "speech": [{"feature": "乾いた落ち葉をこすり合わせるような声", "example": "違う", "ref": "L1328"}, {"feature": "訊かれたことだけに答える", "example": "言ったことは、全部だ", "ref": "L1493"}],
+      "looks": [{"feature": "蜥蜴人。瞼が下から上へ閉じて開く", "ref": "L1477"}],
+      "traits": [{"feature": "箒を止めて質問に答える", "ref": "L1326"}, {"feature": "答えた後、掃除に戻る", "ref": "L1398"}],
+      "whereabouts": [{"when": "朔日、朝", "where": "錆び釘亭の階段下の暗がり", "doing": "箒を抱えている", "ref": "L1264"}, {"when": "朔日の夕方", "where": "錆び釘亭の階段下", "doing": "俺の問いに答える", "ref": "L1471"}]
+    },
+    {
+      "name": "フーゴ",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [],
+      "traits": [{"feature": "四日前の夜、閂に手をかけた", "ref": "L1352"}],
+      "whereabouts": [{"when": "四日前の夜", "where": "錆び釘亭の裏口", "doing": "閂に手をかける", "ref": "L1352"}]
+    },
+    {
+      "name": "ヴェイ",
+      "aliases": ["灰狼"],
+      "first_person": [{"word": "僕", "ref": "L1435"}],
+      "calls_others": [{"target": "エーリカ", "word": "組合長", "ref": "L1425"}],
+      "speech": [{"feature": "問いを投げかける", "example": "紙の外では", "ref": "L1449"}],
+      "looks": [{"feature": "首の下に白い毛の房がある灰狼", "ref": "L1417"}],
+      "traits": [{"feature": "言葉を探すとき鼻が少し動く", "ref": "L1433"}, {"feature": "嘘をつけない", "ref": "L1447"}],
+      "whereabouts": [{"when": "朔日の夕方、六つの鐘の後", "where": "錆び釘亭", "doing": "エーリカに問いかける", "ref": "L1417"}]
+    },
+    {
+      "name": "コル",
+      "aliases": ["鴉人"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [{"feature": "鴉人", "ref": "L1419"}],
+      "traits": [{"feature": "伝言を一字も盛らない", "ref": "L1419"}],
+      "whereabouts": [{"when": "師走の二日、昼すぎ", "where": "厩の屋根の棟", "doing": "雪を目で追う", "ref": "L1554"}]
+    },
+    {
+      "name": "アガタ",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [],
+      "traits": [],
+      "whereabouts": [{"when": "朔日", "where": "本文では特定されない", "doing": "膝の薬の匂いがエーリカの外套に残っている", "ref": "L1433"}]
+    },
+    {
+      "name": "ドゥン",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [],
+      "traits": [],
+      "whereabouts": [{"when": "四日前の夜", "where": "厩の二階、窓の下", "doing": "寝床にいる", "ref": "L1487"}]
+    },
+    {
+      "name": "ヘルマン",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [{"target": "エーリカ", "word": "ランゲ様", "ref": "L1564"}, {"target": "送り主", "word": "奥様", "ref": "L1564"}],
+      "speech": [{"feature": "よく磨いた丁寧な声", "example": "お祝いでございます", "ref": "L1564"}],
+      "looks": [{"feature": "黒い上着を着ている", "ref": "L1562"}, {"feature": "ハンカチで手がふさがっている", "ref": "L1562"}],
+      "traits": [{"feature": "樽の擦り傷を見て小さく咳払いする", "ref": "L1592"}],
+      "whereabouts": [{"when": "師走の二日、昼すぎ", "where": "錆び釘亭の表扉", "doing": "着任祝いの樽を届ける", "ref": "L1560"}]
+    },
+    {
+      "name": "ハク",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [{"target": "チィ", "word": "妹", "ref": "L1662"}],
+      "speech": [{"feature": "妹の言葉に重ねて同意する", "example": "うん", "ref": "L1662"}],
+      "looks": [{"feature": "大人の古い上着を着ている", "ref": "L1650"}],
+      "traits": [{"feature": "妹が先に言うと怒るので、いつもあとから言う", "ref": "L1662"}, {"feature": "チィの頭の雪を払う", "ref": "L1650"}],
+      "whereabouts": [{"when": "師走の二日、夕方", "where": "錆び釘亭の裏口", "doing": "チィとスープを飲みに来る", "ref": "L1648"}]
+    },
+    {
+      "name": "チィ",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [{"target": "ハク", "word": "兄", "ref": "L1662"}],
+      "speech": [{"feature": "味について率直に言う", "example": "前よりおいしい", "ref": "L1658"}],
+      "looks": [{"feature": "大人の古い上着を着ている", "ref": "L1650"}],
+      "traits": [{"feature": "椀を両手で抱え、湯気に顔を突っ込んで飲む", "ref": "L1656"}],
+      "whereabouts": [{"when": "師走の二日、夕方", "where": "錆び釘亭の裏口", "doing": "ハクとスープを飲みに来る", "ref": "L1648"}]
+    },
+    {
+      "name": "アーデル",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [],
+      "traits": [{"feature": "見たものを言わせずに使うと隊長が述べる", "ref": "L1533"}],
+      "whereabouts": []
+    }
+  ],
+  "places": [
+    {
+      "name": "錆び釘亭",
+      "layout": [{"feature": "カウンターの前に席があり、端に登録簿・規約が置かれる", "ref": "L1240"}, {"feature": "階段があり、その下に暗がりがある", "ref": "L1264"}, {"feature": "隅に卓がある", "ref": "L1264"}, {"feature": "表扉と裏口がある", "ref": "L1392"}, {"feature": "カウンター脇に樽を置く", "ref": "L1596"}, {"feature": "六つの卓がある", "ref": "L1674"}],
+      "scenery": [{"feature": "暖炉とザザの箒の音がする", "ref": "L1411"}, {"feature": "窓の桟に雪が残って溶ける", "ref": "L1552"}],
+      "weather_season": [{"feature": "表扉から雪の匂いのする空気が入る", "ref": "L1392"}, {"feature": "雪が窓の桟にしばらく残って溶ける", "ref": "L1552"}]
+    },
+    {
+      "name": "厩",
+      "layout": [{"feature": "二階にザザたちの寝床がある", "ref": "L1356"}, {"feature": "ザザは奥の藁、ドゥンは窓の下、灰色の首の白いものは戸の脇、コルは梁の上", "ref": "L1487"}],
+      "scenery": [{"feature": "屋根の棟にコルがいる", "ref": "L1554"}],
+      "weather_season": [{"feature": "霜と藁の足跡がある", "ref": "L1487"}]
+    },
+    {
+      "name": "参事会館",
+      "layout": [],
+      "scenery": [{"feature": "昼飯の献立は豆の煮込み、黒パン、林檎", "ref": "L1274"}],
+      "weather_season": []
+    },
+    {
+      "name": "広場",
+      "layout": [],
+      "scenery": [{"feature": "子どもたちが空を見上げ、初雪を舌で受ける", "ref": "L1554"}],
+      "weather_season": [{"feature": "師走二日に雪がちらつく", "ref": "L1548"}]
+    },
+    {
+      "name": "下の谷",
+      "layout": [],
+      "scenery": [],
+      "weather_season": []
+    },
+    {
+      "name": "中庭",
+      "layout": [],
+      "scenery": [{"feature": "霜の上に小さな足跡がある", "ref": "L1664"}],
+      "weather_season": [{"feature": "霜が降りている", "ref": "L1664"}]
+    },
+    {
+      "name": "城門",
+      "layout": [{"feature": "六つの鐘で閉まる", "ref": "L1408"}],
+      "scenery": [],
+      "weather_season": []
+    },
+    {
+      "name": "表の通り",
+      "layout": [],
+      "scenery": [{"feature": "荷車の車輪が止まる音がする", "ref": "L1556"}],
+      "weather_season": [{"feature": "雪の中を空の荷車が遠ざかる", "ref": "L1628"}]
+    },
+    {
+      "name": "組合長の部屋",
+      "layout": [{"feature": "扉がある", "ref": "L1352"}],
+      "scenery": [],
+      "weather_season": []
+    }
+  ],
+  "season_mismatch": [],
+  "inner_inconsistencies": []
+}

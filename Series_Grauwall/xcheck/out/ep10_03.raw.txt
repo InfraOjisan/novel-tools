@@ -1,0 +1,411 @@
+{
+  "episode": "10",
+  "dates": [
+    {"when": "文月十五日の昼下がり", "ref": "L688"},
+    {"when": "去年の秋まで", "ref": "L702"},
+    {"when": "秋の夜", "ref": "L728"},
+    {"when": "去年の霜月", "ref": "L732"},
+    {"when": "灰壁暦三〇二年の霜月二十日の晩", "ref": "L954"},
+    {"when": "十一年前の裁きの席", "ref": "L982"},
+    {"when": "昼すぎ三つの鐘のころ", "ref": "L786"},
+    {"when": "昼すぎ四つの鐘のころ", "ref": "L892"},
+    {"when": "夜半を過ぎたころ", "ref": "L754"},
+    {"when": "翌朝", "ref": "L764"}
+  ],
+  "characters": [
+    {
+      "name": "ヴェイ",
+      "aliases": ["俺"],
+      "first_person": [
+        {"word": "俺", "ref": "L787"}
+      ],
+      "calls_others": [],
+      "speech": [
+        {"feature": "一人称「俺」。丁寧な返答をする", "example": "「呼ばれましたので」", "ref": "L811"},
+        {"feature": "知っていて止めなかったと告げる", "example": "「知っていて、止めなかった」", "ref": "L768"}
+      ],
+      "looks": [
+        {"feature": "灰狼。木彫りの狼を二つ抱えている", "ref": "L766"}
+      ],
+      "traits": [
+        {"feature": "靴の匂いを一足ずつ嗅ぎ分ける", "ref": "L694"},
+        {"feature": "知っていても訊かず、止めなかった", "ref": "L746"},
+        {"feature": "灰狼には見なかったことにするのが難しい", "ref": "L726"}
+      ],
+      "whereabouts": [
+        {"when": "文月十五日の昼下がり", "where": "家の戸口", "doing": "広場の敷物と人間の背中を見ている", "ref": "L688"},
+        {"when": "昼すぎ三つの鐘のころ", "where": "谷の東の外れの施療天幕", "doing": "天幕まで歩き、アガタたちと会う", "ref": "L787"},
+        {"when": "昼すぎ四つの鐘のころ", "where": "広場の西の石垣", "doing": "ザザの家族と過ごし、粥と焼き魚を食べる", "ref": "L892"}
+      ]
+    },
+    {
+      "name": "イス",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [],
+      "traits": [],
+      "whereabouts": [
+        {"when": "文月十五日の昼下がり", "where": "広場", "doing": "杓子で人間の椀に粥を入れる", "ref": "L784"}
+      ]
+    },
+    {
+      "name": "ルル",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [
+        {"target": "チィ", "word": "下の子", "ref": "L706"},
+        {"target": "ハク", "word": "下の子", "ref": "L706"}
+      ],
+      "speech": [
+        {"feature": "ハクが真似る、首を傾けた言い方", "example": "「あら？」", "ref": "L710"}
+      ],
+      "looks": [
+        {"feature": "白い耳。手首に白い布のカフスを巻く", "ref": "L704"},
+        {"feature": "店の制服の白い布を手首に巻いている", "ref": "L722"}
+      ],
+      "traits": [
+        {"feature": "スープを配り、閂を外していた", "ref": "L702"},
+        {"feature": "チィの椀にだけ一さじ多く入れる", "ref": "L706"},
+        {"feature": "シグに布の切れ端を渡す", "ref": "L722"}
+      ],
+      "whereabouts": [
+        {"when": "去年の秋まで", "where": "錆び釘亭の裏口", "doing": "鍋を持ち、裏口の閂を外してスープを配る", "ref": "L702"}
+      ]
+    },
+    {
+      "name": "チィ",
+      "aliases": ["下の子"],
+      "first_person": [],
+      "calls_others": [
+        {"target": "ハク", "word": "お兄ちゃん", "ref": "L706"}
+      ],
+      "speech": [
+        {"feature": "痛みを尋ねられ、痛くないと答える", "example": "「痛くない」", "ref": "L837"}
+      ],
+      "looks": [
+        {"feature": "五つ。施療時、右足の指に布を巻いてもらっている", "ref": "L706"},
+        {"feature": "踊りの稽古で石にぶつけ、足の指を負傷", "ref": "L833"}
+      ],
+      "traits": [
+        {"feature": "兄の椀を覗いて、量の違いを口にする", "ref": "L706"},
+        {"feature": "包帯を巻かれた足の指でブリギッテの膝を蹴る", "ref": "L865"}
+      ],
+      "whereabouts": [
+        {"when": "昼すぎ三つの鐘のころ", "where": "施療天幕", "doing": "右足の指に布を巻いてもらう", "ref": "L833"},
+        {"when": "施療天幕を出たあと", "where": "天幕から広場へ向かう", "doing": "包帯の足でヴェイについていく", "ref": "L889"}
+      ]
+    },
+    {
+      "name": "ハク",
+      "aliases": ["兄"],
+      "first_person": [],
+      "calls_others": [
+        {"target": "チィ", "word": "お兄ちゃん", "ref": "L710"}
+      ],
+      "speech": [
+        {"feature": "ルルの言い方を真似る", "example": "「お兄ちゃんに、もっと入れてほしいの？」", "ref": "L710"}
+      ],
+      "looks": [
+        {"feature": "八つ。耳があり、耳の先をつつかれると伏せる", "ref": "L708"}
+      ],
+      "traits": [
+        {"feature": "ルルの言い方を真似る", "ref": "L708"},
+        {"feature": "ルルがいなくなった後、チィの椀に多く入るのを見ても何も言わない", "ref": "L776"}
+      ],
+      "whereabouts": [
+        {"when": "去年の秋までの裏口", "where": "錆び釘亭の裏口", "doing": "ルルの言い方を真似し、シグにつつかれて黙る", "ref": "L710"}
+      ]
+    },
+    {
+      "name": "シグ",
+      "aliases": [],
+      "first_person": [
+        {"word": "僕", "ref": "L756"}
+      ],
+      "calls_others": [
+        {"target": "ヴェイ", "word": "この人", "ref": "L954"}
+      ],
+      "speech": [
+        {"feature": "一人称「僕」", "example": "「僕が出ても」", "ref": "L756"},
+        {"feature": "ルルを「あの人」と呼ぶ", "example": "「あの人は、そういう人だ」", "ref": "L760"}
+      ],
+      "looks": [
+        {"feature": "左の耳の先が欠けている", "ref": "L714"}
+      ],
+      "traits": [
+        {"feature": "ルルからもらった布の切れ端を懐にしまい、何も言わない", "ref": "L724"},
+        {"feature": "裏口の段で毎晩、ルルが椀を配るのを見ていた", "ref": "L716"}
+      ],
+      "whereabouts": [
+        {"when": "去年の霜月の晩", "where": "錆び釘亭の裏口の床", "doing": "ヴェイとともに座らされている", "ref": "L734"},
+        {"when": "翌朝", "where": "北門", "doing": "ヴェイの代わりに出される", "ref": "L764"}
+      ]
+    },
+    {
+      "name": "アガタ",
+      "aliases": ["修道女", "先生"],
+      "first_person": [],
+      "calls_others": [
+        {"target": "ブリギッテ", "word": "その方", "ref": "L857"}
+      ],
+      "speech": [
+        {"feature": "丁寧な口調", "example": "「休むことです」", "ref": "L863"}
+      ],
+      "looks": [
+        {"feature": "白い手袋をしている", "ref": "L799"}
+      ],
+      "traits": [
+        {"feature": "傷の縁を指先でなぞり、布を手早く巻く", "ref": "L805"},
+        {"feature": "結び目の端を内側へ折りこむ", "ref": "L815"},
+        {"feature": "ブリギッテを休ませるよう促す", "ref": "L857"}
+      ],
+      "whereabouts": [
+        {"when": "祭りの日", "where": "谷の施療天幕", "doing": "施療をしている", "ref": "L803"},
+        {"when": "昼すぎ三つの鐘のころ", "where": "谷の東の外れの天幕", "doing": "土竜人の腕を治療し、ブリギッテと働く", "ref": "L805"}
+      ]
+    },
+    {
+      "name": "ブリギッテ",
+      "aliases": ["背の高い修道女"],
+      "first_person": [
+        {"word": "わたし", "ref": "L827"}
+      ],
+      "calls_others": [
+        {"target": "アガタ", "word": "先生", "ref": "L827"},
+        {"target": "ヴェイ", "word": "マスター", "ref": "L819"}
+      ],
+      "speech": [
+        {"feature": "よくしゃべり、一人称「わたし」を繰り返す", "example": "「わたし、知りませんでした」", "ref": "L827"},
+        {"feature": "丁寧な口調", "example": "「はい。毎年」", "ref": "L831"}
+      ],
+      "looks": [
+        {"feature": "背が高く、薬箱を抱える。天幕の天井に頭が当たる", "ref": "L823"}
+      ],
+      "traits": [
+        {"feature": "膝の状態を次々に質問し、膏薬を用意する", "ref": "L849"},
+        {"feature": "チィが痛くないと言っても布をもう一巻きする", "ref": "L839"}
+      ],
+      "whereabouts": [
+        {"when": "祭りの日", "where": "谷の東の外れの施療天幕", "doing": "アガタを手伝い、チィの足に布を巻く", "ref": "L831"}
+      ]
+    },
+    {
+      "name": "ザザ",
+      "aliases": ["兄さん", "兄", "伯父さん"],
+      "first_person": [
+        {"word": "私", "ref": "L954"}
+      ],
+      "calls_others": [
+        {"target": "ヴェイ", "word": "この人", "ref": "L954"}
+      ],
+      "speech": [
+        {"feature": "字義どおりにしか話さず、勝敗や手順を正確に語る", "example": "「三千二百十一局」", "ref": "L966"},
+        {"feature": "問われた言葉の意味を問い返す", "example": "「好き、とは何を指すか」", "ref": "L920"}
+      ],
+      "looks": [
+        {"feature": "蜥蜴人。背中に鱗がある", "ref": "L900"}
+      ],
+      "traits": [
+        {"feature": "子が落ちないよう背中の上で動かない", "ref": "L902"},
+        {"feature": "親も妻もおらず、妹が三人とその子や孫がいる", "ref": "L916"},
+        {"feature": "石取りを三千二百十一局行い、ヴェイの勝ちは四局", "ref": "L966"}
+      ],
+      "whereabouts": [
+        {"when": "昼すぎ四つの鐘のころ", "where": "広場の西の石垣前の平たい石", "doing": "背中に子どもを乗せて日なたにいる", "ref": "L896"}
+      ]
+    },
+    {
+      "name": "ササ",
+      "aliases": ["上の妹"],
+      "first_person": [
+        {"word": "わたし", "ref": "L912"}
+      ],
+      "calls_others": [
+        {"target": "ザザ", "word": "兄さん", "ref": "L908"}
+      ],
+      "speech": [
+        {"feature": "家族を紹介する", "example": "「上の妹のササです」", "ref": "L908"}
+      ],
+      "looks": [
+        {"feature": "三人の妹のうち、いちばん背が高い", "ref": "L908"}
+      ],
+      "traits": [
+        {"feature": "ザザと石取りをしているヴェイの話に笑いだす", "ref": "L962"}
+      ],
+      "whereabouts": [
+        {"when": "昼すぎ四つの鐘のころ", "where": "広場の西の石垣前", "doing": "ザザの家族と集まり、ヴェイの話を聞く", "ref": "L906"}
+      ]
+    },
+    {
+      "name": "ジィ",
+      "aliases": ["中のジィ"],
+      "first_person": [],
+      "calls_others": [
+        {"target": "ザザ", "word": "兄さん", "ref": "L930"}
+      ],
+      "speech": [
+        {"feature": "ザザの客人に料理を渡す", "example": "「兄さんのお客人に」", "ref": "L930"}
+      ],
+      "looks": [],
+      "traits": [
+        {"feature": "子どもがヴェイの皿に手を伸ばすと、その手を軽く叩く", "ref": "L938"}
+      ],
+      "whereabouts": [
+        {"when": "昼すぎ四つの鐘のころ", "where": "広場の西の石垣前", "doing": "粥と焼き魚をヴェイに渡す", "ref": "L928"}
+      ]
+    },
+    {
+      "name": "ネネ",
+      "aliases": ["末のネネ"],
+      "first_person": [
+        {"word": "わたし", "ref": "L912"}
+      ],
+      "calls_others": [
+        {"target": "ザザ", "word": "兄さん", "ref": "L982"}
+      ],
+      "speech": [
+        {"feature": "三人の妹のうち、いちばん話す。話しかけて言葉を止める", "example": "「十一年前の裁きの席で」", "ref": "L980"}
+      ],
+      "looks": [],
+      "traits": [
+        {"feature": "訊けば兄が答えると知り、話を言い直さない", "ref": "L990"},
+        {"feature": "子どもの鼻を指で拭いてやる", "ref": "L992"}
+      ],
+      "whereabouts": [
+        {"when": "昼すぎ四つの鐘のころ", "where": "広場の西の石垣前", "doing": "ヴェイに話しかけ、途中で口を閉じる", "ref": "L978"}
+      ]
+    },
+    {
+      "name": "ゴス",
+      "aliases": ["ネネの亭主"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [],
+      "traits": [
+        {"feature": "子どもの数を目で数え、名を口の中で一つずつ言う", "ref": "L910"},
+        {"feature": "ザザの背中から落ちた子を受け止め、名を小さく口にする", "ref": "L968"}
+      ],
+      "whereabouts": [
+        {"when": "昼すぎ四つの鐘のころ", "where": "広場の西の石垣前", "doing": "子どもたちを数え、落ちた子を受け止める", "ref": "L908"}
+      ]
+    }
+  ],
+  "places": [
+    {
+      "name": "家の戸口",
+      "layout": [
+        {"feature": "戸口から広場の敷物が見える", "ref": "L688"}
+      ],
+      "scenery": [
+        {"feature": "ヴェイが腰を下ろして広場を見ている", "ref": "L688"}
+      ],
+      "weather_season": [
+        {"feature": "文月十五日の昼下がり", "ref": "L688"}
+      ]
+    },
+    {
+      "name": "広場の敷物",
+      "layout": [
+        {"feature": "敷物の端に人間が座り、その手前の縁に靴が揃えてある", "ref": "L692"}
+      ],
+      "scenery": [
+        {"feature": "人間の背中はまっすぐで、靴が一足置かれている", "ref": "L692"}
+      ],
+      "weather_season": []
+    },
+    {
+      "name": "錆び釘亭の裏口",
+      "layout": [
+        {"feature": "裏口に閂があり、外には段がある", "ref": "L704"},
+        {"feature": "霜月の晩、裏口の床にヴェイとシグが座らされる", "ref": "L734"}
+      ],
+      "scenery": [
+        {"feature": "湿った石、古い麦酒、灯の油、砥石の油、靴の革の匂い", "ref": "L696"},
+        {"feature": "裏口の段に座るシグが、ルルの椀配りを見ている", "ref": "L716"}
+      ],
+      "weather_season": [
+        {"feature": "秋の夜、段の石が冷え、豆の湯気だけが温かい", "ref": "L728"}
+      ]
+    },
+    {
+      "name": "酒場の中",
+      "layout": [
+        {"feature": "カウンターの向こうに、杯を拭く人間がいる", "ref": "L762"}
+      ],
+      "scenery": [
+        {"feature": "夜更けに人間たちが大声で話し、隊が建物じゅうを調べる", "ref": "L736"}
+      ],
+      "weather_season": []
+    },
+    {
+      "name": "上町の館と裏庭",
+      "layout": [
+        {"feature": "館に裏庭がある", "ref": "L742"}
+      ],
+      "scenery": [
+        {"feature": "館じゅうに菫の匂いがあり、奥様は菫しか使わないと使用人が言う", "ref": "L742"}
+      ],
+      "weather_season": [
+        {"feature": "霜月の晩、ヴェイは六つの鐘の前から裏庭で樽を運んでいた", "ref": "L742"}
+      ]
+    },
+    {
+      "name": "北門",
+      "layout": [],
+      "scenery": [
+        {"feature": "シグがヴェイの代わりに北門から出された", "ref": "L764"}
+      ],
+      "weather_season": [
+        {"feature": "翌朝", "ref": "L764"}
+      ]
+    },
+    {
+      "name": "谷の東の外れの施療天幕",
+      "layout": [
+        {"feature": "白い布を竹の骨に張った天幕。入口の布は巻き上げてある", "ref": "L791"}
+      ],
+      "scenery": [
+        {"feature": "中で湯が沸き、薬草を煮る苦く少し甘い匂いがする", "ref": "L791"},
+        {"feature": "土竜人、灰狼の年寄り、蜥蜴人の子らが並ぶ", "ref": "L793"},
+        {"feature": "日の傾きにつれて天幕の中が黄色っぽくなり、薬草の匂いが濃くなる", "ref": "L871"}
+      ],
+      "weather_season": [
+        {"feature": "昼すぎ三つの鐘のころ", "ref": "L787"},
+        {"feature": "布越しに日が傾く", "ref": "L869"}
+      ]
+    },
+    {
+      "name": "広場",
+      "layout": [
+        {"feature": "西に石垣があり、石垣前に平たい石と地面がある", "ref": "L892"}
+      ],
+      "scenery": [
+        {"feature": "子どもたちが歌の稽古をする", "ref": "L984"}
+      ],
+      "weather_season": [
+        {"feature": "昼すぎ四つの鐘のころ", "ref": "L892"}
+      ]
+    },
+    {
+      "name": "広場の西の石垣",
+      "layout": [
+        {"feature": "南向きで、昼じゅう日を浴びる", "ref": "L894"},
+        {"feature": "石垣前の地面に蜥蜴人の子らが尻尾を日のほうへ向けて並ぶ", "ref": "L894"}
+      ],
+      "scenery": [
+        {"feature": "平たい石の上にザザがいて、背中に子どもが四人いる", "ref": "L896"},
+        {"feature": "日なたの石が尻の熱くなるほど温まっている", "ref": "L940"},
+        {"feature": "石垣の影が広場へ伸び、子らが日向へ移る", "ref": "L996"}
+      ],
+      "weather_season": [
+        {"feature": "谷でいちばん暖かい場所", "ref": "L892"},
+        {"feature": "日なたの石が温かく、日が傾いている", "ref": "L996"}
+      ]
+    }
+  ],
+  "season_mismatch": [],
+  "inner_inconsistencies": []
+}

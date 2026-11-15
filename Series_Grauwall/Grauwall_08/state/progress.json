@@ -1,18 +1,12 @@
 {
-  "phase": "chapters",
+  "phase": "done",
   "design_state": "draft",
   "design_attempts": 0,
-  "canon_sha256": "5094453f0ebfd855791f999fccf2ed72e7ccb7e13c1696d03715501b9a08e792",
-  "current": 3,
-  "final_state": "assemble",
+  "canon_sha256": "261d96a62e55b96dc7b52ba7c22bb0c09473bbf896524a3849aed95d896f9694",
+  "current": 24,
+  "final_state": "review",
   "final_reopened": false,
-  "escalation": {
-    "code": "CHAPTER_EXHAUSTED",
-    "detail": "第3章が3稿で合格しない: [short] 本文が1927字で短い（2500〜5000字）。場面の描写を厚くして2900字前後にする。 / [series] 祈りの「雪の下で、まだ帰れない人がいたら」は、北街道の亡骸に触れることを禁じた規律に抵触する含みがある。 → この一文を削り、亡骸や帰れない人を連想させない祈りにする。",
-    "hint": "work/ch03_feedback.md と work/ch03_verdict_a*.json を確認。人が work/ch03_draft.md を直して `resolve --accept`、または work/ch03_feedback.md を書き換えて `resolve --retry`",
-    "phase": "chapters",
-    "chapter": 3
-  },
+  "escalation": null,
   "chapters": {
     "1": {
       "state": "done",
@@ -29,160 +23,165 @@
       "warnings": []
     },
     "3": {
-      "state": "drafted",
+      "state": "done",
       "attempts": 3,
       "parse_retries": 0,
-      "ledger_attempts": 0,
+      "ledger_attempts": 1,
       "warnings": [
         "a2: 見出しが見つからず補完"
       ]
     },
     "4": {
-      "state": "pending",
-      "attempts": 0,
+      "state": "done",
+      "attempts": 3,
       "parse_retries": 0,
-      "ledger_attempts": 0,
+      "ledger_attempts": 1,
       "warnings": []
     },
     "5": {
-      "state": "pending",
-      "attempts": 0,
+      "state": "done",
+      "attempts": 2,
       "parse_retries": 0,
-      "ledger_attempts": 0,
+      "ledger_attempts": 1,
       "warnings": []
     },
     "6": {
-      "state": "pending",
-      "attempts": 0,
+      "state": "done",
+      "attempts": 2,
       "parse_retries": 0,
-      "ledger_attempts": 0,
+      "ledger_attempts": 1,
       "warnings": []
     },
     "7": {
-      "state": "pending",
-      "attempts": 0,
+      "state": "done",
+      "attempts": 3,
       "parse_retries": 0,
-      "ledger_attempts": 0,
+      "ledger_attempts": 1,
       "warnings": []
     },
     "8": {
-      "state": "pending",
-      "attempts": 0,
+      "state": "done",
+      "attempts": 1,
       "parse_retries": 0,
-      "ledger_attempts": 0,
+      "ledger_attempts": 1,
       "warnings": []
     },
     "9": {
-      "state": "pending",
-      "attempts": 0,
+      "state": "done",
+      "attempts": 3,
       "parse_retries": 0,
-      "ledger_attempts": 0,
+      "ledger_attempts": 1,
       "warnings": []
     },
     "10": {
-      "state": "pending",
-      "attempts": 0,
+      "state": "done",
+      "attempts": 2,
       "parse_retries": 0,
-      "ledger_attempts": 0,
+      "ledger_attempts": 1,
       "warnings": []
     },
     "11": {
-      "state": "pending",
-      "attempts": 0,
+      "state": "done",
+      "attempts": 2,
       "parse_retries": 0,
-      "ledger_attempts": 0,
+      "ledger_attempts": 1,
       "warnings": []
     },
     "12": {
-      "state": "pending",
-      "attempts": 0,
+      "state": "done",
+      "attempts": 2,
       "parse_retries": 0,
-      "ledger_attempts": 0,
+      "ledger_attempts": 1,
       "warnings": []
     },
     "13": {
-      "state": "pending",
-      "attempts": 0,
+      "state": "done",
+      "attempts": 3,
       "parse_retries": 0,
-      "ledger_attempts": 0,
+      "ledger_attempts": 1,
       "warnings": []
     },
     "14": {
-      "state": "pending",
-      "attempts": 0,
+      "state": "done",
+      "attempts": 3,
       "parse_retries": 0,
-      "ledger_attempts": 0,
+      "ledger_attempts": 1,
       "warnings": []
     },
     "15": {
-      "state": "pending",
-      "attempts": 0,
+      "state": "done",
+      "attempts": 2,
       "parse_retries": 0,
-      "ledger_attempts": 0,
+      "ledger_attempts": 1,
       "warnings": []
     },
     "16": {
-      "state": "pending",
-      "attempts": 0,
+      "state": "done",
+      "attempts": 3,
       "parse_retries": 0,
-      "ledger_attempts": 0,
+      "ledger_attempts": 1,
       "warnings": []
     },
     "17": {
-      "state": "pending",
-      "attempts": 0,
+      "state": "done",
+      "attempts": 2,
       "parse_retries": 0,
-      "ledger_attempts": 0,
+      "ledger_attempts": 1,
       "warnings": []
     },
     "18": {
-      "state": "pending",
-      "attempts": 0,
+      "state": "done",
+      "attempts": 3,
       "parse_retries": 0,
-      "ledger_attempts": 0,
-      "warnings": []
+      "ledger_attempts": 1,
+      "warnings": [
+        "a2: 見出しが見つからず補完"
+      ]
     },
     "19": {
-      "state": "pending",
-      "attempts": 0,
+      "state": "done",
+      "attempts": 3,
       "parse_retries": 0,
-      "ledger_attempts": 0,
+      "ledger_attempts": 1,
       "warnings": []
     },
     "20": {
-      "state": "pending",
-      "attempts": 0,
+      "state": "done",
+      "attempts": 3,
       "parse_retries": 0,
-      "ledger_attempts": 0,
-      "warnings": []
+      "ledger_attempts": 1,
+      "warnings": [
+        "a2: 本文の繰り返し3686字を削除"
+      ]
     },
     "21": {
-      "state": "pending",
-      "attempts": 0,
+      "state": "done",
+      "attempts": 3,
       "parse_retries": 0,
-      "ledger_attempts": 0,
+      "ledger_attempts": 1,
       "warnings": []
     },
     "22": {
-      "state": "pending",
-      "attempts": 0,
+      "state": "done",
+      "attempts": 3,
       "parse_retries": 0,
-      "ledger_attempts": 0,
+      "ledger_attempts": 1,
       "warnings": []
     },
     "23": {
-      "state": "pending",
-      "attempts": 0,
+      "state": "done",
+      "attempts": 3,
       "parse_retries": 0,
-      "ledger_attempts": 0,
+      "ledger_attempts": 1,
       "warnings": []
     },
     "24": {
-      "state": "pending",
-      "attempts": 0,
+      "state": "done",
+      "attempts": 2,
       "parse_retries": 0,
-      "ledger_attempts": 0,
+      "ledger_attempts": 1,
       "warnings": []
     }
-  }
+  },
+  "final_notes": []
 }

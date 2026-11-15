@@ -1,0 +1,860 @@
+{
+ "episode": "01",
+ "dates": [
+  {
+   "when": "今日の日付（具体的な日付は不明）",
+   "ref": "L523"
+  },
+  {
+   "when": "冬（灰壁の掟で追放される城外は冬の荒れ野）",
+   "ref": "L537"
+  },
+  {
+   "when": "十の鐘ごろ",
+   "ref": "L297"
+  },
+  {
+   "when": "十の鐘から半刻たったころ",
+   "ref": "L579"
+  }
+ ],
+ "characters": [
+  {
+   "name": "バルタザール",
+   "aliases": [
+    "バルタザール・グロック",
+    "叔父",
+    "組合長",
+    "長"
+   ],
+   "first_person": [
+    {
+     "word": "俺",
+     "ref": "L473"
+    }
+   ],
+   "calls_others": [
+    {
+     "target": "語り手",
+     "word": "マスター",
+     "ref": "L301"
+    },
+    {
+     "target": "ルル",
+     "word": "バニー",
+     "ref": "L321"
+    },
+    {
+     "target": "アガタ",
+     "word": "修道女",
+     "ref": "L409"
+    },
+    {
+     "target": "灰狼",
+     "word": "盗人",
+     "ref": "L321"
+    },
+    {
+     "target": "ザザ",
+     "word": "トカゲ",
+     "ref": "L515"
+    }
+   ],
+   "speech": [
+    {
+     "feature": "命令口調で荒い",
+     "example": "固めろと言ってるんだ",
+     "ref": "L305"
+    },
+    {
+     "feature": "荒い口調・ぞんざいな語尾",
+     "example": "だろうが",
+     "ref": "L321"
+    }
+   ],
+   "looks": [
+    {
+     "feature": "太い靴を履いている",
+     "ref": "L597"
+    },
+    {
+     "feature": "署名は太くて右上がり",
+     "ref": "L525"
+    }
+   ],
+   "traits": [
+    {
+     "feature": "階段の三段目から酒場全体を見張る",
+     "ref": "L299"
+    },
+    {
+     "feature": "灰狼が盗んだという筋を固めるよう語り手に命じる",
+     "ref": "L301"
+    },
+    {
+     "feature": "都合の悪い話を遮り、余計な発言を禁じる",
+     "ref": "L493"
+    },
+    {
+     "feature": "官憲の接近に行き先を決めかねる",
+     "ref": "L597"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "十の鐘ごろ",
+     "where": "酒場の階段三段目",
+     "doing": "酒場全体を見張る",
+     "ref": "L299"
+    },
+    {
+     "when": "夕方六つから七つ半まで（本人の説明）",
+     "where": "二階",
+     "doing": "帳簿を締めていたと主張する",
+     "ref": "L473"
+    },
+    {
+     "when": "官憲の足音が聞こえたころ",
+     "where": "階段",
+     "doing": "二段下りてまた一段上がる",
+     "ref": "L597"
+    }
+   ]
+  },
+  {
+   "name": "語り手",
+   "aliases": [
+    "俺",
+    "マスター"
+   ],
+   "first_person": [
+    {
+     "word": "俺",
+     "ref": "L307"
+    }
+   ],
+   "calls_others": [
+    {
+     "target": "バルタザール",
+     "word": "組合長",
+     "ref": "L527"
+    }
+   ],
+   "speech": [
+    {
+     "feature": "丁寧なです・ます調",
+     "example": "知ってます",
+     "ref": "L341"
+    },
+    {
+     "feature": "相手を問いただす際も丁寧な口調",
+     "example": "どちらのお宅です",
+     "ref": "L385"
+    }
+   ],
+   "looks": [],
+   "traits": [
+    {
+     "feature": "元斥候で、見られて困らない情報だけ黒板に書く",
+     "ref": "L309"
+    },
+    {
+     "feature": "証言の条件や信頼性を吟味する",
+     "ref": "L369"
+    },
+    {
+     "feature": "ザザの箒の証言を笑わず、黒板に記す",
+     "ref": "L517"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "夜、聞き取りの最中",
+     "where": "カウンターの後ろ",
+     "doing": "黒板に聞き取り欄を作る",
+     "ref": "L307"
+    },
+    {
+     "when": "官憲の足音が近づいたころ",
+     "where": "酒場",
+     "doing": "ルルの耳を見て足音を待つ",
+     "ref": "L603"
+    }
+   ]
+  },
+  {
+   "name": "シグ",
+   "aliases": [
+    "灰狼の一人",
+    "耳の欠けたほう",
+    "灰色"
+   ],
+   "first_person": [],
+   "calls_others": [],
+   "speech": [],
+   "looks": [
+    {
+     "feature": "左耳が欠けている",
+     "ref": "L551"
+    },
+    {
+     "feature": "灰狼で、灰色の毛皮がある",
+     "ref": "L563"
+    }
+   ],
+   "traits": [
+    {
+     "feature": "杯を両手で包むように持つ",
+     "ref": "L319"
+    },
+    {
+     "feature": "盗んだかと問われる前に、階段下から帳簿の箱を探る",
+     "ref": "L553"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "十の鐘ごろ",
+     "where": "酒場の裏口の床",
+     "doing": "水を受け取る",
+     "ref": "L315"
+    },
+    {
+     "when": "夜",
+     "where": "階段下からカウンター、裏口、中庭へ",
+     "doing": "袋に入った石を取り出し、白い布を巻いた手首の人物に渡す",
+     "ref": "L557"
+    }
+   ]
+  },
+  {
+   "name": "ヴェイ",
+   "aliases": [
+    "灰狼の一人",
+    "首に白い毛のあるほう",
+    "灰色"
+   ],
+   "first_person": [],
+   "calls_others": [],
+   "speech": [],
+   "looks": [
+    {
+     "feature": "首に白い毛がある",
+     "ref": "L347"
+    },
+    {
+     "feature": "灰狼",
+     "ref": "L319"
+    }
+   ],
+   "traits": [
+    {
+     "feature": "水を一息で飲み干す",
+     "ref": "L319"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "十の鐘ごろ",
+     "where": "酒場の裏口の床",
+     "doing": "水を受け取り、目を閉じる",
+     "ref": "L315"
+    }
+   ]
+  },
+  {
+   "name": "ルル",
+   "aliases": [
+    "バニー",
+    "うちの看板"
+   ],
+   "first_person": [
+    {
+     "word": "わたし（話者としての一人称は本文に出ない）",
+     "ref": "L323"
+    }
+   ],
+   "calls_others": [
+    {
+     "target": "シグ",
+     "word": "シグ",
+     "ref": "L317"
+    },
+    {
+     "target": "ヴェイ",
+     "word": "ヴェイ",
+     "ref": "L317"
+    }
+   ],
+   "speech": [
+    {
+     "feature": "「〜わ」を使う",
+     "example": "来るわ",
+     "ref": "L583"
+    },
+    {
+     "feature": "軽く問い返す口調",
+     "example": "誰のこと？",
+     "ref": "L323"
+    }
+   ],
+   "looks": [
+    {
+     "feature": "白い耳が二本ある",
+     "ref": "L581"
+    }
+   ],
+   "traits": [
+    {
+     "feature": "怒鳴る男の扱いがうまい",
+     "ref": "L329"
+    },
+    {
+     "feature": "足音を耳で聞き分け、人数や位置を察知する",
+     "ref": "L587"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "十の鐘ごろ",
+     "where": "裏口の床のそば",
+     "doing": "灰狼二人に水を渡す",
+     "ref": "L315"
+    },
+    {
+     "when": "官憲の接近時",
+     "where": "カウンターの端",
+     "doing": "耳を扉の向こうの音へ向ける",
+     "ref": "L581"
+    }
+   ]
+  },
+  {
+   "name": "ダリオ",
+   "aliases": [],
+   "first_person": [
+    {
+     "word": "俺",
+     "ref": "L339"
+    }
+   ],
+   "calls_others": [
+    {
+     "target": "ルル",
+     "word": "バニー",
+     "ref": "L331"
+    },
+    {
+     "target": "バルタザール",
+     "word": "隊長さん",
+     "ref": "L513"
+    }
+   ],
+   "speech": [
+    {
+     "feature": "「〜じゃねえ」など荒い口調",
+     "example": "薄いじゃねえか",
+     "ref": "L363"
+    },
+    {
+     "feature": "自分は素面だと繰り返す",
+     "example": "俺は素面だ",
+     "ref": "L339"
+    }
+   ],
+   "looks": [
+    {
+     "feature": "七杯目の麦酒を飲む",
+     "ref": "L341"
+    }
+   ],
+   "traits": [
+    {
+     "feature": "酔いのため証言に酒精が混じる",
+     "ref": "L369"
+    },
+    {
+     "feature": "ザザの証言を笑い飛ばす",
+     "ref": "L511"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "夕方五つから八つまで（本人の説明）",
+     "where": "表の長椅子",
+     "doing": "風に当たりながら飲む",
+     "ref": "L347"
+    },
+    {
+     "when": "夜、聞き取り時",
+     "where": "カウンター",
+     "doing": "薄めた麦酒を飲む",
+     "ref": "L361"
+    }
+   ]
+  },
+  {
+   "name": "エルノ",
+   "aliases": [
+    "神官様",
+    "聖職者"
+   ],
+   "first_person": [],
+   "calls_others": [
+    {
+     "target": "アガタ",
+     "word": "姉妹",
+     "ref": "L405"
+    }
+   ],
+   "speech": [
+    {
+     "feature": "丁寧な口調",
+     "example": "申し上げられません",
+     "ref": "L387"
+    }
+   ],
+   "looks": [
+    {
+     "feature": "白い法衣を着ている",
+     "ref": "L373"
+    },
+    {
+     "feature": "法衣の袖口に焦げがある",
+     "ref": "L331"
+    },
+    {
+     "feature": "細い指",
+     "ref": "L395"
+    }
+   ],
+   "traits": [
+    {
+     "feature": "葡萄酒に口をつけず、杯の脚を指でつまむ",
+     "ref": "L379"
+    },
+    {
+     "feature": "灯に誓うことを避ける",
+     "ref": "L403"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "夕方六つの鐘の少しあと（本人の説明）",
+     "where": "上町の坂",
+     "doing": "病人の家へ祈りに向かう",
+     "ref": "L381"
+    },
+    {
+     "when": "官憲の接近時",
+     "where": "窓際",
+     "doing": "白い法衣の袖を膝の上で握る",
+     "ref": "L601"
+    }
+   ]
+  },
+  {
+   "name": "ニコ",
+   "aliases": [],
+   "first_person": [
+    {
+     "word": "俺",
+     "ref": "L419"
+    }
+   ],
+   "calls_others": [
+    {
+     "target": "ダリオ",
+     "word": "ああいうふう",
+     "ref": "L443"
+    }
+   ],
+   "speech": [
+    {
+     "feature": "「〜ぜ」などくだけた口調",
+     "example": "俺は関係ないぜ",
+     "ref": "L419"
+    }
+   ],
+   "looks": [
+    {
+     "feature": "薄い革の手袋をはめる",
+     "ref": "L453"
+    }
+   ],
+   "traits": [
+    {
+     "feature": "猫のように音もなく椅子に乗り、音もなく下りる",
+     "ref": "L417"
+    },
+    {
+     "feature": "今夜は酒を飲まず、酔うことを避ける",
+     "ref": "L443"
+    },
+    {
+     "feature": "手袋を外さない盗賊",
+     "ref": "L453"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "夕方六つから八つまで（本人の説明）",
+     "where": "黒猫の尾",
+     "doing": "札をして三枚負けたと話す",
+     "ref": "L423"
+    },
+    {
+     "when": "八つ以降",
+     "where": "酒場の窓際の卓",
+     "doing": "蒸留酒のグラスを回すが、中身は減っていない",
+     "ref": "L501"
+    },
+    {
+     "when": "官憲の接近時",
+     "where": "表の扉の前",
+     "doing": "立つ",
+     "ref": "L601"
+    }
+   ]
+  },
+  {
+   "name": "イゾルデ",
+   "aliases": [],
+   "first_person": [
+    {
+     "word": "私",
+     "ref": "L465"
+    }
+   ],
+   "calls_others": [
+    {
+     "target": "バルタザール",
+     "word": "叔父",
+     "ref": "L465"
+    }
+   ],
+   "speech": [
+    {
+     "feature": "丁寧な口調",
+     "example": "ずっと一緒でした",
+     "ref": "L465"
+    }
+   ],
+   "looks": [
+    {
+     "feature": "帳面を抱えている",
+     "ref": "L457"
+    }
+   ],
+   "traits": [
+    {
+     "feature": "叔父の命を受けて証言するが、目は語り手を見ない",
+     "ref": "L471"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "夕方六つから七つ半まで（本人の説明）",
+     "where": "二階",
+     "doing": "叔父と帳簿をつけていたと証言する",
+     "ref": "L465"
+    },
+    {
+     "when": "官憲の接近時",
+     "where": "エルノのそばにいるよう命じられる",
+     "doing": "うなずく",
+     "ref": "L599"
+    }
+   ]
+  },
+  {
+   "name": "アガタ",
+   "aliases": [
+    "修道女",
+    "姉妹"
+   ],
+   "first_person": [
+    {
+     "word": "わたし",
+     "ref": "L483"
+    }
+   ],
+   "calls_others": [
+    {
+     "target": "エルノ",
+     "word": "神官様",
+     "ref": "L401"
+    }
+   ],
+   "speech": [
+    {
+     "feature": "静かで丁寧な口調",
+     "example": "お願いしているのです",
+     "ref": "L407"
+    }
+   ],
+   "looks": [
+    {
+     "feature": "手袋をしている",
+     "ref": "L487"
+    },
+    {
+     "feature": "白い布を巻いた手首",
+     "ref": "L571"
+    }
+   ],
+   "traits": [
+    {
+     "feature": "灯に誓うようエルノに求める",
+     "ref": "L401"
+    },
+    {
+     "feature": "訊かれたことにだけ答え、遮られると話を止める",
+     "ref": "L495"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "六つの鐘",
+     "where": "大聖堂",
+     "doing": "夕べの祈りに出る",
+     "ref": "L483"
+    },
+    {
+     "when": "六つ半",
+     "where": "組合裏手の路地",
+     "doing": "物乞いの子たちにパンを配る",
+     "ref": "L483"
+    },
+    {
+     "when": "八つ",
+     "where": "酒場",
+     "doing": "施療に来る",
+     "ref": "L483"
+    }
+   ]
+  },
+  {
+   "name": "ザザ",
+   "aliases": [
+    "蜥蜴人",
+    "トカゲ",
+    "年寄り"
+   ],
+   "first_person": [
+    {
+     "word": "私",
+     "ref": "L509"
+    }
+   ],
+   "calls_others": [
+    {
+     "target": "語り手",
+     "word": "マスター",
+     "ref": "L505"
+    }
+   ],
+   "speech": [
+    {
+     "feature": "低く乾いた声",
+     "example": "箒は今夜、二度動かされた",
+     "ref": "L509"
+    }
+   ],
+   "looks": [
+    {
+     "feature": "年寄り",
+     "ref": "L553"
+    },
+    {
+     "feature": "箒を抱いている",
+     "ref": "L299"
+    }
+   ],
+   "traits": [
+    {
+     "feature": "階段下の暗がりで箒を抱いて壁のように動かない",
+     "ref": "L299"
+    },
+    {
+     "feature": "見たとおりのことしか言わないと語り手に見られている",
+     "ref": "L517"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "夜",
+     "where": "酒場の階段下の暗がり",
+     "doing": "箒を抱いている",
+     "ref": "L505"
+    },
+    {
+     "when": "シグが階段下に入ったとき",
+     "where": "階段下",
+     "doing": "箒を抱えたまま動かない",
+     "ref": "L553"
+    }
+   ]
+  },
+  {
+   "name": "黒猫の尾の親父",
+   "aliases": [
+    "親父"
+   ],
+   "first_person": [],
+   "calls_others": [],
+   "speech": [],
+   "looks": [],
+   "traits": [
+    {
+     "feature": "信心深く、大聖堂の夕べの祈りを欠かさない",
+     "ref": "L425"
+    }
+   ],
+   "whereabouts": [
+    {
+     "when": "毎晩七つの鐘",
+     "where": "黒猫の尾",
+     "doing": "祈りから戻って店の戸を開ける",
+     "ref": "L425"
+    }
+   ]
+  }
+ ],
+ "places": [
+  {
+   "name": "錆び釘亭（酒場）",
+   "layout": [
+    {
+     "feature": "階段下に暗がりがあり、階段には三段目がある",
+     "ref": "L299"
+    },
+    {
+     "feature": "カウンターの後ろに黒板がある",
+     "ref": "L307"
+    },
+    {
+     "feature": "窓際に卓がある",
+     "ref": "L331"
+    },
+    {
+     "feature": "暖炉がある",
+     "ref": "L399"
+    },
+    {
+     "feature": "裏口があり、その床に灰狼が座る",
+     "ref": "L315"
+    },
+    {
+     "feature": "表の扉には閂がある",
+     "ref": "L599"
+    },
+    {
+     "feature": "階段下に箒と帳簿の箱が置かれている",
+     "ref": "L555"
+    }
+   ],
+   "scenery": [
+    {
+     "feature": "黒板には酒と値段を書く",
+     "ref": "L307"
+    },
+    {
+     "feature": "酒場の空気は煮詰めすぎた豆のスープのよう",
+     "ref": "L297"
+    },
+    {
+     "feature": "閂のかかった箱のように、一つの方向を見ている",
+     "ref": "L334"
+    }
+   ],
+   "weather_season": []
+  },
+  {
+   "name": "黒猫の尾",
+   "layout": [],
+   "scenery": [
+    {
+     "feature": "下町の賭場",
+     "ref": "L425"
+    }
+   ],
+   "weather_season": []
+  },
+  {
+   "name": "上町の坂",
+   "layout": [],
+   "scenery": [],
+   "weather_season": []
+  },
+  {
+   "name": "大聖堂",
+   "layout": [],
+   "scenery": [],
+   "weather_season": []
+  },
+  {
+   "name": "組合の裏手の路地",
+   "layout": [],
+   "scenery": [],
+   "weather_season": [
+    {
+     "feature": "暗く、顔が見えない",
+     "ref": "L489"
+    }
+   ]
+  },
+  {
+   "name": "二階の書庫",
+   "layout": [],
+   "scenery": [],
+   "weather_season": []
+  },
+  {
+   "name": "ロズモンド館",
+   "layout": [],
+   "scenery": [],
+   "weather_season": []
+  },
+  {
+   "name": "グラウヴァル冒険者組合",
+   "layout": [
+    {
+     "feature": "掲示板に依頼票が貼られている",
+     "ref": "L521"
+    }
+   ],
+   "scenery": [
+    {
+     "feature": "組合の裏手に路地がある",
+     "ref": "L483"
+    }
+   ],
+   "weather_season": []
+  },
+  {
+   "name": "中庭",
+   "layout": [],
+   "scenery": [],
+   "weather_season": []
+  },
+  {
+   "name": "城壁の外",
+   "layout": [],
+   "scenery": [
+    {
+     "feature": "魔物と野盗がいる荒れ野",
+     "ref": "L537"
+    }
+   ],
+   "weather_season": [
+    {
+     "feature": "冬の荒れ野",
+     "ref": "L537"
+    }
+   ]
+  }
+ ],
+ "season_mismatch": [],
+ "inner_inconsistencies": []
+}

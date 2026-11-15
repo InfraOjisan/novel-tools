@@ -1,0 +1,749 @@
+{
+  "episode": "02",
+  "dates": [
+    {
+      "when": "霜月二十二日",
+      "ref": "L6"
+    },
+    {
+      "when": "二十三日の朝",
+      "ref": "L137"
+    },
+    {
+      "when": "師走の朔日まで",
+      "ref": "L302"
+    },
+    {
+      "when": "年明けより",
+      "ref": "L302"
+    },
+    {
+      "when": "初霜",
+      "ref": "L58"
+    },
+    {
+      "when": "ひと月前",
+      "ref": "L18"
+    },
+    {
+      "when": "三十年も前",
+      "ref": "L84"
+    }
+  ],
+  "characters": [
+    {
+      "name": "俺（酒場番）",
+      "aliases": [
+        "マスター",
+        "酒場番"
+      ],
+      "first_person": [
+        {
+          "word": "俺",
+          "ref": "L6"
+        }
+      ],
+      "calls_others": [
+        {
+          "target": "エーリカ・ランゲ",
+          "word": "組合長",
+          "ref": "L88"
+        },
+        {
+          "target": "ザザ",
+          "word": "ザザ",
+          "ref": "L96"
+        }
+      ],
+      "speech": [
+        {
+          "feature": "丁寧な言い方もする",
+          "example": "みなさん、そう呼びます",
+          "ref": "L92"
+        },
+        {
+          "feature": "落ち着いた口調",
+          "example": "雇われの酒場番ですから",
+          "ref": "L311"
+        }
+      ],
+      "looks": [],
+      "traits": [
+        {
+          "feature": "杯を拭き、店を一人で切り盛りする",
+          "ref": "L6"
+        },
+        {
+          "feature": "斥候をやめて十年になる",
+          "ref": "L76"
+        },
+        {
+          "feature": "客の夜について訊かない",
+          "ref": "L128"
+        }
+      ],
+      "whereabouts": [
+        {
+          "when": "霜月二十二日の夜",
+          "where": "錆び釘亭のカウンター内側",
+          "doing": "杯を拭いている",
+          "ref": "L6"
+        },
+        {
+          "when": "二十三日の朝",
+          "where": "錆び釘亭",
+          "doing": "エーリカに茶を出す",
+          "ref": "L108"
+        }
+      ]
+    },
+    {
+      "name": "バルタザール",
+      "aliases": [
+        "前の組合長"
+      ],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [
+        {
+          "feature": "底の厚い靴を履いていた",
+          "ref": "L18"
+        }
+      ],
+      "traits": [
+        {
+          "feature": "一歩ごとに梁の埃を落とす歩き方だった",
+          "ref": "L18"
+        }
+      ],
+      "whereabouts": [
+        {
+          "when": "現在",
+          "where": "治安維持隊の牢",
+          "doing": "収監されている",
+          "ref": "L18"
+        }
+      ]
+    },
+    {
+      "name": "ダリオ",
+      "aliases": [
+        "剣士のダリオ"
+      ],
+      "first_person": [
+        {
+          "word": "俺",
+          "ref": "L169"
+        }
+      ],
+      "calls_others": [
+        {
+          "target": "エーリカ・ランゲ",
+          "word": "あんた",
+          "ref": "L165"
+        },
+        {
+          "target": "酒場番",
+          "word": "酒場番",
+          "ref": "L363"
+        }
+      ],
+      "speech": [
+        {
+          "feature": "くだけた荒めの口調",
+          "example": "同じこったろ",
+          "ref": "L329"
+        },
+        {
+          "feature": "「ぜ」「だろ」などの語尾",
+          "example": "真面目に働いてるぜ",
+          "ref": "L329"
+        }
+      ],
+      "looks": [
+        {
+          "feature": "大男で、髭の端が縮れている",
+          "ref": "L159"
+        },
+        {
+          "feature": "ひと月前の騒ぎで焦がした髭が、まだ元に戻らない",
+          "ref": "L159"
+        }
+      ],
+      "traits": [
+        {
+          "feature": "ただ酒をねだる",
+          "ref": "L22"
+        },
+        {
+          "feature": "酒を飲んだ翌朝、顔色が悪い",
+          "ref": "L159"
+        },
+        {
+          "feature": "空の杯を前に、おごりを待つ",
+          "ref": "L284"
+        }
+      ],
+      "whereabouts": [
+        {
+          "when": "霜月二十二日の夜",
+          "where": "錆び釘亭",
+          "doing": "新しい組合長の荷物について話す",
+          "ref": "L22"
+        },
+        {
+          "when": "二十三日の朝",
+          "where": "錆び釘亭のカウンター",
+          "doing": "水を飲み、エーリカに話しかける",
+          "ref": "L159"
+        },
+        {
+          "when": "夕べの祈りの鐘のあと",
+          "where": "錆び釘亭",
+          "doing": "空の杯を持ってカウンターへ来る",
+          "ref": "L323"
+        }
+      ]
+    },
+    {
+      "name": "ザザ",
+      "aliases": [
+        "掃除番",
+        "年寄りの蜥蜴人"
+      ],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [
+        {
+          "feature": "訊かれたことだけを答える",
+          "example": "そうだ",
+          "ref": "L104"
+        },
+        {
+          "feature": "乾いた落ち葉をこするような声",
+          "example": "右の膝をかばう足だ",
+          "ref": "L249"
+        }
+      ],
+      "looks": [
+        {
+          "feature": "年寄りの蜥蜴人",
+          "ref": "L62"
+        },
+        {
+          "feature": "乾いた鱗の手で箒を抱く",
+          "ref": "L62"
+        }
+      ],
+      "traits": [
+        {
+          "feature": "訊かれなければ一日じゅう何も言わないことがある",
+          "ref": "L62"
+        },
+        {
+          "feature": "左利き",
+          "ref": "L96"
+        },
+        {
+          "feature": "足で人を見分ける",
+          "ref": "L241"
+        }
+      ],
+      "whereabouts": [
+        {
+          "when": "朝",
+          "where": "階段の下の暗がり",
+          "doing": "箒で床を掃く",
+          "ref": "L60"
+        },
+        {
+          "when": "昼をまわったころ",
+          "where": "錆び釘亭",
+          "doing": "箒で床の掃き残しを探す",
+          "ref": "L237"
+        }
+      ]
+    },
+    {
+      "name": "エーリカ・ランゲ",
+      "aliases": [
+        "エーリカ",
+        "新しい組合長",
+        "組合長",
+        "マスターと呼ぶ酒場番"
+      ],
+      "first_person": [
+        {
+          "word": "わたし",
+          "ref": "L375"
+        },
+        {
+          "word": "私",
+          "ref": "L294"
+        }
+      ],
+      "calls_others": [
+        {
+          "target": "酒場番",
+          "word": "マスター",
+          "ref": "L90"
+        },
+        {
+          "target": "ザザ",
+          "word": "ザザ",
+          "ref": "L96"
+        }
+      ],
+      "speech": [
+        {
+          "feature": "丁寧な口調",
+          "example": "よろしく",
+          "ref": "L219"
+        },
+        {
+          "feature": "「かしら」という語尾",
+          "example": "でいいのかしら",
+          "ref": "L90"
+        },
+        {
+          "feature": "低い声で意志を述べる",
+          "example": "一度も使いたくない",
+          "ref": "L375"
+        }
+      ],
+      "looks": [
+        {
+          "feature": "背は中くらいで、骨の細い女",
+          "ref": "L70"
+        },
+        {
+          "feature": "灰色がかった栗色の髪を首の後ろで一本に編む",
+          "ref": "L70"
+        },
+        {
+          "feature": "四十代の半ばほど",
+          "ref": "L70"
+        },
+        {
+          "feature": "寝不足で、目の下に疲れが残る",
+          "ref": "L70"
+        },
+        {
+          "feature": "右の膝が悪い",
+          "ref": "L209"
+        },
+        {
+          "feature": "指に弓の弦が通った古い硬い皮がある",
+          "ref": "L290"
+        }
+      ],
+      "traits": [
+        {
+          "feature": "店に入ると人と出口の数を数える",
+          "ref": "L74"
+        },
+        {
+          "feature": "登録簿を速く読み、麻糸に気づく",
+          "ref": "L143"
+        },
+        {
+          "feature": "登録簿を自分で書庫から下ろす",
+          "ref": "L139"
+        },
+        {
+          "feature": "組合長の権限で誓約を破らせたくない",
+          "ref": "L375"
+        },
+        {
+          "feature": "右膝をかばい、左足が先に階段を下りる",
+          "ref": "L66"
+        }
+      ],
+      "whereabouts": [
+        {
+          "when": "昨日の昼",
+          "where": "グラウヴァルの冒険者組合",
+          "doing": "新しい組合長として到着する",
+          "ref": "L18"
+        },
+        {
+          "when": "二十三日の朝",
+          "where": "錆び釘亭のカウンター端",
+          "doing": "登録簿を読む",
+          "ref": "L137"
+        },
+        {
+          "when": "夕方五つ半の鐘のあと",
+          "where": "錆び釘亭",
+          "doing": "参事会の書状を受け取る",
+          "ref": "L263"
+        }
+      ]
+    },
+    {
+      "name": "ヴェイ",
+      "aliases": [
+        "灰狼族のヴェイ"
+      ],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [
+        {
+          "feature": "首の下に白い毛の房がある",
+          "ref": "L195"
+        },
+        {
+          "feature": "灰狼族",
+          "ref": "L195"
+        }
+      ],
+      "traits": [],
+      "whereabouts": [
+        {
+          "when": "現在",
+          "where": "下の谷の家と組合",
+          "doing": "女房と子を下の谷に残し、荷運びと夜番に通う",
+          "ref": "L195"
+        }
+      ]
+    },
+    {
+      "name": "コル",
+      "aliases": [
+        "伝令のコル",
+        "鴉人のコル"
+      ],
+      "first_person": [],
+      "calls_others": [
+        {
+          "target": "ダリオ",
+          "word": "ダリオさん",
+          "ref": "L223"
+        }
+      ],
+      "speech": [
+        {
+          "feature": "伝えるべきことだけを言う",
+          "example": "伝令のコルです",
+          "ref": "L217"
+        },
+        {
+          "feature": "伝言を一字も盛らず、一字も減らさない",
+          "example": "以上です",
+          "ref": "L229"
+        }
+      ],
+      "looks": [
+        {
+          "feature": "若い鴉人",
+          "ref": "L197"
+        },
+        {
+          "feature": "黒い羽を背中でたたんでいる",
+          "ref": "L215"
+        }
+      ],
+      "traits": [
+        {
+          "feature": "高い所が好きで、厩の梁の上で寝る",
+          "ref": "L197"
+        },
+        {
+          "feature": "嘘がつけない",
+          "ref": "L197"
+        }
+      ],
+      "whereabouts": [
+        {
+          "when": "昼の鐘の前",
+          "where": "錆び釘亭",
+          "doing": "ダリオに伝言を届ける",
+          "ref": "L215"
+        },
+        {
+          "when": "夕方五つ半の鐘のあと",
+          "where": "錆び釘亭",
+          "doing": "エーリカに参事会の書状を届ける",
+          "ref": "L263"
+        }
+      ]
+    },
+    {
+      "name": "ドゥン",
+      "aliases": [
+        "土竜人のドゥン"
+      ],
+      "first_person": [],
+      "calls_others": [
+        {
+          "target": "エーリカ・ランゲ",
+          "word": "新しい人",
+          "ref": "L205"
+        }
+      ],
+      "speech": [
+        {
+          "feature": "短く、簡潔に話す",
+          "example": "右から踏まないほうがいい",
+          "ref": "L211"
+        }
+      ],
+      "looks": [
+        {
+          "feature": "土竜人",
+          "ref": "L199"
+        },
+        {
+          "feature": "目が弱い",
+          "ref": "L199"
+        }
+      ],
+      "traits": [
+        {
+          "feature": "足の裏で土の震えを聞く",
+          "ref": "L199"
+        },
+        {
+          "feature": "急ぐと土の音が聞こえなくなるため急がない",
+          "ref": "L201"
+        }
+      ],
+      "whereabouts": [
+        {
+          "when": "二十三日の朝",
+          "where": "中庭の井戸",
+          "doing": "釣瓶の滑車を直す",
+          "ref": "L201"
+        },
+        {
+          "when": "二十三日の朝",
+          "where": "錆び釘亭の裏口",
+          "doing": "水桶を置き、エーリカの足について話す",
+          "ref": "L203"
+        }
+      ]
+    }
+  ],
+  "places": [
+    {
+      "name": "グラウヴァルの冒険者組合（錆び釘亭）",
+      "layout": [
+        {
+          "feature": "一階が酒場の錆び釘亭、二階が組合長の部屋と書庫",
+          "ref": "L10"
+        },
+        {
+          "feature": "二階廊下の奥に住み込みの小部屋が二つある",
+          "ref": "L10"
+        },
+        {
+          "feature": "組合長の部屋は酒場の真上にあり、床板が薄い",
+          "ref": "L12"
+        },
+        {
+          "feature": "店には表の扉、裏口、窓が二つある",
+          "ref": "L74"
+        },
+        {
+          "feature": "カウンターの端に登録簿を置く",
+          "ref": "L137"
+        }
+      ],
+      "scenery": [
+        {
+          "feature": "カウンターで杯を拭く",
+          "ref": "L6"
+        },
+        {
+          "feature": "新しい樫の両開き扉と閂がある",
+          "ref": "L34"
+        },
+        {
+          "feature": "梁に黒い焦げ跡が残る",
+          "ref": "L36"
+        },
+        {
+          "feature": "暖炉が店内で最も明るい",
+          "ref": "L241"
+        }
+      ],
+      "weather_season": [
+        {
+          "feature": "初霜の朝、冷たい空気が入る",
+          "ref": "L58"
+        },
+        {
+          "feature": "夕方、冷たい風が入る",
+          "ref": "L397"
+        }
+      ]
+    },
+    {
+      "name": "組合長の部屋",
+      "layout": [
+        {
+          "feature": "酒場の真上にある",
+          "ref": "L12"
+        },
+        {
+          "feature": "窓から扉まで七歩ほどの距離と見られる",
+          "ref": "L14"
+        }
+      ],
+      "scenery": [
+        {
+          "feature": "椅子を引く音で下の杯が震える",
+          "ref": "L12"
+        },
+        {
+          "feature": "夜通し七歩ずつ往復する足音がする",
+          "ref": "L44"
+        }
+      ],
+      "weather_season": []
+    },
+    {
+      "name": "二階の書庫",
+      "layout": [
+        {
+          "feature": "奥の棚のいちばん下に登録簿がある",
+          "ref": "L139"
+        }
+      ],
+      "scenery": [
+        {
+          "feature": "登録簿は牛革表紙の分厚い本",
+          "ref": "L139"
+        }
+      ],
+      "weather_season": []
+    },
+    {
+      "name": "中庭",
+      "layout": [
+        {
+          "feature": "井戸があり、ドゥンが手入れしている",
+          "ref": "L199"
+        },
+        {
+          "feature": "井戸の縁に右から踏むと揺れる石がある",
+          "ref": "L211"
+        }
+      ],
+      "scenery": [
+        {
+          "feature": "釣瓶の滑車が軋み、油を差される",
+          "ref": "L201"
+        }
+      ],
+      "weather_season": []
+    },
+    {
+      "name": "組合の射場",
+      "layout": [
+        {
+          "feature": "組合の中庭にある",
+          "ref": "L82"
+        }
+      ],
+      "scenery": [
+        {
+          "feature": "町の娘たちが塀の上から覗いていた",
+          "ref": "L82"
+        }
+      ],
+      "weather_season": []
+    },
+    {
+      "name": "広場",
+      "layout": [],
+      "scenery": [
+        {
+          "feature": "パン屋の荷車が広場のほうから来て遠ざかる",
+          "ref": "L58"
+        }
+      ],
+      "weather_season": [
+        {
+          "feature": "石畳が白くなる初霜の朝",
+          "ref": "L58"
+        }
+      ]
+    },
+    {
+      "name": "城門",
+      "layout": [],
+      "scenery": [
+        {
+          "feature": "朝六つの鐘で開き、夕べの六つの鐘で閉まる",
+          "ref": "L56"
+        }
+      ],
+      "weather_season": []
+    },
+    {
+      "name": "下の谷",
+      "layout": [
+        {
+          "feature": "窪地で、冷たい空気が溜まる",
+          "ref": "L124"
+        }
+      ],
+      "scenery": [],
+      "weather_season": [
+        {
+          "feature": "上町より冷える",
+          "ref": "L122"
+        }
+      ]
+    },
+    {
+      "name": "大聖堂",
+      "layout": [],
+      "scenery": [
+        {
+          "feature": "六つの鐘が夕べの祈りを告げる",
+          "ref": "L278"
+        }
+      ],
+      "weather_season": []
+    },
+    {
+      "name": "下町の通り",
+      "layout": [],
+      "scenery": [
+        {
+          "feature": "六つの鐘のあと、人の声が一度引く",
+          "ref": "L280"
+        }
+      ],
+      "weather_season": []
+    },
+    {
+      "name": "厩",
+      "layout": [
+        {
+          "feature": "梁の上でコルが寝る",
+          "ref": "L197"
+        }
+      ],
+      "scenery": [],
+      "weather_season": []
+    },
+    {
+      "name": "参事会",
+      "layout": [
+        {
+          "feature": "書記局名義の書状を出す",
+          "ref": "L300"
+        }
+      ],
+      "scenery": [],
+      "weather_season": []
+    }
+  ],
+  "season_mismatch": [],
+  "inner_inconsistencies": []
+}

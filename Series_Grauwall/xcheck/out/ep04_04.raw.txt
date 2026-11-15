@@ -1,0 +1,299 @@
+{
+  "episode": "04",
+  "dates": [
+    {"when": "睦月の十一日、朝六つの鐘", "ref": "L1465"},
+    {"when": "如月の末", "ref": "L1493"},
+    {"when": "如月末からひと月と少し後の翌朝六つ", "ref": "L1571"},
+    {"when": "ある夜半すぎ", "ref": "L1542"},
+    {"when": "旅人を見た日の夜、閉店後", "ref": "L1603"}
+  ],
+  "characters": [
+    {
+      "name": "俺",
+      "aliases": ["マスター"],
+      "first_person": [
+        {"word": "俺", "ref": "L1467"}
+      ],
+      "calls_others": [
+        {"target": "ルル", "word": "この娘", "ref": "L1565"}
+      ],
+      "speech": [
+        {"feature": "ルルには丁寧なです・ます調で話す", "example": "食べていません", "ref": "L1613"},
+        {"feature": "数量を控えめに答える丁寧な口調", "example": "半分くらいでしょうか", "ref": "L1619"}
+      ],
+      "looks": [],
+      "traits": [
+        {"feature": "客の顔・席・いつもの酒を覚える", "ref": "L1501"},
+        {"feature": "ルルの耳の様子を気にかけ、訊かずにそばにいる", "ref": "L1553"},
+        {"feature": "グレタに代金を請求しない", "ref": "L1537"}
+      ],
+      "whereabouts": [
+        {"when": "睦月十一日、朝六つ", "where": "北門内側の氷室", "doing": "氷を買い、籠に積んでもらう", "ref": "L1467"},
+        {"when": "如月末", "where": "錆び釘亭", "doing": "店でルルと働く", "ref": "L1495"},
+        {"when": "夜半すぎ", "where": "錆び釘亭の帳場", "doing": "銅貨を数え、窓辺にいるルルの耳を澄ます", "ref": "L1543"},
+        {"when": "翌朝六つ", "where": "北門の氷室の戸口", "doing": "氷を買いに来て、門外の旅人を見る", "ref": "L1571"},
+        {"when": "旅人を見た日の夜、閉店後", "where": "錆び釘亭のカウンター", "doing": "ルルがよそった豆のスープを飲む", "ref": "L1603"}
+      ]
+    },
+    {
+      "name": "黒い羽根の一家の父親",
+      "aliases": ["父親", "男"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [
+        {"feature": "黒い羽根の一家の一人。子どもを外套の中に入れている", "ref": "L1469"}
+      ],
+      "traits": [
+        {"feature": "子どもを外套の中に入れて門外へ歩く", "ref": "L1477"}
+      ],
+      "whereabouts": [
+        {"when": "睦月十一日、朝", "where": "北門の内側から門外の街道へ", "doing": "家族とともに追放される", "ref": "L1477"}
+      ]
+    },
+    {
+      "name": "黒い羽根の一家の女",
+      "aliases": ["女"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [
+        {"feature": "黒い羽根の一家の一人", "ref": "L1469"}
+      ],
+      "traits": [
+        {"feature": "修道女から黒パンを受け取り、頭を下げる", "ref": "L1473"}
+      ],
+      "whereabouts": [
+        {"when": "睦月十一日、朝", "where": "北門の内側から門外の街道へ", "doing": "家族とともに追放される", "ref": "L1477"}
+      ]
+    },
+    {
+      "name": "黒い羽根の一家の子ども",
+      "aliases": ["小さな子", "子ども"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [
+        {"feature": "父親の外套の合わせ目から黒い頭のてっぺんがのぞく", "ref": "L1469"}
+      ],
+      "traits": [
+        {"feature": "門外へ歩く途中、一度だけ振り向いて外套の中に引っこむ", "ref": "L1477"}
+      ],
+      "whereabouts": [
+        {"when": "睦月十一日、朝", "where": "父親の外套の中、北門の内側から門外へ", "doing": "家族とともに門を出る", "ref": "L1477"}
+      ]
+    },
+    {
+      "name": "治安維持隊の隊員",
+      "aliases": ["隊員"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [
+        {"feature": "二人。灰色の外套の肩に夜の雪が薄く積もっている", "ref": "L1471"}
+      ],
+      "traits": [],
+      "whereabouts": [
+        {"when": "睦月十一日、朝", "where": "北門の内側、一家の両脇", "doing": "一家のそばに立つ", "ref": "L1471"}
+      ]
+    },
+    {
+      "name": "修道女",
+      "aliases": ["灯火教会の者"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [
+        {"feature": "一家に何も言わず、何も訊かない", "example": "何も言わなかった", "ref": "L1473"}
+      ],
+      "looks": [
+        {"feature": "白い手袋をしている", "ref": "L1473"}
+      ],
+      "traits": [
+        {"feature": "女に黒パンの包みを二つ渡す", "ref": "L1473"}
+      ],
+      "whereabouts": [
+        {"when": "睦月十一日、追放の朝", "where": "北門、一家の前", "doing": "女に黒パンを渡す", "ref": "L1473"}
+      ]
+    },
+    {
+      "name": "門番",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [],
+      "traits": [
+        {"feature": "閂を外して門を開け、後で閉めて閂を戻す", "ref": "L1475"}
+      ],
+      "whereabouts": [
+        {"when": "睦月十一日、朝", "where": "北門", "doing": "一家を通すため門を開閉する", "ref": "L1475"}
+      ]
+    },
+    {
+      "name": "氷室の爺さん",
+      "aliases": ["爺さん"],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [
+        {"feature": "氷を積みながら何か言う", "example": "何だって", "ref": "L1481"}
+      ],
+      "looks": [],
+      "traits": [
+        {"feature": "俺の籠に氷を積む", "ref": "L1481"}
+      ],
+      "whereabouts": [
+        {"when": "睦月十一日、朝", "where": "北門内側の氷室", "doing": "俺の籠に氷を積む", "ref": "L1481"}
+      ]
+    },
+    {
+      "name": "ルル",
+      "aliases": ["バニー", "娘", "看板の人形"],
+      "first_person": [
+        {"word": "あたし", "ref": "L1561"}
+      ],
+      "calls_others": [
+        {"target": "俺", "word": "マスター", "ref": "L1503"},
+        {"target": "荷運びの男", "word": "荷運びのおじさん", "ref": "L1503"}
+      ],
+      "speech": [
+        {"feature": "客の問いに問いで返す", "example": "分からないと思った？", "ref": "L1515"},
+        {"feature": "俺には丁寧な疑問形で話す", "example": "何杯？", "ref": "L1617"}
+      ],
+      "looks": [
+        {"feature": "兎の耳が二本あり、伏せたり、片耳ずつ別方向に向けたりする", "ref": "L1551"},
+        {"feature": "夜半すぎ、寝間着の上に毛布を巻き裸足で下りてくる", "ref": "L1545"}
+      ],
+      "traits": [
+        {"feature": "常連の足音を覚え、入店前に注文の杯を用意する", "ref": "L1501"},
+        {"feature": "銅貨を音で数え、落ちた一枚にも気づく", "ref": "L1519"},
+        {"feature": "夜明け前まで窓辺にいる", "ref": "L1567"},
+        {"feature": "俺が食べていないことに気づいてスープを出す", "ref": "L1611"}
+      ],
+      "whereabouts": [
+        {"when": "如月末", "where": "錆び釘亭", "doing": "給仕として働き、常連の注文を覚える", "ref": "L1495"},
+        {"when": "夜半すぎ", "where": "錆び釘亭の北の通りに面した窓辺", "doing": "外を見て、耳を伏せて震わせる", "ref": "L1545"},
+        {"when": "旅人を見た日の夜、閉店後", "where": "錆び釘亭のカウンター", "doing": "豆のスープをよそい、自分の分も食べる", "ref": "L1605"}
+      ]
+    },
+    {
+      "name": "荷運びの男",
+      "aliases": ["荷運びのおじさん", "男"],
+      "first_person": [],
+      "calls_others": [
+        {"target": "ルル", "word": "バニー", "ref": "L1507"}
+      ],
+      "speech": [
+        {"feature": "くだけた口調でいつもの杯を頼む", "example": "いつものを", "ref": "L1507"},
+        {"feature": "ルルにどうして分かったか尋ねる", "example": "どうして分かった", "ref": "L1513"}
+      ],
+      "looks": [],
+      "traits": [
+        {"feature": "毎晩、戸口で立ち止まり、杯が出るのを待つ。出ていなければ足音を大きくする", "ref": "L1517"}
+      ],
+      "whereabouts": [
+        {"when": "如月末の夜", "where": "錆び釘亭", "doing": "入店してルルの用意した杯を受け取る", "ref": "L1505"}
+      ]
+    },
+    {
+      "name": "グレタ",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [
+        {"target": "ルル", "word": "看板の人形", "ref": "L1529"}
+      ],
+      "speech": [
+        {"feature": "くだけた口調で話す", "example": "動くじゃないか", "ref": "L1533"}
+      ],
+      "looks": [
+        {"feature": "この時は待ち針をくわえていない", "ref": "L1527"}
+      ],
+      "traits": [
+        {"feature": "ルルを見て口をあけ、しばらく観察する", "ref": "L1527"}
+      ],
+      "whereabouts": [
+        {"when": "如月末", "where": "錆び釘亭", "doing": "麦酒を一杯飲んで帰る", "ref": "L1525"}
+      ]
+    },
+    {
+      "name": "旅人",
+      "aliases": [],
+      "first_person": [],
+      "calls_others": [],
+      "speech": [],
+      "looks": [
+        {"feature": "灰色の旅装束、荷は小さく、頭巾を下ろしている", "ref": "L1579"},
+        {"feature": "頭の上に長い兎の耳が二本立っている", "ref": "L1581"},
+        {"feature": "荷は背中に一つ。杖はなく、顔は遠くてよく分からない", "ref": "L1587"}
+      ],
+      "traits": [
+        {"feature": "右足に重みをかけ、いつでも走り出せる立ち方をする", "ref": "L1587"},
+        {"feature": "門をくぐらず、街道を戻っていく", "ref": "L1591"}
+      ],
+      "whereabouts": [
+        {"when": "翌朝六つ、門が開いた時", "where": "北門の外、街道脇の雪の土手の上", "doing": "街のほうへ耳を向けて立つ", "ref": "L1575"}
+      ]
+    }
+  ],
+  "places": [
+    {
+      "name": "北門",
+      "layout": [
+        {"feature": "すぐ内側に街の氷室がある", "ref": "L1467"},
+        {"feature": "内側の石畳に一家が立ち、隊員二人が両脇に立つ", "ref": "L1469"},
+        {"feature": "門の外に街道が延びる", "ref": "L1477"},
+        {"feature": "門を出てすぐ、街道脇の雪の土手がある", "ref": "L1575"}
+      ],
+      "scenery": [
+        {"feature": "朝六つの鐘で門が開く", "ref": "L1465"},
+        {"feature": "門番が閂を外して開け、閉めて閂を戻す", "ref": "L1475"}
+      ],
+      "weather_season": [
+        {"feature": "一家の追放の朝、夜の雪が隊員の外套に薄く積もっている", "ref": "L1471"},
+        {"feature": "雪の残った荒れ野を街道が北へ延びる", "ref": "L1575"}
+      ]
+    },
+    {
+      "name": "街の氷室",
+      "layout": [
+        {"feature": "北門のすぐ内側にある", "ref": "L1467"}
+      ],
+      "scenery": [
+        {"feature": "氷室の爺さんが籠に氷を積む", "ref": "L1481"}
+      ],
+      "weather_season": []
+    },
+    {
+      "name": "街道",
+      "layout": [
+        {"feature": "北門の外へ続き、雪の荒れ野を北へ延びる", "ref": "L1575"}
+      ],
+      "scenery": [
+        {"feature": "門外の雪の上を一家が歩いていく", "ref": "L1477"}
+      ],
+      "weather_season": [
+        {"feature": "雪が残っている", "ref": "L1575"}
+      ]
+    },
+    {
+      "name": "錆び釘亭",
+      "layout": [
+        {"feature": "地下に氷箱がある", "ref": "L1467"},
+        {"feature": "帳場に小皿があり、引き出しへ銅貨を移す", "ref": "L1519"},
+        {"feature": "カウンターの端がルルの定位置。暖炉と窓辺があり、階段を下りてくる", "ref": "L1545"},
+        {"feature": "北の通りに面した窓がある", "ref": "L1545"}
+      ],
+      "scenery": [
+        {"feature": "樋が鳴り、客の銅貨が夜ごとに増える", "ref": "L1493"},
+        {"feature": "暖炉の鍋で二日目の豆のスープを煮ている", "ref": "L1605"},
+        {"feature": "湯気が灯の前でまっすぐ立ってほどける", "ref": "L1625"}
+      ],
+      "weather_season": [
+        {"feature": "如月末、雪が残り、昼は軒から水が落ち、朝と夜は凍る", "ref": "L1493"},
+        {"feature": "夜半すぎ、樋は凍って黙り、風もない", "ref": "L1555"},
+        {"feature": "閉店後、窓の外の樋が凍りかけて一度鳴る", "ref": "L1625"}
+      ]
+    }
+  ],
+  "season_mismatch": [],
+  "inner_inconsistencies": []
+}

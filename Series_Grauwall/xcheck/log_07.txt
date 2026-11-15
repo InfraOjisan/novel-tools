@@ -1,0 +1,5 @@
+ep07_01 ok 137s in=41587 out=14431
+ep07_02 ok 116s in=38217 out=12514
+ep07_03 FAILED KeyError('choices')
+ep07_04 ok 121s in=41850 out=14521
+ep07_05 ok 85s in=27448 out=8563
