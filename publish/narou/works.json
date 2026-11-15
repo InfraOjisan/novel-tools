@@ -94,6 +94,12 @@
    "narou_novel_id": 3378362,
    "ncode": "n8699mz",
    "romancer_url": "https://r.voyager.co.jp/epm/e1_715698_13112026002454"
+  },
+  "Grauwall_12": {
+   "title": "十三個目の卵",
+   "source": "../../Series_Grauwall/Grauwall_12/output/final.md",
+   "note": "グラウヴァル第十二話（第一シリーズ最終話。全16章 Claude Opus 5.5 執筆・校正、設計と本文の審査 GPT-6 Luna Pro）。1章＝1話。予約掲載 2026-11-21 17:00 全話一括（第16話で完結）。Romancer は 2026-11-21 17:00 公開",
+   "narou_novel_id": 3381081
   }
  },
  "notes": {

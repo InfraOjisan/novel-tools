@@ -1,0 +1,136 @@
+{
+  "work": "Grauwall_12",
+  "title": "十三個目の卵",
+  "source": "../../Series_Grauwall/Grauwall_12/output/final.md",
+  "limit_chars": 5000,
+  "episodes": [
+    {
+      "seq": 1,
+      "file": "001.txt",
+      "subtitle": "第1章　二枚半",
+      "chars": 2932,
+      "chars_no_newline": 2776,
+      "sha1": "acae11f9c1390761958067e372ba12527cafc681"
+    },
+    {
+      "seq": 2,
+      "file": "002.txt",
+      "subtitle": "第2章　布",
+      "chars": 2595,
+      "chars_no_newline": 2491,
+      "sha1": "86df0340612c983019ae2437fe2eeac2f52e6c5e"
+    },
+    {
+      "seq": 3,
+      "file": "003.txt",
+      "subtitle": "第3章　裁き役の戸",
+      "chars": 2624,
+      "chars_no_newline": 2478,
+      "sha1": "c7f4871af108b1c860de8b2c7c889f6457dc223b"
+    },
+    {
+      "seq": 4,
+      "file": "004.txt",
+      "subtitle": "第4章　右の腕",
+      "chars": 2976,
+      "chars_no_newline": 2850,
+      "sha1": "b21a147e9f6bd765885db4e36364ab9ac65ad26c"
+    },
+    {
+      "seq": 5,
+      "file": "005.txt",
+      "subtitle": "第5章　令状",
+      "chars": 2606,
+      "chars_no_newline": 2458,
+      "sha1": "0df50032cb9d3ea24c84cc9c357027b69fc832ad"
+    },
+    {
+      "seq": 6,
+      "file": "006.txt",
+      "subtitle": "第6章　南門",
+      "chars": 2581,
+      "chars_no_newline": 2469,
+      "sha1": "8dafa4a1d637740eebf0e42ccef1d92d46269d09"
+    },
+    {
+      "seq": 7,
+      "file": "007.txt",
+      "subtitle": "第7章　普請",
+      "chars": 2626,
+      "chars_no_newline": 2518,
+      "sha1": "d3fa9c45f78956166880111974cee0d1a0ae5254"
+    },
+    {
+      "seq": 8,
+      "file": "008.txt",
+      "subtitle": "第8章　灯の前",
+      "chars": 2627,
+      "chars_no_newline": 2506,
+      "sha1": "8afc0474cc2e5c3e24c79a2c859bb37ca3d4cc0e"
+    },
+    {
+      "seq": 9,
+      "file": "009.txt",
+      "subtitle": "第9章　触れ",
+      "chars": 2842,
+      "chars_no_newline": 2712,
+      "sha1": "db602c47007f6ca50ce9a6748befdad207ac6daa"
+    },
+    {
+      "seq": 10,
+      "file": "010.txt",
+      "subtitle": "第10章　盤",
+      "chars": 2573,
+      "chars_no_newline": 2433,
+      "sha1": "a026704d81ce82f0ab4dbb5574fe0af743a5b678"
+    },
+    {
+      "seq": 11,
+      "file": "011.txt",
+      "subtitle": "第11章　登録簿",
+      "chars": 2599,
+      "chars_no_newline": 2477,
+      "sha1": "047f80cf3e83a8653bec9284919749a8a8b7ef77"
+    },
+    {
+      "seq": 12,
+      "file": "012.txt",
+      "subtitle": "第12章　南へ",
+      "chars": 2599,
+      "chars_no_newline": 2467,
+      "sha1": "29fefc421859353171a1cb3ad7b7b76422ccc47e"
+    },
+    {
+      "seq": 13,
+      "file": "013.txt",
+      "subtitle": "第13章　部屋",
+      "chars": 2733,
+      "chars_no_newline": 2597,
+      "sha1": "76517408efbb68582d2aab85af4a9933eff0ca0b"
+    },
+    {
+      "seq": 14,
+      "file": "014.txt",
+      "subtitle": "第14章　看板",
+      "chars": 2798,
+      "chars_no_newline": 2652,
+      "sha1": "e6818f2766988592c4866a0ab60c4a81f1df91fb"
+    },
+    {
+      "seq": 15,
+      "file": "015.txt",
+      "subtitle": "第15章　十三個目",
+      "chars": 2841,
+      "chars_no_newline": 2699,
+      "sha1": "d9f72e58d957ff015a6785ad7cdc635039ca616c"
+    },
+    {
+      "seq": 16,
+      "file": "016.txt",
+      "subtitle": "第16章　船着き場",
+      "chars": 1921,
+      "chars_no_newline": 1823,
+      "sha1": "6590e0ea80799187458ddb5a36a6723df00c986e"
+    }
+  ]
+}

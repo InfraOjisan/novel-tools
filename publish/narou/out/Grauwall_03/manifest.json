@@ -24,9 +24,9 @@
       "seq": 3,
       "file": "003.txt",
       "subtitle": "第3章　北門",
-      "chars": 3048,
-      "chars_no_newline": 2836,
-      "sha1": "76a8d5a3620d44cd2699b5aa0ee212707ceaa93c"
+      "chars": 3041,
+      "chars_no_newline": 2829,
+      "sha1": "8ad5c9edebfb89f94a5e56e586a8b91bf1e2b7f9"
     },
     {
       "seq": 4,
@@ -114,7 +114,7 @@
       "subtitle": "第14章　荒れ野の魔物",
       "chars": 3055,
       "chars_no_newline": 2857,
-      "sha1": "e98f2c2d717b4c70e62b4a52bb2dd3f93c922b47"
+      "sha1": "769c34ed78894f06ede0d0c03fd1fd9f8dec43e9"
     },
     {
       "seq": 15,
@@ -128,9 +128,9 @@
       "seq": 16,
       "file": "016.txt",
       "subtitle": "第16章　帰り着く場所",
-      "chars": 2800,
-      "chars_no_newline": 2692,
-      "sha1": "db1dde844d079dac10eb7c97fe06956781037383"
+      "chars": 2806,
+      "chars_no_newline": 2698,
+      "sha1": "18095bdc3223e64aa8da6f2ca88c806df371cef6"
     }
   ]
 }
