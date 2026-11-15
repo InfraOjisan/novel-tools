@@ -1,0 +1,194 @@
+{
+ "work": {
+  "01": {
+   "chapters": 7,
+   "drafts": 8,
+   "first_pass": 6,
+   "max_drafts": 2,
+   "draft_chars": 49107,
+   "design_out_chars": 14269
+  },
+  "02": {
+   "chapters": 12,
+   "drafts": 12,
+   "first_pass": 12,
+   "max_drafts": 1,
+   "draft_chars": 31454,
+   "design_out_chars": 58742
+  },
+  "03": {
+   "chapters": 16,
+   "drafts": 34,
+   "first_pass": 2,
+   "max_drafts": 3,
+   "draft_chars": 80965,
+   "design_out_chars": 22937
+  },
+  "06": {
+   "chapters": 17,
+   "drafts": 51,
+   "first_pass": 0,
+   "max_drafts": 4,
+   "draft_chars": 127750,
+   "design_out_chars": 92739
+  },
+  "08": {
+   "chapters": 24,
+   "drafts": 60,
+   "first_pass": 2,
+   "max_drafts": 3,
+   "draft_chars": 165197,
+   "design_out_chars": 0
+  },
+  "11": {
+   "chapters": 16,
+   "drafts": 45,
+   "first_pass": 0,
+   "max_drafts": 3,
+   "draft_chars": 107233,
+   "design_out_chars": 0
+  }
+ },
+ "episode_model": {
+  "01|_review|": {
+   "fails": 1,
+   "problems": 1
+  },
+  "03|aion-3.5-mini|writer": {
+   "calls": 38,
+   "in": 586509,
+   "out": 490496,
+   "rc": 1047672,
+   "cc": 119415,
+   "cost": 0.9522091800000001,
+   "sec": 7747,
+   "drafts": 34,
+   "draft_cc": 85978
+  },
+  "03|aion-3.5-mini|reviewer": {
+   "calls": 52,
+   "in": 678025,
+   "out": 308279,
+   "rc": 806247,
+   "cc": 31410,
+   "cost": 0.7089128199999999,
+   "sec": 4994
+  },
+  "03|_review|": {
+   "fails": 18,
+   "problems": 22
+  },
+  "06|aion-3.5-mini|writer": {
+   "calls": 3,
+   "in": 133535,
+   "out": 59152,
+   "rc": 43395,
+   "cc": 50125,
+   "cost": 0.12104770000000001,
+   "sec": 967
+  },
+  "06|claude-haiku-5.5|reviewer": {
+   "calls": 3,
+   "in": 187685,
+   "out": 14818,
+   "rc": 9538,
+   "cc": 4445,
+   "cost": 0.0261775,
+   "sec": 83
+  },
+  "06|claude-haiku-5.5|writer": {
+   "calls": 52,
+   "in": 1961319,
+   "out": 774392,
+   "rc": 449689,
+   "cc": 218268,
+   "cost": 0.5833279000000001,
+   "sec": 3591,
+   "drafts": 47,
+   "draft_cc": 119747
+  },
+  "06|gpt-6-luna-pro|reviewer": {
+   "calls": 74,
+   "in": 6028206,
+   "out": 211495,
+   "rc": 17053,
+   "cc": 42538,
+   "cost": 0.55896352,
+   "sec": 1344
+  },
+  "06|_review|": {
+   "fails": 29,
+   "problems": 47
+  },
+  "08|aion-3.5-mini|writer": {
+   "calls": 60,
+   "in": 1290434,
+   "out": 765633,
+   "rc": 1538179,
+   "cc": 182507,
+   "cost": 1.57262836,
+   "sec": 12221,
+   "drafts": 60,
+   "draft_cc": 182507
+  },
+  "08|gpt-6-luna-pro|reviewer": {
+   "calls": 84,
+   "in": 4940263,
+   "out": 214830,
+   "rc": 13406,
+   "cc": 50803,
+   "cost": 0.48363898500000013,
+   "sec": 1577
+  },
+  "08|_review|": {
+   "fails": 36,
+   "problems": 62
+  },
+  "11|claude-haiku-5.5|writer": {
+   "calls": 48,
+   "in": 1377711,
+   "out": 304740,
+   "rc": 170121,
+   "cc": 118778,
+   "cost": 0.287239689,
+   "sec": 1389,
+   "drafts": 48,
+   "draft_cc": 118778
+  },
+  "11|gpt-6-luna-pro|reviewer": {
+   "calls": 65,
+   "in": 4027523,
+   "out": 145398,
+   "rc": 3906,
+   "cc": 34019,
+   "cost": 0.18475306245000006,
+   "sec": 1598
+  },
+  "11|_review|": {
+   "fails": 31,
+   "problems": 49
+  }
+ },
+ "price_per_Mtok": {
+  "openai/gpt-6-luna-pro": [
+   0.06355836709862392,
+   0.5344289183068487,
+   223
+  ],
+  "anthropic/claude-haiku-5.5": [
+   0.09873770586989389,
+   0.5019595411633765,
+   103
+  ],
+  "aion-labs/aion-3.5-mini": [
+   0.3281105115723072,
+   1.492290189656361,
+   153
+  ]
+ },
+ "xcheck": {
+  "in": 2115533,
+  "out": 617652,
+  "n": 62
+ }
+}

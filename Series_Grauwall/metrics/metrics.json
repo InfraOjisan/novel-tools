@@ -1,0 +1,270 @@
+{
+ "episodes": [
+  {
+   "ep": "01",
+   "title": "夜啼きの涙",
+   "final_chars": 45904,
+   "chapters": 7,
+   "period": [
+    "2026-10-03",
+    "2026-11-15"
+   ],
+   "git_added_chapters": 46063,
+   "audit_design": null,
+   "audit_text": null,
+   "proofread": null,
+   "log_drafts": 0,
+   "log_review_fails": 1,
+   "log_problems": 1,
+   "log_escalations": 0,
+   "log_forced_accept": 0
+  },
+  {
+   "ep": "02",
+   "title": "新しい組合長",
+   "final_chars": 31346,
+   "chapters": 12,
+   "period": [
+    "2026-10-03",
+    "2026-10-03"
+   ],
+   "git_added_chapters": 31454,
+   "audit_design": null,
+   "audit_text": null,
+   "proofread": 0,
+   "log_drafts": 0,
+   "log_review_fails": 0,
+   "log_problems": 0,
+   "log_escalations": 0,
+   "log_forced_accept": 0
+  },
+  {
+   "ep": "03",
+   "title": "北街道の白い影",
+   "final_chars": 44593,
+   "chapters": 16,
+   "period": [
+    "2026-10-03",
+    "2026-11-15"
+   ],
+   "git_added_chapters": 44663,
+   "audit_design": null,
+   "audit_text": null,
+   "proofread": null,
+   "log_drafts": 34,
+   "log_review_fails": 18,
+   "log_problems": 22,
+   "log_escalations": 7,
+   "log_forced_accept": 1
+  },
+  {
+   "ep": "04",
+   "title": "豆のスープ",
+   "final_chars": 26173,
+   "chapters": 9,
+   "period": [
+    "2026-10-05",
+    "2026-10-24"
+   ],
+   "git_added_chapters": 26639,
+   "audit_design": null,
+   "audit_text": null,
+   "proofread": null
+  },
+  {
+   "ep": "05",
+   "title": "隊長の非番",
+   "final_chars": 31302,
+   "chapters": 12,
+   "period": [
+    "2026-10-05",
+    "2026-10-24"
+   ],
+   "git_added_chapters": 31418,
+   "audit_design": null,
+   "audit_text": null,
+   "proofread": null
+  },
+  {
+   "ep": "06",
+   "title": "白塔の使者",
+   "final_chars": 55166,
+   "chapters": 20,
+   "period": [
+    "2026-10-11",
+    "2026-10-24"
+   ],
+   "git_added_chapters": 55343,
+   "audit_design": null,
+   "audit_text": null,
+   "proofread": 0,
+   "log_drafts": 47,
+   "log_review_fails": 29,
+   "log_problems": 47,
+   "log_escalations": 13,
+   "log_forced_accept": 5
+  },
+  {
+   "ep": "07",
+   "title": "祝福の日",
+   "final_chars": 35164,
+   "chapters": 14,
+   "period": [
+    "2026-10-19",
+    "2026-10-23"
+   ],
+   "git_added_chapters": 35791,
+   "audit_design": 8,
+   "audit_text": 3,
+   "proofread": 5
+  },
+  {
+   "ep": "08",
+   "title": "灰色山脈の古砦",
+   "final_chars": 71026,
+   "chapters": 24,
+   "period": [
+    "2026-10-24",
+    "2026-11-15"
+   ],
+   "git_added_chapters": 71210,
+   "audit_design": 8,
+   "audit_text": null,
+   "proofread": 0,
+   "log_drafts": 60,
+   "log_review_fails": 36,
+   "log_problems": 62,
+   "log_escalations": 6,
+   "log_forced_accept": 4
+  },
+  {
+   "ep": "09",
+   "title": "灰壁の掟",
+   "final_chars": 27040,
+   "chapters": 13,
+   "period": [
+    "2026-10-26",
+    "2026-10-29"
+   ],
+   "git_added_chapters": 27912,
+   "audit_design": 6,
+   "audit_text": null,
+   "proofread": 7
+  },
+  {
+   "ep": "10",
+   "title": "谷の祭り",
+   "final_chars": 28737,
+   "chapters": 14,
+   "period": [
+    "2026-10-29",
+    "2026-11-04"
+   ],
+   "git_added_chapters": 30370,
+   "audit_design": 7,
+   "audit_text": null,
+   "proofread": null
+  },
+  {
+   "ep": "11",
+   "title": "南の川港",
+   "final_chars": 44293,
+   "chapters": 16,
+   "period": [
+    "2026-11-05",
+    "2026-11-15"
+   ],
+   "git_added_chapters": 43249,
+   "audit_design": 4,
+   "audit_text": null,
+   "proofread": null,
+   "log_drafts": 48,
+   "log_review_fails": 31,
+   "log_problems": 49,
+   "log_escalations": 6,
+   "log_forced_accept": 5
+  },
+  {
+   "ep": "12",
+   "title": "十三個目の卵",
+   "final_chars": 40374,
+   "chapters": 16,
+   "period": [
+    "2026-11-09",
+    "2026-11-15"
+   ],
+   "git_added_chapters": 43916,
+   "audit_design": 8,
+   "audit_text": 9,
+   "proofread": null
+  }
+ ],
+ "models": {
+  "aion-labs/aion-3.5-mini|writer": {
+   "calls": 101,
+   "in": 2010478,
+   "out": 1315281,
+   "rchars": 2629246,
+   "cchars": 352047,
+   "cost_e9": 2645885239,
+   "sec": 20935,
+   "eps": 0,
+   "draft_chars": 268485
+  },
+  "aion-labs/aion-3.5-mini|_eps": {
+   "03": 90,
+   "06": 3,
+   "08": 60
+  },
+  "aion-labs/aion-3.5-mini|reviewer": {
+   "calls": 52,
+   "in": 678025,
+   "out": 308279,
+   "rchars": 806247,
+   "cchars": 31410,
+   "cost_e9": 708912820,
+   "sec": 4994,
+   "eps": 0
+  },
+  "anthropic/claude-haiku-5.5|reviewer": {
+   "calls": 3,
+   "in": 187685,
+   "out": 14818,
+   "rchars": 9538,
+   "cchars": 4445,
+   "cost_e9": 26177500,
+   "sec": 83,
+   "eps": 0
+  },
+  "anthropic/claude-haiku-5.5|_eps": {
+   "06": 55,
+   "11": 48
+  },
+  "anthropic/claude-haiku-5.5|writer": {
+   "calls": 100,
+   "in": 3339030,
+   "out": 1079132,
+   "rchars": 619810,
+   "cchars": 337046,
+   "cost_e9": 870567588,
+   "sec": 4980,
+   "eps": 0,
+   "draft_chars": 238525
+  },
+  "openai/gpt-6-luna-pro|reviewer": {
+   "calls": 223,
+   "in": 14995992,
+   "out": 571723,
+   "rchars": 34365,
+   "cchars": 127360,
+   "cost_e9": 1227355527,
+   "sec": 4519,
+   "eps": 0
+  },
+  "openai/gpt-6-luna-pro|_eps": {
+   "06": 74,
+   "08": 84,
+   "11": 65
+  }
+ }
+}
