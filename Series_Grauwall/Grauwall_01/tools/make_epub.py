@@ -26,7 +26,7 @@ ROOT = Path(__file__).resolve().parent.parent
 CFG = json.loads((ROOT / "config.json").read_text(encoding="utf-8"))
 PUB = CFG.get("publish", {})
 N_CH = CFG["chapters"]
-KANJI = ["〇", "一", "二", "三", "四", "五", "六", "七", "八", "九", "十", "十一", "十二", "十三", "十四", "十五", "十六"]
+KANJI = ["〇", "一", "二", "三", "四", "五", "六", "七", "八", "九", "十", "十一", "十二", "十三", "十四", "十五", "十六", "十七", "十八", "十九", "二十", "二十一", "二十二", "二十三", "二十四", "二十五", "二十六", "二十七", "二十八", "二十九", "三十"]
 
 
 def kn(n):
@@ -124,6 +124,10 @@ body.titlepage h1 { font-size: 2em; margin-top: 30%; }
 body.titlepage .studio { margin-top: 3em; }
 body.colophon p { text-indent: 0; }
 .credit { margin-top: 1em; }
+h3.bm { font-size: 1.05em; font-weight: bold; margin: 0 1.5em 0 1em; }
+body.backmatter p { text-indent: 0; }
+p.term { margin-top: 0.3em; text-indent: -1em; padding-top: 1em; }
+.tw { font-weight: bold; }
 """
 
 
@@ -245,6 +249,39 @@ body.titlepage h1 { color: #d86e8c; }
         label = f"第{kn(n)}章　{ctitle}".strip()
         nav_items.append(f'<li><a href="{name}">{esc(label)}</a></li>')
         ncx_points.append(f'<navPoint id="np{idx}" playOrder="{idx}"><navLabel><text>{esc(label)}</text></navLabel><content src="{name}"/></navPoint>')
+
+    # 巻末（config.json の publish.back_matter：画像ページと文章ページ。奥付の前に入る）
+    for bi, item in enumerate(PUB.get("back_matter", []), start=1):
+        src = ROOT / item["path"]
+        if not src.exists():
+            print("注意: 巻末の素材がありません:", item["path"]); continue
+        pid = f"back{bi:02d}"
+        if item.get("type") == "image":
+            ext = src.suffix.lower(); mt = "image/jpeg" if ext in (".jpg", ".jpeg") else "image/png"
+            iname = f"images/{pid}{ext}"; images[f"OEBPS/{iname}"] = src.read_bytes()
+            manifest.append(f'<item id="{pid}-img" href="{iname}" media-type="{mt}"/>')
+            wh = image_size(images[f"OEBPS/{iname}"]) or (1600, 2560)
+            files[f"OEBPS/{pid}.xhtml"] = image_page(item["title"], iname, *wh).replace(' epub:type="cover"', "")
+            manifest.append(f'<item id="{pid}" href="{pid}.xhtml" media-type="application/xhtml+xml" properties="svg"/>')
+        else:
+            out = [f'<h2 class="chapter">{esc(item["title"])}</h2>']
+            for line in src.read_text(encoding="utf-8").splitlines():
+                line = line.strip()
+                if not line or line.startswith("# "):
+                    continue
+                if line.startswith("## "):
+                    out.append(f'<h3 class="bm">{esc(line[3:])}</h3>')
+                    continue
+                m = re.match(r"[-・]\s*\*\*(.+?)\*\*[：:]\s*(.*)", line)
+                if m:
+                    out.append(f'<p class="term"><span class="tw">{tcy(m.group(1))}</span>　{tcy(m.group(2))}</p>')
+                else:
+                    out.append(f"<p>{tcy(line)}</p>")
+            files[f"OEBPS/{pid}.xhtml"] = page(item["title"], "\n".join(out), "backmatter")
+            manifest.append(f'<item id="{pid}" href="{pid}.xhtml" media-type="application/xhtml+xml"/>')
+        spine.append(f'<itemref idref="{pid}"/>')
+        nav_items.append(f'<li><a href="{pid}.xhtml">{esc(item["title"])}</a></li>')
+        ncx_points.append(f'<navPoint id="npb{bi}" playOrder="{len(ncx_points)+1}"><navLabel><text>{esc(item["title"])}</text></navLabel><content src="{pid}.xhtml"/></navPoint>')
 
     col = [f"<h2>{esc(title)}</h2>"]
     col += [f'<p class="credit">{esc(r)}　{esc(p)}</p>' for r, p in credits]
