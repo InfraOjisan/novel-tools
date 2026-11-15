@@ -8,17 +8,17 @@
       "seq": 1,
       "file": "001.txt",
       "subtitle": "第1章　突き出せ（前編）",
-      "chars": 4361,
-      "chars_no_newline": 4215,
-      "sha1": "581ed3758da956e075f9755547703cea8e11366b"
+      "chars": 4352,
+      "chars_no_newline": 4206,
+      "sha1": "bb281dfadd222af35a744de019fc5678d398d489"
     },
     {
       "seq": 2,
       "file": "002.txt",
       "subtitle": "第1章　突き出せ（後編）",
-      "chars": 3304,
-      "chars_no_newline": 3164,
-      "sha1": "5f802a6c610ef9b4abc192f3c8f9fc82a456e07f"
+      "chars": 3312,
+      "chars_no_newline": 3172,
+      "sha1": "8bb3fe1a82db8154fbeaccca5357a2559d5b16da"
     },
     {
       "seq": 3,
@@ -32,9 +32,9 @@
       "seq": 4,
       "file": "004.txt",
       "subtitle": "第2章　嘘の作法（後編）",
-      "chars": 3591,
-      "chars_no_newline": 3443,
-      "sha1": "ce2c892f12710987b82fe4e80a9b3220b040ee82"
+      "chars": 3594,
+      "chars_no_newline": 3446,
+      "sha1": "f46e6d006a5f051e56a53db85addd08740a52d8e"
     },
     {
       "seq": 5,
@@ -88,9 +88,9 @@
       "seq": 11,
       "file": "011.txt",
       "subtitle": "第6章　石取りの盤（前編）",
-      "chars": 3434,
-      "chars_no_newline": 3328,
-      "sha1": "1ece190e2a9ae97ab963cc7140d8156cf140a093"
+      "chars": 3437,
+      "chars_no_newline": 3331,
+      "sha1": "058c0637d75dfae38383d02fc7f57704c2c6da32"
     },
     {
       "seq": 12,
@@ -104,9 +104,9 @@
       "seq": 13,
       "file": "013.txt",
       "subtitle": "第7章　夜明けの門（前編）",
-      "chars": 3262,
-      "chars_no_newline": 3130,
-      "sha1": "277d0e928888b4743a4b26061c7e343fa25a60d4"
+      "chars": 3263,
+      "chars_no_newline": 3131,
+      "sha1": "e191b656f81c4054ffef3ae39a5316871158ffd5"
     },
     {
       "seq": 14,
