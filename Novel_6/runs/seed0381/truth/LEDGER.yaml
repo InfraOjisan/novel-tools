@@ -1,0 +1,4496 @@
+meta:
+  seed: 381
+  score: 22.53
+  twin: twin/MANSION.yaml
+  cast: cast/CAST.yaml
+  survivors:
+  - sudo
+  generated_by: tools/sim.py v0
+deaths:
+- victim: kashiwagi
+  t: 1970
+  place: kitchen
+  by: shuichi
+  method: poison
+  event: E008
+  victim_saw_killer: false
+  trace:
+  - enami
+  - haijima
+  - kuga
+  - odagiri
+  - sudo
+  - togawa
+  heard: []
+  found_t: 1970
+  found_by: sudo
+  sea: false
+  locked_room: false
+  delayed: true
+- victim: chihaya
+  t: 2260
+  place: library
+  by: enami
+  method: poison
+  event: E020
+  victim_saw_killer: false
+  trace:
+  - haijima
+  - kuga
+  - odagiri
+  - reiko
+  - shuichi
+  - sudo
+  - togawa
+  heard: []
+  found_t: 2260
+  found_by: haijima
+  sea: false
+  locked_room: false
+  delayed: true
+- victim: haijima
+  t: 2275
+  place: library
+  by: shuichi
+  method: poison
+  event: E023
+  victim_saw_killer: false
+  trace:
+  - enami
+  - kuga
+  - odagiri
+  - reiko
+  - sudo
+  - togawa
+  heard: []
+  found_t: 2275
+  found_by: sudo
+  sea: false
+  locked_room: false
+  delayed: true
+- victim: enami
+  t: 2310
+  place: hall
+  by: shuichi
+  method: stab
+  event: E026
+  victim_saw_killer: true
+  trace:
+  - kuga
+  - odagiri
+  - reiko
+  - sudo
+  - togawa
+  heard: []
+  found_t: 2315
+  found_by: togawa
+  sea: false
+  locked_room: false
+  delayed: false
+- victim: kuga
+  t: 2645
+  place: E1
+  by: shuichi
+  method: poison
+  event: E030
+  victim_saw_killer: false
+  trace: []
+  heard: []
+  found_t: 3390
+  found_by: sudo
+  sea: false
+  locked_room: true
+  delayed: true
+- victim: odagiri
+  t: 3735
+  place: dining
+  by: shuichi
+  method: poison
+  event: E036
+  victim_saw_killer: false
+  trace:
+  - reiko
+  - sudo
+  - togawa
+  heard: []
+  found_t: 3735
+  found_by: reiko
+  sea: false
+  locked_room: false
+  delayed: true
+- victim: reiko
+  t: 3965
+  place: gallery
+  by: shuichi
+  method: stab
+  event: E038
+  victim_saw_killer: true
+  trace: []
+  heard: []
+  found_t: 3985
+  found_by: togawa
+  sea: false
+  locked_room: false
+  delayed: false
+- victim: shuichi
+  t: 4065
+  place: dining
+  by: togawa
+  method: blunt
+  event: E043
+  victim_saw_killer: true
+  trace:
+  - sudo
+  heard: []
+  found_t: null
+  found_by: null
+  sea: false
+  locked_room: false
+  delayed: false
+- victim: togawa
+  t: 4095
+  place: dining
+  by: shuichi
+  method: poison
+  event: E044
+  victim_saw_killer: false
+  trace: []
+  heard: []
+  found_t: null
+  found_by: null
+  sea: false
+  locked_room: false
+  delayed: true
+events:
+- id: E001
+  t: 1170
+  clock: 1日目 19:30
+  kind: will
+  place: dining
+  actors:
+  - kashiwagi
+  - sudo
+  - shuichi
+  - reiko
+  - enami
+  - kuga
+  - haijima
+  - odagiri
+  - togawa
+  - chihaya
+  note: 遺言の読み上げ。迎えの船まで島に残った者で等分
+- id: E002
+  t: 1170
+  clock: 1日目 19:30
+  kind: resolve
+  place: dining
+  actors:
+  - shuichi
+  note: 遺言を聞いて決めた
+- id: E003
+  t: 1290
+  clock: 1日目 21:30
+  kind: take
+  place: kitchen
+  actors:
+  - shuichi
+  item: knife@kitchen
+- id: E004
+  t: 1295
+  clock: 1日目 21:35
+  kind: take
+  place: kitchen
+  actors:
+  - shuichi
+  item: poison@kitchen
+- id: E005
+  t: 1320
+  clock: 1日目 22:00
+  kind: boat_lost
+  place: pier
+  actors: []
+  note: 嵐で桟橋のボートが流された
+- id: E006
+  t: 1915
+  clock: 2日目 07:55
+  kind: poison_cup
+  place: dining
+  actors:
+  - shuichi
+  victim: kashiwagi
+  item: poison@kitchen
+  glimpsed_by:
+  - sudo
+  - togawa
+- id: E007
+  t: 1935
+  clock: 2日目 08:15
+  kind: drink_poison
+  place: dining
+  actors:
+  - kashiwagi
+  poisoner: shuichi
+  note: 食事の杯を飲み干した
+- id: E008
+  t: 1970
+  clock: 2日目 08:50
+  kind: poison_death
+  place: kitchen
+  actors:
+  - kashiwagi
+  victim: kashiwagi
+  killer: shuichi
+  asleep: false
+- id: E009
+  t: 1970
+  clock: 2日目 08:50
+  kind: discovery
+  place: kitchen
+  actors:
+  - sudo
+  victim: kashiwagi
+- id: E010
+  t: 1970
+  clock: 2日目 08:50
+  kind: resolve
+  place: E3
+  actors:
+  - reiko
+  note: 先にやらなければ、と決めた
+- id: E011
+  t: 1970
+  clock: 2日目 08:50
+  kind: resolve
+  place: hall
+  actors:
+  - enami
+  note: 先にやらなければ、と決めた
+- id: E012
+  t: 1970
+  clock: 2日目 08:50
+  kind: resolve
+  place: garden
+  actors:
+  - togawa
+  note: 先にやらなければ、と決めた
+- id: E013
+  t: 2000
+  clock: 2日目 09:20
+  kind: exam
+  place: kitchen
+  actors:
+  - enami
+  victim: kashiwagi
+  window:
+  - 1910
+  - 2015
+  said: 07:50から09:35のあいだ
+- id: E014
+  t: 2050
+  clock: 2日目 10:10
+  kind: take
+  place: library
+  actors:
+  - enami
+  item: candlestick@library
+- id: E015
+  t: 2160
+  clock: 2日目 12:00
+  kind: poison_carafe
+  place: W2
+  actors:
+  - shuichi
+  victim: haijima
+  item: poison@kitchen
+- id: E016
+  t: 2225
+  clock: 2日目 13:05
+  kind: poison_cup
+  place: dining
+  actors:
+  - shuichi
+  victim: haijima
+  item: poison@kitchen
+  glimpsed_by:
+  - togawa
+  - chihaya
+- id: E017
+  t: 2230
+  clock: 2日目 13:10
+  kind: poison_cup
+  place: dining
+  actors:
+  - enami
+  victim: chihaya
+  item: poison#enami
+  glimpsed_by:
+  - sudo
+- id: E018
+  t: 2235
+  clock: 2日目 13:15
+  kind: drink_poison
+  place: dining
+  actors:
+  - haijima
+  poisoner: shuichi
+  note: 食事の杯を飲み干した
+- id: E019
+  t: 2235
+  clock: 2日目 13:15
+  kind: drink_poison
+  place: dining
+  actors:
+  - chihaya
+  poisoner: enami
+  note: 食事の杯を飲み干した
+- id: E020
+  t: 2260
+  clock: 2日目 13:40
+  kind: poison_death
+  place: library
+  actors:
+  - chihaya
+  victim: chihaya
+  killer: enami
+  asleep: false
+- id: E021
+  t: 2260
+  clock: 2日目 13:40
+  kind: discovery
+  place: library
+  actors:
+  - haijima
+  victim: chihaya
+- id: E022
+  t: 2260
+  clock: 2日目 13:40
+  kind: resolve
+  place: dining
+  actors:
+  - odagiri
+  note: 先にやらなければ、と決めた
+- id: E023
+  t: 2275
+  clock: 2日目 13:55
+  kind: poison_death
+  place: library
+  actors:
+  - haijima
+  victim: haijima
+  killer: shuichi
+  asleep: false
+- id: E024
+  t: 2275
+  clock: 2日目 13:55
+  kind: discovery
+  place: library
+  actors:
+  - sudo
+  victim: haijima
+- id: E025
+  t: 2305
+  clock: 2日目 14:25
+  kind: exam
+  place: library
+  actors:
+  - enami
+  victim: haijima
+  window:
+  - 2230
+  - 2320
+  said: 13:10から14:40のあいだ
+- id: E026
+  t: 2310
+  clock: 2日目 14:30
+  kind: murder
+  place: hall
+  actors:
+  - shuichi
+  - enami
+  killer: shuichi
+  victim: enami
+  method: stab
+  weapon: knife@kitchen
+  victim_awake: true
+  victim_saw_killer: true
+- id: E027
+  t: 2315
+  clock: 2日目 14:35
+  kind: discovery
+  place: hall
+  actors:
+  - togawa
+  victim: enami
+- id: E028
+  t: 2610
+  clock: 2日目 19:30
+  kind: poison_cup
+  place: dining
+  actors:
+  - shuichi
+  victim: kuga
+  item: poison@kitchen
+- id: E029
+  t: 2625
+  clock: 2日目 19:45
+  kind: drink_poison
+  place: dining
+  actors:
+  - kuga
+  poisoner: shuichi
+  note: 食事の杯を飲み干した
+- id: E030
+  t: 2645
+  clock: 2日目 20:05
+  kind: poison_death
+  place: E1
+  actors:
+  - kuga
+  victim: kuga
+  killer: shuichi
+  asleep: false
+- id: E031
+  t: 3015
+  clock: 3日目 02:15
+  kind: take
+  place: billiard
+  actors:
+  - togawa
+  item: candlestick@billiard
+- id: E032
+  t: 3385
+  clock: 3日目 08:25
+  kind: break_door
+  place: E1
+  actors:
+  - sudo
+  - shuichi
+  - reiko
+  - odagiri
+  - togawa
+  note: 合鍵が見当たらず、扉を破った
+- id: E033
+  t: 3390
+  clock: 3日目 08:30
+  kind: discovery
+  place: E1
+  actors:
+  - sudo
+  victim: kuga
+- id: E034
+  t: 3645
+  clock: 3日目 12:45
+  kind: poison_cup
+  place: dining
+  actors:
+  - shuichi
+  victim: odagiri
+  item: poison@kitchen
+- id: E035
+  t: 3675
+  clock: 3日目 13:15
+  kind: drink_poison
+  place: dining
+  actors:
+  - odagiri
+  poisoner: shuichi
+  note: 食事の杯を飲み干した
+- id: E036
+  t: 3735
+  clock: 3日目 14:15
+  kind: poison_death
+  place: dining
+  actors:
+  - odagiri
+  victim: odagiri
+  killer: shuichi
+  asleep: false
+- id: E037
+  t: 3735
+  clock: 3日目 14:15
+  kind: discovery
+  place: dining
+  actors:
+  - reiko
+  victim: odagiri
+- id: E038
+  t: 3965
+  clock: 3日目 18:05
+  kind: murder
+  place: gallery
+  actors:
+  - shuichi
+  - reiko
+  killer: shuichi
+  victim: reiko
+  method: stab
+  weapon: knife@kitchen
+  victim_awake: true
+  victim_saw_killer: true
+- id: E039
+  t: 3985
+  clock: 3日目 18:25
+  kind: discovery
+  place: gallery
+  actors:
+  - togawa
+  victim: reiko
+- id: E040
+  t: 3985
+  clock: 3日目 18:25
+  kind: resolve
+  place: W3
+  actors:
+  - shuichi
+  note: 先にやらなければ、と決めた
+- id: E041
+  t: 4045
+  clock: 3日目 19:25
+  kind: poison_cup
+  place: dining
+  actors:
+  - shuichi
+  victim: togawa
+  item: poison@kitchen
+- id: E042
+  t: 4065
+  clock: 3日目 19:45
+  kind: drink_poison
+  place: dining
+  actors:
+  - togawa
+  poisoner: shuichi
+  note: 食事の杯を飲み干した
+- id: E043
+  t: 4065
+  clock: 3日目 19:45
+  kind: murder
+  place: dining
+  actors:
+  - togawa
+  - shuichi
+  killer: togawa
+  victim: shuichi
+  method: blunt
+  weapon: candlestick@billiard
+  victim_awake: true
+  victim_saw_killer: true
+- id: E044
+  t: 4095
+  clock: 3日目 20:15
+  kind: poison_death
+  place: dining
+  actors:
+  - togawa
+  victim: togawa
+  killer: shuichi
+  asleep: false
+- id: E045
+  t: 4100
+  clock: 3日目 20:20
+  kind: end
+  place: pier
+  actors:
+  - sudo
+  note: 生き残りは一人
+statements:
+- id: S001
+  t: 2000
+  clock: 2日目 09:20
+  place: kitchen
+  speaker: sudo
+  audience:
+  - shuichi
+  - reiko
+  - enami
+  - kuga
+  - haijima
+  - odagiri
+  - togawa
+  - chihaya
+  claims:
+  - place: 食堂
+    true_place: dining
+    t0: 1170
+    t1: 1185
+    'true': true
+    t0s: '19:30'
+    t1s: '19:45'
+  - place: 厨房
+    true_place: kitchen
+    t0: 1185
+    t1: 1290
+    'true': true
+    t0s: '19:45'
+    t1s: '21:30'
+  - place: 料理人の部屋
+    true_place: srv_b
+    t0: 1290
+    t1: 1850
+    'true': true
+    t0s: '21:30'
+    t1s: 07:00
+  - place: 厨房
+    true_place: kitchen
+    t0: 1850
+    t1: 1890
+    'true': true
+    t0s: 06:45
+    t1s: 07:30
+  - place: 食堂
+    true_place: dining
+    t0: 1890
+    t1: 1935
+    'true': true
+    t0s: 07:30
+    t1s: 08:15
+  - place: 厨房
+    true_place: kitchen
+    t0: 1935
+    t1: 2000
+    'true': true
+    t0s: 08:15
+    t1s: 09:30
+  sighting:
+    subject: kashiwagi
+    place: 厨房
+    true_place: kitchen
+    t: 08:45
+    'true': true
+- id: S002
+  t: 2000
+  clock: 2日目 09:20
+  place: kitchen
+  speaker: shuichi
+  audience:
+  - sudo
+  - reiko
+  - enami
+  - kuga
+  - haijima
+  - odagiri
+  - togawa
+  - chihaya
+  claims:
+  - place: 食堂
+    true_place: dining
+    t0: 1170
+    t1: 1185
+    'true': true
+    t0s: '19:30'
+    t1s: '19:45'
+  - place: 厨房
+    true_place: kitchen
+    t0: 1185
+    t1: 1420
+    'true': true
+    t0s: '19:45'
+    t1s: '23:45'
+  - place: 三号室
+    true_place: W3
+    t0: 1440
+    t1: 1820
+    'true': true
+    t0s: 00:00
+    t1s: 06:30
+  - place: ホール
+    true_place: hall
+    t0: 1860
+    t1: 1870
+    'true': true
+    t0s: 07:00
+    t1s: 07:15
+  - place: 厨房
+    true_place: kitchen
+    t0: 1875
+    t1: 1890
+    'true': true
+    t0s: 07:15
+    t1s: 07:30
+  - place: 食堂
+    true_place: dining
+    t0: 1890
+    t1: 1935
+    'true': true
+    t0s: 07:30
+    t1s: 08:15
+  - place: 厨房
+    true_place: kitchen
+    t0: 1935
+    t1: 2000
+    'true': true
+    t0s: 08:15
+    t1s: 09:30
+  sighting:
+    subject: togawa
+    place: 庭
+    true_place: garden
+    t: 08:50
+    'true': true
+- id: S003
+  t: 2000
+  clock: 2日目 09:20
+  place: kitchen
+  speaker: reiko
+  audience:
+  - sudo
+  - shuichi
+  - enami
+  - kuga
+  - haijima
+  - odagiri
+  - togawa
+  - chihaya
+  claims:
+  - place: 食堂
+    true_place: dining
+    t0: 1170
+    t1: 1185
+    'true': true
+    t0s: '19:30'
+    t1s: '19:45'
+  - place: 三号室
+    true_place: E3
+    t0: 1200
+    t1: 1230
+    'true': true
+    t0s: '20:00'
+    t1s: '20:30'
+  - place: ホール
+    true_place: hall
+    t0: 1240
+    t1: 1290
+    'true': true
+    t0s: '20:30'
+    t1s: '21:30'
+  - place: 遊戯室
+    true_place: billiard
+    t0: 1290
+    t1: 1305
+    'true': true
+    t0s: '21:30'
+    t1s: '21:45'
+  - place: 図書室
+    true_place: library
+    t0: 1310
+    t1: 1365
+    'true': true
+    t0s: '21:45'
+    t1s: '22:45'
+  - place: 三号室
+    true_place: E3
+    t0: 1375
+    t1: 1865
+    'true': true
+    t0s: '22:45'
+    t1s: 07:15
+  - place: ホール
+    true_place: hall
+    t0: 1875
+    t1: 1890
+    'true': true
+    t0s: 07:15
+    t1s: 07:30
+  - place: 食堂
+    true_place: dining
+    t0: 1890
+    t1: 1935
+    'true': true
+    t0s: 07:30
+    t1s: 08:15
+  - place: 三号室
+    true_place: E3
+    t0: 1950
+    t1: 1975
+    'true': true
+    t0s: 08:30
+    t1s: 09:00
+  sighting:
+    subject: chihaya
+    place: 食堂
+    true_place: dining
+    t: 09:10
+    'true': true
+- id: S004
+  t: 2000
+  clock: 2日目 09:20
+  place: kitchen
+  speaker: enami
+  audience:
+  - sudo
+  - shuichi
+  - reiko
+  - kuga
+  - haijima
+  - odagiri
+  - togawa
+  - chihaya
+  claims:
+  - place: 食堂
+    true_place: dining
+    t0: 1170
+    t1: 1185
+    'true': true
+    t0s: '19:30'
+    t1s: '19:45'
+  - place: ホール
+    true_place: hall
+    t0: 1185
+    t1: 1215
+    'true': true
+    t0s: '19:45'
+    t1s: '20:15'
+  - place: 庭
+    true_place: garden
+    t0: 1215
+    t1: 1230
+    'true': true
+    t0s: '20:15'
+    t1s: '20:30'
+  - place: ホール
+    true_place: hall
+    t0: 1230
+    t1: 1260
+    'true': true
+    t0s: '20:30'
+    t1s: '21:00'
+  - place: 図書室
+    true_place: library
+    t0: 1260
+    t1: 1305
+    'true': true
+    t0s: '21:00'
+    t1s: '21:45'
+  - place: 遊戯室
+    true_place: billiard
+    t0: 1310
+    t1: 1350
+    'true': true
+    t0s: '21:45'
+    t1s: '22:30'
+  - place: 一号室
+    true_place: W1
+    t0: 1365
+    t1: 1840
+    'true': true
+    t0s: '22:45'
+    t1s: 06:45
+  - place: 庭
+    true_place: garden
+    t0: 1855
+    t1: 1870
+    'true': true
+    t0s: 06:45
+    t1s: 07:15
+  - place: 食堂
+    true_place: dining
+    t0: 1905
+    t1: 1935
+    'true': true
+    t0s: 07:45
+    t1s: 08:15
+  - place: 一号室
+    true_place: W1
+    t0: 1950
+    t1: 1960
+    'true': true
+    t0s: 08:30
+    t1s: 08:45
+  - place: 厨房
+    true_place: kitchen
+    t0: 1980
+    t1: 2000
+    'true': true
+    t0s: 09:00
+    t1s: 09:30
+  sighting:
+    subject: chihaya
+    place: 食堂
+    true_place: dining
+    t: 07:45
+    'true': true
+- id: S005
+  t: 2000
+  clock: 2日目 09:20
+  place: kitchen
+  speaker: kuga
+  audience:
+  - sudo
+  - shuichi
+  - reiko
+  - enami
+  - haijima
+  - odagiri
+  - togawa
+  - chihaya
+  claims:
+  - place: 食堂
+    true_place: dining
+    t0: 1170
+    t1: 1215
+    'true': true
+    t0s: '19:30'
+    t1s: '20:15'
+  - place: 一号室
+    true_place: E1
+    t0: 1230
+    t1: 1275
+    'true': true
+    t0s: '20:30'
+    t1s: '21:15'
+  - place: 図書室
+    true_place: library
+    t0: 1285
+    t1: 1305
+    'true': true
+    t0s: '21:15'
+    t1s: '21:45'
+  - place: 遊戯室
+    true_place: billiard
+    t0: 1335
+    t1: 1350
+    'true': true
+    t0s: '22:15'
+    t1s: '22:30'
+  - place: 一号室
+    true_place: E1
+    t0: 1370
+    t1: 1805
+    'true': true
+    t0s: '22:45'
+    t1s: 06:15
+  - place: ホール
+    true_place: hall
+    t0: 1815
+    t1: 1890
+    'true': true
+    t0s: 06:15
+    t1s: 07:30
+  - place: 食堂
+    true_place: dining
+    t0: 1890
+    t1: 1935
+    'true': true
+    t0s: 07:30
+    t1s: 08:15
+  - place: 遊戯室
+    true_place: billiard
+    t0: 1940
+    t1: 1965
+    'true': true
+    t0s: 08:15
+    t1s: 08:45
+  - place: 厨房
+    true_place: kitchen
+    t0: 1980
+    t1: 2000
+    'true': true
+    t0s: 09:00
+    t1s: 09:30
+  sighting:
+    subject: odagiri
+    place: 庭
+    true_place: garden
+    t: 08:55
+    'true': true
+- id: S006
+  t: 2000
+  clock: 2日目 09:20
+  place: kitchen
+  speaker: haijima
+  audience:
+  - sudo
+  - shuichi
+  - reiko
+  - enami
+  - kuga
+  - odagiri
+  - togawa
+  - chihaya
+  claims:
+  - place: 食堂
+    true_place: dining
+    t0: 1170
+    t1: 1185
+    'true': true
+    t0s: '19:30'
+    t1s: '19:45'
+  - place: ホール
+    true_place: hall
+    t0: 1185
+    t1: 1200
+    'true': true
+    t0s: '19:45'
+    t1s: '20:00'
+  - place: 庭
+    true_place: garden
+    t0: 1200
+    t1: 1260
+    'true': true
+    t0s: '20:00'
+    t1s: '21:00'
+  - place: ホール
+    true_place: hall
+    t0: 1260
+    t1: 1350
+    'true': true
+    t0s: '21:00'
+    t1s: '22:30'
+  - place: 図書室
+    true_place: library
+    t0: 1350
+    t1: 1360
+    'true': true
+    t0s: '22:30'
+    t1s: '22:45'
+  - place: 二号室
+    true_place: W2
+    t0: 1375
+    t1: 1845
+    'true': true
+    t0s: '22:45'
+    t1s: 06:45
+  - place: 遊戯室
+    true_place: billiard
+    t0: 1855
+    t1: 1890
+    'true': true
+    t0s: 06:45
+    t1s: 07:30
+  - place: 食堂
+    true_place: dining
+    t0: 1895
+    t1: 1935
+    'true': true
+    t0s: 07:30
+    t1s: 08:15
+  - place: 遊戯室
+    true_place: billiard
+    t0: 1940
+    t1: 1950
+    'true': true
+    t0s: 08:15
+    t1s: 08:30
+  - place: 庭
+    true_place: garden
+    t0: 1950
+    t1: 1975
+    'true': true
+    t0s: 08:30
+    t1s: 09:00
+  - place: 厨房
+    true_place: kitchen
+    t0: 1975
+    t1: 2000
+    'true': true
+    t0s: 08:45
+    t1s: 09:30
+  sighting:
+    subject: shuichi
+    place: 庭
+    true_place: garden
+    t: 08:50
+    'true': true
+- id: S007
+  t: 2000
+  clock: 2日目 09:20
+  place: kitchen
+  speaker: odagiri
+  audience:
+  - sudo
+  - shuichi
+  - reiko
+  - enami
+  - kuga
+  - haijima
+  - togawa
+  - chihaya
+  claims:
+  - place: 食堂
+    true_place: dining
+    t0: 1170
+    t1: 1185
+    'true': true
+    t0s: '19:30'
+    t1s: '19:45'
+  - place: 図書室
+    true_place: library
+    t0: 1190
+    t1: 1290
+    'true': true
+    t0s: '19:45'
+    t1s: '21:30'
+  - place: 遊戯室
+    true_place: billiard
+    t0: 1295
+    t1: 1335
+    'true': true
+    t0s: '21:30'
+    t1s: '22:15'
+  - place: ホール
+    true_place: hall
+    t0: 1335
+    t1: 1355
+    'true': true
+    t0s: '22:15'
+    t1s: '22:45'
+  - place: 二号室
+    true_place: E2
+    t0: 1365
+    t1: 1825
+    'true': true
+    t0s: '22:45'
+    t1s: 06:30
+  - place: 庭
+    true_place: garden
+    t0: 1840
+    t1: 1890
+    'true': true
+    t0s: 06:30
+    t1s: 07:30
+  - place: 食堂
+    true_place: dining
+    t0: 1895
+    t1: 1965
+    'true': true
+    t0s: 07:30
+    t1s: 08:45
+  - place: 厨房
+    true_place: kitchen
+    t0: 1980
+    t1: 2000
+    'true': true
+    t0s: 09:00
+    t1s: 09:30
+  sighting:
+    subject: kuga
+    place: 庭
+    true_place: garden
+    t: 08:55
+    'true': true
+- id: S008
+  t: 2000
+  clock: 2日目 09:20
+  place: kitchen
+  speaker: togawa
+  audience:
+  - sudo
+  - shuichi
+  - reiko
+  - enami
+  - kuga
+  - haijima
+  - odagiri
+  - chihaya
+  claims:
+  - place: 食堂
+    true_place: dining
+    t0: 1170
+    t1: 1185
+    'true': true
+    t0s: '19:30'
+    t1s: '19:45'
+  - place: 四号室
+    true_place: garden
+    t0: 1190
+    t1: 1215
+    'true': false
+    lie_cover: 気まぐれ
+    t0s: '19:45'
+    t1s: '20:15'
+  - place: ホール
+    true_place: hall
+    t0: 1215
+    t1: 1275
+    'true': true
+    t0s: '20:15'
+    t1s: '21:15'
+  - place: 遊戯室
+    true_place: billiard
+    t0: 1275
+    t1: 1290
+    'true': true
+    t0s: '21:15'
+    t1s: '21:30'
+  - place: ホール
+    true_place: hall
+    t0: 1290
+    t1: 1335
+    'true': true
+    t0s: '21:30'
+    t1s: '22:15'
+  - place: 四号室
+    true_place: W4
+    t0: 1345
+    t1: 1860
+    'true': true
+    t0s: '22:15'
+    t1s: 07:00
+  - place: 崖
+    true_place: cliff
+    t0: 1880
+    t1: 1890
+    'true': true
+    t0s: 07:15
+    t1s: 07:30
+  - place: 食堂
+    true_place: dining
+    t0: 1900
+    t1: 1935
+    'true': true
+    t0s: 07:30
+    t1s: 08:15
+  - place: 図書室
+    true_place: library
+    t0: 1940
+    t1: 1950
+    'true': true
+    t0s: 08:15
+    t1s: 08:30
+  - place: 庭
+    true_place: garden
+    t0: 1950
+    t1: 1975
+    'true': true
+    t0s: 08:30
+    t1s: 09:00
+  - place: 厨房
+    true_place: kitchen
+    t0: 1975
+    t1: 2000
+    'true': true
+    t0s: 08:45
+    t1s: 09:30
+  lie: true
+  hides:
+  - 気まぐれ
+  sighting:
+    subject: sudo
+    place: 厨房
+    true_place: kitchen
+    t: 05:35
+    'true': false
+    fabricated: true
+- id: S009
+  t: 2000
+  clock: 2日目 09:20
+  place: kitchen
+  speaker: chihaya
+  audience:
+  - sudo
+  - shuichi
+  - reiko
+  - enami
+  - kuga
+  - haijima
+  - odagiri
+  - togawa
+  claims:
+  - place: 食堂
+    true_place: dining
+    t0: 1170
+    t1: 1185
+    'true': true
+    t0s: '19:30'
+    t1s: '19:45'
+  - place: 遊戯室
+    true_place: billiard
+    t0: 1190
+    t1: 1230
+    'true': true
+    t0s: '19:45'
+    t1s: '20:30'
+  - place: 四号室
+    true_place: E4
+    t0: 1245
+    t1: 1365
+    'true': true
+    t0s: '20:45'
+    t1s: '22:45'
+  - place: ホール
+    true_place: hall
+    t0: 1375
+    t1: 1390
+    'true': true
+    t0s: '22:45'
+    t1s: '23:15'
+  - place: 四号室
+    true_place: E4
+    t0: 1400
+    t1: 1860
+    'true': true
+    t0s: '23:15'
+    t1s: 07:00
+  - place: 図書室
+    true_place: library
+    t0: 1870
+    t1: 1890
+    'true': true
+    t0s: 07:00
+    t1s: 07:30
+  - place: 食堂
+    true_place: dining
+    t0: 1895
+    t1: 1935
+    'true': true
+    t0s: 07:30
+    t1s: 08:15
+  - place: 四号室
+    true_place: E4
+    t0: 1950
+    t1: 1975
+    'true': true
+    t0s: 08:30
+    t1s: 09:00
+  sighting:
+    subject: reiko
+    place: 食堂
+    true_place: dining
+    t: 09:10
+    'true': true
+- id: S010
+  t: 2305
+  clock: 2日目 14:25
+  place: library
+  speaker: sudo
+  audience:
+  - shuichi
+  - reiko
+  - enami
+  - kuga
+  - odagiri
+  - togawa
+  claims:
+  - place: 厨房
+    true_place: kitchen
+    t0: 2000
+    t1: 2190
+    'true': true
+    t0s: 09:15
+    t1s: '12:30'
+  - place: 食堂
+    true_place: dining
+    t0: 2190
+    t1: 2235
+    'true': true
+    t0s: '12:30'
+    t1s: '13:15'
+  - place: 厨房
+    true_place: kitchen
+    t0: 2235
+    t1: 2265
+    'true': true
+    t0s: '13:15'
+    t1s: '13:45'
+  - place: 図書室
+    true_place: library
+    t0: 2270
+    t1: 2305
+    'true': true
+    t0s: '13:45'
+    t1s: '14:30'
+  sighting:
+    subject: haijima
+    place: 図書室
+    true_place: library
+    t: '13:50'
+    'true': true
+- id: S011
+  t: 2305
+  clock: 2日目 14:25
+  place: library
+  speaker: shuichi
+  audience:
+  - sudo
+  - reiko
+  - enami
+  - kuga
+  - odagiri
+  - togawa
+  claims:
+  - place: 三号室
+    true_place: W3
+    t0: 2070
+    t1: 2190
+    'true': true
+    t0s: '10:30'
+    t1s: '12:30'
+  - place: 食堂
+    true_place: dining
+    t0: 2205
+    t1: 2265
+    'true': true
+    t0s: '12:45'
+    t1s: '13:45'
+  - place: 図書室
+    true_place: library
+    t0: 2270
+    t1: 2305
+    'true': true
+    t0s: '13:45'
+    t1s: '14:30'
+  sighting:
+    subject: haijima
+    place: 図書室
+    true_place: library
+    t: '13:50'
+    'true': true
+- id: S012
+  t: 2305
+  clock: 2日目 14:25
+  place: library
+  speaker: reiko
+  audience:
+  - sudo
+  - shuichi
+  - enami
+  - kuga
+  - odagiri
+  - togawa
+  claims:
+  - place: 遊戯室
+    true_place: billiard
+    t0: 2010
+    t1: 2190
+    'true': true
+    t0s: 09:30
+    t1s: '12:30'
+  - place: 食堂
+    true_place: dining
+    t0: 2195
+    t1: 2235
+    'true': true
+    t0s: '12:30'
+    t1s: '13:15'
+  - place: 遊戯室
+    true_place: billiard
+    t0: 2240
+    t1: 2265
+    'true': true
+    t0s: '13:15'
+    t1s: '13:45'
+  - place: 図書室
+    true_place: library
+    t0: 2270
+    t1: 2305
+    'true': true
+    t0s: '13:45'
+    t1s: '14:30'
+  sighting:
+    subject: haijima
+    place: 図書室
+    true_place: library
+    t: '13:50'
+    'true': true
+- id: S013
+  t: 2305
+  clock: 2日目 14:25
+  place: library
+  speaker: enami
+  audience:
+  - sudo
+  - shuichi
+  - reiko
+  - kuga
+  - odagiri
+  - togawa
+  claims:
+  - place: 厨房
+    true_place: kitchen
+    t0: 2000
+    t1: 2035
+    'true': true
+    t0s: 09:15
+    t1s: '10:00'
+  - place: 庭
+    true_place: garden
+    t0: 2035
+    t1: 2050
+    'true': true
+    t0s: 09:45
+    t1s: '10:15'
+  - place: 一号室
+    true_place: W1
+    t0: 2155
+    t1: 2165
+    'true': true
+    t0s: '11:45'
+    t1s: '12:15'
+  - place: 食堂
+    true_place: dining
+    t0: 2200
+    t1: 2260
+    'true': true
+    t0s: '12:30'
+    t1s: '13:45'
+  - place: 図書室
+    true_place: library
+    t0: 2265
+    t1: 2305
+    'true': true
+    t0s: '13:45'
+    t1s: '14:30'
+  sighting:
+    subject: haijima
+    place: 図書室
+    true_place: library
+    t: '13:45'
+    'true': true
+- id: S014
+  t: 2305
+  clock: 2日目 14:25
+  place: library
+  speaker: kuga
+  audience:
+  - sudo
+  - shuichi
+  - reiko
+  - enami
+  - odagiri
+  - togawa
+  claims:
+  - place: 崖
+    true_place: cliff
+    t0: 2010
+    t1: 2055
+    'true': true
+    t0s: 09:30
+    t1s: '10:15'
+  - place: 庭
+    true_place: garden
+    t0: 2055
+    t1: 2070
+    'true': true
+    t0s: '10:15'
+    t1s: '10:30'
+  - place: 一号室
+    true_place: E1
+    t0: 2085
+    t1: 2160
+    'true': true
+    t0s: '10:45'
+    t1s: '12:00'
+  - place: 食堂
+    true_place: dining
+    t0: 2175
+    t1: 2250
+    'true': true
+    t0s: '12:15'
+    t1s: '13:30'
+  - place: 図書室
+    true_place: library
+    t0: 2270
+    t1: 2305
+    'true': true
+    t0s: '13:45'
+    t1s: '14:30'
+  sighting:
+    subject: haijima
+    place: 図書室
+    true_place: library
+    t: '13:50'
+    'true': true
+- id: S015
+  t: 2305
+  clock: 2日目 14:25
+  place: library
+  speaker: odagiri
+  audience:
+  - sudo
+  - shuichi
+  - reiko
+  - enami
+  - kuga
+  - togawa
+  claims:
+  - place: 遊戯室
+    true_place: billiard
+    t0: 2010
+    t1: 2025
+    'true': true
+    t0s: 09:30
+    t1s: 09:45
+  - place: 庭
+    true_place: garden
+    t0: 2025
+    t1: 2070
+    'true': true
+    t0s: 09:45
+    t1s: '10:30'
+  - place: 二号室
+    true_place: E2
+    t0: 2085
+    t1: 2160
+    'true': true
+    t0s: '10:45'
+    t1s: '12:00'
+  - place: 庭
+    true_place: garden
+    t0: 2175
+    t1: 2190
+    'true': true
+    t0s: '12:15'
+    t1s: '12:30'
+  - place: 食堂
+    true_place: dining
+    t0: 2195
+    t1: 2265
+    'true': true
+    t0s: '12:30'
+    t1s: '13:45'
+  - place: 図書室
+    true_place: library
+    t0: 2270
+    t1: 2305
+    'true': true
+    t0s: '13:45'
+    t1s: '14:30'
+  sighting:
+    subject: haijima
+    place: 図書室
+    true_place: library
+    t: '13:50'
+    'true': true
+- id: S016
+  t: 2305
+  clock: 2日目 14:25
+  place: library
+  speaker: togawa
+  audience:
+  - sudo
+  - shuichi
+  - reiko
+  - enami
+  - kuga
+  - odagiri
+  claims:
+  - place: 遊戯室
+    true_place: billiard
+    t0: 2010
+    t1: 2190
+    'true': true
+    t0s: 09:30
+    t1s: '12:30'
+  - place: 食堂
+    true_place: dining
+    t0: 2195
+    t1: 2235
+    'true': true
+    t0s: '12:30'
+    t1s: '13:15'
+  - place: 遊戯室
+    true_place: billiard
+    t0: 2240
+    t1: 2265
+    'true': true
+    t0s: '13:15'
+    t1s: '13:45'
+  - place: 図書室
+    true_place: library
+    t0: 2270
+    t1: 2305
+    'true': true
+    t0s: '13:45'
+    t1s: '14:30'
+  sighting:
+    subject: haijima
+    place: 図書室
+    true_place: library
+    t: '13:50'
+    'true': true
+- id: S017
+  t: 2345
+  clock: 2日目 15:05
+  place: hall
+  speaker: sudo
+  audience:
+  - shuichi
+  - reiko
+  - kuga
+  - odagiri
+  - togawa
+  claims:
+  - place: ホール
+    true_place: hall
+    t0: 2325
+    t1: 2345
+    'true': true
+    t0s: '14:45'
+    t1s: '15:15'
+  sighting:
+    subject: togawa
+    place: 庭
+    true_place: garden
+    t: '14:30'
+    'true': true
+- id: S018
+  t: 2345
+  clock: 2日目 15:05
+  place: hall
+  speaker: shuichi
+  audience:
+  - sudo
+  - reiko
+  - kuga
+  - odagiri
+  - togawa
+  claims:
+  - place: 三号室
+    true_place: hall
+    t0: 2320
+    t1: 2345
+    'true': false
+    lie_cover: E026
+    t0s: '14:30'
+    t1s: '15:15'
+  lie: true
+  hides:
+  - E026
+- id: S019
+  t: 2345
+  clock: 2日目 15:05
+  place: hall
+  speaker: reiko
+  audience:
+  - sudo
+  - shuichi
+  - kuga
+  - odagiri
+  - togawa
+  claims:
+  - place: ホール
+    true_place: hall
+    t0: 2320
+    t1: 2345
+    'true': true
+    t0s: '14:30'
+    t1s: '15:15'
+  sighting:
+    subject: odagiri
+    place: 遊戯室
+    true_place: billiard
+    t: '14:35'
+    'true': true
+- id: S020
+  t: 2345
+  clock: 2日目 15:05
+  place: hall
+  speaker: kuga
+  audience:
+  - sudo
+  - shuichi
+  - reiko
+  - odagiri
+  - togawa
+  claims:
+  - place: 庭
+    true_place: garden
+    t0: 2310
+    t1: 2320
+    'true': true
+    t0s: '14:30'
+    t1s: '14:45'
+  - place: ホール
+    true_place: hall
+    t0: 2320
+    t1: 2345
+    'true': true
+    t0s: '14:30'
+    t1s: '15:15'
+  sighting:
+    subject: togawa
+    place: 庭
+    true_place: garden
+    t: '14:30'
+    'true': true
+- id: S021
+  t: 2345
+  clock: 2日目 15:05
+  place: hall
+  speaker: odagiri
+  audience:
+  - sudo
+  - shuichi
+  - reiko
+  - kuga
+  - togawa
+  claims:
+  - place: ホール
+    true_place: hall
+    t0: 2320
+    t1: 2345
+    'true': true
+    t0s: '14:30'
+    t1s: '15:15'
+  sighting:
+    subject: reiko
+    place: 遊戯室
+    true_place: billiard
+    t: '14:35'
+    'true': true
+- id: S022
+  t: 2345
+  clock: 2日目 15:05
+  place: hall
+  speaker: togawa
+  audience:
+  - sudo
+  - shuichi
+  - reiko
+  - kuga
+  - odagiri
+  claims:
+  - place: ホール
+    true_place: hall
+    t0: 2315
+    t1: 2345
+    'true': true
+    t0s: '14:30'
+    t1s: '15:15'
+  sighting:
+    subject: reiko
+    place: 書斎
+    true_place: study
+    t: '14:45'
+    'true': false
+    fabricated: true
+  lie: true
+- id: S023
+  t: 3420
+  clock: 3日目 09:00
+  place: E1
+  speaker: sudo
+  audience:
+  - shuichi
+  - reiko
+  - odagiri
+  - togawa
+  claims:
+  - place: 厨房
+    true_place: kitchen
+    t0: 2355
+    t1: 2580
+    'true': true
+    t0s: '15:15'
+    t1s: '19:00'
+  - place: 食堂
+    true_place: dining
+    t0: 2580
+    t1: 2625
+    'true': true
+    t0s: '19:00'
+    t1s: '19:45'
+  - place: 厨房
+    true_place: kitchen
+    t0: 2625
+    t1: 2730
+    'true': true
+    t0s: '19:45'
+    t1s: '21:30'
+  - place: 料理人の部屋
+    true_place: srv_b
+    t0: 2730
+    t1: 3265
+    'true': true
+    t0s: '21:30'
+    t1s: 06:30
+  - place: 厨房
+    true_place: kitchen
+    t0: 3265
+    t1: 3330
+    'true': true
+    t0s: 06:15
+    t1s: 07:30
+  - place: 食堂
+    true_place: dining
+    t0: 3330
+    t1: 3375
+    'true': true
+    t0s: 07:30
+    t1s: 08:15
+  - place: 一号室
+    true_place: E1
+    t0: 3390
+    t1: 3420
+    'true': true
+    t0s: 08:30
+    t1s: 09:00
+  sighting:
+    subject: togawa
+    place: 二階の廊下
+    true_place: e_cor
+    t: 08:25
+    'true': true
+- id: S024
+  t: 3420
+  clock: 3日目 09:00
+  place: E1
+  speaker: shuichi
+  audience:
+  - sudo
+  - reiko
+  - odagiri
+  - togawa
+  claims:
+  - place: 三号室
+    true_place: W3
+    t0: 2425
+    t1: 2530
+    'true': true
+    t0s: '16:15'
+    t1s: '18:15'
+  - place: 食堂
+    true_place: dining
+    t0: 2545
+    t1: 2640
+    'true': true
+    t0s: '18:15'
+    t1s: '20:00'
+  - place: 三号室
+    true_place: W3
+    t0: 2655
+    t1: 2765
+    'true': true
+    t0s: '20:15'
+    t1s: '22:15'
+  - place: ホール
+    true_place: hall
+    t0: 2775
+    t1: 2800
+    'true': true
+    t0s: '22:15'
+    t1s: '22:45'
+  - place: 三号室
+    true_place: W3
+    t0: 2810
+    t1: 3330
+    'true': true
+    t0s: '22:45'
+    t1s: 07:30
+  - place: 食堂
+    true_place: dining
+    t0: 3345
+    t1: 3375
+    'true': true
+    t0s: 07:45
+    t1s: 08:15
+  - place: 一号室
+    true_place: E1
+    t0: 3390
+    t1: 3420
+    'true': true
+    t0s: 08:30
+    t1s: 09:00
+  sighting:
+    subject: togawa
+    place: 二階の廊下
+    true_place: e_cor
+    t: 08:25
+    'true': true
+- id: S025
+  t: 3420
+  clock: 3日目 09:00
+  place: E1
+  speaker: reiko
+  audience:
+  - sudo
+  - shuichi
+  - odagiri
+  - togawa
+  claims:
+  - place: 遊戯室
+    true_place: billiard
+    t0: 2350
+    t1: 2580
+    'true': true
+    t0s: '15:00'
+    t1s: '19:00'
+  - place: 食堂
+    true_place: dining
+    t0: 2585
+    t1: 2625
+    'true': true
+    t0s: '19:00'
+    t1s: '19:45'
+  - place: 遊戯室
+    true_place: billiard
+    t0: 2630
+    t1: 3010
+    'true': true
+    t0s: '19:45'
+    t1s: 02:15
+  - place: 三号室
+    true_place: E3
+    t0: 3025
+    t1: 3330
+    'true': true
+    t0s: 02:15
+    t1s: 07:30
+  - place: 食堂
+    true_place: dining
+    t0: 3345
+    t1: 3375
+    'true': true
+    t0s: 07:45
+    t1s: 08:15
+  - place: 一号室
+    true_place: E1
+    t0: 3390
+    t1: 3420
+    'true': true
+    t0s: 08:30
+    t1s: 09:00
+  sighting:
+    subject: togawa
+    place: 二階の廊下
+    true_place: e_cor
+    t: 08:25
+    'true': true
+- id: S026
+  t: 3420
+  clock: 3日目 09:00
+  place: E1
+  speaker: odagiri
+  audience:
+  - sudo
+  - shuichi
+  - reiko
+  - togawa
+  claims:
+  - place: 遊戯室
+    true_place: billiard
+    t0: 2350
+    t1: 2580
+    'true': true
+    t0s: '15:00'
+    t1s: '19:00'
+  - place: 食堂
+    true_place: dining
+    t0: 2585
+    t1: 2625
+    'true': true
+    t0s: '19:00'
+    t1s: '19:45'
+  - place: 遊戯室
+    true_place: billiard
+    t0: 2630
+    t1: 2805
+    'true': true
+    t0s: '19:45'
+    t1s: '22:45'
+  - place: 二号室
+    true_place: E2
+    t0: 2820
+    t1: 3330
+    'true': true
+    t0s: '23:00'
+    t1s: 07:30
+  - place: 食堂
+    true_place: dining
+    t0: 3345
+    t1: 3375
+    'true': true
+    t0s: 07:45
+    t1s: 08:15
+  - place: 一号室
+    true_place: E1
+    t0: 3390
+    t1: 3420
+    'true': true
+    t0s: 08:30
+    t1s: 09:00
+  sighting:
+    subject: togawa
+    place: 二階の廊下
+    true_place: e_cor
+    t: 08:25
+    'true': true
+- id: S027
+  t: 3420
+  clock: 3日目 09:00
+  place: E1
+  speaker: togawa
+  audience:
+  - sudo
+  - shuichi
+  - reiko
+  - odagiri
+  claims:
+  - place: 遊戯室
+    true_place: billiard
+    t0: 2350
+    t1: 2580
+    'true': true
+    t0s: '15:00'
+    t1s: '19:00'
+  - place: 食堂
+    true_place: dining
+    t0: 2585
+    t1: 2625
+    'true': true
+    t0s: '19:00'
+    t1s: '19:45'
+  - place: 遊戯室
+    true_place: billiard
+    t0: 2630
+    t1: 3020
+    'true': true
+    t0s: '19:45'
+    t1s: 02:30
+  - place: 四号室
+    true_place: W4
+    t0: 3130
+    t1: 3280
+    'true': true
+    t0s: 04:00
+    t1s: 06:45
+  - place: 遊戯室
+    true_place: billiard
+    t0: 3290
+    t1: 3330
+    'true': true
+    t0s: 06:45
+    t1s: 07:30
+  - place: 食堂
+    true_place: dining
+    t0: 3335
+    t1: 3375
+    'true': true
+    t0s: 07:30
+    t1s: 08:15
+  - place: 一号室
+    true_place: E1
+    t0: 3390
+    t1: 3420
+    'true': true
+    t0s: 08:30
+    t1s: 09:00
+  sighting:
+    subject: shuichi
+    place: 二階の廊下
+    true_place: e_cor
+    t: 01:55
+    'true': false
+    fabricated: true
+  lie: true
+- id: S028
+  t: 3765
+  clock: 3日目 14:45
+  place: dining
+  speaker: sudo
+  audience:
+  - shuichi
+  - reiko
+  - togawa
+  claims:
+  - place: 厨房
+    true_place: kitchen
+    t0: 3445
+    t1: 3630
+    'true': true
+    t0s: 09:15
+    t1s: '12:30'
+  - place: 食堂
+    true_place: dining
+    t0: 3630
+    t1: 3675
+    'true': true
+    t0s: '12:30'
+    t1s: '13:15'
+  - place: 厨房
+    true_place: kitchen
+    t0: 3675
+    t1: 3740
+    'true': true
+    t0s: '13:15'
+    t1s: '14:30'
+  - place: 食堂
+    true_place: dining
+    t0: 3740
+    t1: 3765
+    'true': true
+    t0s: '14:15'
+    t1s: '14:45'
+  sighting:
+    subject: togawa
+    place: 食堂
+    true_place: dining
+    t: '12:45'
+    'true': true
+- id: S029
+  t: 3765
+  clock: 3日目 14:45
+  place: dining
+  speaker: shuichi
+  audience:
+  - sudo
+  - reiko
+  - togawa
+  claims:
+  - place: 一号室
+    true_place: E1
+    t0: 3420
+    t1: 3630
+    'true': true
+    t0s: 09:00
+    t1s: '12:30'
+  - place: 食堂
+    true_place: dining
+    t0: 3645
+    t1: 3765
+    'true': true
+    t0s: '12:45'
+    t1s: '14:45'
+  sighting:
+    subject: togawa
+    place: 食堂
+    true_place: dining
+    t: '13:20'
+    'true': true
+- id: S030
+  t: 3765
+  clock: 3日目 14:45
+  place: dining
+  speaker: reiko
+  audience:
+  - sudo
+  - shuichi
+  - togawa
+  claims:
+  - place: 一号室
+    true_place: E1
+    t0: 3420
+    t1: 3630
+    'true': true
+    t0s: 09:00
+    t1s: '12:30'
+  - place: 食堂
+    true_place: dining
+    t0: 3645
+    t1: 3765
+    'true': true
+    t0s: '12:45'
+    t1s: '14:45'
+  sighting:
+    subject: odagiri
+    place: 食堂
+    true_place: dining
+    t: '12:45'
+    'true': true
+- id: S031
+  t: 3765
+  clock: 3日目 14:45
+  place: dining
+  speaker: togawa
+  audience:
+  - sudo
+  - shuichi
+  - reiko
+  claims:
+  - place: 四号室
+    true_place: E1
+    t0: 3420
+    t1: 3630
+    'true': false
+    lie_cover: 気まぐれ
+    t0s: 09:00
+    t1s: '12:30'
+  - place: 食堂
+    true_place: dining
+    t0: 3645
+    t1: 3765
+    'true': true
+    t0s: '12:45'
+    t1s: '14:45'
+  lie: true
+  hides:
+  - 気まぐれ
+  sighting:
+    subject: odagiri
+    place: 食堂
+    true_place: dining
+    t: '12:45'
+    'true': true
+- id: S032
+  t: 4015
+  clock: 3日目 18:55
+  place: gallery
+  speaker: sudo
+  audience:
+  - shuichi
+  - togawa
+  claims:
+  - place: 厨房
+    true_place: kitchen
+    t0: 3770
+    t1: 3990
+    'true': true
+    t0s: '14:45'
+    t1s: '18:30'
+- id: S033
+  t: 4015
+  clock: 3日目 18:55
+  place: gallery
+  speaker: shuichi
+  audience:
+  - sudo
+  - togawa
+  claims:
+  - place: 食堂
+    true_place: dining
+    t0: 3785
+    t1: 3820
+    'true': true
+    t0s: '15:00'
+    t1s: '15:45'
+  - place: 三号室
+    true_place: W3
+    t0: 3950
+    t1: 3990
+    'true': true
+    t0s: '17:45'
+    t1s: '18:30'
+  sighting:
+    subject: sudo
+    place: ホール
+    true_place: hall
+    t: '18:35'
+    'true': true
+- id: S034
+  t: 4015
+  clock: 3日目 18:55
+  place: gallery
+  speaker: togawa
+  audience:
+  - sudo
+  - shuichi
+  claims:
+  - place: 食堂
+    true_place: dining
+    t0: 3765
+    t1: 3980
+    'true': true
+    t0s: '14:45'
+    t1s: '18:30'
+  sighting:
+    subject: shuichi
+    place: 庭
+    true_place: garden
+    t: '14:45'
+    'true': false
+    fabricated: true
+  lie: true
+stays:
+  kashiwagi:
+  - place: dining
+    from: 1日目 15:00
+    to: 1日目 15:30
+  - place: kitchen
+    from: 1日目 15:30
+    to: 1日目 16:15
+  - place: dining
+    from: 1日目 16:15
+    to: 1日目 16:20
+  - place: hall
+    from: 1日目 16:20
+    to: 1日目 17:45
+  - place: garden
+    from: 1日目 17:45
+    to: 1日目 17:50
+  - place: cliff
+    from: 1日目 17:50
+    to: 1日目 18:30
+  - place: garden
+    from: 1日目 18:30
+    to: 1日目 18:45
+  - place: hall
+    from: 1日目 18:45
+    to: 1日目 18:50
+  - place: dining
+    from: 1日目 18:50
+    to: 1日目 20:15
+  - place: hall
+    from: 1日目 20:15
+    to: 1日目 20:30
+  - place: dining
+    from: 1日目 20:30
+    to: 1日目 20:35
+  - place: kitchen
+    from: 1日目 20:35
+    to: 1日目 20:40
+  - place: srv_a
+    from: 1日目 20:40
+    to: 1日目 20:45
+  - place: kitchen
+    from: 1日目 20:45
+    to: 1日目 20:50
+  - place: garden
+    from: 1日目 20:50
+    to: 1日目 20:55
+  - place: library
+    from: 1日目 20:55
+    to: 1日目 22:15
+  - place: hall
+    from: 1日目 22:15
+    to: 1日目 22:45
+  - place: dining
+    from: 1日目 22:45
+    to: 1日目 22:50
+  - place: kitchen
+    from: 1日目 22:50
+    to: 1日目 22:55
+  - place: srv_a
+    from: 1日目 22:55
+    to: 2日目 06:10
+  - place: kitchen
+    from: 2日目 06:10
+    to: 2日目 06:15
+  - place: dining
+    from: 2日目 06:15
+    to: 2日目 06:20
+  - place: hall
+    from: 2日目 06:20
+    to: 2日目 07:10
+  - place: garden
+    from: 2日目 07:10
+    to: 2日目 07:30
+  - place: hall
+    from: 2日目 07:30
+    to: 2日目 07:35
+  - place: dining
+    from: 2日目 07:35
+    to: 2日目 08:15
+  - place: kitchen
+    from: 2日目 08:15
+    to: 2日目 08:20
+  - place: srv_a
+    from: 2日目 08:20
+    to: 2日目 08:45
+  - place: kitchen
+    from: 2日目 08:45
+    to: 2日目 08:55
+  sudo:
+  - place: dining
+    from: 1日目 15:00
+    to: 1日目 15:05
+  - place: kitchen
+    from: 1日目 15:05
+    to: 1日目 19:00
+  - place: dining
+    from: 1日目 19:00
+    to: 1日目 19:45
+  - place: kitchen
+    from: 1日目 19:45
+    to: 1日目 21:30
+  - place: srv_b
+    from: 1日目 21:30
+    to: 2日目 06:50
+  - place: kitchen
+    from: 2日目 06:50
+    to: 2日目 07:30
+  - place: dining
+    from: 2日目 07:30
+    to: 2日目 08:15
+  - place: kitchen
+    from: 2日目 08:15
+    to: 2日目 12:30
+  - place: dining
+    from: 2日目 12:30
+    to: 2日目 13:15
+  - place: kitchen
+    from: 2日目 13:15
+    to: 2日目 13:45
+  - place: garden
+    from: 2日目 13:45
+    to: 2日目 13:50
+  - place: library
+    from: 2日目 13:50
+    to: 2日目 14:30
+  - place: garden
+    from: 2日目 14:30
+    to: 2日目 14:35
+  - place: kitchen
+    from: 2日目 14:35
+    to: 2日目 14:40
+  - place: dining
+    from: 2日目 14:40
+    to: 2日目 14:45
+  - place: hall
+    from: 2日目 14:45
+    to: 2日目 15:10
+  - place: dining
+    from: 2日目 15:10
+    to: 2日目 15:15
+  - place: kitchen
+    from: 2日目 15:15
+    to: 2日目 19:00
+  - place: dining
+    from: 2日目 19:00
+    to: 2日目 19:45
+  - place: kitchen
+    from: 2日目 19:45
+    to: 2日目 21:30
+  - place: srv_b
+    from: 2日目 21:30
+    to: 3日目 06:25
+  - place: kitchen
+    from: 3日目 06:25
+    to: 3日目 07:30
+  - place: dining
+    from: 3日目 07:30
+    to: 3日目 08:15
+  - place: hall
+    from: 3日目 08:15
+    to: 3日目 08:20
+  - place: gallery
+    from: 3日目 08:20
+    to: 3日目 08:25
+  - place: e_cor
+    from: 3日目 08:25
+    to: 3日目 08:30
+  - place: E1
+    from: 3日目 08:30
+    to: 3日目 09:05
+  - place: e_cor
+    from: 3日目 09:05
+    to: 3日目 09:10
+  - place: gallery
+    from: 3日目 09:10
+    to: 3日目 09:15
+  - place: hall
+    from: 3日目 09:15
+    to: 3日目 09:20
+  - place: dining
+    from: 3日目 09:20
+    to: 3日目 09:25
+  - place: kitchen
+    from: 3日目 09:25
+    to: 3日目 12:30
+  - place: dining
+    from: 3日目 12:30
+    to: 3日目 13:15
+  - place: kitchen
+    from: 3日目 13:15
+    to: 3日目 14:20
+  - place: dining
+    from: 3日目 14:20
+    to: 3日目 14:50
+  - place: kitchen
+    from: 3日目 14:50
+    to: 3日目 18:30
+  - place: dining
+    from: 3日目 18:30
+    to: 3日目 18:35
+  - place: hall
+    from: 3日目 18:35
+    to: 3日目 18:40
+  - place: gallery
+    from: 3日目 18:40
+    to: 3日目 19:00
+  - place: hall
+    from: 3日目 19:00
+    to: 3日目 19:05
+  - place: dining
+    from: 3日目 19:05
+    to: 3日目 19:45
+  - place: kitchen
+    from: 3日目 19:45
+    to: 3日目 20:20
+  shuichi:
+  - place: library
+    from: 1日目 15:00
+    to: 1日目 15:15
+  - place: hall
+    from: 1日目 15:15
+    to: 1日目 15:20
+  - place: gallery
+    from: 1日目 15:20
+    to: 1日目 15:25
+  - place: w_cor
+    from: 1日目 15:25
+    to: 1日目 15:30
+  - place: W3
+    from: 1日目 15:30
+    to: 1日目 16:00
+  - place: w_cor
+    from: 1日目 16:00
+    to: 1日目 16:05
+  - place: w_stair
+    from: 1日目 16:05
+    to: 1日目 16:10
+  - place: billiard
+    from: 1日目 16:10
+    to: 1日目 16:15
+  - place: hall
+    from: 1日目 16:15
+    to: 1日目 17:45
+  - place: dining
+    from: 1日目 17:45
+    to: 1日目 18:45
+  - place: hall
+    from: 1日目 18:45
+    to: 1日目 18:50
+  - place: gallery
+    from: 1日目 18:50
+    to: 1日目 18:55
+  - place: w_cor
+    from: 1日目 18:55
+    to: 1日目 19:00
+  - place: gallery
+    from: 1日目 19:00
+    to: 1日目 19:05
+  - place: hall
+    from: 1日目 19:05
+    to: 1日目 19:10
+  - place: dining
+    from: 1日目 19:10
+    to: 1日目 19:45
+  - place: kitchen
+    from: 1日目 19:45
+    to: 1日目 23:40
+  - place: dining
+    from: 1日目 23:40
+    to: 1日目 23:45
+  - place: hall
+    from: 1日目 23:45
+    to: 1日目 23:50
+  - place: gallery
+    from: 1日目 23:50
+    to: 1日目 23:55
+  - place: w_cor
+    from: 1日目 23:55
+    to: 2日目 00:00
+  - place: W3
+    from: 2日目 00:00
+    to: 2日目 06:20
+  - place: w_cor
+    from: 2日目 06:20
+    to: 2日目 06:25
+  - place: gallery
+    from: 2日目 06:25
+    to: 2日目 06:30
+  - place: hall
+    from: 2日目 06:30
+    to: 2日目 06:35
+  - place: dining
+    from: 2日目 06:35
+    to: 2日目 06:40
+  - place: kitchen
+    from: 2日目 06:40
+    to: 2日目 06:45
+  - place: dining
+    from: 2日目 06:45
+    to: 2日目 06:50
+  - place: hall
+    from: 2日目 06:50
+    to: 2日目 06:55
+  - place: dining
+    from: 2日目 06:55
+    to: 2日目 07:00
+  - place: hall
+    from: 2日目 07:00
+    to: 2日目 07:10
+  - place: dining
+    from: 2日目 07:10
+    to: 2日目 07:15
+  - place: kitchen
+    from: 2日目 07:15
+    to: 2日目 07:30
+  - place: dining
+    from: 2日目 07:30
+    to: 2日目 08:15
+  - place: kitchen
+    from: 2日目 08:15
+    to: 2日目 08:50
+  - place: garden
+    from: 2日目 08:50
+    to: 2日目 08:55
+  - place: kitchen
+    from: 2日目 08:55
+    to: 2日目 09:25
+  - place: dining
+    from: 2日目 09:25
+    to: 2日目 09:30
+  - place: hall
+    from: 2日目 09:30
+    to: 2日目 09:35
+  - place: gallery
+    from: 2日目 09:35
+    to: 2日目 09:40
+  - place: w_cor
+    from: 2日目 09:40
+    to: 2日目 10:05
+  - place: gallery
+    from: 2日目 10:05
+    to: 2日目 10:10
+  - place: w_cor
+    from: 2日目 10:10
+    to: 2日目 10:15
+  - place: gallery
+    from: 2日目 10:15
+    to: 2日目 10:20
+  - place: w_cor
+    from: 2日目 10:20
+    to: 2日目 10:30
+  - place: W3
+    from: 2日目 10:30
+    to: 2日目 11:45
+  - place: w_cor
+    from: 2日目 11:45
+    to: 2日目 11:50
+  - place: W3
+    from: 2日目 11:50
+    to: 2日目 11:55
+  - place: w_cor
+    from: 2日目 11:55
+    to: 2日目 12:00
+  - place: W2
+    from: 2日目 12:00
+    to: 2日目 12:05
+  - place: w_cor
+    from: 2日目 12:05
+    to: 2日目 12:10
+  - place: W3
+    from: 2日目 12:10
+    to: 2日目 12:30
+  - place: w_cor
+    from: 2日目 12:30
+    to: 2日目 12:35
+  - place: gallery
+    from: 2日目 12:35
+    to: 2日目 12:40
+  - place: hall
+    from: 2日目 12:40
+    to: 2日目 12:45
+  - place: dining
+    from: 2日目 12:45
+    to: 2日目 13:45
+  - place: hall
+    from: 2日目 13:45
+    to: 2日目 13:50
+  - place: library
+    from: 2日目 13:50
+    to: 2日目 14:30
+  - place: hall
+    from: 2日目 14:30
+    to: 2日目 14:35
+  - place: gallery
+    from: 2日目 14:35
+    to: 2日目 14:40
+  - place: hall
+    from: 2日目 14:40
+    to: 2日目 15:10
+  - place: gallery
+    from: 2日目 15:10
+    to: 2日目 15:15
+  - place: hall
+    from: 2日目 15:15
+    to: 2日目 15:20
+  - place: gallery
+    from: 2日目 15:20
+    to: 2日目 15:25
+  - place: e_cor
+    from: 2日目 15:25
+    to: 2日目 15:35
+  - place: gallery
+    from: 2日目 15:35
+    to: 2日目 15:40
+  - place: e_cor
+    from: 2日目 15:40
+    to: 2日目 15:55
+  - place: gallery
+    from: 2日目 15:55
+    to: 2日目 16:00
+  - place: e_cor
+    from: 2日目 16:00
+    to: 2日目 16:05
+  - place: gallery
+    from: 2日目 16:05
+    to: 2日目 16:10
+  - place: w_cor
+    from: 2日目 16:10
+    to: 2日目 16:15
+  - place: gallery
+    from: 2日目 16:15
+    to: 2日目 16:20
+  - place: w_cor
+    from: 2日目 16:20
+    to: 2日目 16:25
+  - place: W3
+    from: 2日目 16:25
+    to: 2日目 18:10
+  - place: w_cor
+    from: 2日目 18:10
+    to: 2日目 18:15
+  - place: gallery
+    from: 2日目 18:15
+    to: 2日目 18:20
+  - place: hall
+    from: 2日目 18:20
+    to: 2日目 18:25
+  - place: dining
+    from: 2日目 18:25
+    to: 2日目 20:00
+  - place: hall
+    from: 2日目 20:00
+    to: 2日目 20:05
+  - place: gallery
+    from: 2日目 20:05
+    to: 2日目 20:10
+  - place: w_cor
+    from: 2日目 20:10
+    to: 2日目 20:15
+  - place: W3
+    from: 2日目 20:15
+    to: 2日目 22:05
+  - place: w_cor
+    from: 2日目 22:05
+    to: 2日目 22:10
+  - place: gallery
+    from: 2日目 22:10
+    to: 2日目 22:15
+  - place: hall
+    from: 2日目 22:15
+    to: 2日目 22:40
+  - place: gallery
+    from: 2日目 22:40
+    to: 2日目 22:45
+  - place: w_cor
+    from: 2日目 22:45
+    to: 2日目 22:50
+  - place: W3
+    from: 2日目 22:50
+    to: 3日目 06:05
+  - place: w_cor
+    from: 3日目 06:05
+    to: 3日目 06:10
+  - place: gallery
+    from: 3日目 06:10
+    to: 3日目 06:15
+  - place: hall
+    from: 3日目 06:15
+    to: 3日目 06:20
+  - place: gallery
+    from: 3日目 06:20
+    to: 3日目 06:25
+  - place: w_cor
+    from: 3日目 06:25
+    to: 3日目 06:30
+  - place: W3
+    from: 3日目 06:30
+    to: 3日目 07:30
+  - place: w_cor
+    from: 3日目 07:30
+    to: 3日目 07:35
+  - place: gallery
+    from: 3日目 07:35
+    to: 3日目 07:40
+  - place: hall
+    from: 3日目 07:40
+    to: 3日目 07:45
+  - place: dining
+    from: 3日目 07:45
+    to: 3日目 08:15
+  - place: hall
+    from: 3日目 08:15
+    to: 3日目 08:20
+  - place: gallery
+    from: 3日目 08:20
+    to: 3日目 08:25
+  - place: e_cor
+    from: 3日目 08:25
+    to: 3日目 08:30
+  - place: E1
+    from: 3日目 08:30
+    to: 3日目 09:15
+  - place: e_cor
+    from: 3日目 09:15
+    to: 3日目 09:20
+  - place: E1
+    from: 3日目 09:20
+    to: 3日目 09:25
+  - place: e_cor
+    from: 3日目 09:25
+    to: 3日目 09:35
+  - place: E1
+    from: 3日目 09:35
+    to: 3日目 10:00
+  - place: e_cor
+    from: 3日目 10:00
+    to: 3日目 10:25
+  - place: E1
+    from: 3日目 10:25
+    to: 3日目 10:30
+  - place: e_cor
+    from: 3日目 10:30
+    to: 3日目 10:35
+  - place: E1
+    from: 3日目 10:35
+    to: 3日目 10:40
+  - place: e_cor
+    from: 3日目 10:40
+    to: 3日目 10:45
+  - place: E1
+    from: 3日目 10:45
+    to: 3日目 11:00
+  - place: e_cor
+    from: 3日目 11:00
+    to: 3日目 11:05
+  - place: E1
+    from: 3日目 11:05
+    to: 3日目 11:10
+  - place: e_cor
+    from: 3日目 11:10
+    to: 3日目 11:20
+  - place: E1
+    from: 3日目 11:20
+    to: 3日目 11:25
+  - place: e_cor
+    from: 3日目 11:25
+    to: 3日目 11:40
+  - place: E1
+    from: 3日目 11:40
+    to: 3日目 11:50
+  - place: e_cor
+    from: 3日目 11:50
+    to: 3日目 11:55
+  - place: E1
+    from: 3日目 11:55
+    to: 3日目 12:00
+  - place: e_cor
+    from: 3日目 12:00
+    to: 3日目 12:05
+  - place: E1
+    from: 3日目 12:05
+    to: 3日目 12:10
+  - place: e_cor
+    from: 3日目 12:10
+    to: 3日目 12:20
+  - place: E1
+    from: 3日目 12:20
+    to: 3日目 12:30
+  - place: e_cor
+    from: 3日目 12:30
+    to: 3日目 12:35
+  - place: gallery
+    from: 3日目 12:35
+    to: 3日目 12:40
+  - place: hall
+    from: 3日目 12:40
+    to: 3日目 12:45
+  - place: dining
+    from: 3日目 12:45
+    to: 3日目 13:15
+  - place: hall
+    from: 3日目 13:15
+    to: 3日目 13:20
+  - place: dining
+    from: 3日目 13:20
+    to: 3日目 13:35
+  - place: hall
+    from: 3日目 13:35
+    to: 3日目 13:40
+  - place: gallery
+    from: 3日目 13:40
+    to: 3日目 13:45
+  - place: e_cor
+    from: 3日目 13:45
+    to: 3日目 14:05
+  - place: gallery
+    from: 3日目 14:05
+    to: 3日目 14:10
+  - place: e_cor
+    from: 3日目 14:10
+    to: 3日目 14:15
+  - place: gallery
+    from: 3日目 14:15
+    to: 3日目 14:20
+  - place: hall
+    from: 3日目 14:20
+    to: 3日目 14:25
+  - place: dining
+    from: 3日目 14:25
+    to: 3日目 14:50
+  - place: hall
+    from: 3日目 14:50
+    to: 3日目 14:55
+  - place: dining
+    from: 3日目 14:55
+    to: 3日目 15:00
+  - place: hall
+    from: 3日目 15:00
+    to: 3日目 15:05
+  - place: dining
+    from: 3日目 15:05
+    to: 3日目 15:40
+  - place: hall
+    from: 3日目 15:40
+    to: 3日目 15:45
+  - place: dining
+    from: 3日目 15:45
+    to: 3日目 15:50
+  - place: hall
+    from: 3日目 15:50
+    to: 3日目 15:55
+  - place: gallery
+    from: 3日目 15:55
+    to: 3日目 16:00
+  - place: e_cor
+    from: 3日目 16:00
+    to: 3日目 16:10
+  - place: gallery
+    from: 3日目 16:10
+    to: 3日目 16:15
+  - place: e_cor
+    from: 3日目 16:15
+    to: 3日目 16:40
+  - place: gallery
+    from: 3日目 16:40
+    to: 3日目 16:45
+  - place: e_cor
+    from: 3日目 16:45
+    to: 3日目 17:00
+  - place: e_stair
+    from: 3日目 17:00
+    to: 3日目 17:05
+  - place: library
+    from: 3日目 17:05
+    to: 3日目 17:10
+  - place: e_stair
+    from: 3日目 17:10
+    to: 3日目 17:15
+  - place: library
+    from: 3日目 17:15
+    to: 3日目 17:20
+  - place: e_stair
+    from: 3日目 17:20
+    to: 3日目 17:25
+  - place: e_cor
+    from: 3日目 17:25
+    to: 3日目 17:30
+  - place: gallery
+    from: 3日目 17:30
+    to: 3日目 17:35
+  - place: w_cor
+    from: 3日目 17:35
+    to: 3日目 17:40
+  - place: gallery
+    from: 3日目 17:40
+    to: 3日目 17:45
+  - place: w_cor
+    from: 3日目 17:45
+    to: 3日目 17:50
+  - place: W3
+    from: 3日目 17:50
+    to: 3日目 18:00
+  - place: w_cor
+    from: 3日目 18:00
+    to: 3日目 18:05
+  - place: gallery
+    from: 3日目 18:05
+    to: 3日目 18:10
+  - place: w_cor
+    from: 3日目 18:10
+    to: 3日目 18:15
+  - place: W3
+    from: 3日目 18:15
+    to: 3日目 18:30
+  - place: w_cor
+    from: 3日目 18:30
+    to: 3日目 18:35
+  - place: gallery
+    from: 3日目 18:35
+    to: 3日目 19:00
+  - place: hall
+    from: 3日目 19:00
+    to: 3日目 19:05
+  - place: dining
+    from: 3日目 19:05
+    to: 3日目 19:50
+  reiko:
+  - place: billiard
+    from: 1日目 15:00
+    to: 1日目 16:00
+  - place: hall
+    from: 1日目 16:00
+    to: 1日目 16:30
+  - place: gallery
+    from: 1日目 16:30
+    to: 1日目 16:35
+  - place: e_cor
+    from: 1日目 16:35
+    to: 1日目 16:40
+  - place: E3
+    from: 1日目 16:40
+    to: 1日目 17:15
+  - place: e_cor
+    from: 1日目 17:15
+    to: 1日目 17:20
+  - place: e_stair
+    from: 1日目 17:20
+    to: 1日目 17:25
+  - place: library
+    from: 1日目 17:25
+    to: 1日目 18:00
+  - place: hall
+    from: 1日目 18:00
+    to: 1日目 18:45
+  - place: billiard
+    from: 1日目 18:45
+    to: 1日目 19:00
+  - place: hall
+    from: 1日目 19:00
+    to: 1日目 19:05
+  - place: dining
+    from: 1日目 19:05
+    to: 1日目 19:45
+  - place: hall
+    from: 1日目 19:45
+    to: 1日目 19:50
+  - place: gallery
+    from: 1日目 19:50
+    to: 1日目 19:55
+  - place: e_cor
+    from: 1日目 19:55
+    to: 1日目 20:00
+  - place: E3
+    from: 1日目 20:00
+    to: 1日目 20:30
+  - place: e_cor
+    from: 1日目 20:30
+    to: 1日目 20:35
+  - place: gallery
+    from: 1日目 20:35
+    to: 1日目 20:40
+  - place: hall
+    from: 1日目 20:40
+    to: 1日目 21:30
+  - place: billiard
+    from: 1日目 21:30
+    to: 1日目 21:45
+  - place: garden
+    from: 1日目 21:45
+    to: 1日目 21:50
+  - place: library
+    from: 1日目 21:50
+    to: 1日目 22:45
+  - place: e_stair
+    from: 1日目 22:45
+    to: 1日目 22:50
+  - place: e_cor
+    from: 1日目 22:50
+    to: 1日目 22:55
+  - place: E3
+    from: 1日目 22:55
+    to: 2日目 07:05
+  - place: e_cor
+    from: 2日目 07:05
+    to: 2日目 07:10
+  - place: gallery
+    from: 2日目 07:10
+    to: 2日目 07:15
+  - place: hall
+    from: 2日目 07:15
+    to: 2日目 07:30
+  - place: dining
+    from: 2日目 07:30
+    to: 2日目 08:15
+  - place: hall
+    from: 2日目 08:15
+    to: 2日目 08:20
+  - place: gallery
+    from: 2日目 08:20
+    to: 2日目 08:25
+  - place: e_cor
+    from: 2日目 08:25
+    to: 2日目 08:30
+  - place: E3
+    from: 2日目 08:30
+    to: 2日目 08:55
+  - place: e_cor
+    from: 2日目 08:55
+    to: 2日目 09:00
+  - place: gallery
+    from: 2日目 09:00
+    to: 2日目 09:05
+  - place: hall
+    from: 2日目 09:05
+    to: 2日目 09:10
+  - place: dining
+    from: 2日目 09:10
+    to: 2日目 09:15
+  - place: kitchen
+    from: 2日目 09:15
+    to: 2日目 09:25
+  - place: garden
+    from: 2日目 09:25
+    to: 2日目 09:30
+  - place: billiard
+    from: 2日目 09:30
+    to: 2日目 12:30
+  - place: hall
+    from: 2日目 12:30
+    to: 2日目 12:35
+  - place: dining
+    from: 2日目 12:35
+    to: 2日目 13:15
+  - place: hall
+    from: 2日目 13:15
+    to: 2日目 13:20
+  - place: billiard
+    from: 2日目 13:20
+    to: 2日目 13:45
+  - place: garden
+    from: 2日目 13:45
+    to: 2日目 13:50
+  - place: library
+    from: 2日目 13:50
+    to: 2日目 14:30
+  - place: garden
+    from: 2日目 14:30
+    to: 2日目 14:35
+  - place: billiard
+    from: 2日目 14:35
+    to: 2日目 14:40
+  - place: hall
+    from: 2日目 14:40
+    to: 2日目 15:10
+  - place: billiard
+    from: 2日目 15:10
+    to: 2日目 19:00
+  - place: hall
+    from: 2日目 19:00
+    to: 2日目 19:05
+  - place: dining
+    from: 2日目 19:05
+    to: 2日目 19:45
+  - place: hall
+    from: 2日目 19:45
+    to: 2日目 19:50
+  - place: billiard
+    from: 2日目 19:50
+    to: 3日目 02:10
+  - place: hall
+    from: 3日目 02:10
+    to: 3日目 02:15
+  - place: gallery
+    from: 3日目 02:15
+    to: 3日目 02:20
+  - place: e_cor
+    from: 3日目 02:20
+    to: 3日目 02:25
+  - place: E3
+    from: 3日目 02:25
+    to: 3日目 07:30
+  - place: e_cor
+    from: 3日目 07:30
+    to: 3日目 07:35
+  - place: gallery
+    from: 3日目 07:35
+    to: 3日目 07:40
+  - place: hall
+    from: 3日目 07:40
+    to: 3日目 07:45
+  - place: dining
+    from: 3日目 07:45
+    to: 3日目 08:15
+  - place: hall
+    from: 3日目 08:15
+    to: 3日目 08:20
+  - place: gallery
+    from: 3日目 08:20
+    to: 3日目 08:25
+  - place: e_cor
+    from: 3日目 08:25
+    to: 3日目 08:30
+  - place: E1
+    from: 3日目 08:30
+    to: 3日目 12:30
+  - place: e_cor
+    from: 3日目 12:30
+    to: 3日目 12:35
+  - place: gallery
+    from: 3日目 12:35
+    to: 3日目 12:40
+  - place: hall
+    from: 3日目 12:40
+    to: 3日目 12:45
+  - place: dining
+    from: 3日目 12:45
+    to: 3日目 16:50
+  - place: hall
+    from: 3日目 16:50
+    to: 3日目 16:55
+  - place: garden
+    from: 3日目 16:55
+    to: 3日目 17:50
+  - place: library
+    from: 3日目 17:50
+    to: 3日目 17:55
+  - place: e_stair
+    from: 3日目 17:55
+    to: 3日目 18:00
+  - place: e_cor
+    from: 3日目 18:00
+    to: 3日目 18:05
+  - place: gallery
+    from: 3日目 18:05
+    to: 3日目 18:10
+  enami:
+  - place: gallery
+    from: 1日目 15:00
+    to: 1日目 15:05
+  - place: w_cor
+    from: 1日目 15:05
+    to: 1日目 15:10
+  - place: W1
+    from: 1日目 15:10
+    to: 1日目 17:00
+  - place: w_cor
+    from: 1日目 17:00
+    to: 1日目 17:05
+  - place: gallery
+    from: 1日目 17:05
+    to: 1日目 17:10
+  - place: hall
+    from: 1日目 17:10
+    to: 1日目 17:15
+  - place: library
+    from: 1日目 17:15
+    to: 1日目 17:30
+  - place: garden
+    from: 1日目 17:30
+    to: 1日目 19:00
+  - place: hall
+    from: 1日目 19:00
+    to: 1日目 19:05
+  - place: dining
+    from: 1日目 19:05
+    to: 1日目 19:45
+  - place: hall
+    from: 1日目 19:45
+    to: 1日目 20:15
+  - place: garden
+    from: 1日目 20:15
+    to: 1日目 20:30
+  - place: hall
+    from: 1日目 20:30
+    to: 1日目 21:00
+  - place: library
+    from: 1日目 21:00
+    to: 1日目 21:45
+  - place: garden
+    from: 1日目 21:45
+    to: 1日目 21:50
+  - place: billiard
+    from: 1日目 21:50
+    to: 1日目 22:30
+  - place: hall
+    from: 1日目 22:30
+    to: 1日目 22:35
+  - place: gallery
+    from: 1日目 22:35
+    to: 1日目 22:40
+  - place: w_cor
+    from: 1日目 22:40
+    to: 1日目 22:45
+  - place: W1
+    from: 1日目 22:45
+    to: 2日目 06:40
+  - place: w_cor
+    from: 2日目 06:40
+    to: 2日目 06:45
+  - place: gallery
+    from: 2日目 06:45
+    to: 2日目 06:50
+  - place: hall
+    from: 2日目 06:50
+    to: 2日目 06:55
+  - place: garden
+    from: 2日目 06:55
+    to: 2日目 07:10
+  - place: hall
+    from: 2日目 07:10
+    to: 2日目 07:15
+  - place: gallery
+    from: 2日目 07:15
+    to: 2日目 07:20
+  - place: w_cor
+    from: 2日目 07:20
+    to: 2日目 07:25
+  - place: W1
+    from: 2日目 07:25
+    to: 2日目 07:30
+  - place: w_cor
+    from: 2日目 07:30
+    to: 2日目 07:35
+  - place: gallery
+    from: 2日目 07:35
+    to: 2日目 07:40
+  - place: hall
+    from: 2日目 07:40
+    to: 2日目 07:45
+  - place: dining
+    from: 2日目 07:45
+    to: 2日目 08:15
+  - place: hall
+    from: 2日目 08:15
+    to: 2日目 08:20
+  - place: gallery
+    from: 2日目 08:20
+    to: 2日目 08:25
+  - place: w_cor
+    from: 2日目 08:25
+    to: 2日目 08:30
+  - place: W1
+    from: 2日目 08:30
+    to: 2日目 08:40
+  - place: w_cor
+    from: 2日目 08:40
+    to: 2日目 08:45
+  - place: gallery
+    from: 2日目 08:45
+    to: 2日目 08:50
+  - place: hall
+    from: 2日目 08:50
+    to: 2日目 08:55
+  - place: dining
+    from: 2日目 08:55
+    to: 2日目 09:00
+  - place: kitchen
+    from: 2日目 09:00
+    to: 2日目 09:40
+  - place: garden
+    from: 2日目 09:40
+    to: 2日目 09:45
+  - place: kitchen
+    from: 2日目 09:45
+    to: 2日目 09:55
+  - place: garden
+    from: 2日目 09:55
+    to: 2日目 10:10
+  - place: library
+    from: 2日目 10:10
+    to: 2日目 10:15
+  - place: garden
+    from: 2日目 10:15
+    to: 2日目 10:20
+  - place: library
+    from: 2日目 10:20
+    to: 2日目 10:25
+  - place: e_stair
+    from: 2日目 10:25
+    to: 2日目 10:30
+  - place: e_cor
+    from: 2日目 10:30
+    to: 2日目 10:35
+  - place: gallery
+    from: 2日目 10:35
+    to: 2日目 10:40
+  - place: e_cor
+    from: 2日目 10:40
+    to: 2日目 11:45
+  - place: gallery
+    from: 2日目 11:45
+    to: 2日目 11:50
+  - place: w_cor
+    from: 2日目 11:50
+    to: 2日目 11:55
+  - place: W1
+    from: 2日目 11:55
+    to: 2日目 12:05
+  - place: w_cor
+    from: 2日目 12:05
+    to: 2日目 12:10
+  - place: W1
+    from: 2日目 12:10
+    to: 2日目 12:15
+  - place: w_cor
+    from: 2日目 12:15
+    to: 2日目 12:20
+  - place: gallery
+    from: 2日目 12:20
+    to: 2日目 12:25
+  - place: w_cor
+    from: 2日目 12:25
+    to: 2日目 12:30
+  - place: gallery
+    from: 2日目 12:30
+    to: 2日目 12:35
+  - place: hall
+    from: 2日目 12:35
+    to: 2日目 12:40
+  - place: dining
+    from: 2日目 12:40
+    to: 2日目 13:25
+  - place: hall
+    from: 2日目 13:25
+    to: 2日目 13:30
+  - place: dining
+    from: 2日目 13:30
+    to: 2日目 13:40
+  - place: hall
+    from: 2日目 13:40
+    to: 2日目 13:45
+  - place: library
+    from: 2日目 13:45
+    to: 2日目 14:30
+  - place: hall
+    from: 2日目 14:30
+    to: 2日目 14:35
+  kuga:
+  - place: hall
+    from: 1日目 15:00
+    to: 1日目 16:30
+  - place: library
+    from: 1日目 16:30
+    to: 1日目 16:45
+  - place: e_stair
+    from: 1日目 16:45
+    to: 1日目 16:50
+  - place: e_cor
+    from: 1日目 16:50
+    to: 1日目 16:55
+  - place: E1
+    from: 1日目 16:55
+    to: 1日目 17:15
+  - place: e_cor
+    from: 1日目 17:15
+    to: 1日目 17:20
+  - place: gallery
+    from: 1日目 17:20
+    to: 1日目 17:25
+  - place: hall
+    from: 1日目 17:25
+    to: 1日目 18:00
+  - place: billiard
+    from: 1日目 18:00
+    to: 1日目 18:30
+  - place: hall
+    from: 1日目 18:30
+    to: 1日目 18:35
+  - place: gallery
+    from: 1日目 18:35
+    to: 1日目 18:40
+  - place: e_cor
+    from: 1日目 18:40
+    to: 1日目 18:45
+  - place: E1
+    from: 1日目 18:45
+    to: 1日目 19:00
+  - place: e_cor
+    from: 1日目 19:00
+    to: 1日目 19:05
+  - place: gallery
+    from: 1日目 19:05
+    to: 1日目 19:10
+  - place: hall
+    from: 1日目 19:10
+    to: 1日目 19:15
+  - place: dining
+    from: 1日目 19:15
+    to: 1日目 20:15
+  - place: hall
+    from: 1日目 20:15
+    to: 1日目 20:20
+  - place: gallery
+    from: 1日目 20:20
+    to: 1日目 20:25
+  - place: e_cor
+    from: 1日目 20:25
+    to: 1日目 20:30
+  - place: E1
+    from: 1日目 20:30
+    to: 1日目 21:15
+  - place: e_cor
+    from: 1日目 21:15
+    to: 1日目 21:20
+  - place: e_stair
+    from: 1日目 21:20
+    to: 1日目 21:25
+  - place: library
+    from: 1日目 21:25
+    to: 1日目 21:45
+  - place: e_stair
+    from: 1日目 21:45
+    to: 1日目 21:50
+  - place: e_cor
+    from: 1日目 21:50
+    to: 1日目 21:55
+  - place: E1
+    from: 1日目 21:55
+    to: 1日目 22:00
+  - place: e_cor
+    from: 1日目 22:00
+    to: 1日目 22:05
+  - place: gallery
+    from: 1日目 22:05
+    to: 1日目 22:10
+  - place: hall
+    from: 1日目 22:10
+    to: 1日目 22:15
+  - place: billiard
+    from: 1日目 22:15
+    to: 1日目 22:30
+  - place: garden
+    from: 1日目 22:30
+    to: 1日目 22:35
+  - place: library
+    from: 1日目 22:35
+    to: 1日目 22:40
+  - place: e_stair
+    from: 1日目 22:40
+    to: 1日目 22:45
+  - place: e_cor
+    from: 1日目 22:45
+    to: 1日目 22:50
+  - place: E1
+    from: 1日目 22:50
+    to: 2日目 06:05
+  - place: e_cor
+    from: 2日目 06:05
+    to: 2日目 06:10
+  - place: gallery
+    from: 2日目 06:10
+    to: 2日目 06:15
+  - place: hall
+    from: 2日目 06:15
+    to: 2日目 07:30
+  - place: dining
+    from: 2日目 07:30
+    to: 2日目 08:15
+  - place: hall
+    from: 2日目 08:15
+    to: 2日目 08:20
+  - place: billiard
+    from: 2日目 08:20
+    to: 2日目 08:45
+  - place: garden
+    from: 2日目 08:45
+    to: 2日目 08:50
+  - place: cliff
+    from: 2日目 08:50
+    to: 2日目 08:55
+  - place: garden
+    from: 2日目 08:55
+    to: 2日目 09:00
+  - place: kitchen
+    from: 2日目 09:00
+    to: 2日目 09:25
+  - place: garden
+    from: 2日目 09:25
+    to: 2日目 09:30
+  - place: cliff
+    from: 2日目 09:30
+    to: 2日目 10:15
+  - place: garden
+    from: 2日目 10:15
+    to: 2日目 10:30
+  - place: library
+    from: 2日目 10:30
+    to: 2日目 10:35
+  - place: e_stair
+    from: 2日目 10:35
+    to: 2日目 10:40
+  - place: e_cor
+    from: 2日目 10:40
+    to: 2日目 10:45
+  - place: E1
+    from: 2日目 10:45
+    to: 2日目 12:00
+  - place: e_cor
+    from: 2日目 12:00
+    to: 2日目 12:05
+  - place: gallery
+    from: 2日目 12:05
+    to: 2日目 12:10
+  - place: hall
+    from: 2日目 12:10
+    to: 2日目 12:15
+  - place: dining
+    from: 2日目 12:15
+    to: 2日目 13:30
+  - place: hall
+    from: 2日目 13:30
+    to: 2日目 13:35
+  - place: gallery
+    from: 2日目 13:35
+    to: 2日目 13:40
+  - place: e_cor
+    from: 2日目 13:40
+    to: 2日目 13:45
+  - place: e_stair
+    from: 2日目 13:45
+    to: 2日目 13:50
+  - place: library
+    from: 2日目 13:50
+    to: 2日目 14:30
+  - place: garden
+    from: 2日目 14:30
+    to: 2日目 14:40
+  - place: hall
+    from: 2日目 14:40
+    to: 2日目 15:10
+  - place: library
+    from: 2日目 15:10
+    to: 2日目 16:10
+  - place: e_stair
+    from: 2日目 16:10
+    to: 2日目 16:15
+  - place: e_cor
+    from: 2日目 16:15
+    to: 2日目 16:20
+  - place: E1
+    from: 2日目 16:20
+    to: 2日目 19:00
+  - place: e_cor
+    from: 2日目 19:00
+    to: 2日目 19:05
+  - place: gallery
+    from: 2日目 19:05
+    to: 2日目 19:10
+  - place: hall
+    from: 2日目 19:10
+    to: 2日目 19:15
+  - place: dining
+    from: 2日目 19:15
+    to: 2日目 19:45
+  - place: hall
+    from: 2日目 19:45
+    to: 2日目 19:50
+  - place: gallery
+    from: 2日目 19:50
+    to: 2日目 19:55
+  - place: e_cor
+    from: 2日目 19:55
+    to: 2日目 20:00
+  - place: E1
+    from: 2日目 20:00
+    to: 2日目 20:10
+  haijima:
+  - place: garden
+    from: 1日目 15:00
+    to: 1日目 16:30
+  - place: hall
+    from: 1日目 16:30
+    to: 1日目 16:45
+  - place: billiard
+    from: 1日目 16:45
+    to: 1日目 17:00
+  - place: garden
+    from: 1日目 17:00
+    to: 1日目 17:05
+  - place: library
+    from: 1日目 17:05
+    to: 1日目 18:30
+  - place: garden
+    from: 1日目 18:30
+    to: 1日目 18:35
+  - place: billiard
+    from: 1日目 18:35
+    to: 1日目 19:00
+  - place: hall
+    from: 1日目 19:00
+    to: 1日目 19:05
+  - place: dining
+    from: 1日目 19:05
+    to: 1日目 19:45
+  - place: hall
+    from: 1日目 19:45
+    to: 1日目 20:00
+  - place: garden
+    from: 1日目 20:00
+    to: 1日目 21:00
+  - place: hall
+    from: 1日目 21:00
+    to: 1日目 22:30
+  - place: library
+    from: 1日目 22:30
+    to: 1日目 22:40
+  - place: hall
+    from: 1日目 22:40
+    to: 1日目 22:45
+  - place: gallery
+    from: 1日目 22:45
+    to: 1日目 22:50
+  - place: w_cor
+    from: 1日目 22:50
+    to: 1日目 22:55
+  - place: W2
+    from: 1日目 22:55
+    to: 2日目 06:45
+  - place: w_cor
+    from: 2日目 06:45
+    to: 2日目 06:50
+  - place: w_stair
+    from: 2日目 06:50
+    to: 2日目 06:55
+  - place: billiard
+    from: 2日目 06:55
+    to: 2日目 07:30
+  - place: hall
+    from: 2日目 07:30
+    to: 2日目 07:35
+  - place: dining
+    from: 2日目 07:35
+    to: 2日目 08:15
+  - place: hall
+    from: 2日目 08:15
+    to: 2日目 08:20
+  - place: billiard
+    from: 2日目 08:20
+    to: 2日目 08:30
+  - place: garden
+    from: 2日目 08:30
+    to: 2日目 08:55
+  - place: kitchen
+    from: 2日目 08:55
+    to: 2日目 09:25
+  - place: garden
+    from: 2日目 09:25
+    to: 2日目 10:25
+  - place: hall
+    from: 2日目 10:25
+    to: 2日目 10:30
+  - place: gallery
+    from: 2日目 10:30
+    to: 2日目 10:35
+  - place: w_cor
+    from: 2日目 10:35
+    to: 2日目 10:40
+  - place: W2
+    from: 2日目 10:40
+    to: 2日目 11:40
+  - place: w_cor
+    from: 2日目 11:40
+    to: 2日目 11:45
+  - place: w_stair
+    from: 2日目 11:45
+    to: 2日目 11:50
+  - place: billiard
+    from: 2日目 11:50
+    to: 2日目 11:55
+  - place: garden
+    from: 2日目 11:55
+    to: 2日目 12:30
+  - place: hall
+    from: 2日目 12:30
+    to: 2日目 12:35
+  - place: dining
+    from: 2日目 12:35
+    to: 2日目 13:15
+  - place: hall
+    from: 2日目 13:15
+    to: 2日目 13:20
+  - place: library
+    from: 2日目 13:20
+    to: 2日目 14:00
+  odagiri:
+  - place: gallery
+    from: 1日目 15:00
+    to: 1日目 15:05
+  - place: e_cor
+    from: 1日目 15:05
+    to: 1日目 15:10
+  - place: E2
+    from: 1日目 15:10
+    to: 1日目 15:30
+  - place: e_cor
+    from: 1日目 15:30
+    to: 1日目 15:35
+  - place: gallery
+    from: 1日目 15:35
+    to: 1日目 15:40
+  - place: hall
+    from: 1日目 15:40
+    to: 1日目 15:45
+  - place: dining
+    from: 1日目 15:45
+    to: 1日目 16:30
+  - place: hall
+    from: 1日目 16:30
+    to: 1日目 16:35
+  - place: gallery
+    from: 1日目 16:35
+    to: 1日目 16:40
+  - place: e_cor
+    from: 1日目 16:40
+    to: 1日目 16:45
+  - place: gallery
+    from: 1日目 16:45
+    to: 1日目 16:50
+  - place: hall
+    from: 1日目 16:50
+    to: 1日目 16:55
+  - place: billiard
+    from: 1日目 16:55
+    to: 1日目 17:45
+  - place: hall
+    from: 1日目 17:45
+    to: 1日目 19:00
+  - place: dining
+    from: 1日目 19:00
+    to: 1日目 19:45
+  - place: hall
+    from: 1日目 19:45
+    to: 1日目 19:50
+  - place: library
+    from: 1日目 19:50
+    to: 1日目 21:30
+  - place: garden
+    from: 1日目 21:30
+    to: 1日目 21:35
+  - place: billiard
+    from: 1日目 21:35
+    to: 1日目 22:15
+  - place: hall
+    from: 1日目 22:15
+    to: 1日目 22:35
+  - place: gallery
+    from: 1日目 22:35
+    to: 1日目 22:40
+  - place: e_cor
+    from: 1日目 22:40
+    to: 1日目 22:45
+  - place: E2
+    from: 1日目 22:45
+    to: 2日目 06:25
+  - place: e_cor
+    from: 2日目 06:25
+    to: 2日目 06:30
+  - place: gallery
+    from: 2日目 06:30
+    to: 2日目 06:35
+  - place: hall
+    from: 2日目 06:35
+    to: 2日目 06:40
+  - place: garden
+    from: 2日目 06:40
+    to: 2日目 07:30
+  - place: hall
+    from: 2日目 07:30
+    to: 2日目 07:35
+  - place: dining
+    from: 2日目 07:35
+    to: 2日目 08:45
+  - place: hall
+    from: 2日目 08:45
+    to: 2日目 08:50
+  - place: billiard
+    from: 2日目 08:50
+    to: 2日目 08:55
+  - place: garden
+    from: 2日目 08:55
+    to: 2日目 09:00
+  - place: kitchen
+    from: 2日目 09:00
+    to: 2日目 09:25
+  - place: garden
+    from: 2日目 09:25
+    to: 2日目 09:30
+  - place: billiard
+    from: 2日目 09:30
+    to: 2日目 09:45
+  - place: garden
+    from: 2日目 09:45
+    to: 2日目 10:30
+  - place: library
+    from: 2日目 10:30
+    to: 2日目 10:35
+  - place: e_stair
+    from: 2日目 10:35
+    to: 2日目 10:40
+  - place: e_cor
+    from: 2日目 10:40
+    to: 2日目 10:45
+  - place: E2
+    from: 2日目 10:45
+    to: 2日目 12:00
+  - place: e_cor
+    from: 2日目 12:00
+    to: 2日目 12:05
+  - place: gallery
+    from: 2日目 12:05
+    to: 2日目 12:10
+  - place: hall
+    from: 2日目 12:10
+    to: 2日目 12:15
+  - place: garden
+    from: 2日目 12:15
+    to: 2日目 12:30
+  - place: hall
+    from: 2日目 12:30
+    to: 2日目 12:35
+  - place: dining
+    from: 2日目 12:35
+    to: 2日目 13:45
+  - place: hall
+    from: 2日目 13:45
+    to: 2日目 13:50
+  - place: library
+    from: 2日目 13:50
+    to: 2日目 14:30
+  - place: garden
+    from: 2日目 14:30
+    to: 2日目 14:35
+  - place: billiard
+    from: 2日目 14:35
+    to: 2日目 14:40
+  - place: hall
+    from: 2日目 14:40
+    to: 2日目 15:10
+  - place: billiard
+    from: 2日目 15:10
+    to: 2日目 19:00
+  - place: hall
+    from: 2日目 19:00
+    to: 2日目 19:05
+  - place: dining
+    from: 2日目 19:05
+    to: 2日目 19:45
+  - place: hall
+    from: 2日目 19:45
+    to: 2日目 19:50
+  - place: billiard
+    from: 2日目 19:50
+    to: 2日目 22:45
+  - place: hall
+    from: 2日目 22:45
+    to: 2日目 22:50
+  - place: gallery
+    from: 2日目 22:50
+    to: 2日目 22:55
+  - place: e_cor
+    from: 2日目 22:55
+    to: 2日目 23:00
+  - place: E2
+    from: 2日目 23:00
+    to: 3日目 07:30
+  - place: e_cor
+    from: 3日目 07:30
+    to: 3日目 07:35
+  - place: gallery
+    from: 3日目 07:35
+    to: 3日目 07:40
+  - place: hall
+    from: 3日目 07:40
+    to: 3日目 07:45
+  - place: dining
+    from: 3日目 07:45
+    to: 3日目 08:15
+  - place: hall
+    from: 3日目 08:15
+    to: 3日目 08:20
+  - place: gallery
+    from: 3日目 08:20
+    to: 3日目 08:25
+  - place: e_cor
+    from: 3日目 08:25
+    to: 3日目 08:30
+  - place: E1
+    from: 3日目 08:30
+    to: 3日目 12:30
+  - place: e_cor
+    from: 3日目 12:30
+    to: 3日目 12:35
+  - place: gallery
+    from: 3日目 12:35
+    to: 3日目 12:40
+  - place: hall
+    from: 3日目 12:40
+    to: 3日目 12:45
+  - place: dining
+    from: 3日目 12:45
+    to: 3日目 14:20
+  togawa:
+  - place: garden
+    from: 1日目 15:00
+    to: 1日目 15:05
+  - place: cliff
+    from: 1日目 15:05
+    to: 1日目 15:15
+  - place: garden
+    from: 1日目 15:15
+    to: 1日目 15:20
+  - place: billiard
+    from: 1日目 15:20
+    to: 1日目 16:00
+  - place: w_stair
+    from: 1日目 16:00
+    to: 1日目 16:05
+  - place: w_cor
+    from: 1日目 16:05
+    to: 1日目 16:10
+  - place: W4
+    from: 1日目 16:10
+    to: 1日目 16:15
+  - place: w_cor
+    from: 1日目 16:15
+    to: 1日目 16:20
+  - place: gallery
+    from: 1日目 16:20
+    to: 1日目 16:25
+  - place: hall
+    from: 1日目 16:25
+    to: 1日目 17:15
+  - place: billiard
+    from: 1日目 17:15
+    to: 1日目 18:15
+  - place: w_stair
+    from: 1日目 18:15
+    to: 1日目 18:20
+  - place: w_cor
+    from: 1日目 18:20
+    to: 1日目 18:25
+  - place: W4
+    from: 1日目 18:25
+    to: 1日目 18:45
+  - place: w_cor
+    from: 1日目 18:45
+    to: 1日目 18:50
+  - place: w_stair
+    from: 1日目 18:50
+    to: 1日目 18:55
+  - place: billiard
+    from: 1日目 18:55
+    to: 1日目 19:00
+  - place: hall
+    from: 1日目 19:00
+    to: 1日目 19:05
+  - place: dining
+    from: 1日目 19:05
+    to: 1日目 19:45
+  - place: hall
+    from: 1日目 19:45
+    to: 1日目 19:50
+  - place: garden
+    from: 1日目 19:50
+    to: 1日目 20:15
+  - place: hall
+    from: 1日目 20:15
+    to: 1日目 21:15
+  - place: billiard
+    from: 1日目 21:15
+    to: 1日目 21:30
+  - place: hall
+    from: 1日目 21:30
+    to: 1日目 22:15
+  - place: gallery
+    from: 1日目 22:15
+    to: 1日目 22:20
+  - place: w_cor
+    from: 1日目 22:20
+    to: 1日目 22:25
+  - place: W4
+    from: 1日目 22:25
+    to: 2日目 07:00
+  - place: w_cor
+    from: 2日目 07:00
+    to: 2日目 07:05
+  - place: gallery
+    from: 2日目 07:05
+    to: 2日目 07:10
+  - place: hall
+    from: 2日目 07:10
+    to: 2日目 07:15
+  - place: garden
+    from: 2日目 07:15
+    to: 2日目 07:20
+  - place: cliff
+    from: 2日目 07:20
+    to: 2日目 07:30
+  - place: garden
+    from: 2日目 07:30
+    to: 2日目 07:35
+  - place: hall
+    from: 2日目 07:35
+    to: 2日目 07:40
+  - place: dining
+    from: 2日目 07:40
+    to: 2日目 08:15
+  - place: hall
+    from: 2日目 08:15
+    to: 2日目 08:20
+  - place: library
+    from: 2日目 08:20
+    to: 2日目 08:30
+  - place: garden
+    from: 2日目 08:30
+    to: 2日目 08:55
+  - place: kitchen
+    from: 2日目 08:55
+    to: 2日目 09:25
+  - place: garden
+    from: 2日目 09:25
+    to: 2日目 09:30
+  - place: billiard
+    from: 2日目 09:30
+    to: 2日目 12:30
+  - place: hall
+    from: 2日目 12:30
+    to: 2日目 12:35
+  - place: dining
+    from: 2日目 12:35
+    to: 2日目 13:15
+  - place: hall
+    from: 2日目 13:15
+    to: 2日目 13:20
+  - place: billiard
+    from: 2日目 13:20
+    to: 2日目 13:45
+  - place: garden
+    from: 2日目 13:45
+    to: 2日目 13:50
+  - place: library
+    from: 2日目 13:50
+    to: 2日目 14:30
+  - place: garden
+    from: 2日目 14:30
+    to: 2日目 14:35
+  - place: hall
+    from: 2日目 14:35
+    to: 2日目 15:10
+  - place: billiard
+    from: 2日目 15:10
+    to: 2日目 19:00
+  - place: hall
+    from: 2日目 19:00
+    to: 2日目 19:05
+  - place: dining
+    from: 2日目 19:05
+    to: 2日目 19:45
+  - place: hall
+    from: 2日目 19:45
+    to: 2日目 19:50
+  - place: billiard
+    from: 2日目 19:50
+    to: 3日目 02:20
+  - place: w_stair
+    from: 3日目 02:20
+    to: 3日目 02:25
+  - place: w_cor
+    from: 3日目 02:25
+    to: 3日目 04:10
+  - place: W4
+    from: 3日目 04:10
+    to: 3日目 06:40
+  - place: w_cor
+    from: 3日目 06:40
+    to: 3日目 06:45
+  - place: w_stair
+    from: 3日目 06:45
+    to: 3日目 06:50
+  - place: billiard
+    from: 3日目 06:50
+    to: 3日目 07:30
+  - place: hall
+    from: 3日目 07:30
+    to: 3日目 07:35
+  - place: dining
+    from: 3日目 07:35
+    to: 3日目 08:15
+  - place: hall
+    from: 3日目 08:15
+    to: 3日目 08:20
+  - place: gallery
+    from: 3日目 08:20
+    to: 3日目 08:25
+  - place: e_cor
+    from: 3日目 08:25
+    to: 3日目 08:30
+  - place: E1
+    from: 3日目 08:30
+    to: 3日目 12:30
+  - place: e_cor
+    from: 3日目 12:30
+    to: 3日目 12:35
+  - place: gallery
+    from: 3日目 12:35
+    to: 3日目 12:40
+  - place: hall
+    from: 3日目 12:40
+    to: 3日目 12:45
+  - place: dining
+    from: 3日目 12:45
+    to: 3日目 18:20
+  - place: hall
+    from: 3日目 18:20
+    to: 3日目 18:25
+  - place: gallery
+    from: 3日目 18:25
+    to: 3日目 19:00
+  - place: hall
+    from: 3日目 19:00
+    to: 3日目 19:05
+  - place: dining
+    from: 3日目 19:05
+    to: 3日目 20:20
+  chihaya:
+  - place: garden
+    from: 1日目 15:00
+    to: 1日目 15:05
+  - place: pier
+    from: 1日目 15:05
+    to: 1日目 16:00
+  - place: garden
+    from: 1日目 16:00
+    to: 1日目 17:30
+  - place: library
+    from: 1日目 17:30
+    to: 1日目 17:35
+  - place: e_stair
+    from: 1日目 17:35
+    to: 1日目 17:40
+  - place: e_cor
+    from: 1日目 17:40
+    to: 1日目 17:45
+  - place: E4
+    from: 1日目 17:45
+    to: 1日目 19:00
+  - place: e_cor
+    from: 1日目 19:00
+    to: 1日目 19:05
+  - place: gallery
+    from: 1日目 19:05
+    to: 1日目 19:10
+  - place: hall
+    from: 1日目 19:10
+    to: 1日目 19:15
+  - place: dining
+    from: 1日目 19:15
+    to: 1日目 19:45
+  - place: hall
+    from: 1日目 19:45
+    to: 1日目 19:50
+  - place: billiard
+    from: 1日目 19:50
+    to: 1日目 20:30
+  - place: hall
+    from: 1日目 20:30
+    to: 1日目 20:35
+  - place: gallery
+    from: 1日目 20:35
+    to: 1日目 20:40
+  - place: e_cor
+    from: 1日目 20:40
+    to: 1日目 20:45
+  - place: E4
+    from: 1日目 20:45
+    to: 1日目 22:45
+  - place: e_cor
+    from: 1日目 22:45
+    to: 1日目 22:50
+  - place: gallery
+    from: 1日目 22:50
+    to: 1日目 22:55
+  - place: hall
+    from: 1日目 22:55
+    to: 1日目 23:10
+  - place: gallery
+    from: 1日目 23:10
+    to: 1日目 23:15
+  - place: e_cor
+    from: 1日目 23:15
+    to: 1日目 23:20
+  - place: E4
+    from: 1日目 23:20
+    to: 2日目 07:00
+  - place: e_cor
+    from: 2日目 07:00
+    to: 2日目 07:05
+  - place: e_stair
+    from: 2日目 07:05
+    to: 2日目 07:10
+  - place: library
+    from: 2日目 07:10
+    to: 2日目 07:30
+  - place: hall
+    from: 2日目 07:30
+    to: 2日目 07:35
+  - place: dining
+    from: 2日目 07:35
+    to: 2日目 08:15
+  - place: hall
+    from: 2日目 08:15
+    to: 2日目 08:20
+  - place: gallery
+    from: 2日目 08:20
+    to: 2日目 08:25
+  - place: e_cor
+    from: 2日目 08:25
+    to: 2日目 08:30
+  - place: E4
+    from: 2日目 08:30
+    to: 2日目 08:55
+  - place: e_cor
+    from: 2日目 08:55
+    to: 2日目 09:00
+  - place: gallery
+    from: 2日目 09:00
+    to: 2日目 09:05
+  - place: hall
+    from: 2日目 09:05
+    to: 2日目 09:10
+  - place: dining
+    from: 2日目 09:10
+    to: 2日目 09:15
+  - place: kitchen
+    from: 2日目 09:15
+    to: 2日目 09:25
+  - place: garden
+    from: 2日目 09:25
+    to: 2日目 09:30
+  - place: library
+    from: 2日目 09:30
+    to: 2日目 09:35
+  - place: e_stair
+    from: 2日目 09:35
+    to: 2日目 09:40
+  - place: e_cor
+    from: 2日目 09:40
+    to: 2日目 09:45
+  - place: gallery
+    from: 2日目 09:45
+    to: 2日目 09:50
+  - place: hall
+    from: 2日目 09:50
+    to: 2日目 09:55
+  - place: garden
+    from: 2日目 09:55
+    to: 2日目 10:30
+  - place: library
+    from: 2日目 10:30
+    to: 2日目 10:35
+  - place: e_stair
+    from: 2日目 10:35
+    to: 2日目 10:40
+  - place: e_cor
+    from: 2日目 10:40
+    to: 2日目 10:45
+  - place: E4
+    from: 2日目 10:45
+    to: 2日目 12:00
+  - place: e_cor
+    from: 2日目 12:00
+    to: 2日目 12:05
+  - place: gallery
+    from: 2日目 12:05
+    to: 2日目 12:10
+  - place: hall
+    from: 2日目 12:10
+    to: 2日目 12:15
+  - place: billiard
+    from: 2日目 12:15
+    to: 2日目 12:30
+  - place: hall
+    from: 2日目 12:30
+    to: 2日目 12:35
+  - place: dining
+    from: 2日目 12:35
+    to: 2日目 13:15
+  - place: hall
+    from: 2日目 13:15
+    to: 2日目 13:20
+  - place: library
+    from: 2日目 13:20
+    to: 2日目 13:45

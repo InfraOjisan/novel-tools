@@ -1,0 +1,10778 @@
+kashiwagi:
+- t: 900
+  clock: 1日目 15:00
+  t1: 905
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: gallery
+  from: hall
+- t: 900
+  clock: 1日目 15:00
+  t1: 905
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: gallery
+  from: hall
+- t: 900
+  clock: 1日目 15:00
+  t1: 905
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: gallery
+  from: hall
+- t: 900
+  clock: 1日目 15:00
+  t1: 905
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: gallery
+  from: hall
+- t: 900
+  clock: 1日目 15:00
+  t1: 905
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: gallery
+  from: hall
+- t: 900
+  clock: 1日目 15:00
+  t1: 905
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: gallery
+  from: hall
+- t: 900
+  clock: 1日目 15:00
+  t1: 960
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: hall
+  from: hall
+- t: 965
+  clock: 1日目 16:05
+  t1: 970
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: gallery
+  from: hall
+- t: 970
+  clock: 1日目 16:10
+  t1: 990
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: hall
+  from: hall
+- t: 1035
+  clock: 1日目 17:15
+  t1: 1080
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: dining
+  from: dining
+- t: 1080
+  clock: 1日目 18:00
+  t1: 1085
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: hall
+  from: hall
+- t: 1080
+  clock: 1日目 18:00
+  t1: 1085
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: hall
+  from: hall
+- t: 1080
+  clock: 1日目 18:00
+  t1: 1085
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: hall
+  from: hall
+- t: 1085
+  clock: 1日目 18:05
+  t1: 1125
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: library
+  from: library
+- t: 1125
+  clock: 1日目 18:45
+  t1: 1130
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: cliff
+  from: garden
+- t: 1125
+  clock: 1日目 18:45
+  t1: 1130
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: garden
+  from: garden
+- t: 1130
+  clock: 1日目 18:50
+  t1: 1140
+  kind: see
+  subject: sudo
+  true_subject: sudo
+  place: kitchen
+  from: kitchen
+- t: 1140
+  clock: 1日目 19:00
+  t1: 1185
+  kind: see
+  subject: sudo
+  true_subject: sudo
+  place: dining
+  from: dining
+- t: 1140
+  clock: 1日目 19:00
+  t1: 1185
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: dining
+  from: dining
+- t: 1145
+  clock: 1日目 19:05
+  t1: 1185
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: dining
+  from: dining
+- t: 1145
+  clock: 1日目 19:05
+  t1: 1185
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: dining
+  from: dining
+- t: 1150
+  clock: 1日目 19:10
+  t1: 1185
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: dining
+  from: dining
+- t: 1150
+  clock: 1日目 19:10
+  t1: 1185
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: dining
+  from: dining
+- t: 1155
+  clock: 1日目 19:15
+  t1: 1185
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: dining
+  from: dining
+- t: 1155
+  clock: 1日目 19:15
+  t1: 1185
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: dining
+  from: dining
+- t: 1155
+  clock: 1日目 19:15
+  t1: 1185
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: dining
+  from: dining
+- t: 1170
+  clock: 1日目 19:30
+  kind: told
+  place: dining
+  speaker: kuga
+  what: 遺言：四日目の朝の船まで島に残った者で遺産を等分する
+- t: 1185
+  clock: 1日目 19:45
+  t1: 1215
+  kind: see
+  subject: sudo
+  true_subject: sudo
+  place: kitchen
+  from: kitchen
+- t: 1185
+  clock: 1日目 19:45
+  t1: 1215
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: kitchen
+  from: kitchen
+- t: 1215
+  clock: 1日目 20:15
+  t1: 1220
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: dining
+  from: dining
+- t: 1220
+  clock: 1日目 20:20
+  t1: 1225
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: gallery
+  from: hall
+- t: 1220
+  clock: 1日目 20:20
+  t1: 1275
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: hall
+  from: hall
+- t: 1245
+  clock: 1日目 20:45
+  t1: 1250
+  kind: silhouette
+  subject: null
+  true_subject: shuichi
+  place: hall
+  from: hall
+- t: 1245
+  clock: 1日目 20:45
+  t1: 1250
+  kind: silhouette
+  subject: null
+  true_subject: chihaya
+  place: hall
+  from: hall
+- t: 1280
+  clock: 1日目 21:20
+  kind: find
+  place: kitchen
+  subject: sudo
+  what: 須藤ミネが死んでいる
+- t: 1285
+  clock: 1日目 21:25
+  t1: 1315
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: kitchen
+  from: kitchen
+- t: 1290
+  clock: 1日目 21:30
+  t1: 1315
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: kitchen
+  from: kitchen
+- t: 1290
+  clock: 1日目 21:30
+  t1: 1315
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: kitchen
+  from: kitchen
+- t: 1295
+  clock: 1日目 21:35
+  t1: 1315
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: kitchen
+  from: kitchen
+- t: 1300
+  clock: 1日目 21:40
+  t1: 1315
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: kitchen
+  from: kitchen
+- t: 1305
+  clock: 1日目 21:45
+  t1: 1315
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: kitchen
+  from: kitchen
+- t: 1305
+  clock: 1日目 21:45
+  t1: 1315
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: kitchen
+  from: kitchen
+- t: 1305
+  clock: 1日目 21:45
+  t1: 1315
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: kitchen
+  from: kitchen
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: enami
+  what: 須藤ミネが死んだのは19:30から21:00のあいだ
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: shuichi
+  statement: S002
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: reiko
+  statement: S003
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: enami
+  statement: S004
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: kuga
+  statement: S005
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: haijima
+  statement: S006
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: odagiri
+  statement: S007
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: togawa
+  statement: S008
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: chihaya
+  statement: S009
+- t: 1365
+  clock: 1日目 22:45
+  kind: sleep
+  place: srv_a
+- t: 1810
+  clock: 2日目 06:10
+  kind: wake
+  place: srv_a
+- t: 1865
+  clock: 2日目 07:05
+  t1: 1870
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: dining
+  from: dining
+- t: 1875
+  clock: 2日目 07:15
+  t1: 1880
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: gallery
+  from: hall
+- t: 1875
+  clock: 2日目 07:15
+  t1: 1880
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: hall
+  from: hall
+- t: 1880
+  clock: 2日目 07:20
+  t1: 1885
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: gallery
+  from: hall
+- t: 1880
+  clock: 2日目 07:20
+  t1: 1890
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: hall
+  from: hall
+- t: 1885
+  clock: 2日目 07:25
+  t1: 1890
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: gallery
+  from: hall
+- t: 1890
+  clock: 2日目 07:30
+  t1: 1935
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: dining
+  from: dining
+- t: 1890
+  clock: 2日目 07:30
+  t1: 1935
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: dining
+  from: dining
+- t: 1895
+  clock: 2日目 07:35
+  t1: 1935
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: dining
+  from: dining
+- t: 1900
+  clock: 2日目 07:40
+  t1: 1935
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: dining
+  from: dining
+- t: 1905
+  clock: 2日目 07:45
+  t1: 1935
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: dining
+  from: dining
+- t: 1905
+  clock: 2日目 07:45
+  t1: 1935
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: dining
+  from: dining
+- t: 1905
+  clock: 2日目 07:45
+  t1: 1935
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: dining
+  from: dining
+- t: 1905
+  clock: 2日目 07:45
+  t1: 1935
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: dining
+  from: dining
+- t: 1980
+  clock: 2日目 09:00
+  t1: 2010
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: dining
+  from: dining
+- t: 1980
+  clock: 2日目 09:00
+  t1: 2010
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: dining
+  from: dining
+- t: 1980
+  clock: 2日目 09:00
+  t1: 2010
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: dining
+  from: dining
+- t: 1985
+  clock: 2日目 09:05
+  t1: 2010
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: dining
+  from: dining
+- t: 1985
+  clock: 2日目 09:05
+  t1: 2010
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: dining
+  from: dining
+- t: 1985
+  clock: 2日目 09:05
+  t1: 2010
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: dining
+  from: dining
+- t: 1995
+  clock: 2日目 09:15
+  t1: 2010
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: dining
+  from: dining
+- t: 2005
+  clock: 2日目 09:25
+  kind: told
+  place: dining
+  speaker: enami
+  what: 久我が死んだのは08:25から09:25のあいだ
+- t: 2005
+  clock: 2日目 09:25
+  kind: told
+  place: dining
+  speaker: shuichi
+  statement: S011
+- t: 2005
+  clock: 2日目 09:25
+  kind: told
+  place: dining
+  speaker: reiko
+  statement: S012
+- t: 2005
+  clock: 2日目 09:25
+  kind: told
+  place: dining
+  speaker: enami
+  statement: S013
+- t: 2005
+  clock: 2日目 09:25
+  kind: told
+  place: dining
+  speaker: haijima
+  statement: S014
+- t: 2005
+  clock: 2日目 09:25
+  kind: told
+  place: dining
+  speaker: odagiri
+  statement: S015
+- t: 2005
+  clock: 2日目 09:25
+  kind: told
+  place: dining
+  speaker: togawa
+  statement: S016
+- t: 2005
+  clock: 2日目 09:25
+  kind: told
+  place: dining
+  speaker: chihaya
+  statement: S017
+- t: 2010
+  clock: 2日目 09:30
+  kind: last
+  place: kitchen
+  subject: shuichi
+  what: 鷹野修一が刺した
+  identified: true
+sudo:
+- t: 1130
+  clock: 1日目 18:50
+  t1: 1140
+  kind: see
+  subject: kashiwagi
+  true_subject: kashiwagi
+  place: kitchen
+  from: kitchen
+- t: 1140
+  clock: 1日目 19:00
+  t1: 1185
+  kind: see
+  subject: kashiwagi
+  true_subject: kashiwagi
+  place: dining
+  from: dining
+- t: 1140
+  clock: 1日目 19:00
+  t1: 1185
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: dining
+  from: dining
+- t: 1145
+  clock: 1日目 19:05
+  t1: 1185
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: dining
+  from: dining
+- t: 1145
+  clock: 1日目 19:05
+  t1: 1185
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: dining
+  from: dining
+- t: 1150
+  clock: 1日目 19:10
+  t1: 1185
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: dining
+  from: dining
+- t: 1150
+  clock: 1日目 19:10
+  t1: 1185
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: dining
+  from: dining
+- t: 1155
+  clock: 1日目 19:15
+  t1: 1185
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: dining
+  from: dining
+- t: 1155
+  clock: 1日目 19:15
+  t1: 1185
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: dining
+  from: dining
+- t: 1155
+  clock: 1日目 19:15
+  t1: 1185
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: dining
+  from: dining
+- t: 1170
+  clock: 1日目 19:30
+  kind: told
+  place: dining
+  speaker: kuga
+  what: 遺言：四日目の朝の船まで島に残った者で遺産を等分する
+- t: 1185
+  clock: 1日目 19:45
+  t1: 1215
+  kind: see
+  subject: kashiwagi
+  true_subject: kashiwagi
+  place: kitchen
+  from: kitchen
+- t: 1185
+  clock: 1日目 19:45
+  t1: 1215
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: kitchen
+  from: kitchen
+- t: 1215
+  clock: 1日目 20:15
+  kind: last
+  place: kitchen
+  subject: shuichi
+  what: 鷹野修一が首を絞めた
+  identified: true
+shuichi:
+- t: 900
+  clock: 1日目 15:00
+  t1: 905
+  kind: see
+  subject: kashiwagi
+  true_subject: kashiwagi
+  place: hall
+  from: gallery
+- t: 900
+  clock: 1日目 15:00
+  t1: 905
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: gallery
+  from: gallery
+- t: 900
+  clock: 1日目 15:00
+  t1: 905
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: gallery
+  from: gallery
+- t: 900
+  clock: 1日目 15:00
+  t1: 905
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: gallery
+  from: gallery
+- t: 900
+  clock: 1日目 15:00
+  t1: 905
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: gallery
+  from: gallery
+- t: 900
+  clock: 1日目 15:00
+  t1: 905
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: gallery
+  from: gallery
+- t: 900
+  clock: 1日目 15:00
+  t1: 905
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: hall
+  from: gallery
+- t: 905
+  clock: 1日目 15:05
+  t1: 910
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: w_cor
+  from: w_cor
+- t: 905
+  clock: 1日目 15:05
+  t1: 910
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: w_cor
+  from: w_cor
+- t: 995
+  clock: 1日目 16:35
+  t1: 1000
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: gallery
+  from: gallery
+- t: 995
+  clock: 1日目 16:35
+  t1: 1000
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: gallery
+  from: gallery
+- t: 995
+  clock: 1日目 16:35
+  t1: 1005
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: hall
+  from: gallery
+- t: 1000
+  clock: 1日目 16:40
+  t1: 1005
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: hall
+  from: hall
+- t: 1000
+  clock: 1日目 16:40
+  t1: 1005
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: hall
+  from: hall
+- t: 1005
+  clock: 1日目 16:45
+  t1: 1020
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: library
+  from: library
+- t: 1035
+  clock: 1日目 17:15
+  t1: 1080
+  kind: see
+  subject: kashiwagi
+  true_subject: kashiwagi
+  place: dining
+  from: dining
+- t: 1080
+  clock: 1日目 18:00
+  t1: 1085
+  kind: see
+  subject: kashiwagi
+  true_subject: kashiwagi
+  place: hall
+  from: hall
+- t: 1080
+  clock: 1日目 18:00
+  t1: 1085
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: hall
+  from: hall
+- t: 1080
+  clock: 1日目 18:00
+  t1: 1085
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: hall
+  from: hall
+- t: 1085
+  clock: 1日目 18:05
+  t1: 1125
+  kind: see
+  subject: kashiwagi
+  true_subject: kashiwagi
+  place: library
+  from: library
+- t: 1140
+  clock: 1日目 19:00
+  t1: 1145
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: hall
+  from: hall
+- t: 1145
+  clock: 1日目 19:05
+  t1: 1185
+  kind: see
+  subject: kashiwagi
+  true_subject: kashiwagi
+  place: dining
+  from: dining
+- t: 1145
+  clock: 1日目 19:05
+  t1: 1185
+  kind: see
+  subject: sudo
+  true_subject: sudo
+  place: dining
+  from: dining
+- t: 1145
+  clock: 1日目 19:05
+  t1: 1185
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: dining
+  from: dining
+- t: 1145
+  clock: 1日目 19:05
+  t1: 1185
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: dining
+  from: dining
+- t: 1150
+  clock: 1日目 19:10
+  t1: 1185
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: dining
+  from: dining
+- t: 1150
+  clock: 1日目 19:10
+  t1: 1185
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: dining
+  from: dining
+- t: 1155
+  clock: 1日目 19:15
+  t1: 1185
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: dining
+  from: dining
+- t: 1155
+  clock: 1日目 19:15
+  t1: 1185
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: dining
+  from: dining
+- t: 1155
+  clock: 1日目 19:15
+  t1: 1185
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: dining
+  from: dining
+- t: 1170
+  clock: 1日目 19:30
+  kind: told
+  place: dining
+  speaker: kuga
+  what: 遺言：四日目の朝の船まで島に残った者で遺産を等分する
+- t: 1185
+  clock: 1日目 19:45
+  t1: 1215
+  kind: see
+  subject: kashiwagi
+  true_subject: kashiwagi
+  place: kitchen
+  from: kitchen
+- t: 1185
+  clock: 1日目 19:45
+  t1: 1215
+  kind: see
+  subject: sudo
+  true_subject: sudo
+  place: kitchen
+  from: kitchen
+- t: 1215
+  clock: 1日目 20:15
+  kind: act
+  place: kitchen
+  what: 須藤ミネを絞めた
+- t: 1220
+  clock: 1日目 20:20
+  kind: act
+  place: kitchen
+  what: knifeを手に取った
+- t: 1225
+  clock: 1日目 20:25
+  t1: 1245
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: dining
+  from: dining
+- t: 1245
+  clock: 1日目 20:45
+  t1: 1250
+  kind: silhouette
+  subject: null
+  true_subject: kashiwagi
+  place: hall
+  from: hall
+- t: 1245
+  clock: 1日目 20:45
+  t1: 1250
+  kind: silhouette
+  subject: null
+  true_subject: haijima
+  place: hall
+  from: hall
+- t: 1245
+  clock: 1日目 20:45
+  t1: 1250
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: hall
+  from: hall
+- t: 1300
+  clock: 1日目 21:40
+  t1: 1315
+  kind: see
+  subject: kashiwagi
+  true_subject: kashiwagi
+  place: kitchen
+  from: kitchen
+- t: 1300
+  clock: 1日目 21:40
+  t1: 1315
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: kitchen
+  from: kitchen
+- t: 1300
+  clock: 1日目 21:40
+  t1: 1315
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: kitchen
+  from: kitchen
+- t: 1300
+  clock: 1日目 21:40
+  t1: 1315
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: kitchen
+  from: kitchen
+- t: 1300
+  clock: 1日目 21:40
+  t1: 1315
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: kitchen
+  from: kitchen
+- t: 1305
+  clock: 1日目 21:45
+  t1: 1315
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: kitchen
+  from: kitchen
+- t: 1305
+  clock: 1日目 21:45
+  t1: 1315
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: kitchen
+  from: kitchen
+- t: 1305
+  clock: 1日目 21:45
+  t1: 1315
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: kitchen
+  from: kitchen
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: enami
+  what: 須藤ミネが死んだのは19:30から21:00のあいだ
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: kashiwagi
+  statement: S001
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: reiko
+  statement: S003
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: enami
+  statement: S004
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: kuga
+  statement: S005
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: haijima
+  statement: S006
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: odagiri
+  statement: S007
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: togawa
+  statement: S008
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: chihaya
+  statement: S009
+- t: 1315
+  clock: 1日目 21:55
+  kind: act
+  place: kitchen
+  what: poisonを手に取った
+- t: 1325
+  clock: 1日目 22:05
+  kind: act
+  place: library
+  what: candlestickを手に取った
+- t: 1360
+  clock: 1日目 22:40
+  kind: reoriented
+  place: e_cor
+  believed_place: w_cor
+  why: 鍵が合わない
+  was_believed: w_cor
+- t: 1365
+  clock: 1日目 22:45
+  t1: 1370
+  kind: silhouette
+  subject: null
+  true_subject: reiko
+  place: gallery
+  from: gallery
+- t: 1365
+  clock: 1日目 22:45
+  t1: 1370
+  kind: silhouette
+  subject: null
+  true_subject: togawa
+  place: gallery
+  from: gallery
+- t: 1370
+  clock: 1日目 22:50
+  t1: 1375
+  kind: silhouette
+  subject: null
+  true_subject: reiko
+  place: e_cor
+  from: w_cor
+- t: 1375
+  clock: 1日目 22:55
+  kind: reoriented
+  place: E3
+  believed_place: W3
+  why: 部屋の中が違う（寝台の荷物・窓の外）
+  was_believed: W3
+- t: 1375
+  clock: 1日目 22:55
+  t1: 1380
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: E3
+  from: E3
+- t: 1385
+  clock: 1日目 23:05
+  t1: 1390
+  kind: silhouette
+  subject: null
+  true_subject: odagiri
+  place: gallery
+  from: gallery
+- t: 1385
+  clock: 1日目 23:05
+  t1: 1390
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: gallery
+  from: gallery
+- t: 1400
+  clock: 1日目 23:20
+  kind: sleep
+  place: W3
+- t: 1840
+  clock: 2日目 06:40
+  kind: wake
+  place: W3
+- t: 1890
+  clock: 2日目 07:30
+  t1: 1895
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: w_cor
+  from: w_cor
+- t: 1895
+  clock: 2日目 07:35
+  t1: 1900
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: gallery
+  from: gallery
+- t: 1895
+  clock: 2日目 07:35
+  t1: 1900
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: gallery
+  from: gallery
+- t: 1895
+  clock: 2日目 07:35
+  t1: 1900
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: hall
+  from: gallery
+- t: 1895
+  clock: 2日目 07:35
+  t1: 1900
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: gallery
+  from: gallery
+- t: 1900
+  clock: 2日目 07:40
+  t1: 1905
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: hall
+  from: hall
+- t: 1900
+  clock: 2日目 07:40
+  t1: 1905
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: hall
+  from: hall
+- t: 1900
+  clock: 2日目 07:40
+  t1: 1905
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: hall
+  from: hall
+- t: 1905
+  clock: 2日目 07:45
+  kind: act
+  place: dining
+  what: 久我の杯に毒を落とした
+- t: 1905
+  clock: 2日目 07:45
+  t1: 1935
+  kind: see
+  subject: kashiwagi
+  true_subject: kashiwagi
+  place: dining
+  from: dining
+- t: 1905
+  clock: 2日目 07:45
+  t1: 1935
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: dining
+  from: dining
+- t: 1905
+  clock: 2日目 07:45
+  t1: 1935
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: dining
+  from: dining
+- t: 1905
+  clock: 2日目 07:45
+  t1: 1935
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: dining
+  from: dining
+- t: 1905
+  clock: 2日目 07:45
+  t1: 1935
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: dining
+  from: dining
+- t: 1905
+  clock: 2日目 07:45
+  t1: 1935
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: dining
+  from: dining
+- t: 1905
+  clock: 2日目 07:45
+  t1: 1935
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: dining
+  from: dining
+- t: 1905
+  clock: 2日目 07:45
+  t1: 1955
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: dining
+  from: dining
+- t: 1950
+  clock: 2日目 08:30
+  t1: 1955
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: dining
+  from: dining
+- t: 1955
+  clock: 2日目 08:35
+  t1: 1960
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: hall
+  from: hall
+- t: 1955
+  clock: 2日目 08:35
+  t1: 1960
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: hall
+  from: hall
+- t: 1960
+  clock: 2日目 08:40
+  t1: 1965
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: dining
+  from: dining
+- t: 1960
+  clock: 2日目 08:40
+  t1: 1965
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: dining
+  from: dining
+- t: 1965
+  clock: 2日目 08:45
+  t1: 1970
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: hall
+  from: hall
+- t: 1970
+  clock: 2日目 08:50
+  t1: 1975
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: dining
+  from: dining
+- t: 1970
+  clock: 2日目 08:50
+  t1: 1975
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: dining
+  from: dining
+- t: 1975
+  clock: 2日目 08:55
+  t1: 1980
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: hall
+  from: hall
+- t: 1980
+  clock: 2日目 09:00
+  t1: 2010
+  kind: see
+  subject: kashiwagi
+  true_subject: kashiwagi
+  place: dining
+  from: dining
+- t: 1980
+  clock: 2日目 09:00
+  t1: 2010
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: dining
+  from: dining
+- t: 1980
+  clock: 2日目 09:00
+  t1: 2010
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: dining
+  from: dining
+- t: 1985
+  clock: 2日目 09:05
+  t1: 2010
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: dining
+  from: dining
+- t: 1985
+  clock: 2日目 09:05
+  t1: 2010
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: dining
+  from: dining
+- t: 1985
+  clock: 2日目 09:05
+  t1: 2010
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: dining
+  from: dining
+- t: 1995
+  clock: 2日目 09:15
+  t1: 2010
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: dining
+  from: dining
+- t: 2005
+  clock: 2日目 09:25
+  kind: told
+  place: dining
+  speaker: enami
+  what: 久我が死んだのは08:25から09:25のあいだ
+- t: 2005
+  clock: 2日目 09:25
+  kind: told
+  place: dining
+  speaker: kashiwagi
+  statement: S010
+- t: 2005
+  clock: 2日目 09:25
+  kind: told
+  place: dining
+  speaker: reiko
+  statement: S012
+- t: 2005
+  clock: 2日目 09:25
+  kind: told
+  place: dining
+  speaker: enami
+  statement: S013
+- t: 2005
+  clock: 2日目 09:25
+  kind: told
+  place: dining
+  speaker: haijima
+  statement: S014
+- t: 2005
+  clock: 2日目 09:25
+  kind: told
+  place: dining
+  speaker: odagiri
+  statement: S015
+- t: 2005
+  clock: 2日目 09:25
+  kind: told
+  place: dining
+  speaker: togawa
+  statement: S016
+- t: 2005
+  clock: 2日目 09:25
+  kind: told
+  place: dining
+  speaker: chihaya
+  statement: S017
+- t: 2010
+  clock: 2日目 09:30
+  kind: act
+  place: kitchen
+  what: 柏木を刺した
+- t: 2015
+  clock: 2日目 09:35
+  t1: 2020
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: garden
+  from: garden
+- t: 2015
+  clock: 2日目 09:35
+  t1: 2020
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: garden
+  from: garden
+- t: 2025
+  clock: 2日目 09:45
+  t1: 2040
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: hall
+  from: hall
+- t: 2025
+  clock: 2日目 09:45
+  t1: 2045
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: hall
+  from: hall
+- t: 2105
+  clock: 2日目 11:05
+  t1: 2110
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: w_cor
+  from: w_cor
+- t: 2110
+  clock: 2日目 11:10
+  t1: 2115
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: hall
+  from: gallery
+- t: 2115
+  clock: 2日目 11:15
+  t1: 2120
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: hall
+  from: hall
+- t: 2120
+  clock: 2日目 11:20
+  t1: 2125
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: gallery
+  from: hall
+- t: 2135
+  clock: 2日目 11:35
+  kind: act
+  place: gallery
+  what: 鷹野玲子を刺した
+- t: 2160
+  clock: 2日目 12:00
+  t1: 2165
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: w_cor
+  from: w_cor
+- t: 2180
+  clock: 2日目 12:20
+  t1: 2185
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: hall
+  from: gallery
+- t: 2180
+  clock: 2日目 12:20
+  t1: 2185
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: hall
+  from: gallery
+- t: 2180
+  clock: 2日目 12:20
+  t1: 2210
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: gallery
+  from: gallery
+- t: 2180
+  clock: 2日目 12:20
+  t1: 2210
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: gallery
+  from: gallery
+- t: 2185
+  clock: 2日目 12:25
+  t1: 2210
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: gallery
+  from: gallery
+- t: 2185
+  clock: 2日目 12:25
+  t1: 2210
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: gallery
+  from: gallery
+- t: 2185
+  clock: 2日目 12:25
+  t1: 2210
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: gallery
+  from: gallery
+- t: 2205
+  clock: 2日目 12:45
+  kind: told
+  place: gallery
+  speaker: enami
+  what: 鷹野玲子が死んだのは10:35から11:50のあいだ
+- t: 2205
+  clock: 2日目 12:45
+  kind: told
+  place: gallery
+  speaker: enami
+  statement: S019
+- t: 2205
+  clock: 2日目 12:45
+  kind: told
+  place: gallery
+  speaker: haijima
+  statement: S020
+- t: 2205
+  clock: 2日目 12:45
+  kind: told
+  place: gallery
+  speaker: odagiri
+  statement: S021
+- t: 2205
+  clock: 2日目 12:45
+  kind: told
+  place: gallery
+  speaker: togawa
+  statement: S022
+- t: 2205
+  clock: 2日目 12:45
+  kind: told
+  place: gallery
+  speaker: chihaya
+  statement: S023
+- t: 2210
+  clock: 2日目 12:50
+  t1: 2215
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: hall
+  from: hall
+- t: 2210
+  clock: 2日目 12:50
+  t1: 2215
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: hall
+  from: hall
+- t: 2210
+  clock: 2日目 12:50
+  t1: 2215
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: hall
+  from: hall
+- t: 2210
+  clock: 2日目 12:50
+  t1: 2215
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: hall
+  from: hall
+- t: 2210
+  clock: 2日目 12:50
+  t1: 2215
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: hall
+  from: hall
+- t: 2215
+  clock: 2日目 12:55
+  t1: 2235
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: dining
+  from: dining
+- t: 2215
+  clock: 2日目 12:55
+  t1: 2235
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: dining
+  from: dining
+- t: 2215
+  clock: 2日目 12:55
+  t1: 2235
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: dining
+  from: dining
+- t: 2215
+  clock: 2日目 12:55
+  t1: 2235
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: dining
+  from: dining
+- t: 2215
+  clock: 2日目 12:55
+  t1: 2235
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: dining
+  from: dining
+- t: 2235
+  clock: 2日目 13:15
+  kind: find
+  place: kitchen
+  subject: kashiwagi
+  what: 柏木が死んでいる
+- t: 2235
+  clock: 2日目 13:15
+  t1: 2265
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: kitchen
+  from: kitchen
+- t: 2235
+  clock: 2日目 13:15
+  t1: 2300
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: kitchen
+  from: kitchen
+- t: 2235
+  clock: 2日目 13:15
+  t1: 2300
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: kitchen
+  from: kitchen
+- t: 2235
+  clock: 2日目 13:15
+  t1: 2305
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: kitchen
+  from: kitchen
+- t: 2235
+  clock: 2日目 13:15
+  t1: 2305
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: kitchen
+  from: kitchen
+- t: 2265
+  clock: 2日目 13:45
+  kind: find
+  place: kitchen
+  subject: odagiri
+  what: 小田切遥が死んでいる
+- t: 2295
+  clock: 2日目 14:15
+  kind: told
+  place: kitchen
+  speaker: enami
+  what: 小田切遥が死んだのは12:45から14:30のあいだ
+- t: 2295
+  clock: 2日目 14:15
+  kind: told
+  place: kitchen
+  speaker: enami
+  statement: S025
+- t: 2295
+  clock: 2日目 14:15
+  kind: told
+  place: kitchen
+  speaker: haijima
+  statement: S026
+- t: 2295
+  clock: 2日目 14:15
+  kind: told
+  place: kitchen
+  speaker: togawa
+  statement: S027
+- t: 2295
+  clock: 2日目 14:15
+  kind: told
+  place: kitchen
+  speaker: chihaya
+  statement: S028
+- t: 2310
+  clock: 2日目 14:30
+  t1: 2315
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: kitchen
+  from: kitchen
+- t: 2310
+  clock: 2日目 14:30
+  t1: 2315
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: kitchen
+  from: kitchen
+- t: 2330
+  clock: 2日目 14:50
+  t1: 2340
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: kitchen
+  from: kitchen
+- t: 2330
+  clock: 2日目 14:50
+  t1: 2350
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: kitchen
+  from: kitchen
+- t: 2350
+  clock: 2日目 15:10
+  t1: 2355
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: dining
+  from: dining
+- t: 2355
+  clock: 2日目 15:15
+  t1: 2365
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: hall
+  from: hall
+- t: 2390
+  clock: 2日目 15:50
+  t1: 2395
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: w_cor
+  from: w_cor
+- t: 2390
+  clock: 2日目 15:50
+  t1: 2470
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: w_cor
+  from: w_cor
+- t: 2475
+  clock: 2日目 17:15
+  t1: 2480
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: w_cor
+  from: w_cor
+- t: 2490
+  clock: 2日目 17:30
+  t1: 2495
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: w_cor
+  from: w_cor
+- t: 2505
+  clock: 2日目 17:45
+  t1: 2510
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: w_cor
+  from: w_cor
+- t: 2550
+  clock: 2日目 18:30
+  t1: 2555
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: w_cor
+  from: w_cor
+- t: 2560
+  clock: 2日目 18:40
+  t1: 2565
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: w_cor
+  from: w_cor
+- t: 2575
+  clock: 2日目 18:55
+  t1: 2580
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: w_cor
+  from: w_cor
+- t: 2580
+  clock: 2日目 19:00
+  t1: 2585
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: gallery
+  from: gallery
+- t: 2580
+  clock: 2日目 19:00
+  t1: 2585
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: hall
+  from: gallery
+- t: 2580
+  clock: 2日目 19:00
+  t1: 2585
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: hall
+  from: gallery
+- t: 2585
+  clock: 2日目 19:05
+  t1: 2590
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: hall
+  from: hall
+- t: 2585
+  clock: 2日目 19:05
+  t1: 2590
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: gallery
+  from: hall
+- t: 2590
+  clock: 2日目 19:10
+  t1: 2625
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: dining
+  from: dining
+- t: 2590
+  clock: 2日目 19:10
+  t1: 2625
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: dining
+  from: dining
+- t: 2590
+  clock: 2日目 19:10
+  t1: 2625
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: dining
+  from: dining
+- t: 2595
+  clock: 2日目 19:15
+  t1: 2625
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: dining
+  from: dining
+- t: 2605
+  clock: 2日目 19:25
+  kind: act
+  place: dining
+  what: 戸川の杯に毒を落とした
+- t: 2625
+  clock: 2日目 19:45
+  t1: 2630
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: hall
+  from: hall
+- t: 2625
+  clock: 2日目 19:45
+  t1: 2630
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: hall
+  from: hall
+- t: 2630
+  clock: 2日目 19:50
+  t1: 2635
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: gallery
+  from: hall
+- t: 2635
+  clock: 2日目 19:55
+  t1: 2640
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: hall
+  from: gallery
+- t: 2640
+  clock: 2日目 20:00
+  t1: 2645
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: gallery
+  from: gallery
+- t: 2665
+  clock: 2日目 20:25
+  t1: 2670
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: gallery
+  from: hall
+- t: 2665
+  clock: 2日目 20:25
+  t1: 2670
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: hall
+  from: hall
+- t: 2815
+  clock: 2日目 22:55
+  t1: 2820
+  kind: silhouette
+  subject: null
+  true_subject: enami
+  place: w_cor
+  from: w_cor
+- t: 2820
+  clock: 2日目 23:00
+  t1: 2825
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: W3
+  from: W3
+- t: 2825
+  clock: 2日目 23:05
+  kind: sleep
+  place: W3
+reiko:
+- t: 900
+  clock: 1日目 15:00
+  t1: 905
+  kind: see
+  subject: kashiwagi
+  true_subject: kashiwagi
+  place: hall
+  from: gallery
+- t: 900
+  clock: 1日目 15:00
+  t1: 905
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: gallery
+  from: gallery
+- t: 900
+  clock: 1日目 15:00
+  t1: 905
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: gallery
+  from: gallery
+- t: 900
+  clock: 1日目 15:00
+  t1: 905
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: gallery
+  from: gallery
+- t: 900
+  clock: 1日目 15:00
+  t1: 905
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: gallery
+  from: gallery
+- t: 900
+  clock: 1日目 15:00
+  t1: 905
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: gallery
+  from: gallery
+- t: 900
+  clock: 1日目 15:00
+  t1: 905
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: hall
+  from: gallery
+- t: 905
+  clock: 1日目 15:05
+  t1: 910
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: e_cor
+  from: e_cor
+- t: 905
+  clock: 1日目 15:05
+  t1: 910
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: e_cor
+  from: e_cor
+- t: 990
+  clock: 1日目 16:30
+  t1: 995
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: e_cor
+  from: e_cor
+- t: 995
+  clock: 1日目 16:35
+  t1: 1000
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: gallery
+  from: gallery
+- t: 995
+  clock: 1日目 16:35
+  t1: 1000
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: gallery
+  from: gallery
+- t: 995
+  clock: 1日目 16:35
+  t1: 1005
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: hall
+  from: gallery
+- t: 1000
+  clock: 1日目 16:40
+  t1: 1005
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: hall
+  from: hall
+- t: 1000
+  clock: 1日目 16:40
+  t1: 1005
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: hall
+  from: hall
+- t: 1020
+  clock: 1日目 17:00
+  t1: 1035
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: billiard
+  from: billiard
+- t: 1020
+  clock: 1日目 17:00
+  t1: 1050
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: billiard
+  from: billiard
+- t: 1080
+  clock: 1日目 18:00
+  t1: 1085
+  kind: see
+  subject: kashiwagi
+  true_subject: kashiwagi
+  place: hall
+  from: hall
+- t: 1080
+  clock: 1日目 18:00
+  t1: 1085
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: hall
+  from: hall
+- t: 1080
+  clock: 1日目 18:00
+  t1: 1085
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: hall
+  from: hall
+- t: 1110
+  clock: 1日目 18:30
+  t1: 1115
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: hall
+  from: hall
+- t: 1115
+  clock: 1日目 18:35
+  t1: 1120
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: gallery
+  from: hall
+- t: 1125
+  clock: 1日目 18:45
+  t1: 1130
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: hall
+  from: hall
+- t: 1140
+  clock: 1日目 19:00
+  t1: 1185
+  kind: see
+  subject: kashiwagi
+  true_subject: kashiwagi
+  place: dining
+  from: dining
+- t: 1140
+  clock: 1日目 19:00
+  t1: 1185
+  kind: see
+  subject: sudo
+  true_subject: sudo
+  place: dining
+  from: dining
+- t: 1145
+  clock: 1日目 19:05
+  t1: 1185
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: dining
+  from: dining
+- t: 1145
+  clock: 1日目 19:05
+  t1: 1185
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: dining
+  from: dining
+- t: 1150
+  clock: 1日目 19:10
+  t1: 1185
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: dining
+  from: dining
+- t: 1150
+  clock: 1日目 19:10
+  t1: 1185
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: dining
+  from: dining
+- t: 1155
+  clock: 1日目 19:15
+  t1: 1185
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: dining
+  from: dining
+- t: 1155
+  clock: 1日目 19:15
+  t1: 1185
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: dining
+  from: dining
+- t: 1155
+  clock: 1日目 19:15
+  t1: 1185
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: dining
+  from: dining
+- t: 1170
+  clock: 1日目 19:30
+  kind: told
+  place: dining
+  speaker: kuga
+  what: 遺言：四日目の朝の船まで島に残った者で遺産を等分する
+- t: 1185
+  clock: 1日目 19:45
+  t1: 1190
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: hall
+  from: hall
+- t: 1185
+  clock: 1日目 19:45
+  t1: 1190
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: hall
+  from: hall
+- t: 1185
+  clock: 1日目 19:45
+  t1: 1190
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: hall
+  from: hall
+- t: 1185
+  clock: 1日目 19:45
+  t1: 1190
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: hall
+  from: hall
+- t: 1185
+  clock: 1日目 19:45
+  t1: 1190
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: hall
+  from: hall
+- t: 1205
+  clock: 1日目 20:05
+  t1: 1215
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: billiard
+  from: billiard
+- t: 1215
+  clock: 1日目 20:15
+  t1: 1225
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: hall
+  from: hall
+- t: 1220
+  clock: 1日目 20:20
+  t1: 1225
+  kind: see
+  subject: kashiwagi
+  true_subject: kashiwagi
+  place: hall
+  from: gallery
+- t: 1290
+  clock: 1日目 21:30
+  t1: 1295
+  kind: silhouette
+  subject: null
+  true_subject: enami
+  place: gallery
+  from: gallery
+- t: 1290
+  clock: 1日目 21:30
+  t1: 1295
+  kind: silhouette
+  subject: null
+  true_subject: togawa
+  place: gallery
+  from: gallery
+- t: 1295
+  clock: 1日目 21:35
+  t1: 1300
+  kind: silhouette
+  subject: null
+  true_subject: enami
+  place: hall
+  from: hall
+- t: 1295
+  clock: 1日目 21:35
+  t1: 1300
+  kind: silhouette
+  subject: null
+  true_subject: togawa
+  place: hall
+  from: hall
+- t: 1300
+  clock: 1日目 21:40
+  t1: 1305
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: dining
+  from: dining
+- t: 1300
+  clock: 1日目 21:40
+  t1: 1305
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: dining
+  from: dining
+- t: 1305
+  clock: 1日目 21:45
+  t1: 1315
+  kind: see
+  subject: kashiwagi
+  true_subject: kashiwagi
+  place: kitchen
+  from: kitchen
+- t: 1305
+  clock: 1日目 21:45
+  t1: 1315
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: kitchen
+  from: kitchen
+- t: 1305
+  clock: 1日目 21:45
+  t1: 1315
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: kitchen
+  from: kitchen
+- t: 1305
+  clock: 1日目 21:45
+  t1: 1315
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: kitchen
+  from: kitchen
+- t: 1305
+  clock: 1日目 21:45
+  t1: 1315
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: kitchen
+  from: kitchen
+- t: 1305
+  clock: 1日目 21:45
+  t1: 1315
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: kitchen
+  from: kitchen
+- t: 1305
+  clock: 1日目 21:45
+  t1: 1315
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: kitchen
+  from: kitchen
+- t: 1305
+  clock: 1日目 21:45
+  t1: 1315
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: kitchen
+  from: kitchen
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: enami
+  what: 須藤ミネが死んだのは19:30から21:00のあいだ
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: kashiwagi
+  statement: S001
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: shuichi
+  statement: S002
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: enami
+  statement: S004
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: kuga
+  statement: S005
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: haijima
+  statement: S006
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: odagiri
+  statement: S007
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: togawa
+  statement: S008
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: chihaya
+  statement: S009
+- t: 1315
+  clock: 1日目 21:55
+  t1: 1320
+  kind: silhouette
+  subject: null
+  true_subject: enami
+  place: garden
+  from: garden
+- t: 1315
+  clock: 1日目 21:55
+  t1: 1320
+  kind: silhouette
+  subject: null
+  true_subject: kuga
+  place: garden
+  from: garden
+- t: 1315
+  clock: 1日目 21:55
+  t1: 1320
+  kind: silhouette
+  subject: null
+  true_subject: odagiri
+  place: garden
+  from: garden
+- t: 1315
+  clock: 1日目 21:55
+  t1: 1320
+  kind: silhouette
+  subject: null
+  true_subject: chihaya
+  place: garden
+  from: garden
+- t: 1320
+  clock: 1日目 22:00
+  t1: 1325
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: library
+  from: library
+- t: 1320
+  clock: 1日目 22:00
+  t1: 1325
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: library
+  from: library
+- t: 1325
+  clock: 1日目 22:05
+  t1: 1330
+  kind: silhouette
+  subject: null
+  true_subject: kuga
+  place: e_stair
+  from: e_stair
+- t: 1325
+  clock: 1日目 22:05
+  t1: 1330
+  kind: silhouette
+  subject: null
+  true_subject: odagiri
+  place: e_stair
+  from: e_stair
+- t: 1340
+  clock: 1日目 22:20
+  t1: 1360
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: billiard
+  from: billiard
+- t: 1340
+  clock: 1日目 22:20
+  t1: 1360
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: billiard
+  from: billiard
+- t: 1360
+  clock: 1日目 22:40
+  t1: 1365
+  kind: silhouette
+  subject: null
+  true_subject: togawa
+  place: hall
+  from: hall
+- t: 1365
+  clock: 1日目 22:45
+  t1: 1370
+  kind: silhouette
+  subject: null
+  true_subject: shuichi
+  place: gallery
+  from: gallery
+- t: 1365
+  clock: 1日目 22:45
+  t1: 1370
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: gallery
+  from: gallery
+- t: 1370
+  clock: 1日目 22:50
+  t1: 1375
+  kind: silhouette
+  subject: null
+  true_subject: shuichi
+  place: e_cor
+  from: e_cor
+- t: 1375
+  clock: 1日目 22:55
+  t1: 1380
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: E3
+  from: E3
+- t: 1380
+  clock: 1日目 23:00
+  kind: sleep
+  place: E3
+- t: 1820
+  clock: 2日目 06:20
+  kind: wake
+  place: E3
+- t: 1865
+  clock: 2日目 07:05
+  t1: 1870
+  kind: see
+  subject: kashiwagi
+  true_subject: kashiwagi
+  place: dining
+  from: dining
+- t: 1890
+  clock: 2日目 07:30
+  t1: 1935
+  kind: see
+  subject: kashiwagi
+  true_subject: kashiwagi
+  place: dining
+  from: dining
+- t: 1890
+  clock: 2日目 07:30
+  t1: 1935
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: dining
+  from: dining
+- t: 1895
+  clock: 2日目 07:35
+  t1: 1935
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: dining
+  from: dining
+- t: 1900
+  clock: 2日目 07:40
+  t1: 1935
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: dining
+  from: dining
+- t: 1905
+  clock: 2日目 07:45
+  t1: 1935
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: dining
+  from: dining
+- t: 1905
+  clock: 2日目 07:45
+  t1: 1935
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: dining
+  from: dining
+- t: 1905
+  clock: 2日目 07:45
+  t1: 1935
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: dining
+  from: dining
+- t: 1905
+  clock: 2日目 07:45
+  t1: 1935
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: dining
+  from: dining
+- t: 1935
+  clock: 2日目 08:15
+  t1: 1940
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: hall
+  from: hall
+- t: 1935
+  clock: 2日目 08:15
+  t1: 1940
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: hall
+  from: hall
+- t: 1935
+  clock: 2日目 08:15
+  t1: 1940
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: hall
+  from: hall
+- t: 1935
+  clock: 2日目 08:15
+  t1: 1940
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: hall
+  from: hall
+- t: 1935
+  clock: 2日目 08:15
+  t1: 1945
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: hall
+  from: hall
+- t: 1940
+  clock: 2日目 08:20
+  t1: 1945
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: gallery
+  from: gallery
+- t: 1995
+  clock: 2日目 09:15
+  t1: 2010
+  kind: see
+  subject: kashiwagi
+  true_subject: kashiwagi
+  place: dining
+  from: dining
+- t: 1995
+  clock: 2日目 09:15
+  t1: 2010
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: dining
+  from: dining
+- t: 1995
+  clock: 2日目 09:15
+  t1: 2010
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: dining
+  from: dining
+- t: 1995
+  clock: 2日目 09:15
+  t1: 2010
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: dining
+  from: dining
+- t: 1995
+  clock: 2日目 09:15
+  t1: 2010
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: dining
+  from: dining
+- t: 1995
+  clock: 2日目 09:15
+  t1: 2055
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: dining
+  from: dining
+- t: 1995
+  clock: 2日目 09:15
+  t1: 2055
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: dining
+  from: dining
+- t: 2005
+  clock: 2日目 09:25
+  kind: told
+  place: dining
+  speaker: enami
+  what: 久我が死んだのは08:25から09:25のあいだ
+- t: 2005
+  clock: 2日目 09:25
+  kind: told
+  place: dining
+  speaker: kashiwagi
+  statement: S010
+- t: 2005
+  clock: 2日目 09:25
+  kind: told
+  place: dining
+  speaker: shuichi
+  statement: S011
+- t: 2005
+  clock: 2日目 09:25
+  kind: told
+  place: dining
+  speaker: enami
+  statement: S013
+- t: 2005
+  clock: 2日目 09:25
+  kind: told
+  place: dining
+  speaker: haijima
+  statement: S014
+- t: 2005
+  clock: 2日目 09:25
+  kind: told
+  place: dining
+  speaker: odagiri
+  statement: S015
+- t: 2005
+  clock: 2日目 09:25
+  kind: told
+  place: dining
+  speaker: togawa
+  statement: S016
+- t: 2005
+  clock: 2日目 09:25
+  kind: told
+  place: dining
+  speaker: chihaya
+  statement: S017
+- t: 2110
+  clock: 2日目 11:10
+  t1: 2115
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: gallery
+  from: hall
+- t: 2135
+  clock: 2日目 11:35
+  kind: last
+  place: gallery
+  subject: shuichi
+  what: 鷹野修一が刺した
+  identified: true
+enami:
+- t: 900
+  clock: 1日目 15:00
+  t1: 905
+  kind: see
+  subject: kashiwagi
+  true_subject: kashiwagi
+  place: hall
+  from: gallery
+- t: 900
+  clock: 1日目 15:00
+  t1: 905
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: gallery
+  from: gallery
+- t: 900
+  clock: 1日目 15:00
+  t1: 905
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: gallery
+  from: gallery
+- t: 900
+  clock: 1日目 15:00
+  t1: 905
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: gallery
+  from: gallery
+- t: 900
+  clock: 1日目 15:00
+  t1: 905
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: gallery
+  from: gallery
+- t: 900
+  clock: 1日目 15:00
+  t1: 905
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: gallery
+  from: gallery
+- t: 900
+  clock: 1日目 15:00
+  t1: 905
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: hall
+  from: gallery
+- t: 905
+  clock: 1日目 15:05
+  t1: 910
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: w_cor
+  from: w_cor
+- t: 905
+  clock: 1日目 15:05
+  t1: 910
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: w_cor
+  from: w_cor
+- t: 960
+  clock: 1日目 16:00
+  t1: 965
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: w_cor
+  from: w_cor
+- t: 1040
+  clock: 1日目 17:20
+  t1: 1045
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: gallery
+  from: gallery
+- t: 1050
+  clock: 1日目 17:30
+  t1: 1065
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: library
+  from: library
+- t: 1050
+  clock: 1日目 17:30
+  t1: 1065
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: library
+  from: library
+- t: 1050
+  clock: 1日目 17:30
+  t1: 1080
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: library
+  from: library
+- t: 1080
+  clock: 1日目 18:00
+  t1: 1110
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: pier
+  from: garden
+- t: 1110
+  clock: 1日目 18:30
+  t1: 1120
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: hall
+  from: hall
+- t: 1145
+  clock: 1日目 19:05
+  t1: 1150
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: gallery
+  from: gallery
+- t: 1145
+  clock: 1日目 19:05
+  t1: 1150
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: hall
+  from: gallery
+- t: 1145
+  clock: 1日目 19:05
+  t1: 1150
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: hall
+  from: gallery
+- t: 1145
+  clock: 1日目 19:05
+  t1: 1150
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: gallery
+  from: gallery
+- t: 1150
+  clock: 1日目 19:10
+  t1: 1155
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: hall
+  from: hall
+- t: 1150
+  clock: 1日目 19:10
+  t1: 1155
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: hall
+  from: hall
+- t: 1155
+  clock: 1日目 19:15
+  t1: 1185
+  kind: see
+  subject: kashiwagi
+  true_subject: kashiwagi
+  place: dining
+  from: dining
+- t: 1155
+  clock: 1日目 19:15
+  t1: 1185
+  kind: see
+  subject: sudo
+  true_subject: sudo
+  place: dining
+  from: dining
+- t: 1155
+  clock: 1日目 19:15
+  t1: 1185
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: dining
+  from: dining
+- t: 1155
+  clock: 1日目 19:15
+  t1: 1185
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: dining
+  from: dining
+- t: 1155
+  clock: 1日目 19:15
+  t1: 1185
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: dining
+  from: dining
+- t: 1155
+  clock: 1日目 19:15
+  t1: 1185
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: dining
+  from: dining
+- t: 1155
+  clock: 1日目 19:15
+  t1: 1185
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: dining
+  from: dining
+- t: 1155
+  clock: 1日目 19:15
+  t1: 1185
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: dining
+  from: dining
+- t: 1155
+  clock: 1日目 19:15
+  t1: 1185
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: dining
+  from: dining
+- t: 1170
+  clock: 1日目 19:30
+  kind: told
+  place: dining
+  speaker: kuga
+  what: 遺言：四日目の朝の船まで島に残った者で遺産を等分する
+- t: 1185
+  clock: 1日目 19:45
+  t1: 1190
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: hall
+  from: hall
+- t: 1185
+  clock: 1日目 19:45
+  t1: 1190
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: hall
+  from: hall
+- t: 1185
+  clock: 1日目 19:45
+  t1: 1190
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: hall
+  from: hall
+- t: 1185
+  clock: 1日目 19:45
+  t1: 1190
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: hall
+  from: hall
+- t: 1185
+  clock: 1日目 19:45
+  t1: 1195
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: hall
+  from: hall
+- t: 1190
+  clock: 1日目 19:50
+  t1: 1195
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: gallery
+  from: gallery
+- t: 1195
+  clock: 1日目 19:55
+  t1: 1200
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: w_cor
+  from: w_cor
+- t: 1285
+  clock: 1日目 21:25
+  t1: 1290
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: w_cor
+  from: w_cor
+- t: 1290
+  clock: 1日目 21:30
+  t1: 1295
+  kind: silhouette
+  subject: null
+  true_subject: reiko
+  place: gallery
+  from: gallery
+- t: 1290
+  clock: 1日目 21:30
+  t1: 1295
+  kind: silhouette
+  subject: null
+  true_subject: togawa
+  place: gallery
+  from: gallery
+- t: 1295
+  clock: 1日目 21:35
+  t1: 1300
+  kind: silhouette
+  subject: null
+  true_subject: reiko
+  place: hall
+  from: hall
+- t: 1295
+  clock: 1日目 21:35
+  t1: 1300
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: hall
+  from: hall
+- t: 1300
+  clock: 1日目 21:40
+  t1: 1305
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: dining
+  from: dining
+- t: 1300
+  clock: 1日目 21:40
+  t1: 1305
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: dining
+  from: dining
+- t: 1305
+  clock: 1日目 21:45
+  t1: 1315
+  kind: see
+  subject: kashiwagi
+  true_subject: kashiwagi
+  place: kitchen
+  from: kitchen
+- t: 1305
+  clock: 1日目 21:45
+  t1: 1315
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: kitchen
+  from: kitchen
+- t: 1305
+  clock: 1日目 21:45
+  t1: 1315
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: kitchen
+  from: kitchen
+- t: 1305
+  clock: 1日目 21:45
+  t1: 1315
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: kitchen
+  from: kitchen
+- t: 1305
+  clock: 1日目 21:45
+  t1: 1315
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: kitchen
+  from: kitchen
+- t: 1305
+  clock: 1日目 21:45
+  t1: 1315
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: kitchen
+  from: kitchen
+- t: 1305
+  clock: 1日目 21:45
+  t1: 1315
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: kitchen
+  from: kitchen
+- t: 1305
+  clock: 1日目 21:45
+  t1: 1315
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: kitchen
+  from: kitchen
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: enami
+  what: 須藤ミネが死んだのは19:30から21:00のあいだ
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: kashiwagi
+  statement: S001
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: shuichi
+  statement: S002
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: reiko
+  statement: S003
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: kuga
+  statement: S005
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: haijima
+  statement: S006
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: odagiri
+  statement: S007
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: togawa
+  statement: S008
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: chihaya
+  statement: S009
+- t: 1315
+  clock: 1日目 21:55
+  t1: 1320
+  kind: silhouette
+  subject: null
+  true_subject: reiko
+  place: garden
+  from: garden
+- t: 1315
+  clock: 1日目 21:55
+  t1: 1320
+  kind: silhouette
+  subject: null
+  true_subject: kuga
+  place: garden
+  from: garden
+- t: 1315
+  clock: 1日目 21:55
+  t1: 1320
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: garden
+  from: garden
+- t: 1315
+  clock: 1日目 21:55
+  t1: 1320
+  kind: silhouette
+  subject: null
+  true_subject: chihaya
+  place: garden
+  from: garden
+- t: 1320
+  clock: 1日目 22:00
+  t1: 1370
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: billiard
+  from: billiard
+- t: 1340
+  clock: 1日目 22:20
+  t1: 1360
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: billiard
+  from: billiard
+- t: 1390
+  clock: 1日目 23:10
+  kind: sleep
+  place: W1
+- t: 1835
+  clock: 2日目 06:35
+  kind: wake
+  place: W1
+- t: 1875
+  clock: 2日目 07:15
+  t1: 1880
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: hall
+  from: gallery
+- t: 1875
+  clock: 2日目 07:15
+  t1: 1890
+  kind: see
+  subject: kashiwagi
+  true_subject: kashiwagi
+  place: hall
+  from: gallery
+- t: 1880
+  clock: 2日目 07:20
+  t1: 1885
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: gallery
+  from: hall
+- t: 1885
+  clock: 2日目 07:25
+  t1: 1890
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: gallery
+  from: hall
+- t: 1890
+  clock: 2日目 07:30
+  t1: 1935
+  kind: see
+  subject: kashiwagi
+  true_subject: kashiwagi
+  place: dining
+  from: dining
+- t: 1890
+  clock: 2日目 07:30
+  t1: 1935
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: dining
+  from: dining
+- t: 1895
+  clock: 2日目 07:35
+  t1: 1935
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: dining
+  from: dining
+- t: 1900
+  clock: 2日目 07:40
+  t1: 1935
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: dining
+  from: dining
+- t: 1905
+  clock: 2日目 07:45
+  t1: 1935
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: dining
+  from: dining
+- t: 1905
+  clock: 2日目 07:45
+  t1: 1935
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: dining
+  from: dining
+- t: 1905
+  clock: 2日目 07:45
+  t1: 1935
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: dining
+  from: dining
+- t: 1905
+  clock: 2日目 07:45
+  t1: 1935
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: dining
+  from: dining
+- t: 1935
+  clock: 2日目 08:15
+  t1: 1940
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: hall
+  from: hall
+- t: 1935
+  clock: 2日目 08:15
+  t1: 1940
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: hall
+  from: hall
+- t: 1935
+  clock: 2日目 08:15
+  t1: 1940
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: hall
+  from: hall
+- t: 1935
+  clock: 2日目 08:15
+  t1: 1940
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: hall
+  from: hall
+- t: 1935
+  clock: 2日目 08:15
+  t1: 1940
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: hall
+  from: hall
+- t: 1940
+  clock: 2日目 08:20
+  t1: 1950
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: garden
+  from: garden
+- t: 1940
+  clock: 2日目 08:20
+  t1: 1980
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: garden
+  from: garden
+- t: 1965
+  clock: 2日目 08:45
+  t1: 1980
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: garden
+  from: garden
+- t: 1980
+  clock: 2日目 09:00
+  t1: 1985
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: hall
+  from: hall
+- t: 1980
+  clock: 2日目 09:00
+  t1: 1985
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: hall
+  from: hall
+- t: 1985
+  clock: 2日目 09:05
+  t1: 2010
+  kind: see
+  subject: kashiwagi
+  true_subject: kashiwagi
+  place: dining
+  from: dining
+- t: 1985
+  clock: 2日目 09:05
+  t1: 2010
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: dining
+  from: dining
+- t: 1985
+  clock: 2日目 09:05
+  t1: 2010
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: dining
+  from: dining
+- t: 1985
+  clock: 2日目 09:05
+  t1: 2010
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: dining
+  from: dining
+- t: 1985
+  clock: 2日目 09:05
+  t1: 2010
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: dining
+  from: dining
+- t: 1985
+  clock: 2日目 09:05
+  t1: 2010
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: dining
+  from: dining
+- t: 1995
+  clock: 2日目 09:15
+  t1: 2010
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: dining
+  from: dining
+- t: 2005
+  clock: 2日目 09:25
+  kind: told
+  place: dining
+  speaker: enami
+  what: 久我が死んだのは08:25から09:25のあいだ
+- t: 2005
+  clock: 2日目 09:25
+  kind: told
+  place: dining
+  speaker: kashiwagi
+  statement: S010
+- t: 2005
+  clock: 2日目 09:25
+  kind: told
+  place: dining
+  speaker: shuichi
+  statement: S011
+- t: 2005
+  clock: 2日目 09:25
+  kind: told
+  place: dining
+  speaker: reiko
+  statement: S012
+- t: 2005
+  clock: 2日目 09:25
+  kind: told
+  place: dining
+  speaker: haijima
+  statement: S014
+- t: 2005
+  clock: 2日目 09:25
+  kind: told
+  place: dining
+  speaker: odagiri
+  statement: S015
+- t: 2005
+  clock: 2日目 09:25
+  kind: told
+  place: dining
+  speaker: togawa
+  statement: S016
+- t: 2005
+  clock: 2日目 09:25
+  kind: told
+  place: dining
+  speaker: chihaya
+  statement: S017
+- t: 2010
+  clock: 2日目 09:30
+  t1: 2015
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: hall
+  from: hall
+- t: 2010
+  clock: 2日目 09:30
+  t1: 2015
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: hall
+  from: hall
+- t: 2015
+  clock: 2日目 09:35
+  t1: 2020
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: garden
+  from: garden
+- t: 2015
+  clock: 2日目 09:35
+  t1: 2025
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: garden
+  from: garden
+- t: 2025
+  clock: 2日目 09:45
+  t1: 2030
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: hall
+  from: hall
+- t: 2025
+  clock: 2日目 09:45
+  t1: 2040
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: hall
+  from: hall
+- t: 2030
+  clock: 2日目 09:50
+  t1: 2035
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: gallery
+  from: hall
+- t: 2035
+  clock: 2日目 09:55
+  t1: 2040
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: hall
+  from: hall
+- t: 2040
+  clock: 2日目 10:00
+  t1: 2045
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: gallery
+  from: hall
+- t: 2055
+  clock: 2日目 10:15
+  t1: 2115
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: garden
+  from: garden
+- t: 2075
+  clock: 2日目 10:35
+  t1: 2115
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: garden
+  from: garden
+- t: 2115
+  clock: 2日目 11:15
+  t1: 2125
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: hall
+  from: hall
+- t: 2185
+  clock: 2日目 12:25
+  t1: 2210
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: gallery
+  from: gallery
+- t: 2185
+  clock: 2日目 12:25
+  t1: 2210
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: gallery
+  from: gallery
+- t: 2185
+  clock: 2日目 12:25
+  t1: 2210
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: gallery
+  from: gallery
+- t: 2185
+  clock: 2日目 12:25
+  t1: 2210
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: gallery
+  from: gallery
+- t: 2185
+  clock: 2日目 12:25
+  t1: 2210
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: gallery
+  from: gallery
+- t: 2205
+  clock: 2日目 12:45
+  kind: told
+  place: gallery
+  speaker: enami
+  what: 鷹野玲子が死んだのは10:35から11:50のあいだ
+- t: 2205
+  clock: 2日目 12:45
+  kind: told
+  place: gallery
+  speaker: shuichi
+  statement: S018
+- t: 2205
+  clock: 2日目 12:45
+  kind: contradiction
+  place: gallery
+  subject: shuichi
+  statement: S018
+  what: 鷹野修一は三号室にいたと言うが、自分はホールで見た
+- t: 2205
+  clock: 2日目 12:45
+  kind: told
+  place: gallery
+  speaker: haijima
+  statement: S020
+- t: 2205
+  clock: 2日目 12:45
+  kind: told
+  place: gallery
+  speaker: odagiri
+  statement: S021
+- t: 2205
+  clock: 2日目 12:45
+  kind: told
+  place: gallery
+  speaker: togawa
+  statement: S022
+- t: 2205
+  clock: 2日目 12:45
+  kind: told
+  place: gallery
+  speaker: chihaya
+  statement: S023
+- t: 2210
+  clock: 2日目 12:50
+  t1: 2215
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: hall
+  from: hall
+- t: 2210
+  clock: 2日目 12:50
+  t1: 2215
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: hall
+  from: hall
+- t: 2210
+  clock: 2日目 12:50
+  t1: 2215
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: hall
+  from: hall
+- t: 2210
+  clock: 2日目 12:50
+  t1: 2215
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: hall
+  from: hall
+- t: 2210
+  clock: 2日目 12:50
+  t1: 2215
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: hall
+  from: hall
+- t: 2215
+  clock: 2日目 12:55
+  t1: 2235
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: dining
+  from: dining
+- t: 2215
+  clock: 2日目 12:55
+  t1: 2235
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: dining
+  from: dining
+- t: 2215
+  clock: 2日目 12:55
+  t1: 2235
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: dining
+  from: dining
+- t: 2215
+  clock: 2日目 12:55
+  t1: 2235
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: dining
+  from: dining
+- t: 2215
+  clock: 2日目 12:55
+  t1: 2235
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: dining
+  from: dining
+- t: 2220
+  clock: 2日目 13:00
+  kind: act
+  place: dining
+  what: 小田切遥の杯に毒を落とした
+- t: 2235
+  clock: 2日目 13:15
+  kind: hear
+  place: kitchen
+  sound: scream
+  source: ここ
+  true_source: kitchen
+  true_who: shuichi
+- t: 2235
+  clock: 2日目 13:15
+  t1: 2265
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: kitchen
+  from: kitchen
+- t: 2235
+  clock: 2日目 13:15
+  t1: 2300
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: kitchen
+  from: kitchen
+- t: 2235
+  clock: 2日目 13:15
+  t1: 2300
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: kitchen
+  from: kitchen
+- t: 2235
+  clock: 2日目 13:15
+  t1: 2305
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: kitchen
+  from: kitchen
+- t: 2235
+  clock: 2日目 13:15
+  t1: 2320
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: kitchen
+  from: kitchen
+- t: 2265
+  clock: 2日目 13:45
+  kind: hear
+  place: kitchen
+  sound: scream
+  source: ここ
+  true_source: kitchen
+  true_who: shuichi
+- t: 2295
+  clock: 2日目 14:15
+  kind: told
+  place: kitchen
+  speaker: enami
+  what: 小田切遥が死んだのは12:45から14:30のあいだ
+- t: 2295
+  clock: 2日目 14:15
+  kind: told
+  place: kitchen
+  speaker: shuichi
+  statement: S024
+- t: 2295
+  clock: 2日目 14:15
+  kind: told
+  place: kitchen
+  speaker: haijima
+  statement: S026
+- t: 2295
+  clock: 2日目 14:15
+  kind: told
+  place: kitchen
+  speaker: togawa
+  statement: S027
+- t: 2295
+  clock: 2日目 14:15
+  kind: told
+  place: kitchen
+  speaker: chihaya
+  statement: S028
+- t: 2310
+  clock: 2日目 14:30
+  t1: 2315
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: kitchen
+  from: kitchen
+- t: 2325
+  clock: 2日目 14:45
+  t1: 2340
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: kitchen
+  from: kitchen
+- t: 2330
+  clock: 2日目 14:50
+  t1: 2340
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: kitchen
+  from: kitchen
+- t: 2350
+  clock: 2日目 15:10
+  t1: 2355
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: dining
+  from: dining
+- t: 2355
+  clock: 2日目 15:15
+  t1: 2360
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: hall
+  from: hall
+- t: 2360
+  clock: 2日目 15:20
+  t1: 2365
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: gallery
+  from: hall
+- t: 2390
+  clock: 2日目 15:50
+  t1: 2395
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: w_cor
+  from: w_cor
+- t: 2390
+  clock: 2日目 15:50
+  t1: 2470
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: w_cor
+  from: w_cor
+- t: 2475
+  clock: 2日目 17:15
+  t1: 2480
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: w_cor
+  from: w_cor
+- t: 2480
+  clock: 2日目 17:20
+  t1: 2485
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: w_cor
+  from: w_cor
+- t: 2490
+  clock: 2日目 17:30
+  t1: 2495
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: w_cor
+  from: w_cor
+- t: 2495
+  clock: 2日目 17:35
+  t1: 2500
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: w_cor
+  from: w_cor
+- t: 2500
+  clock: 2日目 17:40
+  t1: 2505
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: w_cor
+  from: w_cor
+- t: 2505
+  clock: 2日目 17:45
+  t1: 2510
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: w_cor
+  from: w_cor
+- t: 2540
+  clock: 2日目 18:20
+  t1: 2545
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: w_cor
+  from: w_cor
+- t: 2550
+  clock: 2日目 18:30
+  t1: 2555
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: w_cor
+  from: w_cor
+- t: 2560
+  clock: 2日目 18:40
+  t1: 2565
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: w_cor
+  from: w_cor
+- t: 2575
+  clock: 2日目 18:55
+  t1: 2580
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: w_cor
+  from: w_cor
+- t: 2580
+  clock: 2日目 19:00
+  t1: 2585
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: gallery
+  from: gallery
+- t: 2580
+  clock: 2日目 19:00
+  t1: 2585
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: hall
+  from: gallery
+- t: 2580
+  clock: 2日目 19:00
+  t1: 2585
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: hall
+  from: gallery
+- t: 2585
+  clock: 2日目 19:05
+  t1: 2590
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: hall
+  from: hall
+- t: 2585
+  clock: 2日目 19:05
+  t1: 2590
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: gallery
+  from: hall
+- t: 2590
+  clock: 2日目 19:10
+  t1: 2625
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: dining
+  from: dining
+- t: 2590
+  clock: 2日目 19:10
+  t1: 2625
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: dining
+  from: dining
+- t: 2590
+  clock: 2日目 19:10
+  t1: 2625
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: dining
+  from: dining
+- t: 2595
+  clock: 2日目 19:15
+  t1: 2635
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: dining
+  from: dining
+- t: 2635
+  clock: 2日目 19:55
+  t1: 2645
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: gallery
+  from: hall
+- t: 2665
+  clock: 2日目 20:25
+  t1: 2670
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: hall
+  from: gallery
+- t: 2665
+  clock: 2日目 20:25
+  t1: 2670
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: hall
+  from: gallery
+- t: 2815
+  clock: 2日目 22:55
+  t1: 2820
+  kind: silhouette
+  subject: null
+  true_subject: shuichi
+  place: w_cor
+  from: w_cor
+- t: 2820
+  clock: 2日目 23:00
+  t1: 2825
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: W3
+  from: W3
+- t: 2825
+  clock: 2日目 23:05
+  kind: act
+  place: W3
+  what: 鷹野修一を絞めた
+- t: 2840
+  clock: 2日目 23:20
+  kind: sleep
+  place: W1
+- t: 3290
+  clock: 3日目 06:50
+  kind: wake
+  place: W1
+- t: 3330
+  clock: 3日目 07:30
+  t1: 3335
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: w_cor
+  from: w_cor
+- t: 3335
+  clock: 3日目 07:35
+  t1: 3340
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: gallery
+  from: gallery
+- t: 3335
+  clock: 3日目 07:35
+  t1: 3340
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: gallery
+  from: gallery
+- t: 3340
+  clock: 3日目 07:40
+  t1: 3345
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: hall
+  from: hall
+- t: 3340
+  clock: 3日目 07:40
+  t1: 3345
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: hall
+  from: hall
+- t: 3345
+  clock: 3日目 07:45
+  t1: 3375
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: dining
+  from: dining
+- t: 3345
+  clock: 3日目 07:45
+  t1: 3375
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: dining
+  from: dining
+- t: 3375
+  clock: 3日目 08:15
+  t1: 3380
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: hall
+  from: hall
+- t: 3375
+  clock: 3日目 08:15
+  t1: 3380
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: hall
+  from: hall
+- t: 3380
+  clock: 3日目 08:20
+  t1: 3385
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: gallery
+  from: gallery
+- t: 3380
+  clock: 3日目 08:20
+  t1: 3385
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: gallery
+  from: gallery
+- t: 3385
+  clock: 3日目 08:25
+  t1: 3390
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: w_cor
+  from: w_cor
+- t: 3385
+  clock: 3日目 08:25
+  t1: 3390
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: w_cor
+  from: w_cor
+- t: 3390
+  clock: 3日目 08:30
+  kind: find
+  place: W3
+  subject: shuichi
+  what: 鷹野修一が死んでいる
+- t: 3390
+  clock: 3日目 08:30
+  t1: 3425
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: W3
+  from: W3
+- t: 3390
+  clock: 3日目 08:30
+  t1: 3425
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: W3
+  from: W3
+- t: 3420
+  clock: 3日目 09:00
+  kind: told
+  place: W3
+  speaker: enami
+  what: 鷹野修一が死んだのは22:35から23:20のあいだ
+- t: 3420
+  clock: 3日目 09:00
+  kind: told
+  place: W3
+  speaker: haijima
+  statement: S030
+- t: 3420
+  clock: 3日目 09:00
+  kind: told
+  place: W3
+  speaker: chihaya
+  statement: S031
+- t: 3425
+  clock: 3日目 09:05
+  t1: 3430
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: w_cor
+  from: w_cor
+- t: 3595
+  clock: 3日目 11:55
+  t1: 3600
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: gallery
+  from: hall
+- t: 3600
+  clock: 3日目 12:00
+  kind: last
+  place: hall
+  subject: chihaya
+  what: 千早が殴った
+  identified: true
+kuga:
+- t: 900
+  clock: 1日目 15:00
+  t1: 905
+  kind: see
+  subject: kashiwagi
+  true_subject: kashiwagi
+  place: hall
+  from: gallery
+- t: 900
+  clock: 1日目 15:00
+  t1: 905
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: gallery
+  from: gallery
+- t: 900
+  clock: 1日目 15:00
+  t1: 905
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: gallery
+  from: gallery
+- t: 900
+  clock: 1日目 15:00
+  t1: 905
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: gallery
+  from: gallery
+- t: 900
+  clock: 1日目 15:00
+  t1: 905
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: gallery
+  from: gallery
+- t: 900
+  clock: 1日目 15:00
+  t1: 905
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: gallery
+  from: gallery
+- t: 900
+  clock: 1日目 15:00
+  t1: 905
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: hall
+  from: gallery
+- t: 905
+  clock: 1日目 15:05
+  t1: 910
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: e_cor
+  from: e_cor
+- t: 905
+  clock: 1日目 15:05
+  t1: 910
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: e_cor
+  from: e_cor
+- t: 1010
+  clock: 1日目 16:50
+  t1: 1020
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: hall
+  from: gallery
+- t: 1020
+  clock: 1日目 17:00
+  t1: 1035
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: billiard
+  from: billiard
+- t: 1020
+  clock: 1日目 17:00
+  t1: 1035
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: billiard
+  from: billiard
+- t: 1040
+  clock: 1日目 17:20
+  t1: 1045
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: gallery
+  from: gallery
+- t: 1140
+  clock: 1日目 19:00
+  t1: 1145
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: e_cor
+  from: e_cor
+- t: 1145
+  clock: 1日目 19:05
+  t1: 1150
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: gallery
+  from: gallery
+- t: 1145
+  clock: 1日目 19:05
+  t1: 1150
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: hall
+  from: gallery
+- t: 1145
+  clock: 1日目 19:05
+  t1: 1150
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: hall
+  from: gallery
+- t: 1145
+  clock: 1日目 19:05
+  t1: 1150
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: gallery
+  from: gallery
+- t: 1150
+  clock: 1日目 19:10
+  t1: 1155
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: hall
+  from: hall
+- t: 1150
+  clock: 1日目 19:10
+  t1: 1155
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: hall
+  from: hall
+- t: 1155
+  clock: 1日目 19:15
+  t1: 1185
+  kind: see
+  subject: kashiwagi
+  true_subject: kashiwagi
+  place: dining
+  from: dining
+- t: 1155
+  clock: 1日目 19:15
+  t1: 1185
+  kind: see
+  subject: sudo
+  true_subject: sudo
+  place: dining
+  from: dining
+- t: 1155
+  clock: 1日目 19:15
+  t1: 1185
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: dining
+  from: dining
+- t: 1155
+  clock: 1日目 19:15
+  t1: 1185
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: dining
+  from: dining
+- t: 1155
+  clock: 1日目 19:15
+  t1: 1185
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: dining
+  from: dining
+- t: 1155
+  clock: 1日目 19:15
+  t1: 1185
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: dining
+  from: dining
+- t: 1155
+  clock: 1日目 19:15
+  t1: 1185
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: dining
+  from: dining
+- t: 1155
+  clock: 1日目 19:15
+  t1: 1185
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: dining
+  from: dining
+- t: 1155
+  clock: 1日目 19:15
+  t1: 1185
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: dining
+  from: dining
+- t: 1170
+  clock: 1日目 19:30
+  kind: told
+  place: dining
+  speaker: kuga
+  what: 遺言：四日目の朝の船まで島に残った者で遺産を等分する
+- t: 1185
+  clock: 1日目 19:45
+  t1: 1190
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: hall
+  from: hall
+- t: 1185
+  clock: 1日目 19:45
+  t1: 1190
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: hall
+  from: hall
+- t: 1185
+  clock: 1日目 19:45
+  t1: 1190
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: hall
+  from: hall
+- t: 1185
+  clock: 1日目 19:45
+  t1: 1190
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: hall
+  from: hall
+- t: 1185
+  clock: 1日目 19:45
+  t1: 1190
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: hall
+  from: hall
+- t: 1190
+  clock: 1日目 19:50
+  t1: 1195
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: gallery
+  from: hall
+- t: 1190
+  clock: 1日目 19:50
+  t1: 1195
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: gallery
+  from: hall
+- t: 1200
+  clock: 1日目 20:00
+  t1: 1205
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: garden
+  from: garden
+- t: 1200
+  clock: 1日目 20:00
+  t1: 1230
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: cliff
+  from: garden
+- t: 1245
+  clock: 1日目 20:45
+  t1: 1250
+  kind: silhouette
+  subject: null
+  true_subject: odagiri
+  place: garden
+  from: garden
+- t: 1265
+  clock: 1日目 21:05
+  t1: 1270
+  kind: silhouette
+  subject: null
+  true_subject: odagiri
+  place: garden
+  from: garden
+- t: 1280
+  clock: 1日目 21:20
+  kind: hear
+  place: garden
+  sound: scream
+  source: 厨房
+  true_source: kitchen
+  true_who: kashiwagi
+- t: 1285
+  clock: 1日目 21:25
+  t1: 1315
+  kind: see
+  subject: kashiwagi
+  true_subject: kashiwagi
+  place: kitchen
+  from: kitchen
+- t: 1290
+  clock: 1日目 21:30
+  t1: 1315
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: kitchen
+  from: kitchen
+- t: 1290
+  clock: 1日目 21:30
+  t1: 1315
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: kitchen
+  from: kitchen
+- t: 1295
+  clock: 1日目 21:35
+  t1: 1315
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: kitchen
+  from: kitchen
+- t: 1300
+  clock: 1日目 21:40
+  t1: 1315
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: kitchen
+  from: kitchen
+- t: 1305
+  clock: 1日目 21:45
+  t1: 1315
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: kitchen
+  from: kitchen
+- t: 1305
+  clock: 1日目 21:45
+  t1: 1315
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: kitchen
+  from: kitchen
+- t: 1305
+  clock: 1日目 21:45
+  t1: 1315
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: kitchen
+  from: kitchen
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: enami
+  what: 須藤ミネが死んだのは19:30から21:00のあいだ
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: kashiwagi
+  statement: S001
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: shuichi
+  statement: S002
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: reiko
+  statement: S003
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: enami
+  statement: S004
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: haijima
+  statement: S006
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: odagiri
+  statement: S007
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: togawa
+  statement: S008
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: chihaya
+  statement: S009
+- t: 1315
+  clock: 1日目 21:55
+  t1: 1320
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: garden
+  from: garden
+- t: 1315
+  clock: 1日目 21:55
+  t1: 1320
+  kind: silhouette
+  subject: null
+  true_subject: enami
+  place: garden
+  from: garden
+- t: 1315
+  clock: 1日目 21:55
+  t1: 1320
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: garden
+  from: garden
+- t: 1315
+  clock: 1日目 21:55
+  t1: 1320
+  kind: silhouette
+  subject: null
+  true_subject: chihaya
+  place: garden
+  from: garden
+- t: 1320
+  clock: 1日目 22:00
+  t1: 1325
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: library
+  from: library
+- t: 1320
+  clock: 1日目 22:00
+  t1: 1325
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: library
+  from: library
+- t: 1325
+  clock: 1日目 22:05
+  t1: 1330
+  kind: silhouette
+  subject: null
+  true_subject: reiko
+  place: e_stair
+  from: e_stair
+- t: 1325
+  clock: 1日目 22:05
+  t1: 1330
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: e_stair
+  from: e_stair
+- t: 1330
+  clock: 1日目 22:10
+  t1: 1335
+  kind: silhouette
+  subject: null
+  true_subject: odagiri
+  place: e_cor
+  from: e_cor
+- t: 1355
+  clock: 1日目 22:35
+  kind: sleep
+  place: E1
+- t: 1850
+  clock: 2日目 06:50
+  kind: wake
+  place: E1
+- t: 1890
+  clock: 2日目 07:30
+  t1: 1895
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: e_cor
+  from: e_cor
+- t: 1895
+  clock: 2日目 07:35
+  t1: 1900
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: gallery
+  from: gallery
+- t: 1895
+  clock: 2日目 07:35
+  t1: 1900
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: gallery
+  from: gallery
+- t: 1895
+  clock: 2日目 07:35
+  t1: 1900
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: hall
+  from: gallery
+- t: 1895
+  clock: 2日目 07:35
+  t1: 1900
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: gallery
+  from: gallery
+- t: 1900
+  clock: 2日目 07:40
+  t1: 1905
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: hall
+  from: hall
+- t: 1900
+  clock: 2日目 07:40
+  t1: 1905
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: hall
+  from: hall
+- t: 1900
+  clock: 2日目 07:40
+  t1: 1905
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: hall
+  from: hall
+- t: 1905
+  clock: 2日目 07:45
+  t1: 1935
+  kind: see
+  subject: kashiwagi
+  true_subject: kashiwagi
+  place: dining
+  from: dining
+- t: 1905
+  clock: 2日目 07:45
+  t1: 1935
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: dining
+  from: dining
+- t: 1905
+  clock: 2日目 07:45
+  t1: 1935
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: dining
+  from: dining
+- t: 1905
+  clock: 2日目 07:45
+  t1: 1935
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: dining
+  from: dining
+- t: 1905
+  clock: 2日目 07:45
+  t1: 1935
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: dining
+  from: dining
+- t: 1905
+  clock: 2日目 07:45
+  t1: 1935
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: dining
+  from: dining
+- t: 1905
+  clock: 2日目 07:45
+  t1: 1935
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: dining
+  from: dining
+- t: 1905
+  clock: 2日目 07:45
+  t1: 1935
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: dining
+  from: dining
+- t: 1935
+  clock: 2日目 08:15
+  t1: 1940
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: hall
+  from: hall
+- t: 1935
+  clock: 2日目 08:15
+  t1: 1940
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: hall
+  from: hall
+- t: 1935
+  clock: 2日目 08:15
+  t1: 1940
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: hall
+  from: hall
+- t: 1935
+  clock: 2日目 08:15
+  t1: 1940
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: hall
+  from: hall
+- t: 1935
+  clock: 2日目 08:15
+  t1: 1950
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: hall
+  from: hall
+- t: 1940
+  clock: 2日目 08:20
+  t1: 1945
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: gallery
+  from: gallery
+- t: 1950
+  clock: 2日目 08:30
+  t1: 1955
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: dining
+  from: dining
+- t: 1950
+  clock: 2日目 08:30
+  t1: 1975
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: dining
+  from: dining
+- t: 1960
+  clock: 2日目 08:40
+  t1: 1965
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: dining
+  from: dining
+- t: 1970
+  clock: 2日目 08:50
+  t1: 1975
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: dining
+  from: dining
+- t: 1975
+  clock: 2日目 08:55
+  kind: last
+  place: dining
+  what: 喉が焼け、息ができなくなった
+  identified: false
+haijima:
+- t: 900
+  clock: 1日目 15:00
+  t1: 905
+  kind: see
+  subject: kashiwagi
+  true_subject: kashiwagi
+  place: hall
+  from: gallery
+- t: 900
+  clock: 1日目 15:00
+  t1: 905
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: gallery
+  from: gallery
+- t: 900
+  clock: 1日目 15:00
+  t1: 905
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: gallery
+  from: gallery
+- t: 900
+  clock: 1日目 15:00
+  t1: 905
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: gallery
+  from: gallery
+- t: 900
+  clock: 1日目 15:00
+  t1: 905
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: gallery
+  from: gallery
+- t: 900
+  clock: 1日目 15:00
+  t1: 905
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: gallery
+  from: gallery
+- t: 900
+  clock: 1日目 15:00
+  t1: 905
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: hall
+  from: gallery
+- t: 905
+  clock: 1日目 15:05
+  t1: 910
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: w_cor
+  from: w_cor
+- t: 905
+  clock: 1日目 15:05
+  t1: 910
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: w_cor
+  from: w_cor
+- t: 960
+  clock: 1日目 16:00
+  t1: 965
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: w_cor
+  from: w_cor
+- t: 965
+  clock: 1日目 16:05
+  t1: 990
+  kind: see
+  subject: kashiwagi
+  true_subject: kashiwagi
+  place: hall
+  from: gallery
+- t: 995
+  clock: 1日目 16:35
+  t1: 1000
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: gallery
+  from: hall
+- t: 995
+  clock: 1日目 16:35
+  t1: 1000
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: gallery
+  from: hall
+- t: 995
+  clock: 1日目 16:35
+  t1: 1000
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: gallery
+  from: hall
+- t: 1000
+  clock: 1日目 16:40
+  t1: 1005
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: hall
+  from: hall
+- t: 1000
+  clock: 1日目 16:40
+  t1: 1005
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: hall
+  from: hall
+- t: 1000
+  clock: 1日目 16:40
+  t1: 1005
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: hall
+  from: hall
+- t: 1010
+  clock: 1日目 16:50
+  t1: 1015
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: gallery
+  from: hall
+- t: 1015
+  clock: 1日目 16:55
+  t1: 1020
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: hall
+  from: hall
+- t: 1020
+  clock: 1日目 17:00
+  t1: 1035
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: billiard
+  from: billiard
+- t: 1020
+  clock: 1日目 17:00
+  t1: 1050
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: billiard
+  from: billiard
+- t: 1065
+  clock: 1日目 17:45
+  t1: 1070
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: garden
+  from: pier
+- t: 1080
+  clock: 1日目 18:00
+  t1: 1110
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: garden
+  from: pier
+- t: 1125
+  clock: 1日目 18:45
+  t1: 1130
+  kind: see
+  subject: kashiwagi
+  true_subject: kashiwagi
+  place: garden
+  from: cliff
+- t: 1125
+  clock: 1日目 18:45
+  t1: 1140
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: garden
+  from: cliff
+- t: 1130
+  clock: 1日目 18:50
+  t1: 1135
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: garden
+  from: cliff
+- t: 1140
+  clock: 1日目 19:00
+  t1: 1145
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: garden
+  from: garden
+- t: 1145
+  clock: 1日目 19:05
+  t1: 1150
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: gallery
+  from: hall
+- t: 1145
+  clock: 1日目 19:05
+  t1: 1150
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: gallery
+  from: hall
+- t: 1145
+  clock: 1日目 19:05
+  t1: 1150
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: hall
+  from: hall
+- t: 1145
+  clock: 1日目 19:05
+  t1: 1150
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: gallery
+  from: hall
+- t: 1150
+  clock: 1日目 19:10
+  t1: 1185
+  kind: see
+  subject: kashiwagi
+  true_subject: kashiwagi
+  place: dining
+  from: dining
+- t: 1150
+  clock: 1日目 19:10
+  t1: 1185
+  kind: see
+  subject: sudo
+  true_subject: sudo
+  place: dining
+  from: dining
+- t: 1150
+  clock: 1日目 19:10
+  t1: 1185
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: dining
+  from: dining
+- t: 1150
+  clock: 1日目 19:10
+  t1: 1185
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: dining
+  from: dining
+- t: 1150
+  clock: 1日目 19:10
+  t1: 1185
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: dining
+  from: dining
+- t: 1150
+  clock: 1日目 19:10
+  t1: 1185
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: dining
+  from: dining
+- t: 1155
+  clock: 1日目 19:15
+  t1: 1185
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: dining
+  from: dining
+- t: 1155
+  clock: 1日目 19:15
+  t1: 1185
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: dining
+  from: dining
+- t: 1155
+  clock: 1日目 19:15
+  t1: 1185
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: dining
+  from: dining
+- t: 1170
+  clock: 1日目 19:30
+  kind: told
+  place: dining
+  speaker: kuga
+  what: 遺言：四日目の朝の船まで島に残った者で遺産を等分する
+- t: 1185
+  clock: 1日目 19:45
+  t1: 1190
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: hall
+  from: hall
+- t: 1185
+  clock: 1日目 19:45
+  t1: 1190
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: hall
+  from: hall
+- t: 1185
+  clock: 1日目 19:45
+  t1: 1190
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: hall
+  from: hall
+- t: 1185
+  clock: 1日目 19:45
+  t1: 1190
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: hall
+  from: hall
+- t: 1185
+  clock: 1日目 19:45
+  t1: 1190
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: hall
+  from: hall
+- t: 1190
+  clock: 1日目 19:50
+  t1: 1195
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: garden
+  from: garden
+- t: 1195
+  clock: 1日目 19:55
+  t1: 1205
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: cliff
+  from: cliff
+- t: 1200
+  clock: 1日目 20:00
+  t1: 1205
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: garden
+  from: garden
+- t: 1205
+  clock: 1日目 20:05
+  t1: 1215
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: billiard
+  from: billiard
+- t: 1215
+  clock: 1日目 20:15
+  t1: 1220
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: hall
+  from: hall
+- t: 1220
+  clock: 1日目 20:20
+  t1: 1225
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: gallery
+  from: hall
+- t: 1220
+  clock: 1日目 20:20
+  t1: 1275
+  kind: see
+  subject: kashiwagi
+  true_subject: kashiwagi
+  place: hall
+  from: hall
+- t: 1245
+  clock: 1日目 20:45
+  t1: 1250
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: hall
+  from: hall
+- t: 1245
+  clock: 1日目 20:45
+  t1: 1250
+  kind: silhouette
+  subject: null
+  true_subject: chihaya
+  place: hall
+  from: hall
+- t: 1275
+  clock: 1日目 21:15
+  t1: 1280
+  kind: silhouette
+  subject: null
+  true_subject: odagiri
+  place: hall
+  from: hall
+- t: 1290
+  clock: 1日目 21:30
+  t1: 1315
+  kind: see
+  subject: kashiwagi
+  true_subject: kashiwagi
+  place: kitchen
+  from: kitchen
+- t: 1290
+  clock: 1日目 21:30
+  t1: 1315
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: kitchen
+  from: kitchen
+- t: 1290
+  clock: 1日目 21:30
+  t1: 1315
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: kitchen
+  from: kitchen
+- t: 1295
+  clock: 1日目 21:35
+  t1: 1315
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: kitchen
+  from: kitchen
+- t: 1300
+  clock: 1日目 21:40
+  t1: 1315
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: kitchen
+  from: kitchen
+- t: 1305
+  clock: 1日目 21:45
+  t1: 1315
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: kitchen
+  from: kitchen
+- t: 1305
+  clock: 1日目 21:45
+  t1: 1315
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: kitchen
+  from: kitchen
+- t: 1305
+  clock: 1日目 21:45
+  t1: 1315
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: kitchen
+  from: kitchen
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: enami
+  what: 須藤ミネが死んだのは19:30から21:00のあいだ
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: kashiwagi
+  statement: S001
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: shuichi
+  statement: S002
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: reiko
+  statement: S003
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: enami
+  statement: S004
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: kuga
+  statement: S005
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: odagiri
+  statement: S007
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: togawa
+  statement: S008
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: chihaya
+  statement: S009
+- t: 1315
+  clock: 1日目 21:55
+  t1: 1320
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: dining
+  from: dining
+- t: 1320
+  clock: 1日目 22:00
+  t1: 1325
+  kind: silhouette
+  subject: null
+  true_subject: togawa
+  place: hall
+  from: hall
+- t: 1325
+  clock: 1日目 22:05
+  t1: 1330
+  kind: silhouette
+  subject: null
+  true_subject: togawa
+  place: gallery
+  from: gallery
+- t: 1335
+  clock: 1日目 22:15
+  t1: 1340
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: gallery
+  from: gallery
+- t: 1335
+  clock: 1日目 22:15
+  t1: 1340
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: gallery
+  from: gallery
+- t: 1355
+  clock: 1日目 22:35
+  kind: sleep
+  place: W2
+- t: 1845
+  clock: 2日目 06:45
+  kind: wake
+  place: W2
+- t: 1890
+  clock: 2日目 07:30
+  t1: 1895
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: w_cor
+  from: w_cor
+- t: 1895
+  clock: 2日目 07:35
+  t1: 1900
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: gallery
+  from: gallery
+- t: 1895
+  clock: 2日目 07:35
+  t1: 1900
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: gallery
+  from: gallery
+- t: 1895
+  clock: 2日目 07:35
+  t1: 1900
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: hall
+  from: gallery
+- t: 1895
+  clock: 2日目 07:35
+  t1: 1900
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: gallery
+  from: gallery
+- t: 1900
+  clock: 2日目 07:40
+  t1: 1905
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: hall
+  from: hall
+- t: 1900
+  clock: 2日目 07:40
+  t1: 1905
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: hall
+  from: hall
+- t: 1900
+  clock: 2日目 07:40
+  t1: 1905
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: hall
+  from: hall
+- t: 1905
+  clock: 2日目 07:45
+  t1: 1935
+  kind: see
+  subject: kashiwagi
+  true_subject: kashiwagi
+  place: dining
+  from: dining
+- t: 1905
+  clock: 2日目 07:45
+  t1: 1935
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: dining
+  from: dining
+- t: 1905
+  clock: 2日目 07:45
+  t1: 1935
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: dining
+  from: dining
+- t: 1905
+  clock: 2日目 07:45
+  t1: 1935
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: dining
+  from: dining
+- t: 1905
+  clock: 2日目 07:45
+  t1: 1935
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: dining
+  from: dining
+- t: 1905
+  clock: 2日目 07:45
+  t1: 1935
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: dining
+  from: dining
+- t: 1905
+  clock: 2日目 07:45
+  t1: 1935
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: dining
+  from: dining
+- t: 1905
+  clock: 2日目 07:45
+  t1: 1935
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: dining
+  from: dining
+- t: 1935
+  clock: 2日目 08:15
+  t1: 1940
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: hall
+  from: hall
+- t: 1935
+  clock: 2日目 08:15
+  t1: 1940
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: hall
+  from: hall
+- t: 1935
+  clock: 2日目 08:15
+  t1: 1940
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: hall
+  from: hall
+- t: 1935
+  clock: 2日目 08:15
+  t1: 1940
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: hall
+  from: hall
+- t: 1935
+  clock: 2日目 08:15
+  t1: 1940
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: hall
+  from: hall
+- t: 1940
+  clock: 2日目 08:20
+  t1: 1950
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: garden
+  from: garden
+- t: 1940
+  clock: 2日目 08:20
+  t1: 1980
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: garden
+  from: garden
+- t: 1965
+  clock: 2日目 08:45
+  t1: 1980
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: garden
+  from: garden
+- t: 1980
+  clock: 2日目 09:00
+  t1: 1985
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: hall
+  from: hall
+- t: 1980
+  clock: 2日目 09:00
+  t1: 1985
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: hall
+  from: hall
+- t: 1985
+  clock: 2日目 09:05
+  t1: 2010
+  kind: see
+  subject: kashiwagi
+  true_subject: kashiwagi
+  place: dining
+  from: dining
+- t: 1985
+  clock: 2日目 09:05
+  t1: 2010
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: dining
+  from: dining
+- t: 1985
+  clock: 2日目 09:05
+  t1: 2010
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: dining
+  from: dining
+- t: 1985
+  clock: 2日目 09:05
+  t1: 2010
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: dining
+  from: dining
+- t: 1985
+  clock: 2日目 09:05
+  t1: 2010
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: dining
+  from: dining
+- t: 1985
+  clock: 2日目 09:05
+  t1: 2010
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: dining
+  from: dining
+- t: 1995
+  clock: 2日目 09:15
+  t1: 2010
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: dining
+  from: dining
+- t: 2005
+  clock: 2日目 09:25
+  kind: told
+  place: dining
+  speaker: enami
+  what: 久我が死んだのは08:25から09:25のあいだ
+- t: 2005
+  clock: 2日目 09:25
+  kind: told
+  place: dining
+  speaker: kashiwagi
+  statement: S010
+- t: 2005
+  clock: 2日目 09:25
+  kind: told
+  place: dining
+  speaker: shuichi
+  statement: S011
+- t: 2005
+  clock: 2日目 09:25
+  kind: told
+  place: dining
+  speaker: reiko
+  statement: S012
+- t: 2005
+  clock: 2日目 09:25
+  kind: told
+  place: dining
+  speaker: enami
+  statement: S013
+- t: 2005
+  clock: 2日目 09:25
+  kind: told
+  place: dining
+  speaker: odagiri
+  statement: S015
+- t: 2005
+  clock: 2日目 09:25
+  kind: told
+  place: dining
+  speaker: togawa
+  statement: S016
+- t: 2005
+  clock: 2日目 09:25
+  kind: told
+  place: dining
+  speaker: chihaya
+  statement: S017
+- t: 2010
+  clock: 2日目 09:30
+  t1: 2015
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: hall
+  from: hall
+- t: 2010
+  clock: 2日目 09:30
+  t1: 2015
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: hall
+  from: hall
+- t: 2015
+  clock: 2日目 09:35
+  t1: 2020
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: garden
+  from: garden
+- t: 2015
+  clock: 2日目 09:35
+  t1: 2025
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: garden
+  from: garden
+- t: 2055
+  clock: 2日目 10:15
+  t1: 2115
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: garden
+  from: garden
+- t: 2075
+  clock: 2日目 10:35
+  t1: 2130
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: garden
+  from: garden
+- t: 2170
+  clock: 2日目 12:10
+  t1: 2180
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: billiard
+  from: billiard
+- t: 2180
+  clock: 2日目 12:20
+  t1: 2185
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: hall
+  from: hall
+- t: 2180
+  clock: 2日目 12:20
+  t1: 2210
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: gallery
+  from: hall
+- t: 2180
+  clock: 2日目 12:20
+  t1: 2210
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: gallery
+  from: hall
+- t: 2180
+  clock: 2日目 12:20
+  t1: 2210
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: gallery
+  from: hall
+- t: 2185
+  clock: 2日目 12:25
+  t1: 2210
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: gallery
+  from: gallery
+- t: 2185
+  clock: 2日目 12:25
+  t1: 2210
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: gallery
+  from: gallery
+- t: 2205
+  clock: 2日目 12:45
+  kind: told
+  place: gallery
+  speaker: enami
+  what: 鷹野玲子が死んだのは10:35から11:50のあいだ
+- t: 2205
+  clock: 2日目 12:45
+  kind: told
+  place: gallery
+  speaker: shuichi
+  statement: S018
+- t: 2205
+  clock: 2日目 12:45
+  kind: told
+  place: gallery
+  speaker: enami
+  statement: S019
+- t: 2205
+  clock: 2日目 12:45
+  kind: told
+  place: gallery
+  speaker: odagiri
+  statement: S021
+- t: 2205
+  clock: 2日目 12:45
+  kind: told
+  place: gallery
+  speaker: togawa
+  statement: S022
+- t: 2205
+  clock: 2日目 12:45
+  kind: told
+  place: gallery
+  speaker: chihaya
+  statement: S023
+- t: 2210
+  clock: 2日目 12:50
+  t1: 2215
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: hall
+  from: hall
+- t: 2210
+  clock: 2日目 12:50
+  t1: 2215
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: hall
+  from: hall
+- t: 2210
+  clock: 2日目 12:50
+  t1: 2215
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: hall
+  from: hall
+- t: 2210
+  clock: 2日目 12:50
+  t1: 2215
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: hall
+  from: hall
+- t: 2210
+  clock: 2日目 12:50
+  t1: 2215
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: hall
+  from: hall
+- t: 2215
+  clock: 2日目 12:55
+  t1: 2235
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: dining
+  from: dining
+- t: 2215
+  clock: 2日目 12:55
+  t1: 2235
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: dining
+  from: dining
+- t: 2215
+  clock: 2日目 12:55
+  t1: 2235
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: dining
+  from: dining
+- t: 2215
+  clock: 2日目 12:55
+  t1: 2235
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: dining
+  from: dining
+- t: 2215
+  clock: 2日目 12:55
+  t1: 2235
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: dining
+  from: dining
+- t: 2235
+  clock: 2日目 13:15
+  kind: hear
+  place: kitchen
+  sound: scream
+  source: ここ
+  true_source: kitchen
+  true_who: shuichi
+- t: 2235
+  clock: 2日目 13:15
+  t1: 2265
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: kitchen
+  from: kitchen
+- t: 2235
+  clock: 2日目 13:15
+  t1: 2300
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: kitchen
+  from: kitchen
+- t: 2235
+  clock: 2日目 13:15
+  t1: 2300
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: kitchen
+  from: kitchen
+- t: 2235
+  clock: 2日目 13:15
+  t1: 2300
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: kitchen
+  from: kitchen
+- t: 2235
+  clock: 2日目 13:15
+  t1: 2300
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: kitchen
+  from: kitchen
+- t: 2265
+  clock: 2日目 13:45
+  kind: hear
+  place: kitchen
+  sound: scream
+  source: ここ
+  true_source: kitchen
+  true_who: shuichi
+- t: 2295
+  clock: 2日目 14:15
+  kind: told
+  place: kitchen
+  speaker: enami
+  what: 小田切遥が死んだのは12:45から14:30のあいだ
+- t: 2295
+  clock: 2日目 14:15
+  kind: told
+  place: kitchen
+  speaker: shuichi
+  statement: S024
+- t: 2295
+  clock: 2日目 14:15
+  kind: told
+  place: kitchen
+  speaker: enami
+  statement: S025
+- t: 2295
+  clock: 2日目 14:15
+  kind: told
+  place: kitchen
+  speaker: togawa
+  statement: S027
+- t: 2295
+  clock: 2日目 14:15
+  kind: told
+  place: kitchen
+  speaker: chihaya
+  statement: S028
+- t: 2300
+  clock: 2日目 14:20
+  t1: 2305
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: dining
+  from: dining
+- t: 2305
+  clock: 2日目 14:25
+  t1: 2310
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: hall
+  from: hall
+- t: 2310
+  clock: 2日目 14:30
+  t1: 2315
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: gallery
+  from: gallery
+- t: 2315
+  clock: 2日目 14:35
+  t1: 2320
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: w_cor
+  from: w_cor
+- t: 2345
+  clock: 2日目 15:05
+  t1: 2350
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: w_cor
+  from: w_cor
+- t: 2350
+  clock: 2日目 15:10
+  t1: 2355
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: w_stair
+  from: w_stair
+- t: 2355
+  clock: 2日目 15:15
+  t1: 2360
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: billiard
+  from: billiard
+- t: 2360
+  clock: 2日目 15:20
+  t1: 2365
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: garden
+  from: garden
+- t: 2480
+  clock: 2日目 17:20
+  t1: 2485
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: w_cor
+  from: w_cor
+- t: 2495
+  clock: 2日目 17:35
+  t1: 2500
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: w_cor
+  from: w_cor
+- t: 2580
+  clock: 2日目 19:00
+  t1: 2585
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: gallery
+  from: hall
+- t: 2580
+  clock: 2日目 19:00
+  t1: 2585
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: gallery
+  from: hall
+- t: 2580
+  clock: 2日目 19:00
+  t1: 2585
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: hall
+  from: hall
+- t: 2585
+  clock: 2日目 19:05
+  t1: 2625
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: dining
+  from: dining
+- t: 2590
+  clock: 2日目 19:10
+  t1: 2625
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: dining
+  from: dining
+- t: 2590
+  clock: 2日目 19:10
+  t1: 2625
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: dining
+  from: dining
+- t: 2595
+  clock: 2日目 19:15
+  t1: 2625
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: dining
+  from: dining
+- t: 2625
+  clock: 2日目 19:45
+  t1: 2630
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: hall
+  from: hall
+- t: 2625
+  clock: 2日目 19:45
+  t1: 2630
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: hall
+  from: hall
+- t: 2705
+  clock: 2日目 21:05
+  t1: 2725
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: dining
+  from: dining
+- t: 2845
+  clock: 2日目 23:25
+  kind: reoriented
+  place: e_cor
+  believed_place: w_cor
+  why: 鍵が合わない
+  was_believed: w_cor
+- t: 2860
+  clock: 2日目 23:40
+  kind: reoriented
+  place: e_cor
+  believed_place: w_cor
+  why: 鍵が合わない
+  was_believed: w_cor
+- t: 2875
+  clock: 2日目 23:55
+  kind: reoriented
+  place: e_cor
+  believed_place: w_cor
+  why: 鍵が合わない
+  was_believed: w_cor
+- t: 2895
+  clock: 3日目 00:15
+  kind: sleep
+  place: W2
+- t: 3260
+  clock: 3日目 06:20
+  kind: wake
+  place: W2
+- t: 3330
+  clock: 3日目 07:30
+  t1: 3335
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: w_cor
+  from: w_cor
+- t: 3335
+  clock: 3日目 07:35
+  t1: 3340
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: gallery
+  from: gallery
+- t: 3335
+  clock: 3日目 07:35
+  t1: 3340
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: gallery
+  from: gallery
+- t: 3340
+  clock: 3日目 07:40
+  t1: 3345
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: hall
+  from: hall
+- t: 3340
+  clock: 3日目 07:40
+  t1: 3345
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: hall
+  from: hall
+- t: 3345
+  clock: 3日目 07:45
+  t1: 3375
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: dining
+  from: dining
+- t: 3345
+  clock: 3日目 07:45
+  t1: 3375
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: dining
+  from: dining
+- t: 3375
+  clock: 3日目 08:15
+  t1: 3380
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: hall
+  from: hall
+- t: 3375
+  clock: 3日目 08:15
+  t1: 3380
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: hall
+  from: hall
+- t: 3380
+  clock: 3日目 08:20
+  t1: 3385
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: gallery
+  from: gallery
+- t: 3380
+  clock: 3日目 08:20
+  t1: 3385
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: gallery
+  from: gallery
+- t: 3385
+  clock: 3日目 08:25
+  t1: 3390
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: w_cor
+  from: w_cor
+- t: 3385
+  clock: 3日目 08:25
+  t1: 3390
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: w_cor
+  from: w_cor
+- t: 3390
+  clock: 3日目 08:30
+  kind: hear
+  place: W3
+  sound: scream
+  source: ここ
+  true_source: W3
+  true_who: enami
+- t: 3390
+  clock: 3日目 08:30
+  t1: 3425
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: W3
+  from: W3
+- t: 3390
+  clock: 3日目 08:30
+  t1: 3425
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: W3
+  from: W3
+- t: 3420
+  clock: 3日目 09:00
+  kind: told
+  place: W3
+  speaker: enami
+  what: 鷹野修一が死んだのは22:35から23:20のあいだ
+- t: 3420
+  clock: 3日目 09:00
+  kind: told
+  place: W3
+  speaker: enami
+  statement: S029
+- t: 3420
+  clock: 3日目 09:00
+  kind: told
+  place: W3
+  speaker: chihaya
+  statement: S031
+- t: 3425
+  clock: 3日目 09:05
+  t1: 3430
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: w_cor
+  from: w_cor
+- t: 3640
+  clock: 3日目 12:40
+  kind: find
+  place: hall
+  subject: enami
+  what: 江波が死んでいる
+- t: 3645
+  clock: 3日目 12:45
+  kind: last
+  place: hall
+  subject: chihaya
+  what: 千早が殴った
+  identified: true
+odagiri:
+- t: 900
+  clock: 1日目 15:00
+  t1: 905
+  kind: see
+  subject: kashiwagi
+  true_subject: kashiwagi
+  place: hall
+  from: gallery
+- t: 900
+  clock: 1日目 15:00
+  t1: 905
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: gallery
+  from: gallery
+- t: 900
+  clock: 1日目 15:00
+  t1: 905
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: gallery
+  from: gallery
+- t: 900
+  clock: 1日目 15:00
+  t1: 905
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: gallery
+  from: gallery
+- t: 900
+  clock: 1日目 15:00
+  t1: 905
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: gallery
+  from: gallery
+- t: 900
+  clock: 1日目 15:00
+  t1: 905
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: gallery
+  from: gallery
+- t: 900
+  clock: 1日目 15:00
+  t1: 905
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: hall
+  from: gallery
+- t: 905
+  clock: 1日目 15:05
+  t1: 910
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: e_cor
+  from: e_cor
+- t: 905
+  clock: 1日目 15:05
+  t1: 910
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: e_cor
+  from: e_cor
+- t: 990
+  clock: 1日目 16:30
+  t1: 995
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: e_cor
+  from: e_cor
+- t: 995
+  clock: 1日目 16:35
+  t1: 1000
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: gallery
+  from: gallery
+- t: 995
+  clock: 1日目 16:35
+  t1: 1000
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: gallery
+  from: gallery
+- t: 995
+  clock: 1日目 16:35
+  t1: 1005
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: hall
+  from: gallery
+- t: 1000
+  clock: 1日目 16:40
+  t1: 1005
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: hall
+  from: hall
+- t: 1000
+  clock: 1日目 16:40
+  t1: 1005
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: hall
+  from: hall
+- t: 1005
+  clock: 1日目 16:45
+  t1: 1035
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: garden
+  from: garden
+- t: 1035
+  clock: 1日目 17:15
+  t1: 1065
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: library
+  from: library
+- t: 1050
+  clock: 1日目 17:30
+  t1: 1065
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: library
+  from: library
+- t: 1050
+  clock: 1日目 17:30
+  t1: 1065
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: library
+  from: library
+- t: 1065
+  clock: 1日目 17:45
+  t1: 1070
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: pier
+  from: garden
+- t: 1125
+  clock: 1日目 18:45
+  t1: 1130
+  kind: see
+  subject: kashiwagi
+  true_subject: kashiwagi
+  place: garden
+  from: garden
+- t: 1125
+  clock: 1日目 18:45
+  t1: 1140
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: cliff
+  from: garden
+- t: 1130
+  clock: 1日目 18:50
+  t1: 1135
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: garden
+  from: garden
+- t: 1135
+  clock: 1日目 18:55
+  t1: 1140
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: pier
+  from: garden
+- t: 1140
+  clock: 1日目 19:00
+  t1: 1145
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: hall
+  from: hall
+- t: 1145
+  clock: 1日目 19:05
+  t1: 1185
+  kind: see
+  subject: kashiwagi
+  true_subject: kashiwagi
+  place: dining
+  from: dining
+- t: 1145
+  clock: 1日目 19:05
+  t1: 1185
+  kind: see
+  subject: sudo
+  true_subject: sudo
+  place: dining
+  from: dining
+- t: 1145
+  clock: 1日目 19:05
+  t1: 1185
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: dining
+  from: dining
+- t: 1145
+  clock: 1日目 19:05
+  t1: 1185
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: dining
+  from: dining
+- t: 1150
+  clock: 1日目 19:10
+  t1: 1185
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: dining
+  from: dining
+- t: 1150
+  clock: 1日目 19:10
+  t1: 1185
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: dining
+  from: dining
+- t: 1155
+  clock: 1日目 19:15
+  t1: 1185
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: dining
+  from: dining
+- t: 1155
+  clock: 1日目 19:15
+  t1: 1185
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: dining
+  from: dining
+- t: 1155
+  clock: 1日目 19:15
+  t1: 1185
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: dining
+  from: dining
+- t: 1170
+  clock: 1日目 19:30
+  kind: told
+  place: dining
+  speaker: kuga
+  what: 遺言：四日目の朝の船まで島に残った者で遺産を等分する
+- t: 1185
+  clock: 1日目 19:45
+  t1: 1190
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: hall
+  from: hall
+- t: 1185
+  clock: 1日目 19:45
+  t1: 1190
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: hall
+  from: hall
+- t: 1185
+  clock: 1日目 19:45
+  t1: 1190
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: hall
+  from: hall
+- t: 1185
+  clock: 1日目 19:45
+  t1: 1190
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: hall
+  from: hall
+- t: 1185
+  clock: 1日目 19:45
+  t1: 1190
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: hall
+  from: hall
+- t: 1190
+  clock: 1日目 19:50
+  t1: 1195
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: garden
+  from: garden
+- t: 1195
+  clock: 1日目 19:55
+  t1: 1200
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: cliff
+  from: cliff
+- t: 1200
+  clock: 1日目 20:00
+  t1: 1205
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: garden
+  from: cliff
+- t: 1200
+  clock: 1日目 20:00
+  t1: 1230
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: garden
+  from: cliff
+- t: 1245
+  clock: 1日目 20:45
+  t1: 1250
+  kind: silhouette
+  subject: null
+  true_subject: kuga
+  place: garden
+  from: garden
+- t: 1265
+  clock: 1日目 21:05
+  t1: 1270
+  kind: silhouette
+  subject: null
+  true_subject: kuga
+  place: garden
+  from: garden
+- t: 1270
+  clock: 1日目 21:10
+  t1: 1275
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: billiard
+  from: billiard
+- t: 1275
+  clock: 1日目 21:15
+  t1: 1280
+  kind: silhouette
+  subject: null
+  true_subject: haijima
+  place: hall
+  from: hall
+- t: 1295
+  clock: 1日目 21:35
+  t1: 1315
+  kind: see
+  subject: kashiwagi
+  true_subject: kashiwagi
+  place: kitchen
+  from: kitchen
+- t: 1295
+  clock: 1日目 21:35
+  t1: 1315
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: kitchen
+  from: kitchen
+- t: 1295
+  clock: 1日目 21:35
+  t1: 1315
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: kitchen
+  from: kitchen
+- t: 1295
+  clock: 1日目 21:35
+  t1: 1315
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: kitchen
+  from: kitchen
+- t: 1300
+  clock: 1日目 21:40
+  t1: 1315
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: kitchen
+  from: kitchen
+- t: 1305
+  clock: 1日目 21:45
+  t1: 1315
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: kitchen
+  from: kitchen
+- t: 1305
+  clock: 1日目 21:45
+  t1: 1315
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: kitchen
+  from: kitchen
+- t: 1305
+  clock: 1日目 21:45
+  t1: 1315
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: kitchen
+  from: kitchen
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: enami
+  what: 須藤ミネが死んだのは19:30から21:00のあいだ
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: kashiwagi
+  statement: S001
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: shuichi
+  statement: S002
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: reiko
+  statement: S003
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: enami
+  statement: S004
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: kuga
+  statement: S005
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: haijima
+  statement: S006
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: togawa
+  statement: S008
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: chihaya
+  statement: S009
+- t: 1315
+  clock: 1日目 21:55
+  t1: 1320
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: garden
+  from: garden
+- t: 1315
+  clock: 1日目 21:55
+  t1: 1320
+  kind: silhouette
+  subject: null
+  true_subject: enami
+  place: garden
+  from: garden
+- t: 1315
+  clock: 1日目 21:55
+  t1: 1320
+  kind: silhouette
+  subject: null
+  true_subject: kuga
+  place: garden
+  from: garden
+- t: 1315
+  clock: 1日目 21:55
+  t1: 1320
+  kind: silhouette
+  subject: null
+  true_subject: chihaya
+  place: garden
+  from: garden
+- t: 1320
+  clock: 1日目 22:00
+  t1: 1325
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: library
+  from: library
+- t: 1320
+  clock: 1日目 22:00
+  t1: 1325
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: library
+  from: library
+- t: 1325
+  clock: 1日目 22:05
+  t1: 1330
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: e_stair
+  from: e_stair
+- t: 1325
+  clock: 1日目 22:05
+  t1: 1330
+  kind: silhouette
+  subject: null
+  true_subject: kuga
+  place: e_stair
+  from: e_stair
+- t: 1330
+  clock: 1日目 22:10
+  t1: 1335
+  kind: silhouette
+  subject: null
+  true_subject: kuga
+  place: e_cor
+  from: e_cor
+- t: 1335
+  clock: 1日目 22:15
+  t1: 1340
+  kind: silhouette
+  subject: null
+  true_subject: haijima
+  place: gallery
+  from: gallery
+- t: 1335
+  clock: 1日目 22:15
+  t1: 1340
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: gallery
+  from: gallery
+- t: 1340
+  clock: 1日目 22:20
+  t1: 1345
+  kind: silhouette
+  subject: null
+  true_subject: togawa
+  place: hall
+  from: hall
+- t: 1345
+  clock: 1日目 22:25
+  t1: 1360
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: dining
+  from: dining
+- t: 1385
+  clock: 1日目 23:05
+  t1: 1390
+  kind: silhouette
+  subject: null
+  true_subject: shuichi
+  place: gallery
+  from: gallery
+- t: 1385
+  clock: 1日目 23:05
+  t1: 1390
+  kind: silhouette
+  subject: null
+  true_subject: chihaya
+  place: gallery
+  from: gallery
+- t: 1390
+  clock: 1日目 23:10
+  t1: 1395
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: e_cor
+  from: e_cor
+- t: 1400
+  clock: 1日目 23:20
+  kind: sleep
+  place: E2
+- t: 1800
+  clock: 2日目 06:00
+  kind: wake
+  place: E2
+- t: 1885
+  clock: 2日目 07:25
+  t1: 1890
+  kind: see
+  subject: kashiwagi
+  true_subject: kashiwagi
+  place: hall
+  from: gallery
+- t: 1885
+  clock: 2日目 07:25
+  t1: 1890
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: hall
+  from: gallery
+- t: 1890
+  clock: 2日目 07:30
+  t1: 1895
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: gallery
+  from: hall
+- t: 1895
+  clock: 2日目 07:35
+  t1: 1935
+  kind: see
+  subject: kashiwagi
+  true_subject: kashiwagi
+  place: dining
+  from: dining
+- t: 1895
+  clock: 2日目 07:35
+  t1: 1935
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: dining
+  from: dining
+- t: 1895
+  clock: 2日目 07:35
+  t1: 1935
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: dining
+  from: dining
+- t: 1900
+  clock: 2日目 07:40
+  t1: 1935
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: dining
+  from: dining
+- t: 1905
+  clock: 2日目 07:45
+  t1: 1935
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: dining
+  from: dining
+- t: 1905
+  clock: 2日目 07:45
+  t1: 1935
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: dining
+  from: dining
+- t: 1905
+  clock: 2日目 07:45
+  t1: 1935
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: dining
+  from: dining
+- t: 1905
+  clock: 2日目 07:45
+  t1: 1935
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: dining
+  from: dining
+- t: 1935
+  clock: 2日目 08:15
+  t1: 1940
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: hall
+  from: hall
+- t: 1935
+  clock: 2日目 08:15
+  t1: 1940
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: hall
+  from: hall
+- t: 1935
+  clock: 2日目 08:15
+  t1: 1940
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: hall
+  from: hall
+- t: 1935
+  clock: 2日目 08:15
+  t1: 1940
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: hall
+  from: hall
+- t: 1935
+  clock: 2日目 08:15
+  t1: 1940
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: hall
+  from: hall
+- t: 1940
+  clock: 2日目 08:20
+  t1: 1950
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: garden
+  from: garden
+- t: 1940
+  clock: 2日目 08:20
+  t1: 1950
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: garden
+  from: garden
+- t: 1950
+  clock: 2日目 08:30
+  t1: 1965
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: hall
+  from: hall
+- t: 1955
+  clock: 2日目 08:35
+  t1: 1960
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: hall
+  from: hall
+- t: 1965
+  clock: 2日目 08:45
+  t1: 1980
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: garden
+  from: garden
+- t: 1965
+  clock: 2日目 08:45
+  t1: 1980
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: garden
+  from: garden
+- t: 1980
+  clock: 2日目 09:00
+  t1: 1985
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: hall
+  from: hall
+- t: 1980
+  clock: 2日目 09:00
+  t1: 1985
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: hall
+  from: hall
+- t: 1985
+  clock: 2日目 09:05
+  t1: 2010
+  kind: see
+  subject: kashiwagi
+  true_subject: kashiwagi
+  place: dining
+  from: dining
+- t: 1985
+  clock: 2日目 09:05
+  t1: 2010
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: dining
+  from: dining
+- t: 1985
+  clock: 2日目 09:05
+  t1: 2010
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: dining
+  from: dining
+- t: 1985
+  clock: 2日目 09:05
+  t1: 2010
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: dining
+  from: dining
+- t: 1985
+  clock: 2日目 09:05
+  t1: 2010
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: dining
+  from: dining
+- t: 1985
+  clock: 2日目 09:05
+  t1: 2070
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: dining
+  from: dining
+- t: 1995
+  clock: 2日目 09:15
+  t1: 2055
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: dining
+  from: dining
+- t: 2005
+  clock: 2日目 09:25
+  kind: told
+  place: dining
+  speaker: enami
+  what: 久我が死んだのは08:25から09:25のあいだ
+- t: 2005
+  clock: 2日目 09:25
+  kind: told
+  place: dining
+  speaker: kashiwagi
+  statement: S010
+- t: 2005
+  clock: 2日目 09:25
+  kind: told
+  place: dining
+  speaker: shuichi
+  statement: S011
+- t: 2005
+  clock: 2日目 09:25
+  kind: contradiction
+  place: dining
+  subject: shuichi
+  statement: S011
+  what: 鷹野修一は食堂にいたと言うが、自分はホールで見た
+- t: 2005
+  clock: 2日目 09:25
+  kind: told
+  place: dining
+  speaker: reiko
+  statement: S012
+- t: 2005
+  clock: 2日目 09:25
+  kind: told
+  place: dining
+  speaker: enami
+  statement: S013
+- t: 2005
+  clock: 2日目 09:25
+  kind: told
+  place: dining
+  speaker: haijima
+  statement: S014
+- t: 2005
+  clock: 2日目 09:25
+  kind: told
+  place: dining
+  speaker: togawa
+  statement: S016
+- t: 2005
+  clock: 2日目 09:25
+  kind: told
+  place: dining
+  speaker: chihaya
+  statement: S017
+- t: 2070
+  clock: 2日目 10:30
+  t1: 2075
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: hall
+  from: hall
+- t: 2180
+  clock: 2日目 12:20
+  t1: 2185
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: hall
+  from: gallery
+- t: 2180
+  clock: 2日目 12:20
+  t1: 2185
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: hall
+  from: gallery
+- t: 2180
+  clock: 2日目 12:20
+  t1: 2210
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: gallery
+  from: gallery
+- t: 2180
+  clock: 2日目 12:20
+  t1: 2210
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: gallery
+  from: gallery
+- t: 2185
+  clock: 2日目 12:25
+  t1: 2210
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: gallery
+  from: gallery
+- t: 2185
+  clock: 2日目 12:25
+  t1: 2210
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: gallery
+  from: gallery
+- t: 2185
+  clock: 2日目 12:25
+  t1: 2210
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: gallery
+  from: gallery
+- t: 2205
+  clock: 2日目 12:45
+  kind: told
+  place: gallery
+  speaker: enami
+  what: 鷹野玲子が死んだのは10:35から11:50のあいだ
+- t: 2205
+  clock: 2日目 12:45
+  kind: told
+  place: gallery
+  speaker: shuichi
+  statement: S018
+- t: 2205
+  clock: 2日目 12:45
+  kind: told
+  place: gallery
+  speaker: enami
+  statement: S019
+- t: 2205
+  clock: 2日目 12:45
+  kind: told
+  place: gallery
+  speaker: haijima
+  statement: S020
+- t: 2205
+  clock: 2日目 12:45
+  kind: told
+  place: gallery
+  speaker: togawa
+  statement: S022
+- t: 2205
+  clock: 2日目 12:45
+  kind: told
+  place: gallery
+  speaker: chihaya
+  statement: S023
+- t: 2210
+  clock: 2日目 12:50
+  t1: 2215
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: hall
+  from: hall
+- t: 2210
+  clock: 2日目 12:50
+  t1: 2215
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: hall
+  from: hall
+- t: 2210
+  clock: 2日目 12:50
+  t1: 2215
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: hall
+  from: hall
+- t: 2210
+  clock: 2日目 12:50
+  t1: 2215
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: hall
+  from: hall
+- t: 2210
+  clock: 2日目 12:50
+  t1: 2215
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: hall
+  from: hall
+- t: 2215
+  clock: 2日目 12:55
+  t1: 2235
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: dining
+  from: dining
+- t: 2215
+  clock: 2日目 12:55
+  t1: 2235
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: dining
+  from: dining
+- t: 2215
+  clock: 2日目 12:55
+  t1: 2235
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: dining
+  from: dining
+- t: 2215
+  clock: 2日目 12:55
+  t1: 2235
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: dining
+  from: dining
+- t: 2215
+  clock: 2日目 12:55
+  t1: 2235
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: dining
+  from: dining
+- t: 2235
+  clock: 2日目 13:15
+  kind: hear
+  place: kitchen
+  sound: scream
+  source: ここ
+  true_source: kitchen
+  true_who: shuichi
+- t: 2235
+  clock: 2日目 13:15
+  t1: 2265
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: kitchen
+  from: kitchen
+- t: 2235
+  clock: 2日目 13:15
+  t1: 2265
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: kitchen
+  from: kitchen
+- t: 2235
+  clock: 2日目 13:15
+  t1: 2265
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: kitchen
+  from: kitchen
+- t: 2235
+  clock: 2日目 13:15
+  t1: 2265
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: kitchen
+  from: kitchen
+- t: 2235
+  clock: 2日目 13:15
+  t1: 2265
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: kitchen
+  from: kitchen
+- t: 2265
+  clock: 2日目 13:45
+  kind: last
+  place: kitchen
+  what: 喉が焼け、息ができなくなった
+  identified: false
+togawa:
+- t: 900
+  clock: 1日目 15:00
+  t1: 905
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: gallery
+  from: hall
+- t: 900
+  clock: 1日目 15:00
+  t1: 905
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: gallery
+  from: hall
+- t: 900
+  clock: 1日目 15:00
+  t1: 905
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: gallery
+  from: hall
+- t: 900
+  clock: 1日目 15:00
+  t1: 905
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: gallery
+  from: hall
+- t: 900
+  clock: 1日目 15:00
+  t1: 905
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: gallery
+  from: hall
+- t: 900
+  clock: 1日目 15:00
+  t1: 905
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: gallery
+  from: hall
+- t: 900
+  clock: 1日目 15:00
+  t1: 960
+  kind: see
+  subject: kashiwagi
+  true_subject: kashiwagi
+  place: hall
+  from: hall
+- t: 1005
+  clock: 1日目 16:45
+  t1: 1020
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: library
+  from: library
+- t: 1035
+  clock: 1日目 17:15
+  t1: 1065
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: library
+  from: library
+- t: 1050
+  clock: 1日目 17:30
+  t1: 1065
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: library
+  from: library
+- t: 1050
+  clock: 1日目 17:30
+  t1: 1080
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: library
+  from: library
+- t: 1080
+  clock: 1日目 18:00
+  t1: 1085
+  kind: see
+  subject: kashiwagi
+  true_subject: kashiwagi
+  place: hall
+  from: hall
+- t: 1080
+  clock: 1日目 18:00
+  t1: 1085
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: hall
+  from: hall
+- t: 1080
+  clock: 1日目 18:00
+  t1: 1085
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: hall
+  from: hall
+- t: 1125
+  clock: 1日目 18:45
+  t1: 1130
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: hall
+  from: hall
+- t: 1130
+  clock: 1日目 18:50
+  t1: 1135
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: cliff
+  from: garden
+- t: 1130
+  clock: 1日目 18:50
+  t1: 1140
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: garden
+  from: garden
+- t: 1140
+  clock: 1日目 19:00
+  t1: 1145
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: garden
+  from: garden
+- t: 1145
+  clock: 1日目 19:05
+  t1: 1150
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: gallery
+  from: hall
+- t: 1145
+  clock: 1日目 19:05
+  t1: 1150
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: gallery
+  from: hall
+- t: 1145
+  clock: 1日目 19:05
+  t1: 1150
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: hall
+  from: hall
+- t: 1145
+  clock: 1日目 19:05
+  t1: 1150
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: gallery
+  from: hall
+- t: 1150
+  clock: 1日目 19:10
+  t1: 1185
+  kind: see
+  subject: kashiwagi
+  true_subject: kashiwagi
+  place: dining
+  from: dining
+- t: 1150
+  clock: 1日目 19:10
+  t1: 1185
+  kind: see
+  subject: sudo
+  true_subject: sudo
+  place: dining
+  from: dining
+- t: 1150
+  clock: 1日目 19:10
+  t1: 1185
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: dining
+  from: dining
+- t: 1150
+  clock: 1日目 19:10
+  t1: 1185
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: dining
+  from: dining
+- t: 1150
+  clock: 1日目 19:10
+  t1: 1185
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: dining
+  from: dining
+- t: 1150
+  clock: 1日目 19:10
+  t1: 1185
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: dining
+  from: dining
+- t: 1155
+  clock: 1日目 19:15
+  t1: 1185
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: dining
+  from: dining
+- t: 1155
+  clock: 1日目 19:15
+  t1: 1185
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: dining
+  from: dining
+- t: 1155
+  clock: 1日目 19:15
+  t1: 1185
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: dining
+  from: dining
+- t: 1170
+  clock: 1日目 19:30
+  kind: told
+  place: dining
+  speaker: kuga
+  what: 遺言：四日目の朝の船まで島に残った者で遺産を等分する
+- t: 1185
+  clock: 1日目 19:45
+  t1: 1190
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: hall
+  from: hall
+- t: 1185
+  clock: 1日目 19:45
+  t1: 1190
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: hall
+  from: hall
+- t: 1185
+  clock: 1日目 19:45
+  t1: 1190
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: hall
+  from: hall
+- t: 1185
+  clock: 1日目 19:45
+  t1: 1190
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: hall
+  from: hall
+- t: 1185
+  clock: 1日目 19:45
+  t1: 1195
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: hall
+  from: hall
+- t: 1190
+  clock: 1日目 19:50
+  t1: 1195
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: gallery
+  from: gallery
+- t: 1195
+  clock: 1日目 19:55
+  t1: 1200
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: w_cor
+  from: w_cor
+- t: 1285
+  clock: 1日目 21:25
+  t1: 1290
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: w_cor
+  from: w_cor
+- t: 1290
+  clock: 1日目 21:30
+  t1: 1295
+  kind: silhouette
+  subject: null
+  true_subject: reiko
+  place: gallery
+  from: gallery
+- t: 1290
+  clock: 1日目 21:30
+  t1: 1295
+  kind: silhouette
+  subject: null
+  true_subject: enami
+  place: gallery
+  from: gallery
+- t: 1295
+  clock: 1日目 21:35
+  t1: 1300
+  kind: silhouette
+  subject: null
+  true_subject: reiko
+  place: hall
+  from: hall
+- t: 1295
+  clock: 1日目 21:35
+  t1: 1300
+  kind: silhouette
+  subject: null
+  true_subject: enami
+  place: hall
+  from: hall
+- t: 1300
+  clock: 1日目 21:40
+  t1: 1305
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: dining
+  from: dining
+- t: 1300
+  clock: 1日目 21:40
+  t1: 1305
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: dining
+  from: dining
+- t: 1305
+  clock: 1日目 21:45
+  t1: 1315
+  kind: see
+  subject: kashiwagi
+  true_subject: kashiwagi
+  place: kitchen
+  from: kitchen
+- t: 1305
+  clock: 1日目 21:45
+  t1: 1315
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: kitchen
+  from: kitchen
+- t: 1305
+  clock: 1日目 21:45
+  t1: 1315
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: kitchen
+  from: kitchen
+- t: 1305
+  clock: 1日目 21:45
+  t1: 1315
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: kitchen
+  from: kitchen
+- t: 1305
+  clock: 1日目 21:45
+  t1: 1315
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: kitchen
+  from: kitchen
+- t: 1305
+  clock: 1日目 21:45
+  t1: 1315
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: kitchen
+  from: kitchen
+- t: 1305
+  clock: 1日目 21:45
+  t1: 1315
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: kitchen
+  from: kitchen
+- t: 1305
+  clock: 1日目 21:45
+  t1: 1315
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: kitchen
+  from: kitchen
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: enami
+  what: 須藤ミネが死んだのは19:30から21:00のあいだ
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: kashiwagi
+  statement: S001
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: shuichi
+  statement: S002
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: reiko
+  statement: S003
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: enami
+  statement: S004
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: kuga
+  statement: S005
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: haijima
+  statement: S006
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: odagiri
+  statement: S007
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: chihaya
+  statement: S009
+- t: 1315
+  clock: 1日目 21:55
+  t1: 1320
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: dining
+  from: dining
+- t: 1320
+  clock: 1日目 22:00
+  t1: 1325
+  kind: silhouette
+  subject: null
+  true_subject: haijima
+  place: hall
+  from: hall
+- t: 1325
+  clock: 1日目 22:05
+  t1: 1330
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: gallery
+  from: gallery
+- t: 1335
+  clock: 1日目 22:15
+  t1: 1340
+  kind: silhouette
+  subject: null
+  true_subject: haijima
+  place: gallery
+  from: gallery
+- t: 1335
+  clock: 1日目 22:15
+  t1: 1340
+  kind: silhouette
+  subject: null
+  true_subject: odagiri
+  place: gallery
+  from: gallery
+- t: 1340
+  clock: 1日目 22:20
+  t1: 1345
+  kind: silhouette
+  subject: null
+  true_subject: odagiri
+  place: hall
+  from: hall
+- t: 1345
+  clock: 1日目 22:25
+  t1: 1360
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: dining
+  from: dining
+- t: 1360
+  clock: 1日目 22:40
+  t1: 1365
+  kind: silhouette
+  subject: null
+  true_subject: reiko
+  place: hall
+  from: hall
+- t: 1365
+  clock: 1日目 22:45
+  t1: 1370
+  kind: silhouette
+  subject: null
+  true_subject: shuichi
+  place: gallery
+  from: gallery
+- t: 1365
+  clock: 1日目 22:45
+  t1: 1370
+  kind: silhouette
+  subject: null
+  true_subject: reiko
+  place: gallery
+  from: gallery
+- t: 1380
+  clock: 1日目 23:00
+  kind: sleep
+  place: W4
+- t: 1810
+  clock: 2日目 06:10
+  kind: wake
+  place: W4
+- t: 1875
+  clock: 2日目 07:15
+  t1: 1880
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: gallery
+  from: hall
+- t: 1875
+  clock: 2日目 07:15
+  t1: 1885
+  kind: see
+  subject: kashiwagi
+  true_subject: kashiwagi
+  place: hall
+  from: hall
+- t: 1880
+  clock: 2日目 07:20
+  t1: 1885
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: hall
+  from: gallery
+- t: 1890
+  clock: 2日目 07:30
+  t1: 1895
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: hall
+  from: gallery
+- t: 1895
+  clock: 2日目 07:35
+  t1: 1900
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: gallery
+  from: hall
+- t: 1895
+  clock: 2日目 07:35
+  t1: 1900
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: gallery
+  from: hall
+- t: 1895
+  clock: 2日目 07:35
+  t1: 1900
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: gallery
+  from: hall
+- t: 1895
+  clock: 2日目 07:35
+  t1: 1900
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: gallery
+  from: hall
+- t: 1900
+  clock: 2日目 07:40
+  t1: 1935
+  kind: see
+  subject: kashiwagi
+  true_subject: kashiwagi
+  place: dining
+  from: dining
+- t: 1900
+  clock: 2日目 07:40
+  t1: 1935
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: dining
+  from: dining
+- t: 1900
+  clock: 2日目 07:40
+  t1: 1935
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: dining
+  from: dining
+- t: 1900
+  clock: 2日目 07:40
+  t1: 1935
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: dining
+  from: dining
+- t: 1905
+  clock: 2日目 07:45
+  t1: 1935
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: dining
+  from: dining
+- t: 1905
+  clock: 2日目 07:45
+  t1: 1935
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: dining
+  from: dining
+- t: 1905
+  clock: 2日目 07:45
+  t1: 1935
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: dining
+  from: dining
+- t: 1905
+  clock: 2日目 07:45
+  t1: 1935
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: dining
+  from: dining
+- t: 1935
+  clock: 2日目 08:15
+  t1: 1940
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: hall
+  from: hall
+- t: 1935
+  clock: 2日目 08:15
+  t1: 1940
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: hall
+  from: hall
+- t: 1935
+  clock: 2日目 08:15
+  t1: 1940
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: hall
+  from: hall
+- t: 1935
+  clock: 2日目 08:15
+  t1: 1940
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: hall
+  from: hall
+- t: 1935
+  clock: 2日目 08:15
+  t1: 1940
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: hall
+  from: hall
+- t: 1940
+  clock: 2日目 08:20
+  t1: 1945
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: gallery
+  from: hall
+- t: 1940
+  clock: 2日目 08:20
+  t1: 1945
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: gallery
+  from: hall
+- t: 1945
+  clock: 2日目 08:25
+  t1: 1950
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: hall
+  from: hall
+- t: 1950
+  clock: 2日目 08:30
+  t1: 1965
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: hall
+  from: hall
+- t: 1955
+  clock: 2日目 08:35
+  t1: 1960
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: hall
+  from: hall
+- t: 1965
+  clock: 2日目 08:45
+  t1: 1970
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: hall
+  from: hall
+- t: 1975
+  clock: 2日目 08:55
+  t1: 1980
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: hall
+  from: hall
+- t: 1980
+  clock: 2日目 09:00
+  t1: 2010
+  kind: see
+  subject: kashiwagi
+  true_subject: kashiwagi
+  place: dining
+  from: dining
+- t: 1980
+  clock: 2日目 09:00
+  t1: 2010
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: dining
+  from: dining
+- t: 1980
+  clock: 2日目 09:00
+  t1: 2010
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: dining
+  from: dining
+- t: 1985
+  clock: 2日目 09:05
+  t1: 2010
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: dining
+  from: dining
+- t: 1985
+  clock: 2日目 09:05
+  t1: 2010
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: dining
+  from: dining
+- t: 1985
+  clock: 2日目 09:05
+  t1: 2010
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: dining
+  from: dining
+- t: 1995
+  clock: 2日目 09:15
+  t1: 2010
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: dining
+  from: dining
+- t: 2005
+  clock: 2日目 09:25
+  kind: told
+  place: dining
+  speaker: enami
+  what: 久我が死んだのは08:25から09:25のあいだ
+- t: 2005
+  clock: 2日目 09:25
+  kind: told
+  place: dining
+  speaker: kashiwagi
+  statement: S010
+- t: 2005
+  clock: 2日目 09:25
+  kind: told
+  place: dining
+  speaker: shuichi
+  statement: S011
+- t: 2005
+  clock: 2日目 09:25
+  kind: contradiction
+  place: dining
+  subject: shuichi
+  statement: S011
+  what: 鷹野修一は食堂にいたと言うが、自分はホールで見た
+- t: 2005
+  clock: 2日目 09:25
+  kind: told
+  place: dining
+  speaker: reiko
+  statement: S012
+- t: 2005
+  clock: 2日目 09:25
+  kind: told
+  place: dining
+  speaker: enami
+  statement: S013
+- t: 2005
+  clock: 2日目 09:25
+  kind: told
+  place: dining
+  speaker: haijima
+  statement: S014
+- t: 2005
+  clock: 2日目 09:25
+  kind: told
+  place: dining
+  speaker: odagiri
+  statement: S015
+- t: 2005
+  clock: 2日目 09:25
+  kind: told
+  place: dining
+  speaker: chihaya
+  statement: S017
+- t: 2010
+  clock: 2日目 09:30
+  t1: 2015
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: hall
+  from: hall
+- t: 2010
+  clock: 2日目 09:30
+  t1: 2015
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: hall
+  from: hall
+- t: 2025
+  clock: 2日目 09:45
+  t1: 2030
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: hall
+  from: hall
+- t: 2025
+  clock: 2日目 09:45
+  t1: 2040
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: hall
+  from: hall
+- t: 2030
+  clock: 2日目 09:50
+  t1: 2035
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: gallery
+  from: hall
+- t: 2035
+  clock: 2日目 09:55
+  t1: 2040
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: hall
+  from: hall
+- t: 2105
+  clock: 2日目 11:05
+  t1: 2110
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: w_cor
+  from: w_cor
+- t: 2160
+  clock: 2日目 12:00
+  t1: 2165
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: w_cor
+  from: w_cor
+- t: 2170
+  clock: 2日目 12:10
+  t1: 2180
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: billiard
+  from: billiard
+- t: 2180
+  clock: 2日目 12:20
+  t1: 2185
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: hall
+  from: hall
+- t: 2180
+  clock: 2日目 12:20
+  t1: 2210
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: gallery
+  from: hall
+- t: 2180
+  clock: 2日目 12:20
+  t1: 2210
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: gallery
+  from: hall
+- t: 2180
+  clock: 2日目 12:20
+  t1: 2210
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: gallery
+  from: hall
+- t: 2185
+  clock: 2日目 12:25
+  t1: 2210
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: gallery
+  from: gallery
+- t: 2185
+  clock: 2日目 12:25
+  t1: 2210
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: gallery
+  from: gallery
+- t: 2205
+  clock: 2日目 12:45
+  kind: told
+  place: gallery
+  speaker: enami
+  what: 鷹野玲子が死んだのは10:35から11:50のあいだ
+- t: 2205
+  clock: 2日目 12:45
+  kind: told
+  place: gallery
+  speaker: shuichi
+  statement: S018
+- t: 2205
+  clock: 2日目 12:45
+  kind: told
+  place: gallery
+  speaker: enami
+  statement: S019
+- t: 2205
+  clock: 2日目 12:45
+  kind: told
+  place: gallery
+  speaker: haijima
+  statement: S020
+- t: 2205
+  clock: 2日目 12:45
+  kind: told
+  place: gallery
+  speaker: odagiri
+  statement: S021
+- t: 2205
+  clock: 2日目 12:45
+  kind: told
+  place: gallery
+  speaker: chihaya
+  statement: S023
+- t: 2210
+  clock: 2日目 12:50
+  t1: 2215
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: hall
+  from: hall
+- t: 2210
+  clock: 2日目 12:50
+  t1: 2215
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: hall
+  from: hall
+- t: 2210
+  clock: 2日目 12:50
+  t1: 2215
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: hall
+  from: hall
+- t: 2210
+  clock: 2日目 12:50
+  t1: 2215
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: hall
+  from: hall
+- t: 2210
+  clock: 2日目 12:50
+  t1: 2215
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: hall
+  from: hall
+- t: 2215
+  clock: 2日目 12:55
+  t1: 2235
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: dining
+  from: dining
+- t: 2215
+  clock: 2日目 12:55
+  t1: 2235
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: dining
+  from: dining
+- t: 2215
+  clock: 2日目 12:55
+  t1: 2235
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: dining
+  from: dining
+- t: 2215
+  clock: 2日目 12:55
+  t1: 2235
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: dining
+  from: dining
+- t: 2215
+  clock: 2日目 12:55
+  t1: 2235
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: dining
+  from: dining
+- t: 2235
+  clock: 2日目 13:15
+  kind: hear
+  place: kitchen
+  sound: scream
+  source: ここ
+  true_source: kitchen
+  true_who: shuichi
+- t: 2235
+  clock: 2日目 13:15
+  t1: 2265
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: kitchen
+  from: kitchen
+- t: 2235
+  clock: 2日目 13:15
+  t1: 2300
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: kitchen
+  from: kitchen
+- t: 2235
+  clock: 2日目 13:15
+  t1: 2300
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: kitchen
+  from: kitchen
+- t: 2235
+  clock: 2日目 13:15
+  t1: 2300
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: kitchen
+  from: kitchen
+- t: 2235
+  clock: 2日目 13:15
+  t1: 2300
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: kitchen
+  from: kitchen
+- t: 2265
+  clock: 2日目 13:45
+  kind: hear
+  place: kitchen
+  sound: scream
+  source: ここ
+  true_source: kitchen
+  true_who: shuichi
+- t: 2295
+  clock: 2日目 14:15
+  kind: told
+  place: kitchen
+  speaker: enami
+  what: 小田切遥が死んだのは12:45から14:30のあいだ
+- t: 2295
+  clock: 2日目 14:15
+  kind: told
+  place: kitchen
+  speaker: shuichi
+  statement: S024
+- t: 2295
+  clock: 2日目 14:15
+  kind: told
+  place: kitchen
+  speaker: enami
+  statement: S025
+- t: 2295
+  clock: 2日目 14:15
+  kind: told
+  place: kitchen
+  speaker: haijima
+  statement: S026
+- t: 2295
+  clock: 2日目 14:15
+  kind: told
+  place: kitchen
+  speaker: chihaya
+  statement: S028
+- t: 2300
+  clock: 2日目 14:20
+  t1: 2305
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: dining
+  from: dining
+- t: 2305
+  clock: 2日目 14:25
+  t1: 2310
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: hall
+  from: hall
+- t: 2310
+  clock: 2日目 14:30
+  t1: 2315
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: gallery
+  from: gallery
+- t: 2315
+  clock: 2日目 14:35
+  t1: 2320
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: w_cor
+  from: w_cor
+- t: 2345
+  clock: 2日目 15:05
+  t1: 2350
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: w_cor
+  from: w_cor
+- t: 2350
+  clock: 2日目 15:10
+  t1: 2355
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: w_stair
+  from: w_stair
+- t: 2355
+  clock: 2日目 15:15
+  t1: 2360
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: billiard
+  from: billiard
+- t: 2390
+  clock: 2日目 15:50
+  t1: 2395
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: w_cor
+  from: w_cor
+- t: 2390
+  clock: 2日目 15:50
+  t1: 2395
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: w_cor
+  from: w_cor
+- t: 2500
+  clock: 2日目 17:40
+  t1: 2505
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: w_cor
+  from: w_cor
+- t: 2540
+  clock: 2日目 18:20
+  t1: 2545
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: w_cor
+  from: w_cor
+- t: 2580
+  clock: 2日目 19:00
+  t1: 2585
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: gallery
+  from: hall
+- t: 2580
+  clock: 2日目 19:00
+  t1: 2585
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: gallery
+  from: hall
+- t: 2580
+  clock: 2日目 19:00
+  t1: 2585
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: hall
+  from: hall
+- t: 2585
+  clock: 2日目 19:05
+  t1: 2625
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: dining
+  from: dining
+- t: 2590
+  clock: 2日目 19:10
+  t1: 2625
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: dining
+  from: dining
+- t: 2590
+  clock: 2日目 19:10
+  t1: 2625
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: dining
+  from: dining
+- t: 2595
+  clock: 2日目 19:15
+  t1: 2625
+  kind: see
+  subject: chihaya
+  true_subject: chihaya
+  place: dining
+  from: dining
+- t: 2625
+  clock: 2日目 19:45
+  t1: 2630
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: hall
+  from: hall
+- t: 2625
+  clock: 2日目 19:45
+  t1: 2635
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: hall
+  from: hall
+- t: 2665
+  clock: 2日目 20:25
+  kind: last
+  place: W4
+  what: 喉が焼け、息ができなくなった
+  identified: false
+chihaya:
+- t: 1005
+  clock: 1日目 16:45
+  t1: 1035
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: garden
+  from: garden
+- t: 1050
+  clock: 1日目 17:30
+  t1: 1065
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: library
+  from: library
+- t: 1050
+  clock: 1日目 17:30
+  t1: 1065
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: library
+  from: library
+- t: 1050
+  clock: 1日目 17:30
+  t1: 1065
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: library
+  from: library
+- t: 1140
+  clock: 1日目 19:00
+  t1: 1145
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: e_cor
+  from: e_cor
+- t: 1145
+  clock: 1日目 19:05
+  t1: 1150
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: gallery
+  from: gallery
+- t: 1145
+  clock: 1日目 19:05
+  t1: 1150
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: gallery
+  from: gallery
+- t: 1145
+  clock: 1日目 19:05
+  t1: 1150
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: hall
+  from: gallery
+- t: 1145
+  clock: 1日目 19:05
+  t1: 1150
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: hall
+  from: gallery
+- t: 1150
+  clock: 1日目 19:10
+  t1: 1155
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: hall
+  from: hall
+- t: 1150
+  clock: 1日目 19:10
+  t1: 1155
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: hall
+  from: hall
+- t: 1155
+  clock: 1日目 19:15
+  t1: 1185
+  kind: see
+  subject: kashiwagi
+  true_subject: kashiwagi
+  place: dining
+  from: dining
+- t: 1155
+  clock: 1日目 19:15
+  t1: 1185
+  kind: see
+  subject: sudo
+  true_subject: sudo
+  place: dining
+  from: dining
+- t: 1155
+  clock: 1日目 19:15
+  t1: 1185
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: dining
+  from: dining
+- t: 1155
+  clock: 1日目 19:15
+  t1: 1185
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: dining
+  from: dining
+- t: 1155
+  clock: 1日目 19:15
+  t1: 1185
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: dining
+  from: dining
+- t: 1155
+  clock: 1日目 19:15
+  t1: 1185
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: dining
+  from: dining
+- t: 1155
+  clock: 1日目 19:15
+  t1: 1185
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: dining
+  from: dining
+- t: 1155
+  clock: 1日目 19:15
+  t1: 1185
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: dining
+  from: dining
+- t: 1155
+  clock: 1日目 19:15
+  t1: 1185
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: dining
+  from: dining
+- t: 1170
+  clock: 1日目 19:30
+  kind: told
+  place: dining
+  speaker: kuga
+  what: 遺言：四日目の朝の船まで島に残った者で遺産を等分する
+- t: 1215
+  clock: 1日目 20:15
+  t1: 1220
+  kind: see
+  subject: kashiwagi
+  true_subject: kashiwagi
+  place: dining
+  from: dining
+- t: 1225
+  clock: 1日目 20:25
+  t1: 1245
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: dining
+  from: dining
+- t: 1245
+  clock: 1日目 20:45
+  t1: 1250
+  kind: silhouette
+  subject: null
+  true_subject: kashiwagi
+  place: hall
+  from: hall
+- t: 1245
+  clock: 1日目 20:45
+  t1: 1250
+  kind: silhouette
+  subject: null
+  true_subject: shuichi
+  place: hall
+  from: hall
+- t: 1245
+  clock: 1日目 20:45
+  t1: 1250
+  kind: silhouette
+  subject: null
+  true_subject: haijima
+  place: hall
+  from: hall
+- t: 1270
+  clock: 1日目 21:10
+  t1: 1275
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: billiard
+  from: billiard
+- t: 1290
+  clock: 1日目 21:30
+  t1: 1315
+  kind: see
+  subject: kashiwagi
+  true_subject: kashiwagi
+  place: kitchen
+  from: kitchen
+- t: 1290
+  clock: 1日目 21:30
+  t1: 1315
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: kitchen
+  from: kitchen
+- t: 1290
+  clock: 1日目 21:30
+  t1: 1315
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: kitchen
+  from: kitchen
+- t: 1295
+  clock: 1日目 21:35
+  t1: 1315
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: kitchen
+  from: kitchen
+- t: 1300
+  clock: 1日目 21:40
+  t1: 1315
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: kitchen
+  from: kitchen
+- t: 1305
+  clock: 1日目 21:45
+  t1: 1315
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: kitchen
+  from: kitchen
+- t: 1305
+  clock: 1日目 21:45
+  t1: 1315
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: kitchen
+  from: kitchen
+- t: 1305
+  clock: 1日目 21:45
+  t1: 1315
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: kitchen
+  from: kitchen
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: enami
+  what: 須藤ミネが死んだのは19:30から21:00のあいだ
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: kashiwagi
+  statement: S001
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: shuichi
+  statement: S002
+- t: 1310
+  clock: 1日目 21:50
+  kind: contradiction
+  place: kitchen
+  subject: shuichi
+  statement: S002
+  what: 鷹野修一は三号室にいたと言うが、自分は食堂で見た
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: reiko
+  statement: S003
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: enami
+  statement: S004
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: kuga
+  statement: S005
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: haijima
+  statement: S006
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: odagiri
+  statement: S007
+- t: 1310
+  clock: 1日目 21:50
+  kind: told
+  place: kitchen
+  speaker: togawa
+  statement: S008
+- t: 1315
+  clock: 1日目 21:55
+  t1: 1320
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: garden
+  from: garden
+- t: 1315
+  clock: 1日目 21:55
+  t1: 1320
+  kind: silhouette
+  subject: null
+  true_subject: enami
+  place: garden
+  from: garden
+- t: 1315
+  clock: 1日目 21:55
+  t1: 1320
+  kind: silhouette
+  subject: null
+  true_subject: kuga
+  place: garden
+  from: garden
+- t: 1315
+  clock: 1日目 21:55
+  t1: 1320
+  kind: silhouette
+  subject: null
+  true_subject: odagiri
+  place: garden
+  from: garden
+- t: 1320
+  clock: 1日目 22:00
+  t1: 1370
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: billiard
+  from: billiard
+- t: 1340
+  clock: 1日目 22:20
+  t1: 1360
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: billiard
+  from: billiard
+- t: 1370
+  clock: 1日目 22:50
+  kind: act
+  place: billiard
+  what: candlestickを手に取った
+- t: 1385
+  clock: 1日目 23:05
+  t1: 1390
+  kind: silhouette
+  subject: null
+  true_subject: shuichi
+  place: gallery
+  from: gallery
+- t: 1385
+  clock: 1日目 23:05
+  t1: 1390
+  kind: silhouette
+  subject: null
+  true_subject: odagiri
+  place: gallery
+  from: gallery
+- t: 1390
+  clock: 1日目 23:10
+  t1: 1395
+  kind: silhouette
+  subject: null
+  true_subject: odagiri
+  place: e_cor
+  from: e_cor
+- t: 1400
+  clock: 1日目 23:20
+  kind: sleep
+  place: E4
+- t: 1840
+  clock: 2日目 06:40
+  kind: wake
+  place: E4
+- t: 1890
+  clock: 2日目 07:30
+  t1: 1895
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: e_cor
+  from: e_cor
+- t: 1895
+  clock: 2日目 07:35
+  t1: 1900
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: gallery
+  from: gallery
+- t: 1895
+  clock: 2日目 07:35
+  t1: 1900
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: gallery
+  from: gallery
+- t: 1895
+  clock: 2日目 07:35
+  t1: 1900
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: gallery
+  from: gallery
+- t: 1895
+  clock: 2日目 07:35
+  t1: 1900
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: hall
+  from: gallery
+- t: 1900
+  clock: 2日目 07:40
+  t1: 1905
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: hall
+  from: hall
+- t: 1900
+  clock: 2日目 07:40
+  t1: 1905
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: hall
+  from: hall
+- t: 1900
+  clock: 2日目 07:40
+  t1: 1905
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: hall
+  from: hall
+- t: 1905
+  clock: 2日目 07:45
+  t1: 1935
+  kind: see
+  subject: kashiwagi
+  true_subject: kashiwagi
+  place: dining
+  from: dining
+- t: 1905
+  clock: 2日目 07:45
+  t1: 1935
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: dining
+  from: dining
+- t: 1905
+  clock: 2日目 07:45
+  t1: 1935
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: dining
+  from: dining
+- t: 1905
+  clock: 2日目 07:45
+  t1: 1935
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: dining
+  from: dining
+- t: 1905
+  clock: 2日目 07:45
+  t1: 1935
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: dining
+  from: dining
+- t: 1905
+  clock: 2日目 07:45
+  t1: 1935
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: dining
+  from: dining
+- t: 1905
+  clock: 2日目 07:45
+  t1: 1935
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: dining
+  from: dining
+- t: 1905
+  clock: 2日目 07:45
+  t1: 1955
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: dining
+  from: dining
+- t: 1950
+  clock: 2日目 08:30
+  t1: 1975
+  kind: see
+  subject: kuga
+  true_subject: kuga
+  place: dining
+  from: dining
+- t: 1960
+  clock: 2日目 08:40
+  t1: 1965
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: dining
+  from: dining
+- t: 1970
+  clock: 2日目 08:50
+  t1: 1975
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: dining
+  from: dining
+- t: 1975
+  clock: 2日目 08:55
+  kind: find
+  place: dining
+  subject: kuga
+  what: 久我が死んでいる
+- t: 1980
+  clock: 2日目 09:00
+  t1: 2010
+  kind: see
+  subject: kashiwagi
+  true_subject: kashiwagi
+  place: dining
+  from: dining
+- t: 1980
+  clock: 2日目 09:00
+  t1: 2010
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: dining
+  from: dining
+- t: 1980
+  clock: 2日目 09:00
+  t1: 2010
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: dining
+  from: dining
+- t: 1985
+  clock: 2日目 09:05
+  t1: 2010
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: dining
+  from: dining
+- t: 1985
+  clock: 2日目 09:05
+  t1: 2010
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: dining
+  from: dining
+- t: 1985
+  clock: 2日目 09:05
+  t1: 2070
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: dining
+  from: dining
+- t: 1995
+  clock: 2日目 09:15
+  t1: 2055
+  kind: see
+  subject: reiko
+  true_subject: reiko
+  place: dining
+  from: dining
+- t: 2005
+  clock: 2日目 09:25
+  kind: told
+  place: dining
+  speaker: enami
+  what: 久我が死んだのは08:25から09:25のあいだ
+- t: 2005
+  clock: 2日目 09:25
+  kind: told
+  place: dining
+  speaker: kashiwagi
+  statement: S010
+- t: 2005
+  clock: 2日目 09:25
+  kind: told
+  place: dining
+  speaker: shuichi
+  statement: S011
+- t: 2005
+  clock: 2日目 09:25
+  kind: told
+  place: dining
+  speaker: reiko
+  statement: S012
+- t: 2005
+  clock: 2日目 09:25
+  kind: told
+  place: dining
+  speaker: enami
+  statement: S013
+- t: 2005
+  clock: 2日目 09:25
+  kind: told
+  place: dining
+  speaker: haijima
+  statement: S014
+- t: 2005
+  clock: 2日目 09:25
+  kind: told
+  place: dining
+  speaker: odagiri
+  statement: S015
+- t: 2005
+  clock: 2日目 09:25
+  kind: told
+  place: dining
+  speaker: togawa
+  statement: S016
+- t: 2070
+  clock: 2日目 10:30
+  t1: 2075
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: hall
+  from: hall
+- t: 2075
+  clock: 2日目 10:35
+  t1: 2115
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: garden
+  from: garden
+- t: 2075
+  clock: 2日目 10:35
+  t1: 2130
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: garden
+  from: garden
+- t: 2175
+  clock: 2日目 12:15
+  kind: find
+  place: gallery
+  subject: reiko
+  what: 鷹野玲子が死んでいる
+- t: 2180
+  clock: 2日目 12:20
+  t1: 2185
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: hall
+  from: gallery
+- t: 2180
+  clock: 2日目 12:20
+  t1: 2185
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: hall
+  from: gallery
+- t: 2180
+  clock: 2日目 12:20
+  t1: 2210
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: gallery
+  from: gallery
+- t: 2180
+  clock: 2日目 12:20
+  t1: 2210
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: gallery
+  from: gallery
+- t: 2185
+  clock: 2日目 12:25
+  t1: 2210
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: gallery
+  from: gallery
+- t: 2185
+  clock: 2日目 12:25
+  t1: 2210
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: gallery
+  from: gallery
+- t: 2185
+  clock: 2日目 12:25
+  t1: 2210
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: gallery
+  from: gallery
+- t: 2205
+  clock: 2日目 12:45
+  kind: told
+  place: gallery
+  speaker: enami
+  what: 鷹野玲子が死んだのは10:35から11:50のあいだ
+- t: 2205
+  clock: 2日目 12:45
+  kind: told
+  place: gallery
+  speaker: shuichi
+  statement: S018
+- t: 2205
+  clock: 2日目 12:45
+  kind: told
+  place: gallery
+  speaker: enami
+  statement: S019
+- t: 2205
+  clock: 2日目 12:45
+  kind: told
+  place: gallery
+  speaker: haijima
+  statement: S020
+- t: 2205
+  clock: 2日目 12:45
+  kind: told
+  place: gallery
+  speaker: odagiri
+  statement: S021
+- t: 2205
+  clock: 2日目 12:45
+  kind: told
+  place: gallery
+  speaker: togawa
+  statement: S022
+- t: 2210
+  clock: 2日目 12:50
+  t1: 2215
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: hall
+  from: hall
+- t: 2210
+  clock: 2日目 12:50
+  t1: 2215
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: hall
+  from: hall
+- t: 2210
+  clock: 2日目 12:50
+  t1: 2215
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: hall
+  from: hall
+- t: 2210
+  clock: 2日目 12:50
+  t1: 2215
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: hall
+  from: hall
+- t: 2210
+  clock: 2日目 12:50
+  t1: 2215
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: hall
+  from: hall
+- t: 2215
+  clock: 2日目 12:55
+  t1: 2235
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: dining
+  from: dining
+- t: 2215
+  clock: 2日目 12:55
+  t1: 2235
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: dining
+  from: dining
+- t: 2215
+  clock: 2日目 12:55
+  t1: 2235
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: dining
+  from: dining
+- t: 2215
+  clock: 2日目 12:55
+  t1: 2235
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: dining
+  from: dining
+- t: 2215
+  clock: 2日目 12:55
+  t1: 2235
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: dining
+  from: dining
+- t: 2235
+  clock: 2日目 13:15
+  kind: hear
+  place: kitchen
+  sound: scream
+  source: ここ
+  true_source: kitchen
+  true_who: shuichi
+- t: 2235
+  clock: 2日目 13:15
+  t1: 2265
+  kind: see
+  subject: odagiri
+  true_subject: odagiri
+  place: kitchen
+  from: kitchen
+- t: 2235
+  clock: 2日目 13:15
+  t1: 2300
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: kitchen
+  from: kitchen
+- t: 2235
+  clock: 2日目 13:15
+  t1: 2300
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: kitchen
+  from: kitchen
+- t: 2235
+  clock: 2日目 13:15
+  t1: 2305
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: kitchen
+  from: kitchen
+- t: 2235
+  clock: 2日目 13:15
+  t1: 2320
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: kitchen
+  from: kitchen
+- t: 2265
+  clock: 2日目 13:45
+  kind: hear
+  place: kitchen
+  sound: scream
+  source: ここ
+  true_source: kitchen
+  true_who: shuichi
+- t: 2295
+  clock: 2日目 14:15
+  kind: told
+  place: kitchen
+  speaker: enami
+  what: 小田切遥が死んだのは12:45から14:30のあいだ
+- t: 2295
+  clock: 2日目 14:15
+  kind: told
+  place: kitchen
+  speaker: shuichi
+  statement: S024
+- t: 2295
+  clock: 2日目 14:15
+  kind: told
+  place: kitchen
+  speaker: enami
+  statement: S025
+- t: 2295
+  clock: 2日目 14:15
+  kind: told
+  place: kitchen
+  speaker: haijima
+  statement: S026
+- t: 2295
+  clock: 2日目 14:15
+  kind: told
+  place: kitchen
+  speaker: togawa
+  statement: S027
+- t: 2310
+  clock: 2日目 14:30
+  t1: 2315
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: kitchen
+  from: kitchen
+- t: 2325
+  clock: 2日目 14:45
+  t1: 2340
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: kitchen
+  from: kitchen
+- t: 2330
+  clock: 2日目 14:50
+  t1: 2350
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: kitchen
+  from: kitchen
+- t: 2360
+  clock: 2日目 15:20
+  t1: 2365
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: garden
+  from: garden
+- t: 2585
+  clock: 2日目 19:05
+  t1: 2590
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: hall
+  from: gallery
+- t: 2585
+  clock: 2日目 19:05
+  t1: 2590
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: hall
+  from: gallery
+- t: 2595
+  clock: 2日目 19:15
+  t1: 2625
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: dining
+  from: dining
+- t: 2595
+  clock: 2日目 19:15
+  t1: 2625
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: dining
+  from: dining
+- t: 2595
+  clock: 2日目 19:15
+  t1: 2625
+  kind: see
+  subject: togawa
+  true_subject: togawa
+  place: dining
+  from: dining
+- t: 2595
+  clock: 2日目 19:15
+  t1: 2635
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: dining
+  from: dining
+- t: 2605
+  clock: 2日目 19:25
+  kind: see_act
+  place: dining
+  subject: shuichi
+  what: 鷹野修一が戸川の杯のあたりに手を伸ばした
+  identified: true
+- t: 2665
+  clock: 2日目 20:25
+  t1: 2670
+  kind: see
+  subject: shuichi
+  true_subject: shuichi
+  place: hall
+  from: hall
+- t: 2665
+  clock: 2日目 20:25
+  t1: 2670
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: gallery
+  from: hall
+- t: 2705
+  clock: 2日目 21:05
+  t1: 2725
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: dining
+  from: dining
+- t: 2790
+  clock: 2日目 22:30
+  kind: sleep
+  place: E4
+- t: 3275
+  clock: 3日目 06:35
+  kind: wake
+  place: E4
+- t: 3335
+  clock: 3日目 07:35
+  t1: 3340
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: gallery
+  from: gallery
+- t: 3335
+  clock: 3日目 07:35
+  t1: 3340
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: gallery
+  from: gallery
+- t: 3340
+  clock: 3日目 07:40
+  t1: 3345
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: hall
+  from: hall
+- t: 3340
+  clock: 3日目 07:40
+  t1: 3345
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: hall
+  from: hall
+- t: 3345
+  clock: 3日目 07:45
+  t1: 3375
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: dining
+  from: dining
+- t: 3345
+  clock: 3日目 07:45
+  t1: 3375
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: dining
+  from: dining
+- t: 3375
+  clock: 3日目 08:15
+  t1: 3380
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: hall
+  from: hall
+- t: 3375
+  clock: 3日目 08:15
+  t1: 3380
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: hall
+  from: hall
+- t: 3380
+  clock: 3日目 08:20
+  t1: 3385
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: gallery
+  from: gallery
+- t: 3380
+  clock: 3日目 08:20
+  t1: 3385
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: gallery
+  from: gallery
+- t: 3385
+  clock: 3日目 08:25
+  t1: 3390
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: w_cor
+  from: w_cor
+- t: 3385
+  clock: 3日目 08:25
+  t1: 3390
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: w_cor
+  from: w_cor
+- t: 3390
+  clock: 3日目 08:30
+  kind: hear
+  place: W3
+  sound: scream
+  source: ここ
+  true_source: W3
+  true_who: enami
+- t: 3390
+  clock: 3日目 08:30
+  t1: 3425
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: W3
+  from: W3
+- t: 3390
+  clock: 3日目 08:30
+  t1: 3425
+  kind: see
+  subject: haijima
+  true_subject: haijima
+  place: W3
+  from: W3
+- t: 3420
+  clock: 3日目 09:00
+  kind: told
+  place: W3
+  speaker: enami
+  what: 鷹野修一が死んだのは22:35から23:20のあいだ
+- t: 3420
+  clock: 3日目 09:00
+  kind: told
+  place: W3
+  speaker: enami
+  statement: S029
+- t: 3420
+  clock: 3日目 09:00
+  kind: told
+  place: W3
+  speaker: haijima
+  statement: S030
+- t: 3595
+  clock: 3日目 11:55
+  t1: 3600
+  kind: see
+  subject: enami
+  true_subject: enami
+  place: hall
+  from: gallery
+- t: 3600
+  clock: 3日目 12:00
+  kind: act
+  place: hall
+  what: 江波を殴った
+- t: 3640
+  clock: 3日目 12:40
+  kind: hear
+  place: dining
+  sound: scream
+  source: ホール
+  true_source: hall
+  true_who: haijima
+- t: 3645
+  clock: 3日目 12:45
+  kind: act
+  place: hall
+  what: 灰島を殴った

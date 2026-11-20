@@ -1,0 +1,114 @@
+# 孤島の洋館（デジタルツイン v0）
+# 時間の単位は分。シミュレーションは5分刻み。辺の重みは1刻み（5分）以内。
+#
+# 仕掛け（設計上の特徴）
+# - 二階の東棟と西棟は鏡写し。壁紙・寝台・額の絵まで同じ。
+# - 客室の番号は棟の区別なく「一号室〜四号室」。東にも西にも「三号室」がある。
+#   → 人物が真実を語っても、読者は「三号室」を一つの部屋だと思い込める（S2 同定）。
+# - 違いは窓の外だけ。西の窓からは灯台の灯（夜）と日没、東の窓からは桟橋と日の出。
+# - 一階の行き先も違う。西の裏階段は遊戯室へ、東の裏階段は図書室へ下りる。
+# - 夜は廊下・階段・ホールが暗い。暗がりでは人の顔が分からない（人影としてしか知覚しない）。
+# - 客室の錠：外からは鍵（本人の鍵か執事の合鍵）、内側はつまみ。内から出て閉めても錠は掛からない。
+#   → 密室は「合鍵で外から掛けた」か「本人が内から掛けて中で死んだ（遅れて効く毒）」のどちらかでしか起きない。
+
+meta:
+  title: 孤島の洋館
+  night: ["20:30", "05:45"]      # 暗くなる時刻・明るくなる時刻
+  tick: 5
+
+places:
+  # ---- 一階・中央
+  hall:     {name: 玄関ホール,   spoken: ホール,       floor: 1, wing: C, kind: common,  dark_at_night: true}
+  dining:   {name: 食堂,         spoken: 食堂,         floor: 1, wing: C, kind: common}
+  kitchen:  {name: 厨房,         spoken: 厨房,         floor: 1, wing: C, kind: work,    items: [knife, poison]}
+  srv_a:    {name: 執事室,       spoken: 執事室,       floor: 1, wing: C, kind: room,    lockable: true}
+  srv_b:    {name: 料理人の部屋, spoken: 料理人の部屋, floor: 1, wing: C, kind: room,    lockable: true}
+  study:    {name: 故人の書斎,   spoken: 書斎,         floor: 1, wing: C, kind: locked,  lockable: true, locked_initially: true, items: [revolver]}
+  # ---- 一階・両翼（鏡写しではない：違いが手がかりになる）
+  billiard: {name: 遊戯室,       spoken: 遊戯室,       floor: 1, wing: W, kind: common,  items: [candlestick]}
+  library:  {name: 図書室,       spoken: 図書室,       floor: 1, wing: E, kind: common,  items: [candlestick]}
+  # ---- 二階・中央
+  gallery:  {name: 二階の回廊,   spoken: 回廊,         floor: 2, wing: C, kind: passage, dark_at_night: true}
+  # ---- 二階・西棟
+  w_cor:    {name: 西棟の廊下,   spoken: 二階の廊下,   floor: 2, wing: W, kind: passage, dark_at_night: true, mirror: e_cor}
+  w_stair:  {name: 西の裏階段,   spoken: 裏階段,       floor: 2, wing: W, kind: passage, dark_at_night: true, mirror: e_stair}
+  W1:       {name: 西棟の一号室, spoken: 一号室,       floor: 2, wing: W, kind: room,    lockable: true, mirror: E1}
+  W2:       {name: 西棟の二号室, spoken: 二号室,       floor: 2, wing: W, kind: room,    lockable: true, mirror: E2}
+  W3:       {name: 西棟の三号室, spoken: 三号室,       floor: 2, wing: W, kind: room,    lockable: true, mirror: E3}
+  W4:       {name: 西棟の四号室, spoken: 四号室,       floor: 2, wing: W, kind: room,    lockable: true, mirror: E4}
+  # ---- 二階・東棟
+  e_cor:    {name: 東棟の廊下,   spoken: 二階の廊下,   floor: 2, wing: E, kind: passage, dark_at_night: true, mirror: w_cor}
+  e_stair:  {name: 東の裏階段,   spoken: 裏階段,       floor: 2, wing: E, kind: passage, dark_at_night: true, mirror: w_stair}
+  E1:       {name: 東棟の一号室, spoken: 一号室,       floor: 2, wing: E, kind: room,    lockable: true, mirror: W1}
+  E2:       {name: 東棟の二号室, spoken: 二号室,       floor: 2, wing: E, kind: room,    lockable: true, mirror: W2}
+  E3:       {name: 東棟の三号室, spoken: 三号室,       floor: 2, wing: E, kind: room,    lockable: true, mirror: W3}
+  E4:       {name: 東棟の四号室, spoken: 四号室,       floor: 2, wing: E, kind: room,    lockable: true, mirror: W4}
+  # ---- 屋外
+  garden:   {name: 庭,           spoken: 庭,           floor: 0, wing: O, kind: outdoor, dark_at_night: true}
+  cliff:    {name: 西の崖,       spoken: 崖,           floor: 0, wing: O, kind: outdoor, dark_at_night: true, exit: sea}
+  pier:     {name: 東の桟橋,     spoken: 桟橋,         floor: 0, wing: O, kind: outdoor, dark_at_night: true, exit: boat}
+
+# 通路（どれも1刻みで移れる）
+edges:
+  - [hall, dining]
+  - [dining, kitchen]
+  - [kitchen, srv_a]
+  - [kitchen, srv_b]
+  - [kitchen, garden]        # 勝手口
+  - [hall, study]
+  - [hall, billiard]
+  - [hall, library]
+  - [hall, gallery]          # 正面の大階段
+  - [hall, garden]           # 玄関
+  - [gallery, w_cor]
+  - [gallery, e_cor]
+  - [w_cor, W1]
+  - [w_cor, W2]
+  - [w_cor, W3]
+  - [w_cor, W4]
+  - [e_cor, E1]
+  - [e_cor, E2]
+  - [e_cor, E3]
+  - [e_cor, E4]
+  - [w_cor, w_stair]
+  - [e_cor, e_stair]
+  - [w_stair, billiard]
+  - [e_stair, library]
+  - [billiard, garden]       # 西のテラス
+  - [library, garden]        # 東のテラス
+  - [garden, cliff]
+  - [garden, pier]
+
+# 視線：明るいときだけ通る（片方向で書いたものは逆も通る）
+visibility:
+  - [hall, gallery]
+  - [garden, cliff]
+  - [garden, pier]
+
+# 音：壁・床ごし。悲鳴と物音はここまで届く（ドアの向こうの廊下にも届く）
+walls:
+  - [W1, W2]
+  - [W2, W3]
+  - [W3, W4]
+  - [E1, E2]
+  - [E2, E3]
+  - [E3, E4]
+  - [kitchen, srv_a]
+  - [kitchen, srv_b]
+floors:                      # 上の部屋, 下の部屋（「下から」「上から」としか分からない）
+  - [W1, billiard]
+  - [W2, billiard]
+  - [E1, library]
+  - [E2, library]
+
+# 窓の外（景色の時計・棟の手がかり）
+views:
+  W: {day: 西の海と岩礁の灯台, dusk: 日没, night: 灯台の灯が回る}
+  E: {day: 東の桟橋と入江,     dawn: 日の出, night: 真っ暗な入江}
+  O: {}
+  C: {}
+
+# 出口（台帳に載せる。読者にも示す）
+exits:
+  sea:  崖から海へ落ちたものは上がらない（死体の消失はここだけで起こりうる）
+  boat: 迎えの船は四日目の朝七時。嵐で連絡船は来ず、桟橋のボートは初日の夜に流される

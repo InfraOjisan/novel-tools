@@ -1,0 +1,34 @@
+# 登場人物（v0・仮名）
+# 共通の賭け金：故人の遺言。「四日目の朝の迎えの船まで島に残った者で、遺産を等分する」。
+#   → 人が減るほど取り分が増える。動機は全員に共通なので、個別の動機はあとづけでよい。
+#
+# 性向（0〜1）
+#   aggression 殺意への傾き。高いと遺言の直後から機会を狙う。中くらいは、恐怖と疑いで「先にやる」側に転ぶ。
+#   caution    用心。高いと部屋に鍵をかけてこもり、食事にも出ない。
+#   social     人の集まる場所に行く傾き。
+#   outdoor    庭・崖・桟橋に出る傾き。
+# role
+#   narrator   語り手になりうる
+#   trickster  語り手にならない。得になるとき嘘をつき、ときどき他人について偽の目撃を言う
+#   stone      置き石。語り手にならない。決まった場所にいることが多い
+
+characters:
+  kashiwagi: {name: 柏木,       desc: 執事・六十代。合鍵を持つ,          room: srv_a, aggression: 0.15, caution: 0.2, social: 0.3, outdoor: 0.2, role: narrator, items: [master_key], duty: butler}
+  sudo:      {name: 須藤ミネ,   desc: 料理人・五十代,                    room: srv_b, aggression: 0.10, caution: 0.3, social: 0.2, outdoor: 0.2, role: stone,    duty: cook}
+  shuichi:   {name: 鷹野修一,   desc: 故人の甥・事業に失敗している,      room: W3,    aggression: 0.70, caution: 0.3, social: 0.5, outdoor: 0.3, role: narrator}
+  reiko:     {name: 鷹野玲子,   desc: 故人の後妻,                        room: E3,    aggression: 0.55, caution: 0.6, social: 0.4, outdoor: 0.1, role: narrator}
+  enami:     {name: 江波,       desc: 主治医。往診鞄に薬,                room: W1,    aggression: 0.35, caution: 0.4, social: 0.5, outdoor: 0.2, role: narrator, items: [poison], duty: doctor}
+  kuga:      {name: 久我,       desc: 弁護士。遺言を読む,                room: E1,    aggression: 0.25, caution: 0.5, social: 0.6, outdoor: 0.1, role: narrator}
+  haijima:   {name: 灰島,       desc: 画家・故人に絵を買われていた,      room: W2,    aggression: 0.40, caution: 0.2, social: 0.3, outdoor: 0.8, role: narrator}
+  odagiri:   {name: 小田切遥,   desc: 元秘書,                            room: E2,    aggression: 0.50, caution: 0.4, social: 0.5, outdoor: 0.3, role: narrator}
+  togawa:    {name: 戸川,       desc: 記者・招かれていないのに来た,      room: W4,    aggression: 0.45, caution: 0.3, social: 0.7, outdoor: 0.5, role: trickster}
+  chihaya:   {name: 千早,       desc: 大学生・故人の孫だと名乗り出た,    room: E4,    aggression: 0.30, caution: 0.5, social: 0.4, outdoor: 0.4, role: narrator}
+
+schedule:
+  arrive:  "1 15:00"   # 初日の到着
+  will:    "1 19:30"   # 夕食の席で、遺言の読み上げ
+  boat:    "4 07:00"   # 迎えの船（終わり）
+  meals:   {breakfast: "07:30", lunch: "12:30", dinner: "19:00"}
+  meal_len: 45
+  bed:     ["22:30", "23:30"]
+  rise:    ["06:00", "07:00"]
